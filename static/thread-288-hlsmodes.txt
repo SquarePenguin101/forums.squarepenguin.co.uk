@@ -1,0 +1,79 @@
+Matches:
+1454:   Russell Howard's Good News: Series 9 - 6. Episode 6, BBC Two, Comedy,Sat
+ire,Standup, default
+INFO: File name prefix = Russell_Howards_Good_News_Series_9_-_6._Episode_6_b04sx
+vh4_default
+
+available:      Unknown
+brand:          Russell Howard's Good News
+categories:     Comedy,Satire,Standup
+category:       Comedy
+channel:        BBC Two
+desc:           Topical news show hosted by comedian Russell Howard.
+desclong:       The ninth series of Russell Howard's Good News moves to BBC Two.
+ Russell once again offers his unique and quirky take on the week's global headl
+ines and bizarre news stories. Sifting through over 60 international news channe
+ls, 140 newspapers from around the world and over 1,000 news clips, no stone is
+left unturned in his pursuit of the weird and wonderful stories that have been d
+ominating the press this week. Russell is also joined by a special guest with an
+ amazing story to tell.
+descmedium:     Topical news show hosted by comedian Russell Howard, who offers
+his unique and quirky take on the week's global headlines and bizarre news stori
+es.
+descshort:      Topical news show hosted by comedian Russell Howard.
+dir:            I:\videos
+dldate:         2014-12-10
+dltime:         18:19:10
+duration:       1800
+durations:      default: 1800
+episode:        6. Episode 6
+episodenum:     6
+episodeshort:   Episode 6
+expiry:         2014-12-10T23:00:00Z
+expiryrel:      in 0 days 4 hours
+ext:            EXT
+filename:       I:\videos\Russell_Howards_Good_News_Series_9_-_6._Episode_6_b04s
+xvh4_default.EXT
+filepart:       I:\videos\Russell_Howards_Good_News_Series_9_-_6._Episode_6_b04s
+xvh4_default.partial.EXT
+fileprefix:     Russell_Howards_Good_News_Series_9_-_6._Episode_6_b04sxvh4_defau
+lt
+firstbcast:     default: 2014-11-27T22:00:00Z
+firstbcastdate: default: 2014-11-27
+firstbcastrel:  default: 12 days 20 hours ago
+guidance:       Yes
+index:          1454
+lastbcast:      default: 2014-12-04T01:00:00Z
+lastbcastdate:  default: 2014-12-04
+lastbcastrel:   default: 6 days 17 hours ago
+longname:       Russell Howard's Good News: Series 9
+modes:          default: flashhd1,flashhd2,flashhigh1,flashhigh2,flashstd1,flash
+std2,flashvhigh1,flashvhigh2,hlshigh1,hlslow1,hlsstd1,hlsvhigh1,rtsphd1,rtsphd2,
+rtsphigh1,rtsphigh2,rtspstd1,rtspstd2,rtspvhigh1,rtspvhigh2,subtitles1
+modesizes:      default: flashhd1=615MB,flashhd2=615MB,flashhigh1=175MB,flashhig
+h2=175MB,flashstd1=105MB,flashstd2=105MB,flashvhigh1=330MB,flashvhigh2=330MB,hls
+high1=175MB,hlslow1=87MB,hlsstd1=112MB,hlsvhigh1=329MB,rtsphd1=615MB,rtsphd2=615
+MB,rtsphigh1=175MB,rtsphigh2=175MB,rtspstd1=105MB,rtspstd2=105MB,rtspvhigh1=330M
+B,rtspvhigh2=330MB
+name:           Russell Howard's Good News: Series 9
+nameshort:      Russell Howard's Good News
+pid:            b04sxvh4
+player:         http://www.bbc.co.uk/iplayer/episode/b04sxvh4
+senum:          s09e06
+series:         Series 9
+seriesnum:      9
+thumbfile:      I:\videos\Russell_Howards_Good_News_Series_9_-_6._Episode_6_b04s
+xvh4_default.jpg
+thumbnail:      http://ichef.bbci.co.uk/images/ic/150x84/p0299vry.jpg
+timeadded:      11 days 16 hours ago (1417224616)
+title:          Russell Howard's Good News: Series 9: Episode 6
+type:           tv
+verpids:        default: b04sxvfr
+version:        default
+versions:       default
+web:            http://www.bbc.co.uk/programmes/b04mp8vy
+
+
+INFO: 1 Matching Programmes
+
+C:\Program Files (x86)\get_iplayer>

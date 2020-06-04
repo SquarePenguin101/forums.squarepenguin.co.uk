@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ffmpeg 3.2 creates AAC LTP files from DASH streams (cannot be played in iTunes)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; ffmpeg 3.2 creates AAC LTP files from DASH streams (cannot be played in iTunes)</div>
+<div id="pagetitle"><h2>ffmpeg 3.2 creates AAC LTP files from DASH streams (cannot be played in iTunes)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1263</h2></div><div class="dateline">14-11-2016, 12:43 PM</div>
+</div>
+<div class="message">All my radio recordings are downloading as AAC LTP instead of AAC LC since around the 9th November. They won't play in iTunes.<br />
+<br />
+options:<br />
+radiomode bestmodes hvfbest,hlshd<br />
+fileprefix &lt;channel&gt;-&lt;nameshort&gt;&lt;.senum&gt;&lt;.episodeshort&gt;_&lt;pid&gt;<br />
+metadata generic<br />
+attempts 3<br />
+refresh-exclude-groups-radio local</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1263</h2></div><div class="dateline">14-11-2016, 12:53 PM</div>
+</div>
+<div class="message">Seems to vary depending on the programme.<br />
+<br />
+For example, 11th November Shipping forecast records as AAC LC<br />
+Money box "Vanguard founder John Bogle on revolutionising fund management." records as AAC LTP.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2016, 03:37 PM</div>
+</div>
+<div class="message">I don't get LTP for your example. You can provide more examples if you like, but it won't really make any difference. get_iplayer doesn't transcode files, so you get whatever the BBC provides. It would be a little surprising if they switched to LTP, though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1263</h2></div><div class="dateline">14-11-2016, 03:48 PM</div>
+</div>
+<div class="message">Here's another:<br />
+<br />
+&#36; mediainfo *m4a<br />
+General<br />
+Complete name                            : BBC_Radio_4-Open_Country.Snowdonia_Marathon_b081t6xf.m4a<br />
+Format                                   : MPEG-4<br />
+Format profile                           : Apple audio with iTunes info<br />
+Codec ID                                 : M4A  (isom/iso2)<br />
+File size                                : 56.1 MiB<br />
+Duration                                 : 24 min 23 s<br />
+Overall bit rate mode                    : Constant<br />
+Overall bit rate                         : 322 kb/s<br />
+Album                                    : Open Country<br />
+Album/Performer                          : BBC Radio<br />
+Track name                               : Open Country: Snowdonia Marathon<br />
+Grouping                                 : Factual,Science &amp; Nature,Nature &amp; Environment<br />
+Performer                                : BBC Radio 4<br />
+Composer                                 : BBC iPlayer<br />
+Genre                                    : Factual<br />
+ContentType                              : Music<br />
+Recorded date                            : UTC 2016-11-10 15:00:00<br />
+Encoded date                             : UTC 1904-01-01 00:00:00<br />
+Tagged date                              : UTC 2016-11-14 14:43:50<br />
+Writing application                      : Lavf57.56.100<br />
+Copyright                                : 2016 British Broadcasting Corporation, all rights reserved<br />
+Cover                                    : Yes<br />
+Comment                                  : Helen Mark meets the runners, organisers and volunteers behind Snowdonia Marathon.<br />
+<br />
+Audio<br />
+ID                                       : 1<br />
+Format                                   : AAC<br />
+Format/Info                              : Advanced Audio Codec<br />
+Format profile                           : LTP<br />
+Codec ID                                 : 40<br />
+Duration                                 : 24 min 23 s<br />
+Bit rate mode                            : Constant<br />
+Bit rate                                 : 320 kb/s<br />
+Channel(s)                               : 2 channels<br />
+Channel positions                        : Front: L R<br />
+Sampling rate                            : 64.0 kHz<br />
+Frame rate                               : 62.500 FPS (1024 spf)<br />
+Compression mode                         : Lossy<br />
+Stream size                              : 55.8 MiB (100%)<br />
+Language                                 : English<br />
+Default                                  : Yes<br />
+Alternate group                          : 1<br />
+Encoded date                             : UTC 1904-01-01 00:00:00<br />
+Tagged date                              : UTC 1904-01-01 00:00:00[/code<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; ffmpeg -version<br />
+ffmpeg version 3.2 Copyright (c) 2000-2016 the FFmpeg developers<br />
+built with Apple LLVM version 8.0.0 (clang-800.0.42.1)<br />
+configuration: --prefix=/usr/local/Cellar/ffmpeg/3.2 --enable-shared --enable-pthreads --enable-gpl --enable-version3 --enable-hardcoded-tables --enable-avresample --cc=clang --host-cflags= --host-ldflags= --enable-libmp3lame --enable-libx264 --enable-libxvid --enable-opencl --disable-lzma --enable-vda<br />
+libavutil      55. 34.100 / 55. 34.100<br />
+libavcodec     57. 64.100 / 57. 64.100<br />
+libavformat    57. 56.100 / 57. 56.100<br />
+libavdevice    57.  1.100 / 57.  1.100<br />
+libavfilter     6. 65.100 /  6. 65.100<br />
+libavresample   3.  1.  0 /  3.  1.  0<br />
+libswscale      4.  2.100 /  4.  2.100<br />
+libswresample   2.  3.100 /  2.  3.100<br />
+libpostproc    54.  1.100 / 54.  1.100</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2016, 04:27 PM</div>
+</div>
+<div class="message">That appears to be a problem introduced with ffmpeg 3.2, but it only seems to affect the default DASH streams. For now, either roll back to an earlier version of ffmpeg or try <kbd>--radiomode=haf</kbd>.<br />
+<br />
+EDIT: The streams haven't changed, but the behaviour of ffmpeg 3.2 in re-muxing is now different.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1263</h2></div><div class="dateline">14-11-2016, 05:08 PM</div>
+</div>
+<div class="message">Thanks user-2, using "haf" fixed it!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2016, 01:14 AM</div>
+</div>
+<div class="message">This issue seems to have disappeared with ffmpeg 3.2.1, so no longer need to use <kbd>--radiomode=haf</kbd> . If you still see the same problem with ffmpeg 3.2.1 or higher, post an example here and I'll check it out.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; ffmpeg 3.2 creates AAC LTP files from DASH streams (cannot be played in iTunes)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

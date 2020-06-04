@@ -1,0 +1,154 @@
+Recording The Following Programmes
+•Eurovision Song Contest: 2016 - Grand Final (b07bm96m)
+
+INFO Trying to stream pid using type tv
+INFO: pid found in cache
+Matches:
+526:	Eurovision Song Contest: 2016 - Grand Final, BBC One, , default
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Eurovision Song Contest: 2016 - 4. Grand Final
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1362764068) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-2115453484) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=1240771704) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=1800665095) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-584331620) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1385446305) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1631309215) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=691916847) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-600596365) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-459310260) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-551979265) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=1469095827) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-323193057) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=962313497) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-251558463) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1611596160) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1141879582) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=1966863272) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-2033085061) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+INFO: File name prefix = Eurovision_Song_Contest_2016_-_4._Grand_Final_b07bm96m_default                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+ERROR: Last tag size must be greater/equal zero (prevTagSize=-1997262829) and smaller then filesize, corrupt file!
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Retry recording for 'Eurovision Song Contest: 2016 - 4. Grand Final (b07bm96m)'
+
+

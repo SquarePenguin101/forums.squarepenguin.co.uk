@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Windows 10 - perl.exe Application Error - 0xc0000142</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Windows 10 - perl.exe Application Error - 0xc0000142</div>
+<div id="pagetitle"><h2>Windows 10 - perl.exe Application Error - 0xc0000142</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1212</h2></div><div class="dateline">19-02-2016, 12:00 PM</div>
+</div>
+<div class="message">I recently installed Windows 10 and I can't use get_iplayer anymore.<br />
+The error is as follows:<br />
+<br />
+perl.exe Application Error<br />
+The application was unable to start correctly (0xc0000142). Click OK to close the application.<br />
+<br />
+I've tried as others have said on similar threads to run perl -v, but I get the same result.<br />
+I've tried reinstalling multiple times, doesn't help.<br />
+I don't think the issue is to do with a bad dll. I noticed if I try and run perl without one of the dlls it fires a corresponding error message.<br />
+Also I had a look at perl.exe with 'Depends' and it seemed to be okay.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-02-2016, 08:08 PM</div>
+</div>
+<div class="message">The only approaches reported to have borne fruit:<br />
+<ol type="1" class="mycode_list"><li>Try running get_iplayer as administrator. If that works, it means you have a permissions problems somewhere. <br />
+</li>
+<li>Try running get_iplayer in safe mode. If that works, it means some other application is interfering with it in normal mode: antivirus, anti-spyware, third-party firewall, etc.<br />
+</li>
+</ol>
+Whatever the problem is, it is unique to your system. If you ever find the cause, please report back so there is a record. If you can't find the problem, consider using Cygwin if you feel comfortable with that option.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1284</h2></div><div class="dateline">15-05-2016, 11:49 AM</div>
+</div>
+<div class="message">I had the same problem. I have Windows 10 and get_player would crash with the same error message regarding Perl. I tried safe mode and get_iplayer had no problem.<br />
+I switched back to normal mode and downloaded Perl from the Perl website, installed it saying to yes to the permissions, etc and then get_iplayer worked fine without any problems with Perl.  Unfortunately, I forgot to try Dinky's first suggestion which would have given more information as to what was happening. That might have given a clue as to whether it was a permission problem or a clash with another application.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2016, 09:05 PM</div>
+</div>
+<div class="message">As favour to to other users with the same problem, you should specify which version of Perl for Windows you used - there are several. Even with another Perl installed, get_iplayer would still use its embedded Perl installation, unless you made other changes you didn't mention. Your observations suggest that an installer may have made some changes to the registry that cleared up whatever the original problem was.  That idea was floated by another user, but it remains unproven.  As confirmation, you may wish to uninstall your other Perl version and see if the problem returns (assuming the uninstaller cleans up registry changes). Until someone who actually has this problem can find the cause, it will remain a mystery.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1284</h2></div><div class="dateline">16-05-2016, 01:25 PM</div>
+</div>
+<div class="message">Sorry for those oversights. I'm new to all this and not very techie. The only thing I can add is that prior to installing ActiveState Perl for Windows <a href="https://www.perl.org/get.html">https://www.perl.org/get.html</a>, I did an uninstall of get_iplayer and then downloaded and installed the latest Windows version of get_iplayer from here. The Perl error message persisted and then, purely as a guess (a non-techie stumbling in the dark), I downloaded and installed Perl ActiveState.  <br />
+I'm not confident enough to fiddle with any of the software now that it's working. I may end up making a mess of it and end up being a pain here asking for advice on how to put it right.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-875</h2></div><div class="dateline">19-06-2016, 09:38 AM</div>
+</div>
+<div class="message">To add to this thread, I've just had exactly the same error message.<br />
+<br />
+Windows 10 version 1511 OS Build 10586.420<br />
+<br />
+The only software change to my system between get_iplayer working and not working was a Windows update KB3163018<br />
+<br />
+First I reinstalled the latest version of get_iplayer - no good<br />
+Then I downloaded and installed Active State Perl as above - no good<br />
+Then a final additional reboot - get_iplayer suddenly started to work<br />
+<br />
+So I've no idea why it suddenly started working again, but I thought I would confirm that someone else has had the same error message</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1333</h2></div><div class="dateline">03-07-2016, 06:12 PM</div>
+</div>
+<div class="message">Hello,<br />
+I'm not too smart at this game but downloaded get_iplayer maybe a year ago and it worked but I rarely used it.<br />
+Recently I downloaded quite a few programmes from iPlayer (which all worked perfectly) but now I'm getting the same message as others on this thread.<br />
+I uninstalled my get_iplayer and reinstalled it (the version I installed was one that extracted the files automatically so I didn't have to use 7zip or whatever program is necessary). <br />
+<br />
+However, I'm still getting the message below:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">The application was unable to start correctly (0xc0000142)</span><br />
+<br />
+Can anyone suggest what I should/can do to try and make it work again.<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1333</h2></div><div class="dateline">10-07-2016, 03:59 PM</div>
+</div>
+<div class="message">My get_iplayer wasn't working for a week or so and I reinstalled it but it still failed.<br />
+However, I downloaded version 2.95 for Windows (10) and it worked.<br />
+Hooray! <br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-07-2016, 05:18 PM</div>
+</div>
+<div class="message">get_iplayer 2.95.1 for Windows has an updated version of Perl, but there is no way to know if that will make a difference for people experiencing this issue. It's good to know it may have worked in at least one case. All Windows users should update regardless.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-07-2016, 10:05 AM</div>
+</div>
+<div class="message">Just hit this issue myself on my Win10 box. It had been a while since I've done a windows update (been away on business) and it just did the one Boris mentions above and that seems to have broken get_iplayer.<br />
+<br />
+Uninstalled and reinstalled with the new version, but it only worked once I also cleaned up my .get_iplayer user folder as well (removed the old version prior to reinstall, then put back just the bits like my download history and pvr settings that I wanted to keep). Basically went through the instructions provided at the end of the new installer set-up run.<br />
+<br />
+Before that I was getting a weird compilation error about something being missing (which unfortunately I didn't make a note of - sorry!) when I tried to run get_iplayer having just removed and reinstalled but keeping the user data folder. So I suspect something in either the git or plugins folder perhaps, as the new install has neither of those. But anyway it's working again now for me too.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-07-2016, 11:22 PM</div>
+</div>
+<div class="message">I'm glad it works, and thanks for adding to the literature, but I'm afraid it leaves us none the wiser. I can't see how moving files in and out of the profile directory would make any difference, but then this is Windows we're talking about. You would get a different message for runtime crashes, but the original error means that the perl interpreter can't be launched by the system, which is before it attempts to execute the get_iplayer script. It isn't clear that any changes you made to the profile directory had any effect since you were also making unrelated changes according to the cleanup script. OTOH, there has never been a "git" folder associated with get_iplayer, so the presence of one could indicate something was in fact wrong with your profile directory contents. You also mentioned a compilation error, so it isn't clear the original error message is even relevant. Any Perl compilation error would be completely unrelated, since at a minimum it would mean that the perl interpreter was actually running.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-07-2016, 09:24 AM</div>
+</div>
+<div class="message">Yes, I agree that there were at least two issues (the perl execution one and the one that was triggering the actual script runtime error, which looked like some issue on the script itself once it was actually running in the interpreter). For me the reinstall with the new Windows Installer and a reboot seems to have fixed the original perl execution error.<br />
+<br />
+One other thing I did notice is that with the new installer, the perl executable seems no longer to be in the path. I have a simple batch file set up to run via the Windows scheduler<br />
+<br />
+cd C:\Program Files (x86)\get_iplayer<br />
+perl\perl.exe get_iplayer.pl --refresh<br />
+perl\perl.exe get_iplayer.pl --pvr<br />
+<br />
+I had to add the extra perl\ before the executable to get it to work with the new version, which I didn't have to before. Maybe just my set-up (I recently updated from Win7 to Win10 which may also have screwed something up) but I just thought I'd mention it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-07-2016, 10:33 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-07-2016, 09:24 AM)</span></cite>reinstall with the new Windows Installer and a reboot seems to have fixed the original perl execution error.</blockquote>That squares with an earlier post, which is progress in my book.<br />
+<blockquote class="mycode_quote"><cite><span> (17-07-2016, 09:24 AM)</span></cite>One other thing I did notice is that with the new installer, the perl executable seems no longer to be in the path.</blockquote>If you had read the release notes you would have known this.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Windows 10 - perl.exe Application Error - 0xc0000142</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

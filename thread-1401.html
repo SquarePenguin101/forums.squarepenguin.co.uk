@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Complete breakdown</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Complete breakdown</div>
+<div id="pagetitle"><h2>Complete breakdown</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1822</h2></div><div class="dateline">14-05-2017, 07:13 PM</div>
+</div>
+<div class="message">Hi, Noticed my get_iplayer wouldn't work so I checked for updates and updated and still no change. Absolutely no response from the BBC servers. I can connect and get an update on listings by typing get_iplayer but that's all I can do. <br />
+<br />
+I'm using linux mint lmde 2 which is generally very good with get_iplayer so quite what is going on I'm at a loss to say.<br />
+<br />
+I normally use get_iplayer --pid=******** --tvmode=**** --output "/home/andrew /etc etc. <br />
+<br />
+Has anything changed so that pid access is no longer available?<br />
+I've tried --get with a number form the cache list, but no go either. <br />
+<br />
+I'm completely mystified as to why it's not working. <br />
+<br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">14-05-2017, 07:23 PM</div>
+</div>
+<div class="message">You might like to have a look at this post: <a href="thread-706.html">thread-706.html</a><br />
+particularly the "what information should you provide?" bit.<br />
+<br />
+Thanks<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1822</h2></div><div class="dateline">15-05-2017, 10:16 AM</div>
+</div>
+<div class="message">Hi, many thanks. I think this is what you want. Apologies if not! <br />
+<br />
+I'm using Linux Mint LMDE 2 which is up to date. This may be the problem because everything was working until recently so I suspect that an update is what has changed my system and not what I thought might be the case that the BBC had altered theirs.<br />
+<br />
+I was running 2.97 before and hoped that upgrading to 3.01 would cure the problem but this has had no noticeable effect. <br />
+<br />
+All downloads appear to be affected, so I'll just provide one script as an example. BBC King Charles Episode 1<br />
+<br />
+get_iplayer --pid=p04z0n7s --tvmode=good --output "/home/andrew/Public/TV/" <br />
+<br />
+as in ..... ********************** terminal output **********  <br />
+<br />
+andrew@abvaio ~ &#36; get_iplayer --pid=p04z0n7s --tvmode=good --output "/home/andrew/Public/TV/"<br />
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO Trying to download PID using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+3401:	King Charles III - -, BBC Two, p04z0n7s<br />
+<br />
+INFO: 1 Matching Programmes<br />
+  <br />
+******************* end of terminal ***********<br />
+<br />
+It appears to correctly identify the programme but will stay there all day and not actually download anything. <br />
+<br />
+I hope this is enough info for you to diagnose, but let me know if more is required. <br />
+<br />
+Thanks again. This is a great bit of software and much needed since the BBC have dropped linux from their platform support.<br />
+<br />
+Regards<br />
+Andrew<br/><br/>
+<a href="static/thread-1401-log.txt">log.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1822</h2></div><div class="dateline">15-05-2017, 01:25 PM</div>
+</div>
+<div class="message">please note, that to confuse the issue, I inadvertently left the terminal open which I had used to illustrate the problem with downloading Kind Charless III and some while after came back to find that it had worked. So it may just take an age, but still work. If you can see a reason for the delay which I can correct, please let me know and I'll test it again to see just how long the wait was. I've no idea at present. Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1822</h2></div><div class="dateline">15-05-2017, 02:57 PM</div>
+</div>
+<div class="message">The printout below is the result from a download of Trust Me I'm a Vet. It took over 10 mins before it started and then it ran normally. I've tried to highlight the bit in the middle which was in read which may throw some light on what it happening. It's in bold type if that works. <br />
+<br />
+If you have suggestions as to how to speed things up, please do. Otherwise I guess I shall just wait a little bit longer than normal. <br />
+<br />
+Thanks<br />
+<br />
+Andrew <br />
+<br />
+NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO Trying to download PID using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+7463:	Trust Me, I'm a Vet: Series 1 - Episode 2, BBC Two, b08qgzc1<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hlshd1,hlshd2,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,hlsvhigh1,hlsvhigh2,hvfxhigh1,hvfxhigh2,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hvflow1,hvflow2,dvflow1,dvflow2,dvflow3,dvflow4 modes will be tried for version original<br />
+INFO: Trying hlshd1 mode to record tv: Trust Me, I'm a Vet: Series 1 - 2. Episode 2<br />
+INFO: File name prefix = Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original                 <br />
+INFO: Begin recording file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.video.ts<br />
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]<br />
+INFO: Recorded: 1048.65 MiB (00:58:43) [353] in 00:21:32 at 6.49 Mibit/s        <br />
+INFO: Saved HLS video file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.hls.ts<br />
+INFO: Begin converting video file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.hls.ts<br />
+<span style="font-weight: bold;" class="mycode_b">[h264 @ 0x3e7a9e0] non-existing SPS 0 referenced in buffering period<br />
+[h264 @ 0x3e7a9e0] SPS unavailable in decode_picture_timing<br />
+[h264 @ 0x3e7a9e0] non-existing SPS 0 referenced in buffering period<br />
+[h264 @ 0x3e7a9e0] SPS unavailable in decode_picture_timing</span><br />
+frame=88094 fps=14743 q=-1.0 Lsize= 1037234kB time=00:58:43.73 bitrate=2411.4kbits/s speed= 590x    <br />
+INFO: Converted to file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.partial.mp4<br />
+INFO: Recorded file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.mp4<br />
+<br />
+INFO: Begin tagging file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.mp4<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: ===========================================================================&gt;100%|<br />
+ Finished writing to temp file.<br />
+INFO: Tagged file: /home/andrew/Public/TV/Trust_Me_Im_a_Vet_Series_1_-_2._Episode_2_b08qgzc1_original.mp4<br />
+andrew@abvaio ~ &#36;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2017, 03:34 PM</div>
+</div>
+<div class="message">You can see from the log that you're only able to download &lt;3x realtime. You simply have poor upstream connectivity, or else you have been throttled somewhere. There is nothing get_iplayer can do about that. Thread closed - see forum rules.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Complete breakdown</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Integration Into Tretflix</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Integration Into Tretflix</div>
+<div id="pagetitle"><h2>Integration Into Tretflix</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-528</h2></div><div class="dateline">23-06-2014, 08:45 AM</div>
+</div>
+<div class="message">Hi Guys <br />
+<br />
+Thanks for the great project, makes my viewing of BBC content much easier as I have a bit of a bandwidth issue where I am. <br />
+<br />
+Question for someone who is smarter than me :-). I running a VM by the name of Tretflix on a server on my network. It is an Ubuntu VM which integrates SABNZBD, Sick Beard, Couch Potato, NZBDrone, Headphones, Plexmedia center &amp; Transmission using a very nice CLI. <br />
+<br />
+<a href="http://tretflix.com/">http://tretflix.com/</a> <br />
+<br />
+The apps are all accessed using my web browser accessing the servers VM's Ip address.<br />
+<br />
+I am trying to integrate get_iplayer with the web_pvr onto the server but am having a problem accessing the web_pvr interface from my pc. <br />
+<br />
+I have installed get_iplayer onto the box, following the linux full install guide and am running the Web PVR manager using the "get_iplayer_web_pvr" and it comes up with the message to access the interface using the "http://127.0.0.1:1935" address. Obviously this is a local address so I am trying to access it at the server address:1935 which it is not able to do.<br />
+<br />
+The server has no GUI installed so am not able to run a browser on it locally. If possible I would like to set up the Web PVR interface to run it remotely from my machine. Am I able to do this or do I have to access it locally? Could run it from the CLI using PUTTY but would be much easier just to run it from my browser on my own machine like I do with all the other apps in Tretflix.<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-528</h2></div><div class="dateline">23-06-2014, 09:13 AM</div>
+</div>
+<div class="message">Ok, got it working, found a similar question on <a href="http://lists.infradead.org/pipermail/get_iplayer/2011-March/000907.html">http://lists.infradead.org/pipermail/get...00907.html</a> <br />
+<br />
+Had to edit the config file at /etc/default/get_iplayer_web_pvr and change the listen command to 0.0.0.0:1935</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Integration Into Tretflix</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

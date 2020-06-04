@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Exclude Titles from PVR</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Exclude Titles from PVR</div>
+<div id="pagetitle"><h2>Exclude Titles from PVR</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-38</h2></div><div class="dateline">29-07-2013, 06:04 PM</div>
+</div>
+<div class="message">I can get this script working to avoid showing channels and certain programmes. However I need to include programms such as.<br />
+<br />
+behind the lines,points of view,weakest link,fix my family<br />
+<br />
+and channels such as "northern ireland"<br />
+<br />
+How can i do this without getting the script to truncate. <br />
+Thanks in advance for any answers.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --exclude-channel cbbc,cbeebies,parliament,alba,news --exclude-category soaps,classical,sport,pets,standup,news,folk,food,drink,disability,car,garden,supernatural,scotland --exclude doctors,casualty,holby,hunted,inspector,newsnight,bargain,gardener,gang,officer,helicopter,jools,merlin,slater,cooking,meade,nickleby,norton,dad&#039;s,remembrance,police,mayor,debate,conference,am.pm,welsh,strictly,unzipped,vicar,wales,paras,stormont,praise,lottery</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-07-2013, 07:26 PM</div>
+</div>
+<div class="message">All channels and programmes not specifically excluded will be included in the search. You can use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--channel</code></div></div> to narrow results to one or more channels, but don't add that to your preferences.  If you do, you will need to override that list of channels every time you want to do a different search.  The same goes for for programme names - don't save them in preferences.  If you want to search for multiple programme names at once, surround them with quotes and separate them with a vertical pipe symbol:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer "behind the lines|points of view|weakest link|fix my family"</code></div></div><br />
+<br />
+The general idea is that the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--excludeXXX</code></div></div> options are for things you <span style="font-weight: bold;" class="mycode_b">never</span> want to see, while <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--channel</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--category</code></div></div> should generally be applied only to a particular search.  <br />
+<br />
+If you have certain searches that you want to save and re-use in the future, use presets.  See <a href="https://squarepenguin.co.uk/wiki/documentation/">Usage &amp; Examples</a>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-38</h2></div><div class="dateline">30-07-2013, 12:19 PM</div>
+</div>
+<div class="message">Thank you user-2 for your fast response. I have to use exclude searches to minimise the amount of tripe the BBC now produces. <br />
+<br />
+Is there any way to get the PVR manager to display 400 reults on one page rather than 10?<br />
+ <br />
+I also added this but there is no indicator that future listings are shown on the PVR manager<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --add-prefs --refresh-future</code></div></div><br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-07-2013, 02:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/exclude-titles-from-pvr/#post-1047">Quote:</a>I have to use exclude searches to minimise the amount of tripe the BBC now produces.</blockquote>
+<br />
+What is your overall aim with this script? What is the end state you are looking for? What is it you would like get_iplayer to do?<br />
+<br />
+Knowing these answers may make it easier to see exactly what you are trying to do and could lead to another way of getting to the desired result without jumping through a series of hoops.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-07-2013, 07:37 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/exclude-titles-from-pvr/#post-1047">Quote:</a><br />
+Is there any way to get the PVR manager to display 400 reults on one page rather than 10?</blockquote>
+<br />
+Tip for the future: If you're using the Web PVR, tell us up front.  It determines how we respond to your queries.<br />
+<br />
+I'm guessing you didn't pull the number 400 out of a hat, so I presume you've found the setting that controls the number of programmes displayed per page.  My guess is that you just didn't apply/save the setting.  See the Settings section in the Web PVR help.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I also added this but there is no indicator that future listings are shown on the PVR manager<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --add-prefs --refresh-future</code></div></div></blockquote>
+<br />
+Don't put this in your preferences.  The Web PVR always passes this option to get_iplayer, which will always override the value in preferences. The value in preferences will only be used by the CLI.  Configure this option in the Web PVR and save it as your default there if that's what you want. In general, any option that can be configured in the Web PVR should be configured there rather than in preferences.  There are a few sort-of exceptions, such as the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--excludeXXX</code></div></div> options which are empty by default in the Web PVR.  Of course, once you enter values for those options in the Web PVR the equivalent preferences will be overridden as well, so I would recommend you set your exclusions in the Web PVR as well and not in preferences. The Web PVR was designed to be a separate, more limited tool, which is a blessing or a curse depending on your perspective.  Most Windows users seem happy to avoid the command line, but the price is a loss of flexibility.<br />
+<br />
+As for why you didn't see future programmes, there are a couple of possibilities: 1) The most likely explanation is that you didn't set the "refresh future" option in the Web PVR itself, so the necessary parameter wasn't passed to get_iplayer; 2) You didn't refresh the cache - you have to launch the cache refresh tab yourself in the Web PVR.  Even when the cache has been refreshed with future listings, you must configure the Web PVR to search future programmes.  Like get_iplayer, it doesn't do so by default.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-38</h2></div><div class="dateline">01-08-2013, 05:52 PM</div>
+</div>
+<div class="message">What is your overall aim with this script? What is the end state you are looking for? What is it you would like get_iplayer to do?<br />
+<br />
+Basically when i am searching  using WEB PVR Manager for the latest programs to download, I want to exclude many which are of no interest to me.<br />
+<br />
+I have managed to set the view to 400 items in the web PVR manager by editing the file <span style="font-weight: bold;" class="mycode_b">get_iplayer.cgi</span><br />
+line 3528<br />
+	&#36;opt-&gt;{PAGESIZE} = {<br />
+		title	=&gt; 'Programmes per Page', # Title<br />
+		tooltip	=&gt; 'Select the number of search results displayed on each page', # Tooltip<br />
+		webvar	=&gt; 'PAGESIZE', # webvar<br />
+		type	=&gt; 'popup', # type<br />
+		default	=&gt; 400, # default<br />
+		value	=&gt; ['10','25','50','100','200','400'], # values<br />
+		onChange=&gt; "BackupFormVars(form); form.NEXTPAGE.value='search_progs'; form.PAGENO.value=1; form.submit(); RestoreFormVars(form);",<br />
+		save	=&gt; 1,<br />
+<br />
+In addition I also changed the show future programms by editing the<br />
+ same file and changing the default to 1.<br />
+<br />
+line 3767<br />
+	&#36;opt-&gt;{FUTURE} = {<br />
+		title	=&gt; 'Search Future Schedule', # Title<br />
+		tooltip	=&gt; 'Whether to additionally display and search programmes in the future programmes schedule (will only work if Refresh future schedule option is enable and refreshed)', # Tooltip<br />
+		webvar	=&gt; 'FUTURE', # webvar<br />
+		optkey	=&gt; 'future', # option<br />
+		type	=&gt; 'radioboolean', # type<br />
+		default	=&gt; '1', # value<br />
+		save	=&gt; 1,<br />
+<br />
+<br />
+Both i believe can be achieved cookies but i clean my cache leaving IE.<br />
+<br />
+Regards future refresh neither solution appears to work, I evn deleted the cach file under users to see if it rebuilt differently. Anyhow i shall continue playing to see if i can resolve this myself. In the meantime, thanks for all your help.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Exclude Titles from PVR</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

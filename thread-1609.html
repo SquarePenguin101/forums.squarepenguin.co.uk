@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - (Homebrew) WARNING: Required ffmpeg utility not found - not converting .ts file(s)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; (Homebrew) WARNING: Required ffmpeg utility not found - not converting .ts file(s)</div>
+<div id="pagetitle"><h2>(Homebrew) WARNING: Required ffmpeg utility not found - not converting .ts file(s)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-275</h2></div><div class="dateline">12-12-2017, 04:40 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I tried the the Homebrew crew and only gotten some head scratching. I'm now using my third OS for the HTPC as various machines have met their maker. This is the first time I've tried get_iplayer on a Mac. <br />
+<br />
+The Homebrew instructions seemed simple and it installed with now errors on my OS X 10.13.2 macbook. I updated local commands and used the brew doctor to make sure I didn't have any other local weirdness. <br />
+<br />
+While get_iplayer seems to not be able to call ffmpeg, I know it is working because I can use it in the terminal to convert all of the .ts files into .mp4.<br />
+<br />
+My options file only has tvmode=best and the Movies folder in my user folder as output. I didn't mess with any other settings. <br />
+<br />
+Any suggestions would be appreciated. I've got a post up on the Homebrew board as well. <br />
+<br />
+Chris</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2017, 09:04 PM</div>
+</div>
+<div class="message">Try to bypass whatever is broken on your system by using <kbd>--ffmpeg</kbd> with the full path to ffmpeg. If it doesn't work, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system. If it does work, add it to your preferences and remove it later if you figure out what is broken. On that subject, "tvmode=best" is an invalid options file entry. The "=" should be a space. You should delete that entry anyway since it is the default setting.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-275</h2></div><div class="dateline">13-12-2017, 04:33 AM</div>
+</div>
+<div class="message">Thanks Dinky,<br />
+<br />
+1. As I stated before, but less clearly, the error I was getting was from the Web_PVR (also 3.07 Homebrew). I was also running get_iplayer -pvr as a cron job and all of the media files created that way were also being created with the .ts extension. <br />
+<br />
+2. The response from get_iplayer-V is:<br />
+get_iplayer 3.07-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+<br />
+3. I am running OS X 10.13.2 on a 2015 macbook pro<br />
+<br />
+4. I was using the Web_PVR when I got the error message (in the subject line). <br />
+<br />
+5. Using the --ffmpeg option eliminates the error in the Web_PVR and command line. <br />
+<br />
+6. I've removed the tvmode = best <br />
+<br />
+Everything seems to be working smoothly now. I'll check in with the homebrew folks to see if the can help me diagnose why the build isn't pointing at ffmpeg. I'll try a clean install on another machine that is on the OS and see if I get the same error. <br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-12-2017, 12:33 PM</div>
+</div>
+<div class="message">To avoid <kbd>--ffmpeg</kbd> ffmpeg must be in &#36;PATH. That is the place to start.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; (Homebrew) WARNING: Required ffmpeg utility not found - not converting .ts file(s)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

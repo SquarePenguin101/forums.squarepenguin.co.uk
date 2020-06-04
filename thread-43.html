@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Perl.exe does not work anymore</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Perl.exe does not work anymore</div>
+<div id="pagetitle"><h2>Perl.exe does not work anymore</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>Guest</h2></div><div class="dateline">22-09-2013, 09:27 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+after 2 months without using get_iplayer and with installing / unistalling many things, I tried to run get_iplayer. Unfortunately I have now an issue with perl.exe. I have unisntalled and reinstalled get_iplayer, still the same issue.<br />
+<br />
+I have install the strawberry distribution in another folder, it works. I have copied this strawbeery perl.exe on the desktop, it works. Then I have copied it in the get_iplayer folder, it does not work???<br />
+<br />
+I have attached the logfile.pml from my failed attempt to reinstall get_iplayer...if this can help to find the reason<br />
+<br />
+Thansk for you help in advance.<br />
+Cbib46</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>Guest</h2></div><div class="dateline">22-09-2013, 09:33 PM</div>
+</div>
+<div class="message">here through dropbox:<br />
+<a href="https://www.dropbox.com/s/9mkn1w4qse7hef7/Logfile-cbib46.rar">https://www.dropbox.com/s/9mkn1w4qse7hef...cbib46.rar</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2013, 11:27 PM</div>
+</div>
+<div class="message">Sorry, but you need to back up and start over.  You haven't even said what goes wrong with perl.exe or what you were doing when the error appeared.  The procmon log you sent is, unfortunately, useless because your filter restricted capture only to events from the get_iplayer installer.  Even if you were trying to monitor perl.exe when launched by the installer, your filter prevented any trace of it from appearing in the log.  Also, if you don't need a separate installation of Strawberry Perl - and I'm guessing you don't - then uninstall it and remove all traces of it from your system.  And don't swap around different versions of perl.exe.  There is nothing wrong with the version provided, and we can't support you unless you install only that version.  <br />
+<br />
+I'm going to take a guess that what you were trying to say was perl.exe wouldn't execute from inside the get_iplayer installer.  A likely culprit is your anti-virus (Avast), which can interfere with installation, so completely disable it before trying to install again.  However, your procmon log also shows accesses to <a href="http://www.007guard.com">www.007guard.com</a>, which is sign that your machine has been infected by malware.  Google it for possible solutions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>Guest</h2></div><div class="dateline">23-09-2013, 11:09 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+sorry for not being able to explain the issue. You guessed well and i have managed to reinsatll get_iplayer when i disabled Avast. The funny thing is that, now it is installed, it works very weel even with Avast.<br />
+007guard is from Spybot s&amp;D and is safe.<br />
+<br />
+Thanks for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-09-2013, 02:33 PM</div>
+</div>
+<div class="message">Good to hear.  Sorry for the bogus warning re: 007guard.  I didn't notice that all the connections were to the same port.  Spybot must have overwritten or superseded the default entry for 127.0.0.1 in your hosts file.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Perl.exe does not work anymore</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

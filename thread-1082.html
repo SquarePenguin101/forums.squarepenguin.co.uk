@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Any way of getting old-style download progress output format back?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Any way of getting old-style download progress output format back?</div>
+<div id="pagetitle"><h2>Any way of getting old-style download progress output format back?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1451</h2></div><div class="dateline">01-11-2016, 12:32 PM</div>
+</div>
+<div class="message">Is it possible to get old-style download progress output format with 2.95 and later through a specific command line option? Or isn't this available anymore because ffmpeg is used instead of rtmpdump?<br />
+<br />
+The new-style download progress output format is like this:<br />
+<br />
+Recording:    45.71MB / 2284.79MB  6347kbps   2.0% 00:48:09 remaining<br />
+<br />
+but often it calculates the total size incorrectly, meaning that you often get 102-105% in total so this information is unreliable. Also, you don't get any information about the total/downloaded duration of the program so if it breaks you don't know from which time offset you can start a new download.<br />
+<br />
+I have built Java programs around the old-style download progress format and this is much more reliable than the new one. I realize that the old-style format doesn't give you information about estimated time remaining but my Java program calculates that.<br />
+<br />
+By old-style download progress format I mean:<br />
+<br />
+3616.923 kB / 10.88 sec (1.6%)<br />
+<br />
+I could obviously stay on an older version of get_iplayer but I would like to be able to download BBC Radio 1 shows in 320Kbps so I need the new version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2016, 05:04 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-11-2016, 12:32 PM)</span></cite>Is it possible to get old-style download progress output format with 2.95 and later through a specific command line option? Or isn't this available anymore because ffmpeg is used instead of rtmpdump?</blockquote>Not for your purposes (and it has nothing to do with ffmpeg). See below.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The new-style download progress output format is like this:<br />
+<br />
+Recording:    45.71MB / 2284.79MB  6347kbps   2.0% 00:48:09 remaining<br />
+<br />
+but often it calculates the total size incorrectly, meaning that you often get 102-105% in total so this information is unreliable. </blockquote>
+If you had read the FAQ list you would know why that occurs. The BBC programme information isn't completely reliable, so don't expect it to be.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Also, you don't get any information about the total/downloaded duration of the program so if it breaks you don't know from which time offset you can start a new download.</blockquote>
+get_iplayer doesn't parse the media stream so can't show accurate elapsed time. Also, the total duration included in programme metadata may be off by several minutes. get_iplayer cannot yet automatically resume DASH/HLS downloads, so the safest approach is to check the actual duration of any partial download and calculate accordingly, though that won't be a magic bullet. Any start/stop times for DASH/HLS downloads are only accurate to 6-10 seconds, so you would have to do some suturing in an audio editor if you download programmes in several pieces.<br />
+<br />
+You can also use <kbd>--radiomode=haf</kbd> to make HLS the radio programme stream format and <kbd>--hls-ffmpeg</kbd> to force ffmpeg to be used for downloading.  The ffmpeg progress display shows elapsed time. However, this option has been deprecated, so it would only be a short term solution.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>By old-style download progress format I mean:<br />
+<br />
+3616.923 kB / 10.88 sec (1.6%)<br />
+<br />
+I could obviously stay on an older version of get_iplayer but I would like to be able to download BBC Radio 1 shows in 320Kbps so I need the new version.</blockquote>
+That is the progress display from rtmpdump, so only is shown with now-deprecated RTMP streams. get_iplayer can't replicate it for other stream formats. You can temporarily use <kbd>--radiomode=flash</kbd> if you're content with 128k. For benefit of others: Radio 1 shows are not available via RTMP at 320k.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1451</h2></div><div class="dateline">01-11-2016, 05:23 PM</div>
+</div>
+<div class="message">Thanks for your reply and sorry that I missed the duration inaccuracy from the FAQ.<br />
+<br />
+Shame that the download progress info is now unreliable owing to BBC.<br />
+<br />
+Is there any way of overwriting the duration that BBC provides through a command line parameter? for instance, the duration of The Film Review is most often around 660s and not 900s as provided by BBC. That way, one could specify 660s as the duration and progress info would be more accurate.<br />
+<br />
+Or perhaps implement a new command line parameter that forces a call to ffprobe on the URL through which the program will be downloaded and correcting the duration to whatever ffprobe reports?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2016, 05:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-11-2016, 05:23 PM)</span></cite>Is there any way of overwriting the duration that BBC provides through a command line parameter?</blockquote>No.<br />
+<blockquote class="mycode_quote"><cite><span> (01-11-2016, 05:23 PM)</span></cite>Or perhaps implement a new command line parameter that forces a call to ffprobe on the URL through which the program will be downloaded and correcting the duration to whatever ffprobe reports?</blockquote>No. That belongs in your wrapper application (assuming it would even work).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Any way of getting old-style download progress output format back?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

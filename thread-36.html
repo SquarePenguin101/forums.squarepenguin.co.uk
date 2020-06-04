@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - iTunes - Films vs. TV Programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; iTunes - Films vs. TV Programmes</div>
+<div id="pagetitle"><h2>iTunes - Films vs. TV Programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-64</h2></div><div class="dateline">07-09-2013, 09:34 AM</div>
+</div>
+<div class="message">I have been using get_iplayer on my laptop for a long time and have just installed it on a new laptop.<br />
+<br />
+Whenever I download a programme on the new laptop and move it into iTunes it is listed as a TV Programme.  On the old laptop it is a movie.  It is something to do with the file itself rather than the iTunes settings as the same file is treated in the same way on the two instances of iTunes.<br />
+<br />
+I know how to change it from one list to the other using the Media Kind option but can anyone tell me what the difference is between the two versions and how to have it set as a Movie by default?<br />
+<br />
+Thanks in advance!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2013, 01:53 PM</div>
+</div>
+<div class="message">get_iplayer tries to determine if you are downloading a film and will tag the file as Movie if so.  If not, the file is tagged as TV Show.  There are few films available from iPlayer, so most video downloads are tagged as TV Show.  There isn't a default setting.  This has been the case for years.  You say that on your old machine all video downloads are classified as Movie.  That indicates something is wrong on that machine.  My guess is that for some reason Media Kind isn't being set in your files.  A video file without Media Kind already set will be classified as Movie by iTunes, and that may be what is happening on your old machine.  Without knowing anything about your system, I can't say what the problem might be. <br />
+<br />
+get_iplayer appears to be working correctly on your new machine. If you're planning to stop using the old machine, then there is no reason to investigate further. If not, and you do want to investigate what is wrong on your old machine, let me know and we'll get stuck in.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-64</h2></div><div class="dateline">07-09-2013, 10:24 PM</div>
+</div>
+<div class="message">Thanks for the response. Makes sense.<br />
+<br />
+Do you know which attribute of the mp4 file dictates whether it is a TV Programme or Movie?<br />
+<br />
+I can switch from one to the other in iTunes but is this something I can see/edit in Windows Explorer? How does this get set during download process?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-09-2013, 12:37 AM</div>
+</div>
+<div class="message">The MP4 "stik" atom value determines the value of Media Kind in iTunes.  The get_iplayer tag scheme is explained here:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/tagging/#tag-scheme">https://squarepenguin.co.uk/wiki/tagging/#tag-scheme</a><br />
+<br />
+get_iplayer uses AtomicParsley (an external command-line utility) for MP4 tagging.  If you run get_iplayer with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> you'll see the full AtomicParsley command dumped near the end of the output. The only quirk in implementation is that you have to use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--stik "Short Film"</code></div></div> with AtomicParsley due to changes in how the stik value for films is interpreted in iTunes.<br />
+<br />
+I don't think you can see - much less edit - the stik value in the Explorer properties pane for an MP4 file.  I use MediaInfo if I need to view the stik value on Windows.  It has a shell extension for right-click access in Explorer.  I don't do metadata editing on Windows except with iTunes, so I don't have any recommendations for a metadata editor that can change stik values.  There is a Windows version of MetaX (&#36;10) that should do the trick.  I've used the OSX version, and it works pretty well (it employs AtomicParsley underneath).  I'm sure there are others as well.  Of course, you can just use AtomicParsley itself from the command prompt.  If you need to do some bulk changes, you could write batch files that call AtomicParsley.  The version supplied with get_iplayer can be found at:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-64</h2></div><div class="dateline">08-09-2013, 09:55 AM</div>
+</div>
+<div class="message">Thank you. Appreciate the info.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; iTunes - Films vs. TV Programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Save Downloads As Mpeg2?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Save Downloads As Mpeg2?</div>
+<div id="pagetitle"><h2>Save Downloads As Mpeg2?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-728</h2></div><div class="dateline">14-11-2014, 08:19 AM</div>
+</div>
+<div class="message">I am a get_iplayer and ffmpeg newbie. I am using a Raspberry Pi for get_iplayer (ver 2.82) downloads to my NAS (works great). I would like to save the downloads as .mpg files. Reason - I want to play them on my Sony DVD player which has DLNA support for mpeg2 but not for either mp4 or mkv. I realize I could configure get_iplayer save files as .flv and then run some sort of batch conversion (e.g. ffmpeg). Is there a more "elegant" one step solution? Can the conversion settings for ffpmeg be changed so that video files are automatically converted to .mpg when I run get_iplayer.<br />
+<br />
+- Roller</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2014, 07:28 PM</div>
+</div>
+<div class="message">See "Custom Commands" in Usage Examples wiki page.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-728</h2></div><div class="dateline">16-11-2014, 09:55 PM</div>
+</div>
+<div class="message">Thanks for your suggestion, user-2. The example given in "Custom Commands" did work but it created a video in .ts format, which my DVD player cannot read (even if I change the extension to .mpg).  <br />
+In addition to MPEG2 (.mpg) my DVD player will play some DIVX/XVID files (MPEG-4 Part2 codec is supported but not H.264). Once I learn a bit more about using ffmpeg I should be able to save to a video format I can play (XVID/DivX preferred because of smaller file size).<br />
+There was also a --avi "switch" mentioned as an output option under Custom Commands. I am not clear how or where --avi  is used. I suspect, though, it would use the H.264 codec by default and would not create compatible files.<br />
+One more question: Once a successful custom command has been created is there any way of saving it to preferences so it does not have to be entered at the CLI every time get_iplayer is run?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-11-2014, 10:54 PM</div>
+</div>
+<div class="message">As it says, it is only an example. You weren't meant to copy it exactly, given that you're trying to produce MPEG2. You have to figure out ffmpeg options to fit your own transcoding plans.<br />
+<br />
+As for saving preferences, read the usage examples page again.  But, do not save <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--command</code></div></div> in your default options - use a preset. Otherwise it will be applied to all downloads, not just the ones you want to transcode.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-728</h2></div><div class="dateline">17-11-2014, 12:54 AM</div>
+</div>
+<div class="message">I agree, I need to do more "homework" to get comfortable with ffmpeg options (not mention, get_iplayer). Many thanks for pointing me in the right direction with your timely and helpful responses. Will keep you posted.  <br />
+<br />
+Thank you, as well, for the terrific work you folks are doing to restore functionality to get_iplayer in the face of changes made by the BBC!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Save Downloads As Mpeg2?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download PID b08rvdwp</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download PID b08rvdwp</div>
+<div id="pagetitle"><h2>Cannot download PID b08rvdwp</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">29-05-2017, 07:16 PM</div>
+</div>
+<div class="message">I can see it on the iplayer website. Says it's available for 26 days. I can see the pid.<br />
+<br />
+It doesn't appear in the index oddly (was broadcast yesterday though).<br />
+<br />
+I've tried downloading via the pid, and the iplayer web url but I don't get any error or any downloads.<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b08rvdwp/the-truth-about-14-hiv">http://www.bbc.co.uk/iplayer/episode/b08...out-14-hiv</a><br />
+<br />
+Using the latest and greatest get_iplayer on debian.<br />
+<br />
+What am I missing?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-05-2017, 08:25 PM</div>
+</div>
+<div class="message">Works fine here. <a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">29-05-2017, 08:37 PM</div>
+</div>
+<div class="message">Odd that it works for you... with verbose logging it says it's a future program. <br />
+<br />
+If that is the case, could you tweak the default log on the next release to state that - better to have something in the log for 1st line debug.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b08rvdwp --type=tv --verbose &gt; gip.log 2&gt;&amp;1<br />
+<br />
+cat gip.log<br />
+<br />
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+&nbsp;&nbsp;NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: /root/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+Current options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodingconsolein = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodingconsoleout = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodinglocale = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodinglocalefs = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ffmpeg = /usr/local/bin/ffmpeg<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pid = b08rvdwp<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refreshexclude = cbbc,s4c,cbeebies,bbc alba,BBC One Northern Ireland,BBC News,BBC Parliament<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refreshexcludegroupstv = local<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tvmode = best<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type = tv<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verbose = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ybbcy = 1<br />
+<br />
+INFO: Search args: ''<br />
+INFO: ffmpeg version string = 3.1.5-static<br />
+INFO: ffmpeg version number = 3.1<br />
+INFO: Will try prog types: tv<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+INFO: Programme not in history<br />
+INFO: Got 4034 file cache entries for tv<br />
+INFO: Ignoring Future Prog: '3570: The Truth About... - HIV - 2017-05-31T23:20:00+01:00'</code></div></div><br />
+p.s. my date is correct<br />
+<br />
+root@gdserver:~# date<br />
+Mon 29 May 20:38:09 BST 2017</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1845</h2></div><div class="dateline">29-05-2017, 09:19 PM</div>
+</div>
+<div class="message">In an earlier thread, the "--future" flag fixed a similar problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-05-2017, 10:16 PM</div>
+</div>
+<div class="message">No idea how you managed to index only the upcoming repeat and not the original broadcast, unless you changed your refresh parameters in the last few days. As for the log message, that entire bit of code will likely disappear in the next release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">30-05-2017, 08:16 PM</div>
+</div>
+<div class="message">We had a power cut on Wednesday - and we were without power for 14 hours. Power on server after and thought no more of it. It runs the my script at 1am which updates the cache and runs the pvr.<br />
+<br />
+Other than that, nothing unusual happened.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download PID b08rvdwp</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

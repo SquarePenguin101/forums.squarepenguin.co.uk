@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR: Quick URL recording does not work with HTTPS URLs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: Quick URL recording does not work with HTTPS URLs</div>
+<div id="pagetitle"><h2>Web PVR: Quick URL recording does not work with HTTPS URLs</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1932</h2></div><div class="dateline">05-10-2017, 08:19 PM</div>
+</div>
+<div class="message">Of late I have been having trouble with downloading certain programmes via the WebPVR, whereby they do not seem even to start to download via the WebPVR. I am using v3.04, previously v3.01 and v3.02, and have been having this problem across them all, independent of browser, and across three different computers. I am, however, able to download the programmes more manually using get_iplayer --pid=abcdefg<br />
+<br />
+When the problem strikes, the new window for the 'downloading' programme looks as follows, and no files get created in the 'iPlayer Recordings' directory.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Please leave this page open until the recording completes<br />
+<br />
+Close<br />
+Recording The Following Programmes<br />
+<br />
+<br />
+Recording complete<br />
+<br />
+get_iplayer Web PVR Manager 3.04-windows.0, ©2009-2010 Phil Lewis - Licensed under GPLv3</code></div></div><br />
+Example programmes I've had this trouble with:<br />
+<a href="https://www.bbc.co.uk/iplayer/episode/b094f4tl/great-war-horses?suggid=b094f4tl">https://www.bbc.co.uk/iplayer/episode/b0...d=b094f4tl</a> (about to expire)<br />
+<a href="https://www.bbc.co.uk/iplayer/episode/b094f595/the-21st-century-race-for-space?suggid=b094f595">https://www.bbc.co.uk/iplayer/episode/b0...d=b094f595</a><br />
+<br />
+Any ideas what's wrong, anyone? Let me know if I can provide any further information that would be helpful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-10-2017, 10:52 PM</div>
+</div>
+<div class="message">I assume you are plugging those URLs into the Quick URL box. Change "https" to "http" before clicking "Record". It looks like iPlayer is now https-only and the Quick URL function needs to be adapted. I'll do this for the next release. If you look up the programme by name and click "Record" in the "Actions" column for the episode of interest, it will download as normal.<br />
+<br />
+EDIT: It looks like iPlayer doesn't always force redirection to https URLs after all. Still, the Web PVR should handle them.<br />
+<br />
+EDIT2: It appears that HTTPS redirection is back on as of 2017-10-11</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1912</h2></div><div class="dateline">12-10-2017, 02:24 AM</div>
+</div>
+<div class="message">Hi, I have been using PVR for a long time and it suddenly stopped working today. I always paste url in the Quick URL box and click Record. Now it shows "Recording complete"  but nothing happens！I will include an attachment. <br />
+By the way, even though I have specified ffmpeg path when I started get_iplayer.cgi with the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer.cgi -p 1998 --ffmpeg /usr/bin/ffmpeg</code></div></div> , there is still a warning that PVRl cannot detect ffmpeg version. I'm using ffmpeg git binary.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1937</h2></div><div class="dateline">12-10-2017, 06:08 AM</div>
+</div>
+<div class="message">Same for me too</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1938</h2></div><div class="dateline">12-10-2017, 09:09 PM</div>
+</div>
+<div class="message">Me too ! I dont really get on with the PVR guide so I've always used the iplayer web pages to find programmes and copy and paste the URL on get iplayer . With HTTPS I cant record anything - I just get "recording complete" as well. I'm pleased to fin dyou online and to see its not just me !<br />
+<br />
+Thankfully, I'm mainly a radio man and that is still http, and works, as do some of the older BBC4 documentaries.<br />
+<br />
+Is this HTTPS thing an insurmountable problem ?<br />
+<br />
+This is my first ever post...and this problem has driven me to find you on here, Let me thank you for providing  getiplayer though, its very much appreciated.<br />
+<br />
+ BTW I changed to v3.04 thinking this would solve it.....</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-10-2017, 11:32 PM</div>
+</div>
+<div class="message">fixed in v3.05</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1937</h2></div><div class="dateline">13-10-2017, 11:46 AM</div>
+</div>
+<div class="message">Thanks Dinky, much appreciated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1932</h2></div><div class="dateline">14-10-2017, 08:21 PM</div>
+</div>
+<div class="message">Many thanks for resolving - I haven't upgraded to 3.05 yet, but dropping the 's' from 'https' works just fine for me.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: Quick URL recording does not work with HTTPS URLs</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Problems with index feeds and search (and recording)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems with index feeds and search (and recording)</div>
+<div id="pagetitle"><h2>Problems with index feeds and search (and recording)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1495</h2></div><div class="dateline">27-12-2016, 06:15 PM</div>
+</div>
+<div class="message">Hi. :)<br />
+<br />
+get_iplayer 2.97-ppa26<br />
+Linux Mint 18<br />
+<br />
+<br />
+<br />
+I first installed get_iplayer on Linux a fews days ago, then I unistalled it and installed it again (yes, just for the sake of it, because I'm learning how to use Linux and I thought it was a good idea trying things). <br />
+I don't know if the issue arised before or after reinstallating, because I first attempted to use the search and index functions today.<br />
+<br />
+About listing programmes. <br />
+<br />
+I can't get the full list of available programmes.<br />
+<br />
+get_iplayer searches  for a list of programmes only if I use <span style="font-weight: bold;" class="mycode_b">--refresh</span> and only with<span style="font-weight: bold;" class="mycode_b"> --type=tv,radio</span>  (that is, if I use <span style="font-weight: bold;" class="mycode_b">--type=radio </span>only, nothing happens).<br />
+<br />
+However, this way I only get the programmes that were added since the last time I refreshed. In other words, it's completely useless, as I often get 0 programmes.<br />
+<br />
+Whether it works or not, depending on the command I give, the output always include info about get_iplayer failing to record a certain programme.<br />
+<br />
+Here's a few examples.<br />
+<br />
+Trying to get a list of radio programmes:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>elisa@PC-Elisa ~ &#36; get_iplayer --type=radio<br />
+get_iplayer 2.97-ppa26, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: ARRAY(0x1f3b058) using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.</code></div></div><br />
+<br />
+Trying to refresh:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>elisa@PC-Elisa ~ &#36; get_iplayer --refresh --type=tv,radio<br />
+get_iplayer 2.97-ppa26, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Getting tv Index Feeds (this may take a few minutes)<br />
+....................................................................<br />
+Added: 735:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 27/12/2016, BBC News, b0876ghb<br />
+Added: 2656:&nbsp;&nbsp;&nbsp;&nbsp;Mike the Knight: Series 2 - Mike the Knight and the Super Troll Ball, CBeebies, b03x12v1<br />
+Added: 3052:&nbsp;&nbsp;&nbsp;&nbsp;OOglies: Funsize - Episode 8, CBBC, b05nd102<br />
+Added: 3499:&nbsp;&nbsp;&nbsp;&nbsp;Rastamouse: Series 1 - Da Rare Groove, CBeebies, b012svch<br />
+<br />
+INFO: Getting radio Index Feeds (this may take a few minutes)<br />
+.............................................................................................................................<br />
+Added: 10197:&nbsp;&nbsp;&nbsp;&nbsp;Afternoon on 3: European Festivals Selection - Episode 2, BBC Radio 3, b08590tl<br />
+Added: 11214:&nbsp;&nbsp;&nbsp;&nbsp;BBC Radio Merseyside Special - The Blitz - An unconquered People, BBC Radio Merseyside, p04khj72<br />
+Added: 13257:&nbsp;&nbsp;&nbsp;&nbsp;Objet Trouve - The Chaplain's Suitcase, BBC Radio 4, b085tt46<br />
+Added: 14006:&nbsp;&nbsp;&nbsp;&nbsp;Stark Talk - Dougray Scott, BBC Radio Scotland, b07c6vz4<br />
+Added: 14605:&nbsp;&nbsp;&nbsp;&nbsp;Trivia Test Match - From 01/10/1991, BBC Radio 4 Extra, b007jsrv<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: ARRAY(0x1f3b058) using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: ARRAY(0x1f3b058) using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.</code></div></div><br />
+<br />
+<br />
+Other search options, such as<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer --type=radio --channel="Radio 4"<br />
+<br />
+</span>or recording, for example by url:<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer --type=radio "http://www.bbc.co.uk/programmes/b085hrsr</span>"<br />
+<br />
+don't work. The output is exactly the same as in example 1.<br />
+<br />
+Recording by pid, on the other hand, works fine.<br />
+<br />
+<br />
+Thanks. :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-12-2016, 07:33 PM</div>
+</div>
+<div class="message">It looks like you've messed up your settings somehow. Post the output from <kbd>get_iplayer --show-prefs</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1495</h2></div><div class="dateline">27-12-2016, 08:09 PM</div>
+</div>
+<div class="message">It seems you're right. There appears the pid.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>elisa@PC-Elisa ~ &#36; get_iplayer --show-prefs<br />
+Options in '/home/elisa/.get_iplayer/options'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pid = ARRAY(0x1f3b058)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;search = (miei|files/Download|provvisori/get|iplayer)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;output = /home/elisa/Scrivania/I miei files/Download provvisori/get iplayer<br />
+&nbsp;&nbsp;&nbsp;&nbsp;modes = best</code></div></div><br />
+<br />
+I didn't think about checking the preferences because the only thing I set was the output folder. If  I did anything else was probably because I messed things up. :P<br />
+<br />
+How do I fix that?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-12-2016, 08:12 PM</div>
+</div>
+<div class="message">You didn't wrap your output path in quotes when you tried to set it from the command line. To fix, remove the "pid" and "search" lines from the indicated options file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1495</h2></div><div class="dateline">27-12-2016, 08:29 PM</div>
+</div>
+<div class="message">It worked! Thank you very much. :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems with index feeds and search (and recording)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

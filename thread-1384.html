@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I remove get_iplayer 2.94?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I remove get_iplayer 2.94?</div>
+<div id="pagetitle"><h2>How do I remove get_iplayer 2.94?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1798</h2></div><div class="dateline">07-05-2017, 10:56 PM</div>
+</div>
+<div class="message">I installed 2.94 using the instructions on squarepenguin.co.uk at that time.  I now need to remove 2.94 to update to 3.01 but I don't know the commands to do this in terminal.  Any time someone can spare to write me some notes would be a great help.  Many thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-05-2017, 10:19 AM</div>
+</div>
+<div class="message">Type <kbd>brew list</kbd> at a command prompt. If the shell doesn't give a "command not found" message, then you have Homebrew, and the output should be the list of installed packages. If get_iplayer appears in the list of installed packages, then you installed get_iplayer with Homebrew. In that case, upgrade as instructed in macOS install doc. If get_iplayer doesn't appear in the list of installed packages, then use Homebrew to install it as instructed in macOS install doc.<br />
+<br />
+If you don't have Homebrew, type <kbd>which get_iplayer</kbd> at a command prompt, which show the full path to the get_iplayer script (likely /usr/local/bin/get_iplayer). Remove that file. Look in the same folder for a file named get_iplayer.cgi (you may not have installed it) and remove that as well. If you don't find get_iplayer.cgi in the same folder, type <kbd>which get_iplayer.cgi</kbd> at a command prompt to make sure you didn't install it somewhere else. Or you can simply search your system for those two files and delete them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1842</h2></div><div class="dateline">27-05-2017, 07:10 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I hope I am posting this in the correct place.<br />
+<br />
+I am trying to assist a friend to upgrade from get_iplayer 2.94 to the latest version using MacOS x - El Capitan.<br />
+<br />
+As I do not have a machine running this version of MacOS X I can't test things at home and try to reproduce what is going on so I am relying on trying to help her by phone.<br />
+<br />
+She has followed the instructions you outlined above and thinks she has removed version 2.94.<br />
+When she tries to install the latest version however she gets the output attached.<br />
+<br />
+The last line of this obviously suggests that the system thinks v2.94 is still installed even though the files have been removed.<br />
+<br />
+Any help gratefully appreciated and many many thanks for all your work on get_iplayer which I find wholly invaluable.<br /><br/>
+<a href="static/thread-1384-output.txt">Output.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-05-2017, 08:19 PM</div>
+</div>
+<div class="message">You didn't follow the Homebrew upgrade instructions in the get_iplayer installation doc, so Homebrew isn't allowing you to install over an existing version. But that doesn't matter since you haven't properly installed Homebrew, either. You apparently haven't installed the Xcode command line tools, which Homebrew requires. You ignored that bit of the documentation as well. If you're going to use Homebrew, then read their documentation and follow their installation instructions. Learn to use <kbd>brew doctor</kbd> to check your Homebrew installation BEFORE installing get_iplayer. And if you're going to install get_iplayer with Homebrew, then read its installation doc for macOS and follow the instructions there.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I remove get_iplayer 2.94?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

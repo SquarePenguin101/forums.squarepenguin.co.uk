@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer --history returns no results for downloaded programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer --history returns no results for downloaded programmes</div>
+<div id="pagetitle"><h2>get_iplayer --history returns no results for downloaded programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1489</h2></div><div class="dateline">07-12-2016, 02:03 PM</div>
+</div>
+<div class="message">At some point in recent months the WebPVRs "Recordings" tab seems to have stopped working - empty content and searches for programs by name or PID or any other method no longer works, despite their being quite a lot of historical downloaded content and the PVR itself continuing to download new content. I'm afraid that I did not notice when it happened.<br />
+<br />
+The PVR tab's list of programs I'm downloading is present and appears to be accurate.<br />
+The PVR's Search tab is present and shows current BBC content as expected.<br />
+<br />
+<br />
+The "list" of downloaded programs is physically present at C:\Users\user_name\.get_iplayer\pvr and the Options file correctly specifies the download directory etc. so I'm very puzzled at the absence of programs within the WebPVR.<br />
+<br />
+Is there an "approved" way to rebuild the Recordings list and force the WebPVR to display them?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-12-2016, 04:08 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-12-2016, 02:03 PM)</span></cite>At some point in recent months the WebPVRs "Recordings" tab seems to have stopped working - empty content and searches for programs by name or PID or any other method no longer works, despite their being quite a lot of <br />
+historical downloaded content and the PVR itself continuing to download new content. I'm afraid that I did not notice when it happened.</blockquote>What do you mean by "empty content"? Do recent downloads continue to appear in the Recordings tab? Do you know the programmes you're looking for actually exist in the download history? Are you certain you haven't set any options that break your searches?<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The "list" of downloaded programs is physically present at C:\Users\user_name\.get_iplayer\pvr</blockquote>
+That is not the list of downloaded programmes. That is the directory containing pvr searches. You want <kbd>C:\Users\user_name\.get_iplayer\download_history</kbd>. It's worth taking a look - the file may have been corrupted somehow. If so, removing corrupted entries may help.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Is there an "approved" way to rebuild the Recordings list and force the WebPVR to display them?</blockquote>
+No, but see this thread: <a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg09474.html">http://www.mail-archive.com/get_iplayer@...09474.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1489</h2></div><div class="dateline">07-12-2016, 06:36 PM</div>
+</div>
+<div class="message">"What do you mean by "empty content"?"<br />
+<br />
+The Recordings tab is entirely empty, and any search for existing downloads returns no results. This is also true at the CLI: searches for all or any named recordings do not show any results.<br />
+<br />
+The file "download_history" is circa 9Mb and has some but not all downloaded items. I have tried deleting it after backing it up, but it makes no difference; the file will be recreated if not present and will grow in size with each run of GiP that successfully downloads programs, but no content is shown in the WebPVR Recordings tab and no searches for extant recordings ever succeed.<br />
+<br />
+The discussion URI you gave seems to offer some hope, but I'm not convinced the underlying problem is the same.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-12-2016, 08:10 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-12-2016, 06:36 PM)</span></cite>This is also true at the CLI: searches for all or any named recordings do not show any results.</blockquote>If it doesn't work with CLI, it won't work with Web PVR, so you should focus your troubleshooting there.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The discussion URI you gave seems to offer some hope, but I'm not convinced the underlying problem is the same.</blockquote>
+Not the same, so ignore.<br />
+<br />
+Next steps:<br />
+<ol type="1" class="mycode_list"><li>Check your version (<kbd>get_iplayer -V</kbd> for CLI, see bottom of Web PVR page). If both are not 2.97, you need to upgrade.<br />
+</li>
+<li><a href="thread-706.html">Follow our instructions</a> and post (as an attachment) the verbose output from a CLI history search (<kbd>get_iplayer --history ...</kbd>) for a programme you know exists in the <kbd>download_history</kbd> file. Scrub your username from output if you wish.<br />
+</li>
+<li>Post (as an attachment) a screenshot of your web pvr Recordings tab with the Search options visible.<br />
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer --history returns no results for downloaded programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

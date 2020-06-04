@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - rtmpdump stops downloading at 70-80%</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; rtmpdump stops downloading at 70-80%</div>
+<div id="pagetitle"><h2>rtmpdump stops downloading at 70-80%</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">01-02-2015, 08:27 PM</div>
+</div>
+<div class="message">I've been trying all day with no success to download episode 4 of death in paradise and episode 8 of spiral (though I downloaded successfully episode 7).<br />
+All downloads fail at the beginning, then, after a number of retries, it works until 70-80% and there's no way to resume the download from that point.<br />
+I'm using debian wheezy on an armel box, get_iplayer from git and the debian packaged rtmpdump (an old version), though I'm having the same results with a locally compiled one from git.<br />
+I'm outside the UK and using a vpn (for metadata only) but if that was a problem the download wouldn't even start, would it?<br />
+This is an example at the end of a failed download in verbose mode (note that I modified the timeout from 10 to 30 in case that was the problem, but it isn't)<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Command: "rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103" "--host" "iplayertokfs.fplive.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTM0NyZlbmRfdGltZT0yMDE1MDIwMTIxMTM0NyZkaWdlc3Q9NmIwN2Y0ZjI5ZWExMWQ2NjI5Y2Y3MDU1MGE3NGY5YTg=" "--app" "iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTM0NyZlbmRfdGltZT0yMDE1MDIwMTIxMTM0NyZkaWdlc3Q9NmIwN2Y0ZjI5ZWExMWQ2NjI5Y2Y3MDU1MGE3NGY5YTg=" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b051gn9k" "--resume" "-o" "/mnt/disk1/video/torrents/Spiral_Series_5/Spiral_Series_5-8._Episode_8.partial.ts.flv" "--timeout" "30" "--verbose"<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+DEBUG: Protocol : RTMP<br />
+DEBUG: Hostname : iplayertokfs.fplive.net<br />
+DEBUG: Port&nbsp;&nbsp;&nbsp;&nbsp; : 1935<br />
+DEBUG: Playpath : mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103<br />
+DEBUG: tcUrl&nbsp;&nbsp;&nbsp;&nbsp;: rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTM0NyZlbmRfdGltZT0yMDE1MDIwMTIxMTM0NyZkaWdlc3Q9NmIwN2Y0ZjI5ZWExMWQ2NjI5Y2Y3MDU1MGE3NGY5YTg=<br />
+DEBUG: swfUrl&nbsp;&nbsp; : http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf<br />
+DEBUG: pageUrl&nbsp;&nbsp;: http://www.bbc.co.uk/iplayer/episode/b051gn9k<br />
+DEBUG: app&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTM0NyZlbmRfdGltZT0yMDE1MDIwMTIxMTM0NyZkaWdlc3Q9NmIwN2Y0ZjI5ZWExMWQ2NjI5Y2Y3MDU1MGE3NGY5YTg=<br />
+DEBUG: live&nbsp;&nbsp;&nbsp;&nbsp; : no<br />
+DEBUG: timeout&nbsp;&nbsp;: 30 sec<br />
+DEBUG: SWFSHA256:<br />
+DEBUG: db fc 74 e9 51 dc f0 b6 7a 43 d5 31 73 9b b4 5e<br />
+DEBUG: ef fd e9 03 2a 4d 78 7f fa fd 91 3a 6a c0 da d5<br />
+DEBUG: SWFSize&nbsp;&nbsp;: 974043<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duration, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 3220.08&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; moovPosition, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 36.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 1280.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; height, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 720.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; videocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; audiocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avcprofile, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 100.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avclevel, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 41.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aacaot, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp; videoframerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;audiosamplerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audiochannels, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trackinfo, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 80502000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 154563584.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: File has duration: 3220.080000<br />
+DEBUG: bAudioOnly: 0, size: 704730067<br />
+DEBUG: Last keyframe found at: 2375000 ms, size: 59237, type: 09<br />
+DEBUG: Setting buffer time to: 36000000ms<br />
+Connecting ...<br />
+DEBUG: RTMP_Connect1, ... connected, handshaking<br />
+DEBUG: HandShake: Client type: 03<br />
+DEBUG: HandShake: Client digest offset: 430<br />
+DEBUG: HandShake: Initial client digest:<br />
+DEBUG: da 3c 29 e3 a2 2f 0d c0 9e 38 f2 ce 8e f3 1a 1f<br />
+DEBUG: e7 03 cb b3 e3 2d ec ef 2a ed 95 ab 68 12 ab a7<br />
+DEBUG: HandShake: Type Answer&nbsp;&nbsp; : 03<br />
+DEBUG: HandShake: Server Uptime : 714139456<br />
+DEBUG: HandShake: FMS Version&nbsp;&nbsp; : 4.5.3.1<br />
+DEBUG: HandShake: Calculated digest key from secure key and server digest:<br />
+DEBUG: 30 4e 46 d7 cf 9c e7 1d 3c b0 de 32 76 b5 98 b6<br />
+DEBUG: 2a f9 a0 c2 80 88 36 6a e7 66 e5 f1 c0 d7 e6 c1<br />
+DEBUG: HandShake: Client signature calculated:<br />
+DEBUG: 19 6c fc 06 51 4b d3 2c 9f 5c c9 6c 15 93 ff 21<br />
+DEBUG: 78 91 f1 31 cc 75 03 f6 69 ff a5 6e 8e 49 5e e7<br />
+DEBUG: HandShake: Server sent signature:<br />
+DEBUG: 5a a3 a3 7f e6 31 9d 30 6e 46 54 a6 8d 93 ce 99<br />
+DEBUG: ea 62 5e 02 aa e7 d6 ec 33 04 23 e4 bb 67 de ff<br />
+DEBUG: HandShake: Digest key:<br />
+DEBUG: 95 85 bf c9 d5 27 78 04 93 0b f1 4c 9d 9f a1 dd<br />
+DEBUG: 99 f1 c7 25 3c 69 e2 41 61 58 ea b0 fc e5 18 1a<br />
+DEBUG: HandShake: Signature calculated:<br />
+DEBUG: 5a a3 a3 7f e6 31 9d 30 6e 46 54 a6 8d 93 ce 99<br />
+DEBUG: ea 62 5e 02 aa e7 d6 ec 33 04 23 e4 bb 67 de ff<br />
+DEBUG: HandShake: Genuine Adobe Flash Media Server<br />
+DEBUG: HandShake: Handshaking finished....<br />
+DEBUG: RTMP_Connect1, handshaked<br />
+DEBUG: Invoking connect<br />
+INFO: Connected...<br />
+DEBUG: HandleServerBW: server BW = 2500000<br />
+DEBUG: HandleClientBW: client BW = 2500000 2<br />
+DEBUG: HandleChangeChunkSize, received: chunk size change to 16384<br />
+DEBUG: RTMP_ClientPacket, received: invoke 240 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fmsVer, STRING:&nbsp;&nbsp;&nbsp;&nbsp; FMS/4,5,3,101&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capabilities, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 255.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mode, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 1.00&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetConnection.Connect.Success&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; Connection succeeded.&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp; objectEncoding, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 0.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data, ECMA_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 4,5,3,101&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_result&gt;<br />
+DEBUG: HandleInvoke, received result for method call &lt;connect&gt;<br />
+DEBUG: sending ctrl. type: 0x0003<br />
+DEBUG: Invoking createStream<br />
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onBWDone&gt;<br />
+DEBUG: Invoking _checkbw<br />
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_result&gt;<br />
+DEBUG: HandleInvoke, received result for method call &lt;createStream&gt;<br />
+DEBUG: SendPlay, seekTime=2375000, stopTime=0, sending play: mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103<br />
+DEBUG: Invoking play<br />
+DEBUG: sending ctrl. type: 0x0003<br />
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_onbwcheck&gt;<br />
+DEBUG: Invoking _result<br />
+DEBUG: RTMP_ClientPacket, received: invoke 32803 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_onbwcheck&gt;<br />
+DEBUG: Invoking _result<br />
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6<br />
+DEBUG: HandleCtrl, Stream IsRecorded 1<br />
+DEBUG: HandleChangeChunkSize, received: chunk size change to 16384<br />
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6<br />
+DEBUG: HandleCtrl, Stream Begin 1<br />
+DEBUG: RTMP_ClientPacket, received: invoke 316 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Play.Reset&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; Playing and resetting 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4.&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clientid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; pAA^Q4lA&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset<br />
+DEBUG: RTMP_ClientPacket, received: invoke 310 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Play.Start&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; Started playing 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4.&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clientid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; pAA^Q4lA&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start<br />
+DEBUG: Continuing at TS: 2375000 ms<br />
+<br />
+Resuming download at: 687361.394 kB / 2375.000 sec (73.7%)<br />
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object end)<br />
+DEBUG: ignoring too small audio packet: size: 0<br />
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Data.Start&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: ignoring too small video packet: size: 2<br />
+DEBUG: RTMP_ClientPacket, received: notify 494 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duration, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 3220.08&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; moovPosition, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 36.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 1280.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; height, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 720.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; videocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; audiocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avcprofile, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 100.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avclevel, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 41.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aacaot, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp; videoframerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;audiosamplerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audiochannels, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trackinfo, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 80502000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 154563584.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+INFO: Metadata:<br />
+INFO:&nbsp;&nbsp; duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3220.08<br />
+INFO:&nbsp;&nbsp; moovPosition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36.00<br />
+INFO:&nbsp;&nbsp; width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1280.00<br />
+INFO:&nbsp;&nbsp; height&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;720.00<br />
+INFO:&nbsp;&nbsp; videocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+INFO:&nbsp;&nbsp; audiocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+INFO:&nbsp;&nbsp; avcprofile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100.00<br />
+INFO:&nbsp;&nbsp; avclevel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41.00<br />
+INFO:&nbsp;&nbsp; aacaot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.00<br />
+INFO:&nbsp;&nbsp; videoframerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.00<br />
+INFO:&nbsp;&nbsp; audiosamplerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000.00<br />
+INFO:&nbsp;&nbsp; audiochannels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.00<br />
+INFO: trackinfo:<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80502000.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;und<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;154563584.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;und<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+WARNING: Stream does not start with requested frame, ignoring data...<br />
+WARNING: Stream does not start with requested frame, ignoring data...<br />
+DEBUG: Checked keyframe successfully!<br />
+DEBUG: ignoring too small video packet: size: 2<br />
+688129.394 kB / 2377.84 sec (73.8%)<br />
+DEBUG: RTMP_ClientPacket, received: invoke 49187 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_onbwcheck&gt;<br />
+DEBUG: Invoking _result<br />
+DEBUG: ignoring too small audio packet: size: 0<br />
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Play.Complete&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duration, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 0.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bytes, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 932495.00&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6<br />
+DEBUG: HandleCtrl, Stream EOF 1<br />
+DEBUG: RTMP_ClientPacket, received: invoke 320 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Play.Stop&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; Stopped playing 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4.&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;details, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103.mp4&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clientid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; pAA^Q4lA&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; reason, STRING:&nbsp;&nbsp;&nbsp;&nbsp; &gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop<br />
+WARNING: Larger timestamp than 24-bit: 0xffffffd4<br />
+DEBUG: Invoking deleteStream<br />
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete<br />
+688212.956 kB / 2377.92 sec (73.8%)<br />
+DEBUG: RTMP_Read returned: 20032<br />
+Download may be incomplete (downloaded about 73.80%), try resuming<br />
+DEBUG: Closing connection.<br />
+<br />
+INFO: Command exit code 2 (raw code = 512)<br />
+DEBUG: Record using flashhd2 mode return code: 'retry'<br />
+WARNING: Retry recording for 'Spiral: Series 5 - 8. Episode 8 (b051gn9k)'<br />
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b051gl56?cb=36386<br />
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/mobile-tablet-main/vpid/b051gl56?cb=79958<br />
+INFO: Getting page http://cp143012-i.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991401402,480kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991397925,800kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991399880,1500kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991402071,.mp4.csmil/master.m3u8?hdnea=st=1422817944~exp=1422839544~acl=/*400kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991401402,480kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991397925,800kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991399880,1500kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991402071*~hmac=43da1f5ef68498070a14ebf0dfd3454f4199462eb4d63612169d03beee68d643<br />
+WARNING: Invalid HLS playlist, no header (http://cp143012-i.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991401402,480kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991397925,800kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991399880,1500kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991402071,.mp4.csmil/master.m3u8?hdnea=st=1422817944~exp=1422839544~acl=/*400kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991401402,480kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991397925,800kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991399880,1500kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991402071*~hmac=43da1f5ef68498070a14ebf0dfd3454f4199462eb4d63612169d03beee68d643)<br />
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashhd2: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: level3/5)<br />
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)<br />
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)<br />
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)<br />
+INFO: Found mode rtsphd1: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps stream (CDN: level3/5)<br />
+INFO: Found mode rtsphd2: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)<br />
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)<br />
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)<br />
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)<br />
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)<br />
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)<br />
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)<br />
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)<br />
+INFO: Attempt number: 50 / 50<br />
+INFO: Creating subdirectory /mnt/disk1/video/torrents/Spiral_Series_5 for programme<br />
+INFO: File name prefix = Spiral_Series_5-8._Episode_8<br />
+<br />
+INFO: Skipping subtitles download - file already exists: /mnt/disk1/video/torrents/Spiral_Series_5/Spiral_Series_5-8._Episode_8.partial.srt<br />
+INFO: rtmpver:<br />
+INFO: RTMPDump v2.4<br />
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+INFO:<br />
+INFO: rtmpdump: This program dumps the media content streamed over RTMP.<br />
+INFO:<br />
+INFO: --help|-h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prints this help screen.<br />
+INFO: --url|-i url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)<br />
+INFO: --rtmp|-r url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL (e.g. rtmp://host[:port]/path)<br />
+INFO: --host|-n hostname&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overrides the hostname in the rtmp url<br />
+INFO: --port|-c port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overrides the port in the rtmp url<br />
+INFO: --socks|-S host:port&nbsp;&nbsp;&nbsp;&nbsp;Use the specified SOCKS proxy<br />
+INFO: --protocol|-l num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)<br />
+INFO: --playpath|-y path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overrides the playpath parsed from rtmp url<br />
+INFO: --playlist|-Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set playlist before playing<br />
+INFO: --swfUrl|-s url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL to player swf file<br />
+INFO: --tcUrl|-t url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL to played stream (default: "rtmp://host[:port]/app")<br />
+INFO: --pageUrl|-p url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web URL of played programme<br />
+INFO: --app|-a app&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name of target app on server<br />
+INFO: --swfhash|-w hexstring&nbsp;&nbsp;SHA256 hash of the decompressed SWF file (32 bytes)<br />
+INFO: --swfsize|-x num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size of the decompressed SWF file, required for SWFVerification<br />
+INFO: --swfVfy|-W url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL to player swf file, compute hash/size automatically<br />
+INFO: --swfAge|-X days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number of days to use cached SWF hash before refreshing<br />
+INFO: --auth|-u string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authentication string to be appended to the connect string<br />
+INFO: --conn|-C type:data&nbsp;&nbsp;&nbsp;&nbsp; Arbitrary AMF data to be appended to the connect string<br />
+INFO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B:boolean(0|1), S:string, N:number, O:object-flag(0|1),<br />
+INFO:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Z:(null), NB:name:boolean, NS:name:string, NN:name:number<br />
+INFO: --flashVer|-f string&nbsp;&nbsp;&nbsp;&nbsp;Flash version string (default: "LNX 10,0,32,18")<br />
+INFO: --live|-v&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save a live stream, no --resume (seeking) of live streams possible<br />
+INFO: --subscribe|-d string&nbsp;&nbsp; Stream name to subscribe to (otherwise defaults to playpath if live is specifed)<br />
+INFO: --realtime|-R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Don't attempt to speed up download via the Pause/Unpause BUFX hack<br />
+INFO: --flv|-o string&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FLV output file name, if the file name is - print stream to stdout<br />
+INFO: --resume|-e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume a partial RTMP download<br />
+INFO: --timeout|-m num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timeout connection num seconds (default: 30)<br />
+INFO: --start|-A num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start at num seconds into stream (not valid when using --live)<br />
+INFO: --stop|-B num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stop at num seconds into stream<br />
+INFO: --token|-T key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Key for SecureToken response<br />
+INFO: --jtv|-j JSON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Authentication token for Justin.tv legacy servers<br />
+INFO: --hashes|-#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Display progress with hashes, not with the byte counter<br />
+INFO: --buffer|-b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buffer time in milliseconds (default: 36000000)<br />
+INFO: --skip|-k num&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)<br />
+INFO:<br />
+INFO: --quiet|-q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suppresses all command output.<br />
+INFO: --verbose|-V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verbose command output.<br />
+INFO: --debug|-z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Debug level command output.<br />
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.<br />
+INFO:<br />
+INFO: rtmpdump version 2.4<br />
+INFO: RTMP_URL: rtmp://iplayertokfs.fplive.net:1935/ondemand?_fcs_vhost=iplayertokfs.fplive.net&amp;auth=token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=&amp;aifp=v001&amp;slist=mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103, tcUrl: rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=, application: iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=, authString: token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf, file: /mnt/disk1/video/torrents/Spiral_Series_5/Spiral_Series_5-8._Episode_8.partial.ts, file_done: /mnt/disk1/video/torrents/Spiral_Series_5/Spiral_Series_5-8._Episode_8.ts<br />
+<br />
+INFO: Command: "rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103" "--host" "iplayertokfs.fplive.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=" "--app" "iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b051gn9k" "--resume" "-o" "/mnt/disk1/video/torrents/Spiral_Series_5/Spiral_Series_5-8._Episode_8.partial.ts.flv" "--timeout" "30" "--verbose"<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+DEBUG: Protocol : RTMP<br />
+DEBUG: Hostname : iplayertokfs.fplive.net<br />
+DEBUG: Port&nbsp;&nbsp;&nbsp;&nbsp; : 1935<br />
+DEBUG: Playpath : mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103<br />
+DEBUG: tcUrl&nbsp;&nbsp;&nbsp;&nbsp;: rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=<br />
+DEBUG: swfUrl&nbsp;&nbsp; : http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf<br />
+DEBUG: pageUrl&nbsp;&nbsp;: http://www.bbc.co.uk/iplayer/episode/b051gn9k<br />
+DEBUG: app&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: iplayertok?token=c3RhcnRfdGltZT0yMDE1MDIwMTE3MTQxNiZlbmRfdGltZT0yMDE1MDIwMTIxMTQxNiZkaWdlc3Q9NDYzZDlmNDEyMjMxZDQ3YzVjOGJkMTZlNzFjMjhkYjk=<br />
+DEBUG: live&nbsp;&nbsp;&nbsp;&nbsp; : no<br />
+DEBUG: timeout&nbsp;&nbsp;: 30 sec<br />
+DEBUG: SWFSHA256:<br />
+DEBUG: db fc 74 e9 51 dc f0 b6 7a 43 d5 31 73 9b b4 5e<br />
+DEBUG: ef fd e9 03 2a 4d 78 7f fa fd 91 3a 6a c0 da d5<br />
+DEBUG: SWFSize&nbsp;&nbsp;: 974043<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; duration, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 3220.08&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; moovPosition, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 36.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 1280.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; height, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 720.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; videocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; audiocodecid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avcprofile, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 100.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avclevel, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 41.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aacaot, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp; videoframerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;audiosamplerate, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audiochannels, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 2.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trackinfo, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 80502000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 25000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; avc1&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 154563584.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timescale, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 48000.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; language, STRING:&nbsp;&nbsp;&nbsp;&nbsp; und&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;sampledescription, STRICT_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sampletype, STRING:&nbsp;&nbsp;&nbsp;&nbsp; mp4a&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: File has duration: 3220.080000<br />
+DEBUG: bAudioOnly: 0, size: 704730067<br />
+DEBUG: Last keyframe found at: 2375000 ms, size: 59237, type: 09<br />
+DEBUG: Setting buffer time to: 36000000ms<br />
+Connecting ...<br />
+DEBUG: RTMP_Connect1, ... connected, handshaking<br />
+DEBUG: HandShake: Client type: 03<br />
+DEBUG: HandShake: Client digest offset: 430<br />
+DEBUG: HandShake: Initial client digest:<br />
+DEBUG: 66 a3 41 4f 42 92 07 6b be 55 b2 03 bb fc 63 d4<br />
+DEBUG: ff 0c 35 b9 c6 ff 2e 90 d8 f7 b0 97 5f 09 9c a2<br />
+DEBUG: HandShake: Type Answer&nbsp;&nbsp; : 03<br />
+DEBUG: HandShake: Server Uptime : 1859837076<br />
+DEBUG: HandShake: FMS Version&nbsp;&nbsp; : 4.5.3.1<br />
+DEBUG: HandShake: Calculated digest key from secure key and server digest:<br />
+DEBUG: 52 27 c0 1e 41 0d 01 34 94 b2 cf 71 57 91 58 fa<br />
+DEBUG: 83 bc 51 da 3f 3e 53 c9 28 a5 65 94 fa 61 ff 4d<br />
+DEBUG: HandShake: Client signature calculated:<br />
+DEBUG: ce d4 ed cd 3c 7e 4f eb 52 a0 82 d1 26 c8 6a 9e<br />
+DEBUG: 79 96 2c f1 d0 b8 76 20 62 ff dc 25 77 b7 b7 80<br />
+DEBUG: HandShake: Server sent signature:<br />
+DEBUG: 9a 31 b3 ac 98 4d 3e ac bb fb 10 e4 f2 a5 9d d7<br />
+DEBUG: 7b ff 85 75 2f 41 a2 be 0e 24 68 69 52 36 73 7a<br />
+DEBUG: HandShake: Digest key:<br />
+DEBUG: b9 4c 07 1b f3 ae 11 7a 22 74 24 99 1c 1f 50 ba<br />
+DEBUG: f5 64 df f5 db d8 4b eb ae ae d2 bb a7 46 da 55<br />
+DEBUG: HandShake: Signature calculated:<br />
+DEBUG: 9a 31 b3 ac 98 4d 3e ac bb fb 10 e4 f2 a5 9d d7<br />
+DEBUG: 7b ff 85 75 2f 41 a2 be 0e 24 68 69 52 36 73 7a<br />
+DEBUG: HandShake: Genuine Adobe Flash Media Server<br />
+DEBUG: HandShake: Handshaking finished....<br />
+DEBUG: RTMP_Connect1, handshaked<br />
+DEBUG: Invoking connect<br />
+INFO: Connected...<br />
+DEBUG: HandleServerBW: server BW = 2500000<br />
+DEBUG: HandleClientBW: client BW = 2500000 2<br />
+DEBUG: HandleChangeChunkSize, received: chunk size change to 16384<br />
+DEBUG: RTMP_ClientPacket, received: invoke 240 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fmsVer, STRING:&nbsp;&nbsp;&nbsp;&nbsp; FMS/4,5,3,101&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capabilities, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 255.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mode, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 1.00&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; status&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetConnection.Connect.Success&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; Connection succeeded.&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp; objectEncoding, NUMBER:&nbsp;&nbsp;&nbsp;&nbsp; 0.00&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data, ECMA_ARRAY&gt;<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;version, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 4,5,3,101&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_result&gt;<br />
+DEBUG: HandleInvoke, received result for method call &lt;connect&gt;<br />
+DEBUG: sending ctrl. type: 0x0003<br />
+DEBUG: Invoking createStream<br />
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onBWDone&gt;<br />
+DEBUG: Invoking _checkbw<br />
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_result&gt;<br />
+DEBUG: HandleInvoke, received result for method call &lt;createStream&gt;<br />
+DEBUG: SendPlay, seekTime=2375000, stopTime=0, sending play: mp4:3200kbps/modav/bUnknown-eaa2fc7d-db9a-4cd3-adab-23b80d81ea63_b051gl56_1421991737103<br />
+DEBUG: Invoking play<br />
+DEBUG: sending ctrl. type: 0x0003<br />
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_onbwcheck&gt;<br />
+DEBUG: Invoking _result<br />
+DEBUG: HandleChangeChunkSize, received: chunk size change to 16384<br />
+DEBUG: RTMP_ClientPacket, received: invoke 121 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;level, STRING:&nbsp;&nbsp;&nbsp;&nbsp; error&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code, STRING:&nbsp;&nbsp;&nbsp;&nbsp; NetStream.Failed&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description, STRING:&nbsp;&nbsp;&nbsp;&nbsp; 206 Partial Content&gt;<br />
+DEBUG: Property: &lt;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clientid, STRING:&nbsp;&nbsp;&nbsp;&nbsp; rAA6w4jA&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Failed<br />
+ERROR: Closing connection: NetStream.Failed<br />
+DEBUG: Closing connection.<br />
+<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+DEBUG: Record using flashhd2 mode return code: 'retry'<br />
+ERROR: Failed to record 'Spiral: Series 5 - 8. Episode 8 (b051gn9k)'<br />
+WARNING: PVR Run: Spiral: 1 download failure(s)</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">01-02-2015, 10:38 PM</div>
+</div>
+<div class="message">I managed to download the remaining 20% of death in paradise by using flashvhigh instead of flashhd. I'll do the same with spiral...or watch it directly in the browser :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">03-02-2015, 01:10 AM</div>
+</div>
+<div class="message">It's hit and miss: some shows download fine with flashhd, others only with flashvhigh. It never happened before. Bloody Astra 2F....</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; rtmpdump stops downloading at 70-80%</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

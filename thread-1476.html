@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download recent World Service programmes with PIDs starting with &quot;w&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download recent World Service programmes with PIDs starting with &quot;w&quot;</div>
+<div id="pagetitle"><h2>Cannot download recent World Service programmes with PIDs starting with &quot;w&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1901</h2></div><div class="dateline">13-08-2017, 02:59 AM</div>
+</div>
+<div class="message">I'm not sure if this is the proper forum for this, but I wanted to bring this to the attention of the community:<br />
+<br />
+This past weekend the BBC has begun using PIDs beginning with a "w" for World Service programs:<br />
+<br />
+Top of the Pops:  <a href="http://www.bbc.co.uk/programmes/w3csv1y9">http://www.bbc.co.uk/programmes/w3csv1y9</a><br />
+Music Extra - The Music of Time – Cuba:  <a href="http://www.bbc.co.uk/programmes/w3csvnyc">http://www.bbc.co.uk/programmes/w3csvnyc</a><br />
+<br />
+Get_iplayer cannot download using either the --pid or --get commands, reporting:  <br />
+<br />
+Matches:<br />
+19994:  Music Extra: The Music of Time - The Music of Time &amp;#x2013; Cuba, BBC World Service, w3csvnyc<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+<br />
+I am using v3.01-windows.0 and have had no issues with downloading PIDs beginning with either the usual B or P, so the issue for now resides only with these W PIDs.<br />
+<br />
+Cheers Cory</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-08-2017, 11:57 AM</div>
+</div>
+<div class="message">Thanks for the heads-up. There is no workaround for this, so a new release of get_iplayer will be required to accommodate the new PIDs. Hopefully I can get it out next weekend. Some of the affected programmes are available for download as podcasts, but of course that doesn't apply to music programmes such as your examples.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1903</h2></div><div class="dateline">14-08-2017, 04:24 PM</div>
+</div>
+<div class="message">Problem discussed on the 'other' list, &amp; temporary solution available.<br />
+<br />
+<a href="http://lists.infradead.org/pipermail/get_iplayer/2017-August/date.html">http://lists.infradead.org/pipermail/get.../date.html</a><br />
+<br />
+I only use WebPVR and, sometimes, (list of) PIDs on the command line, nothing esoteric like URLs etc.<br />
+<br />
+In get_iplayer.pl the following works;<br />
+<br />
+snip<br />
+&gt;<br />
+changing all 7 occurrences (sigh...) of<br />
+[bp]0[a-z0-9]{6}<br />
+to<br />
+(?:[bp]0[a-z0-9]{6}|w[a-z0-9]{7,14})<br />
+solves the w3*, w1* problem for Me.<br />
+&gt;<br />
+<br />
+BACKUP your existing get_iplayer.pl just incase of any problems.<br />
+<br />
+<a href="http://lists.infradead.org/pipermail/get_iplayer/2017-August/011005.html">http://lists.infradead.org/pipermail/get...11005.html</a><br />
+<br />
+Regards,<br />
+Martin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1901</h2></div><div class="dateline">16-08-2017, 12:25 AM</div>
+</div>
+<div class="message">Thank you gentlemen.  Martin, your temporary solution seems to be working well, so really appreciate the advice.<br />
+<br />
+Cheers Cory</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-08-2017, 11:18 PM</div>
+</div>
+<div class="message">Fixed in 3.02</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download recent World Service programmes with PIDs starting with &quot;w&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

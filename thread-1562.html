@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cache not updating on Debian</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cache not updating on Debian</div>
+<div id="pagetitle"><h2>Cache not updating on Debian</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">30-10-2017, 11:37 AM</div>
+</div>
+<div class="message">since v3.06 my cache isn't being updated. No errors, just "0 programmes found".<br />
+<br />
+I notice there's a MacOS report of this too, so am reporting as a more general issue ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 02:31 PM</div>
+</div>
+<div class="message">Post the output from these commands:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -V<br />
+perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">30-10-2017, 03:19 PM</div>
+</div>
+<div class="message">I've done the same, and got the same output.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@DebServer64:~/Desk/usr/bin/get_iplayer -V                                         │<br />
+get_iplayer 3.06-ppa31a, Copyright (C) 2008-2010 Phil Lewis                                  │<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.                │<br />
+  This is free software, and you are welcome to redistribute it under certain                │<br />
+  conditions; use --conditions for details.                                                  │<br />
+                                                                                             │<br />
+@DebServer64:~/Desktop&#36; perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'│<br />
+2.044                                                                                        │<br />
+@DebServer64:~/Desktop&#36; perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'        │<br />
+7.21                                                                                         │<br />
+@DebServer64:~/Desktop&#36; PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5│<br />
+" perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'                           │<br />
+2.044                                                                                        │<br />
+@DebServer64:~/Desktop&#36; PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5│<br />
+" perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'                                   │<br />
+7.21</code></div></div><br />
+and then (snipped for brevity, but it's a list of programmes ending:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: 170 matching programmes</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@DebServer64:~/Desktop&#36; /usr/bin/get_iplayer --since 24 "daily politics"                │<br />
+get_iplayer 3.06-ppa31a, Copyright (C) 2008-2010 Phil Lewis                                  │<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.                │<br />
+  This is free software, and you are welcome to redistribute it under certain                │<br />
+  conditions; use --conditions for details.                                                  │<br />
+                                                                                             │<br />
+Matches:                                                                                     │<br />
+42:     Daily Politics - 30/10/2017, BBC Two, b09dh84c                                       │<br />
+INFO: 1 matching programmes</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@DebServer64:~/Desktop&#36; /usr/bin/get_iplayer --prefs-show                               │<br />
+Options in '/home/xxxxx/.get_iplayer/options'                                                │<br />
+        nopurge = 1                                                                          │<br />
+        ffmpeg = /usr/local/bin/ffmpeg                                                       │<br />
+        output = /mnt/MediaRAID/Media_Files/Video/TV_Shows/iPlayer/</code></div></div><br />
+I first noticed a problem when I was trying to run the PVR for the second episode of "Gunpowder".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">30-10-2017, 03:22 PM</div>
+</div>
+<div class="message">Hope it's not breaking any forum rules, but I have posted updates in the macOS thread<br />
+<br />
+<a href="thread-1560.html">/threa...ml#pid6917</a><br />
+<br />
+as it seems to be the same issue ?????</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 03:25 PM</div>
+</div>
+<div class="message">Stop doing that. If you're using Debian, stay in this lane.<br />
+<br />
+EDIT: I'll merge threads if warranted when I know what is going on.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">30-10-2017, 03:42 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (30-10-2017, 03:25 PM)</span></cite>Stop doing that. If you're using Debian, stay in this lane.</blockquote><br />
+OK, wrist slapped !<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@DebServer64:~&#36; /usr/bin/get_iplayer -V<br />
+get_iplayer 3.06-ppa31a, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.</code></div></div><br />
+and<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@DebServer64:~&#36; perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+2.044<br />
+@DebServer64:~&#36; perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'<br />
+7.21</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 08:40 PM</div>
+</div>
+<div class="message">I can't reproduce this behaviour. Temporarily rename your tv.cache file (see FAQ list for location) so that get_iplayer will repopulate it. Then, post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh --search=bogus</code></div></div>followed by:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --list=channel</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">31-10-2017, 09:21 AM</div>
+</div>
+<div class="message">Hang on ...<br />
+<br />
+has the output changed between v3.01 and v3.06 ????<br />
+<br />
+I have just run "Refresh Cache" from the WebPVR and got a message "102 programmes" added.<br />
+<br />
+Previously there was an actual list of them (and it was the lack of this list which caused me to post) !<br />
+<br />
+However, we are not out of the woods yet :) as now I get an error trying to run the PVR (new thread) ...<br />
+<br />
+That's interesting ... the error I was getting last night has gone.<br />
+<br />
+Are the BBC ****ing around their end ?????</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">31-10-2017, 09:35 AM</div>
+</div>
+<div class="message">I have "Gunpowder" in my series list for the PVR, and E1 recorded fine.<br />
+<br />
+However, now E2 isn't being picked up when I run the PVR, and doesn't appear in search ?<br />
+<br />
+UPDATE: deleted cache, refreshed, and seems OK ...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-10-2017, 10:33 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (31-10-2017, 09:21 AM)</span></cite>has the output changed between v3.01 and v3.06 ????</blockquote>They don't call them release notes for nothing,</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-10-2017, 02:53 PM</div>
+</div>
+<div class="message">Also: You may wish to run <kbd>get_iplayer --cache-rebuild</kbd> to restore older listings not picked up by <kbd>--refresh</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1964</h2></div><div class="dateline">31-10-2017, 02:56 PM</div>
+</div>
+<div class="message">Thanks for that. Not sure how you upvote or like, but here's a +1 from me.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cache not updating on Debian</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Ignore &quot;Clips&quot; when using --pid-recursive</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Ignore &quot;Clips&quot; when using --pid-recursive</div>
+<div id="pagetitle"><h2>Ignore &quot;Clips&quot; when using --pid-recursive</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-537</h2></div><div class="dateline">31-10-2014, 01:06 PM</div>
+</div>
+<div class="message">Hi, to circumvent the recent problem with the PVR functionality I have resorted to using <kbd>--pid-recursive</kbd> with the programme pids. This works a treat. <br />
+<br />
+I was wondering whether there was an option to ignore files tagged as "Clips" - or even, only record files of type "Episode". Alternatively is there a way to filter by duration or filesize?<br />
+<br />
+Thanks for your time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-11-2014, 10:16 PM</div>
+</div>
+<div class="message">I'm not sure these requests are currently possible. Topic moved to feature requests.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-537</h2></div><div class="dateline">02-11-2014, 11:04 PM</div>
+</div>
+<div class="message">Sure, no problem. Alternatively, adding episode/clip/etc to the fileprefix options would suffice for me. Thanks for considering anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">21-07-2015, 11:30 PM</div>
+</div>
+<div class="message">When i run the following command:<br />
+<br />
+get_iplayer --info --pid-recursive <a href="http://www.bbc.co.uk/iplayer/episodes/b04962fm">http://www.bbc.co.uk/iplayer/episodes/b04962fm</a><br />
+<br />
+part of the output is the following:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO:    Series: &lt;None&gt;<br />
+INFO:      Episode 'Swashbuckle Extra' (b04gwcx2)<br />
+INFO:      Clip 'Swashbuckle send-in solicit video' (p02x6n0y)<br />
+INFO:      Clip 'Swashbuckle Send-Ins' (p02wr4py)<br />
+INFO:      Clip 'Swashbuckle Seaweed Rap' (p02wmv3b)</code></div>
+</div>
+<br />
+<br />
+I'm wondering if this output can contain "clip" can we somehow use this as an exclusion criteria?<br />
+<br />
+Another alternative would be to exclude series which equal &lt;none&gt;<br />
+<br />
+Thoughts?<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-07-2015, 12:46 AM</div>
+</div>
+<div class="message">No.  Just use the individual series PIDs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">22-07-2015, 02:59 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-07-2015, 12:46 AM)</span></cite>No.  Just use the individual series PIDs.</blockquote><br />
+i've been trying that approach so far (and it works) however the downside is that if a new series is released for a show, then there is no way of capturing it automatically :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-07-2015, 07:39 AM</div>
+</div>
+<div class="message">Use the pvr functionality to pick up new series.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2016, 07:32 PM</div>
+</div>
+<div class="message"><kbd>--pid-recursive--noclips</kbd>  option implemented in get_iplayer 2.95</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Ignore &quot;Clips&quot; when using --pid-recursive</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

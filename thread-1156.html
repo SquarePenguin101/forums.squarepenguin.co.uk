@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Subtitles not downloading with --pid</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Subtitles not downloading with --pid</div>
+<div id="pagetitle"><h2>Subtitles not downloading with --pid</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">07-02-2017, 12:11 PM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+On Windows V98 works fine.<br />
+<br />
+On the LINUX version I downloaded fro GitHub I get error on the subtitles<br />
+<br />
+For example TABOO downloads program fine but error on subtitles<br />
+<br />
+I checked Linux version V.294 (Old I know) and subtitles downloaded correctly.<br />
+<br />
+PID of the program is b08dydz3  Taboo Episode 5<br />
+<br />
+Thanks<br />
+<br />
+BTW great work<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-02-2017, 12:17 PM</div>
+</div>
+<div class="message">Works fine here. It's impossible even to speculate when you don't tell us what the error is.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">07-02-2017, 04:54 PM</div>
+</div>
+<div class="message">My father had a problem with subtitles downloading (albeit on Windows).<br />
+<br />
+The issue seemed to be that as he has "--type=tv,radio" in the prefs (as he downloads both), when downloading via the PID it sometimes checks the radio first and sometimes TV.<br />
+<br />
+If it checks the radio first it doesn't seem to download the subtitles, if however it checks the TV first, it does. This is also the case when using --subsonly to try and just download the subtitles afterwards.<br />
+<br />
+What he does now when this occurs is add --type=tv into the command line (even though it is in the prefs) and the subtitles download.<br />
+<br />
+Maybe this will work for you in Linux.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">07-02-2017, 05:10 PM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+Thanks --that worked (--type=tv)<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-02-2017, 05:41 PM</div>
+</div>
+<div class="message">I'll try to change that for next release so that "tv" is always used first if both are specified. The type is effectively ignored for download with <kbd>--pid</kbd>, but of course subtitles are only retrieved if get_iplayer thinks it is downloading a TV programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-02-2017, 12:28 AM</div>
+</div>
+<div class="message">Fixed in get_iplayer 2.99</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">13-02-2017, 10:45 AM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+I checked again -<br />
+<br />
+Windows V2.99 OK<br />
+Linux V2.99  Still not working --- got message download subtitles failed<br />
+Linux V2.97  working fine<br />
+<br />
+Programs I wanted were Taboo and Hull city of Culture (BBC 2 Sat)<br />
+<br />
+Thanks for looking and replying<br />
+<br />
+I'll try again later<br />
+<br />
+Linux OS being used -- Centos 7.2 .<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-02-2017, 11:26 AM</div>
+</div>
+<div class="message">Works fine here. <a href="thread-706.html">Follow our instructions</a> to submit a full report so I can see what is happening on your system. Use <kbd>--subtitles-only</kbd> to save time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1177</h2></div><div class="dateline">22-02-2017, 07:16 AM</div>
+</div>
+<div class="message">Maybe you are using flash?  I don't see in the code where it handles caption urls  (or decodes the entities like "amp" in the url).<br />
+<br />
+I also recall having problems trying to get just subtitles and not having a tvmode set.<br />
+<br />
+./get_iplayer --subtitles-only --pid X<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&lt;media expires="2017-03-21T22:00:00Z" kind="captions" media_file_size="80145" service="captions" type="application/ttaf+xml"&gt;<br />
+&lt;connection authExpires="2017-02-22T11:51:56+00:00" authExpiresOffset="42146" dpw="50" href="http://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-X.xml?__gda__=1487750170_X" priority="10" protocol="http" supplier="mf_akamai_uk_plain" transferFormat="plain"/&gt;<br />
+&lt;connection authExpires="2017-02-22T07:00:33+00:00" authExpiresOffset="18163" href="http://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-X.xml?s=148&amp;amp;e=1X&amp;amp;h=5e185256XX" priority="20" protocol="http" supplier="mf_limelight_uk_plain" transferFormat="plain"/&gt;<br />
+&lt;connection authExpires="2017-02-22T11:46:57+00:00" authExpiresOffset="35147" dpw="50" href="https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-X.xml?__gda__=148" priority="30" protocol="https" supplier="mf_akamai_uk_plain_https" transferFormat="plain"/&gt;<br />
+&lt;connection authExpires="2017-02-22T07:27:13+00:00" authExpiresOffset="19463" href="https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-X.xml?s=1487&amp;amp;e=1487&amp;amp;h=a3a0X" priority="40" protocol="https" supplier="mf_limelight_uk_plain_https" transferFormat="plain"/&gt;<br />
+&lt;/media&gt;</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Subtitles not downloading with --pid</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

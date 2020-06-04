@@ -1,0 +1,223 @@
+get_iplayer v2.86, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: User prefs dir: C:\Users\Chris/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+	fatfilename = 1
+	ffmpeg = .\FFmpeg\ffmpeg-2.1.4-win32-static\bin\ffmpeg.exe
+	lame = .\LAME\lame.exe
+	mmsnothread = 1
+	mplayer = .\MPlayer\mplayer-svn-36348\mplayer.exe
+	nopurge = 1
+	output = C:\Users\Chris\Desktop\iPlayer Recordings
+	rtmpdump = .\RTMPDump\rtmpdump.exe
+	thumbsize = 150
+	tvmode = best
+	verbose = 1
+	vlc = .\VLC\vlc-2.0.6\vlc.exe
+
+INFO: Search args: 'Lancaster'
+INFO: Got 1233 file cache entries for tv
+INFO: Search term 'Lancaster' is a substring
+DEBUG: Search download_regex = Lancaster
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+Matches:
+1050:	The Lancaster - Britain's Flying Past, BBC Two, Audio Described,Cars &amp; Motors,Factual,History,TV, default,audiodescribed
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Getting page http://feeds.bbc.co.uk/iplayer/episode/b04bwhk8
+INFO: Getting page http://www.bbc.co.uk/programmes/b04bwhk8.rdf
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b04bwhk8
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b04bwhk8
+INFO: Using Not Live standard TV and Radio: b04bwhk0
+INFO: Version: default, VersionPid: b04bwhk0, Duration: 3540
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0?cb=27868
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/pc_streaming_hd/level3?cb=05868
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/pc_streaming_hd/akamai?cb=03690
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_vlo/limelight?cb=85815
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_vlo/akamai?cb=49526
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_high/limelight?cb=67532
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_high/akamai?cb=17883
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv/limelight?cb=08356
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv/akamai?cb=98458
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_lo/limelight?cb=35342
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04bwhk0/iplayer_streaming_h264_flv_lo/akamai?cb=77871
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)
+INFO: Found mode flashhd2: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: level3/5)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphd1: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps stream (CDN: level3/5)
+INFO: Found mode rtsphd2: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode rtsplow1: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/5)
+INFO: Found mode rtsplow2: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode subtitles1: (captions) http stream (CDN: http/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b04bwhk0.rdf
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Will search for versions: default
+INFO: Mode list: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashhd1,flashhd2,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashhd1 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEdab4c5dfdscVbkboaMckdGaFbOd3bCaH-bt0wb_-bWG-BorFHqBqNDuFnxG&amp;aifp=v001&amp;slist=secure/3200kbps/modav/bUnknown-7cb1922b-7f76-41be-9b61-372fdb92acb0_b04bwhk0_1405741173349.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEdab4c5dfdscVbkboaMckdGaFbOd3bCaH-bt0wb_-bWG-BorFHqBqNDuFnxG&amp;aifp=v001&amp;slist=secure/3200kbps/modav/bUnknown-7cb1922b-7f76-41be-9b61-372fdb92acb0_b04bwhk0_1405741173349.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEdab4c5dfdscVbkboaMckdGaFbOd3bCaH-bt0wb_-bWG-BorFHqBqNDuFnxG&amp;aifp=v001&amp;slist=secure/3200kbps/modav/bUnknown-7cb1922b-7f76-41be-9b61-372fdb92acb0_b04bwhk0_1405741173349.mp4, authString: auth=daEdab4c5dfdscVbkboaMckdGaFbOd3bCaH-bt0wb_-bWG-BorFHqBqNDuFnxG&amp;aifp=v001&amp;slist=secure/3200kbps/modav/bUnknown-7cb1922b-7f76-41be-9b61-372fdb92acb0_b04bwhk0_1405741173349.mp4, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashhd1 mode return code: 'next'
+INFO: skipping flashhd1 mode
+INFO: Trying flashhd2 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://iplayertokfs.fplive.net:1935/ondemand?_fcs_vhost=iplayertokfs.fplive.net&amp;auth=token=c3RhcnRfdGltZT0yMDE0MDcyNDE3MzczNCZlbmRfdGltZT0yMDE0MDcyNDIxMzczNCZkaWdlc3Q9ZmI4NzY5NDc4YzEyMzU2YWUwOTBkNzUzMzVkYmRhZGQ=&amp;aifp=v001&amp;slist=mp4:3200kbps/modav/bUnknown-7cb1922b-7f76-41be-9b61-372fdb92acb0_b04bwhk0_1405741173349, tcUrl: rtmp://iplayertokfs.fplive.net:1935/iplayertok?token=c3RhcnRfdGltZT0yMDE0MDcyNDE3MzczNCZlbmRfdGltZT0yMDE0MDcyNDIxMzczNCZkaWdlc3Q9ZmI4NzY5NDc4YzEyMzU2YWUwOTBkNzUzMzVkYmRhZGQ=, application: iplayertok?token=c3RhcnRfdGltZT0yMDE0MDcyNDE3MzczNCZlbmRfdGltZT0yMDE0MDcyNDIxMzczNCZkaWdlc3Q9ZmI4NzY5NDc4YzEyMzU2YWUwOTBkNzUzMzVkYmRhZGQ=, authString: token=c3RhcnRfdGltZT0yMDE0MDcyNDE3MzczNCZlbmRfdGltZT0yMDE0MDcyNDIxMzczNCZkaWdlc3Q9ZmI4NzY5NDc4YzEyMzU2YWUwOTBkNzUzMzVkYmRhZGQ=, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashhd2 mode return code: 'next'
+INFO: skipping flashhd2 mode
+INFO: Regenerate filename for mode change: flashhd -&gt; flashvhigh
+INFO: Trying flashvhigh1 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEb5dococYdNc1bZaYdLaCd1cNdfaRaVb3-bt0wb_-bWG-IqpFEpwqODqFowC&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEb5dococYdNc1bZaYdLaCd1cNdfaRaVb3-bt0wb_-bWG-IqpFEpwqODqFowC&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEb5dococYdNc1bZaYdLaCd1cNdfaRaVb3-bt0wb_-bWG-IqpFEpwqODqFowC&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4, authString: auth=daEb5dococYdNc1bZaYdLaCd1cNdfaRaVb3-bt0wb_-bWG-IqpFEpwqODqFowC&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashvhigh1 mode return code: 'next'
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4&amp;et=1406237855&amp;fmta-token=61354449471f9d774c143961a4901f0811ad82bd7e57ea24a5e98466ceb28e3f&amp;aifp=v001&amp;slist=mp4:iplayerstream/secure_auth/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4&amp;et=1406237855&amp;fmta-token=61354449471f9d774c143961a4901f0811ad82bd7e57ea24a5e98466ceb28e3f, application: a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4&amp;et=1406237855&amp;fmta-token=61354449471f9d774c143961a4901f0811ad82bd7e57ea24a5e98466ceb28e3f, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946979.mp4&amp;et=1406237855&amp;fmta-token=61354449471f9d774c143961a4901f0811ad82bd7e57ea24a5e98466ceb28e3f, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashvhigh2 mode return code: 'next'
+INFO: skipping flashvhigh2 mode
+INFO: Regenerate filename for mode change: flashvhigh -&gt; flashhigh
+INFO: Trying flashhigh1 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcoanavdfaWbTc2aQaoc.dNaWbpcKc7bR-bt0wb_-bWG-FnoDBqBnNCsGrwE&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcoanavdfaWbTc2aQaoc.dNaWbpcKc7bR-bt0wb_-bWG-FnoDBqBnNCsGrwE&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcoanavdfaWbTc2aQaoc.dNaWbpcKc7bR-bt0wb_-bWG-FnoDBqBnNCsGrwE&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4, authString: auth=daEcoanavdfaWbTc2aQaoc.dNaWbpcKc7bR-bt0wb_-bWG-FnoDBqBnNCsGrwE&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashhigh1 mode return code: 'next'
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4&amp;et=1406237748&amp;fmta-token=be11778c28b4f75f13377253d199351251f4f396b013d413c5cd88038501e906&amp;aifp=v001&amp;slist=mp4:iplayerstream/secure_auth/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4&amp;et=1406237748&amp;fmta-token=be11778c28b4f75f13377253d199351251f4f396b013d413c5cd88038501e906, application: a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4&amp;et=1406237748&amp;fmta-token=be11778c28b4f75f13377253d199351251f4f396b013d413c5cd88038501e906, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529943782.mp4&amp;et=1406237748&amp;fmta-token=be11778c28b4f75f13377253d199351251f4f396b013d413c5cd88038501e906, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashhigh2 mode return code: 'next'
+INFO: skipping flashhigh2 mode
+INFO: Regenerate filename for mode change: flashhigh -&gt; flashstd
+INFO: Trying flashstd1 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcuaec6cvcsczd4cxabaxcedacIb2aNd0-bt0wca-bWG-BnpFIpxpNDsHtyF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcuaec6cvcsczd4cxabaxcedacIb2aNd0-bt0wca-bWG-BnpFIpxpNDsHtyF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcuaec6cvcsczd4cxabaxcedacIb2aNd0-bt0wca-bWG-BnpFIpxpNDsHtyF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4, authString: auth=daEcuaec6cvcsczd4cxabaxcedacIb2aNd0-bt0wca-bWG-BnpFIpxpNDsHtyF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashstd1 mode return code: 'next'
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4&amp;et=1406237856&amp;fmta-token=8f86f1a86fc42ba3e78ff2aaa98bf28deea620393447bba10b248844fb761e05&amp;aifp=v001&amp;slist=mp4:iplayerstream/secure_auth/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4&amp;et=1406237856&amp;fmta-token=8f86f1a86fc42ba3e78ff2aaa98bf28deea620393447bba10b248844fb761e05, application: a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4&amp;et=1406237856&amp;fmta-token=8f86f1a86fc42ba3e78ff2aaa98bf28deea620393447bba10b248844fb761e05, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946929.mp4&amp;et=1406237856&amp;fmta-token=8f86f1a86fc42ba3e78ff2aaa98bf28deea620393447bba10b248844fb761e05, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashstd2 mode return code: 'next'
+INFO: skipping flashstd2 mode
+INFO: Regenerate filename for mode change: flashstd -&gt; flashlow
+INFO: Trying flashlow1 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEc7bcd2abaEcAbyd7b2dbbrdIdRcBbbbW-bt0wb_-bWG-KonGEnxnFDtFrzL&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEc7bcd2abaEcAbyd7b2dbbrdIdRcBbbbW-bt0wb_-bWG-KonGEnxnFDtFrzL&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEc7bcd2abaEcAbyd7b2dbbrdIdRcBbbbW-bt0wb_-bWG-KonGEnxnFDtFrzL&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4, authString: auth=daEc7bcd2abaEcAbyd7b2dbbrdIdRcBbbbW-bt0wb_-bWG-KonGEnxnFDtFrzL&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashlow1 mode return code: 'next'
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: The Lancaster - The Lancaster: Britain's Flying Past
+INFO: Attempt number: 1 / 50
+
+INFO: File name prefix = The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default                 
+INFO: rtmpver: 
+INFO: WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+INFO: .\RTMPDump\rtmpdump.exe version 
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4&amp;et=1406237855&amp;fmta-token=fdc3b86c0407dbddd34dd64b382b70eab4edc337388f85b2e9799b099e1f8f67&amp;aifp=v001&amp;slist=mp4:iplayerstream/secure_auth/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4&amp;et=1406237855&amp;fmta-token=fdc3b86c0407dbddd34dd64b382b70eab4edc337388f85b2e9799b099e1f8f67, application: a1414/e3?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4&amp;et=1406237855&amp;fmta-token=fdc3b86c0407dbddd34dd64b382b70eab4edc337388f85b2e9799b099e1f8f67, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-4e8941f3-c04b-4462-a265-87742195c2f0_b04bwhk0_1405529946259.mp4&amp;et=1406237855&amp;fmta-token=fdc3b86c0407dbddd34dd64b382b70eab4edc337388f85b2e9799b099e1f8f67, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.partial.mp4, file_done: C:\Users\Chris\Desktop\iPlayer Recordings\The_Lancaster_-_The_Lancaster_Britains_Flying_Past_b04bwhk8_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+DEBUG: Record using flashlow2 mode return code: 'next'
+INFO: skipping flashlow2 mode
+ERROR: Failed to record 'The Lancaster - The Lancaster: Britain's Flying Past (b04bwhk8)'

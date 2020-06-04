@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Download fails - no modes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Download fails - no modes</div>
+<div id="pagetitle"><h2>Download fails - no modes</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-364-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">22-02-2015, 09:31 PM</div>
+</div>
+<div class="message"><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+1217:   Saturday Kitchen - 21/02/2015, BBC One, Factual,Food &amp; Drink,Lifestyle &amp; Leisure, default<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) available for this programme with version 'default' (try using --modes=flashaacstd,rtspaacstd)<br />
+ERROR: Failed to record 'Saturday Kitchen - 21/02/2015 (b0546y22)'<br />
+WARNING: PVR Run: _Saturday_Kitchen_name_tv: 1 download failure(s)<br />
+</code></div>
+</div>
+<br />
+and again <br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>249:    Casualty: Series 29 - 22. Sweet Little Lies, BBC One, Drama,Medical, default<br />
+INFO: 1 Matching Programmes<br />
+ERROR: Failed to get iphone URL from iplayer site<br />
+ERROR: Failed to get iphone URL from iplayer site<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashhigh,iphone,flashstd,flashnormal,realaudio,flashaaclow) available for this programme with version 'default' (try using --modes=subtitles)<br />
+ERROR: Failed to record 'Casualty: Series 29 - 22. Sweet Little Lies (b0543w5h)'<br />
+WARNING: PVR Run: Casualty_name_tv: 1 download failure(s)<br />
+</code></div>
+</div>
+<br />
+I've updated my script to set the modes to default (i.e. removed the modes options) but I get the above error. I had this error before which is what prompted me to find the update to the mode and it's default values.<br />
+<br />
+This is also the same if I use<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes=flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,flashaachigh,flashaacstd,flashaudio,flashaaclow,wma</code></div></div><br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">22-02-2015, 09:32 PM</div>
+</div>
+<div class="message">The first part of my post got chopped... it read:<br />
+<br />
+The last few days I've been seeing download failures... I get a "no modes" error:</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2015, 10:18 PM</div>
+</div>
+<div class="message">You appear to have a very outdated version of get_iplayer.  Upgrade to latest and try again.  See Installation page in wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2015, 10:40 PM</div>
+</div>
+<div class="message">On second thought, it may just be your settings that are outdated.  You first example looks like you did in fact reset to default recording modes, but in your second example you definitely didn't.  You have obsolete mode settings in your pvr jobs - they need updating.   Saturday Kitchen is being identified as a radio programme (an old bug), which is why I think your installation is outdated.  Whatever the case, both those programmes work fine with the latest release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-861</h2></div><div class="dateline">23-02-2015, 12:31 PM</div>
+</div>
+<div class="message">Can I just add that I'm getting this issue too and a clean install of 2.91 hasn't resolved it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-862</h2></div><div class="dateline">23-02-2015, 01:33 PM</div>
+</div>
+<div class="message">I am also seeing this with 2.91 - though only on recent programs.  <br />
+<br />
+Have tried on both Linux and OSX.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-864</h2></div><div class="dateline">23-02-2015, 01:53 PM</div>
+</div>
+<div class="message">Can I add my 'Stopped Working' to this.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+1819:	Top Gear: Series 22 - Episode 5, BBC Two, Cars &amp; Motors,Entertainment,Factual,Review Shows, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow) available for this programme with version 'default' (try using --modes=subtitles)<br />
+ERROR: Failed to record 'Top Gear: Series 22 - 5. Episode 5 (b05469cm)'</code></div>
+</div>
+<br />
+<br />
+I was already on latest but ran an update just to be sure. Some programs do record.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-02-2015, 01:59 PM</div>
+</div>
+<div class="message">Until next release, try <samp>--playlist-metadata</samp> when "no specified modes" warning is displayed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-864</h2></div><div class="dateline">23-02-2015, 02:26 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>user-2 wrote:Until next release, try <kbd>--playlist-metadata</kbd> when 'no specified modes' warning is displayed.</blockquote>
+<br />
+Thanks for fast and fantastic response, this kind of assistance you don't get when your paying through the nose for it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-862</h2></div><div class="dateline">23-02-2015, 03:27 PM</div>
+</div>
+<div class="message">Fantastic - worked for me too :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 04:54 PM</div>
+</div>
+<div class="message">Please forgive me for intruding but I am suffering from the exact same problem and don't know how to resolve it.  The problem is I don't have sufficient knowledge to understand the code used.  When the PVR function was working it made downloading really simple.  Since things have changed I have struggled.  I did manage to work out how to download in the command window but recently since Saturday in fact a couple of recordings have failed.  Casualty 29-22 failed and Top Gear 22-5 also failed to download.  If somebody could help me and make this really simple so that an imbecile could understand I really would appreciate the help.  Not being able to download Top Gear is really frustrating.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-02-2015, 05:10 PM</div>
+</div>
+<div class="message">As I said above, add <kbd>--playlist-metadata</kbd> to the command line for any programme that exhibits this problem, e.g., Top Gear 22-5.  Don't use it otherwise.  To be clear: you cannot specify <kbd>--playlist-metadata</kbd> in the web pvr.  You must use the command line.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 05:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>user-2 wrote:[/url]As I said above, add <kbd>--playlist-metadata</kbd> to the command line for any programme that exhibits this problem, e.g., Top Gear 22-5.  Don't use it otherwise.  To be clear: you cannot specify <kbd>--playlist-metadata</kbd> in the web pvr.  You must use the command line.</blockquote>
+<br />
+Firstly can I say thank you for getting back to me so swiftly.  You really could put some of these paid services to shame.  Thank you.  I have tried adding <kbd>--playlist-metadata</kbd> to the code line in the command window but I get the response "unknown option".  I am using the latest version 2.91 but I still must be doing something stupidly wrong.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">23-02-2015, 05:34 PM</div>
+</div>
+<div class="message">Have you read the guides in the guides section? It has a good explanation of how to use the command line version.<br />
+<br />
+It does stop short of telling you how to open the get_iplayer cmd prompt window. Are you opening this correctly? What OS are you using?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-02-2015, 05:39 PM</div>
+</div>
+<div class="message">Run <kbd>get_iplayer -V</kbd> to verify you have 2.91.  If so, check your typing.  Another option could be incorrect.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 05:43 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Square Penguin wrote:Have you read the guides in the guides section? It has a good explanation of how to use the command line version.<br />
+<br />
+It does stop short of telling you how to open the get_iplayer cmd prompt window. Are you opening this correctly? What OS are you using?</blockquote>
+<br />
+I have read the guides which were invaluable when the changes took place towards the end of last year and it was because of the guides I was able to use the command line to carry on as before.  Since the changes took place I have been successful in downloading many of my favourite shows.  It is only this weekend that I have experienced my first ever problems.  I'm new to the forums and don't want to break the rules so I'm uncertain about publishing what has always worked for me previously.  As for my OS I am using Windows 7 professional 32-bit.  I hope this helps.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">23-02-2015, 06:08 PM</div>
+</div>
+<div class="message">What's the command that you are using?<br />
+<br />
+This should work for Casualty:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid b0543w5h --playlist-metadata</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 06:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>tvfan wrote: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid b0543w5h --playlist-metadata</code></div></div></blockquote>
+<br />
+Thanks tvfan for responding.  I copied and pasted exactly what you wrote into my command line and got the following response.  "Unknown option: playlist-metadata" followed by a lot of help options.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-02-2015, 06:33 PM</div>
+</div>
+<div class="message">Then you don't actually have 2.91.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 06:47 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>user-2 wrote:Then you don't actually have 2.91.</blockquote>
+<br />
+Then I really must apologise for wasting you guys valuable time.  Two questions for you if I may how do I check which version I am running and how do I upgrade to 2.91 if I need to?</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-364-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Download fails - no modes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

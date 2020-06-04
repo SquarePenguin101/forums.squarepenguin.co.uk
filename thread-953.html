@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - WARNING: Conversion failed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; WARNING: Conversion failed</div>
+<div id="pagetitle"><h2>WARNING: Conversion failed</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1344</h2></div><div class="dateline">15-07-2016, 02:26 AM</div>
+</div>
+<div class="message">Greetings all .. get- player has suddenly stopped working as in the conversion to mp4 fails leaving a 'streaming' file ending in 'original.partial.mp4.ts' .. as in the following example:<br />
+--<br />
+<br />
+&#36;get_iplayer --get 915<br />
+<br />
+&#36;INFO: Recorded: 552.39MB in 00:05:00 at 15084kbps to file.pw_original.partial.mp4.ts<br />
+<br />
+&#36;INFO: Begin converting file: file.pw_original.partial.mp4.ts<br />
+<br />
+&#36;[h264 @ 0x1ec0ea0] non-existing SPS 0 referenced in buffering period<br />
+<br />
+&#36;[mp4 @ 0x1f0f620] Application provided invalid, non monotonically increasing dts to muxer in stream 1: 1 &gt;= 1<br />
+<br />
+&#36;av_interleaved_write_frame(): Invalid argument<br />
+<br />
+&#36;INFO: Command exit code 1 (raw code = 256)<br />
+<br />
+&#36;WARNING: Conversion failed - retaining file.pw_original.partial.mp4.ts<br />
+--<br />
+<br />
+Curiously enough file.pw_original.partial.mp4.ts can be converted to mp4 using the following bash script, that I copied off the Internet:<br />
+<br />
+#!/bin/bash<br />
+for f in *.ts;<br />
+    do<br />
+    fname="&#36;{f%.*}"<br />
+    rm out.mkv 2&gt; /dev/null<br />
+    ffmpeg -fix_sub_duration -i "&#36;f" -codec copy -map 0 out.mkv<br />
+    ffmpeg -fix_sub_duration -i out.mkv -scodec mov_text -acodec copy -vcodec copy "&#36;fname"<br />
+done<br />
+<br />
+--</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-07-2016, 10:15 AM</div>
+</div>
+<div class="message">Your post is missing some information necessary to answer your query. See the <a href="thread-706.html">instructions</a> for a list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1344</h2></div><div class="dateline">15-07-2016, 12:39 PM</div>
+</div>
+<div class="message">get_iplayer version: 2.95<br />
+operating system: manjaro 4.4.13-1<br />
+<br />
+&#36;get_iplayer --get 1551 --verbose &gt; get_iplayer_log<br />
+<br />
+<a href="http://pastebin.com/82nec7GD">http://pastebin.com/82nec7GD</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-07-2016, 12:43 PM</div>
+</div>
+<div class="message">Thanks.  However, you didn't capture stderr along with stdout, as shown in the instructions, so the error messages and other output are missing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1344</h2></div><div class="dateline">15-07-2016, 01:48 PM</div>
+</div>
+<div class="message">get_iplayer --get 738 --verbose &gt; log.txt 2&gt;&amp;1<br />
+<br />
+<a href="http://pastebin.com/aXyNqdwn">http://pastebin.com/aXyNqdwn</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-07-2016, 02:43 PM</div>
+</div>
+<div class="message">Thanks. Use ffmpeg instead of avconv. get_iplayer gives preference to avconv (if present) as a way of accommodating Debian/Ubuntu users who had libav inflicted on them by their distro maintainers. Debian/Ubuntu are cleaning up that mess, but it still affects users of older LTS releases. Arch and its derivatives didn't go that route, so you should have ffmpeg packaged for Manjaro. Your libav build appears to have a problem with BBC files that was not present in the last libav release, probably because that problem was only fixed in the release branch. As a rule, just don't use avconv/libav with get_iplayer. If you're forced to keep avconv on your system for some reason, you'll have to figure out how to run it side-by-side with ffmpeg. In that event, use the <kbd>--ffmpeg</kbd> option to configure get_iplayer to use the proper ffmpeg instead of avconv.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1344</h2></div><div class="dateline">16-07-2016, 02:10 AM</div>
+</div>
+<div class="message">Thanks for the responce, I'll now go and read the manual :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; WARNING: Conversion failed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - &quot;Mojo::Reactor::Poll: I/O watcher failed: Can't open file&quot; during cache update</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; &quot;Mojo::Reactor::Poll: I/O watcher failed: Can't open file&quot; during cache update</div>
+<div id="pagetitle"><h2>&quot;Mojo::Reactor::Poll: I/O watcher failed: Can't open file&quot; during cache update</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1732</h2></div><div class="dateline">22-05-2017, 11:53 AM</div>
+</div>
+<div class="message">When GiP updates the cache I get the error message:<br />
+<br />
+Mojo::Reactor::Poll: I/O watcher failed: Can't open file "C:\Users\[username]\AppData\Local\Temp\mojo.tmp": Permission denied at Mojo/Asset/Memory.pm line 18.<br />
+<br />
+This occurs twice or more often, but GiP continues, so the error doesn't seem to be fatal.<br />
+<br />
+I have tried deleting the contents of the %temp% folder and have made sure it isn't read-only, but the problem continues. The %temp% folder has full access permissions for SYSTEM, Administrators, and my (admin) user account.<br />
+<br />
+This is livable with, but I'd appreciate help in eliminating this problem in case it causes programmes to be missing from the cache.<br />
+<br />
+Phil Gardner</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-05-2017, 07:17 PM</div>
+</div>
+<div class="message">Try a few tests:<br />
+<br />
+1. Empty your <kbd>%TEMP%</kbd> folder, but leave it open in Windows Explorer. Run <kbd>get_iplayer --refresh</kbd> at a command prompt. As it runs, watch to see if any "mojo.tmp" files flash in and out of existence. If any do, then it isn't a permissions problem per se, regardless of the error message, so skip to #3. If you don't see any at all, move on to test #2.<br />
+<br />
+2. Create a test folder (e.g.,<kbd> C:\mojo</kbd>) and make sure it is set for Full Control for Everyone, so there should be no question of writability. Leave that folder open in Windows Explorer. In your command prompt, tell Mojolicious to use the test folder for temporary files by running:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>set MOJO_TMPDIR=C:&#92;mojo</code></div></div>Then run <kbd>get_iplayer --refresh</kbd> again. If you see temp files being created and get no error messages, that would point the finger back at your<kbd>%TEMP%</kbd> permissions. If you still get errors using the test folder, move on to test #3.<br />
+<br />
+3. Remove the test folder configuration in your command prompt:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>set MOJO_TMPDIR=</code></div></div>Mojolicious will go back to using <kbd>%TEMP%</kbd> for temp files. Now run <kbd>get_iplayer --refresh --index-maxconn=1</kbd>. If you don't get errors in this scenario, that suggests there may a race condition somewhere, but that is just a guess.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1732</h2></div><div class="dateline">22-05-2017, 09:33 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-05-2017, 07:17 PM)</span></cite>Try a few tests:<br />
+<br />
+1. Empty your <kbd>%TEMP%</kbd> folder, but leave it open in Windows Explorer. Run <kbd>get_iplayer --refresh</kbd> at a command prompt. As it runs, watch to see if any "mojo.tmp" files flash in and out of existence. If any do, then it isn't a permissions problem per se, regardless of the error message, so skip to #3. If you don't see any at all, move on to test #2.</blockquote><br />
+Thanks very much for your helpful reply. I emptied my <kbd>%TEMP%</kbd> folder, but this time I used Unlocker followed by a reboot to delete the files and folders that wouldn't delete normally. After that I ran <kbd>get_iplayer --refresh</kbd> without errors. I did see files flashing in and out of existence in the <kbd>%TEMP%</kbd> folder, but too quickly to see what they were. So I didn't need to do your tests 2 and 3.<br />
+<br />
+I can't imagine why the existence of some locked files should have caused the problem, so perhaps it was the reboot that fixed it.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; &quot;Mojo::Reactor::Poll: I/O watcher failed: Can't open file&quot; during cache update</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

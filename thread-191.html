@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - iPlayer Search</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; iPlayer Search</div>
+<div id="pagetitle"><h2>iPlayer Search</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-558</h2></div><div class="dateline">07-08-2014, 11:23 AM</div>
+</div>
+<div class="message">Hi Guys, <br />
+Came across Get_iPlayer in a long search for software for downloading quality video from BBC iPlayer and have found it to be absolutely brilliant - "Hats off to the writer" and thank you very much.<br />
+<br />
+My first download was Gardener's World of which I was able to download episodes 17-19 - On iPlayer there are about 14 episodes available but Get_iPlayer only picks up three - Is there any way I could get Get_iPlayer to pick up the rest in its search?<br />
+<br />
+Thank you<br />
+Mike</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-08-2014, 11:52 AM</div>
+</div>
+<div class="message">I'm not sure about getting those other results into the search, it maybe a problem the Beeb's end or that get_iplayer needs some tweaking after the recent increase in availability time.<br />
+<br />
+However, in the meantime you can download the programmes you want using the PID method. Taking the URL from episode 16 as:<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b048srv5/gardeners-world-2014-episode-16">http://www.bbc.co.uk/iplayer/episode/b04...episode-16</a><br />
+<br />
+...the PID in this case would be <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>b048srv5</code></div></div>. Using this PID you can download the programme using the following code:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b048srv5</code></div></div><br />
+You can use your normal output commands or whatever other arguments you usually use when downloading a show to have it saved in the correct folder or download the HD version too e.g.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b048srv5 --tvmode=best --type=tv --channel="BBC Two" --file-prefix="&lt;nameshort&gt;&lt;-senum&gt;&lt;-episodeshort&gt;" --output "/media/TV Shows 1/2 - TV Shows/Gardeners' World"</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-558</h2></div><div class="dateline">07-08-2014, 01:22 PM</div>
+</div>
+<div class="message">Thank you mate, that's works a treat.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; iPlayer Search</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

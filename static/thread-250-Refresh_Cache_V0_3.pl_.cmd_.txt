@@ -1,0 +1,5 @@
+cd C:\Program Files (x86)\get_iplayer\
+cls
+perl.exe Refresh_Cache_V0_3.pl
+pause
+exit

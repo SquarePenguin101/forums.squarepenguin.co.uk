@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot Download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot Download</div>
+<div id="pagetitle"><h2>Cannot Download</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-31-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-63</h2></div><div class="dateline">06-09-2013, 07:07 PM</div>
+</div>
+<div class="message">Hi,<br />
+I had this same problem and was mystified. Saw this post (<a href="http://babybean.info/index.php?post=rtmpdump-path">http://babybean.info/index.php?post=rtmpdump-path</a>) and remembered that I'd been messing with my path environment variable. Fixed it up and get_iplayer is working a treat again. Hope this helps...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-09-2013, 07:59 PM</div>
+</div>
+<div class="message">Thanks - very well spotted.  <br />
+<br />
+Andrew: <br />
+<br />
+The get_iplayer installer doesn't touch PATH.  However, if it's messed up by some other application or installer (not altogether uncommon), it could affect the execution environment of external programs like rtmpdump when launched from get_iplayer.  The purpose of those additional perl commands in my last post was to test just that.  However, as jimdog suggests, a better first step would be to simply look at your PATH environment variable to check for something that looks awry.  You can view the value of PATH by opening the get_iplayer command prompt and running:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>echo %PATH%</code></div></div><br />
+<br />
+<br />
+If there is anything in PATH you don't recognise, please post it here and we'll take a look.  It may reference old drivers or utilities that aren't well-behaved and are interfering with rtmpdump.<br />
+<br />
+If you need to fix PATH, you'll find it buried in the Control Panel (Win 7):<br />
+<br />
+<ol type="1" class="mycode_list"><li>Control Panel -&gt; System and Security -&gt; System<br />
+</li>
+<li>Click "Advanced System Settings"<br />
+</li>
+<li>Click "Environment Variables" button in tab<br />
+</li>
+<li>Look for "Path" under "System variables" (bottom list) <br />
+</li>
+<li>You may also have a user-level "PATH" (top list)<br />
+</li>
+</ol>
+<br />
+You'll find a lot of information and step-by-step guides on the net for manipulating Windows PATH.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">06-09-2013, 08:38 PM</div>
+</div>
+<div class="message">There is a lot to post (because I did a lot of fruitless de/installing and other stuff) but first this:<br />
+<br />
+C:\Program Files\get_iplayer&gt;echo %PATH%<br />
+C:\Program Files\Java\jdk1.7.0_25\bin;C:\Program Files\Java\jdk1.7.0_25\bin<br />
+<br />
+<br />
+Nothing suspicious, just my java settings.<br />
+<br />
+Thanks,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-63</h2></div><div class="dateline">06-09-2013, 09:15 PM</div>
+</div>
+<div class="message">Hi again,<br />
+Again, not sure if this is helpful but I changed my path settings when installing java/jre to get eclipse running with the android developer tools. It was after this that get_iplayer stopped working (didn't realise at the time) and following the fix in the above post plus adding the java binary location to the path plus a reboot, I have get_iplayer and java/jre running happily.<br />
+<br />
+path setting when get_iplayer didn't work:<br />
+<br />
+C:\Program Files (x86)\Java\jre7\bin<br />
+<br />
+path with get_iplayer working again:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%SystemRoot%&#92;system32;%SystemRoot%;%SystemRoot%&#92;System32&#92;Wbem;%SYSTEMROOT%&#92;System32&#92;WindowsPowerShell&#92;v1.0&#92;;C:&#92;Program Files (x86)&#92;Java&#92;jre7&#92;bin</code></div></div><br />
+<br />
+<br />
+hope this helps...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-09-2013, 11:24 PM</div>
+</div>
+<div class="message">Andrew:  If you haven't already, you should be able to follow jimdog's example to restore the missing PATH entries, then try get_iplayer again.  If I corrupt my PATH like yours, I can replicate the problems you've described with rtmpdump.  That is exactly what I would expect with the system directories are missing from PATH.<br />
+<br />
+EDIT: It looks like the JRE/JDK installer is not to blame - it doesn't touch PATH, at least not in my test.  So there is more to the the story, but I suppose it doesn't matter how PATH is messed up, just that it <span style="font-weight: bold;" class="mycode_b">is</span> messed up.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">07-09-2013, 09:51 AM</div>
+</div>
+<div class="message">SP, Dp and jimdog - thanks.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;hammersteen&gt;echo %PATH%<br />
+C:&#92;windows&#92;system32;C:&#92;windows;C:&#92;windows&#92;System32&#92;Wbem;C:&#92;windows&#92;System32&#92;WindowsPowerShell&#92;v1.0&#92;;C:&#92;Program Files&#92;Java&#92;jdk1.7.0_25&#92;bin;C:&#92;Program Files&#92;Java&#92;jdk1.7.0_25&#92;bin</code></div></div><br />
+<br />
+<br />
+This is how my PATH looks now. I can javac for England and get_iplayer (the older version) works, too. I am not gonna post the results of the other tests - it seems pointless now.<br />
+<br />
+As a last favour can I ask you whether I should leave the PATH as it is right now?<br />
+<br />
+<br />
+Thanks again,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2013, 12:35 PM</div>
+</div>
+<div class="message">No need for the other results.  Presumably this command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -e "print</code></div></div> `<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>.&#92;&#92;RTMPDump&#92;&#92;rtmpdump.exe&nbsp;&nbsp;--help 2&gt;&amp;1</code></div></div>`<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"</code></div></div><br />
+produced no output, which would have led to the same resolution, albeit by a more circuitous route.  I'm afraid I was guilty of a failure of imagination in that I didn't consider the possibility that the default PATH entries could have been obliterated.<br />
+<br />
+To boil it down for posterity: Never remove the default PATH entries created when Windows is installed, and restore them if some other application removes them.  For Windows 7, the default entries should be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%SystemRoot%&#92;system32;%SystemRoot%;%SystemRoot%&#92;System32&#92;Wbem;%SystemRoot%&#92;System32&#92;WindowsPowerShell&#92;v1.0&#92;;</code></div></div><br />
+<br />
+<br />
+<br />
+Technically, only the first entry is required for rtmpdump, et al., to run, but keep all the default entries.<br />
+<br />
+As for your current PATH, I wouldn't think you need duplicate entries for the JDK bin directory, but that's harmless.  Otherwise, it looks as it should.  You should also be able to re-install get_iplayer with the current version of the installer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">07-09-2013, 02:23 PM</div>
+</div>
+<div class="message">1. The first perl command from the previous post produced the rtmp garb, the second produced nothing.<br />
+<br />
+<br />
+Thanks,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2013, 02:32 PM</div>
+</div>
+<div class="message">Thanks for the confirmation.  If this issue comes up again, PATH will be the starting point for diagnosis.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-340</h2></div><div class="dateline">26-01-2014, 09:11 PM</div>
+</div>
+<div class="message">I get the Same problem as Andrew when i enter<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>perl -e "system('.\RTMPDump\rtmpdump.exe', '--help', '2&gt;&amp;1')"</blockquote>
+<br />
+I get the help file, but when i enter the second command instead of a help file i get no output at all<br />
+<br />
+any help I will be grateful for <br />
+<br />
+Darren</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-01-2014, 09:06 AM</div>
+</div>
+<div class="message">@commgames: What troubleshooting steps have you taken? Have you explored your current PATH settings and confirmed that they are correct? That was the resolution for the others in this thread.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-340</h2></div><div class="dateline">27-01-2014, 12:35 PM</div>
+</div>
+<div class="message">to be perfectly honest, the path change worked, then stopped working, then worked again, now rtmpdump starts crashing occasionally</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-01-2014, 02:02 PM</div>
+</div>
+<div class="message">If it's just occasionally then that is (somewhat unfortunately) the 'expected' behaviour. This is something that @user-2 has touched on before in another thread:<br />
+<br />
+<a href="/topic/stream-error-can-lead-to-an-rtmp-crash/#post-1739">/topic...#post-1739</a><br />
+<br />
+As per that thread, if you are experiencing an inordinate amount of problems with rtmpdump crashes then you can try an alternate build as outlined here:<br />
+<br />
+<a href="/topic/record-live-radio-error/#post-1734">/topic...#post-1734</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-01-2014, 02:29 PM</div>
+</div>
+<div class="message">It sounds to me like your PATH was broken but is now fixed, which has revealed upstream problems causing rtmpdump to crash occasionally.  I you're seeing <span style="font-weight: bold;" class="mycode_b">repeatable</span> errors with rtmpdump, then create a new topic in the forum.  Run get_iplayer with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> and attach your log <span style="font-weight: bold;" class="mycode_b">as an attachment</span> to your post.  However, you may find that there is no rhyme or reason to rtmpdump crashes. If your upstream connectivity is erratic, streams can be garbled and cause unpredictable problems for rtmpdump.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-945</h2></div><div class="dateline">06-06-2015, 11:18 PM</div>
+</div>
+<div class="message">I found my problem was that the RTMPdump installer had not unzipped.  I extracted the files to the RTMPdump folder and all was well again.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-31-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot Download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

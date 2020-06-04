@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Recording folder possible on other drive?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Recording folder possible on other drive?</div>
+<div id="pagetitle"><h2>Recording folder possible on other drive?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">01-05-2017, 01:47 PM</div>
+</div>
+<div class="message">I´ve successfully managed to install get-iPlayer 3.0 having come over from GIA but would like to save recordings to one of my other connected HDDs (Thunderbolt chassis) and not the root SSD drive. I´ve tried entering the exact path and saving it but it always goes to the root drive, creating then a folder based on my path route details.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-05-2017, 01:49 PM</div>
+</div>
+<div class="message">Post the exact command you are using that leads to this behaviour.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 01:50 PM</div>
+</div>
+<div class="message">You need to use a programme option to specify the output location. Read the TV download guide.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">01-05-2017, 02:27 PM</div>
+</div>
+<div class="message">I entered   MAC 3TD HD/Users/MyName/Music/BBC.  The relevant HDD has exactly that name with spaces. The recorded file was put into a created folder on my foot SSD under /Users/MyName/Music/BBC<br />
+<hr class="mycode_hr" />
+I´ll try the method as described in the TV guide using --output.......</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-05-2017, 02:30 PM</div>
+</div>
+<div class="message">Please read the guide:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/tv-download-guide/#how-do-i-change-or-specify-where-get-iplayer-saves-downloaded-programmes">https://squarepenguin.co.uk/guides/tv-do...programmes</a><br />
+<br />
+Read the rest of it whilst you are in there, it'll probably help with any future questions too.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">01-05-2017, 03:43 PM</div>
+</div>
+<div class="message">I tried adding the correct path to the other HDDS as described using the Terminal command but it still records on the root SSD, just adding the folder specified in the given path onto the root address in the process. As I´m new to this programme I guess I´m making some mistake somewhere but I don´t see where.The terminal entry created a split line (I entered it as just one) which I suspect was the reason, here it is :<br />
+[size=x-small][font=Menlo]INFO: Added option 'output' = '“MAC'[/font][/size]<br />
+[size=x-small][font=Menlo]INFO: Added option 'search' = '(3TB|HD/Users/MyName/Music/BBC|Audio”)'[/font][/size]<br />
+<br />
+Sorry, I forgot to include the output command I entered:<br />
+get_iplayer --prefs-add --output “MAC 3TB HD/Users/MyName/Music/BBC Audio”</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 03:59 PM</div>
+</div>
+<div class="message">Pay closer attention to the examples in the guide. EDIT: Curly quotes don't work - use straight quotes. Delete the file &#36;HOME/.get_iplayer/options. It is broken now, so you'll need to start over.<br />
+<br />
+You also didn't read the guide information thoroughly enough - you still don't have the proper path for your external drive. There is a link handily labelled "How to find the location of a Folder in Mac OS X" that takes you to a site with detailed explanations of how to get folder paths in Finder.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">02-05-2017, 08:52 PM</div>
+</div>
+<div class="message">OK, thanks for the help. I´ve got the exact path  /Volumes/Mac 3TB HD/Users/MyName/Music/BBC Audio, included then the straight quotation marks, added the --output in front but still no luck.<br />
+Entering <br />
+get_iplayer --prefs-show<br />
+doesn´t show the preferences so I guess I´ve got to somehow reset it all I suppose  with the following command:-<br />
+get_iplayer --prefs-clear   <br />
+<br />
+Will that delete the &#36;HOME/.get_iplayer/options   you mentioned<br />
+or do I need to do more to reinstall the new path?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 09:01 PM</div>
+</div>
+<div class="message">Only you can delete the options file, not get_iplayer. It gets created as needed when you use <kbd>--prefs-add</kbd>. If nothing is displayed by <kbd>--prefs-show</kbd>, then the options file should be empty, but you can delete it to make sure you have a clean slate.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">02-05-2017, 09:18 PM</div>
+</div>
+<div class="message">OK, I tried that and re-entered [size=x-small][font=Menlo]get_iplayer --prefs-add --output="/Volumes/Mac 3TB HD/Users/MyName/Music/BBC Audio" but still no joy. It always puts the files in [/font][/size]<br />
+[size=x-small][font=Menlo]/Users/MyName/“MAC  on the root SSD.[/font][/size]<br />
+[size=x-small][font=Menlo]I guess I´ll just have to live with it and transfer the files by [/font][/size][size=x-small][font=Menlo]hand. Thanks for your help nevertheless. Your GIA was such a godsend![/font][/size]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 09:25 PM</div>
+</div>
+<div class="message">You still have not replaced your old broken setting. Did you delete the options file as I suggested? Post the output from <kbd>get_iplayer --prefs-show</kbd> so we can verify. And can't you at least show the command you used to download so we assess whether or not that is buggered as well?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1665</h2></div><div class="dateline">02-05-2017, 10:20 PM</div>
+</div>
+<div class="message">I posted get_iplayer --prefs-show in Terminal and it didn´t give any information.I previously ran &#36;HOME/.get_iplayer/option and<br />
+get_iplayer --prefs-clear</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 10:38 PM</div>
+</div>
+<div class="message">Then you never used --prefs-add to update your settings, or you didn't use it correctly. It would then seem that you are still using an erroneous command with your broken download location specified to --output. Given all that, then yes, you are right - you will need to move your files by hand until you learn more about macOS. I am going to close this thread. Start a new one if you have a usage queries. Good luck.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Recording folder possible on other drive?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

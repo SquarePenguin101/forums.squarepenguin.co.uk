@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - can't dowlnoad anything at all!</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; can't dowlnoad anything at all!</div>
+<div id="pagetitle"><h2>can't dowlnoad anything at all!</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">04-06-2015, 09:53 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+My platform is KDE Mint. Never any problem with that. And neither with get-iplayer: only a couple of days ago a couple of programmes were downloaded without any trouble whatsoever. But I just discovered that, whatever the show selected, all of a sudden get-iplayer just won't work now.<br />
+<br />
+This is the Konsole output invariably coming up:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get-iplayer "http://www.bbc.co.uk/iplayer/episode/b05xgj05/1864-episode-6#group=p02q32xl"<br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05xgj05 using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+ERROR: Failed to get version pid metadata from iplayer site</span><br />
+<br />
+Tried get-iplayer --type=tv as well. Same result. And if a download isn't working in KDE, it usually does in Ubuntu, on my desktop. But not this time: same result once again.<br />
+<br />
+Subsequently, I attempted to find out if BBC now has killed get-iplayer completely (or something the like). Couldn't find anything bearing on the above little problem though. <br />
+<br />
+Also consulted <br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/#updating-get_iplayer">https://squarepenguin.co.uk/wiki/documen...et_iplayer</a><br />
+<br />
+I'm not sure, though, if this is what's required. Or which command to use, in case it is. So what do I do now? Can you give me some guidance please?<br />
+<br />
+Thanks very much.<br />
+<br />
+tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-06-2015, 11:39 AM</div>
+</div>
+<div class="message">Those update instructions begin "If you installed by simply downloading the get_iplayer script...".  Does that apply to you?  I suspect not, so you should read the Ubuntu/Mint installation instructions in the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">09-06-2015, 12:48 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+For your information: I spent most of last Saturday trying to figure out which command applies in order to solve this problem. And yes: <span style="font-style: italic;" class="mycode_i">prior</span> to putting in this thread. Moreover, some more time has just gone with Mint installation instructions in wiki - which only ensured that I now can't see the wood for the trees. And to add to my woes: get-iplayer has been behaving rather weirdly, in the meantime.<br />
+<br />
+It's still impossible to download anything. But a friend very much more IT-savvy than I'll ever be suspects that get-iplayer, rather than an update, needs the  cache  cleaned up. However, every command used (--refresh, --refresh [force], --flush, -f) results in this:<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get-iplayer --refresh</span><br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Getting tv Index Feeds<br />
+..................<br />
+<br />
+Matches:<br />
+1:      BBC iPlayer Feeds - -, BBC Three, HD,Highlights,Popular, default,audiodescribed,signed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+peter@ptr-G585:~ &gt; <span style="font-weight: bold;" class="mycode_b">get-iplayer --flush</span><br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Getting tv Index Feeds<br />
+..................<br />
+Matches:<br />
+1:      BBC iPlayer Feeds - -, BBC Parliament, HD,Highlights,Popular, default,signed,audiodescribed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+peter@ptr-G585:~ &gt; <span style="font-weight: bold;" class="mycode_b">get-iplayer -f</span><br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Getting tv Index Feeds<br />
+..................<br />
+Matches:<br />
+1:      BBC iPlayer Feeds - -, BBC Parliament, HD,Highlights,Popular, default,audiodescribed,signed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+I was also advised to attempt <span style="font-weight: bold;" class="mycode_b">get-iplayer --refresh [--force]</span>. Guess what?<br />
+<br />
+get_iplayer --refresh [--force]<br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Getting tv Index Feeds<br />
+..................<br />
+Matches:<br />
+1:      BBC iPlayer Feeds - -, BBC Four, HD,Highlights,Popular, default,signed,audiodescribed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+No matter what command inserted, the above persistently comes up. I myself did not change anything to get-iplayer's original settings, in the meanwhile, so something funny is going on here. Any idea what the fault might be?<br />
+<br />
+Thanks very much. <br />
+<br />
+Tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-06-2015, 01:14 AM</div>
+</div>
+<div class="message">Yes you need to update to 2.94.<br />
+<br />
+You are using a very old version of get_iplayer which no longer works.<br />
+<br />
+What you are seeing above is because the feeds 2.83 tries to use to refresh the cache no longer exist. These feeds were changed in the next version and have recently been changed again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-06-2015, 01:50 AM</div>
+</div>
+<div class="message">Your friend is wrong. You will learn why by reading the release notes for versions after 2.83 (your current version) but in particular that for 2.89 and 2.93.<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/releasenotes/">https://squarepenguin.co.uk/wiki/releasenotes/</a><br />
+<br />
+You would also benefit from reading the blog entries here, particularly this one:<br />
+<br />
+<a href="https://squarepenguin.co.uk/bbc-removes-programme-feeds-blow-get_iplayer/">https://squarepenguin.co.uk/bbc-removes-...t_iplayer/</a><br />
+<br />
+Further, installing in Mint is as simple as adding the required PPA and executing a couple of commands - all of which are detailed and formatted for simple copy and paste to your terminal: <br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/ubuntu/">https://squarepenguin.co.uk/wiki/installation/ubuntu/</a><br />
+<br />
+Ignore the URL says 'Ubuntu', the title says Mint and the instructions will work perfectly for Mint - I know as I run a Mint install as my main machine and it works flawlessly using these exact instructions. <br />
+<br />
+Executing the 4 commands from steps 1 to 3 one after the other will have get_iplayer installed/updated on your system within 2 minutes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">11-06-2015, 12:10 AM</div>
+</div>
+<div class="message">Thank you very much for your help, tyfan and square penguin. Not being able to use get-iplayer for more than a week has been rather frustrating, as you may understand. And going round in circles, as to the small matter of getting get-iplayer back on track, hasn't been conducive to a happy frame either. So your guidance to actual restoration may well be the most useful received - and is therefore greatly appreciated.<br />
+<br />
+tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">11-06-2015, 12:24 PM</div>
+</div>
+<div class="message">Hello again,<br />
+<br />
+Below are Konsole read-outs I got on following up, step by step, on tyfan's and square penguin's guidelines :<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">1. Add the PPA repository</span>: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-get install python-software-properties software-properties-common<br />
+<br />
+Reading package lists... Done<br />
+Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+Reading state information... Done<br />
+python-software-properties is already the newest version.<br />
+The following packages were automatically installed and are no longer required:<br />
+&nbsp;&nbsp;libfftw3-single3:i386 libgomp1:i386 libzita-convolver3:i386<br />
+Use 'apt-get autoremove' to remove them.<br />
+The following extra packages will be installed:<br />
+&nbsp;&nbsp;python3-pycurl python3-software-properties<br />
+Suggested packages:<br />
+&nbsp;&nbsp;libcurl4-gnutls-dev python3-pycurl-dbg<br />
+The following NEW packages will be installed<br />
+&nbsp;&nbsp;python3-pycurl python3-software-properties software-properties-common<br />
+0 to upgrade, 3 to newly install, 0 to remove and 40 not to upgrade.<br />
+E: Could not get lock /var/cache/apt/archives/lock - open (11: Resource temporarily unavailable)<br />
+E: Unable to lock directory /var/cache/apt/archives/</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+1a:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-add-repository ppa:jon-hedgerows/get-iplayer<br />
+<br />
+You are about to add the following PPA to your system:<br />
+ get_iplayer lists, searches and records BBC iPlayer TV/Radio, BBC Podcast programmes.<br />
+<br />
+This ppa contains builds of get_iplayer together with sufficiently recent backported builds of the other programs it makes use of, specifically AtomicParsley and rtmpdump.<br />
+<br />
+If you're feeling brave you might alternatively like to try<br />
+ppa:jon-hedgerows/get-iplayer-testing<br />
+<br />
+If this breaks your system, try<br />
+Â Â sudo ppa-purge ppa:jon-hedgerows/get-iplayer<br />
+<br />
+For help please ask the get_iplayer mailing list:<br />
+http://lists.infradead.org/mailman/listinfo/get_iplayer<br />
+<br />
+Enjoy!<br />
+ More info: https://launchpad.net/~jon-hedgerows/+archive/ubuntu/get-iplayer<br />
+Press [ENTER] to continue or ctrl-c to cancel adding it<br />
+<br />
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.NNG6F2uR0n --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 02E04F78<br />
+gpg: requesting key 02E04F78 from hkp server keyserver.ubuntu.com<br />
+gpg: key 02E04F78: public key "Launchpad xbmc" imported<br />
+gpg: Total number processed: 1<br />
+gpg:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; imported: 1&nbsp;&nbsp;(RSA: 1)&lt;/em&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">2. Ensure package database is current</span>:<span style="font-style: italic;" class="mycode_i">sudo apt-get update</span><span style="font-weight: bold;" class="mycode_b"><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Ign http://packages.linuxmint.com qiana/upstream Translation-en<br />
+100% [Working]<br />
+<br />
+Fetched 3,464 kB in 11s (299 kB/s)<br />
+Reading package lists... Done</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+This, too, seems to have gone without a hitch.<br />
+<br />
+&lt;strong&gt;3. &lt;strong&gt;Install get_iplayer from PPA with dependencies</span>: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-get install get-iplayer<br />
+<br />
+Reading package lists... Done<br />
+Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+Reading state information... Done<br />
+The following packages were automatically installed and are no longer required:<br />
+&nbsp;&nbsp;libfftw3-single3:i386 libgomp1:i386 libzita-convolver3:i386<br />
+Use 'apt-get autoremove' to remove them.<br />
+The following extra packages will be installed:<br />
+&nbsp;&nbsp;atomicparsley libauthen-sasl-perl libmp3-info-perl libmp3-tag-perl<br />
+&nbsp;&nbsp;libnet-smtp-ssl-perl libnet-smtp-tls-butmaintained-perl<br />
+&nbsp;&nbsp;libunicode-string-perl<br />
+Suggested packages:<br />
+&nbsp;&nbsp;libgssapi-perl texlive-latex-extra<br />
+Recommended packages:<br />
+&nbsp;&nbsp;libimage-exiftool-perl<br />
+The following NEW packages will be installed<br />
+&nbsp;&nbsp;atomicparsley libauthen-sasl-perl libmp3-info-perl libmp3-tag-perl<br />
+&nbsp;&nbsp;libnet-smtp-ssl-perl libnet-smtp-tls-butmaintained-perl<br />
+&nbsp;&nbsp;libunicode-string-perl<br />
+The following packages will be upgraded:<br />
+&nbsp;&nbsp;get-iplayer<br />
+1 to upgrade, 7 to newly install, 0 to remove and 41 not to upgrade.<br />
+E: Could not get lock /var/cache/apt/archives/lock - open (11: Resource temporarily unavailable)<br />
+E: Unable to lock directory /var/cache/apt/archives/</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+Still, this was the result upon attempting to download a BBC program:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05y3m23 using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+ERROR: Failed to get version pid metadata from iplayer site</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+And thus get-iplayer is not yet back on track. Might this be related to what the final clauses under both 1. and 3. are saying (below)?<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>E: Could not get lock /var/cache/apt/archives/lock - open (11: Resource temporarily unavailable)<br />
+E: Unable to lock directory /var/cache/apt/archives/</code></div></div><br />
+<br />
+<br />
+- The Konsole readout under 3. also states: <br />
+<br />
+The following packages were automatically installed and are no longer required:<br />
+  libfftw3-single3:i386 libgomp1:i386 libzita-convolver3:i386<br />
+Use 'apt-get autoremove' to remove them.`<br />
+<br />
+Could it be the packages highlighted above are still blocking the new installation? If so, I can't remove them:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>apt-get autoremove libfftw3-single3<br />
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)<br />
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?</code></div></div><br />
+<br />
+<br />
+And exactly so for the other three obsolete packages as referred to in the quote overhead.<br />
+<br />
+- If the current get-iplayer configuration is completely uninstalled and, subsequently, replaced with 2.93, will that affect get-iplayer downloads already in my system? Unfortunately, I currently don't dispose of sufficient external backup storage space to move said listing temporarily out of the way. And I most certainly don't want to run the risk of rendering it unplayable.<br />
+<br />
+I need this sorted on Saturday coming up, at the latest, in connection with penultimate and final episodes of a series expiring thereafter. If anyone can help with ideas/suggestions, please jump in.<br />
+<br />
+tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-06-2015, 01:50 PM</div>
+</div>
+<div class="message">You can only have one installer running at a time.  You probably left Muon or Synaptic or equivalent running while attempting the install get_iplayer at a command prompt.  If you can't figure out what you did, try rebooting to clear the locks.  The messages warning about lock files are not related to get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">11-06-2015, 01:55 PM</div>
+</div>
+<div class="message">Yes, it is related to that error message as none of your installations were actually carried out:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>E: Could not get lock /var/cache/apt/archives/lock - open (11: Resource temporarily unavailable)<br />
+E: Unable to lock directory /var/cache/apt/archives/</code></div></div><br />
+<br />
+<br />
+If you have stuck that error into Google you'd have likely ended up here:<br />
+<br />
+<a href="http://askubuntu.com/questions/531853/could-not-get-lock-var-cache-apt-archives-lock-open">http://askubuntu.com/questions/531853/co...-lock-open</a><br />
+<br />
+..or even here (the fourth result):<br />
+<br />
+<a href="http://www.unixmen.com/solve-error-e-get-lock-varcacheaptarchiveslock-open-11-resource-temporarily-unavailable-e-unable-lock-directory-varcacheaptarchives-debian-7/">http://www.unixmen.com/solve-error-e-get...-debian-7/</a><br />
+<br />
+...which will likely sort the problem for you and give you a clue as to what to do next. <br />
+<br />
+With regards to your autoremove question, this demonstrates that you don't know enough about sudo and how apt-get works. This isn't any criticism, more a statement of fact, as those in the know (or had read up on apt-get) would have understood immediately that you can't just run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>apt-get autoremove</code></div></div> as a normal user, you need to be root or use sudo. <br />
+<br />
+Have a read of the following two links and things will probably become a bit less opaque. <br />
+<br />
+<a href="https://help.ubuntu.com/community/AptGet/Howto">https://help.ubuntu.com/community/AptGet/Howto</a><br />
+<br />
+<a href="https://help.ubuntu.com/community/RootSudo">https://help.ubuntu.com/community/RootSudo</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">13-06-2015, 12:21 PM</div>
+</div>
+<div class="message">Hello all,<br />
+<br />
+My struggles with getting get-iplayer 2.94 in place, for the past fortnight or so, finally seem to have come to an end. <br />
+<br />
+I'm happy to report that I ultimately managed to by-pass var lock with sudo -s , which temporarily assigned me as 'root'. Thus, get-iplayer has presently been restored to full working order.<br />
+<br />
+Much to my relief, I must say. I always find it rather hard to figure out the command fitting the situation best, considering the forest of possibilities out there. And being of a generation that didn't grow up naturally with digital technology, attempting to penetrate this can be rather muddling: the jargon employed opaque indeed, sometimes.<br />
+ <br />
+Anyway: thank you very much for your useful links and pointers contributed towards moving my little problem out of the way.<br />
+<br />
+tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-06-2015, 12:29 PM</div>
+</div>
+<div class="message">That's great news. <br />
+<br />
+I know it might have been easier if we all here had just said 'type XXX and it'll get fixed', but you wouldn't have gained much from that.<br />
+<br />
+I hope now you've had a read of those extra links provided that next time something comes up you might know what to look into and save youself some time and headaches!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; can't dowlnoad anything at all!</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

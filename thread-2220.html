@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - French &amp; Saunders episodes 1 &amp; 2 don't record</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; French &amp; Saunders episodes 1 &amp; 2 don't record</div>
+<div id="pagetitle"><h2>French &amp; Saunders episodes 1 &amp; 2 don't record</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">15-04-2020, 11:49 AM</div>
+</div>
+<div class="message">Trying to record French And Saunders, series 6 episodes 1&amp;2. I use this (for episode 1)<br />
+<br />
+<a href="https://www.bbc.co.uk/iplayer/episode/p032khvp/french-and-saunders-series-6-episode-1">https://www.bbc.co.uk/iplayer/episode/p0...-episode-1</a> in the PVR<br />
+<br />
+and I get this response:<br />
+<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer or Sounds site.<br />
+WARNING: The programme may only be available in an unsupported format (e.g., Flash) - check the iPlayer or Sounds site.<br />
+WARNING: If you use a VPN/VPS/Smart DNS/web proxy, it may have been blocked.<br />
+<br />
+But it plays fine from iPlayer.<br />
+<br />
+Other episodes recorded OK.<br />
+<br />
+Any ideas?<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">15-04-2020, 01:24 PM</div>
+</div>
+<div class="message">Try running <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=p032khvp</code></div></div>(for episode 1)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">15-04-2020, 04:28 PM</div>
+</div>
+<div class="message">Same error as before<br />
+<br />
+ALan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2553</h2></div><div class="dateline">18-04-2020, 03:02 PM</div>
+</div>
+<div class="message">Seems that these two episodes have "types" set as "Store only". Other episodes have "types" of "Original version" also. Source: <br />
+<a href="https://www.bbc.co.uk/programmes/p032khvp.json">https://www.bbc.co.uk/programmes/p032khvp.json</a> for season 6 episode 1<br />
+        &lt;snip&gt;<br />
+        "pid": "p032khvp",<br />
+        "title": "Episode 1",<br />
+        "type": "episode",<br />
+        "versions": [<br />
+            {<br />
+                "canonical": 0,<br />
+                "duration": 1800,<br />
+                "pid": "p0377w1n",<br />
+                "types": [<br />
+                    "Store only"<br />
+        &lt;snip&gt;<br />
+        <br />
+<a href="https://www.bbc.co.uk/programmes/p032khvs.json">https://www.bbc.co.uk/programmes/p032khvs.json</a> for season 6 episode 2<br />
+<a href="https://www.bbc.co.uk/programmes/p032khvw.json">https://www.bbc.co.uk/programmes/p032khvw.json</a> for season 6 episode 3 (for comparison)<br />
+        &lt;snip&gt;<br />
+        "pid": "p032khvw",<br />
+        "title": "Episode 3",<br />
+        "type": "episode",<br />
+        "versions": [<br />
+            {<br />
+                "canonical": 0,<br />
+                "duration": 1800,<br />
+                "pid": "p0377vq8",<br />
+                "types": [<br />
+                    "Store only"<br />
+                ]<br />
+            },<br />
+            {<br />
+                "canonical": 1,<br />
+                "duration": 1800,<br />
+                "pid": "p07kf02n",<br />
+                "types": [<br />
+                    "Original version"<br />
+        &lt;snip&gt;<br />
+<br />
+These two episodes can be recovered from the BBC website using youtube-dl:<br />
+youtube-dl <a href="https://www.bbc.co.uk/programmes/p032khvp">https://www.bbc.co.uk/programmes/p032khvp</a> etc.<br />
+<br />
+so there's nothing amiss with the content. <br />
+<br />
+Without digging through the get_iplayer code, I am guessing that this scenario ("types" available is "store only" only), might be manageable using a parameter, perhaps a bit like AD or SIGNed? Otherwise maybe a code fix to catch this edge case?<br />
+<br />
+Anyways, workaround is to use youtube-dl. HTH. YMMV.<br />
+<br />
+Kudos, as ever, to the maintainer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">18-04-2020, 08:37 PM</div>
+</div>
+<div class="message">Thanks Quacky - that seems to work.<br />
+<br />
+cheers<br />
+<br />
+Alan<br />
+<br />
+[You see - we need this forum - or one like it]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2553</h2></div><div class="dateline">19-04-2020, 01:47 PM</div>
+</div>
+<div class="message">Seems Maintainer has already addressed this issue with an issue note - mea culpa for not spotting this sooner:<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/issues">https://github.com/get-iplayer/get_iplayer/wiki/issues</a><br />
+<br />
+for convenience:<br />
+&lt;snip&gt;<br />
+v3.25: Cannot download unsupported box set episodes with only mislabelled BBC Store versions<br />
+<br />
+Occasionally, some episodes in unsupported box sets (e.g, French And Saunders S06E01) cannot be downloaded because iPlayer metadata used by get_iplayer mistakenly labels them as belonging to the defunct BBC Store. BBC Store versions are ignored since they were never available to get_iplayer. There is no workaround - a code change is required. This restriction will be removed in a future release, though that may not guarantee that any unsupported programmes can be downloaded.<br />
+&lt;snip&gt;<br />
+<br />
+A little more experimentation shows that the identified assets are indeed available. Snip out any of the hrefs from <br />
+<a href="https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/p0377vsd/format/xml?cb=04010">https://open.live.bbc.co.uk/mediaselecto...l?cb=04010</a><br />
+where kind = "video" and paste into your browser to view RTAT. Alternatively, d/l with youtube-dl, for now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">19-04-2020, 02:18 PM</div>
+</div>
+<div class="message">Thanks - the youtubedl worked OK, so I will stay with that until it gets fixed.<br />
+<br />
+Cheers again<br />
+<br />
+Alan</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; French &amp; Saunders episodes 1 &amp; 2 don't record</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - help with batch file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; help with batch file</div>
+<div id="pagetitle"><h2>help with batch file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">14-11-2017, 10:04 PM</div>
+</div>
+<div class="message">i wish to download radio programs to their respective folder.<br />
+i.e. The Infinite Monkey Cage or News Quiz Extra or Sounds Of The 80s or The Museum of Curiosity<br />
+<br />
+I do have 4 batch files which download the individual programs correctly.<br />
+<br />
+What i am trying to do is use 1 batch for everything. This is what i have:<br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer --refresh<br />
+<br />
+get_iplayer -g "The Infinite Monkey Cage" --type=radio --output "E:\Radio\Comedy\The Infinite Monkey Cage"<br />
+<br />
+get_iplayer -g "News Quiz Extra" --type=radio --output "E:\MP3 Media Player\News Quiz Extra"<br />
+<br />
+get_iplayer -g "Sounds of the 80s" --type=radio --output "E:\MP3 Media Player\Sounds Of The 80s"<br />
+<br />
+get_iplayer -g "The Museum of Curiosity" --type=radio --output "E:\Radio\Comedy\The Museum of Curiosity"<br />
+<br />
+<br />
+pause<br />
+<br />
+This batch file does download everything but places everything in the - The Museum Of Curiosity folder.<br />
+Hopefully someone can help me with a single batch file which places them in the correct folder.<br />
+<br />
+Thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-11-2017, 10:11 AM</div>
+</div>
+<div class="message">Maybe give get_iplayer's PVR functionality a try:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/get_iplayer-pvr-guide/">https://squarepenguin.co.uk/guides/get_i...pvr-guide/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1651</h2></div><div class="dateline">15-11-2017, 11:34 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (14-11-2017, 10:04 PM)</span></cite>i wish to download radio programs to their respective folder.<br />
+i.e. The Infinite Monkey Cage or News Quiz Extra or Sounds Of The 80s or The Museum of Curiosity<br />
+<br />
+I do have 4 batch files which download the individual programs correctly.<br />
+<br />
+What i am trying to do is use 1 batch for everything. This is what i have:<br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer --refresh<br />
+<br />
+get_iplayer -g "The Infinite Monkey Cage" --type=radio --output "E:\Radio\Comedy\The Infinite Monkey Cage"<br />
+<br />
+get_iplayer -g "News Quiz Extra" --type=radio --output "E:\MP3 Media Player\News Quiz Extra"<br />
+<br />
+get_iplayer -g "Sounds of the 80s" --type=radio --output "E:\MP3 Media Player\Sounds Of The 80s"<br />
+<br />
+get_iplayer -g "The Museum of Curiosity" --type=radio --output "E:\Radio\Comedy\The Museum of Curiosity"<br />
+<br />
+<br />
+pause<br />
+<br />
+This batch file does download everything but places everything in the - The Museum Of Curiosity folder.<br />
+Hopefully someone can help me with a single batch file which places them in the correct folder.<br />
+<br />
+Thank you</blockquote><br />
+Why not create a master batch file and then call each of them from within that <br />
+<br />
+The contents of my old one was<br />
+<br />
+echo radio shows<br />
+<br />
+call d:\get_iplayer\radio.bat<br />
+<br />
+echo tv shows<br />
+<br />
+call d:\get_iplayer\tv.bat<br />
+<br />
+you just substitute the single series batch files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">15-11-2017, 05:20 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-11-2017, 11:34 AM)</span>Wrote: <a href="https://forums.squarepenguin.co.uk/post-7100.html#pid7100">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (14-11-2017, 10:04 PM)</span></cite>i wish to download radio programs to their respective folder.<br />
+i.e. The Infinite Monkey Cage or News Quiz Extra or Sounds Of The 80s or The Museum of Curiosity<br />
+<br />
+I do have 4 batch files which download the individual programs correctly.<br />
+<br />
+What i am trying to do is use 1 batch for everything. This is what i have:<br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer --refresh<br />
+<br />
+get_iplayer -g "The Infinite Monkey Cage" --type=radio --output "E:\Radio\Comedy\The Infinite Monkey Cage"<br />
+<br />
+get_iplayer -g "News Quiz Extra" --type=radio --output "E:\MP3 Media Player\News Quiz Extra"<br />
+<br />
+get_iplayer -g "Sounds of the 80s" --type=radio --output "E:\MP3 Media Player\Sounds Of The 80s"<br />
+<br />
+get_iplayer -g "The Museum of Curiosity" --type=radio --output "E:\Radio\Comedy\The Museum of Curiosity"<br />
+<br />
+<br />
+pause<br />
+<br />
+This batch file does download everything but places everything in the - The Museum Of Curiosity folder.<br />
+Hopefully someone can help me with a single batch file which places them in the correct folder.<br />
+<br />
+Thank you</blockquote><br />
+Why not create a master batch file and then call each of them from within that <br />
+<br />
+The contents of my old one was<br />
+<br />
+echo radio shows<br />
+<br />
+call d:\get_iplayer\radio.bat<br />
+<br />
+echo tv shows<br />
+<br />
+call d:\get_iplayer\tv.bat<br />
+<br />
+you just substitute the single series batch files.</blockquote><br />
+thank you i'll give that a try</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; help with batch file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

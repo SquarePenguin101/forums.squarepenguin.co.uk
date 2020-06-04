@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download TV programmes outside UK</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Cannot download TV programmes outside UK</div>
+<div id="pagetitle"><h2>Cannot download TV programmes outside UK</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2199</h2></div><div class="dateline">09-07-2018, 02:21 AM</div>
+</div>
+<div class="message">Using get_iplayer 3.16-homebrew,<br />
+<br />
+I apologize if this has been addressed in an older thread. I'm able to download TV programs from ITV but *not* from BBC iPlayer. I receive the following syslog messages when attempting to download any program from BBC/iPlayer (below is a small snippet):<br />
+<br />
+ERROR: Response: 500 Can't connect to <a href="http://www.bbc.co.uk:443">www.bbc.co.uk:443</a><br />
+WARNING: Could not download programme metadata from <a href="https://www.bbc.co.uk/programmes/b0b873nn.json">https://www.bbc.co.uk/programmes/b0b873nn.json</a><br />
+ERROR: Failed to download URL (3/3): <a href="https://www.bbc.co.uk/programmes/b0b873nn/playlist.json">https://www.bbc.co.uk/programmes/b0b873nn/playlist.json</a><br />
+ERROR: Failed to download URL (3/3): <a href="https://www.bbc.co.uk/iplayer/episode/b0b873nn/">https://www.bbc.co.uk/iplayer/episode/b0b873nn/</a><br />
+ERROR: Response: 500 Can't connect to <a href="http://www.bbc.co.uk:443">www.bbc.co.uk:443</a><br />
+ERROR: Failed to download URL (3/3): <a href="https://www.bbc.co.uk/iplayer/episode/b0b873nn/ad">https://www.bbc.co.uk/iplayer/episode/b0b873nn/ad</a><br />
+<br />
+I debugged this @ network layer and the TCP connection is stuck at time_wait to remote BBC/iPlayer server- see snippet:<br />
+<br />
+Name: <a href="http://www.bbc.co.uk">www.bbc.co.uk</a><br />
+Address: 82.163.79.108<br />
+<br />
+tcp4       0      0  10.20.0.108.52687      82.163.79.108.443      TIME_WAIT<br />
+tcp4       0      0  10.20.0.108.52688      82.163.79.108.443      TIME_WAIT<br />
+tcp4       0      0  10.20.0.108.52691      82.163.79.108.443      TIME_WAIT<br />
+tcp4       0      0  10.20.0.108.52692      82.163.79.108.443      TIME_WAIT<br />
+tcp4       0      0  10.20.0.108.52694      82.163.79.108.443      TIME_WAIT<br />
+<br />
+At first it would seem like a firewall is blocking this but I have established connections to other services on this port and I have no issues with ITV. Anyone else seeing this issue? Is this a known problem? I read the following, and I'm not sure if it's relevant:<br />
+<br />
+<a href="https://www.bbc.co.uk/programmes/b08mdjyb.xml">https://www.bbc.co.uk/programmes/b08mdjyb.xml</a><br />
+<br />
+Thanks for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2199</h2></div><div class="dateline">09-07-2018, 02:45 AM</div>
+</div>
+<div class="message">Just an additional information: I tried using a windows virtual machine on my MAC running the same get_iplayer version and I'm seeing a slightly different error. I've tried downloading a different program released yesterday but no dice - same errors :<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p06c5qqm?cb=25870">https://open.live.bbc.co.uk/mediaselecto...m?cb=25870</a><br />
+ERROR: Response: 403 Forbidden<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p06c5qqm?cb=49175">https://open.live.bbc.co.uk/mediaselecto...m?cb=49175</a><br />
+ERROR: Response: 403 Forbidden<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p06c5qqm?cb=18488">https://open.live.bbc.co.uk/mediaselecto...m?cb=18488</a><br />
+ERROR: Response: 403 Forbidden <br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b86v27?cb=93068">https://open.live.bbc.co.uk/mediaselecto...7?cb=93068</a><br />
+ERROR: Response: 403 Forbidden<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+WARNING: If you are outside the UK, check with the provider to find out if your VPN/VPS/Smart DNS/web proxy has been blocked.<br />
+<a href="static/thread-1836-get-iplayer_debug.txt">Output log.txt</a>
+</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Cannot download TV programmes outside UK</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

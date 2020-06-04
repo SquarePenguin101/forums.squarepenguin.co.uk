@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Plex Media Server Perl install is missing modules required for get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Plex Media Server Perl install is missing modules required for get_iplayer</div>
+<div id="pagetitle"><h2>Plex Media Server Perl install is missing modules required for get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">06-05-2017, 09:36 PM</div>
+</div>
+<div class="message">Today I updated to the latest version of the software. I deleted previous versions from /usr/local/bin and then installed the latest version using Home Brew. Everything seemed to go fine however the program crashes when I try to run either the web_pvr or the CLI version. <br />
+<br />
+For example, in response to the command "get_iplayer -V" I get the following:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">Can't locate XML/LibXML/XPathContext.pm in @INC (@INC contains: /usr/local/Cellar/get_iplayer/3.01.0/libexec/perl5/lib /opt/dvr/lib/perl5/site_perl/5.16.3/darwin-thread-multi-2level /opt/dvr/lib/perl5/site_perl/5.16.3 /opt/dvr/lib/perl5/vendor_perl/5.16.3/darwin-thread-multi-2level /opt/dvr/lib/perl5/vendor_perl/5.16.3 /opt/dvr/lib/perl5/5.16.3/darwin-thread-multi-2level /opt/dvr/lib/perl5/5.16.3 /opt/dvr/lib/perl5/site_perl /opt/dvr/lib/perl5/vendor_perl .) at /usr/local/bin/get_iplayer line 7464.<br />
+BEGIN failed--compilation aborted at /usr/local/bin/get_iplayer line 7464.</span><br />
+<br />
+When I try to refresh the cache from the web_pvr, I get the following error:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">GET: /<br />
+DEBUG: get_iplayer options: "modes=best" "force=0" "refreshfuture=0" "future=0" "subtitles=0" "fields=name" "type=tv" "search=.*" "history=0" "hide=0" "thumb=0" "skipdeleted=0" "nopurge=1" "listformat=ENTRY|&lt;index&gt;|&lt;thumbnail&gt;|&lt;pid&gt;|&lt;available&gt;|&lt;expires&gt;|&lt;type&gt;|&lt;name&gt;|&lt;episode&gt;|&lt;versions&gt;|&lt;duration&gt;|&lt;desc&gt;|&lt;channel&gt;|&lt;categories&gt;|&lt;timeadded&gt;|&lt;guidance&gt;|&lt;web&gt;|&lt;seriesnum&gt;|&lt;episodenum&gt;|&lt;filename&gt;|&lt;mode&gt;" "page=1" "pagesize=10" "sortmatches=index"<br />
+INFO: Command: /usr/local/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --expiry=999999999 --webrequest modes%3Dbest?force%3D0?refreshfuture%3D0?future%3D0?subtitles%3D0?fields%3Dname?type%3Dtv?search%3D.%2A?history%3D0?hide%3D0?thumb%3D0?skipdeleted%3D0?nopurge%3D1?listformat%3DENTRY%7C%3Cindex%3E%7C%3Cthumbnail%3E%7C%3Cpid%3E%7C%3Cavailable%3E%7C%3Cexpires%3E%7C%3Ctype%3E%7C%3Cname%3E%7C%3Cepisode%3E%7C%3Cversions%3E%7C%3Cduration%3E%7C%3Cdesc%3E%7C%3Cchannel%3E%7C%3Ccategories%3E%7C%3Ctimeadded%3E%7C%3Cguidance%3E%7C%3Cweb%3E%7C%3Cseriesnum%3E%7C%3Cepisodenum%3E%7C%3Cfilename%3E%7C%3Cmode%3E?page%3D1?pagesize%3D10?sortmatches%3Dindex<br />
+open3: exec of /usr/local/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --expiry=999999999 --webrequest modes%3Dbest?force%3D0?refreshfuture%3D0?future%3D0?subtitles%3D0?fields%3Dname?type%3Dtv?search%3D.%2A?history%3D0?hide%3D0?thumb%3D0?skipdeleted%3D0?nopurge%3D1?listformat%3DENTRY%7C%3Cindex%3E%7C%3Cthumbnail%3E%7C%3Cpid%3E%7C%3Cavailable%3E%7C%3Cexpires%3E%7C%3Ctype%3E%7C%3Cname%3E%7C%3Cepisode%3E%7C%3Cversions%3E%7C%3Cduration%3E%7C%3Cdesc%3E%7C%3Cchannel%3E%7C%3Ccategories%3E%7C%3Ctimeadded%3E%7C%3Cguidance%3E%7C%3Cweb%3E%7C%3Cseriesnum%3E%7C%3Cepisodenum%3E%7C%3Cfilename%3E%7C%3Cmode%3E?page%3D1?pagesize%3D10?sortmatches%3Dindex failed at /usr/local/Cellar/get_iplayer/3.01.0/libexec/get_iplayer.cgi line 1537.</span><br />
+<br />
+The problem appears to be to do with the XML::LibXML module in Perl however I don't know enough to be able to figure out how to fix this. Do I need to add this module into the Perl installation on El Capitan?<br />
+<br />
+Appreciate any help that is out there regarding how to fix this problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-05-2017, 10:12 PM</div>
+</div>
+<div class="message">Different manifestation, but same underlying problem as this:<br />
+<br />
+<a href="/thread-1362.html">/thread-1362.html</a><br />
+<br />
+Read the macOS install doc. It clearly tells you that only the system Perl is supported. If you want to use your own version of Perl, you should already know how to install modules for it. The doc tells you exactly which ones to install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">06-05-2017, 10:19 PM</div>
+</div>
+<div class="message">Dinky<br />
+<br />
+Thanks for your response. <br />
+<br />
+I did read that only the system Perl is supported for OS X.  As far as I'm aware I am using the system Perl (I don't have enough knowledge of Perl for it to be otherwise!). Does your response indicate that I am not using the version of Perl that you expect? Does the 5.16.3 version include the XML::LibXML module?<br />
+<br />
+Its fair to say that I am more than a little confused!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">06-05-2017, 10:25 PM</div>
+</div>
+<div class="message">Dinky,<br />
+<br />
+Having read the post that you linked again I suspect that you are telling me that I am using MacPorts Perl (the @INC path that I have shows /opt/dvr/lib.<br />
+<br />
+That being the case how do I uninstall the MacPorts version and revert to the system version.<br />
+<br />
+Apologies for my lack of knowledge on Perl.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-05-2017, 10:30 PM</div>
+</div>
+<div class="message">Go ask the person in the other thread, or maybe just uninstall the relevant Macports packages. I don't support Macports itself either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-05-2017, 10:53 PM</div>
+</div>
+<div class="message">I should back up a bit: I can't say you have Macports installed. The "dvr" in the paths seems a bit unlikely for a Macports install, so who knows where it came from. When I said "same underlying problem" I just meant a non-system Perl was messing things up. Sorry for the confusion.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">06-05-2017, 11:11 PM</div>
+</div>
+<div class="message">Given that /dvr is used in the path I suspect that this was installed as part of the Plex Media server that I run on the machine (I am using the version that provides dvr capability with a HD Homerun tuner). <br />
+<br />
+So is the fix to install the modules that you specify within the installation document into the version of Perl that resides in the /opt/dvr/bin folder?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-05-2017, 11:23 PM</div>
+</div>
+<div class="message">That would be the place to start since your environment is configured to use the Plex Perl.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">07-05-2017, 06:08 PM</div>
+</div>
+<div class="message">Dinky<br />
+<br />
+Looking at the code on Github I see that there are two Perl scripts associated with the application (get_iplayer and get_iplayer.cgi). The first line in both of these scripts is #!/usr/bin/env perl which, as I understand it tells the application to utilize whatever version of Perl comes first in the PATH environment variable.<br />
+<br />
+If I were to modify this line to:<br />
+<br />
+#!/usr/bin/perl<br />
+<br />
+would this force the app to use the system version of Perl?<br />
+<br />
+If this is the case can you advise which folder the Perl scripts reside in once get_i[layer is installed.<br />
+<br />
+If this doesnt work then I guess that I'll need to come up with a different plan!<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-05-2017, 06:49 PM</div>
+</div>
+<div class="message">You could do that. Just remember to make the change with every update. You could also make a wrapper script that manipulates PATH appropriately before launching get_iplayer, or a shell alias that uses /usr/bin/perl to directly invoke the get_iplayer script. The Plex Perl is even more outdated than system Perl, but it should work with the appropriate modules installed, though I suppose there is a risk they might get blown away in Plex updates (I have no idea how Plex is installed). And if you use the local::lib instructions in install doc, you can install all the modules for get_iplayer under your home directory and they will get picked up by whatever Perl you use.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">07-05-2017, 06:54 PM</div>
+</div>
+<div class="message">Thanks for the response.<br />
+<br />
+Can you please confirm where the Perl scripts that need to be modified reside.  When I type "which get_iplayer" it returns /usr/local/bin/get_iplayer<br />
+<br />
+When I look in this folder get_iplayer is shown as an "alias" that contains the following:<br />
+<br />
+"/usr/local/cellar/get_iplayer/3.01.0/bin/get_iplayer; exit;"<br />
+<br />
+The "get_player" and "get_iplayer_web_pvr" files that are contained in the "/usr/local/cellar/get_iplayer/3.01.0/bin" folder are both listed as unix executables by Finder. Do these executables call the Perl scripts? If so, where the Perl scripts that I need to modify to use the system version of Perl?<br />
+<br />
+I'm afraid that I'm way out of my depth in trying to figure out what is happening. Any assistance that you can provide would be greatly appreciated!<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-05-2017, 07:28 PM</div>
+</div>
+<div class="message">If you're going to edit the Perl scripts as a solution, then don't use Homebrew. It's not worth learning about Homebrew just so you can edit 2 files a few times a year. I assume from the above you don't use it for anything else, so completely uninstall Homebrew from your system. See Homebrew FAQ for uninstall instructions. Once done, perform a manual installation of get_iplayer. You can then put those two scripts wherever is convenient for you rather than conforming to the Homebrew setup.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Plex Media Server Perl install is missing modules required for get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

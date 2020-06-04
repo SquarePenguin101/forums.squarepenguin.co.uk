@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - WARNING: Segment not available from server</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; WARNING: Segment not available from server</div>
+<div id="pagetitle"><h2>WARNING: Segment not available from server</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">03-05-2017, 03:41 AM</div>
+</div>
+<div class="message">I'm getting the following message on quite a few different programs...<br />
+"WARNING: Segment not available from server"<br />
+And then the download, of course, stops.<br />
+<br />
+Find enclosed a log.txt file for the following download...<br />
+<br />
+"The Boss: Series 1 - Episode 4, BBC One, b08nz3yz"<br />
+<br />
+<br />
+This is also happening with<br />
+"The Boss: Series 1 - Episode 7, BBC One, b08pqdl7"<br />
+"Debatable: Series 2 - Episode 8, BBC Two, b08p0zqb"<br />
+"Debatable: Series 2 - Episode 10, BBC Two, b08p16pb"<br />
+and many others.<br />
+<br />
+Is it something I am doing wrong?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 08:56 AM</div>
+</div>
+<div class="message">What else would you expect? You've configured get_iplayer to attempt downloads from only a single stream for each programme. In other words, you have explicitly configured it not to fall back to any other streams if the first one is broken by the BBC or is otherwise unavailable.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">03-05-2017, 03:42 PM</div>
+</div>
+<div class="message">I'm just using the settings from the previous installation.<br />
+<br />
+What do I need to change?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 03:43 PM</div>
+</div>
+<div class="message">read the wiki doc on recording quality</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">03-05-2017, 04:09 PM</div>
+</div>
+<div class="message">I see what you're saying now, but the 25fps 1280x720 IS online.<br />
+I don't want it to fall back to a lower quality file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 04:15 PM</div>
+</div>
+<div class="message">The 25fps 1280x720 version is not online. At least, I don't see any. Post a URL for one if you see otherwise. If that's the only stream of interest to you, then you are out of luck for those programmes. Other streams could be broken as well, but it's rare that all of them are.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">03-05-2017, 05:10 PM</div>
+</div>
+<div class="message">Unfortunately at the moment there are a number of programmes appearing with damaged HLS streams that are missing segments. The examples you have posted are some of these. As hlshd is the only option for 1280x720@25fps streams, you will need to try a different mode.<br />
+<br />
+hlsvhigh might work ok but I haven't checked it. This is an SD option though. If you really want HD then the only option is hvfhd which is 1280x720@50fps. Or you can use hvfsd which is 960x540@50fps and is what iPlayer generally uses as HD.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">03-05-2017, 10:50 PM</div>
+</div>
+<div class="message">Glad it's not just me. However, it looks like it's an BBC/iPlayer issue. According to the BBC iPlayer site, there have been issues with iPlayer not downloading on certain devices (Android/iOS) since the 28th April. I'm guessing this is the same problem we are experiencing.<br />
+<br />
+Also some of the shows which were a problem before, are now downloading fine.<br />
+But it's still not 100%.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1770</h2></div><div class="dateline">04-05-2017, 11:08 AM</div>
+</div>
+<div class="message">Each of these failed<br />
+<br />
+b03vrz4f<br />
+b03vgz8d<br />
+b06h3ytf<br />
+b076nqjb<br />
+b08mp2l8<br />
+b08kg3cg<br />
+b08ntbqv<br />
+b06w0gn7<br />
+b01hdhpy<br />
+b08c7yn6<br />
+p00kjqch<br />
+<br />
+with hlsvhigh (tried 3 times)<br />
+hvfsd seems to work fine.<br />
+<br />
+sebus</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 11:35 AM</div>
+</div>
+<div class="message">This has happened before, and it will happen again. Really people - every stream is not going to work for every programme every time, and there is nothing get_iplayer can do about. It can only warn you and stop downloading when it finds a broken stream. <span style="font-weight: bold;" class="mycode_b">It is not a problem with get_iplayer</span>. If you don't want to configure get_iplayer as recommended so you can get fallback streams, that's OK. Just don't expect your broken streams to be mended. The BBC have fixed some in the past, but not many.  Thread closed.<br />
+<br />
+EDIT: This is ultimately a problem with the BBC production pipeline.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1772</h2></div><div class="dateline">04-05-2017, 01:24 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Everything was working fine with version 3 until today and now the highest resolution get_iplayer will download is 960x540 - is anyone else having this issue?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 01:35 PM</div>
+</div>
+<div class="message">Don't post invitations for speculation. You didn't even bother to identify a programme anyone else could check. <a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system. There are a lot of broken BBC streams around right know, so just because you can't get a particular doesn't mean there is a get_iplayer problem. That's why you need demonstrate a problem has occurred. We can't support what we don't know.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; WARNING: Segment not available from server</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

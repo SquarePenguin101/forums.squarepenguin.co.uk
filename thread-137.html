@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Getting unwanted programme in downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Getting unwanted programme in downloads</div>
+<div id="pagetitle"><h2>Getting unwanted programme in downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">25-03-2014, 01:33 PM</div>
+</div>
+<div class="message">This past few days when searching TV programmes to download via command line, I always get the same unwanted programme shown in the list, e.g.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=tv --tvmode=best --get "Storyville"</code></div></div><br />
+<br />
+<br />
+produces all the Storyville listings but in addition ALWAYS the following<br />
+"Scotland's Future - Generation 2014, BBC News, Factual, Politics, TV, default"<br />
+<br />
+If I specify the PID, it shows two programmes found, the correct one and also the one mentioned above.<br />
+<br />
+I'm puzzled how and why this always appears and, more importantly, how to solve the problem.<br />
+<br />
+Thanks<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-03-2014, 05:02 PM</div>
+</div>
+<div class="message">You don't say which programme is ostensibly a duplicate of "Scotland's Future", so I can't investigate further.  Regardless of that, I can't reproduce the problem you describe.  My best guess is that some bad metadata - since corrected - was posted on the iPlayer site and you somehow got two episodes with the same PID in your cache.  Open %USERPROFILE%\.get_iplayer\tv.cache in a text editor (but *not* Notepad) and delete the record for "Scotlandâs Future". It should be repopulated when the cache is next refreshed.  Alternatively, you could download "Scotland's Future" with --modes=flashlow (to make it faster) and it will be skipped with a warning when you attempt to download Storyville.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 12:36 AM</div>
+</div>
+<div class="message">Hmmm I did infer it was any programme so let me give you 4 examples:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=tv --tvmode=best "eastenders"<br />
+<br />
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1222:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders Omnibus - 22/03/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+1225:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 18/03/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+1226:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 20/03/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+1227:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 24/03/2014, BBC One, Audio Described,Drama,Popular,Soaps,TV, default,audiodescribed,<br />
+2771:&nbsp;&nbsp;&nbsp;&nbsp;Scotland's Future - Generation 2014, BBC News, Factual,Politics,TV, default<br />
+<br />
+INFO: 5 Matching Programmes<br />
+<br />
+***************************************************************<br />
+<br />
+get_iplayer --type=tv --tvmode=best "hardtalk"<br />
+<br />
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1449:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - 19/03/2014, BBC News, News,TV, default,<br />
+1450:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Charles Zhang - CEO, Sohu.com, BBC News, News,TV, default,<br />
+1460:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Ai Weiwei - Artist, BBC News, News,TV, default,<br />
+1461:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Jin Liqun&nbsp;&nbsp;- Chairman, China International Capital Corporation, BBC News, News,TV, default,<br />
+1462:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Ukraine Special, BBC News, News,TV, default,<br />
+2771:&nbsp;&nbsp;&nbsp;&nbsp;Scotland's Future - Generation 2014, BBC News, Factual,Politics,TV, default<br />
+<br />
+INFO: 6 Matching Programmes<br />
+<br />
+***************************************************************<br />
+<br />
+get_iplayer --type=tv --tvmode=best "keeping britain safe" <br />
+<br />
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1741:&nbsp;&nbsp;&nbsp;&nbsp;Keeping Britain Safe 24/7 - Spring, BBC One Northern Ireland, , default<br />
+1742:&nbsp;&nbsp;&nbsp;&nbsp;Keeping Britain Safe 24/7 - 4. Summer, BBC One, Crime &amp; Justice,Factual,Health &amp; Wellbeing,Lifestyle &amp; Leisure,Science &amp; Nature,TV, default<br />
+2771:&nbsp;&nbsp;&nbsp;&nbsp;Scotland's Future - Generation 2014, BBC News, Factual,Politics,TV, default<br />
+<br />
+INFO: 3 Matching Programmes<br />
+<br />
+***************************************************************<br />
+<br />
+get_iplayer --type=tv --tvmode=best "1449" <br />
+<br />
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1449:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - 19/03/2014, BBC News, News,TV, default,<br />
+2771:&nbsp;&nbsp;&nbsp;&nbsp;Scotland's Future - Generation 2014, BBC News, Factual,Politics,TV, default<br />
+<br />
+INFO: 2 Matching Programmes<br />
+<br />
+***************************************************************</code></div></div><br />
+<br />
+<br />
+I'll try your suggestion in the morning, thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 01:03 AM</div>
+</div>
+<div class="message">Actually I tried deleting the entry but now get an error "don't call method "new" on an undefined value at get_iplayer.pl line 1674" !!!<br />
+<br />
+Anyway when I tried deleting the cache altogether, my original fault occurs again as previously described. Obviously the additional programme is not downloaded again, as it has already been downloaded before.  But it shows up on every search and it's irritating if I have moved it to another folder or deleted it because if I do a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> then it gets downloaded again, even if I specify a single PID.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 01:04 AM</div>
+</div>
+<div class="message">I meant <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> in the above post.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 01:08 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/getting-unwanted-programme-in-downloads/#post-2025">Quote:</a>&lt;/div&gt;I meant âforce in the above post.</blockquote>
+<br />
+Hmmm a double "-" doesn't show up on this board!!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-03-2014, 10:11 AM</div>
+</div>
+<div class="message">Post the output from: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-prefs</code></div></div><br />
+<br />
+<br />
+Scrub your username from the output if required.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Hmmm a double â-â doesnât show up on this board!!</blockquote>
+<br />
+Use the "code" formatting button.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 12:21 PM</div>
+</div>
+<div class="message">OK this is  the output of "get_iplayer --show-prefs"<br />
+<br />
+Options in 'C:\Users\*********/.get_iplayer/options'<br />
+	search = (future)<br />
+	type = radio<br />
+	refreshfuture = 1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-03-2014, 02:09 PM</div>
+</div>
+<div class="message">The problem is that somehow you got <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search = (future)</code></div></div> into your options file.  Never put a search string in your options file.  It is applied to all searches, so can mess up the results, as you've seen.  Remove that line from your options file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">26-03-2014, 03:41 PM</div>
+</div>
+<div class="message">No idea how it got there but many thanks, all sorted!<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-03-2014, 03:52 PM</div>
+</div>
+<div class="message">It usually happens when you have a search string in a command line with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div>.  That might be what you want  for creating a preset, but otherwise be careful to include only named options with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Getting unwanted programme in downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

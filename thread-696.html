@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Nitro Interface</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Nitro Interface</div>
+<div id="pagetitle"><h2>Nitro Interface</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1244</h2></div><div class="dateline">05-04-2016, 11:26 AM</div>
+</div>
+<div class="message">At the moment Nitro api keys are only available to internal BBC staff according to the header on the developer page: <a href="https://developer.bbc.co.uk/nitro">https://developer.bbc.co.uk/nitro</a><br />
+ "The BBC Developer site is currently open for registration to BBC Employees. Account requests from other users are not currently being activated. Please check back soon for more info."<br />
+<br />
+We should start to develop a Nitro interface for get-iplayer for when this interface is opened up. <br />
+<br />
+The API documents are available: <a href="https://developer.bbc.co.uk/sites/default/files/Nitro%20for%20Clients.pdf">https://developer.bbc.co.uk/sites/defaul...lients.pdf</a> but the schema at <a href="http://nitro.api.bbci.co.uk/nitro/api/schema">http://nitro.api.bbci.co.uk/nitro/api/schema</a> is not available without an API key. There is not enough info in the For Clients document to do a complete design, but enough to map out a structure. <br />
+<br />
+When the API schema is open we can progress.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">05-04-2016, 01:10 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-04-2016, 11:26 AM)</span></cite>but the schema at <a href="http://nitro.api.bbci.co.uk/nitro/api/schema">http://nitro.api.bbci.co.uk/nitro/api/schema</a> is not available without an API key.</blockquote><br />
+Is it not? <br />
+<br />
+The latest description of the Nitro query format is always available here:<br />
+<br />
+<a href="https://raw.githubusercontent.com/Mermade/bbcparse/master/nitroApi/api.xml">https://raw.githubusercontent.com/Mermad...pi/api.xml</a><br />
+<br />
+And the schema describing the output format here:<br />
+<br />
+<a href="https://raw.githubusercontent.com/Mermade/bbcparse/master/nitroApi/nitro-schema.xsd">https://raw.githubusercontent.com/Mermad...schema.xsd</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-04-2016, 01:52 PM</div>
+</div>
+<div class="message">Nitro is not really an option for get_iplayer. Nitro terms preclude get_iplayer from being granted access. Moreover, Nitro isn't made for the sort of bulk indexing that get_iplayer currently relies upon. It works, but it's much slower than the data feeds in use up to now, and it produces a lot of unnecessary (for get_iplayer) information, while also leaving some holes. On the plus side, it can provide the searchable version/genre info that get_iplayer lost some time ago. <br />
+<br />
+As has been discussed several times before in get_iplayer circles, the likely place for Nitro would be in providing a central programme index, completely separate from get_iplayer, though that may also fall foul of Nitro terms.  But, even if someone was willing to provide that service, and was permitted to do so, it still remains to be seen whether Nitro will ever be available for such use - it's nearly 2 years and counting. <br />
+<br />
+get_iplayer was written for the BBC and iPlayer ecosystem of 8 years ago, when there was complete and easy-to-use XML programme data available. If the last vestige of that is removed by the BBC, it will probably be easier to change the fundamentals of get_iplayer than to continue working around the BBC.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">16-04-2016, 02:14 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-04-2016, 01:52 PM)</span></cite>Nitro is not really an option for get_iplayer. Nitro terms preclude get_iplayer from being granted access. Moreover, Nitro isn't made for the sort of bulk indexing that get_iplayer currently relies upon. It works, but it's much slower than the data feeds in use up to now, and it produces a lot of unnecessary (for get_iplayer) information, while also leaving some holes. On the plus side, it can provide the searchable version/genre info that get_iplayer lost some time ago. <br />
+<br />
+As has been discussed several times before in get_iplayer circles, the likely place for Nitro would be in providing a central programme index, completely separate from get_iplayer, though that may also fall foul of Nitro terms.  But, even if someone was willing to provide that service, and was permitted to do so, it still remains to be seen whether Nitro will ever be available for such use - it's nearly 2 years and counting. </blockquote><br />
+Granted Nitro is slow if you don't parallelize the queries. You can run a reasonable number in parallel without hitting the rate limiting. It isn't currently a great advert for MarkLogic's NoSQL database though.<br />
+<br />
+I've knocked together a proof of concept that can index all 80-odd thousand available programmes (i.e. including those available for longer than 28 days, plus podcasts) in around 40 minutes* and produce an sqlite3 database or CSV output. I still need to add a couple of fields.<br />
+<br />
+<a href="https://morph.io/MikeRalphson/Nitro9">https://morph.io/MikeRalphson/Nitro9</a><br />
+<br />
+A next step might be to seed the database over bit-torrent each day, every 4 hours etc. Though at about 29Mb it isn't that large.<br />
+<br />
+The purpose of the demo is purely academic at the moment, and to provide an SQL queryable dataset for research purposes.<br />
+<br />
+* That's how long it takes to run, not how long it took to write. ;)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-04-2016, 06:07 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (16-04-2016, 02:14 PM)</span></cite>I've knocked together a proof of concept that can index all 80-odd thousand available programmes (i.e. including those available for longer than 28 days, plus podcasts) in around 40 minutes* and produce an sqlite3 database or CSV output. I still need to add a couple of fields.</blockquote>That agrees pretty well with my own tests, though I expect Node (assumed to be your weapon of choice) would be faster at this sort of thing in general. However, I never ran more than 4 queries in parallel and I hit rate limit several times, though it was simple enough to restart and pick up where I left off.  Anyway, it's good to see confirmation that it's possible.<br />
+<blockquote class="mycode_quote"><cite><span> (16-04-2016, 02:14 PM)</span></cite>A next step might be to seed the database over bit-torrent each day, every 4 hours etc. Though at about 29Mb it isn't that large.</blockquote>I had the same thought re: BitTorrent, but ultimately decided I wouldn't be willing to take on the potential support headaches. And as you say, the download isn't that large. It could be even smaller in practice since get_iplayer would only ever want programmes that have become available within the previous 30 days.<br />
+<br />
+Thanks, btw, for sharing your Nitro and IBL API documentation at GitHub. It is really helpful to have that information in a concise, useful format.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">18-04-2016, 09:31 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (16-04-2016, 06:07 PM)</span></cite>I had the same thought re: BitTorrent, but ultimately decided I wouldn't be willing to take on the potential support headaches.</blockquote><br />
+Ah, I hadn't thought of the networking problems some users might experience.<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (16-04-2016, 06:07 PM)</span></cite>And as you say, the download isn't that large. It could be even smaller in practice since get_iplayer would only ever want programmes that have become available within the previous 30 days.</blockquote><br />
+Morph.io has an API which allows you to run remote SQL queries against the output and extract what you want in json, csv or atom. I'm thinking of trying to run pvr style queries against it.<br />
+<br />
+The latest db is about 39Mb as I've added non-default versions, categories, guidance and a 'vpids' column. <br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (16-04-2016, 06:07 PM)</span></cite>Thanks, btw, for sharing your Nitro and IBL API documentation at GitHub. It is really helpful to have that information in a concise, useful format.</blockquote><br />
+No problem, glad it's useful to someone else.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Nitro Interface</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

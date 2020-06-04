@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: cannot open (write): during download (caused by Bitdefender)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; ERROR: cannot open (write): during download (caused by Bitdefender)</div>
+<div id="pagetitle"><h2>ERROR: cannot open (write): during download (caused by Bitdefender)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1965</h2></div><div class="dateline">30-10-2017, 04:36 PM</div>
+</div>
+<div class="message">Since installing 3.06 on Windows 7,whether it's radio or TV, there is no problem locating the programme but I end up with:<br />
+<br />
+"cannot open (write) : C:\Users\John\Desktop\iPlayer Recordings\In Tune...."<br />
+<br />
+Previous get iplayer versions have been uninstalled.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 08:00 PM</div>
+</div>
+<div class="message">A likely culprit would of course be a problem with permissions. Don't truncate or elide parts of the error message. If you are actually attempting to write a file ending in four dots, then something strange is going on.<br />
+<a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1965</h2></div><div class="dateline">02-11-2017, 11:59 AM</div>
+</div>
+<div class="message">1) I am trying to record an “In Tune “ programme on radio 3 broadcast 24/10/17 (and still available on iplayer).Normally the programme is found and recorded easily. Having just downloaded Version 3.06.0. the search is successful but get iplayer cannot open (write) the mp4a file.<br />
+2) Get i_player 3.06.0.<br />
+3) Windows 7 Home Premium 64bit<br />
+4) get_iplayer –pid=b099wz03<br />
+5) PID b099wz03     URL  <a href="http://www.bbc.co.uk/programmes/b099wz03">http://www.bbc.co.uk/programmes/b099wz03</a>  InTune(Radio 3)”Akram Khan, VIDA Guitar Quartet”<br />
+6) ERROR:  Cannot open (write): C:\users\roger\desktop\iPlayer Recordings\In_Tune_-_Akram_Khan_Vida_Guitar_Quartet_b099wz03_original.m4a<br />
+7) Verbose log text file. “get_iplayer --get 33974 --verbose &gt; C:\Users\Roger\log.txt 2&gt;&amp;1 ” produced no log<br />
+8) I have enclosed screen prints of the .cmd application.<br />
+9) Uninstall, start again?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 01:12 PM</div>
+</div>
+<div class="message">Thanks. Next time, omit the lengthy help text spew and only show the output from the command at issue. As for the empty log, it is impossible for that command to run with no output, but it would be a mutual waste of time to figure out what you did there. It would also be a mutual waste of time to attempt to debug your permissions problem remotely. Back up anything in <kbd>C:\Users\Roger\Desktop\iPlayer Recordings</kbd> and delete that folder (get_iplayer will re-create it). Then retry the download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 03:22 PM</div>
+</div>
+<div class="message">Another thing you can do is use <kbd>--output</kbd> to temporarily specify a different output directory that you know is accessible to you. If that doesn't work, it might indicate that permissions are not the problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1965</h2></div><div class="dateline">14-12-2017, 09:20 PM</div>
+</div>
+<div class="message">Uninstalled get_iplayer + Perl,Atomic Parsley,ffmpeg.<br />
+<br />
+Reinstalled get_iplayer(from same source) and extracted Perl,Atomic Parsley,ffmpeg(correctly this time). Bitdefender AV now updated to accept Perl,Atomic Parsley,ffmpeg. <br />
+<br />
+No problems-TV and Radio recorded perfectly.<br />
+<br />
+Conclusion: Did not extract Perl,Atomic Parsley,ffmpeg correctly originally (as Bitdefender did not previously reject these).<br />
+Thanks<br />
+Roglind</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-12-2017, 11:38 AM</div>
+</div>
+<div class="message">Thanks for the update</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; ERROR: cannot open (write): during download (caused by Bitdefender)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

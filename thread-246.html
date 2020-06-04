@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Automating PID Collection and Download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Automating PID Collection and Download</div>
+<div id="pagetitle"><h2>Automating PID Collection and Download</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-641</h2></div><div class="dateline">01-11-2014, 09:42 AM</div>
+</div>
+<div class="message">I have no technical knowledge so please excuse incorrect terminology.<br />
+<br />
+I put together the following command:<br />
+<br />
+get_iplayer --get --fields=pid b007813n b00781c9 b00781cv b0078ynt b01g9tty --tvmode=best<br />
+<br />
+After spending hours trying to grasp the command structure, it struck me that the process of collecting PIDs from Iplayer, choosing options, and then dropping down to the command line and operating the command could be possibly automated, restoring the usefulness of Get_iplayer - as is - to those non technical users like me.<br />
+<br />
+Is it possible - is anybody willing to take on the task. I'm hoping so?<br />
+<br />
+Dave T</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">01-11-2014, 02:04 PM</div>
+</div>
+<div class="message">So long as they keep the pids for the same programmes static.<br />
+I'm doing something like this.  <br />
+<br />
+p-code<br />
+at programme1_time+1 hour get_iplayer -pid=&#36;pid1 -type=radio<br />
+at programme2_time+1 hour get_iplayer -pid=&#36;pid2 -type=radio<br />
+.<br />
+.<br />
+at programmeN_time+1 hour get_iplayer -pid=&#36;pidN -type=radio<br />
+<br />
+If I had time, I'd like to have a little sql database, and maybe an android app to select programmes.<br />
+<br />
+I know I'll never get around to it, and my perl/shell code is so bad, I won't share it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">01-11-2014, 10:49 PM</div>
+</div>
+<div class="message">could the --pid-recursive option be utilized to get upcoming programs<br />
+get_iplayer.cmd  --pid=b00cjsgz --type=radio --pid-recursive --output F:\Media\radio\ap\<br />
+<br />
+that will record all episodes that are available of a series<br />
+or<br />
+get_iplayer.cmd  --pid=b006m86d &gt; f:\PIDOutput.txt ( where the pid is the PID for the shows webpage)<br />
+<br />
+for instance that will output all of eastenders including shows for the week ahead and put it in a  file. It is a rather long file for that show as it has about 20+years of programs.<br />
+<br />
+<br />
+I have been using that then creating ONCE PVR files but it is a very time consuming effort. Especially as I have a large number of programs I record as series. <br />
+<br />
+Is there a similar option but --pid-future  ????</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">01-11-2014, 10:56 PM</div>
+</div>
+<div class="message">My other standby is to record R4 from 0800-2200, 200MB per hour , and chop by time, discard what not wanted.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Automating PID Collection and Download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Series downloads not going to custom folder.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Series downloads not going to custom folder.</div>
+<div id="pagetitle"><h2>Series downloads not going to custom folder.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">22-08-2016, 09:40 PM</div>
+</div>
+<div class="message">Hi everybody, <br />
+<br />
+Bit of a quick and odd question, has anyone run into this problem recently?<br />
+<br />
+- A direct one off download happily heads off to 'D:\Downloads\iPlayer' as set in GUI<br />
+- An automatic series download in the 'PVR List' insists on heading to the desktop folder.<br />
+<br />
+Can't figure it out it's a recent development since the 2.95.x releases (had not updated for a while) is there a separate location in a config file somewhere that I've not found or is it a spot of duff code for the series based downloads? <br />
+<br />
+I would ignore it but don't want my SSD getting clogged up so I normally offload the downloads to a HD until I do something with them.<br />
+<br />
+Cheers in advance for any help :)<br />
+<br />
+EDIT: Just noticed that one off's list the output dir but series items do not, could this be the cause?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-08-2016, 10:45 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-08-2016, 09:40 PM)</span></cite>EDIT: Just noticed that one off's list the output dir but series items do not, could this be the cause?</blockquote>Bingo. The simple solution is to set the output directory in preferences from command prompt. See TV guide in Guides section.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">22-08-2016, 11:02 PM</div>
+</div>
+<div class="message">Thanks for the reply, I've run ....<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --output "d:&#92;downloads&#92;iplayer"</code></div></div><br />
+And it spewed out a long list of series PID's and exited normally, can't see any difference in the pvr list but will update when I next download something that's in the series queue.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-08-2016, 12:11 AM</div>
+</div>
+<div class="message">That won't help. Re-read the examples in the TV guide carefully, remembering that you want to set the option permanently in your preferences.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">23-08-2016, 08:50 PM</div>
+</div>
+<div class="message">Hi user-2<br />
+<br />
+I was a bit blurry and tired and stopped reading when I hit the first bit in the guide, I had a quick re-read and ran this.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add --output "D:&#92;Downloads&#92;~~iplayer"</code></div></div><br />
+Again nothing changed in the PVR List, I decided to add a new series and found that does list the correct directory. I believe somewhere between the (rather) old version I was using and these new versions something must of changed in the way the downloads might of been handled. See below examples...<br />
+<br />
+Old series download:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fields name<br />
+modes hvfhd1<br />
+subtitles 1<br />
+thumb 1<br />
+type tv<br />
+versionlist default<br />
+search0 ^Brazil with Michael Palin&#36;</code></div></div><br />
+New series download:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fields name<br />
+modes best<br />
+output D:&#92;Downloads&#92;~~iPlayer<br />
+subtitles 1<br />
+thumb 1<br />
+type tv<br />
+versionlist default<br />
+search0 ^Britain's Hardest Workers: Inside the Low Wage Economy&#36;</code></div></div><br />
+The old ones do not have the output flag but were happy to send them to my specified folder, most odd.<br />
+<br />
+Thanks for taking the time to help. :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-08-2016, 09:36 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (23-08-2016, 08:50 PM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add --output "D:&#92;Downloads&#92;~~iplayer"</code></div></div><br />
+Again nothing changed in the PVR List</blockquote>Changing preferences does not change PVR jobs retroactively. It wouldn't make much sense.<br />
+<blockquote class="mycode_quote"><cite><span> (23-08-2016, 08:50 PM)</span></cite>I believe somewhere between the (rather) old version I was using and these new versions something must of changed in the way the downloads might of been handled. See below examples...</blockquote>No. You appear to have configured your output directory in the Web PVR as well, which means the setting made with <kbd>--prefs-add</kbd> will be superfluous for new pvr jobs, though it will be applied to old pvr jobs that lack the <kbd>output</kbd> option<br />
+<blockquote class="mycode_quote"><cite><span> (23-08-2016, 08:50 PM)</span></cite>The old ones do not have the output flag but were happy to send them to my specified folder, most odd.</blockquote>Not at all. Stored preferences will be used unless overridden by command line options or Web PVR settings.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">23-08-2016, 09:51 PM</div>
+</div>
+<div class="message">I only ever set the download folder in the Web PVR when I last installed (ages back when the hls stuff came online) and just left it to it, it never gave issue until the other day when I chucked 2.95.x to get 50fps support. <br />
+<br />
+I just manually added the output field to the series in my pvr folder after I posted as it only took a minute, at least I now know why it was having a turn. :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Series downloads not going to custom folder.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

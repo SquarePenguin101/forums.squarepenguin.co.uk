@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can get_iplayer read search regexps from a file or stdin?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can get_iplayer read search regexps from a file or stdin?</div>
+<div id="pagetitle"><h2>Can get_iplayer read search regexps from a file or stdin?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2231</h2></div><div class="dateline">28-08-2018, 05:46 AM</div>
+</div>
+<div class="message">Hello:<br />
+<br />
+First time post here. Sorry if this has been asked before.<br />
+<br />
+Right now I am using several pvr searches to download radio programmes weekly but I am thinking about grouping all of those regexps in just one or two big pvr records. Besides that, I'd like to know if get_iplayer can read the search regexps from a textfile (formatted per example with one regexp per line) instead. That would ease maintenance since I also would use this list with rss agreggators, flexget, etc.<br />
+<br />
+And thank you for releasing get_iplayer! In the old days I had a shitty perl script to parse the html and download BBC3's Hear and Now, in realaudio!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-08-2018, 12:44 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (28-08-2018, 05:46 AM)</span></cite>Right now I am using several pvr searches to download radio programmes weekly but I am thinking about grouping all of those regexps in just one or two big pvr records.</blockquote>It's your itch to scratch, but search time is minuscule compared to download time, so there wouldn't really be any advantage over using a separate pvr search for each programme.<br />
+<blockquote class="mycode_quote"><cite><span> (28-08-2018, 05:46 AM)</span></cite>Besides that, I'd like to know if get_iplayer can read the search regexps from a textfile</blockquote>No</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">01-09-2018, 10:53 AM</div>
+</div>
+<div class="message">In the old days I used to use a sh*tty script too :-)<br />
+<br />
+This was my radio bash script<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>for id in &#36;(get_iplayer --type=radio "Cerys on 6" "Craig Charles" "Geoff Barker" "Jools Holland" "News Quiz" "Round the Horne" "Sounds of the 60s" "The Museum of Curiosity" "The Unbelievable Truth" "The Wonderful World of Cerys Matthews" | grep -o '^[0-9]*:' | sed 's/://'); do<br />
+  get_iplayer --get &#36;id --thumbnail --mp3<br />
+done</code></div></div><br />
+I don't do it that way now as it's too cumbersome to maintain and doesn't allow for specifying options such as subfolder names.<br />
+<br />
+Nonetheless, it *might* take you forward.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can get_iplayer read search regexps from a file or stdin?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

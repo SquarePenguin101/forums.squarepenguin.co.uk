@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can't get programmes available on iPlayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can't get programmes available on iPlayer</div>
+<div id="pagetitle"><h2>Can't get programmes available on iPlayer</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-210-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-589</h2></div><div class="dateline">08-10-2014, 04:19 PM</div>
+</div>
+<div class="message">--------------<br />
+<br />
+ADMIN EDIT - 29.10.2014 - Please see <a href="/topic/get_iplayer-search-and-pvr-functions-no-longer-work-no-fix-available/">this forum post</a> if you are having trouble with get_iplayer. The BBC has removed the feeds get_iplayer relies on for searching and some aspects of downloading and this has broken much of get_iplayers functionality.<br />
+<br />
+--------------<br />
+<br />
+Hi,<br />
+Downloaded and installed get_iplayer yesterday, from this site.<br />
+Downloaded latest 'Click' and viewed fine.<br />
+Tried to get earlier versions of 'Click' using URL, failed with 'pid not found in tv cache'<br />
+Tried again with PID extracted from URL, failed again 'pid not found in tv cache'<br />
+Did 'get_iplayer --refresh --type=all'  No change.<br />
+Tried again both methods above with '--verions signed,audiodescribed,default' still no joy.<br />
+There must be a bludner somewhere, any clues?<br />
+Thanks in advance</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">08-10-2014, 05:05 PM</div>
+</div>
+<div class="message">You are not alone in having difficulties and from the steps you have tried it seems likely that you have nothing wrong with your local setup but are experiencing something of a wider issue with a change the BBC appears to be experimenting with.<br />
+<br />
+See this thread from the mailing list for more info: <a href="http://lists.infradead.org/pipermail/get_iplayer/2014-October/006077.html">http://lists.infradead.org/pipermail/get...06077.html</a><br />
+<br />
+Could you tell us which programme you are having difficulty with?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-589</h2></div><div class="dateline">08-10-2014, 07:07 PM</div>
+</div>
+<div class="message">Thanks for the quick reply.<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b04kn3vp/click-27092014">http://www.bbc.co.uk/iplayer/episode/b04...k-27092014</a> is an example of a programme that fails.<br />
+<br />
+Since posting my question I have noticed that the most recent version of Click, which I successfully downloaded using get_iplayer, shows both 'Download' and 'Watch in HD' icons/buttons on its web page.  Whereas the ones I can't download using get_iplayer omit the 'Download' choice, and only show the 'Watch in HD' icon/button.<br />
+In all other ways the web pages are very similar.<br />
+<br />
+Thanks again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-10-2014, 01:18 PM</div>
+</div>
+<div class="message">Hi,<br />
+I think this is all linked to the change over to 30 day availability and the phasing out of series stacking. It looks like the main website has been updated to show the 30 day availability but programmes getting into the feeds are only getting in with a 7 day expiry. If you <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--info</code></div></div> most programmes (The One Show for example), it says there are only 6 days left even though iPlayer says 28. I wonder if it's got something to do with the way they set programmes up in advance. New programmes that they add to the system may well show in the feeds correctly with a 30 day availability.<br />
+<br />
+From the last couple of days I have found a couple of programmes that show properly.<a href="http://www.bbc.co.uk/iplayer/episode/b04l6w0l/the-driver-episode-3"> The Driver - Episode 3</a>, <a href="http://www.bbc.co.uk/iplayer/episode/b04l6n9k/the-great-british-bake-off-series-5-10-the-final">The Great British Bake Off - Episode 10 - The Final</a> and <a href="http://www.bbc.co.uk/iplayer/episode/b04lccc7/the-great-british-bake-off-an-extra-slice-episode-10">The Great British Bake Off - An Extra Slice - Episode 10</a> all show an expiry of around 29 days when you run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--info</code></div></div> on them, but we will have to wait and see whether they will still be downloadable after 7 days or not but it looks promising.<br />
+<br />
+I have also found a radio programme the is available for 3 more weeks but won't download <a href="http://www.bbc.co.uk/programmes/b04k6rgy">http://www.bbc.co.uk/programmes/b04k6rgy</a><br />
+<br />
+Thanks for the command templates you posted on the mailing list user-2. They are really useful. Is there any chance of a template for the Level 3 server as well?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-10-2014, 01:41 PM</div>
+</div>
+<div class="message">I didn't post those templates.  Send your thanks to <a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05922.html">Vangelis</a>, who did.  Post on the mailing to see if someone will provide you with a Level 3 template.  I think Level 3 only hosts HD streams, so you probably don't need it since there should be an alternate CDN.<br />
+<br />
+The expiry value you see with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--info</code></div></div> isn't predictive of whether or not programmes broadcast after the switchover will be available beyond 7 days.  They will be available via PID, but they may not be in the get_iplayer cache, therefore won't turn up in search results.  As you note, we have to wait until next week to know if the listing feeds will reflect 28-day availability as well.<br />
+<br />
+You radio programme was broken by the BBC changes.  A patch for get_iplayer will be available in a day or two.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">10-10-2014, 12:05 PM</div>
+</div>
+<div class="message">For info, I tried running the Git HEAD version from a temporary folder and it successfully found a radio programme (<a href="http://www.bbc.co.uk/programmes/b04hvy0q">http://www.bbc.co.uk/programmes/b04hvy0q</a>) from more than 7 days ago which is still available on the iplayer:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>./Githead/get_iplayer --type radio --aactomp3 --pid b04hvy0q<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b04hvy0q using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: Lewis Macleod Is Not Himself - Episode 2<br />
+INFO: File name prefix = Lewis Macleod Is Not Himself 2014-09-30 Episode 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...</code></div></div><br />
+<br />
+<br />
+The thumbnail failed to download:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Recorded /media/DATA/get_iplayer downloads/radio downloads/Lewis Macleod Is Not Himself 2014-09-30 Episode 2.mp3<br />
+<br />
+ERROR: Thumbnail Download failed<br />
+INFO: ID3 tagging MP3 file</code></div></div><br />
+<br />
+<br />
+but that's a minor thing. Another very minor thing is that the Artist tag is missing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-10-2014, 05:35 PM</div>
+</div>
+<div class="message">Should be fixed.  Install updated Git HEAD.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">10-10-2014, 07:04 PM</div>
+</div>
+<div class="message">Hi user-2,<br />
+Thanks for the update.<br />
+<br />
+Not sure what Git HEAD is.<br />
+<br />
+Normally when you release an update I run the get_iplayer_setup_latest.exe file. I've done this though and there doesn't seem to be any difference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-10-2014, 07:10 PM</div>
+</div>
+<div class="message">Git HEAD is the current development release of get_iplayer and it is available to you to download and install directly from GitHub. You can find some general info to read <a href="http:///wiki/installation/githeadgit/">here</a> and there are more specific installation instructions at the following links:<br />
+<br />
+<a href="http:///wiki/installation/githeadunix/">Linux, Unix, OS X</a><br />
+<br />
+<a href="http:///wiki/installation/githeadwin/">Windows</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">10-10-2014, 08:40 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/cant-get-programmes-available-on-iplayer/#post-9745">Quote:</a> Should be fixed.  Install updated Git HEAD.</blockquote>
+<br />
+Many thanks user-2. Will do.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">11-10-2014, 10:25 AM</div>
+</div>
+<div class="message">Using the latest Git HEAD, the same programme as I downloaded before now has both a thumbnail and the Artist tag. Again many thanks.<br />
+<br />
+Also the Tommies programme mentioned in the mailing list works fine using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid b03thbp3</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">13-10-2014, 04:14 PM</div>
+</div>
+<div class="message">I'm now using the GIT Head version but when I try to download <a href="http://www.bbc.co.uk/iplayer/episode/b04l8pdp/rip-off-britain-series-6-episode-16">http://www.bbc.co.uk/iplayer/episode/b04...episode-16</a> I'm told <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: No versions exist for this programme</code></div></div>. As this is no longer in the cache I am using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid=b04l8pdp</code></div></div>.<br />
+<br />
+If I try a prgramme that I know is no longer available though like <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid=b04kflrb</code></div></div> (The news from Saturday) I get:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: No versions found in metadata retrieved from iplayer site (JSON)<br />
+WARNINGL No programmes are available for this pid with version(s): default</code></div></div><br />
+<br />
+so the message I'm getting for Rip Off Britain is odd. It doesn't look like it's found any playlists at all.<br />
+<br />
+I saw in the mailing list that Vangelis suggested maybe adding a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> command as another fall back option.<br />
+<br />
+This might be good as we can then use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> if all else fails and that will then tell get_iplayer where to find the mediaselector page and it can then access the streams from there?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-10-2014, 07:47 PM</div>
+</div>
+<div class="message">Another tweak was necessary.  Update from latest Git HEAD and that programme should download.<br />
+<br />
+I won't be implementing a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> option myself, but somebody else is welcome to have a crack at it.  I haven't yet seen any examples where the patched get_iplayer can't find the vPID from the PID as normal.  Your problem had nothing to do with a vPID.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-596</h2></div><div class="dateline">13-10-2014, 08:51 PM</div>
+</div>
+<div class="message">The download via URL definitely works for me with the latest get_iplayer.pl from HEAD.<br />
+<br />
+I have managed to get both radio and television programmes that don't appear in the cache but can be played either from the Radio 4 schedule or iPlayer television player.  <br />
+<br />
+Radio programmes in last 7 days and an much older Dr Who Extra, both in the programme cache, downloaded fine too.<br />
+<br />
+Thanks for the update.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-598</h2></div><div class="dateline">17-10-2014, 09:36 AM</div>
+</div>
+<div class="message">Hi <br />
+I am using Git HEAD (V2.86) and I am still having problems with Radio programmes older than 7 days.<br />
+<br />
+For example, all 4 episodes of DI Cromwell are available on the iPlayer but only the latest is available via get_iplayer:<br />
+<br />
+get_iplayer --long --type=radio Cromwell<br />
+get_iplayer v2.86, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+10883:	DI Cromwell - Jagged Prayer - 4. Virtual Saints, BBC Radio 4 Extra, Crime,Drama,Radio, 0 days 17 hours ago - As Mother Helen's nuns face declining numbers, the detective tackles an unsolved murder.<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+Have I done something wrong?<br />
+<br />
+Thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-10-2014, 09:53 AM</div>
+</div>
+<div class="message">Re-read this:<br />
+<br />
+<a href="/topic/get_iplayer-and-bbc-changes-in-early-oct-2014/#post-9748">/topic...#post-9748</a><br />
+<br />
+and you'll have your answer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-598</h2></div><div class="dateline">17-10-2014, 10:23 AM</div>
+</div>
+<div class="message">Sorry my mistake - I assumed I was using Git HEAD, but I don't seem to be able to download it at the moment:<br />
+<br />
+git clone git://github.com/get-iplayer/get_iplayer<br />
+Cloning into 'get_iplayer'...<br />
+fatal: unable to connect to github.com:<br />
+github.com: Name or service not known<br />
+<br />
+Thank you for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-10-2014, 01:34 PM</div>
+</div>
+<div class="message">Looks like a problem with your DNS or your internet connection.  GitHub is working fine here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-598</h2></div><div class="dateline">17-10-2014, 02:06 PM</div>
+</div>
+<div class="message">Thanks Dinky P<br />
+<br />
+I tried it on a different network and now I have (I hope) Git HEAD. Unfortunately I still don't seem to be getting anything older than 7 days ,either in TV or Radio. Maybe I should wait for v2.87 :-)<br />
+<br />
+Love get_iplayer, a most excellent program.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>git clone git://github.com/get-iplayer/get_iplayer<br />
+[sudo] password for dave: <br />
+Cloning into 'get_iplayer'...<br />
+remote: Counting objects: 2540, done.<br />
+remote: Compressing objects: 100% (6/6), done.<br />
+remote: Total 2540 (delta 2), reused 0 (delta 0)<br />
+Receiving objects: 100% (2540/2540), 2.16 MiB | 158 KiB/s, done.<br />
+Resolving deltas: 100% (1717/1717), done.<br />
+<br />
+sudo git checkout master<br />
+Already on 'master'<br />
+<br />
+/home/dave/clone_git/get_iplayer/get_iplayer --type=radio Cromwell<br />
+get_iplayer v2.86, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+10883:&nbsp;&nbsp;&nbsp;&nbsp;DI Cromwell - Jagged Prayer - 4. Virtual Saints, BBC Radio 4 Extra, Crime,Drama,Radio<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+/home/dave/clone_git/get_iplayer/get_iplayer --type=tv Eastenders<br />
+get_iplayer v2.86, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+357:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders Omnibus - 10/10/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+358:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 10/10/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+359:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 13/10/2014, BBC One, Audio Described,Drama,Soaps,TV, default,audiodescribed<br />
+360:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 14/10/2014, BBC One, Audio Described,Drama,Highlights,Popular,Soaps,TV, default,audiodescribed,<br />
+361:&nbsp;&nbsp;&nbsp;&nbsp;EastEnders - 16/10/2014, BBC One, Audio Described,Drama,Highlights,Popular,Soaps,TV, default,audiodescribed,<br />
+<br />
+INFO: 5 Matching Programmes</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">29-10-2014, 06:20 PM</div>
+</div>
+<div class="message">As some people are landing on this post when searching for help regarding today's (29.10.2014) changes made by the BBC and the subsequent inability to download programmes, please see <a href="/topic/get_iplayer-search-and-pvr-functions-no-longer-work-no-fix-available/">this forum post</a> for further relevant info.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-210-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can't get programmes available on iPlayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

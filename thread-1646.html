@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --cache-rebuild broken for week of Jan 1</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --cache-rebuild broken for week of Jan 1</div>
+<div id="pagetitle"><h2>--cache-rebuild broken for week of Jan 1</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1152</h2></div><div class="dateline">11-01-2018, 10:24 AM</div>
+</div>
+<div class="message">EDIT: Separate issue split into <a href="thread-1647.html">another thread</a>.<br />
+<br />
+I've tried using --rebuild-cache and although it found a few more programmes since the last time this rand at startup etc. it still doesn't find the latest episodes, with the latest it finding from 09/01/2018 etc.<br />
+- I have noticed lots of warning messages at the start of this, like:<br />
+<br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc/co.uk/">http://www.bbc/co.uk/</a><br />
+bbcfour/programmes/schedules/2017/w53<br />
+<br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc/co.uk/">http://www.bbc/co.uk/</a><br />
+bbcnews/programmes/schedules/2017/w53 <br />
+<br />
+etc. <br />
+<br />
+So I wondered if others had noticed this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-01-2018, 12:27 PM</div>
+</div>
+<div class="message">That is a bug with <kbd>--cache-rebuild</kbd> that will be fixed in the next release. <br />
+<br />
+EDIT: Removed earlier cache repair advice. Wait for upcoming release with fix for <kbd>--cache-rebuild</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1152</h2></div><div class="dateline">12-01-2018, 02:46 AM</div>
+</div>
+<div class="message">Thanks for the reply and the suggestions.<br />
+<br />
+I've now changed the date of my tv.cache file, using the 'Filedate' program and ran GiP with --refresh<br />
+<br />
+But I  got the response:<br />
+   INFO: Indexing tv programmes (concurrent)<br />
+   .................................................<br />
+   INFO: Added 0 tv programmes to cache<br />
+<br />
+So I'm not sure this did actually do too much.<br />
+<br />
+<br />
+I don't think my cache was actually broken, as after a --cache-rebuild and the Warning messages, it had found over 400 programmes at the end of these. <br />
+<br />
+And the Index search of it was still showing programmes upto 30 days old (I seem to recall I had previously used --refresh-limit 30 as I was only seeing a week of programmes after a GiP update a whie ago)<br />
+<br />
+The cache was still updating automatically upon GiP startup etc. if it hadn't been run for a few hours. <br />
+(It was just that the latest date of the programmes in it was always a day behind the latest ones actually available. And I have now also tried using --refresh-future but nothing extra appears to be found) so may be due to issue in the original thread: <a href="thread-1647.html">Original Thread</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-01-2018, 07:41 AM</div>
+</div>
+<div class="message">Since you had done regular normal updates as well, repair wasn’t necessary. I didn’t make that clear. I’ve now removed that cache repair advice. A fix will be available soon, so not worth the potential confusion.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1152</h2></div><div class="dateline">13-01-2018, 10:15 AM</div>
+</div>
+<div class="message">Thanks for the reply.<br />
+<br />
+I've now solved the cause of the orginal problem I'd had at: <a href="thread-1647.html">Original thread</a> which was due to PC date being 1 day behind!<br />
+<br />
+I do wonder if the --refresh-future (I'd subsequently tried after this cache rebuild issue) should still have allowed all the current programmes on iplayer website to have got added to the cache, despite the PC date being incorrect</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-01-2018, 01:24 AM</div>
+</div>
+<div class="message">fixed in v3.11</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --cache-rebuild broken for week of Jan 1</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

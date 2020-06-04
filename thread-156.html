@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to download certain TV programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to download certain TV programmes</div>
+<div id="pagetitle"><h2>Unable to download certain TV programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">25-05-2014, 04:00 PM</div>
+</div>
+<div class="message">A couple of days ago I started to have difficulties in downloading for the first time. Of a batch of say ten programmes around half would fail download. As far as I am able to determine they are all SD, the HD programmes seem to download fine. The subtitle files also download without problem.<br />
+<br />
+I upgraded to 2.86 but same behaviour persists. This is the get_iplayer output:<br />
+<br />
+******************<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;get_iplayer --modes=best --output "\iplayer" --subtitles --force --get 324<br />
+get_iplayer v2.86, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+324:    Documenting John Grierson - -, BBC Two, Arts Culture &amp; the Media,Factual,Scotland,TV, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Documenting John Grierson - Documenting John Grierson<br />
+INFO: File name prefix = Documenting_John_Grierson_-_Documenting_John_Grierson_b042rlbv_default<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect1, handshake failed.<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file C:\iplayer\Documenting_John_Grierson_-_Documenting_John_Grierson_b042rlbv_default.partial.mp4.flv via RTMP<br />
+INFO: skipping flashvhigh1 mode<br />
+INFO: Trying flashvhigh2 mode to record tv: Documenting John Grierson - Documenting John Grierson<br />
+INFO: File name prefix = Documenting_John_Grierson_-_Documenting_John_Grierson_b042rlbv_default<br />
+<br />
+**************<br />
+<br />
+Then it cycles through the remaining modes with the same outcome.<br />
+<br />
+Thanks in advance for any help guidance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-05-2014, 05:41 PM</div>
+</div>
+<div class="message">First guess: You're using a VPN that has been blacklisted or is broken.  rtmpdump cannot connect to the streaming media server. It could just be a transient problem at the server end.  Either way, there is nothing get_iplayer can do about it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">25-05-2014, 06:12 PM</div>
+</div>
+<div class="message">That was my first guess too. However the problem does not occur with some downloads so the VPN appears to be operating OK. As stated, it seems to occur only with SD programmes.<br />
+<br />
+Here's a good one that I just started:<br />
+<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhd1,flashhd2,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashhd1 mode to record tv: Cannes 2014 - Cannes 2014<br />
+INFO: File name prefix = Cannes_2014_-_Cannes_2014_b045k2m1_default<br />
+<br />
+INFO: Downloading Subtitles to 'C:\iplayer/Cannes_2014_-_Cannes_2014_b045k2m1_default.srt'<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect1, handshake failed.<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file C:\iplayer\Cannes_2014_-_Cannes_2014_b045k2m1_default.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhd1 mode<br />
+INFO: Trying flashhd2 mode to record tv: Cannes 2014 - Cannes 2014<br />
+INFO: File name prefix = Cannes_2014_-_Cannes_2014_b045k2m1_default<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:   duration              1546.88<br />
+INFO:   moovPosition          36.00<br />
+INFO:   width                 1280.00</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">25-05-2014, 06:15 PM</div>
+</div>
+<div class="message">Actually I meant DNS not VPN.<br />
+<br />
+The Cannes download (HD) just completed fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-05-2014, 06:53 PM</div>
+</div>
+<div class="message">BBC uses several CDNs, each with multiple sites, and they don't necessarily work the same where geo-blocking is concerned.  As you can see from your last post, rtmpdump failed to connect to the first CDN it tried for your HD programme, so it's not a simple HD/SD split.  It doesn't matter if you're using a DNS service or true VPN.  Either could be blacklisted.  However, I should stress that there is no way for me to know if that is the case.  I do know know that at least one CDN has used geo-blocking.  get_iplayer works fine from the UK, and that is all we can support.  As I've already said, it could just be a transient problem at the BBC end - it wouldn't be the first time.  Keep checking it for a week or so.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-05-2014, 07:10 PM</div>
+</div>
+<div class="message">I should also say that if you're using a DNS service rather than a true VPN, blacklisting wouldn't seem to be your problem since, as you say, some downloads get through.  In that case, it's more likely your non-UK IP address is blocked directly by some of the CDN providers since the stream connections from rtmpdump may not be proxied through the DNS service.  Again, no way for me to know.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">25-05-2014, 07:32 PM</div>
+</div>
+<div class="message">Ok thanks, I understand completely about non-UK support and have no expectations in that respect.<br />
+<br />
+I hadn't realised that geo-blocking can operate selectively by CDN so that is obviously a possibility. I'm still a little puzzled though - and this may be entirely due to my almost complete lack on knowledge on the subject - since the failing programmes can be viewed in 'real time' on the PC and can be downloaded using the BBC's own downloader shouldn't geo-blocking apply to those as well? Or are they dependent on completely separate delivery mechanisms (and geo-blocking admin regimes) to those which get-iplayer makes use of?<br />
+<br />
+It would be most helpful if another expat using another VPN or DNS service (I use unblock-us) could attempt the download in my first post and report the results.<br />
+<br />
+Thanks anyway for your help and patience.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-05-2014, 08:01 PM</div>
+</div>
+<div class="message">Services like Unblock-Us only work for browser access to specific sites, such as the iPlayer web site.  get_iplayer doesn't use the iPlayer web site for downloads, so it won't benefit from such services.  They will tell you so themselves:<br />
+<br />
+<a href="http://support.unblock-us.com/customer/portal/questions/5566191-anyone-got-get-iplayer-working-under-unblock-us">http://support.unblock-us.com/customer/p...unblock-us</a>-</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">25-05-2014, 08:13 PM</div>
+</div>
+<div class="message">Ah OK. It has worked for several months without a hitch so something must have changed in the background.<br />
+<br />
+Thanks for your help, I won't bother you anymore.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-05-2014, 04:11 PM</div>
+</div>
+<div class="message">Something you could do to help test - Run the command like this:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer â-output â&#92;iplayerâ â-subtitles â-force â-get 324 â-modes=flashlow --attempts=1 --debug</code></div></div><br />
+<br />
+<br />
+The <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes=flashlow</code></div></div> should guarantee failure as an SD download and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--attempts=1</code></div></div> will limit retries. The <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--debug</code></div></div> flag may induce rtmpdump to show some additional error messages.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-05-2014, 11:09 AM</div>
+</div>
+<div class="message">All the reports to date appear to come from Unblock-us users, so it's possible that they have screwed something up.  Until someone tests using a different service and posts a log of the result, there is no way to know. Given the lack of squawks about this, Unblock-us as culprit remains a distinct possibility.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-519</h2></div><div class="dateline">30-05-2014, 02:48 PM</div>
+</div>
+<div class="message">I ran the debug option and it certainly induced some output, 77 pages of it! I will try attachinng this as a zip file.<br />
+<br />
+I can confirm that the problem occurs only with SD files, HD files download fine. I can also download the SD versions OK through a VPN so it does look as though this is unblock-us related.<br />
+<br />
+Anyway here goes with the zip.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-05-2014, 03:01 PM</div>
+</div>
+<div class="message">Thanks for that.  rtmpdump didn't produce any more useful error messages with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--debug</code></div></div>, but it was worth a shot.  More useful is knowing that it works for you via VPN.  Unblock-us don't support get_iplayer, but it seems they may have managed to break it nonetheless.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-572</h2></div><div class="dateline">29-08-2014, 04:56 AM</div>
+</div>
+<div class="message">Sorry to dig this up but can anyone suggest an alternative for unblock-us that they have had success with?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2014, 12:57 PM</div>
+</div>
+<div class="message">Sorry - no vpn/proxy swapping here.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to download certain TV programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

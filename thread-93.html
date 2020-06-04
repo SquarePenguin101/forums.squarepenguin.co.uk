@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - mplayer file not found at installation</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; mplayer file not found at installation</div>
+<div id="pagetitle"><h2>mplayer file not found at installation</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-312</h2></div><div class="dateline">03-01-2014, 03:13 PM</div>
+</div>
+<div class="message">Running setup (my first, what luck, eh?) I get the following error in the MPlayer install:<br />
+<br />
+get_iplayer Setup<br />
+---------------------------<br />
+Download failed: <a href="http://sourceforge.net/projects/mplayerwin/files/MPlayer-MEncoder/r36348/mplayer-svn-36348.7z/download">http://sourceforge.net/projects/mplayerw...z/download</a><br />
+<br />
+Error: File Not Found (404)<br />
+<br />
+Do you wish to try again?<br />
+<br />
+... It seems from sourceforge thnat there is a new version dated 2014-01-01 - has this caused the Windows install to fail (previously pointing at old version?).<br />
+<br />
+Comments?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-310</h2></div><div class="dateline">03-01-2014, 03:22 PM</div>
+</div>
+<div class="message">same here - stopped working so tried to reinstall and get the same problem</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-312</h2></div><div class="dateline">03-01-2014, 03:42 PM</div>
+</div>
+<div class="message">It seems that version r36348 has been superseded by r36563 - if I install MPlayer separately (using the missing file link), does anyone know how I can do so such that it can be found by Get Iplayer?<br />
+<br />
+Failing that, can someone record the Afternoon Drama on the Polgar Sisters (id = 10118) for me before it expires in the next few minutes?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-310</h2></div><div class="dateline">03-01-2014, 03:57 PM</div>
+</div>
+<div class="message">think we might try and download it in stand alone form from your link above - will let you know if get iplayer can find it :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">03-01-2014, 04:04 PM</div>
+</div>
+<div class="message">get_iplayer's install directory is: C:\Program Files (x86)\get_iplayer<br />
+<br />
+There should be a directory in there called 'MPlayer'. Extract the contents of the 'stand alone' download to that MPlayer directory. <br />
+<br />
+If that MPlayer directory isn't present, create it and place the extracted mplayer-svn-36563 directory inside the MPlayer one. <br />
+<br />
+That <span style="font-style: italic;" class="mycode_i">should</span> be enough to get it working for you...hopefully.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-312</h2></div><div class="dateline">03-01-2014, 05:03 PM</div>
+</div>
+<div class="message">Thanks - that worked fine.<br />
+<br />
+For repeats, I took the download, mplayer-svn-36563.7z, from <a href="http://sourceforge.net/projects/mplayerwin/files/MPlayer-MEncoder/r36563/">http://sourceforge.net/projects/mplayerw...er/r36563/</a> and when I expanded the files, did so into the location described by Square Penguin (C:\Program Files\get_iplayer\MPlayer\mplayer-svn-36563). You may need the 7-zip utility for the extraction (that is, pkzip etc. might not do the business).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-01-2014, 05:42 PM</div>
+</div>
+<div class="message">The MPlayer developer moved the archive file configured for use by the get_iplayer installer.  The link has been updated, so run the installer again and it should download MPlayer as before.  Thanks for the heads-up.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; mplayer file not found at installation</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

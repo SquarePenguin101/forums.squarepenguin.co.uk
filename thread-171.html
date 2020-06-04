@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - avconv not handling 896 x 504</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; avconv not handling 896 x 504</div>
+<div id="pagetitle"><h2>avconv not handling 896 x 504</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-533</h2></div><div class="dateline">02-07-2014, 12:14 AM</div>
+</div>
+<div class="message">I'm on Ubuntu 14.04 64-bit and have been successfully using get_iplayer from the ppa for over a month now. I download tv shows in the default mode (flashvhigh which is normally 832 x 468). Just lately I've noticed some shows are now coming down at resolution of 896 x 504 which unfortunately results in avconv being unable to convert and ending in error:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer -g 724<br />
+get_iplayer 2.86-2-g969bd34-ppa17, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+724:&nbsp;&nbsp;&nbsp;&nbsp;Match of the Day - 2014 FIFA World Cup: 01/07/2014, BBC Sport, Football,Sport,TV,World Cup, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Match of the Day - 2014 FIFA World Cup: 01/07/2014<br />
+INFO: File name prefix = Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014<br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: rtmp server sent error<br />
+ERROR: rtmp server requested close<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file /home/gus/Downloads/bbc/Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014.partial.mp4.flv via RTMP<br />
+INFO: skipping flashvhigh1 mode<br />
+INFO: Trying flashvhigh2 mode to record tv: Match of the Day - 2014 FIFA World Cup: 01/07/2014<br />
+INFO: File name prefix = Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014<br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:&nbsp;&nbsp; duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2656.00<br />
+INFO:&nbsp;&nbsp; moovPosition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28.00<br />
+INFO:&nbsp;&nbsp; audiocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+INFO:&nbsp;&nbsp; width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 896.00<br />
+INFO:&nbsp;&nbsp; height&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;504.00<br />
+INFO:&nbsp;&nbsp; videocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+INFO:&nbsp;&nbsp; avcprofile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100.00<br />
+INFO:&nbsp;&nbsp; avclevel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31.00<br />
+INFO:&nbsp;&nbsp; aacaot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.00<br />
+INFO:&nbsp;&nbsp; audiosamplerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000.00<br />
+INFO:&nbsp;&nbsp; audiochannels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.00<br />
+INFO:&nbsp;&nbsp; videoframerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.00<br />
+INFO: trackinfo:<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;239039999.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eng<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;239036400.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;und<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+477157.786 kB / 2655.98 sec (99.9%)<br />
+Download complete<br />
+avconv version 9.13-6:9.13-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers<br />
+&nbsp;&nbsp;built on May&nbsp;&nbsp;9 2014 13:34:03 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)<br />
+[flv @ 0x183b020] negative cts, previous timestamps might be wrong<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Last message repeated 93 times<br />
+[flv @ 0x183b020] max_analyze_duration reached<br />
+Input #0, flv, from '/home/gus/Downloads/bbc/Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014.partial.mp4.flv':<br />
+&nbsp;&nbsp;Metadata:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;moovPosition&nbsp;&nbsp;&nbsp;&nbsp;: 28<br />
+&nbsp;&nbsp;&nbsp;&nbsp;avcprofile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 100<br />
+&nbsp;&nbsp;&nbsp;&nbsp;avclevel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 31<br />
+&nbsp;&nbsp;&nbsp;&nbsp;aacaot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;audiochannels&nbsp;&nbsp; : 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;videoframerate&nbsp;&nbsp;: 25<br />
+&nbsp;&nbsp;Duration: 00:44:16.00, start: 0.000000, bitrate: N/A<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Stream #0.0: Video: h264 (High), yuv420p, 896x504 [PAR 1:1 DAR 16:9], 25 fps, 25 tbr, 1k tbn, 50 tbc<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Stream #0.1: Audio: aac, 48000 Hz, stereo, fltp<br />
+Output #0, mp4, to '/home/gus/Downloads/bbc/Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014.partial.mp4':<br />
+&nbsp;&nbsp;Metadata:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;moovPosition&nbsp;&nbsp;&nbsp;&nbsp;: 28<br />
+&nbsp;&nbsp;&nbsp;&nbsp;avcprofile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 100<br />
+&nbsp;&nbsp;&nbsp;&nbsp;avclevel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 31<br />
+&nbsp;&nbsp;&nbsp;&nbsp;aacaot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;audiochannels&nbsp;&nbsp; : 2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;videoframerate&nbsp;&nbsp;: 25<br />
+&nbsp;&nbsp;&nbsp;&nbsp;encoder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Lavf54.20.4<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Stream #0.0: Video: libx264, yuv420p, 896x504 [PAR 1:1 DAR 16:9], q=2-31, 1k tbn, 1k tbc<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Stream #0.1: Audio: libvo_aacenc, 48000 Hz, stereo<br />
+Stream mapping:<br />
+&nbsp;&nbsp;Stream #0:0 -&gt; #0:0 (copy)<br />
+&nbsp;&nbsp;Stream #0:1 -&gt; #0:1 (copy)<br />
+Press ctrl-c to stop encoding<br />
+[mp4 @ 0x194a920] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 40 &gt;= 40<br />
+av_interleaved_write_frame(): Invalid argument<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: flv conversion failed - retaining flv file<br />
+INFO: Recorded /home/gus/Downloads/bbc/Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014.partial.mp4.flv<br />
+<br />
+INFO: Downloaded Thumbnail to '/home/gus/Downloads/bbc/Match_of_the_Day-s01e01-2014_FIFA_World_Cup_01_07_2014.jpg'</code></div></div><br />
+<br />
+<br />
+It appears ffmpeg is no longer easily installable in Ubuntu 14.04. I tried a static ffmpeg build to manually convert the flv to mp4 and it worked although with warnings about "negative cts, previous timestamps might be wrong"<br />
+<br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-07-2014, 11:17 AM</div>
+</div>
+<div class="message">The video size isn't relevant per se, except that it suggests a different production pipeline was used for that programme.  Whatever case, the video was messed up.  I suspect this is an uncommon case, but if you find this occurring for programmes that are <span style="font-weight: bold;" class="mycode_b">not</span> related to a special event like the World Cup, post a couple of examples and I'll take a look.<br />
+<br />
+As for avconv, there is nothing you can do other than what you have already done - switch to ffmpeg.  This one of the ways ffmpeg and avconv have diverged since libav forked a few years ago.  ffmpeg now prints the timestamp warnings but keeps going, while avconv has the old code that prints the warnings and dies.  <br />
+<br />
+get_iplayer prefers avconv if it is installed (to accommodate Debian-based distros).  If you want to always use ffmpeg, set the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg</code></div></div> option in your preferences.  There is a PPA you can use for ffmpeg installation:<br />
+<br />
+<a href="https://launchpad.net/~samrog131/+archive/ppa">https://launchpad.net/~samrog131/+archive/ppa</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; avconv not handling 896 x 504</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

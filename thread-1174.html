@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - New to get_iplayer, help needed please</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; New to get_iplayer, help needed please</div>
+<div id="pagetitle"><h2>New to get_iplayer, help needed please</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1528</h2></div><div class="dateline">15-02-2017, 07:20 PM</div>
+</div>
+<div class="message">
+<a href="static/thread-1174-aid201.jpg"><img src="static/thread-1174-aid201.jpg"/></a>
+<br />
+<br />
+Hello<br />
+I have installed get_iplayer but when I open it I don't get the prompt at C:\Program Files but at C:\Users\Lynne<br />
+I am not sure how I get it to the correct setting?<br />
+Also I have just tried to download a BBC TV programme and got the following:<br />
+<br />
+<br />
+I pasted in:<br />
+get_iplayer --pid=/b088t0kj --modes=best<br />
+<br />
+Then I got<br />
+<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: trying pid:/b088t0kj just using type: tv<br />
+INFO: Trying to stream pid using pe tv<br />
+INFO; pid not found in tv cache matches<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes<br />
+<br />
+Back to C:\Users\Lynne<br />
+<br />
+Please can anyone tell me what I am doing wrong?<br />
+<br />
+Thanks<br />
+Lynne</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 07:48 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-02-2017, 07:20 PM)</span></cite>I have installed get_iplayer but when I open it I don't get the prompt at C:\Program Files but at C:\Users\Lynne</blockquote>C:\Users\Lynne is correct<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --pid=/b088t0kj --modes=best</blockquote>
+Your PID value is incorrect. Can you spot the problem?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1164</h2></div><div class="dateline">15-02-2017, 07:49 PM</div>
+</div>
+<div class="message">I'm not sure why you expect the prompt to be at <kbd>C:\Program Files</kbd> ... <kbd>C:\Users\Lynne</kbd> looks like your home directory, which is a perfectly sensible setting.<br />
+<br />
+I see from the screenshot you posted that you ran:<br />
+<br />
+<kbd>  get_iplayer --prefs-add --output="{output-directory}"</kbd><br />
+<br />
+Was this something you copied from some help page? I think you are supposed to replace <kbd>{output-directory}</kbd> with the name of the directory where you really want get_iplayer to leave the files.<br />
+Try:<br />
+<br />
+   <kbd>get_iplayer --prefs-add --output="C:\Users\Lynne\Downloads"</kbd><br />
+<br />
+And then downloaded files will be saved in the <kbd>Downloads</kbd> directory under your <kbd>C:\Users\Lynne</kbd> home directory (you should be able to find "Downloads" in Windows File Explorer if you prefer that to using the command prompt).<br />
+<br />
+Finally, the --pid argument should not start with a "/" character. Try:<br />
+<br />
+<kbd>  get_iplayer --pid=b088t0kj --modes=best</kbd><br />
+<br />
+That command gets me the programme <kbd>Sound of Musicals with Neil Brand - Something's Coming, BBC Four, b088t0kj</kbd><br />
+<br />
+I hope this helps you to get going,<br />
+Simon.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1528</h2></div><div class="dateline">16-02-2017, 02:15 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-02-2017, 07:48 PM)</span>user-2 Wrote: <a href="https://forums.squarepenguin.co.uk/post-5260.html#pid5260">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (15-02-2017, 07:20 PM)</span></cite>I have installed get_iplayer but when I open it I don't get the prompt at C:\Program Files but at C:\Users\Lynne</blockquote>C:\Users\Lynne is correct<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --pid=/b088t0kj --modes=best</blockquote>
+Your PID value is incorrect. Can you spot the problem?</blockquote><br />
+Many thanks to both of you for pointing out my errors. I am currently downloading it thanks to your help. I need to be able to keep it because the programme features the work of Stephen Sondheim and I'm the Administrator of The Stephen Sondheim Society.<br />
+Thanks again.<br />
+Lynne</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; New to get_iplayer, help needed please</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

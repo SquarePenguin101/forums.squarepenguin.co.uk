@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer.cgi I/O watcher failed: SSL_ca_file SCALAR(0x7fcabd801178)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; get_iplayer.cgi I/O watcher failed: SSL_ca_file SCALAR(0x7fcabd801178)</div>
+<div id="pagetitle"><h2>get_iplayer.cgi I/O watcher failed: SSL_ca_file SCALAR(0x7fcabd801178)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1952</h2></div><div class="dateline">26-10-2017, 12:33 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+On a fresh 10.12.6 Mac, following the manual instructions on <a href="https://github.com/get-iplayer/get_iplayer/wiki/osx">https://github.com/get-iplayer/get_iplayer/wiki/osx</a> trying to refresh the cache in the cgi web app results in nothing being downloaded and the following errors.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7fcabd801178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.</code></div></div><br />
+No home-brew, just using curl and cpanm.<br />
+<br />
+get_iplayer works, but the CGI appears to default to the Apple default and ignore local::lib that is set</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1952</h2></div><div class="dateline">26-10-2017, 02:05 PM</div>
+</div>
+<div class="message">Update<br />
+<br />
+get_iplayer --refresh also fails<br />
+<br />
+Understand its the perl modules but @inc shows the path to the local modules but for some reason the apple ones take precedence.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 05:51 PM</div>
+</div>
+<div class="message">Use <kbd>-g /path/to/get_iplayer</kbd> when launching the web pvr so that it will use an actual get_iplayer script. It's probably picking up the Homebrew version in /usr/local/bin, which isn't the actual script. Probably best to remove the Homebrew version while you're messing around with this.<br />
+<br />
+As for <kbd>get_iplayer --refresh</kbd>, post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -V</code></div></div>and<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'</code></div></div><br />
+EDIT: It occurs that you may not still have Homebrew version installed, so both failures would be due to local module library not being correctly installed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1952</h2></div><div class="dateline">26-10-2017, 07:48 PM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -V<br />
+Summary of my perl5 (revision 5 version 18 subversion 2) configuration:<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp;Platform:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;osname=darwin, osvers=16.0, archname=darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;uname='darwin osx320.apple.com 16.0 darwin kernel version 15.0.0: wed jun 22 17:57:08 pdt 2016; root:xnu-3247.1.106.2.9~1development_x86_64 x86_64 '<br />
+&nbsp;&nbsp;&nbsp;&nbsp;config_args='-ds -e -Dprefix=/usr -Dccflags=-g&nbsp;&nbsp;-pipe&nbsp;&nbsp;-Dldflags= -Dman3ext=3pm -Duseithreads -Duseshrplib -Dinc_version_list=none -Dcc=cc'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;hint=recommended, useposix=true, d_sigaction=define<br />
+&nbsp;&nbsp;&nbsp;&nbsp;useithreads=define, usemultiplicity=define<br />
+&nbsp;&nbsp;&nbsp;&nbsp;useperlio=define, d_sfio=undef, uselargefiles=define, usesocks=undef<br />
+&nbsp;&nbsp;&nbsp;&nbsp;use64bitint=define, use64bitall=define, uselongdouble=undef<br />
+&nbsp;&nbsp;&nbsp;&nbsp;usemymalloc=n, bincompat5005=undef<br />
+&nbsp;&nbsp;Compiler:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;cc='cc', ccflags ='-arch x86_64 -arch i386 -g -pipe -fno-common -DPERL_DARWIN -fno-strict-aliasing -fstack-protector',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;optimize='-Os',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;cppflags='-g -pipe -fno-common -DPERL_DARWIN -fno-strict-aliasing -fstack-protector'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ccversion='', gccversion='4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)', gccosandvers=''<br />
+&nbsp;&nbsp;&nbsp;&nbsp;intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678<br />
+&nbsp;&nbsp;&nbsp;&nbsp;d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;alignbytes=8, prototype=define<br />
+&nbsp;&nbsp;Linker and Libraries:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;ld='cc -mmacosx-version-min=10.12.5', ldflags ='-arch x86_64 -arch i386 -fstack-protector'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;libpth=/usr/lib /usr/local/lib<br />
+&nbsp;&nbsp;&nbsp;&nbsp;libs= <br />
+&nbsp;&nbsp;&nbsp;&nbsp;perllibs=<br />
+&nbsp;&nbsp;&nbsp;&nbsp;libc=, so=dylib, useshrplib=true, libperl=libperl.dylib<br />
+&nbsp;&nbsp;&nbsp;&nbsp;gnulibc_version=''<br />
+&nbsp;&nbsp;Dynamic Linking:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '<br />
+&nbsp;&nbsp;&nbsp;&nbsp;cccdlflags=' ', lddlflags='-arch x86_64 -arch i386 -bundle -undefined dynamic_lookup -fstack-protector'<br />
+<br />
+<br />
+Characteristics of this binary (from libperl): <br />
+&nbsp;&nbsp;Compile-time options: HAS_TIMES MULTIPLICITY PERLIO_LAYERS<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERL_DONT_CREATE_GVSV<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERL_HASH_FUNC_ONE_AT_A_TIME_HARD<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERL_PRESERVE_IVUV PERL_SAWAMPERSAND USE_64_BIT_ALL<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USE_64_BIT_INT USE_ITHREADS USE_LARGE_FILES<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USE_LOCALE USE_LOCALE_COLLATE USE_LOCALE_CTYPE<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USE_LOCALE_NUMERIC USE_PERLIO USE_PERL_ATOF<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;USE_REENTRANT_API<br />
+&nbsp;&nbsp;Locally applied patches:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Library/Perl/Updates/&lt;version&gt; comes before system perl directories<br />
+&nbsp;&nbsp;&nbsp;&nbsp;installprivlib and installarchlib points to the Updates directory<br />
+&nbsp;&nbsp;Built under darwin<br />
+&nbsp;&nbsp;Compiled at Feb&nbsp;&nbsp;6 2017 22:16:22<br />
+&nbsp;&nbsp;%ENV:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;PERL5LIB="/Users/danishan/perl5/lib/perl5"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;PERL_LOCAL_LIB_ROOT="/Users/danishan/perl5"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;PERL_MB_OPT="--install_base "/Users/danishan/perl5""<br />
+&nbsp;&nbsp;&nbsp;&nbsp;PERL_MM_OPT="INSTALL_BASE=/Users/danishan/perl5"<br />
+&nbsp;&nbsp;@INC:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Users/danishan/perl5/lib/perl5/5.18.2/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Users/danishan/perl5/lib/perl5/5.18.2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Users/danishan/perl5/lib/perl5/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Users/danishan/perl5/lib/perl5<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Library/Perl/5.18/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Library/Perl/5.18<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Network/Library/Perl/5.18/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Network/Library/Perl/5.18<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/Library/Perl/Updates/5.18.2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/System/Library/Perl/5.18/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/System/Library/Perl/5.18<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/System/Library/Perl/Extras/5.18/darwin-thread-multi-2level<br />
+&nbsp;&nbsp;&nbsp;&nbsp;/System/Library/Perl/Extras/5.18<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+1.966</code></div></div><br />
+As stated this is a Clean mac, no homebrew installed</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 07:53 PM</div>
+</div>
+<div class="message">The local::lib installation looks OK, so I can only surmise that you haven't installed a recent version of IO::Socket::SSL in it. You're still using the system version (1.966), but latest is 2.052.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1952</h2></div><div class="dateline">26-10-2017, 08:12 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (26-10-2017, 07:53 PM)</span></cite>The local::lib installation looks OK, so I can only surmise that you haven't installed a recent version of IO::Socket::SSL in it. You're still using the system version (1.966), but latest is 2.052.</blockquote><br />
+I saw your cheeky update in the osx install docs.  I installed  IO::Socket::SSL like you say and it worked first time.<br />
+<br />
+Fantastic<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">29-10-2017, 10:03 AM</div>
+</div>
+<div class="message">The fault in homebrew has been fixed, their get_iplayer 3.06_01 now works.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; get_iplayer.cgi I/O watcher failed: SSL_ca_file SCALAR(0x7fcabd801178)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

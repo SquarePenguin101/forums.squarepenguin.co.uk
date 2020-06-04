@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - TV Quality Configuration</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TV Quality Configuration</div>
+<div id="pagetitle"><h2>TV Quality Configuration</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1828</h2></div><div class="dateline">15-05-2017, 08:25 PM</div>
+</div>
+<div class="message">Hello, I'm a big fan of get_iplayer and its great that its being developed. I have noticed with the latest version, V3.01 that my TV Quality (resolution and fps) have changed. The older version downloaded in resolution 832x468 with 25fps. Having found this by the file size massively increasing I used the command "get_iplayer --prefs-add --tvmode=vgood". However the mp4 file once downloaded shows a resolution of 704x396 and 50fps, not 832x468?. I then tried the 'good' command and the same resolution was obtained. Is there a problem with the 'vgood' setting or am i doing something wrong? <br />
+<br />
+Please note I am part way through downloading a series and i'd like to keep the same settings, although the earlier episodes are no longer available.<br />
+<br />
+Cheers,</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1672</h2></div><div class="dateline">16-05-2017, 02:20 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+--tvmode=hlsvgood   should give you what you want (assuming a stream with that recording mode is available) as the first recording mode it tries is hlsvhigh which is 832x468 @ 25fps.<br />
+<br />
+Please read this as it gives you all the details:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a><br />
+<br />
+It looks quite a long page of info at first glance but it's well structured and well written. It will help you understand some of what goes on behind the scenes.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">16-05-2017, 03:31 PM</div>
+</div>
+<div class="message">If either of you are not aware already that there has been a problem with HLS downloads which personally for me has been since the 02nd May &amp; it has been with downloads from 29days prior to this date but I've not tried any after the 17th April. But from what Dinky has posted already that after the 06th May there hasn't been any 'Segment not available' errors with HLS modes.<br />
+I would say Lobsta1978 that if the programme you had tried to download was one with the error mentioned above &amp; using the mode that you have then GiP will then try the next available mode which would be at the lower quality than what you wanted. If you were to look at the top of the Forums main page you'll see a 'READ THIS NOW' message which will confirm what I have said about the errors with certain modes etc.<br />
+I, like yourself were used to using the 832x468 @25fps quality but at the mo with downloads I'm doing of programmes before the 06th May I'm having to have choose a different quality. Another mode I use a lot (and other people apparently) is the 1280x720 @25fps which is the HLSHD mode &amp; again programmes before the 06th May seem to have the error above &amp; so I have to choose a different mode &amp; it seems like the HVF modes work OK.<br />
+You will be informed more of what has been happening by reading some other posts &amp; the READ THIS NOW! mentioned above. By the way the problems that have arisen is not GiP version dependent as I'm still using the unsupported v2.97.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1672</h2></div><div class="dateline">18-05-2017, 08:40 AM</div>
+</div>
+<div class="message">I'm fully aware of the HLS issues thankyou.  The question was about what settings/options are required to download at a particular resolution and frame rate and the HLS modes will do that providing, as I qualified, that a stream is available.  Clearly if the stream is not available or has errors such as missing segments then GiP will not be able to download it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">21-05-2017, 11:30 PM</div>
+</div>
+<div class="message">Hi slicknick,<br />
+Since my last post on here I had seen someone post that the HLS modes seem to be working again for programmes prior to the 06th May. So I changed my way of working again &amp; I've started to use the modes  --tvmode=hlshd1 (1280 x 720 @25fps) &amp;  --tvmode=hlsvhigh1 (832 x 468 @25fps) for programmes shown as far back as the 20th April &amp; they had worked without the segment error. I can't confirm all programmes upto the 06th May will download without the segment error but I shall continue using HLS options as &amp; where I want to.<br />
+If it's any help I've created my own table to look up the various modes when I need to. Obviously all this info can be seen on WiKi.<br />
+By the way, I only use the CLI &amp; on the unsupported GiP v2.97 at the mo. Also with the BBC news programmes, I've used the option --tvmode=flashbetter &amp; I've not had any error messages with this before, during &amp; after the segment errors came along.<br />
+<br />
+Recording      Stream            Video            Video<br />
+Mode             Format            Size              FPS<br />
+-------------------------------------------------------<br />
+dvfhd              MPEG-DASH   1280 x 720     50<br />
+dvfsd              MPEG-DASH    960 x 540      50<br />
+dvfhigh           MPEG-DASH    704 x 396      50<br />
+dvfxsd            MPEG-DASH     960 x 540     25<br />
+dvfxhigh         MPEG-DASH	    704 x 396     25<br />
+dvflow            MPEG-DASH     512 x 288     25<br />
+hvfhd1            HLS               1280 x 720    50<br />
+hvfsd1             HLS                960 x 540    50<br />
+hlshd1             HLS               1280 x 720    25<br />
+hvfxsd             HLS                 960 x 540    25<br />
+hvfvhigh1         HLS                960 x 540    25<br />
+hlsvhigh1         HLS                 832 x 468    25<br />
+flashvhigh1                             832 x 438    25<br />
+hvfhigh1           HLS                 704 x 396   25<br />
+hvfxhigh           HLS                 704 x 396    25<br />
+hlsstd               HLS                 640 x 360   25<br />
+hlsxstd             HLS                  640 x 360   25<br />
+hvflow              HLS                  512 x 288   25</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TV Quality Configuration</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

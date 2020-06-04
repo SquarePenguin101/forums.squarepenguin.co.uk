@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Audio files downloaded using --pid have gotten larger</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Audio files downloaded using --pid have gotten larger</div>
+<div id="pagetitle"><h2>Audio files downloaded using --pid have gotten larger</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1578</h2></div><div class="dateline">16-03-2017, 09:35 PM</div>
+</div>
+<div class="message">Audio (radio) files downloaded using the --pid approach are much larger than they used to be.<br />
+<br />
+I'm using get_iplayer 2.99, running under Windows 7 SP 1.<br />
+<br />
+Earlier this week, during the time that the xml metadata was reported as being unavailable, I tried downloading a two-hour show. I downloaded it again today after the problem was reported as having been solved. In both cases this week, the file sizes were over 300 MB, while the file size for that show is usually around 48 MB. That's how I discovered the problem. What I report below in greater detail is another, smaller example displaying similar symptoms (though not as high a ratio of file size increase).<br />
+<br />
+On February 27, I downloaded the program at <a href="http://www.bbc.co.uk/programmes/p04t64xs">http://www.bbc.co.uk/programmes/p04t64xs</a>, which is a 14-minute Radio 3 essay. I used get_iplayer 2.94, and I downloaded it using the --pid p04t64xs command. The resulting file was 5,400 KB. Not having any problems at that time, I did not save any logs.<br />
+<br />
+Today, I downloaded it again, using version 2.99 and this command: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid p04t64xs  --type=radio   --force  --verbose &gt; E:&#92;temp&#92;Bloated.txt</code></div></div><br />
+The resulting audio file was 13,142 KB. In both cases, the files were downloaded in .m4a format.<br />
+<br />
+I have attached the output of the command which I ran today, including the ffmpeg output.<br />
+<br />
+Using ffprobe, I looked for obvious differences between the two files. The one downloaded in February includes this characteristic:<br />
+  <kbd>Duration: 00:13:49.23, start: 0.000000, bitrate: 53 kb/s</kbd><br />
+The one downloaded today includes this characteristic:<br />
+  <kbd>Duration: 00:13:50.91, start: 0.000000, bitrate: 129 kb/s</kbd><br />
+The ratio of bitrates matches the ratio of file sizes. I don't have any tools that can conveniently tell me whether there is actually any difference in audio quality or just some kind of padding.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">16-03-2017, 09:41 PM</div>
+</div>
+<div class="message">Forgive me - are you asking why the files are larger in version 2.99 vs 2.94?<br />
+<br />
+If you are, the answer lies in the release notes (in the Wiki), probably in the ones for 2.95 if I remember correctly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1578</h2></div><div class="dateline">16-03-2017, 10:50 PM</div>
+</div>
+<div class="message">Thanks for your prompt reply.<br />
+<br />
+I didn't think that was what I was asking, though it seems to be part of the answer. I thought I was asking why the files were larger when the metadata wasn't available. Now I think that both two different circumstances can each account for larger files: missing metadata and the get_iplayer upgrade.<br />
+<br />
+I first noticed a file's being roughly 7 times larger than in the past when I was still using 2.94 on Monday of this week, and there was a problem with the metadata. I later switched to 2.99 just to make sure that everything was up to date, in part because I didn't want to file a problem report concerning an obsolete version.<br />
+<br />
+I've now read the release notes for 2.95 and 2.96. I'd glanced at them previously, but not concerning bandwidth issues. I now see that they're relevant to my situation. Having read the notes, I used ffprobe to analyze the .ts files as they were being downloaded, before they were converted to .m4a files. Right now, they're all coming in at bitrate 335 kb/s, which I'm not supposed to be able to get here in Canada. I'm not sure if this is a bug or a feature. <br />
+<br />
+Compared to the 48 kbps which I used to reliably download, both 96 kbps and 320 kbps account for the two different file sizes increases that I'm seeing. I can understand an unexpected change to 96 but not to 320, given what the release notes say. <br />
+<br />
+So, under the circumstances,<br />
+(1) I now think that get_iplayer is responding correctly to both unexpected and expected increases in available bandwidth. <br />
+(2) I won't be surprised if some of the higher-bandwidth feeds eventually disappear again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-03-2017, 11:03 PM</div>
+</div>
+<div class="message">Missing metadata has nothing to do with file size. It simply seems that the BBC has become a bit lax on geoblocking. You can always go back to 48k streams if you prefer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Audio files downloaded using --pid have gotten larger</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

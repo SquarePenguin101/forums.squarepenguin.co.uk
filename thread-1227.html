@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to override --command-radio in individual PVR jobs?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to override --command-radio in individual PVR jobs?</div>
+<div id="pagetitle"><h2>How to override --command-radio in individual PVR jobs?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">20-03-2017, 04:37 PM</div>
+</div>
+<div class="message">can the bitrates conversions be overridden in individual PVR's or does it have to be done manually at the command line on an individual basis. <br />
+I generally download radio at 128k but occasionally want to keep specific progs at 320k which I set to download at a higher bitrate, but obviously it will downgrade when converting to MP3 <br />
+I do all my downloading from the PVR scheduler so dont use the CLI that often<br />
+<br />
+I have added<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>commandradio ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"</code></div></div>to my options file<br />
+<br />
+<br />
+<br />
+I hope that makes sense?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-03-2017, 06:06 PM</div>
+</div>
+<div class="message">Create a preset with the <kbd>--command-radio</kbd> value you want for 320k and use it in the desired pvr jobs to override the default <kbd>--command-radio</kbd> value.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">20-03-2017, 07:18 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-03-2017, 06:06 PM)</span></cite>Create a preset with the <kbd>--command-radio</kbd> value you want for 320k and use it in the desired pvr jobs to override the default <kbd>--command-radio</kbd> value.</blockquote><br />
+<br />
+does that mean you can add it to an individual pvr file and if so how exactly?<br />
+<br />
+I'm not exactly sure how it would work with the scheduler</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1350</h2></div><div class="dateline">21-03-2017, 12:23 PM</div>
+</div>
+<div class="message">Just put a line in the pvr file:<br />
+<br />
+command-radio YOUR_PVR_SPECIFIC_COMMAND</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-03-2017, 05:53 PM</div>
+</div>
+<div class="message">Do yourself a favour and stick to using the command line for saving settings. There are numerous posts here from people who have shot themselves in the foot trying to type things directly into the options file or pvr files. And you'll still be better off using a preset. If you want to change your conversion parameters, you'll only need to do it once instead of in every pvr file.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to override --command-radio in individual PVR jobs?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

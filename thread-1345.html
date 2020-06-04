@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - indexing and the include exclude option in the options file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; indexing and the include exclude option in the options file</div>
+<div id="pagetitle"><h2>indexing and the include exclude option in the options file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">03-05-2017, 03:48 PM</div>
+</div>
+<div class="message">I have set up ( i think) some include and exclude options in the options file<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>indexmaxconn 10<br />
+type tv,radio<br />
+refreshexcludegroupsradio regional,local<br />
+refreshexcludegroupstv local,regional<br />
+refreshexclude bbcnews,bbcparliament,s4c,cbeebies,bbc world service,BBC Radio 5 live,BBC Asian Network,BBC Radio 1Xtra,BBC Radio 6 Music,BBC Radio 1, bbc alba<br />
+refreshinclude Radio 2,Radio 3,Radio 4,BBC 1, BBC One,BBC Two,BBC Four,CBBC,bbcthree<br />
+commandradio ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"<br />
+tvmode good<br />
+radiomode better<br />
+refreshfuture 1<br />
+output F:&#92;Media&#92;Television<br />
+nopurge 1</code></div></div><br />
+but when running the PVR scheduler it appears that channels that are excluded still appear in the TV.cache and radio.cache files<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer 3.00-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: Scheduling the PVR to run every 14400 secs<br />
+Running PVR Searches:<br />
+# a dummy account<br />
+<br />
+INFO: Getting radio Index Feeds (this may take a few minutes)<br />
+INFO: Using concurrent indexing<br />
+......<br />
+Added: 13264:   BBC Radio 1 and 1Xtra's Stories: Music by Numbers - Kings of Leon, b088dhtm</code></div></div><br />
+I would have included a longer list but this is the second time I have run the scheduler today.<br />
+<br />
+<br />
+Also if using the --refresh option from the CLI does it take account of what is in the options file?<br />
+as if I do that everything seems to be included</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 11:49 PM</div>
+</div>
+<div class="message">The options file is obeyed with --refresh, and I can't replicate the problem with Radio 1. <br />
+<br />
+A couple of things:<br />
+<ul class="mycode_list"><li>You only need refreshinclude in this case. If you set refreshinclude, it implies an exclusion of anything else.<br />
+</li>
+<li>Don't put spaces adjacent to commas in the exclude list. It will break the name matching.<br />
+</li>
+</ul>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">04-05-2017, 08:43 AM</div>
+</div>
+<div class="message">right I have removed the exclude list and removed the space after the commas<br />
+do you mean I should also remove the local,regional options as well<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>indexmaxconn 10<br />
+type tv,radio<br />
+refreshexcludegroupsradio regional,local<br />
+refreshexcludegroupstv local,regional<br />
+refreshinclude Radio 2,Radio 3,Radio 4,BBC One,BBC Two,BBC Four,CBBC,bbcthree<br />
+commandradio ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"<br />
+tvmode good<br />
+radiomode better<br />
+refreshfuture 1<br />
+output F:&#92;Media&#92;Television<br />
+nopurge 1</code></div></div><br />
+however as you can see from the attached file BBC World Service,BBC Asian Network,BBC Radio 5 live,BBC Radio 6 Music,CBeebies,<br />
+programs have also been added along with the ones I have on the include option.<br/><br/>
+<a href="static/thread-1345-indexed.txt">indexed.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 09:09 AM</div>
+</div>
+<div class="message">No need for group options, but no harm in leaving them in.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 09:15 AM</div>
+</div>
+<div class="message">I should point out that you are partially negating the effect of the group exclusions by having generic "BBC One" in --refresh-include. You're indexing all the regional and local variants of BBC One, which you probably don't want. Use "BBC One&#36;" to limit to the national listings. If you don't know why that works, google yourself into the wonderful world of regular expressions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">04-05-2017, 06:39 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-05-2017, 09:15 AM)</span></cite>I should point out that you are partially negating the effect of the group exclusions by having generic "BBC One" in --refresh-include. You're indexing all the regional and local variants of BBC One, which you probably don't want. Use "BBC One&#36;" to limit to the national listings. If you don't know why that works, google yourself into the wonderful world of regular expressions.</blockquote><br />
+cheers for that, I will add the &#36; to bbc one and two and see how it goes tomorrow.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; indexing and the include exclude option in the options file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

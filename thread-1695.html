@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: Can't verify SSL peers without knowing which Certificate Authorities to trust</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; ERROR: Can't verify SSL peers without knowing which Certificate Authorities to trust</div>
+<div id="pagetitle"><h2>ERROR: Can't verify SSL peers without knowing which Certificate Authorities to trust</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">08-03-2018, 04:45 PM</div>
+</div>
+<div class="message">I seem to have broken my install of Get_Iplayer as a result of relocating my User folder and I'm hoping that someone may be able to help me out.<br />
+<br />
+The problem that I'm having is that get_iplayer is not downloading the schedule pages correctly. When refreshing the cache I get the following:<br />
+<br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week">http://www.bbc.co.uk/bbcalba/programmes/.../this_week</a><br />
+<br />
+I've read on a previous post that this is associated with the requirement to use https: rather than http: and that obsolete Perl modules could give problems. Unfortunately I'm nowhere near well enough versed in Perl to be able to sort out what's going on. I've deleted and reinstalled multiple times (using HomBrew) but can't seem to get to a working configuration.<br />
+<br />
+I've listed below information that will hopefully help with diagnosing my problem.<br />
+<br />
+Operating System: Sierra 10.12.6<br />
+Get_Iplayer: 3.12-Homebrew<br />
+<br />
+Perl Summary:<br />
+  <br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Platform:<br />
+   osname=darwin, osvers=16.0, archname=darwin-thread-multi-2level<br />
+   uname='darwin osx320.apple.com 16.0 darwin kernel version 15.0.0: wed jun 22 17:57:08 pdt 2016; root:xnu-3247.1.106.2.9~1development_x86_64 x86_64 '<br />
+   config_args='-ds -e -Dprefix=/usr -Dccflags=-g  -pipe  -Dldflags= -Dman3ext=3pm -Duseithreads -Duseshrplib -Dinc_version_list=none -Dcc=cc'<br />
+   hint=recommended, useposix=true, d_sigaction=define<br />
+   useithreads=define, usemultiplicity=define<br />
+   useperlio=define, d_sfio=undef, uselargefiles=define, usesocks=undef<br />
+   use64bitint=define, use64bitall=define, uselongdouble=undef<br />
+   usemymalloc=n, bincompat5005=undef<br />
+ Compiler:<br />
+   cc='cc', ccflags ='-arch x86_64 -arch i386 -g -pipe -fno-common -DPERL_DARWIN -fno-strict-aliasing -fstack-protector',<br />
+   optimize='-Os',<br />
+   cppflags='-g -pipe -fno-common -DPERL_DARWIN -fno-strict-aliasing -fstack-protector'<br />
+   ccversion='', gccversion='4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)', gccosandvers=''<br />
+   intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678<br />
+   d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16<br />
+   ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8<br />
+   alignbytes=8, prototype=define<br />
+ Linker and Libraries:<br />
+   ld='cc -mmacosx-version-min=10.12.5', ldflags ='-arch x86_64 -arch i386 -fstack-protector'<br />
+   libpth=/usr/lib /usr/local/lib<br />
+   libs= <br />
+   perllibs=<br />
+   libc=, so=dylib, useshrplib=true, libperl=libperl.dylib<br />
+   gnulibc_version=''<br />
+ Dynamic Linking:<br />
+   dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '<br />
+   cccdlflags=' ', lddlflags='-arch x86_64 -arch i386 -bundle -undefined dynamic_lookup -fstack-protector'<br />
+<br />
+<br />
+Characteristics of this binary (from libperl): <br />
+ Compile-time options: HAS_TIMES MULTIPLICITY PERLIO_LAYERS<br />
+                       PERL_DONT_CREATE_GVSV<br />
+                       PERL_HASH_FUNC_ONE_AT_A_TIME_HARD<br />
+                       PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP<br />
+                       PERL_PRESERVE_IVUV PERL_SAWAMPERSAND USE_64_BIT_ALL<br />
+                       USE_64_BIT_INT USE_ITHREADS USE_LARGE_FILES<br />
+                       USE_LOCALE USE_LOCALE_COLLATE USE_LOCALE_CTYPE<br />
+                       USE_LOCALE_NUMERIC USE_PERLIO USE_PERL_ATOF<br />
+                       USE_REENTRANT_API<br />
+ Locally applied patches:<br />
+/Library/Perl/Updates/&lt;version&gt; comes before system perl directories<br />
+installprivlib and installarchlib points to the Updates directory<br />
+ Built under darwin<br />
+ Compiled at Feb  6 2017 22:16:22<br />
+ @INC:<br />
+   /Library/Perl/5.18/darwin-thread-multi-2level<br />
+   /Library/Perl/5.18<br />
+   /Network/Library/Perl/5.18/darwin-thread-multi-2level<br />
+   /Network/Library/Perl/5.18<br />
+   /Library/Perl/Updates/5.18.2<br />
+   /System/Library/Perl/5.18/darwin-thread-multi-2level<br />
+   /System/Library/Perl/5.18<br />
+   /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level<br />
+   /System/Library/Perl/Extras/5.18<br />
+   .<br />
+perl -MLWP::Protocol::https -e 'print "&#36;LWP::Protocol::https::VERSION\n";'<br />
+6.04<br />
+<br />
+perl -MNet::SSLeay -e 'print "&#36;Net::SSLeay::VERSION\n";'<br />
+1.72</code></div>
+</div>
+<br />
+Terminal output from record series command:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: Profile dir: /Users/Jack/.get_iplayer<br />
+INFO: User options file: /Users/Jack/.get_iplayer/options<br />
+INFO: System options file: /etc/get_iplayer/options<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+Current options:<br />
+encodingconsolein = UTF-8<br />
+encodingconsoleout = UTF-8<br />
+encodinglocale = UTF-8<br />
+encodinglocalefs = UTF-8<br />
+fileprefix = &lt;nameshort&gt;&lt;-senum&gt;&lt;-episodeshort&gt;<br />
+modes = best<br />
+output = /Volumes/iMac Disk A (4TB)/Jack/Public/BBC TV<br />
+outputtv = /Users/alastair/Downloads/BBC\ TV\ Temp\ Downloads<br />
+pid = p05pksm8<br />
+pidrecursive = 1<br />
+verbose = 1<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+INFO: Programme not in history<br />
+INFO: Got 7984 file cache entries for tv<br />
+INFO: Got 16876 file cache entries for radio<br />
+INFO: Cleaning PID - old: 'p05pksm8' new: 'p05pksm8'<br />
+INFO: Getting URL: <a href="http://www.bbc.co.uk/programmes/p05pksm8.json">http://www.bbc.co.uk/programmes/p05pksm8.json</a><br />
+INFO: tv series or brand PID detected (p05pksm8)<br />
+INFO: Getting URL: <a href="http://www.bbc.co.uk/programmes/p05pksm8/episodes/player?page=1">http://www.bbc.co.uk/programmes/p05pksm8...yer?page=1</a><br />
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust<br />
+INFO: No episode PIDs found, checking alternate location...<br />
+INFO: Getting URL: <a href="http://www.bbc.co.uk/iplayer/episodes/p05pksm8?page=1">http://www.bbc.co.uk/iplayer/episodes/p05pksm8?page=1</a><br />
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust<br />
+INFO: No episode PIDs found for parent PID: p05pksm8</code></div>
+</div>
+<br />
+Hopefully someone can highlight what I'm doing wrong!<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2018, 05:42 PM</div>
+</div>
+<div class="message">This is a Homebrew installation problem - take it to their forum. We don't support that here. Technically, it's a macOS problem - there is a module missing in the system Perl - but it is up to Homebrew whether to provide the module or a workaround in the runtime environment. Users who have done a full manual installation on macOS (incl. updated versions of all Perl modules used by get_iplayer) should be OK, along with users on other platforms. Since this is a matter for Homebrew, this thread is closed - see forum rules.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2018, 06:10 PM</div>
+</div>
+<div class="message">Also: Without a full report, there is nothing we can say about your problem downloading schedule pages. I wouldn't necessarily expect it to be related to the missing Perl module that causes the SSL verification errors, but there is no way to know. If you want to pursue the issue, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to create a proper problem report in a new thread.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2018, 06:22 PM</div>
+</div>
+<div class="message">Finally: Your problem downloading schedule pages may in fact stem from failed SSL verification if the Mojolicious module is also missing. Again, no way to know without a full report.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2018, 07:53 PM</div>
+</div>
+<div class="message">Even more finally: Users who performed a minimal manual installation (macOS system Perl + local library installation of Mojolicious and IO::Socket:SSL) will now also need to install the Mozilla::CA module in your local module library. Installation doc has been updated accordingly.<br />
+<br />
+EDIT: Another workaround is to export PERL_LWP_SSL_VERIFY_HOSTNAME=0 in your shell environment before running get_iplayer to bypass SSL verification, but I can't recommend that to users. It's not necessary, anyway - just install Mozilla::CA.<br />
+<br />
+EDIT2: There is now a get_iplayer package installer for macOS that ensures you have a proper installation.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; ERROR: Can't verify SSL peers without knowing which Certificate Authorities to trust</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

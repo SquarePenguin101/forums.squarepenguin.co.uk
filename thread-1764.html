@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot refresh cache because CLI not updated along with Web PVR</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Cannot refresh cache because CLI not updated along with Web PVR</div>
+<div id="pagetitle"><h2>Cannot refresh cache because CLI not updated along with Web PVR</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1990</h2></div><div class="dateline">30-04-2018, 07:30 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I have just tried to upgrade the PVR to the latest MacOS version 3.13<br />
+When running the page <a href="http://127.0.0.1:1935/">http://127.0.0.1:1935/</a> it shows a footer with latest version ID:<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer Web PVR Manager v3.13</span>, ©2009-2010 Phil Lewis - Licensed under GPLv3<br />
+<br />
+However, when I check the version number in Terminal I get the attached v3.07<br />
+First command checks this is not a homebrew installation. Mac running latest 10.13.4<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>iMac:~ imac&#36; brew help<br />
+-bash: brew: command not found<br />
+iMac:~ imac&#36; get_iplayer -V<br />
+[b]get_iplayer v3.07[/b], Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+iMac:~ imac&#36;  curl -kLO https://raw.github.com/get-iplayer/get_iplayer/master/get_iplayer.cgi<br />
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br />
+                                Dload  Upload   Total   Spent    Left  Speed<br />
+ 0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<br />
+100  131k  100  131k    0     0  77309      0  0:00:01  0:00:01 --:--:--  331k<br />
+iMac:~ imac&#36;  sudo install -m 755 ./get_iplayer.cgi /usr/local/bin<br />
+Password: [ENTERED SUCCESSFULLY]<br />
+iMac:~ imac&#36;  get_iplayer.cgi --listen 127.0.0.1 --port 1935<br />
+INFO: Listening on 127.0.0.1:1935<br />
+GET: /<br />
+DEBUG: get_iplayer options: "fields=name" "search=.*" "type=tv" "refreshfuture=1" "hide=0" "thumb=0" "subtitles=0" "skipdeleted=0" "channel=BBC Four,BBC One,BBC Two,BBC Three,CBBC" "history=0" "force=0" "future=1" "nopurge=1" "listformat=ENTRY|&lt;index&gt;|&lt;thumbnail&gt;|&lt;pid&gt;|&lt;available&gt;|&lt;expires&gt;|&lt;type&gt;|&lt;name&gt;|&lt;episode&gt;|&lt;versions&gt;|&lt;duration&gt;|&lt;desc&gt;|&lt;channel&gt;|&lt;categories&gt;|&lt;timeadded&gt;|&lt;guidance&gt;|&lt;web&gt;|&lt;seriesnum&gt;|&lt;episodenum&gt;|&lt;filename&gt;|&lt;mode&gt;" "page=1" "pagesize=100" "sortreverse=1" "sortmatches=timeadded"<br />
+INFO: Command: /usr/local/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --expiry=999999999 --webrequest fields%3Dname?search%3D.%2A?type%3Dtv?refreshfuture%3D1?hide%3D0?thumb%3D0?subtitles%3D0?skipdeleted%3D0?channel%3DBBC%20Four%2CBBC%20One%2CBBC%20Two%2CBBC%20Three%2CCBBC?history%3D0?force%3D0?future%3D1?nopurge%3D1?listformat%3DENTRY%7C%3Cindex%3E%7C%3Cthumbnail%3E%7C%3Cpid%3E%7C%3Cavailable%3E%7C%3Cexpires%3E%7C%3Ctype%3E%7C%3Cname%3E%7C%3Cepisode%3E%7C%3Cversions%3E%7C%3Cduration%3E%7C%3Cdesc%3E%7C%3Cchannel%3E%7C%3Ccategories%3E%7C%3Ctimeadded%3E%7C%3Cguidance%3E%7C%3Cweb%3E%7C%3Cseriesnum%3E%7C%3Cepisodenum%3E%7C%3Cfilename%3E%7C%3Cmode%3E?page%3D1?pagesize%3D100?sortreverse%3D1?sortmatches%3Dtimeadded<br />
+GET: /favicon.ico<br />
+ERROR: 404 Not Found<br />
+<br />
+then a specific search attempt:<br />
+POST: /<br />
+QUERY_STRING = SEARCH=eastenders.%2A&amp;SEARCHFIELDS=name&amp;PROGTYPES=tv&amp;URL=&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=BBC%20Four%2CBBC%20One%2CBBC%20Two%2CBBC%20Three%2CCBBC&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=1&amp;SORT=timeadded&amp;REVERSE=1&amp;PAGESIZE=100&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=available&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=timeadded&amp;COLS=seriesnum&amp;COLS=episodenum&amp;OUTPUT=&amp;VERSIONLIST=&amp;MODES=&amp;PROXY=&amp;SUBTITLES=0&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=1&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=search_progs&amp;ACTION=&amp;.cgifields=REVERSE&amp;.cgifields=HISTORY&amp;.cgifields=COLS&amp;.cgifields=HIDEDELETED&amp;.cgifields=FUTURE&amp;.cgifields=HIDE&amp;.cgifields=SUBTITLES&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=THUMB&amp;.cgifields=FORCE&amp;.cgifields=PROGTYPES<br />
+DEBUG: get_iplayer options: "hide=0" "type=tv" "refreshfuture=1" "fields=name" "search=eastenders.*" "future=1" "force=0" "subtitles=0" "skipdeleted=0" "channel=BBC Four,BBC One,BBC Two,BBC Three,CBBC" "history=0" "thumb=0" "nopurge=1" "listformat=ENTRY|&lt;index&gt;|&lt;thumbnail&gt;|&lt;pid&gt;|&lt;available&gt;|&lt;expires&gt;|&lt;type&gt;|&lt;name&gt;|&lt;episode&gt;|&lt;versions&gt;|&lt;duration&gt;|&lt;desc&gt;|&lt;channel&gt;|&lt;categories&gt;|&lt;timeadded&gt;|&lt;guidance&gt;|&lt;web&gt;|&lt;seriesnum&gt;|&lt;episodenum&gt;|&lt;filename&gt;|&lt;mode&gt;" "page=1" "pagesize=100" "sortreverse=1" "sortmatches=timeadded"<br />
+INFO: Command: /usr/local/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --expiry=999999999 --webrequest hide%3D0?type%3Dtv?refreshfuture%3D1?fields%3Dname?search%3Deastenders.%2A?future%3D1?force%3D0?subtitles%3D0?skipdeleted%3D0?channel%3DBBC%20Four%2CBBC%20One%2CBBC%20Two%2CBBC%20Three%2CCBBC?history%3D0?thumb%3D0?nopurge%3D1?listformat%3DENTRY%7C%3Cindex%3E%7C%3Cthumbnail%3E%7C%3Cpid%3E%7C%3Cavailable%3E%7C%3Cexpires%3E%7C%3Ctype%3E%7C%3Cname%3E%7C%3Cepisode%3E%7C%3Cversions%3E%7C%3Cduration%3E%7C%3Cdesc%3E%7C%3Cchannel%3E%7C%3Ccategories%3E%7C%3Ctimeadded%3E%7C%3Cguidance%3E%7C%3Cweb%3E%7C%3Cseriesnum%3E%7C%3Cepisodenum%3E%7C%3Cfilename%3E%7C%3Cmode%3E?page%3D1?pagesize%3D100?sortreverse%3D1?sortmatches%3Dtimeadded<br />
+<br />
+Other data:<br />
+iMac:~ imac&#36; perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+2.052<br />
+iMac:~ imac&#36; perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'<br />
+<br />
+get_iplayer --refresh<br />
+get_iplayer v3.07, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+..................................<br />
+INFO: Indexing tv programmes (concurrent)<br />
+....................................................................<br />
+INFO: Added 0 tv programmes to cache<br />
+iMac:~ imac&#36;</code></div></div><br />
+<br />
+What have I done wrong on the upgrade? Older version was working successfully until recently. How can I force a full upgrade (possibly deleting old files)?<br />
+Many thanks for your help!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-04-2018, 10:04 AM</div>
+</div>
+<div class="message">So you updated the Web PVR Manager - did you also update the command line interface too? The Web PVR Manager is just a wrapper for the CLI, it invokes the CLI to do most things. <br />
+<br />
+Instructions for doing so are on the same page as instructions for the Web PVR Manager:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/osx#command-line-interface-cli-1">https://github.com/get-iplayer/get_iplay...face-cli-1</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1990</h2></div><div class="dateline">30-04-2018, 12:03 PM</div>
+</div>
+<div class="message">Stupidly simple. Thank you for politely explaining my mistake!<br />
+<br />
+All solved now.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Cannot refresh cache because CLI not updated along with Web PVR</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Some MP3 metadata fields missing in iTunes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; Some MP3 metadata fields missing in iTunes</div>
+<div id="pagetitle"><h2>Some MP3 metadata fields missing in iTunes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1593</h2></div><div class="dateline">24-03-2017, 10:35 AM</div>
+</div>
+<div class="message">Hi,<br />
+ <br />
+I've just upgraded to 2.99 and although I've managed to update my options to convert all radio downloads to mp3, when I copy then into iTunes I no longer have the longdesc (I think that's what it was) showing up in the 'lyrics' field in Get Info. There was also a shorter summary in the iTunes 'comments' field that no longer shows up. I think the 'grouping' field used to be populated too, but it's not important.<br />
+It's mainly the 'lyrics' field I'd like to get to back as it's nice to have for the info it holds for the guest names and original transmission date that it usually has.<br />
+ <br />
+Here's hoping someone cant point in me in the right direction for what I need to add to add to my options file to get these back. At the moment it just has:<br />
+ <br />
+commandradio ffmpeg -loglevel error -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"<br />
+ <br />
+Thanks,<br />
+Langers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1365</h2></div><div class="dateline">19-04-2017, 10:15 AM</div>
+</div>
+<div class="message">I'd be interested in getting this working as well as It's damn useful to use Windows 'properties' to get a full synopsis of radio shows.<br />
+<br />
+I've tinkered about (guesswork) with the 'commandradio' command above, specifically 'libmp3lame' parameters without any luck i.e. adding --pad-id3v2 and changing the entry -write_id3v1 to  -write_id3v2, I thought this would work (it doesn't seem to understand --pad-id3v2).<br />
+<br />
+I'll have another go when I get some spare time, but I don't really know what I'm doing.<br />
+<br />
+Andrew.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; Some MP3 metadata fields missing in iTunes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

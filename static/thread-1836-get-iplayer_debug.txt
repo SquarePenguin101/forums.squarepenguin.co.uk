@@ -1,0 +1,93 @@
+get_iplayer 3.16.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp437
+INFO: encodingconsolein = cp437
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\jayjay\.get_iplayer
+INFO: User options file: C:\Users\jayjay\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp437
+	encodingconsoleout = cp437
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	pid = b0b9fs4q
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 7859 file cache entries for tv
+DEBUG: Cache expiry time for tv is 14400 secs - refresh in 13310 secs
+INFO: No file cache exists for radio
+INFO: Cleaning PID - old: 'b0b9fs4q' new: 'b0b9fs4q'
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0b9fs4q.json
+INFO: tv episode PID detected (b0b9fs4q)
+Episodes:
+Click - Inside MIT's AI Workshop, BBC News Channel, b0b9fs4q
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0b9fs4q.json
+INFO: Getting stream data for version: 'original'
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b9frz8?cb=37052
+ERROR: Response: 403 Forbidden
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b9frz8?cb=96487
+ERROR: Response: 403 Forbidden
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0b9frz8?cb=88938
+ERROR: Response: 403 Forbidden
+INFO: No streams available for 'original' version (b0b9frz8) - skipping
+INFO: No streams found for 'original' version (b0b9frz8) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+WARNING: The programme may no longer be available - check the iPlayer site.
+WARNING: If you are outside the UK, check with the provider to find out if your VPN/VPS/Smart DNS/web proxy has been blocked.
+ERROR: Could not get programme metadata
+INFO: Loaded history for first check.
+INFO: Loading recordings history

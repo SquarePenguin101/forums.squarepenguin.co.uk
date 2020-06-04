@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I limit search results to only &quot;Sarah &amp; Duck&quot; episodes?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I limit search results to only &quot;Sarah &amp; Duck&quot; episodes?</div>
+<div id="pagetitle"><h2>How do I limit search results to only &quot;Sarah &amp; Duck&quot; episodes?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1849</h2></div><div class="dateline">26-09-2017, 07:13 AM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+I'm running the latest GiP (3.02), and this hasn't resolved the issue. I'm running on OSX Sierra for reference.<br />
+<br />
+I've had some issues with Sarah &amp; Duck before. I've also updated the Cache. <br />
+<br />
+For some reason, this show is also downloading another show with a different name after. I use the command <kbd>get_iplayer --get Sarah &amp; Duck</kbd>, however, it doesn't just stop at that. If there are no new episodes, i see the option to force override, but it doesn't show the whole of the programme name at the end, it displays Sarah &amp; Duck as Sarah_. So, once it's finished referencing the download history, it then jumps to the next TV program with Sarah in it, which is another children's TV show, presumably because it searches for anything with Sarah_ in the title.<br />
+<br />
+Is there a reason this happens? I don't want to let any of that particular series download. I like to let GiP download only missing episodes, but I don't want to let it download something completely different on top.<br />
+<br />
+Any pointers appreciated,<br />
+Cheers,<br />
+Dan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-09-2017, 09:02 AM</div>
+</div>
+<div class="message">Your command is incorrectly formatted. See the TV downloading guide and the documentation section on searching.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1715</h2></div><div class="dateline">26-09-2017, 11:20 AM</div>
+</div>
+<div class="message">Danorak81, make your command <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get "Sarah &amp; Duck"</code></div></div> including the quotation marks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1350</h2></div><div class="dateline">26-09-2017, 12:12 PM</div>
+</div>
+<div class="message">To expand, &amp; is a special character in unix shells, which tells the shell to background the command preceding the ampersand. So you're asking the OS to run 'get-iplayer --get Sarah ' in the background. If you scroll up, you'll probably see an error about Duck not being a recognised command or something similar. Trips me up every so often with copy-pasted URLs and wget. Double-quotes prevent the OS interpreting the ampersand, so that search will work as you'd expect.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1715</h2></div><div class="dateline">26-09-2017, 05:50 PM</div>
+</div>
+<div class="message">I  know nothing of unix shell extensions. There is a simpler explanation though. It's the same as a multiple-word google search. If you perform such a search without enclosing your terms in quotation marks, it'll return results not only with the specific phrase searched for, but with any of the included words singly. Enclose the phrase in quotation marks, however, and it will return only results which include the specific phrase.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1849</h2></div><div class="dateline">26-09-2017, 09:54 PM</div>
+</div>
+<div class="message">Thanks very much guys. I've been using GiP for months now and thought i'd been doing it correctly. I had, in as much as I've been able to download the stuff I've been after successfully; but the '&amp;' isn't something I've encountered in anything other than that TV show.<br />
+<br />
+The explanations above have been really helpful and have solved the issue, thank you. And that is correct, it always displayed a line of text stipulating '_Duck' was an unknown command. Furthermore, once it had displayed that error, Terminal never terminated the command, instead choosing to hang until I hit 'esc' on the keyboard. I'm guessing this is because it was stuck in a loop of some sort using --get but searching the cache for _Duck? I don't know-this is very new territory for me. I'm starting to understand this more than the Raspberry Pi i'm tackling mind!<br />
+<br />
+Thanks very much for your responses!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I limit search results to only &quot;Sarah &amp; Duck&quot; episodes?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

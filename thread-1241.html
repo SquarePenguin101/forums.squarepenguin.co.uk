@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: Could not extract a valid PID from ARRAY</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; ERROR: Could not extract a valid PID from ARRAY</div>
+<div id="pagetitle"><h2>ERROR: Could not extract a valid PID from ARRAY</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1548</h2></div><div class="dateline">01-04-2017, 12:07 PM</div>
+</div>
+<div class="message">Hello -<br />
+<br />
+Tried to refresh radio cache, but to no avail.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">C:\Program Files (x86)\get_iplayer&gt;get_iplayer --refresh --type=radio<br />
+</span><br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer 2.99-windows.0, Copyright (C) 2008-2010 Phil Lewis</span><br />
+<span style="font-weight: bold;" class="mycode_b">  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.</span><br />
+<span style="font-weight: bold;" class="mycode_b">  This is free software, and you are welcome to redistribute it under certain</span><br />
+<span style="font-weight: bold;" class="mycode_b">  conditions; use --conditions for details.</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">ERROR: Could not extract a valid PID from ARRAY(0x3676ac4)</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">C:\Program Files (x86)\get_iplayer&gt;get_iplayer --show-prefs</span><br />
+<span style="font-weight: bold;" class="mycode_b">Options in 'C:\Users\P____/.get_iplayer/options'</span><br />
+<span style="font-weight: bold;" class="mycode_b">        type = radio</span><br />
+<span style="font-weight: bold;" class="mycode_b">        pid = ARRAY(0x3676ac4)</span><br />
+<span style="font-weight: bold;" class="mycode_b">        radiomode = best</span><br />
+<span style="font-weight: bold;" class="mycode_b">        versionlist = original</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">C:\Program Files (x86)\get_iplayer&gt;</span><br />
+<br />
+Appears that I've messed up the ARRAY content; is there a means to correct this?<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-04-2017, 01:22 PM</div>
+</div>
+<div class="message">You should not have the line beginning 'pid' in your options file. <br />
+<br />
+Delete that entire line.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1548</h2></div><div class="dateline">01-04-2017, 01:30 PM</div>
+</div>
+<div class="message">S P -<br />
+<br />
+Thank you for the response; greatly appreciated.<br />
+<br />
+Could you please enlighten me as to the command line entry I ought to submit to ensure deletion?  Unsure.<br />
+<br />
+Thanks again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-04-2017, 01:38 PM</div>
+</div>
+<div class="message">You could delete it manually (open the file in a text editor) or use the command below which might work:<br />
+<br />
+<kbd>get_iplayer --prefs-del "--pid=ARRAY(0x3676ac4)"</kbd><br />
+<br />
+The output you posted here contains the location of the file should you wish to edit it manually if the command above doesn't work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1548</h2></div><div class="dateline">01-04-2017, 02:42 PM</div>
+</div>
+<div class="message">S P -<br />
+<br />
+Success!  Many thanks once more; most grateful.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; ERROR: Could not extract a valid PID from ARRAY</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

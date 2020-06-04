@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download PID b05zktnf (Law in Action 2015-05-25)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download PID b05zktnf (Law in Action 2015-05-25)</div>
+<div id="pagetitle"><h2>Cannot download PID b05zktnf (Law in Action 2015-05-25)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2198</h2></div><div class="dateline">08-07-2018, 12:43 PM</div>
+</div>
+<div class="message">Version: get_iplayer 3.16.0<br />
+OS: Windows 10 64bit<br />
+Command Used: get_iplayer --pid-recursive --pid b006tgy1<br />
+<br />
+I am attempted to download all 112 episodes of the Radio 4 series 'Law in Action'.<br />
+<a href="https://www.bbc.co.uk/programmes/b006tgy1">https://www.bbc.co.uk/programmes/b006tgy1</a><br />
+<br />
+To do this I entered the command, above, and get_iplayer proceeded to download the most recent 37 episodes. A total of 112 are available on iplayer. The 38/112, Courts on Trial, wouldn't download and gave this output <br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+WARNING: If you are outside the UK, check with the provider to find out if your VPN/VPS/Smart DNS/web proxy has been blocked.<br />
+<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00l0ynf?cb=76826">https://open.live.bbc.co.uk/mediaselecto...f?cb=76826</a><br />
+ERROR: Response: 403 Forbidden<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+WARNING: If you are outside the UK, check with the provider to find out if your VPN/VPS/Smart DNS/web proxy has been blocked. </code></div>
+</div>
+<br />
+I was unsure what the problem was. So I attempted to download the individual episode (38/112; <a href="https://www.bbc.co.uk/programmes/b05zktnf">https://www.bbc.co.uk/programmes/b05zktnf</a>) itself, but generated the same error, below:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer --pid=b0b85mlf<br />
+get_iplayer 3.16.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Episodes:<br />
+Law in Action - Courts on Trial, BBC Radio 4, b05zktnf<br />
+INFO: 1 total programmes<br />
+<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+WARNING: If you are outside the UK, check with the provider to find out if your VPN/VPS/Smart DNS/web proxy has been blocked. </code></div>
+</div>
+<br />
+This is odd considering that I am able to stream the episode with my web browser (Chrome). I live in the UK and do not use a VPN.<br />
+<br />
+Does anybody know the source of the error? Are episodes over a certain age unable to work with get_iplayer?<br />
+<br />
+Much thanks in advance! <br />
+<br />
+Budget Hunk</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-07-2018, 03:37 PM</div>
+</div>
+<div class="message">As is made clear in the docs, get_iplayer only supports programmes broadcast in the past 30 days. It often works with older programmes, but not always. Try youtube-dl for those.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2198</h2></div><div class="dateline">08-07-2018, 03:37 PM</div>
+</div>
+<div class="message">Okay much thanks Dinky :)<br />
+<br />
+For future readers, the GitHub wiki states that:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">NOTE: get_iplayer does not support downloading news/sport videos, other embedded media, archive sites, special collections, educational material, programme clips or any content other than whole episodes of programmes broadcast on BBC linear services <span style="font-weight: bold;" class="mycode_b">within the previous 30 days</span>, plus episodes of BBC Three programmes posted within the same period. It may be possible to download other content such as iPlayer box sets directly via PID or URL (see below), but such use is not supported.</span><br />
+<br />
+This is probably the source of the error.<br />
+ <br />
+Budget_Hunk</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-08-2018, 08:56 PM</div>
+</div>
+<div class="message">At least some of these ancient radio programmes are once again available in v3.17</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download PID b05zktnf (Law in Action 2015-05-25)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

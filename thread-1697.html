@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to install on Pi</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Unable to install on Pi</div>
+<div id="pagetitle"><h2>Unable to install on Pi</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2079</h2></div><div class="dateline">09-03-2018, 12:18 PM</div>
+</div>
+<div class="message">System - Pi 3  running Raspbian stretch<br />
+<br />
+I have tried to install get_iplayer by using the command<br />
+       wget <a href="http://packages.hedgerows.org.uk/raspbian/install.sh">http://packages.hedgerows.org.uk/raspbian/install.sh</a> -O - | sh<br />
+<br />
+and I get the following error reported<br />
+<br />
+"The following NEW packages will be installed:<br />
+ get-iplayer<br />
+0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.<br />
+Need to get 135 kB of archives.<br />
+After this operation, 516 kB of additional disk space will be used.<br />
+Get:1 <a href="http://packages.hedgerows.org.uk/raspbian">http://packages.hedgerows.org.uk/raspbian</a> stable/ get-iplayer 3.12-ppa31c~stable [135 kB]<br />
+Err:1 <a href="http://packages.hedgerows.org.uk/raspbian">http://packages.hedgerows.org.uk/raspbian</a> stable/ get-iplayer 3.12-ppa31c~stable<br />
+ Writing more data than expected (134864 &gt; 134842) [IP: 151.101.17.147 80]<br />
+ Hashes of expected file:<br />
+  - SHA512:f2de5d5e96e394685791ac06360a86ab362da352b2abd3e8f7e6d012013f8399e3dd9eb47630f03de5b01075c4335ef19e4dc7413ea69ed10f1706094ea12e2b<br />
+  - SHA256:ffe5f4f031ab1e76f74aae59270d21982df69ca845d17621f115e05638e229ac<br />
+  - SHA1:fbd3dd6e04b738dc69873c9f91f8bf37b57eeeff [weak]<br />
+  - MD5Sum:e0b5e831b92b168d0cfb03740f09db10 [weak]<br />
+  - Filesize:134842 [weak]<br />
+E: Failed to fetch <a href="http://packages.hedgerows.org.uk/raspbian/stable/get-iplayer_3.12-ppa31c~stable_all.deb">http://packages.hedgerows.org.uk/raspbia...le_all.deb</a>  Writing more data than expected (134864 &gt; 134842) [IP: 151.101.17.147 80]<br />
+  Hashes of expected file:<br />
+   - SHA512:f2de5d5e96e394685791ac06360a86ab362da352b2abd3e8f7e6d012013f8399e3dd9eb47630f03de5b01075c4335ef19e4dc7413ea69ed10f1706094ea12e2b<br />
+   - SHA256:ffe5f4f031ab1e76f74aae59270d21982df69ca845d17621f115e05638e229ac<br />
+   - SHA1:fbd3dd6e04b738dc69873c9f91f8bf37b57eeeff [weak]<br />
+   - MD5Sum:e0b5e831b92b168d0cfb03740f09db10 [weak]<br />
+   - Filesize:134842 [weak]<br />
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?"<br />
+<br />
+Can anyone please advise me how to overcome this issue and complete the installation ?<br />
+<br />
+Thanks<br />
+<br />
+Mick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-03-2018, 01:14 PM</div>
+</div>
+<div class="message">I've encountered this error a few times before and it related to the caching of the repo (either locally or perhaps via a transparent proxy by an ISP) being 'out of sync' with the origin repo - i.e. the origin repo had an updated package that hadn't been mirrored.<br />
+<br />
+That may or may not be the specific cause in this case, but you could try the same remedy. <br />
+<br />
+Firstly, you could wait a while and see if whatever cache is in place in updated, that usually solves the issue. But also in the past I've tried these two commands to clear out any downloaded package files and then re-fetch updates:<br />
+<br />
+<kbd>sudo apt clean</kbd><br />
+<br />
+Then use the following command to fetch non-cached package info:<br />
+<br />
+<kbd>sudo apt -o Acquire::https::No-Cache=True -o Acquire::http::No-Cache=True update</kbd><br />
+<br />
+Then reattempt the installation. <br />
+<br />
+This hasn't always worked for me, sometimes there's more invasive effort required, but seeing as these steps has virtually no downsides they can be a simple fix to try.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">09-03-2018, 01:21 PM</div>
+</div>
+<div class="message">I can confirm it's not just you.<br />
+<br />
+There's a mismatch between the files in the repository and the Packages file that says what to expect.  This shouldn't happen...<br />
+<br />
+I'm looking into it.<br />
+<br />
+jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">09-03-2018, 02:01 PM</div>
+</div>
+<div class="message">I've fixed the repository.<br />
+<br />
+In short - it should be fine now, please try again.<br />
+<br />
+(It turns out that there's a bug in mini-dinstall which I tripped over when forcing a rebuild of get-iplayer while testing the autobuilder.)<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2079</h2></div><div class="dateline">09-03-2018, 02:51 PM</div>
+</div>
+<div class="message">Thanks Jon, it has worked and is now installed.<br />
+<br />
+:-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Unable to install on Pi</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

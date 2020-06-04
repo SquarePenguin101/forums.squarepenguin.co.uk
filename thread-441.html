@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - obsolete ffmpeg support broken in last two versions</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; obsolete ffmpeg support broken in last two versions</div>
+<div id="pagetitle"><h2>obsolete ffmpeg support broken in last two versions</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-901</h2></div><div class="dateline">16-06-2015, 08:27 PM</div>
+</div>
+<div class="message">This isn't so much as a feature request as it is bringing it to folks' attention cum bug report.  I don't know if it makes sense to fix the problem at this point.<br />
+<br />
+The --ffmpegobsolete flag is processed, but line 10496 of the current code should read:<br />
+ "if ( (! &#36;opt-&gt;{ffmpegobsolete}) &amp;&amp; (! grep( /-loglevel/i, @{&#36;binopts-&gt;{ffmpeg}} )) ) {"<br />
+rather than the current:<br />
+"if ( ! grep( /-loglevel/i, @{&#36;binopts-&gt;{ffmpeg}} ) ) {"<br />
+As is, it will push a loglevel parameter onto the command stack and old versions of ffmpeg will fail.<br />
+<br />
+FYI, I *have* managed to solve one problem with the new streams that even avconv has.  You sometimes will get a bunch of errors about "Bad PID", which causes avconv to hang for minutes, then run, then hang, sometimes forever.  It does not error out so that you know there's a problem if you're not watching it.  You can easily think you're recording a live stream and end up with nothing.  Sometimes it corrupts the received data too.<br />
+<br />
+The fix is to specify "-acodec aac_fixed".  I think.  The error never happened and then it did all the sudden, no software updates, so it might be intermittent.  I still see the message about bad PIDs sometimes, but it doesn't affect the recording now.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; obsolete ffmpeg support broken in last two versions</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

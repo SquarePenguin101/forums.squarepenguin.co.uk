@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failed to download JSON PID info (Kaspersky was blocking Perl)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Failed to download JSON PID info (Kaspersky was blocking Perl)</div>
+<div id="pagetitle"><h2>Failed to download JSON PID info (Kaspersky was blocking Perl)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">01-01-2018, 09:27 PM</div>
+</div>
+<div class="message">After upgrading to 3.09 I get the message:<br />
+<br />
+WARNING: Failed to download JSON PID info: <a href="http://www.bbc.co.uk/programmes/b09k1f9h.json">http://www.bbc.co.uk/programmes/b09k1f9h.json</a><br />
+WARNING: Could not determine PID type (b09k1f9h). Trying to record PID directly.<br />
+Matches:<br />
+INFO: 0 matching programmes<br />
+WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/b09k1f9h.json">http://www.bbc.co.uk/programmes/b09k1f9h.json</a><br />
+ERROR: Failed to get version PID metadata from iPlayer site (JSON)<br />
+WARNING: No programmes are available for this PID with version(s): default<br />
+<br />
+After installing 3.07 again, all is working fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">07-01-2018, 08:27 PM</div>
+</div>
+<div class="message">This issue still exists in 3.10.0<br />
+<br />
+Again back to 3.07 and it all works fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-01-2018, 10:51 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>WARNING: No programmes are available for this PID with version(s): default</blockquote>
+<br />
+Try a different version?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">07-01-2018, 11:08 PM</div>
+</div>
+<div class="message">I don't get any radio versions with 3.10.0<br />
+<br />
+<a href="https://pastebin.com/mvqA9BRF">https://pastebin.com/mvqA9BRF</a><br />
+<br />
+Compared to that of 3.07.0<br />
+<br />
+<a href="https://pastebin.com/432pxA9z">https://pastebin.com/432pxA9z</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">11-01-2018, 12:05 AM</div>
+</div>
+<div class="message">I have tried your get_iplayer --pid b09k1f9h --info on Windows 7. It worked fine for me on both get_iplayer 3.07 and 3.10.<br />
+<br />
+My ~/.get_iplayer/options has type radio and a couple of related settings. @mastermonkey I suggest that you play around with your options in case one of those is giving you grief.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">11-01-2018, 12:33 AM</div>
+</div>
+<div class="message">This is all I have in my options file.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Users\XXXXXXXX&gt;get_iplayer --prefs-show<br />
+Options in 'C:\Users\XXXXXXXX\.get_iplayer\options'<br />
+        whitespace = 1<br />
+        radiomode = haf<br />
+        expiry = 31536000<br />
+        type = radio<br />
+        force = 1</code></div>
+</div>
+<br />
+Even if I remove the options file completely, I still have the same problem with 3.0.10.<br />
+<br />
+Thanks for your suggestion, perhaps it is a Windows 10 thing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">11-01-2018, 01:20 AM</div>
+</div>
+<div class="message">The same command worked for me on a Windows 10 host with get_iplayer 3.10 and no options file. A download (by removing the --info) worked too.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">11-01-2018, 10:09 AM</div>
+</div>
+<div class="message">No idea what it could be then. Between the two outputs, the only change to my computer is get_iplayer yet 3.07 works and 3.10 doesn't.<br />
+<br />
+I guess I'll wait for user-2 to highlight what obvious thing I've missed and how much of an idiot I've been. :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">14-01-2018, 01:27 PM</div>
+</div>
+<div class="message">Issue solved. <br />
+<br />
+I just updated to 3.11 but initially it still didn't work. It turned out Kaspersky was blocking Perl. Don't understand what changed since 3.07 though but it's working now which is the most important thing.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Failed to download JSON PID info (Kaspersky was blocking Perl)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

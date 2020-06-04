@@ -1,0 +1,91 @@
+get_iplayer 3.13.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\xxx\.get_iplayer
+INFO: User options file: C:\Users\xxx\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	force = 1
+	nopurge = 1
+	output = f:\iplayer-tv
+	pid = b0555v7v
+	tvmode = dvfhd2
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 7638 file cache entries for tv
+INFO: Got 16913 file cache entries for radio
+INFO: Cleaning PID - old: 'b0555v7v' new: 'b0555v7v'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0555v7v.json
+INFO: tv episode PID detected (b0555v7v)
+Episodes:
+The Mystery of Murder: A Horizon Guide - -, BBC Four, b0555v7v
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0555v7v.json
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0555txc?cb=67570
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/ac92ca-b0555txc/vf_b0555txc_0495491c-eea8-4c69-b249-c658782c3410.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1525271753_5b943e92e25b6de604abd4b2a510ce7f
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/ac92ca-b0555txc/vf_b0555txc_0495491c-eea8-4c69-b249-c658782c3410.ism/pc_hd_abr_v2_dash_master.mpd?s=1525228553&e=1525271753&h=a150f84e816f9ba8bc492064b4469c7d
+INFO: Found mode     dvfhd1:   gip_dvf_iplayer_5070 dash h264  1280x720 50fps 5070kbps mf_limelight_uk_dash/2
+INFO: Found mode     dvfhd2:   gip_dvf_iplayer_5070 dash h264  1280x720 50fps 5070kbps mf_akamai_uk_dash/1
+INFO: Found mode     dvfsd1:   gip_dvf_iplayer_2812 dash h264   960x540 50fps 2812kbps mf_limelight_uk_dash/2
+INFO: Found mode     dvfsd2:   gip_dvf_iplayer_2812 dash h264   960x540 50fps 2812kbps mf_akamai_uk_dash/1
+INFO: Found mode    dvfxsd1:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvfxsd2:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_akamai_uk_dash/1
+INFO: Found mode  dvfxhigh1:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_limelight_uk_dash/2
+INFO: Found mode  dvfxhigh2:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_akamai_uk_dash/1
+INFO: Found mode    dvflow1:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvflow2:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_akamai_uk_dash/1
+INFO: Found mode subtitles1:               captions http  N/A       N/A   N/A      N/A mf_limelight_uk_plain/20
+INFO: Found mode subtitles2:               captions http  N/A       N/A   N/A      N/A mf_akamai_uk_plain/10
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b055v65q?cb=64246
+ERROR: Response: 404 Not Found
+INFO: No streams available for 'signed' version (b055v65q) - skipping
+INFO: No streams found for 'signed' version (b055v65q) - deleting
+INFO: Searching for versions: original
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally
+INFO: Mode list: dvfhd2
+INFO: Searching for version: 'original'
+INFO: Found version: 'original'
+INFO: Modes to try for 'original' version: dvfhd2
+INFO: Downloading tv: 'The Mystery of Murder: A Horizon Guide - - (b0555v7v) [original]'
+INFO: Trying 'dvfhd2' mode: attempt 1 / 3
+INFO: ffmpeg version string = 3.4
+INFO: ffmpeg version number = 3.4
+INFO: File name prefix = The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original
+INFO: Begin downloading at: 0.00 MB (00:00:00) [1]
+
+INFO: Downloaded: 42.34 MB (00:59:00) [922] in 00:00:33 @ 10.26 Mb/s (dvfhd2/ak) [audio]
+INFO: Begin downloading at: 0.00 MB (00:00:00) [1]
+
+INFO: Downloaded: 2160.20 MB (00:59:00) [922] in 00:06:11 @ 46.58 Mb/s (dvfhd2/ak) [video]
+INFO: Converting to MP4
+INFO: Command: "ffmpeg" "-loglevel" "fatal" "-nostats" "-y" "-i" "F:\iplayer-tv\The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original.dash.m4a" "-i" "F:\iplayer-tv\The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original.dash.m4v" "-c:v" "copy" "-c:a" "copy" "-map" "0:a:0" "-map" "1:v:0" "F:\iplayer-tv\The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original.partial.mp4"
+INFO: Command exit code 0 (raw code = 0)
+INFO: Downloading thumbnail
+INFO: Getting URL: http://ichef.bbci.co.uk/images/ic/192x108/p02l4q79.jpg
+INFO: Tagging MP4
+INFO: Command: "AtomicParsley" "F:\iplayer-tv\The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original.mp4" "--freefree" "--overWrite" "--stik" "TV Show" "--advisory" "remove" "--copyright" "2018 British Broadcasting Corporation, all rights reserved" "--title" "The Mystery of Murder: A Horizon Guide" "--artist" "BBC Four" "--albumArtist" "BBC TV" "--album" "The Mystery of Murder: A Horizon Guide" "--grouping" "Factual,Science & Nature,Documentaries,Crime & Justice" "--composer" "BBC iPlayer" "--genre" "Factual" "--comment" "Michael Mosley looks at how scientists have probed the mind of the murderer." "--year" "2015-03-09T21:00:00Z" "--tracknum" "1" "--disk" "1" "--lyrics" "There are about 600 murders each year in the UK. So, what drives people to kill? Are some people born to kill or are they driven to it by circumstances? 
+
+Michael Mosley delves into the BBC archives to chart scientists' progress as they probed the mind of the murderer to try to understand why people kill, and to find out whether by understanding murder we can prevent it.
+
+EPISODE
+http://www.bbc.co.uk/iplayer/episode/b0555v7v
+
+SERIES
+http://www.bbc.co.uk/programmes/b0555v7v" "--description" "Michael Mosley looks at how scientists have probed the mind of the murderer." "--longdesc" "There are about 600 murders each year in the UK. So, what drives people to kill? Are some people born to kill or are they driven to it by circumstances? 
+
+Michael Mosley delves into the BBC archives to chart scientists' progress as they probed the mind of the murderer to try to understand why people kill, and to find out whether by understanding murder we can prevent it." "--hdvideo" "true" "--TVShowName" "The Mystery of Murder: A Horizon Guide" "--TVEpisode" "s01e01" "--TVSeasonNum" "1" "--TVEpisodeNum" "1" "--TVNetwork" "BBC Four" "--artwork" "F:\iplayer-tv\The_Mystery_of_Murder_A_Horizon_Guide_-__b0555v7v_original.jpg"
+INFO: Command exit code 0 (raw code = 0)

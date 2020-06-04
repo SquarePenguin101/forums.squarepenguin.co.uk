@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Shorter programme replaced but still being recorded.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Shorter programme replaced but still being recorded.</div>
+<div id="pagetitle"><h2>Shorter programme replaced but still being recorded.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1256</h2></div><div class="dateline">15-04-2016, 05:19 PM</div>
+</div>
+<div class="message">Hello.<br />
+An edition of Top Of The Pops was first made available on iplayer with the ending cut short, missing out the last minute.<br />
+After several notifications the iplayer team has now replaced it with the full edition.<br />
+However, when taking the PID code from the website address of the amended edition, Get i_player  still records the shorter edition instead of the full replacement.<br />
+The edition is over 7 days old so I've used the PID code along with --overwrite to download the programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-04-2016, 05:24 PM</div>
+</div>
+<div class="message">Let's start with the obvious: If you don't identify the exact programme episode, there is nothing we can do to help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1256</h2></div><div class="dateline">15-04-2016, 05:31 PM</div>
+</div>
+<div class="message">Certainly.<br />
+It's the 23/07/1981 edition.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-04-2016, 05:35 PM</div>
+</div>
+<div class="message">If you want people to help you then make it easy for them. <br />
+<br />
+I'm frequently flabbergasted by the quality of bug reports that wind there way up here. You're literally talking to the person (Dinky) who writes the code and maintains the programme. Do you understand how rare that is nowadays when product support is fronted by legions of clueless customer service robots, (if it even exists at all)?<br />
+<br />
+Start by reading this:<br />
+<br />
+<a href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html">http://www.chiark.greenend.org.uk/~sgtatham/bugs.html</a><br />
+<br />
+Then maybe tell us the exact command you are using would allow us to try that command on our machines and see if the problem can be replicated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1256</h2></div><div class="dateline">15-04-2016, 05:52 PM</div>
+</div>
+<div class="message">"Get_iplayer --pid b075f6my --force --overwrite"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-04-2016, 06:58 PM</div>
+</div>
+<div class="message">If you look up the info on the PID using <kbd>get_iplayer --pid b075f6my --info</kbd> then you will be able to see there are several versions. <br />
+<br />
+Assuming that the most recently changed version is the 'correct' version that replaces the 34 minute programme, you can see that 'editorial' is the version you need to download. <br />
+<br />
+To select a version of a programme to download, you use the <kbd>--versions</kbd> flag.<br />
+<br />
+A complete command would be:<br />
+<br />
+<kbd>get_iplayer --pid b075f6my --versions=editorial --force --overwrite</kbd></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Shorter programme replaced but still being recorded.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cache not updating from custom web UI on Debian</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cache not updating from custom web UI on Debian</div>
+<div id="pagetitle"><h2>Cache not updating from custom web UI on Debian</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">02-11-2017, 10:33 AM</div>
+</div>
+<div class="message">Hi Guys,<br />
+<br />
+I'm having this issue too. The cache used to update automatically as part of the search, now I have to run get_iplayer --refresh before I can search for programs. I have tried rebuilding the cache and also have renamed the old cache files but it makes no difference. Is there a way to put this functionality back?<br />
+<br />
+For reference my outputs are below:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v3.06, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@raspberry01:~# perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+2.052<br />
+root@raspberry01:~# perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'<br />
+7.48</code></div></div><br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 01:30 PM</div>
+</div>
+<div class="message">Why do you think it isn't updating? Remember that it only updates every 4 hours by default, unless you use <kbd>--refresh</kbd> or <kbd>--expiry</kbd>. Post the output from these commands:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-cache-age<br />
+get_iplayer --list=channel <br />
+get_iplayer --since=72 breakfast</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">02-11-2017, 03:23 PM</div>
+</div>
+<div class="message">The age of the cache was listed as 17418 seconds (nearly 5 hours). However the next two commands then refreshed the cache. The search method doesn't seem to be doing this. I will now need to wait a few hours before I can re-test this.<br />
+<br />
+I have my own Web UI and when you search it calls the search method. However, since I upgraded it was not including the programmes from the previous evening. I had to refresh the cache from the command line and after that the programmes were visible. I will post my results in the next few hours.<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 03:41 PM</div>
+</div>
+<div class="message">You don't explain what you mean by "the search method", but you've just proved that get_iplayer works just fine and refreshes its cache when searching. That points the finger at your application. Unless you can demonstrate beyond doubt that something is wrong with get_iplayer itself, I won't respond further.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 04:05 PM</div>
+</div>
+<div class="message">Splitting into separate thread.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">02-11-2017, 04:32 PM</div>
+</div>
+<div class="message">The search method as in the command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer news</code></div></div><br />
+to search for any programmes with 'news' in the title. I am finding that this is not running the cache update (if required), when previously it did so. You can ignore my application being the problem as all this does is run the command above. For simplicity, I have found that running this on the command line directly does not update the cache when it is over 4 hours old. There was never an issue with refreshing the cache itself, just that it isn't doing this automatically when I run this command. I'm not suggesting anything wrong with get_iplayer, but perhaps something with my setup somewhere, or a config option I'm missing - hence my asking for help.<br />
+<br />
+Anyway, as I said I will wait until the cache is due to update and then I will post the output from the command. Hopefully it will jolt back into life and update the cache.<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 04:38 PM</div>
+</div>
+<div class="message">As I said, you've already demonstrated the opposite. Use <kbd>--expiry</kbd> to expire your cache earlier. No need to wait.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 04:43 PM</div>
+</div>
+<div class="message">And post the output from <kbd>get_iplayer --prefs-show</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">02-11-2017, 07:20 PM</div>
+</div>
+<div class="message">Right, just tried again and it seems to be working. So hopefully it was just a glitch.<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">03-11-2017, 11:04 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I had this issue and this solution worked for me but only for the root user. I run the get_iplayer command as sudo from another user, e.g. 'sudo get_iplayer...'. I am finding that the following command is still give me the ssl errors described above. <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo get_iplayer --refresh</code></div></div><br />
+It seems that although the script is run as sudo Mojolicious is still using the wrong libs. Is there a workaround to fix this? I tried installing Mojolicious as the other user but it says I need to be root.<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">03-11-2017, 11:07 AM</div>
+</div>
+<div class="message">Ok so the issue I'm having is because of the Mojolicious updates. I am running get_iplayer from the web user using sudo and this seems to be using the old libs for some reason. EDIT: link removed<br />
+<br />
+Any help appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-11-2017, 01:31 PM</div>
+</div>
+<div class="message">I moved your earlier post back to this thread and removed the link in your last post. I don't want users to get even an inkling that running as root is in any way related to the underlying issue. That's an invitation for people to screw up their installation, so please keep that out of other threads. There should be no reason to run get_iplayer as root unless you are logged in as root. But since you do it anyway, then of course you'll see the old modules. If you create a local module library, it has to be available in the environment of every user who needs it. Presumably you've only configured it for your non-root user according to the instructions in the install docs. You need to set PERL5LIB in the sudo environment the same as in yours.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1759</h2></div><div class="dateline">03-11-2017, 04:17 PM</div>
+</div>
+<div class="message">Ok. I've found the easiest way to get it working is to run the script as the web user. With a few tweaks this seems to be working now. Thanks for your help.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cache not updating from custom web UI on Debian</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

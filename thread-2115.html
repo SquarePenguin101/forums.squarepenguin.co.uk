@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - episode metadata fields are not populated for films</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; episode metadata fields are not populated for films</div>
+<div id="pagetitle"><h2>episode metadata fields are not populated for films</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">30-10-2019, 12:53 PM</div>
+</div>
+<div class="message">I'm running v3.22 on a Ubuntu 18 box with all the updates and trying to pass a filename to a bash script. This works, all day every day :-<br />
+commandtv = /home/xbox/Old_Scripts/find_mp4.sh "&lt;filename&gt;"<br />
+<br />
+but I'm now trying to amend that to use a *slightly* different command for films and if I do a 'set -x' in the bash script, the problem is shown as :-<br />
++ echo Filename being passed is ''<br />
+<br />
+The parameters I'm using are almost the same, viz :-<br />
+get_iplayer --pvr-queue --pid=p07rq86b --commandtv=/home/xbox/Old_Scripts/films.sh "&lt;filename&gt;"<br />
+<br />
+So where am I going wrong with this?<br />
+<br />
+I should add that all I've done is copy the find_mp4.sh file and amend the filename and the storage locations, nothing else so I can't see why the command should fail to pass the filename.<br />
+<br />
+Can somebody help this bear of little brain to spot the deliberate mistake please?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">30-10-2019, 05:57 PM</div>
+</div>
+<div class="message">You need to escape the space between films.sh and the filename.<br />
+<br />
+This is what gip sees as the commandtv parameter:<br />
+--commandtv=/home/xbox/Old_Scripts/films.sh<br />
+<br />
+And then “filename” is being passed to gip as a nameless parameter, which confuses it.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">30-10-2019, 06:16 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (30-10-2019, 05:57 PM)</span></cite>You need to escape the space between films.sh and the filename.<br />
+<br />
+This is what gip sees as the commandtv parameter:<br />
+--commandtv=/home/xbox/Old_Scripts/films.sh<br />
+<br />
+And then “filename” is being passed to gip as a nameless parameter, which confuses it.<br />
+<br />
+Jon</blockquote>It's confused! Much like this user! I'm confused as to why one works and this one doesn't. I've RTFM'd the website and I notice that there are single quotes round the whole thing - <a href="https://github.com/get-iplayer/get_iplayer/wiki/custcmd#tv">https://github.com/get-iplayer/get_iplay...custcmd#tv</a><br />
+<br />
+I've just added a single quote to a token film file and amended the cron job to start at 17:00 instead of 18:00 so I'll know in a couple of minutes whether or not it works. Nope. Ok. I'll have another try with what you suggest. Nope. That doesn't work either for me. Just to be clear, my command line now looks like this :-<br />
+ --commandtv=/home/xbox/Old_Scripts/films.sh\ "&lt;filename&gt;"<br />
+<br />
+Any other suggestions?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">31-10-2019, 11:30 AM</div>
+</div>
+<div class="message">I don't now see the message from user-2 regarding my commandtv line.<br />
+<br />
+Even though I've now spelt the command correctly as --command-tv it still doesn't work for me.<br />
+<br />
+I'll persevere at another time though as my life is getting in the way of this computing lark!<br />
+<br />
+So I'll put this on hold for the time being and report back if I ever manage to get it to work.<br />
+<br />
+Thanks for the suggestions so far.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-11-2019, 05:46 PM</div>
+</div>
+<div class="message">So, are you saying that...<br />
+<br />
+<kbd>get_iplayer --pvr-queue --pid=p07rq86b --commandtv='/home/xbox/Old_Scripts/films.sh "&lt;filename&gt;"'</kbd><br />
+<br />
+...doesn't work? Note the single quotes around <kbd>/home/xbox/Old_Scripts/films.sh "&lt;filename&gt;"</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">01-11-2019, 06:07 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-11-2019, 05:46 PM)</span></cite>So, are you saying that...<br />
+<br />
+<kbd>get_iplayer --pvr-queue --pid=p07rq86b --commandtv='/home/xbox/Old_Scripts/films.sh "&lt;filename&gt;"'</kbd><br />
+<br />
+...doesn't work? Note the single quotes around <kbd>/home/xbox/Old_Scripts/films.sh "&lt;filename&gt;"</kbd></blockquote><br />
+Yep. That's what I'm saying - even when I correctly spell --command-tv ;-)<br />
+<br />
+I get a file called .mp4 and that's it. I've just cut and pasted your text, fixed the command rule and ran it.<br />
+<br />
+To forestall any queries about the bash script, here are the first few lines :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>echo Filename being passed is "&#36;1"<br />
+iplayer_downloads_folder=/mnt/raid2/Media_Share/GiP_Downloads/tv/<br />
+cd "&#36;iplayer_downloads_folder"<br />
+find . -type f -name "*.mp4" -print0 | xargs -0 -n 1 "&#36;(dirname &#36;0)/film_move.sh"</code></div></div>It's my script that's declaring the error as can be seen here :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>echo Filename being passed is '/mnt/raid2/Media_Share/GiP_Downloads/tv/The Fall/.mp4'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">02-11-2019, 11:46 AM</div>
+</div>
+<div class="message">As I said in post #1, my script for the PVR runs successfully. I've had an occasion overnight though where another pvr-queue item has produced a .mp4 file so it's entirely possible that it's something I'm doing when adding something to the PVR.<br />
+<br />
+I added it in the normal way :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-queue --pid=m0009tqh --subdir --subdirformat="&lt;nameshort&gt;/&lt;firstbcastyear&gt;"</code></div></div>with the preferences set to this :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>commandtv = /home/xbox/Old_Scripts/find_mp4.sh "&lt;filename&gt;"</code></div></div><br />
+The PVR function ran successfully at 20:00 when it produced A Question of Sport and later to produce Click and Later with Jools Holland. The failure occurred at 21:00.<br />
+<br />
+Can anybody spot where I'm going wrong with this, or could it possibly (and I'm very reluctant to suggest it) be an infelicity in the GiP code somewhere?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">02-11-2019, 12:08 PM</div>
+</div>
+<div class="message">Solved?<br />
+<br />
+I've now re-run the PVR function having removed this option :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fileprefix &lt;episodenum. &gt;&lt;episodeshort&gt;</code></div></div><br />
+So I was right to be reluctant to point a figure at GiP!<br />
+<br />
+I haven't ended up with the correct filename for the film I've just tried but I guess that's hardly surprising but it does at least mean that I can see some sort of filename instead of nothing!<br />
+<br />
+Thanks to all the contributors but the problem as usual is between the keyboard and the chair.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; episode metadata fields are not populated for films</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

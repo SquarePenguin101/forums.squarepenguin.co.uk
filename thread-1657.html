@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Problem with existing batch file after update to 3.12.0</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Problem with existing batch file after update to 3.12.0</div>
+<div id="pagetitle"><h2>Problem with existing batch file after update to 3.12.0</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">15-01-2018, 05:12 PM</div>
+</div>
+<div class="message">i have been using this batch file for years but now it isn't working - there is no error message but there are no programs added to my text file. it was working using 3.06.0<br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer --refresh --exclude-channel "BBC Alba","S4C","CBBC","CBeebies","BBC Parliament","BBC News" --exclude "BBC News","BBC Wales Today","BBC Weather","East Midlands Today","Channel Islands News","London News","Look East","Look North","Midlands Today","North West Today","North West Tonight","Points West","Reporting Scotland","South East Today","South Today","Spotlight:","This Is BBC One HD","Weather for the Week Ahead","World News Today","BBC Weekend News","Inside Out","BBC Parliament","Daily Politics","Politics Scotland","Sunday Politics","Stormont Today","The View","This Is BBC Two","This Week" --available-since=288 &gt; "C:\Documents and Settings\%username%\Desktop\BBC List.txt"<br />
+<br />
+<br />
+hopefully somebody can help<br />
+thnak you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>GeoffSmith</h2></div><div class="dateline">15-01-2018, 05:36 PM</div>
+</div>
+<div class="message">I think you need to add<br />
+".*"<br />
+See 3.07 release notes<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/release300to309#release307">https://github.com/get-iplayer/get_iplay...release307</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">15-01-2018, 05:50 PM</div>
+</div>
+<div class="message">thank you that worked<br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer ".*" --refresh --exclude-channel "BBC Alba","S4C","CBBC","CBeebies","BBC Parliament","BBC News" --exclude "BBC News","BBC Wales Today","BBC Weather","East Midlands Today","Channel Islands News","London News","Look East","Look North","Midlands Today","North West Today","North West Tonight","Points West","Reporting Scotland","South East Today","South Today","Spotlight:","This Is BBC One HD","Weather for the Week Ahead","World News Today","BBC Weekend News","Inside Out","BBC Parliament","Daily Politics","Politics Scotland","Sunday Politics","Stormont Today","The View","This Is BBC Two","This Week" --available-since=288 &gt; "C:\Documents and Settings\%username%\Desktop\BBC List.txt"</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Problem with existing batch file after update to 3.12.0</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

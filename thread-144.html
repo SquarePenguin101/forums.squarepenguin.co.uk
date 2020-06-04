@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Tagging m4a files.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Tagging m4a files.</div>
+<div id="pagetitle"><h2>Tagging m4a files.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 04:09 PM</div>
+</div>
+<div class="message">Hello!<br />
+<br />
+I've got get_iplayer installed on my Raspberry Pi.  In the past, I have used the Web based PVR on windows and it has worked like a charm.  But now I use the Pi via the command line PVR, the tagging doesnt seem quite right.  It doesnt tag the track number and album tag shows the "SxxExx" series/episode tag.  Also, the thumbnail art is not added like it was with the web based PVR.<br />
+<br />
+Is there some way i can edit what tags i can save and where?<br />
+<br />
+I'm new to Linux and cant seem to get my head round the Metadata Tagging guide...<br />
+<br />
+Thanks in advance!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 05:06 PM</div>
+</div>
+<div class="message">How are we supposed to know what you are doing if you don't tell us?  Post an example command that downloads <span style="font-weight: bold;" class="mycode_b">one programme only</span> and demonstrates this behaviour.  Also post the output from <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-prefs</code></div></div>. Scrub your username from the output if necessary.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 05:12 PM</div>
+</div>
+<div class="message">Also post the content of the other tags in the file.  Use: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>AtomicParsley &lt;filename&gt; -t</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 05:20 PM</div>
+</div>
+<div class="message">Thanks foir getting back to me so quick.<br />
+<br />
+OK, the PVR runs automatically via cron.  The command for an episode is the following:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>type radio<br />
+search0 i, claudius</code></div></div><br />
+<br />
+<br />
+The output from the command you gave me is the following:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Options in '/home/xbian/.get_iplayer/options'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tag_longdesc = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tag_podcast_radio = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;radiomode = flashaachigh,flashaacstd,flashaudio,flashaaclow,wma<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tag_utf8 = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outputtv = /media/Hitachi/Video/TV<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outputradio = /media/Hitachi/Music/Radio<br />
+&nbsp;&nbsp;&nbsp;&nbsp;subdir = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tvmode = flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tag_fulltitle = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;episodeshort&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tag_cnid = 1</code></div></div><br />
+<br />
+<br />
+Hope this is what you meant,<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 05:32 PM</div>
+</div>
+<div class="message">Whenever i try the Atomicparsley command, all i get back is:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>No such file or directory</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 05:35 PM</div>
+</div>
+<div class="message">Nothing obviously amiss with your settings.  Your example programme works fine here. Best guess is something wrong with your cron environment. Post the AtomicParsley output I asked for - it may provide more clues.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 05:42 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/tagging-m4a-files/#post-2100">Quote:</a>Whenever i try the Atomicparsley command, all i get back is:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>No such file or directory</code></div></div></blockquote>
+<br />
+Well, there is your problem.  get_iplayer needs AtomicParsley to apply metadata tags to M4A files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 05:48 PM</div>
+</div>
+<div class="message">Ahh.<br />
+Even though some tags are applied?  I assumed I did have AtomicParsley installed.<br />
+<br />
+Sorry about this, but how do I install it/check it is installed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 06:19 PM</div>
+</div>
+<div class="message">I have no idea what is happening to your file since you haven't shown the tag values.  You haven't even explained how you viewed the tag values to determine they were wrong.  My guess is that you opened the files in XBMC or similar, which simply parsed the filename.  But that's irrelevant.  Without AtomicParsley, get_iplayer <span style="font-weight: bold;" class="mycode_b">cannot</span> tag MP4/M4A files.  <br />
+<br />
+As to how to install software on your system, Google is your friend.  You should also have already read this:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/raspbian/">https://squarepenguin.co.uk/wiki/installation/raspbian/</a><br />
+<br />
+Those instructions point to a repository with a modern version (0.94) of AtomicParsley.  There are older versions lurking in other repositories, but they may not work with your settings, which I assume you just copied from Windows. They also may not work with all files downloaded by get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 06:51 PM</div>
+</div>
+<div class="message">Thanks for your patience here.<br />
+<br />
+I've been trying a bit more and have been able to get a response from AtomicParsley.  I guess i must have made a typo before or something...  When i enter the command you gave me, I get the following response:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>AtomicParsley /media/Hitachi/temp.m4a -t<br />
+Atom "Â©too" contains: Lavf53.21.1</code></div></div><br />
+<br />
+<br />
+I use Mediamonkey to play/transfer the audio files and read the tags.<br />
+For a recent Masterson Inheritance radio episode, the tags are as follows:<br />
+<br />
+Title:  Scurvy<br />
+Artists:  The Masterson Inheritance<br />
+Album:  s01e03<br />
+Album Artists:  The Masterson Inheritance<br />
+<br />
+And no other tags or artwork etc.<br />
+<br />
+Does this info mean anything to you?<br />
+<br />
+Many thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-04-2014, 07:44 PM</div>
+</div>
+<div class="message">As I suspected, MediaMonkey is obviously just parsing the filename and not reading any values from the metadata tags.  The AtomicParsley output is as expected.  FFmpeg adds the "@too" atom during re-muxing from FLV to M4A, but all the meaningful tags would be added by AtomicParsley when it's working.  It would seem that AtomicParsley is not available in your cron environment, which is slightly curious since both rtmpdump and ffmpeg are available.  Not knowing how or where you installed it, it's impossible to guess what is going on.  If you searched the forums you would have found this thread:<br />
+<br />
+<a href="/topic/problems-running-cron-task/">/topic...cron-task/</a><br />
+<br />
+See if that helps.  It's also possible to configure AtomicParsley on the command line or in your preferences:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/options/#external-program-options">https://squarepenguin.co.uk/wiki/options...am-options</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-507</h2></div><div class="dateline">20-04-2014, 10:50 PM</div>
+</div>
+<div class="message">thank you for your help.<br />
+when i read your Rpi installation guide, it struck me that i had installed it a different way, so reinstalled it following your guide, and now all tagging works perfect!<br />
+<br />
+thank you again!<br />
+<br />
+Solved!!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Tagging m4a files.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

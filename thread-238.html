@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloading radio via PID seems slow</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading radio via PID seems slow</div>
+<div id="pagetitle"><h2>Downloading radio via PID seems slow</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-623</h2></div><div class="dateline">30-10-2014, 12:59 PM</div>
+</div>
+<div class="message">Yesterday was a sad day for all us time-shifted listeners to recent radio programs. Downloading via PIDs is a lot more awkward, but I am sure we will adapt; and NITRO may one day allow GET_IPLAYER to get back to its former glory.<br />
+<br />
+Meanwhile, I am finding downloading radio by PID is very slow. It looks like the data is streamed at listening speed. TV does not have this problem (so far).<br />
+<br />
+eg:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b04lss87 --modes wma</code></div></div><br />
+<br />
+Is a 30 minute programme, and took about that long to download. And, without a visible progress count, the task looks hung.<br />
+<br />
+Questions:<br />
+<br />
+1. Is there a magic way of getting the program to download rather than stream? (I have tried various mode settings with no good result).<br />
+<br />
+2. Is there a way of getting the progress count to show?<br />
+<br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2014, 01:01 PM</div>
+</div>
+<div class="message">Omit <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes wma</code></div></div>.  WMA mode is being killed soon, anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-10-2014, 01:03 PM</div>
+</div>
+<div class="message">Is there a particular reason that you are using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes wma</code></div></div>? <br />
+<br />
+That command is asking for the WMA version which I believe does actually stream at listening speed (and is getting shut down soon too). You can just leave that command out and it should default to downloading the 'best' quality AAC stream. <br />
+<br />
+If you want to transcode AAC to mp3 you can add the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--aactomp3</code></div></div> and get_iplayer will spit out an mp3 file for you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-623</h2></div><div class="dateline">30-10-2014, 01:06 PM</div>
+</div>
+<div class="message">Thanks for the instant response!<br />
+<br />
+I've been finding that, without --modes, the request just fails....<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v2.87, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b04lss87 using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) available for this programme with version 'default' (try using --modes=flas<br />
+aclow,flashaacstd,rtspaaclow,rtspaacstd,wma)<br />
+ERROR: Failed to record 'John Finnemore's Souvenir Programme: Series 4 - Episode 2 (b04lss87)'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">30-10-2014, 01:12 PM</div>
+</div>
+<div class="message">I certainly agree it was a sad day.<br />
+<br />
+Since then I have been unable to find a way of accessing radio by PID that works. I invariably get :-<br />
+INFO: Trying pid: <a href="http://www.bbc.co.uk/programmes/b00rzw2y">http://www.bbc.co.uk/programmes/b00rzw2y</a> using type: radio<br />
+INFO Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+For example from the command :-<br />
+get_iplayer --type=radio --output "M:\iPlayer Recordings\radio"  --pid "http://www.bbc.co.uk/programmes/b00rzw2y"<br />
+or just with the PID rather than the full URL as<br />
+get_iplayer --type=radio --output "M:\iPlayer Recordings\radio"  --pid b00rzw2y<br />
+<br />
+it seems a shame that this is borked as I too use the time shifting of old episodes of radio in my car where the options of running in podcast or on-line are not practical.<br />
+<br />
+Has anyone got an example command line for successfully downloading a radio PID now that the PVRs cannot work?<br />
+<br />
+My thoughts on nitro make me think that they will always require an API key to be in place and that will make it unlikely that we will get this functionality back easily. They will be looking for ways to monetise it.<br />
+<br />
+Neil</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-10-2014, 01:21 PM</div>
+</div>
+<div class="message">@Nigel - you didn't include the exact command you used in your latest attempt so I can't test it.<br />
+<br />
+@wingtech - using the following command downloaded the show without issue:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b00rzw2y --type=radio</code></div></div><br />
+See how my command is different from yours? Be sure to go and view the <a href="https://squarepenguin.co.uk/guides/radio-download-guide/">radio download guid</a>e in the guides section above to ensure you are using the correct format for your commands.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-623</h2></div><div class="dateline">30-10-2014, 01:45 PM</div>
+</div>
+<div class="message">@Square_penguin....<br />
+<br />
+Sorry, I cut'n'pasted one line too few.<br />
+<br />
+The request I used (and did not work) was:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b04lss87 --force</code></div></div><br />
+<br />
+I think your reply to wingtech has also solved my question. This works at download speed, and shows the download progress count:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b04lss87 --type radio --force</code></div></div><br />
+Thanks!<br />
+<br />
+I had read the guide, but (maybe it's just me) it was not obvious that adding <span style="font-weight: bold;" class="mycode_b">--type=radio</span> was now compulsory.....It was never so when we could use the five-digit numbers.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">30-10-2014, 01:54 PM</div>
+</div>
+<div class="message">Funnily enough, as soon as I posted this the commands seemed to satrt working.<br />
+Now I have to get the file naming sorted and then...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">30-10-2014, 01:57 PM</div>
+</div>
+<div class="message">And thanks, square penguin, on reading back, I see that my cut-and-paste seems to have converted all the double hyphens to singles. They were there in DOS, honest!!<br />
+<br />
+Neil</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading radio via PID seems slow</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

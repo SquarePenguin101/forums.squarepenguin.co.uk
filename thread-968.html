@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - audio issues maybe related to other reported threads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; audio issues maybe related to other reported threads</div>
+<div id="pagetitle"><h2>audio issues maybe related to other reported threads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">26-07-2016, 12:05 AM</div>
+</div>
+<div class="message">when downloaded programmes in the last 24 hours all the audio on the videos seem to have audio cutting out then cutting in... e.g. 2 or 3 seconds of sound.. then 1 sec no sound.. all the way through the videos.<br />
+<br />
+so i deleted the videos and tried again. exactly the same issue.<br />
+<br />
+so far i have noticed that when i play the video which has "part" (as it is downloading) then audio is fine.<br />
+<br />
+but when the video finished downloading and then playback the video it has the annoying cut in and cut out in the audio :(<br />
+<br />
+i assume something gone wrong with the final processing when video finished downloading.<br />
+<br />
+i am using the latest version 2.95 and it has been working fine and other videos prior to this issue are all working fine :s<br />
+<br />
+if you need more information please ask me thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">26-07-2016, 12:57 AM</div>
+</div>
+<div class="message">right ...<br />
+<br />
+i have done a bit more digging...<br />
+<br />
+when i using this command<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get "http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot" --verbose --force &gt; "&#36;HOME/log.txt" 2&gt;&amp;1</code></div></div><br />
+<br />
+i downloaded an perfectly fine video and audio (not need for me to disclose the dump)<br />
+<br />
+but when i use my usual setting as below to create an dump<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --tvmode=flashhigh --subtitles --subsrequired --get "http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot" --verbose --force &gt; "&#36;HOME/log.txt" 2&gt;&amp;1</code></div></div><br />
+i still get the audio cutting in and out<br />
+<br />
+please find attached the dump: <a href="static/thread-968-get-iplayer_debug.txt">Output log.txt</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">26-07-2016, 01:42 AM</div>
+</div>
+<div class="message">it seem to be solved for now by adding <br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg</code></div></div><br />
+<br />
+:&#36;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2016, 02:00 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (26-07-2016, 01:42 AM)</span></cite>it seem to be solved for now by adding <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg</code></div></div></blockquote>You can't use <kbd>--ffmpeg </kbd>on its own. For the benefit of future readers, edit your post to explain what you actually did. As to your original post:<br />
+<br />
+Patient: "It hurts when I do this"<br />
+Doctor: "Then don't do that"<br />
+<br />
+There is no reason to use flash modes any longer, so don't use them, especially if they don't work properly. And don't use a development version of avconv - it has already brought trouble to other users. Probably best to avoid avconv altogether. See the latest release notes for a link to get a proper version of ffmpeg. Either remove the libav-tools package (or whatever you used to get that development version of avconv installed) or use the <kbd>--ffmpeg</kbd> option to configure get_iplayer to use your proper version of ffmpeg. <br />
+<br />
+Ubuntu 14.04 users were a bit shafted (for get_iplayer usage) by its maintainers as a result of the ffmpeg/libav split, though that has been rectified in later versions. I'm probably going to remove all built-in support for avconv in the next release. This kind of thing is going to affect more Ubuntu users who can't or won't upgrade from 14.04. Better to force 14.04 users to get the proper tools than keep dealing with these problems.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">26-07-2016, 12:02 PM</div>
+</div>
+<div class="message">thanks for reply just to correct my post <br />
+<br />
+on the usage of <span style="font-weight: bold;" class="mycode_b">--ffmpeg</span> also to offer an  alternative for the <span style="font-weight: bold;" class="mycode_b">tvmode</span> for non-flash is that<br />
+<br />
+--tvmode=flashhd is now becomes --tvmode=hlshigh<br />
+<br />
+is as follows<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --tvmode=hlshigh --ffmpeg --subtitles --subsrequired --get "http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot" --verbose --force &gt; "&#36;HOME/log.txt" 2&gt;&amp;1</code></div></div><br />
+your right i probably should consider upgrading my operating system it is long overdue !</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2016, 12:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (26-07-2016, 12:02 PM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --tvmode=hlshigh --ffmpeg --subtitles --subsrequired --get "http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot" --verbose --force &gt; "&#36;HOME/log.txt" 2&gt;&amp;1</code></div></div></blockquote>It still doesn't make sense to use <kbd>--ffmpeg</kbd> without an argument. Your username suggests an affinity for subtitles, but you won't get subtitles with that command because you're telling get_iplayer that the path to your ffmpeg executable is <kbd>--subtitles</kbd>. That means both <kbd>--ffmpeg</kbd> and <kbd>--subtitles</kbd> are effectively ignored, so using <kbd>--ffmpeg</kbd> in this way has no effect except to prevent subtitles being downloaded. As you already demonstrated, changing the recording mode was the solution, ostensibly because of problems with your development version of avconv. We tell you to produce a verbose log in <a href="thread-706.html">our instructions</a>, but you should read it as well. It makes such mistakes visible without the need for us to tell you.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; audio issues maybe related to other reported threads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

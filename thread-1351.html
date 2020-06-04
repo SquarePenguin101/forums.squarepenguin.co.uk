@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Obsolete macOS XML::LibXML is too old for 3.00</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Obsolete macOS XML::LibXML is too old for 3.00</div>
+<div id="pagetitle"><h2>Obsolete macOS XML::LibXML is too old for 3.00</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1766</h2></div><div class="dateline">03-05-2017, 08:55 PM</div>
+</div>
+<div class="message">Same issue here.<br />
+<br />
+Tried updating XML::LibXML Perl module with the following, but no change.<br />
+<br />
+curl -L "http://cpanmin.us" | perl - -l ~/perl5 XML::LibXML local::lib<br />
+<br />
+'tv.cache' file contains the correct text - programme titles, etc - but in Terminal appear as follows:<br />
+<br />
+3885: XML::LibXML::Text=SCALAR(0x7fdb954a1508) - XML::LibXML::Text=SCALAR(0x7fdb954a3998), S4C, p04yzw23<br />
+<br />
+Any help greatly appreciated, user-2 :)<br />
+<br />
+FWIW, following two errors in build.log for  =XML::LibXML<br />
+<br />
+Cannot write to /System/Library/Perl/Extras/5.12/XML/SAX/ParserDetails.ini: Permission denied at /System/Library/Perl/Extras/5.12/XML/SAX.pm line 191.<br />
+make: [install_sax_driver] Error 13 (ignored)<br />
+Cannot write to /System/Library/Perl/Extras/5.12/XML/SAX/ParserDetails.ini: Permission denied at /System/Library/Perl/Extras/5.12/XML/SAX.pm line 191.<br />
+make: [install_sax_driver] Error 13 (ignored)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 09:01 PM</div>
+</div>
+<div class="message">I guess I wouldn't be confident it installed properly.  What do you get from: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MXML::LibXML -e 'print &#36;XML::LibXML::VERSION'</code></div></div><br />
+Also post that line for index 3885 in your tv.cache file. Take it out with a text editor, not from the console.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1766</h2></div><div class="dateline">03-05-2017, 09:14 PM</div>
+</div>
+<div class="message">I think you're right. Version came back as 1.88, though the build log says:<br />
+<br />
+Successfully installed XML-LibXML-2.0129 (upgraded from 1.88)<br />
+<br />
+Perhaps I need an extra step?<br />
+<br />
+Here's line 3885 from the tv.cache file.<br />
+<br />
+3885|tv|XML::LibXML::Text=SCALAR(0x7fdb954a1508)|p04yzw23|2017-05-02T22:30:00+01:00|1496352600|XML::LibXML::Text=SCALAR(0x7fdb954a3998)|||default|3900|Rhaglen arbennig yn dilyn taith Steff Tywydd a Daf Wyn i Base Camp Everest. A special p...|S4C|||1493836361||http://www.bbc.co.uk/programmes/p04yzw23|</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 10:25 PM</div>
+</div>
+<div class="message">I think you need to get local::lib set up with cpanminus first, then set environment vars for local::lib, and then install XML::LibXML with cpanm. Follow the instructions in get_iplayer install docs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1766</h2></div><div class="dateline">04-05-2017, 01:14 AM</div>
+</div>
+<div class="message">Sorted!<br />
+<br />
+Wrong bash config file.<br />
+<br />
+echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' &gt;&gt; ~/.bashrc<br />
+<br />
+should be:<br />
+<br />
+echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' &gt;&gt; ~/.bash_profile<br />
+<br />
+Maybe worth updating the guide.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 09:05 AM</div>
+</div>
+<div class="message">Bit of edit fail there. Docs repaired to match Linux/BSD instructions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1766</h2></div><div class="dateline">04-05-2017, 09:42 AM</div>
+</div>
+<div class="message">Thanks, user-2. You're a superstar!!<br />
+<br />
+For ex-Get iPlayer Automator Mac users like me, it may be worth adding to the macOS guide that the Xcode Command Line Tools (Xcode &gt; Prefs &gt; Downloads &gt; Command Line Tools) need to be installed before attempting a manual installation. Took me a while to work that out when cpanminus failed to compile due to no 'make' command.<br />
+<br />
+All working OK now for me on 2012 Mac Pro with Mountain Lion 10.8.5.<br />
+<br />
+Happy days!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Obsolete macOS XML::LibXML is too old for 3.00</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

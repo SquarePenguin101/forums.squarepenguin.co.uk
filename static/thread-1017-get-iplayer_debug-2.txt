@@ -1,0 +1,168 @@
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\USERNAME/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fileprefix = <nameshort>< senum>< - episodeshort>
+	get = 1
+	keepall = 1
+	mmsnothread = 1
+	modes = hls
+	nonascii = 1
+	nopurge = 1
+	output = Y:\USERNAME\Desktop\iPlayer Recordings
+	pid = http://www.bbc.co.uk/iplayer/episode/p041vj7g/olympic-ceremonies-2016-1-opening-ceremony-with-no-commentary
+	punctuation = 1
+	rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe
+	verbose = 1
+	whitespace = 1
+
+INFO: Search args: 'http://www.bbc.co.uk/iplayer/episode/p041vj7g/olympic-ceremonies-2016-1-opening-ceremony-with-no-commentary'
+INFO: Will try prog types: tv
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Got 1685 file cache entries for tv
+Cleaning pid Old: 'http://www.bbc.co.uk/iplayer/episode/p041vj7g/olympic-ceremonies-2016-1-opening-ceremony-with-no-commentary',  New: 'p041vj7g'
+INFO: Getting page http://www.bbc.co.uk/programmes/p041vj7g.rdf
+INFO: Episode-only pid detected
+INFO: Trying pid: p041vj7g using type: tv
+INFO: Trying to stream pid using type tv
+INFO: pid not found in tv cache
+INFO: Cleaning pid Old: 'p041vj7g',  New: 'p041vj7g'
+Matches:
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/p041vj7g.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/p041vj7g.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p041vjc7/proto/rtmp?cb=66461
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p041vjc7/proto/rtmp?cb=07092
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p041vjc7/proto/http?cb=28839
+INFO: Getting page http://vod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_l2v_hd/34c635-p041vjc7/vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_l2v_hd/34c635-p041vjc7/vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1471942517&amp;e=1471985717&amp;h=d35273b00edae5bd8772cc7e8bb23f73
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_l2v_hd/34c635-p041vjc7/vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1471942517&amp;e=1471985717&amp;h=d35273b00edae5bd8772cc7e8bb23f73)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_979) hls h264 704x396 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow1: (gip_hls_iplayer_349) hls h264 384x216 349kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_565) hls h264 512x288 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1802) hls h264 960x540 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://www.bbc.co.uk/programmes/p041vjc7.rdf
+INFO: Using 'original' version (p041vjc7) as 'default'
+INFO: Programme not in history
+INFO: Will search for versions: default,original
+INFO: Mode list: hlsvhigh,hlshigh,hlsstd,hlslow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: hlsvhigh1,hlshigh1,hlsstd1,hlslow1 modes will be tried for version default
+INFO: Trying hlsvhigh1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=1604000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlsvhigh1 mode return code: 'next'
+INFO: skipping hlsvhigh1 mode
+INFO: Regenerate filename for mode change: hlsvhigh -> hlshigh
+INFO: Trying hlshigh1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=827000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlshigh1 mode return code: 'next'
+INFO: skipping hlshigh1 mode
+INFO: Regenerate filename for mode change: hlshigh -> hlsstd
+INFO: Trying hlsstd1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=437000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlsstd1 mode return code: 'next'
+INFO: skipping hlsstd1 mode
+INFO: Regenerate filename for mode change: hlsstd -> hlslow
+INFO: Trying hlslow1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=48000-video=281000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlslow1 mode return code: 'next'
+INFO: skipping hlslow1 mode
+INFO: Checking existence of original version
+INFO: Version = original
+INFO: hlsvhigh1,hlshigh1,hlsstd1,hlslow1 modes will be tried for version original
+INFO: Regenerate filename for mode change: hlslow -> hlsvhigh
+INFO: Trying hlsvhigh1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=1604000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlsvhigh1 mode return code: 'next'
+INFO: skipping hlsvhigh1 mode
+INFO: Regenerate filename for mode change: hlsvhigh -> hlshigh
+INFO: Trying hlshigh1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=827000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlshigh1 mode return code: 'next'
+INFO: skipping hlshigh1 mode
+INFO: Regenerate filename for mode change: hlshigh -> hlsstd
+INFO: Trying hlsstd1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=96000-video=437000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlsstd1 mode return code: 'next'
+INFO: skipping hlsstd1 mode
+INFO: Regenerate filename for mode change: hlsstd -> hlslow
+INFO: Trying hlslow1 mode to record tv: Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Olympic Ceremonies s05e01 - Opening Ceremony with no commentary                 
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-y" "-i" "vf_p041vjc7_ce90c2ae-dff5-41e5-a1db-625ba3a0657d-audio=48000-video=281000.m3u8?__gda__=1471985717_f5d6741148a701bc9ccea2a3e1937954" "-vcodec" "copy" "-acodec" "copy" "Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts"
+
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file Y:\USERNAME\Desktop\iPlayer Recordings\Olympic Ceremonies s05e01 - Opening Ceremony with no commentary.partial.mp4.ts via HLS
+DEBUG: Record using hlslow1 mode return code: 'next'
+INFO: skipping hlslow1 mode
+ERROR: Failed to record 'Olympic Ceremonies: 2016 - 1. Opening Ceremony with no commentary (p041vj7g)'

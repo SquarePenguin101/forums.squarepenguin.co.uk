@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Omitting Genre in  audio Tags?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Omitting Genre in  audio Tags?</div>
+<div id="pagetitle"><h2>Omitting Genre in  audio Tags?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">18-03-2016, 10:26 AM</div>
+</div>
+<div class="message">get_iplayer is the tops!<br />
+...<br />
+Q: Is there proper way to stop get_iplayer assigning genre tags <br />
+to the audio files it generates?<br />
+<br />
+I've  failed miserably hacking the perl code <kbd>get_iplayer.pl</kbd><br />
+by changing the line:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;tags-&gt;{genre} = &#36;meta-&gt;{category};</code></div></div>to<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;tags-&gt;{genre} = "";</code></div></div>I know this isn't a sustainable way of doing anything but ...<br />
+if it worked it would save me significant post-processing work <br />
+at my end.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-03-2016, 01:44 PM</div>
+</div>
+<div class="message">That will work. No idea why it doesn't work for you. Run the following at the get_iplayer prompt to make sure your edit is as it should be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>find "&#36;tags-&gt;{genre}" get_iplayer.pl</code></div></div><br />
+(Assumes you're on Windows, judging by reference to get_iplayer.pl)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">18-03-2016, 05:27 PM</div>
+</div>
+<div class="message">Thanks for the encouragement.<br />
+I got it working with an additional one-line edit:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;mp3-&gt;select_id3v2_frame_by_descr('TCON', &#36;tags-&gt;{genre});</code></div></div><br />
+to<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;mp3-&gt;select_id3v2_frame_by_descr('TCON', ""); </code></div></div><br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-03-2016, 05:45 PM</div>
+</div>
+<div class="message">The additional edit is unnecessary, but I suppose it does no harm.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Omitting Genre in  audio Tags?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

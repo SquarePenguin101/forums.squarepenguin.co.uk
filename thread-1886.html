@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloading without Subtitles</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Downloading without Subtitles</div>
+<div id="pagetitle"><h2>Downloading without Subtitles</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">19-09-2018, 06:28 AM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.17.0 from a Windows 7 command prompt.<br />
+<br />
+To download the audiodescribed version audio for a programme I'd already downloaded, I used the command:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&gt;get_iplayer --versions audiodescribed --audio-only --no-metadata ^<br />
+  --no-subtitles --no-subs-raw --no-tracklist --no-credits --no-tag ^<br />
+  --no-thumb --raw --pid b0bcqwn5</code></div></div>All the <kbd>--no-xxx</kbd> commands were to overide my default options. (Looking at it now, the use of <kbd>--no-tag</kbd> was redundant with <kbd>--raw</kbd> being specified.)<br />
+<br />
+This downloaded the dubbed audio-described audio with the following<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Episodes:<br />
+Our Girl - Nigeria, Belize and Bangladesh Tours, Episode 8, BBC One, b0bcqwn5<br />
+INFO: 1 total programmes<br />
+<br />
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally<br />
+INFO: Downloading tv: 'Our Girl: Nigeria, Belize and Bangladesh Tours - 8. Episode 8 (b0bcqwn5) [audiodescribed]'<br />
+INFO: Downloaded: 58.74 MB (00:56:39) @ 2.54 Mb/s (hvfxsd1/bi) [audio]<br />
+INFO: Subtitles not available for version(s): audiodescribed</code></div>
+</div>
+The last line is telling. get_iplayer appears to have attempted to download subtitles, ignoring the <kbd>--no-subtitles</kbd> or <kbd>--no-subs-raw</kbd> (or both) options. Since no subtitles were available for this version, none were downloaded, but surely get_iplayer shouldn't have attempted to download subtitles in this case. Is this a bug, a non-supported feature, or am I doing something wrong?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2018, 10:34 AM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a proper report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">21-09-2018, 08:13 AM</div>
+</div>
+<div class="message">Thanks user-2. The example I gave is a genuine one, but does not explain my question very clearly. The question I was really asking was as follows.<br />
+<br />
+Why did get_iplayer report there were no subtitles available? Given the command line options there was no need for get_iplayer to look for subtitles.<br />
+<br />
+Expected behaviour:<br />
+<ol type="1" class="mycode_list"><li>with both <kbd>--no-subtitles</kbd> and <kbd>--no-subs-raw</kbd> in effect (the built-in defaults), get_iplayer does not need to look for subtitles to download and save;<br />
+</li>
+<li>with <kbd>--type=radio</kbd>, <kbd>--raw</kbd> or <kbd>--audio-only</kbd> in effect, <kbd>--no-subs-embed</kbd> should be implied.<br />
+</li>
+<li>with <kbd>--no-subs-embed</kbd> in effect, get_iplayer does not need to look for nor download subtitles for adding as a stream in the mp4 container.<br />
+</li>
+</ol>
+When both conditions 1 and 3 are met, I would not expect get_iplayer to look for, download nor report on subtitles. The last line of the get_iplayer output of my original post, reporting on the unavailability of subtitles, was unexpected.<br />
+<br />
+Sometime over the next few weeks I'll find a couple of better examples and post a proper report here attaching verbose get_iplayer output. I'll try a few downloads to see what is downloaded, what is reported and how the options <kbd>--raw</kbd>, <kbd>--audio-only</kbd>, <kbd>--subtitles</kbd>, <kbd>--subs-raw</kbd> and <kbd>--subs-embed</kbd> (and their <kbd>--no-…</kbd> negated versions) all interact.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Downloading without Subtitles</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

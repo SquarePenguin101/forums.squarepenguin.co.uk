@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Detecting when get_iplayer is executing across windows shells</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Detecting when get_iplayer is executing across windows shells</div>
+<div id="pagetitle"><h2>Detecting when get_iplayer is executing across windows shells</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">23-10-2017, 12:47 PM</div>
+</div>
+<div class="message">When my windows workstation locks it disables the Ethernet and Wi-Fi adapters, when unlocked it enables them again. I am allowed to stop this happening if say a network backup is happening.<br />
+<br />
+Is there a built in method I can interrogate to determine if get_iplayer is running?<br />
+<br />
+What I've currently tried is below. I write running / not running to a file in GIPs home directory.<br />
+<br />
+This is fine for a single instance of GIP, but multiple instances may cause problems.<br />
+<br />
+Is there a better way?<br />
+<br />
+e.g<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>@echo off<br />
+echo gip_running &gt; %userprofile%\.get_iplayer\gip<br />
+setlocal<br />
+set GIP_INST=%~dp0<br />
+if #%GIP_INST:~-1%# == #\# set GIP_INST=%GIP_INST:~0,-1%<br />
+if "%GIP_PATH%" == "" set GIP_PATH=%GIP_INST%\perl;%GIP_INST%\utils;%PATH%<br />
+if not "%GIP_PATH%" == "" set PATH=%GIP_PATH%<br />
+perl.exe "%GIP_INST%\get_iplayer.pl" %*<br />
+echo gip_not_running &gt; %userprofile%\.get_iplayer\gip</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">23-10-2017, 03:41 PM</div>
+</div>
+<div class="message">First two disclaimers:<br />
+- This is not (necessarily) a better way, but it's a different way that may give you an idea.<br />
+- I'm not a windows shell expert - give me a 'nix shell any time...<br />
+<br />
+Keep the "flag" file %userprofile%\.get_iplayer\gip, but keep a numerical value within; set initially to "0".<br />
+Every time you start GiP, increment this value, and every time it finishes, decrement it.<br />
+When it's zero, it should be a very good indicator that there are no GiP processes running.<br />
+I don't know what is starting your wrapper script, but the worst case is that they're asynchronous.  You should really implement some sort of lock on the "flag" file so that two instances don't try &amp; modify it at the same time.<br />
+<br />
+HTH<br />
+<br />
+pf</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-10-2017, 05:31 PM</div>
+</div>
+<div class="message">If you are restricted to a single flag file, then @t_offlock explained the situation pretty well. If you can script a solution, some other options:<br />
+<br />
+1. Give your flag files unique names with a common prefix. You can use %DATE% and %TIME%  (as long as you start get_iplayer sessions at least .01 sec apart),  or possibly %RANDOM% for uniqueness - google for different methods. Delete the flag files when get_iplayer finishes rather than overwriting them. The presence of any files with the magic prefix (<kbd>if exist \path\to\files\prefix* (...) </kbd>in batch parlance) would be the signal that get_iplayer is running. No need to worry about file locking in that case. <br />
+<br />
+2. Check the list of running processes for perl. If you don't otherwise use perl, it will only be running when get_iplayer is running. You can use the SysInternals PsList utility available from Microsoft. From a batch file, run <kbd>pslist perl</kbd> then check %ERRORLEVEL%. It will be 0 if any perl processes are running, 1 if not.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">25-10-2017, 12:17 AM</div>
+</div>
+<div class="message">Thanks both, food for thought. I'm more used to *nix.  <br />
+I thought of incrementing a variable about 5 seconds after I pressed enter.<br />
+.<br />
+Googling, I found out that I can use the built-in tasklist to determine if a file is running<br />
+tasklist | find /I "perl.exe"<br />
+perl.exe                     10332 Console                    1     54,648 K</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Detecting when get_iplayer is executing across windows shells</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

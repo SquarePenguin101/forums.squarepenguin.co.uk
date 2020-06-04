@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Raspberry Pi not upgrading to 3.13</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Raspberry Pi not upgrading to 3.13</div>
+<div id="pagetitle"><h2>Raspberry Pi not upgrading to 3.13</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">25-03-2018, 01:50 PM</div>
+</div>
+<div class="message">Hello<br />
+I tried upgrading to 3.13 to solve the new format issue but it seems that there is not a new version for the Pi (Yet maybe)<br />
+<br />
+I tried a general;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-get update<br />
+sudo apt-get dist-upgrade</code></div></div>I didn't spot any specific messages with all the other stuff that updated, but after a reboot it was still 3.12 showing in the WebUI<br />
+<br />
+and then<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt update<br />
+sudo apt upgrade</code></div></div>That I was recommended when I had a previous issue (<a href="thread-1501.html">https://forums.squarepenguin.co.uk/thread-1501.html</a>?), that says .<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.</code></div></div><br />
+And even the install/upgrade using the wget line from that old therad and that says;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get-iplayer is already the newest version (3.12-ppa31d~stable).</code></div></div><br />
+It it just a case of being patient and waiting for the Raspbian Stretch build to be updated?<br />
+<br />
+Thanks for all the good work</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">25-03-2018, 03:41 PM</div>
+</div>
+<div class="message">Done some more reading round the forum and it looks like the patience is the key, my apologies for not noticing that the main maintainer, user-2, and the maintainer of the Pi builds, jonhedgerows, are two different people.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">25-03-2018, 04:09 PM</div>
+</div>
+<div class="message">My pi should have built gip automatically last night, but it appears not. I’ll check when I get home. Should be an update for everyone by tonight. <br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">25-03-2018, 04:28 PM</div>
+</div>
+<div class="message">Thanks<br />
+I was just looking at the changed files at github to see if I dare manually try dropping in the new pearl files... (best not, but it's another bit of linux learning :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">25-03-2018, 10:12 PM</div>
+</div>
+<div class="message">you should be able to update raspberry pis now.<br />
+<br />
+it seems that the autobuild was running at 4:54pm daily... quite what was going through my head when I picked that time I have no idea... must be getting old.<br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">26-03-2018, 08:18 AM</div>
+</div>
+<div class="message">Brilliant - Thanks Jon, Upgraded and it is catching up<br />
+<br />
+I'm not sure why I didn't have something better to be doing on a Sunday afternoon ;-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Raspberry Pi not upgrading to 3.13</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

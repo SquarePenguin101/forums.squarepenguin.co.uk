@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Reinstalled and now not working (TV &amp; Radio)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Reinstalled and now not working (TV &amp; Radio)</div>
+<div id="pagetitle"><h2>Reinstalled and now not working (TV &amp; Radio)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-284</h2></div><div class="dateline">16-12-2013, 04:44 PM</div>
+</div>
+<div class="message">I have been using Get_iplayer on Windows (Win 7 64) for several years and today accidently uninstalled it (ver 2.83) when trying to uninstall the VLC component. I reinstalled it (ver2.85) using the latest installer including all components except VLC.<br />
+<br />
+However, it is now not working. Trying to record radio and TV fails (see attached log). The uninstall did not remove my settings or history and the only setting I changed following the install was to add a VLC path by --prefs-add --VLC="etc. (See log)<br />
+<br />
+I was a PVR user, and most of the settings were set up using that, but by following the e-mails for several years I have now learnt to use the command line for most things (although still use the web interface too).<br />
+<br />
+Any ideas what I should do - or try uninstalling it all, deleting my prefs etc. Is there a separate preferences file from the user based one?<br />
+<br />
+Any help much appreciated.<br/><br/>
+<a href="static/thread-84-Iplayer-output.txt">Iplayer-output.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-12-2013, 05:08 PM</div>
+</div>
+<div class="message">The output you attached doesn't provide good test cases.  For Heidi, get_iplayer is telling you that you already downloaded it:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Already Completed at: 5760.035 sec Duration=5.760 sec</blockquote>
+<br />
+If you delete the previous output file, re-download with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> in your command line.  The above message indicates the file still exists.<br />
+<br />
+For Newsround, you are trying to download an episode that is no longer available from iPlayer, as the get_iplayer output indicates:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>WARNING: No programmes are available for this pid with version(s): default</blockquote>
+<br />
+Daily news programmes generally disappear after 24 hours.<br />
+<br />
+If you do more testing, find a programme that you've never downloaded, verify it is available on the iPlayer site, then download it with the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> option in your command line to capture all available output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-12-2013, 05:30 PM</div>
+</div>
+<div class="message">To answer your other question: yes, there is a system preferences file separate from user prefs.  However, you should never touch that file - it is managed by the installer.  Your output doesn't indicate any problems with preferences.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-284</h2></div><div class="dateline">16-12-2013, 05:38 PM</div>
+</div>
+<div class="message">Thanks for the reply.<br />
+<br />
+The Heidi radio programme hadn't been downloaded before - but I tried a new programme that I knew had not and that returned the same error. I then found another new programme and ran it with --force and that also failed in the same way. A verbose log is attached.<br />
+<br />
+The found the Newsround in the get_iplayer index as selected it as it would be short - however, running it again on a regular programme it worked. So sorry about that.<br />
+<br />
+The radio is where there is an issue still.<br/><br/>
+<a href="static/thread-84-Radio.txt">Radio.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-12-2013, 06:07 PM</div>
+</div>
+<div class="message">You have a trailing unmatched quote in the value for <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>outputradio</code></div></div>.  I think that is messing up the construction of the output file path.  Remove it and try again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-284</h2></div><div class="dateline">16-12-2013, 07:01 PM</div>
+</div>
+<div class="message">Thank you, thank you, thank you. That has fixed it.<br />
+<br />
+I cleared the prefs and it worked. I have then have added them back in correctly (checking the wiki carefully for syntax) and it still works.<br />
+<br />
+I have tried to say this before through the old email lists but I could never work out how to get my contribution accepted, but I really appreciate all you've done on this project. I'm a secondary school teacher and having a library of clips is sooo useful. I came to this project after Po_Ru's programme stopped working. I signed up to the list and looked at many emails in wonder and their technical content. Slowly though I started to understand some simpler things and migrated from the Web interface to the command line. Seeing similar questions helped me learn and also inspired me and so I bought a Pi and thought I'd learn some of this (I was a Spectrum BASIC generation user).<br />
+<br />
+So thank you for what you've done on the project (and the other regular contributors) - it really is a huge amount of work you've done, but thank you also for inspiring me to learn.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Reinstalled and now not working (TV &amp; Radio)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

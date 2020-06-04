@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --pid weirdness for Human Universe ep 2</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --pid weirdness for Human Universe ep 2</div>
+<div id="pagetitle"><h2>--pid weirdness for Human Universe ep 2</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-722</h2></div><div class="dateline">11-11-2014, 02:59 PM</div>
+</div>
+<div class="message">Not sure of the best place to post this - have chosen here because I suspect it's not an OS-specific issue.  Also, this isn't something for which I need a fix, as I have found a workaround - posting for information for others, and in case it's revealing an underlying issue that might need tweaking.<br />
+<br />
+I experienced an oddity while trying to download episode 2 of Human Universe (pid p0276ppy).  Using the --pid syntax:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=p0276ppy</code></div></div>or<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid p0276ppy</code></div></div>just gave a silent failure:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --pid=p0276ppy<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+However, I was able to download it successfully using the "full URL" syntax:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer "http://www.bbc.co.uk/programmes/p0276ppy"</code></div></div><br />
+The --pid syntax worked fine for the other four episodes of the series.<br />
+<br />
+Nick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-11-2014, 03:47 PM</div>
+</div>
+<div class="message">Works fine here.  Just a temporary hiccup upstream, no doubt.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-722</h2></div><div class="dateline">11-11-2014, 04:21 PM</div>
+</div>
+<div class="message">Just retried here and, oddly, I still get the problem.  (This is v2.90, Window 7).<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --pid=p0276ppy --force<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+As I say, not a problem for me, as I have been able to get the programme by using the URL syntax.  Odd, though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-11-2014, 04:23 PM</div>
+</div>
+<div class="message">Add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to get more info (if there is any).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-722</h2></div><div class="dateline">11-11-2014, 06:05 PM</div>
+</div>
+<div class="message">Ah ... interesting:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --pid=p0276ppy --force --verbose<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = cp1252<br />
+INFO: encodinglocalefs = cp1252<br />
+INFO: encodingconsoleout = cp850<br />
+INFO: encodingconsolein = cp850<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: C:&#92;Users&#92;Nick Dunlavey/.get_iplayer<br />
+INFO: System options dir: C:&#92;ProgramData/get_iplayer/options<br />
+Current options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atomicparsley = .&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodingconsolein = cp850<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodingconsoleout = cp850<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodinglocale = cp1252<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encodinglocalefs = cp1252<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ffmpeg = .&#92;FFmpeg&#92;ffmpeg-2.2.3-win32-static&#92;bin&#92;ffmpeg.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;force = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lame = .&#92;LAME&#92;lame.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mmsnothread = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mplayer = .&#92;MPlayer&#92;mplayer.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nopurge = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output = C:&#92;Users&#92;Nick Dunlavey&#92;Desktop&#92;iPlayer Recordings<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pid = p0276ppy<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refreshfuture = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtmpdump = .&#92;RTMPDump&#92;rtmpdump-20140302-git-79459a2-win32&#92;bin&#92;rtmpdump.e<br />
+xe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verbose = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vlc = .&#92;VLC&#92;vlc-2.1.5&#92;vlc.exe<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Will try prog types: tv<br />
+INFO: Got 4963 file cache entries for tv<br />
+INFO: Ignoring Future Prog: '1993: Human Universe - Why Are We Here? - 2014-11-1<br />
+3T09:05:00Z'<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+Adding --future allows it to download.<br />
+I wonder why it downloaded fine for you the first time?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-11-2014, 06:33 PM</div>
+</div>
+<div class="message">Because I didn't have any future entries in my cache, which you do since you use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div>.  The cache doesn't have a flag to indicate a future programme is actually a repeat.  You just have to keep that in mind if you use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div>.  Something to fix down the road, maybe.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-722</h2></div><div class="dateline">11-11-2014, 08:01 PM</div>
+</div>
+<div class="message">right ho - that makes sense.  thx.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-733</h2></div><div class="dateline">17-11-2014, 04:10 PM</div>
+</div>
+<div class="message">Mine is simply saying:<br />
+<br />
+INFO: Trying pid: <a href="http://www.bbc.co.uk/programmes/p0276ppy">http://www.bbc.co.uk/programmes/p0276ppy</a> using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+WARNING: No programmes are available for this pid with version(s): default</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-722</h2></div><div class="dateline">23-11-2014, 09:57 PM</div>
+</div>
+<div class="message">What command are you issuing that gives that result?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-733</h2></div><div class="dateline">01-12-2014, 07:58 AM</div>
+</div>
+<div class="message">get_iplayer --pid=p0276ppy --subtitles --force<br />
+<br />
+Although it seems it got resolved it by simply updating...</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --pid weirdness for Human Universe ep 2</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

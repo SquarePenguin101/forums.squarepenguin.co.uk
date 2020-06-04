@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Invalid chars error in --command-radio (Windows)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Invalid chars error in --command-radio (Windows)</div>
+<div id="pagetitle"><h2>Invalid chars error in --command-radio (Windows)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1526</h2></div><div class="dateline">10-02-2017, 08:06 PM</div>
+</div>
+<div class="message">I had a go at this, with no success. Not knowing much about command line code, can anyone help?<br />
+<br />
+I found the heading in the Wiki that read "<a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation#transcode-every-radio-programme-every-time-no-matter-what-to-mp3-format-at-best-variable-bit-rate-vbr-by-setting---command-radio-in-your-default-preferences">Transcode every radio programme, every time, no matter what, to MP3 format at best variable bit rate (VBR) by setting --command-radio in your default preferences:</a>"<br />
+<br />
+Then I opened get_iplayer and typed the recommended text: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --command-radio="ffmpeg -i &#92;""&lt;filename&gt;"&#92;" -c:v copy -c:a libmp3lame -q:a 0 -id3v2_version 3 -write_id3v1 1 -y &#92;""&lt;dir&gt;/&lt;fileprefix&gt;.mp3"&#92;""</code></div></div>It indicated that the preference had been saved and downloaded the file, but, during conversion to mp3,  gives the following error messages:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>[MP3 muxer @ 04b7f2c0] [Eval @ 0303ebec] Invalid chars ''' at the end of expression '3''<br />
+[MP3 muxer @ 04b7f2c0] Unable to parse option value "3'"<br />
+[MP3 muxer @ 04b7f2c0] Error setting option id3v2_version to value 3'.<br />
+</code></div>
+</div>
+And, later on:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument</code></div>
+</div>
+I have repeated typing in the string of commands very carefully three times, so I am obviously missing something hideously obvious to people who actually know what they are doing.<br />
+<br />
+Any advice?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2017, 08:48 PM</div>
+</div>
+<div class="message">It's telling you there is a stray apostrophe. Check your options file (or use <kbd>--show-prefs</kbd>) to see if that is true. <br />
+<br />
+It works fine here. Maybe try copy/paste from wiki page instead of typing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1526</h2></div><div class="dateline">10-02-2017, 11:54 PM</div>
+</div>
+<div class="message">Okay, maybe I broke a forum rule, although I'm not sure what. But my post has been deleted anyway.<br />
+<br />
+If I did do something wrong, I apologise.<br />
+<br />
+But I followed the advice in the Wiki, and the new version of get_iplayer still doesn't convert radio downloads to MP3, so I guess I'll have to convert everything manually with another programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-02-2017, 12:50 AM</div>
+</div>
+<div class="message">Moved, not deleted</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1526</h2></div><div class="dateline">11-02-2017, 02:03 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-02-2017, 12:50 AM)</span></cite>Moved, not deleted</blockquote>Took a while to find out that it was moved instead of deleted, and Google to figure out where to, but I've finally fixed the problem, and a test download seems to work.<br />
+<br />
+Thanks!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Invalid chars error in --command-radio (Windows)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

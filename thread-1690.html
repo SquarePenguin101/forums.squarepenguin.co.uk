@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to permanently change profile directory?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; How to permanently change profile directory?</div>
+<div id="pagetitle"><h2>How to permanently change profile directory?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1223</h2></div><div class="dateline">01-03-2018, 05:05 PM</div>
+</div>
+<div class="message">I'm trying to permanently change where ALL the profile data is stored. I want all data to be on a USB drive where the output data is stored. (Note: I don't mean the downloaded output data, I've got that worked out)<br />
+<br />
+I think what I am after is everything in the ".get_iplayer" folder, which is located by default (Linux) in in "/home/user/.get_iplayer" folder, which I want to change to  "/home/user/Multimedia/.get_iplayer"<br />
+<br />
+PLUS I would like anything else that GIP records and needs so I can re-install GIP and point to the data file folder on a USB drive. <br />
+<br />
+I searched this issue and only found one reference, and tried various iterations such as:<br />
+<br />
+get_iplayer --profile-dir "/home/user/Multimedia/.get_iplayer"<br />
+get_iplayer --prefs-add --profile-dir "/home/user/Multimedia/.get_iplayer"<br />
+<br />
+But this only changed the "options" file within the ".get_iplayer" folder, PLUS the change is not persistant.<br />
+<br />
+Any ideas? Thank you!<br />
+<br />
+Jim</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-03-2018, 05:23 PM</div>
+</div>
+<div class="message"><span style="text-decoration: line-through;" class="mycode_s">What you probably need to do is:<br />
+</span><br />
+<ol type="1" class="mycode_list"><li>Create the new directory to hold get_iplayer profile files on the USB stick<br />
+</li>
+<li>Copy the contents of the current .get_iplayer profile directory to that new directory on the USB stick<br />
+</li>
+<li>Add a preference to the options file in the original .get_iplayer profile folder setting the new profile directory<br />
+</li>
+</ol>
+<span style="text-decoration: line-through;" class="mycode_s"><br />
+<br />
+If you do that, I think get_iplayer will read the .get_iplayer profile options, see the new location for the profile directory on your USB stick and then use the options, .cache files and history files it finds there at the new location. <br />
+<br />
+So when you move/reinstall, all you should need to do is add the USB stick profile directory using the command you already tried:<br />
+<br />
+get_iplayer --prefs-add --profile-dir "/home/user/Multimedia/.get_iplayer"<br />
+<br />
+Are you sure that's the right path to the USB stick? You mounted it in your home directory? If you can't find the path, just open it in the file explorer and hit ctrl+l (lower case L) and on most distros it'll show the direct path in the top bar of the window.</span></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">01-03-2018, 05:23 PM</div>
+</div>
+<div class="message">Probably the easiest way is to move the .get_iplayer folder where you want it to be, and then create a symbolic link from there to your home directory.<br />
+<br />
+e.g. mv ~.get_iplayer /somewhere/.get_iplayer ; ln -s /somewhere/get_iplayer ~/<br />
+<br />
+If you rebuilt your system or mounted your USB drive somewhere different you'd have to remake the symlink.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-03-2018, 05:29 PM</div>
+</div>
+<div class="message">Hmmm.<br />
+<br />
+My post above doesn't seem to work. Not sure exactly how/where the --profile-dir command is saved or read from. Using the command creates a new directory and options file, but it's not read from and nor does <kbd>get_iplayer --prefs-add --profile-dir "/path/to/new/.get_iplayer"</kbd> get saved to original options file location. <br />
+<br />
+Jon's right that a symlink would work, but so should <kbd>--profile-dir</kbd>, if I've understood how it works properly</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-03-2018, 05:38 PM</div>
+</div>
+<div class="message">The <kbd>--profile-dir</kbd> option can't be saved in preferences, nor would that make sense (think about it for a moment). You can use the <kbd>GETIPLAYERUSERPREFS</kbd> environment variable in your shell to set the location of the profile directory.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-03-2018, 05:47 PM</div>
+</div>
+<div class="message">Yeah, just reading the source as you commented. <a href="https://github.com/get-iplayer/get_iplayer/blob/master/get_iplayer#L318">This bit</a>?<br />
+<br />
+Might not be the correct analogy in this specific case, but lots of software chains config files, like Nginx with include statements for example. I figured get_iplayer would just read from the default config location and detect the equivalent of the 'include' statement and then use options found there to override those in default config location.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-03-2018, 06:21 PM</div>
+</div>
+<div class="message">Nested configuration files would be overkill for get_iplayer. It would still require a one-time setup whenever you change the profile directory, and for the extremely small number of users who might want an alternate profile directory, I think it's better to do that with a generic mechanism. Of course, on Linux you also have the option of just creating shell aliases for get_iplayer with different values of <kbd>--profile-dir</kbd>, which may be even easier.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1223</h2></div><div class="dateline">01-03-2018, 07:08 PM</div>
+</div>
+<div class="message">Thanks fior the info. I am new to this, btw.<br />
+<br />
+To answer, my USB drive, which is NTFS if that makes any difference, is mounted at /home/user/Multimedia/ <br />
+I can substitute the real path. Is that necessary?<br />
+<br />
+Sounds to me like there is no way to simply change the default location of the /.get_iplayer folder. Right?<br />
+<br />
+And the  --profile-dir command ONLY changes the location of the OPTIONS and CACHE files withing that folder, not all the files in the folder, including the most important HISTORY file. And it does not persist reboot. Do I have it correctly? <br />
+<br />
+So what do folks do who want multiple machines to share the profile data? Albeit one at a time.<br />
+<br />
+Thanks again, Jim</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">01-03-2018, 08:19 PM</div>
+</div>
+<div class="message">Three ways of changing the location of your config files have been offered to you:<ul class="mycode_list"><li>move it and add a symlink<br />
+</li>
+<li>set the GETIPLAYERUSERPREFS environment variable<br />
+</li>
+<li>create an alias for 'get-iplayer --profile-dir=/home/user/Multimedia/'<br />
+</li>
+<li>just add --profile-dir=/home/user/Multimedia/ every time you use gip<br />
+</li>
+</ul>
+<br />
+Yeah, I know.  That's four bullets.  But the last two are basically the same thing, which is my excuse for not being able to count.<br />
+<br />
+It's logically impossible to put the location of the config file in the config file.  Some software chains config files so that you can put (most of) the config somewhere else, but you *still* need a config file in the usual location.  get-iplayer doesn't chain config files, nor is there a compelling case for doing so.<br />
+<br />
+Incidentally, --profile-dir is supposed to move where gip looks for the options file, cache, history, pvr searches and presets (i.e. everything in the profile directory), but this only works if you provide it on the command line.  If it does anything else it's probably a bug.<br />
+<br />
+&gt;So what do folks do who want multiple machines to share the profile data?<br />
+that would be unusual.  But you've got some options.  Pick one ;-)<br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; How to permanently change profile directory?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Ubuntu 16.0.4 Installation problems</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Ubuntu 16.0.4 Installation problems</div>
+<div id="pagetitle"><h2>Ubuntu 16.0.4 Installation problems</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1511</h2></div><div class="dateline">16-01-2017, 03:12 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Sorry for the simple question but I can't seem to install get_iplayer on ubuntu 16.0.4 and have had no luck searching for a solution.<br />
+<br />
+(I'm logged in as root for all of the following...)<br />
+<br />
+I've followed the instructions to add the PPA...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>add-apt-repository ppa:jon-hedgerows/get-iplayer<br />
+apt-get update</code></div></div><br />
+<br />
+I get the following error on install...<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@ubuntu-standard:~# apt-get install get-iplayer<br />
+Reading package lists... Done<br />
+Building dependency tree<br />
+Reading state information... Done<br />
+Some packages could not be installed. This may mean that you have<br />
+requested an impossible situation or if you are using the unstable<br />
+distribution that some required packages have not yet been created<br />
+or been moved out of Incoming.<br />
+The following information may help to resolve the situation:<br />
+<br />
+The following packages have unmet dependencies:<br />
+ get-iplayer : Depends: atomicparsley (&gt;= 0.9.4) but it is not going to be installed<br />
+E: Unable to correct problems, you have held broken packages.</code></div></div><br />
+<br />
+It seems the package can't find the atomicparsley version listed in the PPA.<br />
+<br />
+<br />
+I see version "0.9.6-hg109.9183fff907bf-0ppa4~xenial" which I think should be the version for 16.0.4?<br />
+<br />
+I can only see the default version 0.9.2~svn110-4 in my package list...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@ubuntu-standard:~# apt-cache search atomicparsley<br />
+atomicparsley - read, parse and set metadata of MPEG-4 and 3gp files<br />
+libatomicparsley-dev - main library for atomic parsley in gtkpod, development kit<br />
+libatomicparsley0 - main library for atomic parsley in gtkpod, shared library<br />
+root@ubuntu-standard:~# apt-cache show atomicparsley<br />
+Package: atomicparsley<br />
+Priority: optional<br />
+Section: universe/misc<br />
+Installed-Size: 220<br />
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;<br />
+Original-Maintainer: Jonas Smedegaard &lt;dr@jones.dk&gt;<br />
+Architecture: armhf<br />
+Version: 0.9.2~svn110-4<br />
+Depends: libc6 (&gt;= 2.4), libgcc1 (&gt;= 1:4.4.0), libstdc++6 (&gt;= 4.1.1), zlib1g (&gt;= 1:1.1.4)<br />
+Filename: pool/universe/a/atomicparsley/atomicparsley_0.9.2~svn110-4_armhf.deb<br />
+Size: 105296<br />
+MD5sum: e4806044fa67d1f4541e09da8847ab88<br />
+SHA1: 4252cfe6568a286dc73d3e6125d2d0f454f5ae21<br />
+SHA256: 3c7939b5eff2b3ab9b1d7740d243ca1d5a93d452c51a519ec82ff996381cb21b<br />
+Description-en: read, parse and set metadata of MPEG-4 and 3gp files<br />
+ AtomicParsley is a lightweight command line program for reading,<br />
+ parsing and setting metadata into MPEG-4 files supporting these styles<br />
+ of metadata:<br />
+ .<br />
+  - iTunes-style metadata into .mp4, .m4a, .m4p, .m4v, .m4b files<br />
+  - 3gp-style assets (3GPP TS 26.444 version 6.4.0 Release 6<br />
+    specification conforming) in 3GPP, 3GPP2, MobileMP4 &amp; derivatives<br />
+  - ISO copyright notices at movie &amp; track level for MPEG-4 &amp; derivative<br />
+    files<br />
+  - uuid private user extension text &amp; file embedding for MPEG-4 &amp;<br />
+    derivative files<br />
+Description-md5: 6fc09eecbefdcf4138f91a27f95dae0b<br />
+Homepage: http://atomicparsley.sourceforge.net/<br />
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug<br />
+Origin: Ubuntu</code></div></div><br />
+<br />
+I can't seem to locate 0.9.6-hg109.9183fff907bf-0ppa4~xenial and install atomicparsley from the PPA instead of the default version.<br />
+<br />
+I've removed the PPA with ppa-purge, refreshing all my packages from scratch, and tried again with no success.<br />
+<br />
+Can someone please give me a shove in the right direction?  What am I overlooking?<br />
+<br />
+Thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">16-01-2017, 10:56 PM</div>
+</div>
+<div class="message">Are you running Ubuntu on arm? Or on x86?<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1511</h2></div><div class="dateline">17-01-2017, 12:26 AM</div>
+</div>
+<div class="message">Hi Jon, <br />
+<br />
+Thank you for picking this up. <br />
+<br />
+I'm running Ubuntu 16.0.4 on a raspberry pi3, so arm.<br />
+<br />
+(note I'm running Ubuntu, not Raspbian) <br />
+<br />
+Specifically, image ubuntu-standard-16.0.4-server-armhf-raspberry-pi.img.<br />
+<br />
+Thanks,<br />
+Kev</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">17-01-2017, 12:50 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-01-2017, 12:26 AM)</span></cite>I'm running Ubuntu 16.0.4 on a raspberry pi3, so arm.<br />
+<br />
+(note I'm running Ubuntu, not Raspbian)</blockquote><br />
+Ah!  That'll be the problem. The ppa wasn't configured to build for arm, so there are no arm binaries. <br />
+<br />
+Yet. <br />
+<br />
+I need some help here - I don't have a pi3 so can't test whether the build works. I've now setup the get-iplayer-testing ppa to build for arm, and kicked off a build for arm for atomicparsley on xenial. It appears to have worked.<br />
+<br />
+Can you try that and let me know if it works?<br />
+<br />
+Thanks<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1511</h2></div><div class="dateline">17-01-2017, 12:54 AM</div>
+</div>
+<div class="message">Thanks Jon<br />
+<br />
+I'll try as soon as I get home tonight and update here</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1511</h2></div><div class="dateline">17-01-2017, 03:55 PM</div>
+</div>
+<div class="message">Hi Jon,<br />
+<br />
+I was able to install from the [color=#333333][size=medium][font=Georgia, FreeSerif, serif]get-iplayer-testing PPA first time...[/font][/size][/color]<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]...and all my tests have been successful![/font][/size][/color]<br />
+<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]Thank You for your support![/font][/size][/color]<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]Kev[/font][/size][/color]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">18-01-2017, 09:09 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-01-2017, 03:55 PM)</span></cite>Hi Jon,<br />
+<br />
+I was able to install from the [color=#333333][size=medium][font=Georgia, FreeSerif, serif]get-iplayer-testing PPA first time...[/font][/size][/color]<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]...and all my tests have been successful![/font][/size][/color]<br />
+<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]Thank You for your support![/font][/size][/color]<br />
+<br />
+[color=#333333][size=medium][font=Georgia, FreeSerif, serif]Kev[/font][/size][/color]</blockquote><br />
+Wonderful - I'm surprised it was that straightforward, but so long as it works :-)<br />
+<br />
+I'll copy the arm binaries across to the get-iplayer ppa in the next couple of days, then you can either stick with the -testing ppa - which automatically publishes nightly builds - or switch to the normal one which only publishes formal releases. <br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Ubuntu 16.0.4 Installation problems</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer commands</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer commands</div>
+<div id="pagetitle"><h2>get_iplayer commands</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-47</h2></div><div class="dateline">08-08-2013, 05:28 PM</div>
+</div>
+<div class="message">On my windows GiP setup I've put together a batch script to get a radio show based on a supplied PID which is working fine for m4a recordings but for mp3 recordings I'm unable to get my command working so the mp3 gets the metadata on the programme applied, using the Web PVR Manager the mp3 recording gets the metadata added correctly so the manager seems to be using the MP3:Tag perl module to do that, so I would of through it would do the same via a command. <br />
+<br />
+I've tried playing about with the --id3v2 argument but I've not been able to find a windows binary to use with the argument that shows as working.<br />
+<br />
+It's not a big issues for me as it's looks like it's just the local programmes that are mp3 and I can use the manager as a last resort but would prefer to use my main solution for everyone via command, plus the metadata allows me to find it on my playlist on my ipod<br />
+<br />
+Any advise from any appreciated, thanks <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>SET iplayer_path="C:&#92;Program Files (x86)&#92;get_iplayer"<br />
+SET ffmpeg_path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;FFmpeg&#92;ffmpeg-shared&#92;bin&#92;ffmpeg.exe"<br />
+SET Lame="C:&#92;Program Files (x86)&#92;get_iplayer&#92;LAME&#92;lame.exe"<br />
+SET RTMPDump_path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;RTMPDump&#92;rtmpdump.exe"<br />
+SET Meta_Path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe"<br />
+SET MPlayer="C:&#92;Program Files (x86)&#92;get_iplayer&#92;MPlayer&#92;mplayer-svn-36348&#92;mplayer.exe"<br />
+SET ID3V2 = "C:&#92;Program Files (x86)&#92;get_iplayer&#92;id3&#92;metamp3.exe"<br />
+<br />
+%iplayer_path%&#92;get_iplayer.pl --type=radio --pid=%1 --modes default --rtmpdump %RTMPDump_path% --ffmpeg %ffmpeg_path% --atomicparsley %Meta_Path% --mplayer %Mplayer% --lame %Lame% --id3v2 %ID3V2% --tag-podcast --file-prefix="&lt;nameshort&gt;-&lt;episodeshort&gt;" --force &gt; .&#92;%1.log</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2013, 08:43 PM</div>
+</div>
+<div class="message">Your description omits a few things, but I will hazard a a guess that: a) you're using your own version of Perl; b) your working directory when you run your script is not the get_iplayer installation directory.  If you're using your own Perl version and you haven't installed MP3::Tag from CPAN, then MP3 files won't get tagged since MP3::Tag isn't found in @INC.  If you run get_iplayer with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> you will see a warning to that effect.  If the above doesn't describe your setup, fill in the blanks in your reply.<br />
+<br />
+Assuming my guess is correct, you can install MP3::Tag in your Perl version and try that.  Another option is to alter your script to make your working directory the get_iplayer installation directory and call the batch wrapper (get_iplayer.cmd), which will use the embedded version of Perl that has MP3::Tag installed (assumed to be in working directory):<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cd %iplayer_path%<br />
+get_iplayer --type=radio ...</code></div></div><br />
+<br />
+If you do that you will need to change the log file location to include the full path to wherever you have been saving it up to now.  You don't want to pollute the installation directory with log files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2013, 08:53 PM</div>
+</div>
+<div class="message">I neglected to add: You may need to use setlocal/endlocal or pushd/popd if you don't want the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cd %iplayer_path%</code></div></div> to change the working directory for the calling shell.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-47</h2></div><div class="dateline">09-08-2013, 01:52 PM</div>
+</div>
+<div class="message">Thanks, I do have a local install of Perl Activestate and installing the MP3::Tag package through PPM has fixed my issue.  My script is so I can call get_iplayer from my little app I've put together - [url=http://lakeuk.blogspot.co.uk/search/label/radiobrowser][/url] - working nicely now - keep me sane in little longer on my daily commutes ;)<br />
+<br />
+For anyone that's interested, here's my final script:-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>SET iplayer_path="C:&#92;Program Files (x86)&#92;get_iplayer"<br />
+SET ffmpeg_path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;FFmpeg&#92;ffmpeg-shared&#92;bin&#92;ffmpeg.exe"<br />
+SET Lame="C:&#92;Program Files (x86)&#92;get_iplayer&#92;LAME&#92;lame.exe"<br />
+SET RTMPDump_path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;RTMPDump&#92;rtmpdump.exe"<br />
+SET Meta_Path="C:&#92;Program Files (x86)&#92;get_iplayer&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe"<br />
+SET MPlayer="C:&#92;Program Files (x86)&#92;get_iplayer&#92;MPlayer&#92;mplayer-svn-36348&#92;mplayer.exe"<br />
+<br />
+%iplayer_path%&#92;get_iplayer.pl --type=radio --pid=%1 --modes default --rtmpdump %RTMPDump_path% --ffmpeg %ffmpeg_path% --atomicparsley %Meta_Path% --mplayer %Mplayer% --lame %Lame% --tag-podcast --file-prefix="&lt;nameshort&gt;-&lt;episodeshort&gt;" --force &gt; .&#92;log&#92;%1.log<br />
+<br />
+exit %ERRORLEVEL%</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer commands</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

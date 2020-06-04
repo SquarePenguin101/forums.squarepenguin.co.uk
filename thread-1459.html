@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can't download programmes unless/until available on iPlayer site</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Can't download programmes unless/until available on iPlayer site</div>
+<div id="pagetitle"><h2>Can't download programmes unless/until available on iPlayer site</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">13-07-2017, 03:12 PM</div>
+</div>
+<div class="message">A general question, is anyone else seeing these problems?  I have made no changes to my get_iplayer since I installed 3.01 some time ago, and it mostly works fine, but today is throwing up these two and I've tried via the cmd line (below) but no differnece.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer "http://www.bbc.co.uk/programmes/b01kq31r" --type=radio<br />
+get_iplayer 3.01-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: Episode PID detected<br />
+INFO: Trying pid: b01kq31r using type: radio<br />
+INFO Trying to download PID using type radio<br />
+INFO: pid found in cache<br />
+Matches:<br />
+14331:  Book of the Week: Burying the Typewriter - Episode 4, BBC Radio 4 Extra, b01kq31r<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer "http://www.bbc.co.uk/programmes/b03bz1y4" --type=tv<br />
+get_iplayer 3.01-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: Episode PID detected<br />
+INFO: Trying pid: b03bz1y4 using type: tv<br />
+INFO Trying to download PID using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+2463:   Grand Tours of the Scottish Islands: Series 1 - Islands in Loch Lomond: Landlocked Islands, BBC One, b03bz1y4<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: No supported modes (hlshd,hvfxsd,dvfxsd,hlsvhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow) available for this programme with version 'original'<br />
+INFO: No other modes are available<br />
+ERROR: Failed to record 'Grand Tours of the Scottish Islands: Series 1 - 2. Islands in Loch Lomond: Landlocked Islands (b03bz1y4)'<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-07-2017, 03:44 PM</div>
+</div>
+<div class="message">Always check the iPlayer site before posting. You can't download programmes unless and until they are available on the iPlayer site. You apparently jumped the gun on the first one and the second is not available.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">13-07-2017, 03:54 PM</div>
+</div>
+<div class="message">Sure but I did not try to "jump the gun" - on the cmd line I just used the two iPlayer pids that get_iplayer had (apparently) matched to some of my searches, but which get_iplayer then could not find and/or download.<br />
+<br />
+I have just done a forced cache refresh (perhaps should have done that sooner, but I thought it's not generally necessary these days) and the first (radio prog) has now loaded, but still not the 2nd.<br />
+<br />
+get_iplayer (when using "run pvr" in browser) still says it's a "download failure", in the same way my cmd line attempt did.<br />
+<br />
+No big deal, I can ignore it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-07-2017, 04:09 PM</div>
+</div>
+<div class="message">You tried to download a programme within 15 minutes of the end of its broadcast. It's not uncommon that it takes longer - sometimes much longer - than that for a programme to be available for catch-up access. Cache contents and search results are irrelevant here - they only cover what was scheduled for broadcast. get_iplayer can't know if a given programme has actually been posted until it tries to download it or get its metadata with <kbd>--info</kbd>. That's why your first response to a download failure should be to check the iPlayer site.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">13-07-2017, 04:24 PM</div>
+</div>
+<div class="message">OK, think I understand.<br />
+<br />
+I don't want to clog up the airwaves, but the reason for my original post was that that this was very unusual.  I have about 30 searches in my PVR list and about 10 of them trigger regularly, and I can't remember seeing these sorts of errors, certainly in the recent past.  <br />
+<br />
+When a search triggers a match and returns an iPlayer PID, is it not the case that that means the programme is then available for download?   It has certainly seemed to be like that in the past - I have never (in my memory) had to wait 15 minutes and/or check the iPlayer site.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-07-2017, 04:42 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-07-2017, 04:24 PM)</span></cite>When a search triggers a match and returns an iPlayer PID, is it not the case that that means the programme is then available for download?  </blockquote>As I said, search results are irrelevant. A match just means the programme was scheduled to be available at the time you ran the search, but there may be a delay.<br />
+<blockquote class="mycode_quote"><cite><span> (13-07-2017, 04:24 PM)</span></cite>It has certainly seemed to be like that in the past - I have never (in my memory) had to wait 15 minutes and/or check the iPlayer site.</blockquote>It was bound to happen eventually. Many programmes are available very soon after broadcast, but you won't know unless you check the iPlayer site.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1570</h2></div><div class="dateline">16-07-2017, 06:18 PM</div>
+</div>
+<div class="message">I'm trying to download Grand Tours of the Scottish Islands: Series 1 - Islands in Loch Lomond: Landlocked Islands, BBC One, b03bz1y4 which has been listed for several days, having been apparently broadcast 3d 1h ago.<br />
+<br />
+However I keep getting error messages:<br />
+<br />
+Recording The Following Programmes<br />
+<br />
+    Grand Tours of the Scottish Islands: Series 1 - Islands in Loch Lomond: Landlocked Islands (b03bz1y4)<br />
+<br />
+<br />
+INFO Trying to download PID using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+2632:	Grand Tours of the Scottish Islands: Series 1 - Islands in Loch Lomond: Landlocked Islands, BBC One, b03bz1y4<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: No supported modes (hlshd,hvfxsd,dvfxsd,hlsvhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow) available for this programme with version 'original'<br />
+INFO: No other modes are available<br />
+ERROR: Failed to record 'Grand Tours of the Scottish Islands: Series 1 - 2. Islands in Loch Lomond: Landlocked Islands (b03bz1y4)'<br />
+<br />
+Recording complete<br />
+<br />
+Can anyone see what's wrong?<br />
+<br />
+<br />
+Quite apart from whether it should work, there is another issue: given that it "failed to record", the final response "Recording complete" is misleading - the recording is not complete (which tends to imply success) because it has failed :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1651</h2></div><div class="dateline">16-07-2017, 06:32 PM</div>
+</div>
+<div class="message"><a href="http://www.bbc.co.uk/programmes/b04jv2jb/episodes/guide">http://www.bbc.co.uk/programmes/b04jv2jb/episodes/guide</a><br />
+<br />
+^^ no episodes available according to its own webpage</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">16-07-2017, 10:25 PM</div>
+</div>
+<div class="message">A look on this episodes programmes page shows that this programme should have been processed but for some reason hasn't materialised yet. <a href="http://www.bbc.co.uk/programmes/b03bz1y4">http://www.bbc.co.uk/programmes/b03bz1y4</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1570</h2></div><div class="dateline">17-07-2017, 10:20 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (16-07-2017, 10:25 PM)</span></cite>A look on this episodes programmes page shows that this programme should have been processed but for some reason hasn't materialised yet. <a href="http://www.bbc.co.uk/programmes/b03bz1y4">http://www.bbc.co.uk/programmes/b03bz1y4</a></blockquote><br />
+Ah, so it's an orphaned entry: it exists in the index but there's no corresponding video file for it to point to. I wonder if it will materialise before it expires...<br />
+<br />
+I wanted to check whether it was a BBC problem or a get-iplayer problem - sounds like it's BBC.<br />
+<br />
+I wish BBC would get their act together and make sure that *every* eligible programme is ready and waiting on the server, already converted to iPlayer format, in advance of transmission, exactly the same as for the transmission file, so the web one can be made visible *automatically* as soon as live transmission has ended.<br />
+<br />
+BBC radio are terrible for not getting programmes on Radio Player or podcast, and they generate the programmes by recording the programme-as-broadcast, complete with continuity announcements and news before/after, instead of using the programme master to generate a clean feed. I realise you can't do that for live programmes, but anything pre-recorded can have the web versions ready in advance, so no need to use programme-as-broadcast which looks very amateurish!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1025</h2></div><div class="dateline">17-07-2017, 06:53 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-07-2017, 10:20 AM)</span>Wrote: <a href="https://forums.squarepenguin.co.uk/post-6504.html#pid6504">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (16-07-2017, 10:25 PM)</span></cite>A look on this episodes programmes page shows that this programme should have been processed but for some reason hasn't materialised yet. <a href="http://www.bbc.co.uk/programmes/b03bz1y4">http://www.bbc.co.uk/programmes/b03bz1y4</a></blockquote><br />
+Ah, so it's an orphaned entry: it exists in the index but there's no corresponding video file for it to point to. I wonder if it will materialise before it expires...<br />
+<br />
+I wanted to check whether it was a BBC problem or a get-iplayer problem - sounds like it's BBC.<br />
+<br />
+I wish BBC would get their act together and make sure that *every* eligible programme is ready and waiting on the server, already converted to iPlayer format, in advance of transmission, exactly the same as for the transmission file, so the web one can be made visible *automatically* as soon as live transmission has ended.<br />
+<br />
+BBC radio are terrible for not getting programmes on Radio Player or podcast, and they generate the programmes by recording the programme-as-broadcast, complete with continuity announcements and news before/after, instead of using the programme master to generate a clean feed. I realise you can't do that for live programmes, but anything pre-recorded can have the web versions ready in advance, so no need to use programme-as-broadcast which looks very amateurish!</blockquote><br />
+It is fixed - spoke to the right person at the BBC<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b03bz1y4/grand-tours-of-the-scottish-islands-series-1-2-islands-in-loch-lomond-landlocked-islands">http://www.bbc.co.uk/iplayer/episode/b03...ed-islands</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Can't download programmes unless/until available on iPlayer site</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

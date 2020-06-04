@@ -1,0 +1,596 @@
+get_iplayer 3.22.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+Running PVR Searches:
+
+INFO: PVR Run: 'prom_name_radio'
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	nopurge = 1
+	pvrsingle = prom_name_radio
+	test = 1
+	type = radio
+	verbose = 1
+
+INFO: Search args: 'prom'
+INFO: Most recent addition (radio) = 2019-09-16T07:36:14+00:00 (1568619374)
+INFO: Got 17656 file cache entries for radio
+DEBUG: Cache expiry time for radio is 14400 secs - refresh in -13132 secs
+INFO: Cache refresh limit (radio): 2019-09-16T03:36:14+00:00
+INFO: Will refresh channel BBC Asian Network
+INFO: Will refresh channel BBC Coventry & Warwickshire
+INFO: Will refresh channel BBC Essex
+INFO: Will refresh channel BBC Hereford & Worcester
+INFO: Will refresh channel BBC Newcastle
+INFO: Will refresh channel BBC Radio 1
+INFO: Will refresh channel BBC Radio 1Xtra
+INFO: Will refresh channel BBC Radio 2
+INFO: Will refresh channel BBC Radio 3
+INFO: Will refresh channel BBC Radio 4
+INFO: Will refresh channel BBC Radio 4
+INFO: Will refresh channel BBC Radio 4 Extra
+INFO: Will refresh channel BBC Radio 5 live
+INFO: Will refresh channel BBC Radio 5 live sports extra
+INFO: Will refresh channel BBC Radio 6 Music
+INFO: Will refresh channel BBC Radio Berkshire
+INFO: Will refresh channel BBC Radio Bristol
+INFO: Will refresh channel BBC Radio Cambridgeshire
+INFO: Will refresh channel BBC Radio Cornwall
+INFO: Will refresh channel BBC Radio Cumbria
+INFO: Will refresh channel BBC Radio Cymru
+INFO: Will refresh channel BBC Radio Derby
+INFO: Will refresh channel BBC Radio Devon
+INFO: Will refresh channel BBC Radio Foyle
+INFO: Will refresh channel BBC Radio Gloucestershire
+INFO: Will refresh channel BBC Radio Guernsey
+INFO: Will refresh channel BBC Radio Humberside
+INFO: Will refresh channel BBC Radio Jersey
+INFO: Will refresh channel BBC Radio Kent
+INFO: Will refresh channel BBC Radio Lancashire
+INFO: Will refresh channel BBC Radio Leeds
+INFO: Will refresh channel BBC Radio Leicester
+INFO: Will refresh channel BBC Radio Lincolnshire
+INFO: Will refresh channel BBC Radio London
+INFO: Will refresh channel BBC Radio Manchester
+INFO: Will refresh channel BBC Radio Merseyside
+INFO: Will refresh channel BBC Radio Nan Gaidheal
+INFO: Will refresh channel BBC Radio Norfolk
+INFO: Will refresh channel BBC Radio Northampton
+INFO: Will refresh channel BBC Radio Nottingham
+INFO: Will refresh channel BBC Radio Oxford
+INFO: Will refresh channel BBC Radio Scotland
+INFO: Will refresh channel BBC Radio Scotland
+INFO: Will refresh channel BBC Radio Scotland
+INFO: Will refresh channel BBC Radio Scotland
+INFO: Will refresh channel BBC Radio Sheffield
+INFO: Will refresh channel BBC Radio Shropshire
+INFO: Will refresh channel BBC Radio Solent
+INFO: Will refresh channel BBC Radio Stoke
+INFO: Will refresh channel BBC Radio Suffolk
+INFO: Will refresh channel BBC Radio Ulster
+INFO: Will refresh channel BBC Radio Wales
+INFO: Will refresh channel BBC Radio Wales
+INFO: Will refresh channel BBC Radio York
+INFO: Will refresh channel BBC Somerset
+INFO: Will refresh channel BBC Surrey
+INFO: Will refresh channel BBC Sussex
+INFO: Will refresh channel BBC Tees
+INFO: Will refresh channel BBC Three Counties Radio
+INFO: Will refresh channel BBC WM 95.6
+INFO: Will refresh channel BBC Wiltshire
+INFO: Will refresh channel BBC World Service
+
+INFO: Indexing radio programmes (concurrent)
+DEBUG: LWP verify mode: 1
+DEBUG: LWP CA file: C:\Program Files (x86)\get_iplayer\perl\lib\Mozilla\CA\cacert.pem
+DEBUG: Mojo::UserAgent CA file: C:\Program Files (x86)\get_iplayer\perl\lib\Mozilla\CA\cacert.pem
+
+INFO: Downloading BBC Radio 1Xtra schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl64/2019/w38
+
+INFO: Downloading BBC Radio 6 Music schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl65/2019/w38
+
+INFO: Downloading BBC Asian Network schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl68/2019/w38
+
+INFO: Downloading BBC Radio London schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6f/2019/w38
+
+INFO: Downloading BBC Radio Berkshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl74/2019/w38
+.
+INFO: Got 61 programmes for BBC Radio Berkshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl74/2019/w38
+
+INFO: Downloading BBC Radio Bristol schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl75/2019/w38
+.
+INFO: Got 89 programmes for BBC Asian Network schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl68/2019/w38
+
+INFO: Downloading BBC Radio Cambridgeshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl76/2019/w38
+.
+INFO: Got 87 programmes for BBC Radio 1Xtra schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl64/2019/w38
+
+INFO: Downloading BBC Radio Cornwall schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl77/2019/w38
+.
+INFO: Got 72 programmes for BBC Radio Bristol schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl75/2019/w38
+
+INFO: Downloading BBC Coventry & Warwickshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl78/2019/w38
+.
+INFO: Got 87 programmes for BBC Radio 6 Music schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl65/2019/w38
+
+INFO: Downloading BBC Radio Cumbria schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl79/2019/w38
+.
+INFO: Got 65 programmes for BBC Coventry & Warwickshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl78/2019/w38
+
+INFO: Downloading BBC Radio Cymru schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7b/2019/w38
+.
+INFO: Got 64 programmes for BBC Radio Cornwall schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl77/2019/w38
+
+INFO: Downloading BBC Radio Derby schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7c/2019/w38
+.
+INFO: Got 94 programmes for BBC Radio Cymru schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7b/2019/w38
+
+INFO: Downloading BBC Radio Devon schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7d/2019/w38
+.
+INFO: Got 75 programmes for BBC Radio Cumbria schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl79/2019/w38
+
+INFO: Downloading BBC Essex schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7f/2019/w38
+.
+INFO: Got 62 programmes for BBC Radio Derby schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7c/2019/w38
+
+INFO: Downloading BBC Radio 5 live schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7g/2019/w38
+.
+INFO: Got 70 programmes for BBC Radio Cambridgeshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl76/2019/w38
+
+INFO: Downloading BBC Radio 5 live sports extra schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7h/2019/w38
+.
+INFO: Got 89 programmes for BBC Radio 5 live schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7g/2019/w38
+
+INFO: Downloading BBC Radio 4 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7j/2019/w38
+.
+INFO: Got 37 programmes for BBC Radio 5 live sports extra schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7h/2019/w38
+
+INFO: Downloading BBC Radio 4 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7k/2019/w38
+.
+INFO: Got 61 programmes for BBC Essex schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7f/2019/w38
+
+INFO: Downloading BBC Radio 4 Extra schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7l/2019/w38
+.
+INFO: Got 73 programmes for BBC Radio Devon schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7d/2019/w38
+
+INFO: Downloading BBC Radio Foyle schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7m/2019/w38
+.
+INFO: Got 168 programmes for BBC Radio Foyle schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7m/2019/w38
+
+INFO: Downloading BBC Radio Gloucestershire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7n/2019/w38
+.
+INFO: Got 310 programmes for BBC Radio 4 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7j/2019/w38
+
+INFO: Downloading BBC Radio Guernsey schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7p/2019/w38
+.
+INFO: Got 61 programmes for BBC Radio London schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6f/2019/w38
+
+INFO: Downloading BBC Hereford & Worcester schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7q/2019/w38
+.
+INFO: Got 68 programmes for BBC Radio Gloucestershire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7n/2019/w38
+
+INFO: Downloading BBC Radio Humberside schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7r/2019/w38
+.
+INFO: Got 315 programmes for BBC Radio 4 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7k/2019/w38
+
+INFO: Downloading BBC Radio Jersey schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7s/2019/w38
+.
+INFO: Got 57 programmes for BBC Radio Guernsey schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7p/2019/w38
+
+INFO: Downloading BBC Radio Kent schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7t/2019/w38
+.
+INFO: Got 62 programmes for BBC Radio Humberside schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7r/2019/w38
+
+INFO: Downloading BBC Radio Lancashire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7v/2019/w38
+.
+INFO: Got 309 programmes for BBC Radio 4 Extra schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7l/2019/w38
+
+INFO: Downloading BBC Radio Leeds schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7w/2019/w38
+.
+INFO: Got 62 programmes for BBC Hereford & Worcester schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7q/2019/w38
+
+INFO: Downloading BBC Radio Leicester schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7x/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Lancashire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7v/2019/w38
+
+INFO: Downloading BBC Radio Lincolnshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7y/2019/w38
+.
+INFO: Got 57 programmes for BBC Radio Jersey schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7s/2019/w38
+
+INFO: Downloading BBC Radio Manchester schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl7z/2019/w38
+.
+INFO: Got 66 programmes for BBC Radio Kent schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7t/2019/w38
+
+INFO: Downloading BBC Radio Merseyside schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl80/2019/w38
+.
+INFO: Got 68 programmes for BBC Radio Leeds schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7w/2019/w38
+
+INFO: Downloading BBC Radio Nan Gaidheal schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl81/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Leicester schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7x/2019/w38
+
+INFO: Downloading BBC Newcastle schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl82/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Manchester schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7z/2019/w38
+
+INFO: Downloading BBC Radio Norfolk schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl83/2019/w38
+.
+INFO: Got 64 programmes for BBC Radio Lincolnshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl7y/2019/w38
+
+INFO: Downloading BBC Radio Northampton schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl84/2019/w38
+.
+INFO: Got 73 programmes for BBC Newcastle schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl82/2019/w38
+
+INFO: Downloading BBC Radio Nottingham schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl85/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Norfolk schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl83/2019/w38
+
+INFO: Downloading BBC Radio 1 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl86/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Northampton schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl84/2019/w38
+
+INFO: Downloading BBC Radio Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8b/2019/w38
+.
+INFO: Got 96 programmes for BBC Radio Nan Gaidheal schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl81/2019/w38
+
+INFO: Downloading BBC Radio Oxford schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8c/2019/w38
+.
+INFO: Got 60 programmes for BBC Radio Nottingham schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl85/2019/w38
+
+INFO: Downloading BBC Radio Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8d/2019/w38
+.
+INFO: Got 105 programmes for BBC Radio 1 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl86/2019/w38
+
+INFO: Downloading BBC Radio Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8g/2019/w38
+.
+INFO: Got 78 programmes for BBC Radio Merseyside schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl80/2019/w38
+
+INFO: Downloading BBC Radio Sheffield schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8h/2019/w38
+.
+INFO: Got 66 programmes for BBC Radio Oxford schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8c/2019/w38
+
+INFO: Downloading BBC Radio Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8j/2019/w38
+.
+INFO: Got 86 programmes for BBC Radio Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8b/2019/w38
+
+INFO: Downloading BBC Radio Shropshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8k/2019/w38
+.
+INFO: Got 75 programmes for BBC Radio Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8d/2019/w38
+
+INFO: Downloading BBC Radio Solent schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8l/2019/w38
+.
+INFO: Got 63 programmes for BBC Radio Solent schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8l/2019/w38
+
+INFO: Downloading BBC Somerset schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8m/2019/w38
+.
+INFO: Got 80 programmes for BBC Radio Sheffield schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8h/2019/w38
+
+INFO: Downloading BBC Radio Stoke schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8n/2019/w38
+.
+INFO: Got 86 programmes for BBC Radio Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8j/2019/w38
+
+INFO: Downloading BBC Radio Suffolk schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8p/2019/w38
+.
+INFO: Got 78 programmes for BBC Radio Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8g/2019/w38
+
+INFO: Downloading BBC Surrey schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8q/2019/w38
+.
+INFO: Got 73 programmes for BBC Somerset schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8m/2019/w38
+
+INFO: Downloading BBC Sussex schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8r/2019/w38
+.
+INFO: Got 62 programmes for BBC Radio Shropshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8k/2019/w38
+
+INFO: Downloading BBC Radio 3 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8t/2019/w38
+.
+INFO: Got 71 programmes for BBC Radio Stoke schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8n/2019/w38
+
+INFO: Downloading BBC Radio 2 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8v/2019/w38
+.
+INFO: Got 73 programmes for BBC Surrey schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8q/2019/w38
+
+INFO: Downloading BBC Radio Ulster schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8w/2019/w38
+.
+INFO: Got 75 programmes for BBC Sussex schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8r/2019/w38
+
+INFO: Downloading BBC Radio Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8x/2019/w38
+.
+INFO: Got 66 programmes for BBC Radio Suffolk schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8p/2019/w38
+
+INFO: Downloading BBC Radio Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8y/2019/w38
+.
+INFO: Got 86 programmes for BBC Radio 2 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8v/2019/w38
+
+INFO: Downloading BBC Wiltshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl8z/2019/w38
+.
+INFO: Got 93 programmes for BBC Radio 3 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8t/2019/w38
+
+INFO: Downloading BBC Radio York schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl90/2019/w38
+.
+INFO: Got 80 programmes for BBC Radio Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8x/2019/w38
+
+INFO: Downloading BBC Tees schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl93/2019/w38
+.
+INFO: Got 67 programmes for BBC Radio York schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl90/2019/w38
+
+INFO: Downloading BBC Three Counties Radio schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl96/2019/w38
+.
+INFO: Got 158 programmes for BBC Radio Ulster schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8w/2019/w38
+
+INFO: Downloading BBC WM 95.6 schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9f/2019/w38
+.
+INFO: Got 67 programmes for BBC Three Counties Radio schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl96/2019/w38
+
+INFO: Downloading BBC World Service schedule page (1/3): https://www.bbc.co.uk/schedules/p02zbmb3/2019/w38
+.
+INFO: Got 66 programmes for BBC Wiltshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8z/2019/w38
+.
+INFO: Got 80 programmes for BBC Radio Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl8y/2019/w38
+.
+INFO: Got 76 programmes for BBC WM 95.6 schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9f/2019/w38
+.
+INFO: Got 65 programmes for BBC Tees schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl93/2019/w38
+.
+INFO: Got 510 programmes for BBC World Service schedule page (JSON): https://www.bbc.co.uk/schedules/p02zbmb3/2019/w38
+
+Added: 30017:	15 Minute Drama: CJ Sansom - Shardlake: Sovereign - Episode 6, BBC Radio 4 Extra, b06d2fxc
+Added: 30100:	5 Live Breakfast: Your Call - 16/09/2019, BBC Radio 5 live, m0008hgm
+Added: 30121:	5 Live Breakfast - 16/09/2019, BBC Radio 5 live, m0008hgk
+Added: 30261:	50 Things That Made the Modern Economy: Series 2: 50 More Things... - Cubesat, BBC Radio 4, m0008hk8
+Added: 30406:	A' Mire ri Mïir - 16/09/2019, BBC Radio Nan Gaidheal, m0008hnz
+Added: 30441:	Ace - 16/09/2019, BBC Radio 1Xtra, m0008g66
+Added: 30516:	Adam Tomlinson and Anna Wallace - 16/09/2019, BBC Radio York, p07l61ds
+Added: 30559:	Ady Dayman and Jo Hayward - 16/09/2019, BBC Radio Leicester, p07l3t5g
+Added: 30610:	Afternoon with Allison Ferns - 16/09/2019, BBC Surrey, p07lsnq4
+Added: 30639:	Aithris Na Maidne - 16/09/2019, BBC Radio Nan Gaidheal, m0008hnv
+Added: 30689:	Alan Clifford - 16/09/2019, BBC Radio Nottingham, p07l3q8v
+Added: 30710:	Aled Hughes - Oes angen bod yn gwrtais?, BBC Radio Cymru, m0008h9c
+Added: 30736:	Alex Dyke - Kris Barras, BBC Radio Solent, p07l12bq
+Added: 30761:	Alfie and Anna at Breakfast - 16/09/2019, BBC Newcastle, p07ltj03
+Added: 30818:	Alun Newman and Lou Hannan - Darren Day and a professional make up artist, BBC Radio Solent, p07l12bg
+Added: 30921:	Andrew Peach - 16/09/2019, BBC Radio Berkshire, p07m0y49
+Added: 30943:	Andy Bennett - 16/09/2019, BBC Somerset, p07lf1fq
+Added: 30964:	Andy Collins - 16/09/2019, BBC Three Counties Radio, p07l4bj7
+Added: 31016:	Andy Twigge - 16/09/2019, BBC Radio Derby, p07lww69
+Added: 31036:	Andy Whittaker and Sarah Julian - 16/09/2019, BBC Radio Nottingham, p07l3q8f
+Added: 31072:	Annabel Amos - 16/09/2019, BBC Radio Northampton, p07l5r1s
+Added: 31111:	Antony Collins - 16/09/2019, BBC Tees, p07l6k2l
+Added: 32416:	Ashlea Tracey - 16/09/2019, BBC Radio Jersey, p07l38c3
+Added: 32476:	Asian Network Reports - 16/09/2019, BBC Asian Network, m0008hlq
+Added: 32506:	Asian Network's Big Debate - Parents wanting their children to become doctors, BBC Asian Network, m0008hln
+Added: 33182:	BBC News Summary - 2019/09/16 08:30 GMT, BBC World Service, w172wy8hxd9b7l7
+Added: 33183:	BBC News Summary - 2019/09/16 10:30 GMT, BBC World Service, w172wy8hxd9bh2h
+Added: 33184:	BBC News Summary - 2019/09/16 12:30 GMT, BBC World Service, w172wy8hxd9bqkr
+Added: 33185:	BBC News Summary - 2019/09/16 14:30 GMT, BBC World Service, w172wy8hxd9bz20
+Added: 33878:	BBC News - 2019/09/16 08:01 GMT, BBC World Service, w172wy0j0xkpd64
+Added: 33879:	BBC News - 2019/09/16 09:01 GMT, BBC World Service, w172wy0j0xkphy8
+Added: 33880:	BBC News - 2019/09/16 10:01 GMT, BBC World Service, w172wy0j0xkpmpd
+Added: 33881:	BBC News - 2019/09/16 11:01 GMT, BBC World Service, w172wy0j0xkprfj
+Added: 33882:	BBC News - 2019/09/16 12:01 GMT, BBC World Service, w172wy0j0xkpw5n
+Added: 33883:	BBC News - 2019/09/16 13:01 GMT, BBC World Service, w172wy0j0xkpzxs
+Added: 33884:	BBC News - 2019/09/16 14:01 GMT, BBC World Service, w172wy0j0xkq3nx
+Added: 33885:	BBC News - 2019/09/16 15:01 GMT, BBC World Service, w172wy0j0xkq7f1
+Added: 34295:	BBC Tees Breakfast - 16/09/2019, BBC Tees, p07l6k2d
+Added: 34430:	Back Tracks - 16/09/2019, BBC Somerset, p07lf1d4
+Added: 34471:	Becky Want - Louise Croombs sits in (16/09/2019), BBC Radio Manchester, p07m1c00
+Added: 34501:	Ben Jackson - 16/09/2019, BBC Radio Leicester, p07l3t5m
+Added: 34522:	Ben Prater - Crime prevention, BBC Wiltshire, p07lqym5
+Added: 34555:	Bernie Keith - 16/09/2019, BBC Radio Northampton, p07l5r20
+Added: 34629:	Bill Buckley - 16/09/2019, BBC Radio Berkshire, p07m0y69
+Added: 34655:	Blackwater - Episode 6, BBC Radio 4, m0002g4v
+Added: 34719:	Book at Bedtime: In Certain Circles - You only think of orphans in fairytales, BBC Radio 4 Extra, b052hwxq
+Added: 34730:	Book of the Week: Different Every Time - Robert Wyatt - Episode 1, BBC Radio 4 Extra, b04wtchx
+Added: 34770:	Bore Cothi - 16/09/2019, BBC Radio Cymru, m0008h9f
+Added: 34811:	Breakfast on BBC Surrey - 16/09/2019, BBC Surrey, p07lsqv8
+Added: 34831:	Breakfast with Ben and Sonia - 16/09/2019 - Ben Fryer and Sonia Watson, BBC Essex, p07lbdh9
+Added: 34860:	Breakfast - Monday - Georgia's classical alarm call, BBC Radio 3, m0008gtf
+Added: 34920:	Brody Swain - 16/09/2019, BBC Coventry & Warwickshire, p07lxhhx
+Added: 34936:	Business Daily - Africa's mobile credit revolution, BBC World Service, w3csy73n
+Added: 35002:	Caithream Cióil - Seonag Monk le ceïl Ceilteach, BBC Radio Nan Gaidheal, m0008hp5
+Added: 35041:	Cameron Ward - 16/09/2019, BBC Radio Jersey, p07l38cd
+Added: 35080:	Carla Greene - Ambrose Parry, BBC Radio Lincolnshire, p07l62w0
+Added: 35114:	Caroline Martin - 16/09/2019, BBC WM 95.6, p07lptw2
+Added: 35135:	Caroline Robertson - Richard Corrie sits in (16/09/2019), BBC Radio Cumbria, p07l9k7g
+Added: 35263:	Chelsea At Breakfast - North West Air Ambulance, BBC Radio Manchester, p07m1bxl
+Added: 35355:	Chris Mann - 16/09/2019, BBC Radio Cambridgeshire, p07m18ml
+Added: 35400:	Chrissie Jackson - Anna Perrott sits in, BBC Radio Norfolk, p07ldtq0
+Added: 35443:	Claire Carter - 16/09/2019, BBC Somerset, p07lf1c9
+Added: 35478:	Clara Amfo - Anderson .Paak's Live Lounge!, BBC Radio 1, m0008h12
+Added: 35565:	Coinneach Macﬁomhair - Na Colbhan, BBC Radio Nan Gaidheal, m0008hnx
+Added: 35590:	Colin Young - 16/09/2019, BBC Radio Shropshire, p07lxptq
+Added: 35643:	Composer of the Week: Henry Purcell (1659-1695) - A Brief Life, BBC Radio 3, m0008gtk
+Added: 35675:	Counterpoint: Series 33 - Heat 3, 2019, BBC Radio 4, m0008hkf
+Added: 35761:	Dad's Army: Series 2 - A Soldier's Farewell, BBC Radio 4 Extra, b00qmbky
+Added: 35782:	Daily Service - 16/09/2019 God as Creator, BBC Radio 4, m0008j1m
+Added: 35821:	Danny Kelly - 16/09/2019, BBC WM 95.6, p07lptv7
+Added: 35844:	Danny Pike - 16/09/2019, BBC Surrey, p07lsnpz
+Added: 35916:	David Burns - 16/09/2019, BBC Radio Humberside, p07m0qlk
+Added: 35939:	David FitzGerald - 16/09/2019, BBC Radio Devon, p07ltcjt
+Added: 35969:	David Prever's Breakfast Club - 16/09/2019, BBC Radio Oxford, p07m08nb
+Added: 36032:	David White - Thompson Square (16/09/2019), BBC Radio Cornwall, p07m07c2
+Added: 36200:	Dominic Cotter - 16/09/2019, BBC Radio Gloucestershire, p07lxymg
+Added: 36317:	Dulliau Chwyldro - 31/08/2018, BBC Radio Cymru, b0bh5s33
+Added: 36354:	Eadar DÖ Shaoghal - 7/8 Sgeulachd le Dïmhnall Macleïid - A' Chaitheamh, BBC Radio Nan Gaidheal, b03ybs2g
+Added: 36473:	Elliott Webb - 16/09/2019, BBC Hereford & Worcester, p07lqgt4
+Added: 36493:	Elliott and Toni at Breakfast - 16/09/2019, BBC Hereford & Worcester, p07lqgs3
+Added: 36518:	Emma Britton - Flies, takeaway cups & a gender secret, BBC Radio Bristol, p07ldyc2
+Added: 36538:	Eric Smith and Clare Ashford - 16/09/2019, BBC Radio Shropshire, p07lxpsz
+Added: 36563:	Essential Classics - Essential Classics with Ian Skelly: Lemn Sissay, Bainton's And I Saw a New Heaven, Lorenzo and Maharajah, BBC Radio 3, m0008gth
+Added: 36661:	Feasgar - Naidheachdan na maidne, BBC Radio Nan Gaidheal, m0008hp3
+Added: 36938:	Gari Wyn - Ffatri Faun Trackway yn Llangefni, BBC Radio Cymru, m0008h9h
+Added: 37057:	Georgey Spanswick at Breakfast - 16/09/2019, BBC Radio York, p07l61bp
+Added: 37298:	Gordon Sparks and Laura James - 16/09/2019, BBC Radio Devon, p07ltcj4
+Added: 37319:	Gordon Swindlehurst - 16/09/2019, BBC Radio Cumbria, p07l9k7z
+Added: 37344:	Graham Liver - Hayley Kay sits in (16/09/2019), BBC Radio Lancashire, p07m13m6
+Added: 37388:	Graham Seaman - Benefits of volunteering, BBC Wiltshire, p07lqync
+Added: 37556:	Helen Blaby - 16/09/2019, BBC Radio Northampton, p07l5r2b
+Added: 37668:	Hugo Duncan - 16/09/2019, BBC Radio Ulster, m0008hr3
+Added: 37712:	I Can't Be Racist - -, BBC Radio 4, m0002rkq
+Added: 37746:	Ian Skye - 16/09/2019, BBC Radio Derby, p07lww5y
+Added: 37853:	Inheritance Tracks - Stewart Lee, BBC Radio 4 Extra, b05ysyt9
+Added: 37985:	James Hazell - 16/09/2019, BBC Radio Suffolk, p07m9t9p
+Added: 38011:	James Piekos - 16/09/2019, BBC Radio Humberside, p07m0ql9
+Added: 38031:	James Thomas - The Rifles Museum, BBC Wiltshire, p07lqynw
+Added: 38050:	Jane Austen: Emma - Episode 1, BBC Radio 4 Extra, b008h3ns
+Added: 38071:	Janet Kipling - 16/09/2019, BBC Radio Devon, p07ltck0
+Added: 38097:	Jason Mohammad - Dot Davies sits in. Today: your messages of support for Gareth 'Alfie' Thomas, BBC Radio Wales, m0008hhd
+Added: 38163:	Jenny Kendall-Tobias - 16/09/2019, BBC Radio Guernsey, p07m9gbg
+Added: 38183:	Jenny Lee Summers - Lisa Marrey sits in (16/09/2019), BBC Radio Merseyside, p07lxc7z
+Added: 38206:	Jenny Mullin - 16/09/2019, BBC Radio Jersey, p07l38cs
+Added: 38230:	Jeremy Vine - Liberal Democrats and HIV, BBC Radio 2, m0008gx4
+Added: 38285:	Jim Hawkins - 16/09/2019, BBC Radio Shropshire, p07lxpt4
+Added: 38442:	John Acres - 16/09/2019, BBC Radio Stoke, p07m0rw3
+Added: 38464:	John Beattie - 16/09/2019, BBC Radio Scotland, m0008h2r
+Added: 38485:	John Darvall - 16/09/2019, BBC Radio Bristol, p07ldycr
+Added: 38511:	John Gillmore and Nishma Hindocha - 16/09/2019, BBC Radio Lancashire, p07m13nv
+Added: 38610:	John Randall - 16/09/2019, BBC Radio Guernsey, p07ltfl5
+Added: 38699:	Jonathan Cowap - 16/09/2019, BBC Radio York, p07l61c7
+Added: 38761:	Julia George - 16/09/2019, BBC Radio Kent, p07l1jk5
+Added: 38783:	Julian Clegg - The Lib Dem conference in Bournemouth and a disabled swimmer who has swam the Loch Ness, BBC Radio Solent, p07l12b5
+Added: 38803:	Julie Skentelbery and James Churchfield - 16/09/2019, BBC Radio Cornwall, p07m07bt
+Added: 38855:	Kat Orman - 16/09/2019, BBC Radio Oxford, p07m08nr
+Added: 38924:	Ken Bruce - Mary Wilson from The Supremes picks her Tracks of My Years, BBC Radio 2, m0008gx2
+Added: 39097:	Lauren Laverne - Cloudbusting and This Week's Watchlist, BBC Radio 6 Music, m0008hmt
+Added: 39118:	Laurence Reed - 16/09/2019, BBC Radio Cornwall, p07m07c7
+Added: 39169:	Lesley Dolphin - Sarah Lilley sits in (16/09/2019), BBC Radio Suffolk, p07m9tbb
+Added: 39220:	Lilley Mitchell - 16/09/2019, BBC Radio Oxford, p07m08p6
+Added: 39292:	Lisa Shaw - 16/09/2019, BBC Newcastle, p07ltj08
+Added: 39326:	Liz Green - Larry Budd sits in (16/09/2019), BBC Radio Leeds, p07lsgj5
+Added: 39381:	Louise Stones - 16/09/2019, BBC Radio Stoke, p07m0rxb
+Added: 39449:	Lunchtime Live - Sue Marchant sits in (16/09/2019), BBC Radio Cambridgeshire, p07m18n2
+Added: 39450:	Lynette Fay - 16/09/2019, BBC Radio Foyle, m0008ltq
+Added: 39488:	Malcolm Boyden - 16/09/2019, BBC Hereford & Worcester, p07lqgty
+Added: 39588:	Marie Lennon - Malawi, BBC Wiltshire, p07lqymm
+Added: 39633:	Mark Cummings - 16/09/2019, BBC Radio Gloucestershire, p07lxym1
+Added: 39659:	Mark Dennison - 16/09/2019, BBC Radio Nottingham, p07l3q8m
+Added: 39679:	Mark Murphy - Stephen Foster sits in (16/09/2019), BBC Radio Suffolk, p07m9t98
+Added: 39731:	Martin Ballard - Lee Mead, BBC Radio Leicester, p07l3t5s
+Added: 39763:	Mary Anne Hobbs - With Belle & Sebastian, BBC Radio 6 Music, m0008hmw
+Added: 39923:	Melvyn in the Morning - Knife Crime, David Cameron's Memoirs, Living Life to the Max, BBC Radio Lincolnshire, p07l62vt
+Added: 40090:	Mike Sweeney - Chrissie Hynde, BBC Radio Manchester, p07m1bz2
+Added: 40116:	Mike Zeller - Caroline Robertson sits in (16/09/2019), BBC Radio Cumbria, p07l9k71
+Added: 40246:	More or Less - Cape Town murders, BBC World Service, w3csz3rf
+Added: 40293:	Mornings - With Kaye Adams, BBC Radio Scotland, m0008h2p
+Added: 40361:	MÖiri Dhall agus Sgeulachdan Eile - 7/8 Oidhche Gealaich le Donnchadh MacGillIosa, BBC Radio Nan Gaidheal, m0008hp1
+Added: 40525:	News Headlines; Shipping Forecast - 16/09/2019, BBC Radio 4, m0008j1p
+Added: 40559:	News Summary - 16/09/2019, BBC Radio 4, m0008hjy
+Added: 40617:	Newsbeat - 'Incredible Role Model', BBC Radio 1Xtra, m0008g68
+Added: 40762:	Newshour - Saudi oil attacks: US says intelligence shows Iran involved, BBC World Service, w172wq4whqz2zwg
+Added: 40807:	Nick Coffer - 16/09/2019, BBC Three Counties Radio, p07l4bmd
+Added: 40827:	Nick Conrad - Graham Barnard sits in, BBC Radio Norfolk, p07ldtnz
+Added: 40936:	Nicky Price - 16/09/2019, BBC Radio Gloucestershire, p07lxym6
+Added: 40958:	Nihal Arthanayake - 16/09/2019, BBC Radio 5 live, m0008hgr
+Added: 40981:	Noreen Khan - New track of the week, BBC Asian Network, m0008hls
+Added: 41156:	Oscar Pearson - 16/09 - Minimum wage & Saturday sport, BBC Radio Guernsey, p07ltfkb
+Added: 41166:	Our Lives with Michelle McManus - Kindness on a pink bike, bees and collecting park runs!, BBC Radio Scotland, m0008h2t
+Added: 41179:	Outlook - How I fixed my own brain, BBC World Service, w3csyfcx
+Added: 41272:	Pat Marsh and Erika North - 16/09/2019, BBC Radio Kent, p07l1jkz
+Added: 41394:	Paul Shuttleworth - 2001, BBC Radio Shropshire, p07lxpvj
+Added: 41424:	Paulette Edwards - 16/09/2019, BBC Radio Sheffield, p07l9q5x
+Added: 41451:	Perry Spiller and Liz Ellis - 16/09/2019, BBC Radio Stoke, p07m0rwp
+Added: 41846:	Radio 1 Breakfast with Greg James - Greg Is Back, New Quiz Team and Ten Minute Takeover!, BBC Radio 1, m0008h10
+Added: 42011:	Radio 3 Lunchtime Concert - Romantically German, BBC Radio 3, m0008gtn
+Added: 42085:	Radio Foyle News - 16/09/2019, BBC Radio Foyle, m0008j15
+Added: 42086:	Radio Foyle News - 16/09/2019, BBC Radio Foyle, m0008j1c
+Added: 42309:	Radio Ulster News - 16/09/2019, BBC Radio Ulster, m0008hqv
+Added: 42310:	Radio Ulster News - BBC News, BBC Radio Ulster, m0008hr5
+Added: 42633:	Robert Elms - 16/09/2019, BBC Radio London, p07l3bb1
+Added: 42706:	Roger Phillips - 16/09/2019, BBC Radio Merseyside, p07lxc6m
+Added: 42757:	Rony Robinson - 16/09/2019, BBC Radio Sheffield, p07l9q6f
+Added: 42831:	Sadie Nine - 16/09/2019, BBC Essex, p07lbdjm
+Added: 42847:	Sally Fairfax - 16/09/2019, BBC Radio Humberside, p07m0qlv
+Added: 42867:	Sally Naden - 16/09/2019, BBC Radio Lancashire, p07m13mz
+Added: 42887:	Sally Pepper - 16/09/2019, BBC Radio Derby, p07lww64
+Added: 42927:	Sam and Daz at Breakfast - 16/09/2019, BBC WM 95.6, p07lptth
+Added: 43015:	Sarah Walker - 16/09/2019, BBC Radio Berkshire, p07m0y5k
+Added: 43130:	Scott Dalton - Rounders and empty nests, BBC Radio Lincolnshire, p07l62vj
+Added: 43154:	Scott Makin - 16/09/2019, BBC Tees, p07l6k38
+Added: 43166:	Scott Mills - The Boys Are Back, BBC Radio 1, m0008h14
+Added: 43195:	Sean Styles - 16/09/2019, BBC Radio Merseyside, p07lxc5t
+Added: 43258:	Shaun Keaveny - Ep 181 - Ben Elton joins Shaun, BBC Radio 6 Music, m0008hmy
+Added: 43444:	Simon Logan - Jason Donovan, BBC Newcastle, p07ltj0g
+Added: 43465:	Simon Parkin - 16/09/2019, BBC Somerset, p07lf1cl
+Added: 44010:	Start the Week - Escaping the past, BBC Radio 4, m0008hjq
+Added: 44074:	Stephen Bumfrey - 16/09/2019, BBC Radio Norfolk, p07ldtqn
+Added: 44322:	Steve Yabsley - Steve Yabsley, BBC Radio Bristol, p07ldycz
+Added: 44540:	Sunny and Shay - 16/09/2019, BBC WM 95.6, p07lptw7
+Added: 44561:	Sussex Breakfast - 16/09/2019, BBC Sussex, p07lsnps
+Added: 44606:	Talkback - 16/09/2019, BBC Radio Foyle, m0008hr1
+Added: 44658:	Tammy Gooding - 16/09/2019, BBC Hereford & Worcester, p07lqgv9
+Added: 44691:	Taro'r Post - 16/09/2019, BBC Radio Cymru, m0008h9k
+Added: 44778:	The 1Xtra Breakfast Show with Dotty - Rap Game's Kiico and Chade Paine, BBC Radio 1Xtra, m0008g64
+Added: 44817:	The Afternoon Show - Live from V&A Dundee, BBC Radio Scotland, m0008h2w
+Added: 44902:	The Asian Network Breakfast Show with Harpz Kaur - The Best Start To Your Week, BBC Asian Network, m0008hll
+Added: 44961:	The Breakfast Show with Trish Adudu - 16/09/2019, BBC Coventry & Warwickshire, p07lxhhj
+Added: 44982:	The Breakfast Show - 16/09/2019, BBC Radio Foyle, m0008j13
+Added: 45222:	The Emma Barnett Show - 16/09/2019, BBC Radio 5 live, m0008hgp
+Added: 45230:	The Europeans, by Orlando Figes - Episode 1, BBC Radio 4, m0008hjs
+Added: 45363:	The Golden Hour - 16/09/2019, BBC Radio Devon, p07ltcjh
+Added: 45383:	The Golden Years - 16/09/2019, BBC Radio Sheffield, p07l9q7b
+Added: 45446:	The JVS Show - Fat shaming and Luton Airport, BBC Three Counties Radio, p07l4bks
+Added: 45485:	The Kev Lawrence Breakfast Show - 16/09/2019, BBC Radio Cambridgeshire, p07m18m9
+Added: 45579:	The Mark Patterson Show - 16/09/2019, BBC Radio Foyle, m0008j19
+Added: 45676:	The News at One - 16/09/2019, BBC Radio Foyle, m0008j17
+Added: 45846:	The Newsroom - 16/09/2019 GMT, BBC World Service, w172wygp343m20x
+Added: 45847:	The Newsroom - 16/09/2019 GMT, BBC World Service, w172wygp343m9j5
+Added: 45849:	The No. 1 Ladies' Detective Agency - The House of Unexpected Sisters, BBC Radio 4, m0008hkb
+Added: 45870:	The Nolan Show - 16/09/2019, BBC Radio Foyle, m0008hqx
+Added: 46005:	The Richard Stead Breakfast Show - 16/09/2019, BBC Radio Leeds, p07lsghl
+Added: 46049:	The Senses - The Sixth Sense, BBC Radio 4 Extra, b072zxm4
+Added: 46130:	The Stephanie Hirst Show - 16/09/2019, BBC Radio Leeds, p07lsghw
+Added: 46162:	The TED Interview - Bill Gates, BBC Radio 4 Extra, m0008hjh
+Added: 46171:	The Testaments - Episode 1, BBC Radio 4, m0008hk0
+Added: 46238:	The Wake Up Call - 16/09/2019, BBC Radio Kent, p07l1jhr
+Added: 46268:	The Why Factor - Why are we so gloomy about the world?, BBC World Service, w3csyv01
+Added: 46330:	The Zoe Ball Breakfast Show - Taffy Brodesser-Akner, BBC Radio 2, m0008gwy
+Added: 46372:	Thordis Fridriksson - 16/09/2019, BBC Radio Cambridgeshire, p07m18nc
+Added: 46553:	Toby Foster at Breakfast - 16/09/2019, BBC Radio Sheffield, p07l9q59
+Added: 46571:	Toby Foster: The Phone in - 16/09/2019, BBC Radio Sheffield, p07l9q5l
+Added: 46601:	Today - 16/09/2019, BBC Radio 4, m0008hjn
+Added: 46648:	Tony Fisher - 16/09/2019, BBC Essex, p07lbdlk
+Added: 46722:	Tony Snell in the Morning - 16/09/2019, BBC Radio Merseyside, p07lxc51
+Added: 46974:	Vanessa Feltz - Liberal Democrats and happy marriage, BBC Radio London, p07l3b9w
+Added: 47004:	Vic Minett - Marian McNamee sits in (16/09/2019), BBC Coventry & Warwickshire, p07lxhhp
+Added: 47197:	Weather - 16/09/2019, BBC Radio 4, m0008hk4
+Added: 47314:	What Is a Story? - Filling the Gaps, BBC Radio 4 Extra, b061qccj
+Added: 47320:	Whispers: Series 1 - Episode 1, BBC Radio 4 Extra, b007k2kg
+Added: 47368:	Witness History - An Ethiopian war hero, BBC World Service, w3csywxx
+Added: 47406:	Woman's Hour - My Best Day - Suzanne Goldberg on the power of laughter, BBC Radio 4, m0008hjv
+Added: 47463:	World Business Report - Oil prices surge after Saudi attack, BBC World Service, w172wx8tq61kv6s
+Added: 47489:	World Update - The UK and the European Commission meet for Brexit negotiations, BBC World Service, w172wy9rfrhh3q1
+Added: 47515:	World at One - 16/09/2019, BBC Radio 4, m0008hk6
+Added: 47536:	Wynne Evans - 16/09/2019, BBC Radio Wales, m0008hhg
+Added: 47567:	Yasmin Evans - 16/09/2019, BBC Radio 1Xtra, m0008g6b
+Added: 47636:	You and Yours - Eye surgery, Small cars, Wine from Portugal, BBC Radio 4, m0008hk2
+INFO: Added 229 radio programmes to cache
+INFO: Search term 'prom' is a substring
+DEBUG: Search download_regex = prom
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 
+DEBUG: Search before = 
+DEBUG: Search available_since = 
+DEBUG: Search available_before = 
+DEBUG: Search expires_after = 
+DEBUG: Search expires_before = 
+
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+Matches:
+41786:	Proms in the Park - -, BBC Radio Scotland, m0008gf2
+41787:	Proms in the Park - 2019, BBC Radio Foyle, m0008gyr
+41788:	Proms in the Park - Proms in the Park 2019, Live from Swansea, BBC Radio Wales, m0008gzg
+41789:	Proms in the Park - 14/09/2019, BBC Radio 2, m0008hg6
+INFO: 4 matching programmes

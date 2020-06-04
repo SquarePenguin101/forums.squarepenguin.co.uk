@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Content Availability</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Content Availability</div>
+<div id="pagetitle"><h2>Content Availability</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-4</h2></div><div class="dateline">16-07-2013, 06:23 PM</div>
+</div>
+<div class="message">I'm sure i have missed something......<br />
+<br />
+If a programme is available via BBC Iplayer, would it not be available via get_iplayer?<br />
+<br />
+There are a number of programmes that this is happening with......<br />
+<br />
+Thanks<br />
+<br />
+Matt</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-7</h2></div><div class="dateline">16-07-2013, 06:37 PM</div>
+</div>
+<div class="message">Pick PID out of the URL in your browser and use that<br />
+<br />
+Eg: get_iplayer --pid=</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-07-2013, 07:07 PM</div>
+</div>
+<div class="message">get_iplayer doesn't crawl the iPlayer site to populate its cache of programmes - it would be impractical. As a result, there may be times when the get_iplayer data sources don't match what is on the iPlayer site.  <br />
+<br />
+As kernelbasher described, the simplest remedy is to snip the PID of the programme and feed it to get_iplayer.  <br />
+<br />
+You can also feed the entire URL to get_iplayer:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --url "http://www.bbc.co.uk/iplayer/episode/b036tqq3/The_Archers_14_07_2013/"</code></div></div><br />
+<br />
+Note that for radio programmes the URL must come from the original iPlayer site (<a href="http://www.bbc.co.uk/iplayer/radio">http://www.bbc.co.uk/iplayer/radio</a>), not the newer iPlayer Radio site (<a href="http://www.bbc.co.uk/radio">http://www.bbc.co.uk/radio</a>).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-7</h2></div><div class="dateline">16-07-2013, 07:19 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>845 Wrote:</cite>Pick PID out of the URL in your browser and use that<br />
+<br />
+Eg: get_iplayer âpid=</blockquote><br />
+Looked a bit messed up that let's try again now the forum is fixed<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b0371dc3</code></div></div>That's just an example of how to fetch top gear ep3</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-4</h2></div><div class="dateline">16-07-2013, 07:26 PM</div>
+</div>
+<div class="message">Thank you,<br />
+<br />
+I did reply but for some reason my post was not displayed.<br />
+<br />
+Done what you have mentioned and obviously worked.<br />
+<br />
+I don't want to go against Forum Rules and if i have apologies......<br />
+<br />
+Is there a similar way to rip from ITV Player etc, and a similar way for YouTube.<br />
+<br />
+I've tried Stream Transporter, however that is captured in real time and my internet connection is poor (1.5mb)<br />
+<br />
+Thanks again<br />
+<br />
+MAtt</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-19</h2></div><div class="dateline">17-07-2013, 10:24 AM</div>
+</div>
+<div class="message">I am obviously missing a detail, but haven't worked it out in the documentation<br />
+<br />
+when I pick out the "pid" from the url - that doesn't work.<br />
+But if I search for the programme through get_iplayer type=radio command and use that code - I can download the programme.  <br />
+<br />
+Should I be able to do it form the url pid - that ought to be easier.  What am I missing?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-07-2013, 01:14 PM</div>
+</div>
+<div class="message">If it's a radio programme, you must always include <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=radio</code></div></div>, or have it set in your preferences.  TV and radio listings are cached separately and get_iplayer only searches for TV programmes by default, for better or worse.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Content Availability</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

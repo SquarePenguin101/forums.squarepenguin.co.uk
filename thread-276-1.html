@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloads from BBC Radio Nan Gaidheal and Radio Ulster have failed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloads from BBC Radio Nan Gaidheal and Radio Ulster have failed</div>
+<div id="pagetitle"><h2>Downloads from BBC Radio Nan Gaidheal and Radio Ulster have failed</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-276-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-727</h2></div><div class="dateline">13-11-2014, 11:57 PM</div>
+</div>
+<div class="message">Hi, I have noticed that downloads from BBC Radio nan Gaidheal and BBC Ulster/Foyle have failed since Monday night. Every attempt returns a message that no specified modes are available, despite the programmes being available on iPlayer. Any suggestions?<br />
+<br />
+Example:<br />
+_Caithream_Ci_il_name_radio<br />
+Matches:<br />
+10742:	Caithream CiÃ¹il - 11/11/2014, BBC Radio Nan Gaidheal, <br />
+10743:	Caithream CiÃ¹il - 12/11/2014, BBC Radio Nan Gaidheal, <br />
+10744:	Caithream CiÃ¹il - 13/11/2014, BBC Radio Nan Gaidheal, <br />
+<br />
+INFO: 3 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=wma)<br />
+ERROR: Failed to record 'Caithream CiÃ¹il - 11/11/2014 (b04nytpr)'<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=wma)<br />
+ERROR: Failed to record 'Caithream CiÃ¹il - 12/11/2014 (b04nyts7)'<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=wma)<br />
+ERROR: Failed to record 'Caithream CiÃ¹il - 13/11/2014 (b04nytw3)'<br />
+WARNING: PVR Run: _Caithream_Ci_il_name_radio: 3 download failure(s)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">14-11-2014, 01:31 AM</div>
+</div>
+<div class="message">It seems to work here<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer.cmd --type=radio --modes=wma --pid=b04nytpr</code></div></div>INFO Trying to stream pid using type radio<br />
+INFO: pid found in cache<br />
+Matches:<br />
+12139:  Caithream CiÃ¹il - 11/11/2014, BBC Radio Nan Gaidheal,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: wma1 modes will be tried for version default<br />
+INFO: Trying wma1 mode to record radio: Caithream CiÃ¹il - 11/11/2014<br />
+INFO: File name prefix = Caithream_Ciuil.2014-11-11<br />
+INFO: Recording file D:\rdown\getip/Caithream_Ciuil.2014-11-11_part01.wma</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2014, 02:17 AM</div>
+</div>
+<div class="message">Unfortunately, the BBC data for those programmes is broken, so get_iplayer can't find the usual streams.  I wouldn't usually recommend WMA in this case because the stream available is low quality, and it records in real time, but that's the only option available at present.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2014, 02:23 AM</div>
+</div>
+<div class="message">The BBC metadata also lists the programmes as not yet available, which clearly isn't true.  We've seen several programmes like this in recent weeks.  The streams have usually shown up a few days later, so you might check again in a few days.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-729</h2></div><div class="dateline">14-11-2014, 11:17 AM</div>
+</div>
+<div class="message">Same thing with Radio Cymru. I was able to download a wma version of a programme yesterday in real time (obviously not optimal), but even that has failed today.<br />
+<br />
+INFO Trying to stream pid using type radio<br />
+INFO: pid found in cache<br />
+Matches:<br />
+10737:	C2 - Georgia Ruth Williams: 13/11/2014, BBC Radio Cymru, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=)<br />
+INFO: You may receive this message if you are using get_iplayer outside the UK<br />
+ERROR: Failed to record 'C2 - Georgia Ruth Williams: 13/11/2014 (b04nyn6c)'</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">14-11-2014, 07:31 PM</div>
+</div>
+<div class="message">Yr wyf yn sicr y gallwch ddysgu yn gyflym mewn gwirionedd</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">14-11-2014, 09:07 PM</div>
+</div>
+<div class="message">Strange that the mediaselector page only shows the wma version as available for these.<br />
+<br />
+Do we know where the iPlayer gets the stream info from if it's not in the mediaselector?<br />
+<br />
+Something to do with nitro?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2014, 09:11 PM</div>
+</div>
+<div class="message">Two different mediaselector APIs.  I'll be switching get_iplayer to the other one.  It's possible the old one has been left to rot.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-727</h2></div><div class="dateline">15-11-2014, 12:01 AM</div>
+</div>
+<div class="message">Thanks for the speedy response(s). Looks like all the celtic stations are affected!<br />
+<br />
+I will keep trying, and hope that the gaelic programmes (both kinds) return to the fold.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-730</h2></div><div class="dateline">16-11-2014, 05:39 PM</div>
+</div>
+<div class="message">--modes=wma, as suggested by mrg9999, works - up to a point!  It seems that some progs (e.g. --pid=b04n8t2k) are stored in multiple parts and only the first part is retrieved.  Can this be fixed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-729</h2></div><div class="dateline">17-11-2014, 09:52 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/downloads-from-bbc-radio-nan-gaidheal-and-radio-ulster-have-failed/#post-10549">Quote:</a>&lt;/div&gt;Yr wyf yn sicr y gallwch ddysgu yn gyflym mewn gwirionedd</blockquote>
+<br />
+Hen enw yw Y Dysgwr Araf - wedi dysgu erbyn hyn, ond dysgu o hyd, wrth gwrs!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-11-2014, 09:11 PM</div>
+</div>
+<div class="message">First cut at a patch for this is in Git.  Info here:<br />
+<br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg06671.html">http://www.mail-archive.com/get_iplayer@...06671.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-729</h2></div><div class="dateline">17-11-2014, 11:35 PM</div>
+</div>
+<div class="message">Seems to work fine so far. Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-727</h2></div><div class="dateline">20-11-2014, 11:25 PM</div>
+</div>
+<div class="message">Agreed, everything back and seems to be working fine.  Thanks for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-742</h2></div><div class="dateline">27-11-2014, 03:56 AM</div>
+</div>
+<div class="message">DP,<br />
+<br />
+I'm also unable to download Radio Ulster programs. I re-installed Win v2.90 from the above link but still no success. Am I missing something?<br />
+<br />
+Thanks!<br />
+<br />
+Scott</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-742</h2></div><div class="dateline">06-12-2014, 04:02 AM</div>
+</div>
+<div class="message">Bump</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">06-12-2014, 11:10 AM</div>
+</div>
+<div class="message">The current version of git HEAD works for me.<br />
+<br />
+Just tried <a href="http://www.bbc.co.uk/programmes/b04st6xs">The Radio Ulster Advent Calendar - 05-12-2014</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-742</h2></div><div class="dateline">10-12-2014, 06:24 AM</div>
+</div>
+<div class="message">No luck. Still getting the following <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) avail<br />
+able for this programme with version 'default' (try using --modes=wma)<br />
+ERROR: Failed to record ' -  (b04st6xs)'<br />
+<br />
+WMA seldom works for the entire length of a program and it is easier to just play the stream, capture it with an audio recorder and screw with the resulting wav file<br />
+<br />
+Thanks to anybody who understands this problem and how to solve it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-742</h2></div><div class="dateline">10-12-2014, 06:41 AM</div>
+</div>
+<div class="message">UPDATE<br />
+<br />
+It works! Hooray! Great day in the morning!<br />
+<br />
+Uninstalled the previous version and all its components. Reinstalled, dropped in the two patched files from DP at the link above and now Mickey Bradley is back. Christmas has come early. Thanks, guys!<br />
+<br />
+Scott</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-790</h2></div><div class="dateline">19-12-2014, 06:25 PM</div>
+</div>
+<div class="message">Still getting this problem tried githead fix still getting this;<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=wma)<br />
+ERROR: Failed to record 'Marc Riley - Primitive Parts (b04v61pj)'<br />
+<br />
+can get wma to work but so slow, want to record as mp3<br />
+Thanks</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-276-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloads from BBC Radio Nan Gaidheal and Radio Ulster have failed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failing to get version pid metadata</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Failing to get version pid metadata</div>
+<div id="pagetitle"><h2>Failing to get version pid metadata</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1084</h2></div><div class="dateline">05-11-2015, 07:53 PM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: p036khq6 using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: Could not download programme metadata from http://www.bbc.co.uk/programmes/p036khq6.xml<br />
+ERROR: Failed to get version pid metadata from iplayer site</code></div></div>I'm running the get_iplayer on Ubuntu. I have the PPA installed so I seem to have the latest get_iplayer.<br />
+<br />
+The example PID came from this page: <a href="http://www.bbc.com/news/world-asia-34568674">http://www.bbc.com/news/world-asia-34568674</a><br />
+<br />
+To no avail, I can't get anything to download anymore. I've read the release notes and similar threads on this forum. Any ideas? Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-11-2015, 08:58 PM</div>
+</div>
+<div class="message">If you had checked the URL referenced in the error message (<a href="http://www.bbc.co.uk/programmes/p036khq6.xml">http://www.bbc.co.uk/programmes/p036khq6.xml</a>) you would have seen that it doesn't exist. That is because p036khq6 does not identify a BBC programme. <br />
+<br />
+The BBC recently broke get_iplayer's method of downloading video clips from BBC News. The gory details and a possible workaround are here:<br />
+<br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg08157.html">http://www.mail-archive.com/get_iplayer@...08157.html</a><br />
+<br />
+A fix for this will be in the 2.95 release and in the development version sometime next week.  However, be advised that this feature is to be deprecated and removed from get_iplayer in the near future. I recommend you try youtube-dl instead.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>To no avail, I can't get anything to download anymore. I've read the release notes and similar threads on this forum. Any ideas? Thanks!</blockquote>
+Avoid hyperbole. You can still download everything else aside from BBC News video clips.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1084</h2></div><div class="dateline">06-11-2015, 10:48 AM</div>
+</div>
+<div class="message">Dinky!<br />
+<br />
+Thank you so much for your help! I greatly appreciate it.<br />
+<br />
+As for the "everything else works" comment, for me, the BBC news videos are the most important and not the shows. I use them for work, believe it or not. :-)<br />
+<br />
+Cheers</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Failing to get version pid metadata</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

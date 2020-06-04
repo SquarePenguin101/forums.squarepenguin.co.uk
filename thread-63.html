@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Problems running cron task</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems running cron task</div>
+<div id="pagetitle"><h2>Problems running cron task</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-132</h2></div><div class="dateline">17-10-2013, 12:27 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I'm using get_iplayer on my RPi. I've a bunch of pvr searches set up and it works absolutely fine:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@infinity:/home/get_iplayer# /home/get_iplayer/get_iplayer --pvr --profile-dir /root/.get_iplayer<br />
+get_iplayer v2.84, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Running PVR Searches:<br />
+_Nina_and_the_Neurons_name_tv<br />
+Matches:<br />
+1887:&nbsp;&nbsp; Nina and the Neurons - Earth Explorers: 2. Grand Canyon, CBeebies, Children's,Entertainment &amp; Comedy,Learning,Pre-School,TV, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhigh1,flashhigh2,flashstd1,flashstd2 modes will be tried for version default<br />
+INFO: Trying flashhigh1 mode to record tv: Nina and the Neurons - Earth Explorers: 2. Grand Canyon<br />
+INFO: File name prefix = 2_-_Nina_and_the_Neurons_-_Earth_Explorers_Grand_Canyon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB</code></div></div><br />
+<br />
+<br />
+However ...<br />
+<br />
+If I run the same command as a cron job, it fails as it seems not to be able to find rtmpdump:<br />
+<br />
+Cron: 10 * * * * /home/get_iplayer/get_iplayer --pvr --profile-dir /root/.get_iplayer &gt;&gt; /tmp/get_iplayer.log<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v2.84, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Running PVR Searches:<br />
+_Nina_and_the_Neurons_name_tv<br />
+INFO: Getting tv Index Feeds<br />
+..............................................................................<br />
+Added: 19:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 Music Live at Maida Vale - October 2013: 3. Paul McCartney - 6 Music Live at Maida Vale Highlights, Highlights, Classic Pop &amp; Rock,Music,TV, default<br />
+Added: 132:&nbsp;&nbsp;&nbsp;&nbsp; Arthur: Series 6 - 9. Just Desserts/The Big Dig, CBBC, Animation,Children's,Entertainment &amp; Comedy,TV, default<br />
+Added: 635:&nbsp;&nbsp;&nbsp;&nbsp; Bob the Builder: Project Build It: Series 6 - 2. Bob's Big Idea, CBeebies, Animation,Children's,Entertainment &amp; Comedy,TV, default<br />
+Added: 1281:&nbsp;&nbsp;&nbsp;&nbsp;Horrible Histories: Series 3 - Episode 8, CBBC, Audio Described,Children's,Entertainment &amp; Comedy,Factual,TV, default,audiodescribed<br />
+Added: 1315:&nbsp;&nbsp;&nbsp;&nbsp;House of Lords - Care Bill, BBC Parliament, Factual,News,Politics,TV, default,<br />
+Added: 1500:&nbsp;&nbsp;&nbsp;&nbsp;Little Robots: Series 4 - 8. Noisy Knows Noise, CBeebies, Animation,Children's,Entertainment &amp; Comedy,TV, default<br />
+Added: 1937:&nbsp;&nbsp;&nbsp;&nbsp;Octonauts: Series 1 - 21. The Giant Whirlpool, CBeebies, Animation,Audio Described,Children's,Entertainment &amp; Comedy,Learning,Pre-School,TV, default,audiodescribed<br />
+Added: 2102:&nbsp;&nbsp;&nbsp;&nbsp;Postman Pat: Special Delivery Service: Series 1 - 9. Precious Eggs, CBeebies, Animation,Children's,Entertainment &amp; Comedy,TV, default<br />
+Added: 2140:&nbsp;&nbsp;&nbsp;&nbsp;Q Pootle 5 - 19. The Biggest Picture Ever, CBeebies, Animation,Children's,Entertainment &amp; Comedy,TV, default<br />
+Matches:<br />
+1887:&nbsp;&nbsp; Nina and the Neurons - Earth Explorers: 2. Grand Canyon, CBeebies, Children's,Entertainment &amp; Comedy,Learning,Pre-School,TV, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhigh1,flashhigh2,flashstd1,flashstd2 modes will be tried for version default<br />
+INFO: Trying flashhigh1 mode to record tv: Nina and the Neurons - Earth Explorers: 2. Grand Canyon<br />
+WARNING: Required rtmpdump does not exist - cannot download Flash audio/video<br />
+INFO: skipping flashhigh1 mode<br />
+INFO: Trying flashhigh2 mode to record tv: Nina and the Neurons - Earth Explorers: 2. Grand Canyon<br />
+WARNING: Required rtmpdump does not exist - cannot download Flash audio/video<br />
+INFO: skipping flashhigh2 mode<br />
+INFO: Trying flashstd1 mode to record tv: Nina and the Neurons - Earth Explorers: 2. Grand Canyon<br />
+WARNING: Required rtmpdump does not exist - cannot download Flash audio/video<br />
+INFO: skipping flashstd1 mode<br />
+INFO: Trying flashstd2 mode to record tv: Nina and the Neurons - Earth Explorers: 2. Grand Canyon<br />
+WARNING: Required rtmpdump does not exist - cannot download Flash audio/video<br />
+INFO: skipping flashstd2 mode<br />
+ERROR: Failed to record 'Nina and the Neurons - Earth Explorers: 2. Grand Canyon (b03bv10p)'<br />
+Alphablocks_name_tv</code></div></div><br />
+<br />
+<br />
+Any help would be much appreciated!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-10-2013, 07:35 PM</div>
+</div>
+<div class="message">You don't say where you installed rtmpdump, but wherever it is, it isn't in PATH as defined in the cron environment.  cron only gives you a minimal environment by default, and it doesn't access your .profile or similar configuration files.  However, you can google up many ways to alter the cron environment.  The alternative is to use the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--rtmpdump</code></div></div>, <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg</code></div></div>, etc. options for get_iplayer to explicitly define where all the external utilities reside, but that's a bit tedious.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-132</h2></div><div class="dateline">18-10-2013, 01:14 PM</div>
+</div>
+<div class="message">Thanks for the tips, you're absolutely right.<br />
+<br />
+Followed the instructions from here: <a href="http://stackoverflow.com/questions/2388087/how-to-get-cron-to-call-in-the-correct-paths">http://stackoverflow.com/questions/23880...rect-paths</a><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code># echo PATH=&#36;PATH &gt; tmp.cron<br />
+# echo &gt;&gt; tmp.cron<br />
+# crontab -l &gt;&gt; tmp.cron<br />
+# crontab tmp.cron</code></div></div><br />
+<br />
+<br />
+Works perfectly from cron now - thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-10-2013, 03:56 PM</div>
+</div>
+<div class="message">Thanks for posting that info - I'm sure others will run into the same problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1113</h2></div><div class="dateline">02-01-2016, 08:07 PM</div>
+</div>
+<div class="message">For some reason, I was unable to set PATH within my user crontab on Slackware 14.1.<br />
+ <br />
+An alternative solution which worked for me was to spawn a bash login shell from which to launch get_iplayer; this way bash will use whatever PATH you have set up in your various bash profile files (.bashrc etc).<br />
+<br />
+You can do this with a line in crontab that looks something like:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>0 * * * * bash -lc '/usr/local/bin/get_iplayer --pvr'</code></div></div><br />
+<br />
+More info here: <a href="http://unix.stackexchange.com/questions/148133/how-to-set-crontab-path-variable">http://unix.stackexchange.com/questions/...h-variable</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems running cron task</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

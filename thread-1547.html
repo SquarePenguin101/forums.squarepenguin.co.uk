@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Mojo::Reactor:Poll: I/O watcher failed: SSL_ca_file...does not exist</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Mojo::Reactor:Poll: I/O watcher failed: SSL_ca_file...does not exist</div>
+<div id="pagetitle"><h2>Mojo::Reactor:Poll: I/O watcher failed: SSL_ca_file...does not exist</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1952</h2></div><div class="dateline">25-10-2017, 11:43 PM</div>
+</div>
+<div class="message">Trying to refresh my cache tonight and Im getting this<br />
+<br />
+get_iplayer --refresh<br />
+get_iplayer 3.05-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+.....Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+<br />
+Happening on 2 different Macs, running 10.12.6 and 10.13.<br />
+<br />
+Any Ideas ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 02:56 AM</div>
+</div>
+<div class="message">On 10.12 at least, this is a problem between Mojolicious and the version of IO::Socket::SSL in macOS system Perl. I don't know what system Perl ships with 10.13. Since you got get_iplayer from Homebrew, report this problem to them. How they fix it is up to them. If you do a manual installation, you will have a local library in ~/perl5, as described in the install docs. Use it to install the latest versions of Mojolicious and IO::Socket::SSL, which seem to play well together.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1735</h2></div><div class="dateline">26-10-2017, 10:49 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (25-10-2017, 11:43 PM)</span></cite>Mojo::Reactor::Poll: I/O watcher failed: SSL_ca_file SCALAR(0x7f8a54001178) does not exist at /System/Library/Perl/Extras/5.18/IO/Socket/SSL.pm line 1642.<br />
+<br />
+Happening on 2 different Macs, running 10.12.6 and 10.13.<br />
+<br />
+Any Ideas ?</blockquote><br />
+@lotusshaney: Same here (on 10.13) where all was working fine up until a point in time during yesterday. Hadn't done any explicit macOS update or brew update prior to the point in time when this issue began, so was a bit mystified how it could be working fine at one point and then broken shortly later - but perhaps homebrew can implement "in flight" changes to whatever component(s) have caused this issue(?)  For the record, updating homebrew via "brew update" and upgrading to get_iplayer_3.06 via "brew upgrade get_iplayer" makes no difference. However recording via URL still works, so that's a temporary workaround.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">26-10-2017, 11:11 AM</div>
+</div>
+<div class="message">I see exactly the same as @speedywrite and @lotushaney on my El Capitan 10.11, though I have yet to try the upgrade to GIP 3.06.<br />
+<br />
+Might the issue be in the CA certificate chains? If this is only affecting Mac users perhaps it is caused by the authorities Apple trust. As the others have observed there have been no recent software updates.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 11:57 AM</div>
+</div>
+<div class="message">BBC schedule pages are now being redirected to HTTPS URLs. Systems with obsolete Perl modules, like macOS, could have problems with that. In particular, it looks like some versions of IO::Socket::SSL cause problems for Mojolicious. Set up a local library for Perl modules (described in the get_iplayer install docs) and install the latest versions of Mojolicious and IO::Socket::SSL to override the obsolete system packages. See my reply to OP. Updating to 3.06 will not help. v3.06 addressed a completely different problem described here:<br />
+<br />
+<a href="/thread-1546.html">/thread-1546.html</a><br />
+<br />
+More to the point, Homebrew has released 3.06 without addressing the issue discussed in this thread.<br />
+<br />
+I'm closing this thread. This is a Homebrew issue, so take it to their forum. As we make clear in the forum rules, Homebrew is not supported here.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Mojo::Reactor:Poll: I/O watcher failed: SSL_ca_file...does not exist</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

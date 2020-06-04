@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Browse listings in an editor</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Browse listings in an editor</div>
+<div id="pagetitle"><h2>Browse listings in an editor</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1372</h2></div><div class="dateline">12-08-2016, 04:29 PM</div>
+</div>
+<div class="message">Hello<br />
+<br />
+Hope this is appropriate for this forum<br />
+<br />
+I often want to browse what I can download using iplayer, but find staying in the terminal (Linux) or dos box (Windows) not as convenient as using a graphical editor.<br />
+<br />
+For Linux:<br />
+The following two commands will give you output in Leafpad (or your editor of choice)<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>leafpad &lt;(grep -iF 'bbc four'  &lt;(get_iplayer))<br />
+leafpad &lt;(grep -iF 'radio 4'  &lt;(get_iplayer --type radio))</code></div></div><br />
+<br />
+For Windows:<br />
+The following two commands will give you output in Notepad. <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer | find /I "bbc four" | clip &amp;&amp; notepad<br />
+get_iplayer --type radio | find /I "radio 4" | clip &amp;&amp; notepad</code></div></div><br />
+**don't forget to ctrl V into Notepad when it appears**<br />
+<br />
+For Macs:<br />
+Sorry, I have no knowledge of Apple products<br />
+<br />
+Change the string in quotes to change what you want to find. This is to make browsing easier, not to download a specific programme. See the Wiki guide Usage and Examples to expand the get_iplayer part if required.<br />
+<br />
+Hope this is helpful<br />
+<br />
+Regards<br />
+<br />
+Rich</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">12-08-2016, 04:55 PM</div>
+</div>
+<div class="message">Thanks, really nice</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-08-2016, 08:21 PM</div>
+</div>
+<div class="message">Thanks for posting that. <br />
+<br />
+You probably don't need a separate grep. get_iplayer can already search the fields that have any meaningful information, e.g.,<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>leafpad &lt;(get_iplayer --channel 'bbc four')</code></div></div><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --channel "bbc four" | clip &amp;&amp; notepad</code></div></div><br />
+OS X variants:<br />
+<br />
+GUI<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --channel 'bbc four' | open -f -a TextEdit</code></div></div>where TextEdit could BBEdit, TextWrangler, 'Sublime Text', and possibly others <br />
+<br />
+Terminal<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>nano &lt;(get_iplayer --channel 'bbc four')</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1372</h2></div><div class="dateline">12-08-2016, 09:25 PM</div>
+</div>
+<div class="message">Hi Dinky<br />
+<br />
+Thanks for expanding with OS X variant.<br />
+<br />
+Yes I realised that grep wasn't needed just after I'd posted; but the idea came from exploring how to use grep, piping and re-direction.<br />
+<br />
+Thanks for get_iplayer as I live in a slow-speed broadband area, and have problems streaming.<br />
+<br />
+Regards<br />
+Rich</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Browse listings in an editor</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

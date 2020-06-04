@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Exclude/include  channels on refresh</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Exclude/include  channels on refresh</div>
+<div id="pagetitle"><h2>Exclude/include  channels on refresh</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">17-07-2013, 11:17 AM</div>
+</div>
+<div class="message">Is there a limit to the number of channels you can exclude or include<br />
+<br />
+I want to speed up refresh times but none of teh channels I use in teh exclude option get excuded from the TV.cache ,radio.cache or podcast.cache<br />
+<br />
+the string is pretty large and I wondered if that may be the reason why, or have I got the format wrong<br />
+<br />
+here is my exclude and include stings.<br />
+I use either<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh-future --refresh-exclude ="Audio Described,BBC 1Xtra,BBC 5 live Sports Extra,BBC 6 Music,BBC Alba,BBC Asian Network,BBC Berkshire,BBC Bristol,BBC Cambridgeshire,BBC Cornwall,BBC Coventry &amp; Warwickshire,BBC Cumbria,BBC Derby,BBC Devon,BBC Essex,BBC Gloucestershire,BBC Guernsey,BBC Hereford &amp; Worcester,BBC Humberside,BBC Jersey,BBC Kent,BBC Lancashire,BBC Leeds,BBC Leicester,BBC Lincolnshire,BBC London,BBC Manchester,BBC Merseyside,BBC Newcastle,BBC News,BBC News 24,BBC Norfolk,BBC Northampton,BBC Nottingham,BBC One Cambridgeshire,BBC One East,BBC One East Midlands,BBC One London,BBC One North East &amp; Cumbria,BBC One North West,BBC One Oxfordshire,BBC One Scotland,BBC One South,BBC One South East,BBC One South West,BBC One Wales,BBC One West,BBC One West Midlands,BBC One Yorks &amp; Lincs,BBC One Yorkshire,BBC Oxford,BBC Parliament,BBC Radio,BBC Radio 1,BBC Radio 3,BBC Radio 4 FM,BBC Radio 4 LW,BBC Radio 5 live,BBC Radio 5 live Sports Extra,BBC Radio Bristol,BBC Radio Cornwall,BBC Radio Cymru,BBC Radio Foyle,BBC Radio Humberside,BBC Radio Jersey,BBC Radio Leicester,BBC Radio Manchester,BBC Radio Nan Gaidheal,BBC Radio Scotland,BBC Radio Sheffield,BBC Radio Solent,BBC Radio Suffolk,BBC Radio Ulster,BBC Radio Wales,BBC Sheffield,BBC Shropshire,BBC Solent,BBC Somerset,BBC Sport,BBC Stoke,BBC Suffolk,BBC Surrey,BBC Sussex,BBC Tees,BBC Three Counties,BBC Three Counties Radio,BBC Two Wales,BBC Wiltshire,BBC WM,BBC World Service,BBC York,CBBC,CBeebies,Signed," --refresh --type=all</code></div></div><br />
+<br />
+or<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh-future --refresh-include ="BBC Four,BBC One,BBC One Channel Islands,BBC One HD,BBC One Northern Ireland,BBC Radio 2,BBC Radio 4,BBC Radio 4 Extra,BBC Three,BBC Two,BBC Two Northern Ireland,BBC Two Scotland,BBC Web Only," --refresh --type=all</code></div></div><br />
+<br />
+<br />
+<br />
+I think I have got the format right but it just downloads everything. <br />
+<br />
+I like the look of the site and hope it catches on, except with the big bad corporation</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">17-07-2013, 12:03 PM</div>
+</div>
+<div class="message">There should be no space before the = sign in either command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-07-2013, 12:39 PM</div>
+</div>
+<div class="message">You should use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-exclude</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include</code></div></div> as part of the same command since the cache is rewritten every time you run with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh</code></div></div>.  However, you may not need to do that in your case. It looks like you only want a small subset of channels , so you should be able to just use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include</code></div></div> with some adjustments to your search terms.  <br />
+<br />
+Each search term is applied as a regular expression match, which in the usual case can be considered a substring match.  Thus, "BBC One" will match everything containing "BBC One", so all regional variants will be included, not just the ones specified elsewhere in your list.  You can stop that by appending a dollar sign to that particular search term, i.e., "BBC One" becomes "BBC One&#36;".  That will prevent that search from matching a channel name containing anything after "BBC One".  Your specific variants (e.g., BBC One Channel Islands) will still be matched as well.<br />
+<br />
+Channel inclusion/exclusion isn't implemented in the podcast plugin, nor is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div> (which doesn't have any meaning for podcasts).<br />
+<br />
+One forum tip: wrap any example commands with the "code" button in the editor.  It makes it possible to copy and paste your commands verbatim for testing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">18-07-2013, 02:55 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>882 Wrote:</cite>You should use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-exclude</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include</code></div></div> as part of the same command since the cache is rewritten every time you run with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh</code></div></div>. However, you may not need to do that in your case. It looks like you only want a small subset of channels , so you should be able to just use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include</code></div></div> with some adjustments to your search terms. <br />
+<br />
+Each search term is applied as a regular expression match, which in the usual case can be considered a substring match. Thus, âBBC Oneâ will match everything containing âBBC Oneâ, so all regional variants will be included, not just the ones specified elsewhere in your list. You can stop that by appending a dollar sign to that particular search term, i.e., âBBC Oneâ becomes âBBC One&#36;â. That will prevent that search from matching a channel name containing anything after âBBC Oneâ. Your specific variants (e.g., BBC One Channel Islands) will still be matched as well.<br />
+<br />
+Channel inclusion/exclusion isnât implemented in the podcast plugin, nor is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div> (which doesnât have any meaning for podcasts).<br />
+<br />
+One forum tip: wrap any example commands with the âcodeâ button in the editor. It makes it possible to copy and paste your commands verbatim for testing.</blockquote>thanks for the advice and all is working well now<br />
+Is there a reason why it does not work with podcasts as the podcast file seems to be the largest of all</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-07-2013, 05:37 PM</div>
+</div>
+<div class="message">No reason.  Whoever wrote the podcast support just didn't implement inclusion/exclusion.  It was written before the BBC greatly expanded the amount of available podcasts (from archives, etc.) a couple of years ago.  I'll put it on the list, but it will be a good while before it sees the light of day.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Exclude/include  channels on refresh</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

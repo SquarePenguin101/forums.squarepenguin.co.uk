@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - pid metadata problem</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; pid metadata problem</div>
+<div id="pagetitle"><h2>pid metadata problem</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-516-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">18-10-2015, 09:56 PM</div>
+</div>
+<div class="message">@argon0   What I did when I associated the dll with perl was highly unconventional and I also had to deassociate the dll from perl again so that the system would run normally.<br />
+I had not intended the "trick" to be used by anyone else without due regard for a careful investigation of what was causing their problem in the first place.<br />
+It may be better if I delete that post, it has the potential to cause more problems than it solves.<br />
+<br />
+Please try and give a clear explanation of the issue that are experiencing with get_iplayer and Windows 10.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">23-12-2015, 10:16 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Not sure if this helps but thought I would post it - I love Getiplayer...<br />
+<br />
+I reinstalled my home machine to Windows 7 and then upgraded to 10 via the system tray app. I ran into the same problem as the OP with the installer I downloaded today (23/12/2015) - the XML file not found although it is there on my system.<br />
+<br />
+Two things I noticed : 1) my machine was set to US English (I didn't change it in Windows 7 before the upgrade - I'm in the UK) and 2) Flash player was not installed.<br />
+<br />
+Once I corrected both of those and rebooted it worked fine. <br />
+<br />
+Disclaimer - I did both at once so I'm not sure if either fixed the problem or a reboot did.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1119</h2></div><div class="dateline">01-01-2016, 08:53 PM</div>
+</div>
+<div class="message">I have exactly the same problem as the OP, and it does appear to be a permissions problem.<br />
+I am on windows 10, and have been using the get_iplayer PVR on it for some months to fetch radio programs without any problems.  The last program successfully downloaded was on the 23rd December, and I became aware to the problem on the 29th December.  <br />
+Since then the PVR reports "ERROR: Failed to get version pid metadata from iplayer site" for every program it tries even though I can see the file it is looking for  (exactly the same messages as the OP).<br />
+Trying with the command line gives the same result until I run it as Administrator, in which case it works fine (e.g. get_iplayer --type=radio --pid=b011301y).<br />
+I have not (knowingly) made any changes between the 23rd and the 29th December, though there has been a windows update (KB3132372) on the 29th.  Could that have caused it?<br />
+The update claims to be for Internet Explorer, which I do not use.  I have tried the PVR with both Chrome and Firefox, with the same result.<br />
+Is there a work-around somewhere?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-01-2016, 10:32 PM</div>
+</div>
+<div class="message">Not to belabour the obvious, but if you think KB3132372 is the culprit, uninstall it and see if the problem goes away. Normally you would think that an update for Flash Player in IE/Edge would have no effect on a completely unrelated application like get_iplayer, but who knows what evil lurks in the heart of Windows?  KB3132372 didn't cause any problems here, but that doesn't mean it didn't cause a problem for you.  Microsoft has already released an advisory acknowledging application crashes caused by KB3132372, so it's not entirely fanciful to think it has screwed up your system somehow.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-945</h2></div><div class="dateline">13-01-2016, 11:26 PM</div>
+</div>
+<div class="message">I just tried downloading and found this message at the XML page:<br />
+<br />
+"This service is currently undergoing a period of downtime for essential maintenance. Please be advised that the programme information service which is currently available at this URL will soon be replaced by a new service from the BBC, at a new set of URLs. Please contact the following email address for further information: 'programmes-devel@lists.forge.bbc.co.uk'"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-01-2016, 11:38 PM</div>
+</div>
+<div class="message">Quite a few other people <a href="/thread-623.html">have too</a>.<br />
+<br />
+The BBC has <a href="thread-623.html">the feeds</a> get_iplayer uses to determine schedlue and download information.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-945</h2></div><div class="dateline">14-01-2016, 12:14 AM</div>
+</div>
+<div class="message">Good. I'll stay tuned for further developments.  Thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1167</h2></div><div class="dateline">18-01-2016, 12:53 PM</div>
+</div>
+<div class="message">Just to thank everyone for contributing on this thread.<br />
+<br />
+I am an absolutely useless idiot with anything not bleeding obvious, compwise. Running get_iplayer 4.9 on Windows 8 64 bit standard edition. I'd all but given up on the programme fater it repeatedly refused to let me download for no apparent reason. <br />
+<br />
+Anyway .... inspired by the never say die spirit here I downloaded the file which I was told I didn't have libxml2-2_.dll and then, having popped it in the get iplayer folder, r/clicked and associated it with PERL. I then rebooted and so far so good. It works.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-01-2016, 01:37 PM</div>
+</div>
+<div class="message">Thanks for the info. If the .dll file was missing, that means the installation partially failed, which is a mystery of its own.  I don't think you need to associate the library with Perl since you'll never invoke it directly, but it's Windows, so who knows?   Whatever works.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1167</h2></div><div class="dateline">19-01-2016, 09:04 AM</div>
+</div>
+<div class="message">It is indeed a mystery. After a couple of smooth runs it started throwing up more requests for DLL files which were in fact installed in the get_iplayer folder. I followed online steps for installing DLLs (copied them into C:\Windows\System32 &amp; somewhere else) and all is well again .... for now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-01-2016, 11:51 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-01-2016, 09:04 AM)</span></cite>(copied them into C:\Windows\System32 &amp; somewhere else) and all is well again .... for now.</blockquote>That's not good. The DLLs that support get_iplayer's embedded Perl distribution don't belong in the system directory.  But until someone who can reproduce this problem can also figure out the cause, I can't offer you a more sensible solution. Windows is more a form of punishment than an operating system where get_iplayer is concerned. Make a note to yourself to remove all those relocated DLLs before installing the next release of get_iplayer. If you still have the same problem, I guess you will need to move the DLLs every time you install get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1167</h2></div><div class="dateline">19-01-2016, 06:53 PM</div>
+</div>
+<div class="message">Thanks, am aware that i may be messing with the fabric of time. Windows is a punishment in so many ways.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">19-01-2016, 08:10 PM</div>
+</div>
+<div class="message">I think this may be a 64-bit problem on Windows 8-10. I have a Window 10 64bit install which is broken, and a 32-bit one which works. Most Windows 7 installs are 32bit so maybe it didn't show up there ? I have a VM with W7 which I am using with GetIPlayer at the moment so it sits nicely working all the time ;-)<br />
+<br />
+I'll have a play with the broken one based on the above and see if I can work it out.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-516-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; pid metadata problem</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - writing episode numbers for eastenders?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; writing episode numbers for eastenders?</div>
+<div id="pagetitle"><h2>writing episode numbers for eastenders?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-66</h2></div><div class="dateline">11-09-2013, 10:59 AM</div>
+</div>
+<div class="message">i'm having an issue with eastenders in that there are no episode numbers for get_iplayer to pull in, so i can't find a way of automatically naming the episodes that will match up with plex media server to allow it to scrape the episode info without me manually editing the file name with the season and episode number as per tvrage.com.<br />
+<br />
+has anyone found a way to automatically grab the right episode number for each episode in get_iplayer if the iplayer site doesn't have it?<br />
+<br />
+thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2013, 11:38 AM</div>
+</div>
+<div class="message">There are no episode numbers in the iPlayer data for Eastenders.  Episodes are named with the broadcast date.  tvrage.com must generate episode numbers itself.  For Plex, add the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--isodate</code></div></div> flag to your get_iplayer command line.  That will convert the date in the file name to YYYY-MM-DD format, which Plex can parse.  Also add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--whitespace</code></div></div> for a more readable filename.  And if you use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--whitespace</code></div></div> on Windows, you must also add  <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fatfilename</code></div></div> (this will be default in next release).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; writing episode numbers for eastenders?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

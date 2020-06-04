@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - &quot;Run PVR&quot; not actually running anything</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; &quot;Run PVR&quot; not actually running anything</div>
+<div id="pagetitle"><h2>&quot;Run PVR&quot; not actually running anything</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">16-09-2013, 03:48 PM</div>
+</div>
+<div class="message">I have get_iplayer and get_iplayer.cgi generally working well.  I can search stuff and record individual shows (using the "Record" link) with no issues.  However, if I instead queue shows (using the "Queue" link) and then run the PVR nothing happens.  Enabling verbose then shows this:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: User prefs dir: /var/www/get_iplayer//.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+INFO: Loaded PVR search 'ONCE_b03bjgvb'<br />
+INFO: Loaded PVR search 'ONCE_b01jcc8b'<br />
+INFO: Loaded PVR search list<br />
+Running PVR Searches:<br />
+<br />
+PVR Run complete</code></div></div><br />
+<br />
+<br />
+But nothing is actually downloaded :(<br />
+<br />
+I had a look at get_iplayer (my &#36;version = 2.83;) and it appears the problem is here:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>my @names = ( grep !/&#36;exclude_regex/i, grep /&#36;pvr_name_regex/i, sort {lc &#36;a cmp lc &#36;b} keys %{&#36;pvr} );</code></div></div><br />
+because @names is empty after this and thus the subsequent "for my &#36;name ( @names )" block never runs.<br />
+<br />
+Any ideas what might be going on?<br />
+<br />
+Thanks,<br />
+<br />
+Jeff</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-09-2013, 05:10 PM</div>
+</div>
+<div class="message">Still working OK here.  A couple of things to start with: <br />
+<br />
+What OS and version are you using?  What version of Perl (use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -v</code></div></div> to check)?<br />
+<br />
+If <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@names</code></div></div> is empty, check the inputs.  What are the values of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;exclude_regex</code></div></div>, <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;pvr_name_regex</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>keys %{&#36;pvr}</code></div></div> before <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@names</code></div></div> is populated?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">16-09-2013, 05:30 PM</div>
+</div>
+<div class="message">For the record OS is Scientific Linux release 6.4, an RHEL clone<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>perl -v<br />
+<br />
+This is perl, v5.10.1 (*) built for x86_64-linux-thread-multi</blockquote>
+<br />
+However, your suggestion to look at &#36;pvr_name_regex turned up some unexpected stuff.  I found an errant "search" line in the options file.  Since I never hand edited that file it must have come from doing some CLI stuff while inadvertantly leaving --prefs-add on the command line.  Once removed things started working as expected<br />
+<br />
+Thanks for the quick response!  get_iplayer is a really fantastic tool.<br />
+<br />
+Jeff</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-09-2013, 07:13 PM</div>
+</div>
+<div class="message">That would explain it.  The errant "search" preference would be treated by get_iplayer as the name of PVR search to run, but of course it wouldn't match any queued searches.  It's all too easy to do with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div>.  That's a bit of a gotcha with get_iplayer argument processing, but it's too embedded with users to change.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-417</h2></div><div class="dateline">27-02-2014, 09:57 AM</div>
+</div>
+<div class="message">Hello all,<br />
+<br />
+Since I saw this thread, I figured I would add to it rather than opening a new query.<br />
+I have had issues running get_iplayer on Opensuse, specifically related to using --pvr-add<br />
+The 'once-off' pvr function works without issue though (--pvr-queue) - it finds the program and is perfect.<br />
+<br />
+I had no such issues on Rasp-Pi, using what I believe is the correct syntax, so I'm thinking v2.82 and OS possibly have something to do with it.<br />
+<br />
+&lt;&lt;snip&gt;&gt;<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>media@womble:~/.get_iplayer&gt; get_iplayer --pvr-list<br />
+get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+All PVR Searches:<br />
+<br />
+pvrsearch = The_Sheriffs_Are_Coming_Series_2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;channel = BBC One<br />
+&nbsp;&nbsp;&nbsp;&nbsp;modes = flashvhigh2,flashvhigh1,flashhd2,flashhd1,flashnormal,flashlow<br />
+&nbsp;&nbsp;&nbsp;&nbsp;output = /home/media/iplayer-test<br />
+&nbsp;&nbsp;&nbsp;&nbsp;proxy = &lt;my_proxy_server&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;search = The_Sheriffs_Are_Coming_Series_2<br />
+&nbsp;&nbsp;&nbsp;&nbsp;type = tv</code></div></div><br />
+<br />
+<br />
+&lt;&lt;/snip&gt;&gt;<br />
+<br />
+(I found an additional search entry in the pvr/programe_name directory in question above, and removed it thinking that the problem might be solved, but no luck, it continues to fail)<br />
+<br />
+Then I execute (or run via cron) the following:<br />
+<br />
+&lt;&lt;snip&gt;&gt;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>media@womble:~/.get_iplayer&gt; get_iplayer --pvr -v --debug <br />
+DEBUG: Parsing options from /etc/get_iplayer/options:<br />
+DEBUG: Loaded option packagemanager (packagemanager) = = disable<br />
+DEBUG: Parsing options from /home/media/.get_iplayer/options:<br />
+DEBUG: Loaded option rtmptvopts (rtmptvopts) = --swfVfy http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf<br />
+DEBUG: Loaded option search (search) = (proxy = my_proxy_server)<br />
+DEBUG: Loaded option output (output) = = /home/media/iplayer-test/<br />
+get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: User prefs dir: /home/media/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option channel = BBC One<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option modes = flashvhigh2,flashvhigh1,flashhd2,flashhd1,flashnormal,flashlow<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option output = /home/media/iplayer-test<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option proxy = my_proxy_server<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option type = tv<br />
+DEBUG: PVR search 'The_Sheriffs_Are_Coming_Series_2': option search = The_Sheriffs_Are_Coming_Series_2<br />
+INFO: Loaded PVR search 'The_Sheriffs_Are_Coming_Series_2'<br />
+INFO: Loaded PVR search list<br />
+Running PVR Searches:<br />
+media@womble:~/.get_iplayer&gt; echo &#36;?<br />
+0</code></div></div><br />
+<br />
+&lt;&lt;/snip&gt;&gt;<br />
+<br />
+The options dir (probably don't need it anymore as I'm now explicitly providing everything on the CLI during testing) contains the rtmptvopts, proxy and outputdir parameters. I have also ensured that the tv.cache is up-to-date.<br />
+<br />
+I get no further logging and notice no processors starting to action the request.<br />
+Any thoughts much appreciated; fantastic tool but so much better with a working series recorder :)<br />
+<br />
+Best,<br />
+Nacro.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-02-2014, 10:27 AM</div>
+</div>
+<div class="message">The most obvious thing to me here is that the search string doesn't match the programme you are looking for. It looks like the type of string that gets created by the WebPVR manager in that it's underscore separated and specifies the series but I could be wrong on that.<br />
+<br />
+In any case, that string doesn't return any matches, where as the simpler <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"The Sheriffs Are Coming"</code></div></div> returns two matching programmes.<br />
+<br />
+If you remove that PVR entry and re-add it via the command line with the search string I mention above it *should* work. You can check out the PVR guide here:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/get_iplayer-pvr-guide">https://squarepenguin.co.uk/guides/get_i...-pvr-guide</a><br />
+<br />
+...and for specifically adding PVR entries here:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/get_iplayer-pvr-guide/#How_do_I_add_a_PVR_record_to_get_iplayer">https://squarepenguin.co.uk/guides/get_i...et_iplayer</a>?<br />
+<br />
+Note the use of the quote marks around search strings.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-417</h2></div><div class="dateline">27-02-2014, 11:16 AM</div>
+</div>
+<div class="message">Hi Penguin,<br />
+<br />
+I have done a lot of reading on this particularly while setting it up on the Raspi, and it worked a treat.<br />
+However, since Opensuse (Pi is no longer active), I've had numerous issues.<br />
+<br />
+Its interesting though: I removed and re-added an entry that contained the following:<br />
+<br />
+media@womble:~&gt; get_iplayer --pvr-list<br />
+get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+All PVR Searches:<br />
+<br />
+pvrsearch = The_Sheriffs_Are_Coming_Series_2<br />
+	channel = BBC One<br />
+	modes = flashvhigh2,flashvhigh1,flashhd2,flashhd1,flashnormal,flashlow<br />
+	output = /home/media/iplayer-test<br />
+	proxy = my_proxy_name:port<br />
+	search0 = The Sheriffs Are Coming Series 2 <br />
+	type = tv<br />
+<br />
+This didn't work.<br />
+<br />
+I then added the following, and its started to work:<br />
+<br />
+media@womble:~&gt; get_iplayer --pvr-list<br />
+get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+All PVR Searches:<br />
+<br />
+pvrsearch = The_Sheriffs_Are_Coming_Series_2<br />
+	channel = BBC One<br />
+	modes = flashvhigh2,flashvhigh1,flashhd2,flashhd1,flashnormal,flashlow<br />
+	output = /home/media/iplayer-test<br />
+	proxy = my_proxy_name:port<br />
+	search0 = Sheriffs &lt;--- ??<br />
+	type = tv<br />
+<br />
+Thank you again for your suggestion; I don't understand why a full search string is not working, but a partial is. As this is the 1st time I've got this working under Opensuse I'm extremely happy. I thought that if its in the tv.cache (regardless of whether it has underscores or not) the pid and other useful info would be found with a partial or a full search string (of the program name).<br />
+<br />
+All the best,<br />
+Nacro.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-02-2014, 01:09 PM</div>
+</div>
+<div class="message">You search string was once again incorrect.  The full series name is "The Sheriffs Are Coming: Series 2" - you omitted the colon.  However, there is generally no need to bother with the ": Series 2" bit.  It's only needed if there is more than one series of a programme currently available.  By default, get_iplayer does substring matching, so you only need to use as much of the series name as is necessary to find your desired episodes.<br />
+<br />
+Not directly related, but you would be well-advised to upgrade to the latest version of get_iplayer and remove rtmptvopts from your options file.  get_iplayer is no longer updated in the Packman repo, so read this to find out where to get an updated version:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/opensuse/">https://squarepenguin.co.uk/wiki/installation/opensuse/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-02-2014, 01:13 PM</div>
+</div>
+<div class="message">To pick up your last point: The underscores matter, substring matching notwithstanding.  You can't match something that isn't there.  You search string should be exactly as it appears in the series name, even if it's only part of the name.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-417</h2></div><div class="dateline">01-03-2014, 09:31 PM</div>
+</div>
+<div class="message">Hi Pumpkin,<br />
+<br />
+Thanks for your response.<br />
+All fully understood and now working as expected!<br />
+<br />
+I will consider upgrading, however I'm resistant to make changes to something that (at this stage) is working without error. <br />
+<br />
+Best,<br />
+Nacro.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; &quot;Run PVR&quot; not actually running anything</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

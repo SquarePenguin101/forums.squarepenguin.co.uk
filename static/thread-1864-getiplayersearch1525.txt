@@ -1,0 +1,546 @@
+get_iplayer 3.17.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\Kevin\.get_iplayer
+INFO: User options file: C:\Users\Kevin\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	modes = tvbest,radiobest
+	nopurge = 1
+	output = p:\
+	outputradio = p:\Radio
+	refreshfuture = 1
+	verbose = 1
+
+INFO: Search args: 'repair'
+INFO: Got 10347 file cache entries for tv
+DEBUG: Cache expiry time for tv is 14400 secs - refresh in -8927 secs
+INFO: Cache refresh limit (tv): 2018-08-21T03:55:30+00:00
+INFO: Will refresh channel BBC Alba
+INFO: Will refresh channel BBC Four
+INFO: Will refresh channel BBC News
+INFO: Will refresh channel BBC One
+INFO: Will refresh channel BBC One Cambridgeshire
+INFO: Will refresh channel BBC One Channel Islands
+INFO: Will refresh channel BBC One East
+INFO: Will refresh channel BBC One East Midlands
+INFO: Will refresh channel BBC One London
+INFO: Will refresh channel BBC One North East & Cumbria
+INFO: Will refresh channel BBC One North West
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Oxfordshire
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One South
+INFO: Will refresh channel BBC One South East
+INFO: Will refresh channel BBC One South West
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One West
+INFO: Will refresh channel BBC One West Midlands
+INFO: Will refresh channel BBC One Yorks & Lincs
+INFO: Will refresh channel BBC One Yorkshire
+INFO: Will refresh channel BBC Parliament
+INFO: Will refresh channel BBC Two
+INFO: Will refresh channel BBC Two England
+INFO: Will refresh channel BBC Two Northern Ireland
+INFO: Will refresh channel BBC Two Scotland
+INFO: Will refresh channel BBC Two Wales
+INFO: Will refresh channel CBBC
+INFO: Will refresh channel CBeebies
+INFO: Will refresh channel S4C
+
+INFO: Indexing tv programmes (concurrent)
+DEBUG: LWP verify mode: 1
+DEBUG: LWP CA file: C:\Program Files (x86)\get_iplayer\perl\lib\Mozilla\CA\cacert.pem
+DEBUG: Mojo::UserAgent CA file: C:\Program Files (x86)\get_iplayer\perl\lib\Mozilla\CA\cacert.pem
+
+INFO: Downloading BBC Alba schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl67/2018/w34
+
+INFO: Downloading BBC Four schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w34
+
+INFO: Downloading BBC News schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w34
+
+INFO: Downloading BBC One Cambridgeshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w34
+
+INFO: Downloading BBC One Channel Islands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w34
+.
+INFO: Got 139 programmes for BBC Alba schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl67/2018/w34
+
+INFO: Downloading BBC One East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w34
+.
+INFO: Got 65 programmes for BBC Four schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w34
+
+INFO: Downloading BBC One East Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w34
+.
+INFO: Got 174 programmes for BBC One Channel Islands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w34
+
+INFO: Downloading BBC One Yorks & Lincs schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w34
+.
+INFO: Got 174 programmes for BBC One Cambridgeshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w34
+
+INFO: Downloading BBC One schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w34
+.
+INFO: Got 258 programmes for BBC News schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w34
+
+INFO: Downloading BBC One London schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w34
+.
+INFO: Got 174 programmes for BBC One East Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w34
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w34
+.
+INFO: Got 174 programmes for BBC One East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w34
+
+INFO: Downloading BBC One North East & Cumbria schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w34
+.
+INFO: Got 174 programmes for BBC One Yorks & Lincs schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w34
+
+INFO: Downloading BBC One North West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w34
+.
+INFO: Got 174 programmes for BBC One schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w34
+
+INFO: Downloading BBC One Oxfordshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w34
+.
+INFO: Got 179 programmes for BBC One London schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w34
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w34
+.
+INFO: Got 174 programmes for BBC One North East & Cumbria schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w34
+
+INFO: Downloading BBC One South schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w34
+.
+INFO: Got 174 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w34
+
+INFO: Downloading BBC One South East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w34
+.
+INFO: Got 174 programmes for BBC One North West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w34
+
+INFO: Downloading BBC One South West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w34
+.
+INFO: Got 174 programmes for BBC One Oxfordshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w34
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w34
+.
+INFO: Got 175 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w34
+
+INFO: Downloading BBC One West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl70/2018/w34
+.
+INFO: Got 174 programmes for BBC One South East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w34
+
+INFO: Downloading BBC One West Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl71/2018/w34
+.
+INFO: Got 174 programmes for BBC One South schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w34
+
+INFO: Downloading BBC One Yorkshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl72/2018/w34
+.
+INFO: Got 174 programmes for BBC One South West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w34
+
+INFO: Downloading BBC Parliament schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl73/2018/w34
+.
+INFO: Got 176 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w34
+
+INFO: Downloading BBC Two England schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl97/2018/w34
+.
+INFO: Got 174 programmes for BBC One West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl70/2018/w34
+
+INFO: Downloading BBC Two Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl99/2018/w34
+.
+INFO: Got 174 programmes for BBC One West Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl71/2018/w34
+
+INFO: Downloading BBC Two Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w34
+.
+INFO: Got 174 programmes for BBC One Yorkshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl72/2018/w34
+
+INFO: Downloading BBC Two Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w34
+.
+INFO: Got 212 programmes for BBC Parliament schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl73/2018/w34
+
+INFO: Downloading CBBC schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w34
+.
+INFO: Got 170 programmes for BBC Two England schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl97/2018/w34
+
+INFO: Downloading CBeebies schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w34
+.
+INFO: Got 172 programmes for BBC Two Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl99/2018/w34
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00zskxc/2018/w34
+.
+INFO: Got 169 programmes for BBC Two Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w34
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p013bkc7/2018/w34
+.
+INFO: Got 174 programmes for BBC Two Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w34
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p013blmc/2018/w34
+.
+INFO: Got 278 programmes for CBBC schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w34
+
+INFO: Downloading BBC Two schedule page (1/3): https://www.bbc.co.uk/schedules/p015pksy/2018/w34
+.
+INFO: Got 174 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00zskxc/2018/w34
+
+INFO: Downloading S4C schedule page (1/3): https://www.bbc.co.uk/schedules/p020dmkf/2018/w34
+.
+INFO: Got 176 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p013bkc7/2018/w34
+.
+INFO: Got 175 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p013blmc/2018/w34
+.
+INFO: Got 170 programmes for BBC Two schedule page (JSON): https://www.bbc.co.uk/schedules/p015pksy/2018/w34
+.
+INFO: Got 457 programmes for CBeebies schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w34
+.
+INFO: Got 358 programmes for S4C schedule page (JSON): https://www.bbc.co.uk/schedules/p020dmkf/2018/w34
+INFO: Will refresh channel BBC Alba
+INFO: Will refresh channel BBC Four
+INFO: Will refresh channel BBC News
+INFO: Will refresh channel BBC One
+INFO: Will refresh channel BBC One Cambridgeshire
+INFO: Will refresh channel BBC One Channel Islands
+INFO: Will refresh channel BBC One East
+INFO: Will refresh channel BBC One East Midlands
+INFO: Will refresh channel BBC One London
+INFO: Will refresh channel BBC One North East & Cumbria
+INFO: Will refresh channel BBC One North West
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Oxfordshire
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One South
+INFO: Will refresh channel BBC One South East
+INFO: Will refresh channel BBC One South West
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One West
+INFO: Will refresh channel BBC One West Midlands
+INFO: Will refresh channel BBC One Yorks & Lincs
+INFO: Will refresh channel BBC One Yorkshire
+INFO: Will refresh channel BBC Parliament
+INFO: Will refresh channel BBC Two
+INFO: Will refresh channel BBC Two England
+INFO: Will refresh channel BBC Two Northern Ireland
+INFO: Will refresh channel BBC Two Scotland
+INFO: Will refresh channel BBC Two Wales
+INFO: Will refresh channel CBBC
+INFO: Will refresh channel CBeebies
+INFO: Will refresh channel S4C
+
+INFO: Indexing tv programmes (concurrent) [future]
+DEBUG: Mojo::UserAgent CA file: C:\Program Files (x86)\get_iplayer\perl\lib\Mozilla\CA\cacert.pem
+
+INFO: Downloading BBC Alba schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl67/2018/w34
+
+INFO: Downloading BBC Alba schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl67/2018/w35
+
+INFO: Downloading BBC Four schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w34
+
+INFO: Downloading BBC Four schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w35
+
+INFO: Downloading BBC News schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w34
+.
+INFO: Got 139 programmes for BBC Alba schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl67/2018/w34
+
+INFO: Downloading BBC News schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w35
+.
+INFO: Got 65 programmes for BBC Four schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w34
+
+INFO: Downloading BBC One Cambridgeshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w34
+.
+INFO: Got 49 programmes for BBC Four schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6b/2018/w35
+
+INFO: Downloading BBC One Cambridgeshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w35
+.
+INFO: Got 258 programmes for BBC News schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w34
+
+INFO: Downloading BBC One Channel Islands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w34
+.
+INFO: Got 41 programmes for BBC Alba schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl67/2018/w35
+
+INFO: Downloading BBC One Channel Islands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w35
+.
+INFO: Got 188 programmes for BBC News schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6g/2018/w35
+
+INFO: Downloading BBC One East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w34
+.
+INFO: Got 174 programmes for BBC One Cambridgeshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w34
+
+INFO: Downloading BBC One East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w35
+.
+INFO: Got 131 programmes for BBC One Cambridgeshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6h/2018/w35
+
+INFO: Downloading BBC One East Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w34
+.
+INFO: Got 174 programmes for BBC One Channel Islands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w34
+
+INFO: Downloading BBC One East Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w35
+.
+INFO: Got 131 programmes for BBC One Channel Islands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6j/2018/w35
+
+INFO: Downloading BBC One Yorks & Lincs schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w34
+.
+INFO: Got 174 programmes for BBC One East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w34
+
+INFO: Downloading BBC One Yorks & Lincs schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w35
+.
+INFO: Got 131 programmes for BBC One East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6k/2018/w35
+
+INFO: Downloading BBC One schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w34
+.
+INFO: Got 174 programmes for BBC One East Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w34
+
+INFO: Downloading BBC One schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w35
+.
+INFO: Got 131 programmes for BBC One East Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6l/2018/w35
+
+INFO: Downloading BBC One London schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w34
+.
+INFO: Got 174 programmes for BBC One Yorks & Lincs schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w34
+
+INFO: Downloading BBC One London schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w35
+.
+INFO: Got 131 programmes for BBC One Yorks & Lincs schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6m/2018/w35
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w34
+.
+INFO: Got 131 programmes for BBC One schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w35
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w35
+.
+INFO: Got 179 programmes for BBC One London schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w34
+
+INFO: Downloading BBC One North East & Cumbria schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w34
+.
+INFO: Got 174 programmes for BBC One schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6n/2018/w34
+
+INFO: Downloading BBC One North East & Cumbria schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w35
+.
+INFO: Got 136 programmes for BBC One London schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6p/2018/w35
+
+INFO: Downloading BBC One North West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w34
+.
+INFO: Got 174 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w34
+
+INFO: Downloading BBC One North West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w35
+.
+INFO: Got 131 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6q/2018/w35
+
+INFO: Downloading BBC One Oxfordshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w34
+.
+INFO: Got 174 programmes for BBC One North East & Cumbria schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w34
+
+INFO: Downloading BBC One Oxfordshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w35
+.
+INFO: Got 131 programmes for BBC One North East & Cumbria schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6r/2018/w35
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w34
+.
+INFO: Got 174 programmes for BBC One North West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w34
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w35
+.
+INFO: Got 131 programmes for BBC One North West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6s/2018/w35
+
+INFO: Downloading BBC One South schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w34
+.
+INFO: Got 174 programmes for BBC One Oxfordshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w34
+
+INFO: Downloading BBC One South schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w35
+.
+INFO: Got 131 programmes for BBC One Oxfordshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6t/2018/w35
+
+INFO: Downloading BBC One South East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w34
+.
+INFO: Got 175 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w34
+
+INFO: Downloading BBC One South East schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w35
+.
+INFO: Got 132 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6v/2018/w35
+
+INFO: Downloading BBC One South West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w34
+.
+INFO: Got 174 programmes for BBC One South schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w34
+
+INFO: Downloading BBC One South West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w35
+.
+INFO: Got 131 programmes for BBC One South schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6w/2018/w35
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w34
+.
+INFO: Got 174 programmes for BBC One South East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w34
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w35
+.
+INFO: Got 131 programmes for BBC One South East schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6x/2018/w35
+
+INFO: Downloading BBC One West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl70/2018/w34
+.
+INFO: Got 174 programmes for BBC One South West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w34
+
+INFO: Downloading BBC One West schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl70/2018/w35
+.
+INFO: Got 131 programmes for BBC One South West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6y/2018/w35
+
+INFO: Downloading BBC One West Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl71/2018/w34
+.
+INFO: Got 176 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w34
+
+INFO: Downloading BBC One West Midlands schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl71/2018/w35
+.
+INFO: Got 135 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl6z/2018/w35
+
+INFO: Downloading BBC One Yorkshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl72/2018/w34
+.
+INFO: Got 174 programmes for BBC One West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl70/2018/w34
+
+INFO: Downloading BBC One Yorkshire schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl72/2018/w35
+.
+INFO: Got 131 programmes for BBC One West schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl70/2018/w35
+
+INFO: Downloading BBC Parliament schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl73/2018/w34
+.
+INFO: Got 174 programmes for BBC One West Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl71/2018/w34
+
+INFO: Downloading BBC Parliament schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl73/2018/w35
+.
+INFO: Got 131 programmes for BBC One West Midlands schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl71/2018/w35
+
+INFO: Downloading BBC Two England schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl97/2018/w34
+.
+INFO: Got 174 programmes for BBC One Yorkshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl72/2018/w34
+
+INFO: Downloading BBC Two England schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl97/2018/w35
+.
+INFO: Got 131 programmes for BBC One Yorkshire schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl72/2018/w35
+
+INFO: Downloading BBC Two Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl99/2018/w34
+.
+INFO: Got 212 programmes for BBC Parliament schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl73/2018/w34
+
+INFO: Downloading BBC Two Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl99/2018/w35
+.
+INFO: Got 161 programmes for BBC Parliament schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl73/2018/w35
+
+INFO: Downloading BBC Two Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w34
+.
+INFO: Got 111 programmes for BBC Two England schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl97/2018/w35
+
+INFO: Downloading BBC Two Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w35
+.
+INFO: Got 170 programmes for BBC Two England schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl97/2018/w34
+
+INFO: Downloading BBC Two Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w34
+.
+INFO: Got 172 programmes for BBC Two Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl99/2018/w34
+
+INFO: Downloading BBC Two Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w35
+.
+INFO: Got 112 programmes for BBC Two Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl99/2018/w35
+
+INFO: Downloading CBBC schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w34
+.
+INFO: Got 111 programmes for BBC Two Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w35
+
+INFO: Downloading CBBC schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w35
+.
+INFO: Got 169 programmes for BBC Two Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9b/2018/w34
+
+INFO: Downloading CBeebies schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w34
+.
+INFO: Got 174 programmes for BBC Two Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w34
+
+INFO: Downloading CBeebies schedule page (1/3): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w35
+.
+INFO: Got 113 programmes for BBC Two Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9d/2018/w35
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00zskxc/2018/w34
+.
+INFO: Got 278 programmes for CBBC schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w34
+
+INFO: Downloading BBC One Northern Ireland schedule page (1/3): https://www.bbc.co.uk/schedules/p00zskxc/2018/w35
+.
+INFO: Got 196 programmes for CBBC schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9r/2018/w35
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p013bkc7/2018/w34
+.
+INFO: Got 174 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00zskxc/2018/w34
+
+INFO: Downloading BBC One Wales schedule page (1/3): https://www.bbc.co.uk/schedules/p013bkc7/2018/w35
+.
+INFO: Got 338 programmes for CBeebies schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w35
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p013blmc/2018/w34
+.
+INFO: Got 131 programmes for BBC One Northern Ireland schedule page (JSON): https://www.bbc.co.uk/schedules/p00zskxc/2018/w35
+
+INFO: Downloading BBC One Scotland schedule page (1/3): https://www.bbc.co.uk/schedules/p013blmc/2018/w35
+.
+INFO: Got 457 programmes for CBeebies schedule page (JSON): https://www.bbc.co.uk/schedules/p00fzl9s/2018/w34
+
+INFO: Downloading BBC Two schedule page (1/3): https://www.bbc.co.uk/schedules/p015pksy/2018/w34
+.
+INFO: Got 176 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p013bkc7/2018/w34
+
+INFO: Downloading BBC Two schedule page (1/3): https://www.bbc.co.uk/schedules/p015pksy/2018/w35
+.
+INFO: Got 135 programmes for BBC One Wales schedule page (JSON): https://www.bbc.co.uk/schedules/p013bkc7/2018/w35
+
+INFO: Downloading S4C schedule page (1/3): https://www.bbc.co.uk/schedules/p020dmkf/2018/w34
+.
+INFO: Got 175 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p013blmc/2018/w34
+
+INFO: Downloading S4C schedule page (1/3): https://www.bbc.co.uk/schedules/p020dmkf/2018/w35
+.
+INFO: Got 132 programmes for BBC One Scotland schedule page (JSON): https://www.bbc.co.uk/schedules/p013blmc/2018/w35
+.
+INFO: Got 170 programmes for BBC Two schedule page (JSON): https://www.bbc.co.uk/schedules/p015pksy/2018/w34
+.
+INFO: Got 111 programmes for BBC Two schedule page (JSON): https://www.bbc.co.uk/schedules/p015pksy/2018/w35
+.
+INFO: Got 358 programmes for S4C schedule page (JSON): https://www.bbc.co.uk/schedules/p020dmkf/2018/w34
+.
+INFO: Got 358 programmes for S4C schedule page (JSON): https://www.bbc.co.uk/schedules/p020dmkf/2018/w35
+
+INFO: Added 0 tv programmes to cache
+INFO: Search term 'repair' is a substring
+DEBUG: Search download_regex = repair
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+
+WARNING: Ignoring future programme (b0bgy4tw): '9228: The Repair Shop: Series 3 - Episode 7 - 2018-08-21T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bgy5yz): '9229: The Repair Shop: Series 3 - Episode 8 - 2018-08-22T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bgy6mq): '9230: The Repair Shop: Series 3 - Episode 9 - 2018-08-23T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bgy739): '9231: The Repair Shop: Series 3 - Episode 10 - 2018-08-24T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bhqxwz): '9232: The Repair Shop: Series 3 - Episode 11 - 2018-08-27T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bhr3zl): '9233: The Repair Shop: Series 3 - Episode 12 - 2018-08-28T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bhr411): '9234: The Repair Shop: Series 3 - Episode 13 - 2018-08-29T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bhr4jg): '9235: The Repair Shop: Series 3 - Episode 14 - 2018-08-30T18:30:00+00:00'
+WARNING: Ignoring future programme (b0bhr4l8): '9236: The Repair Shop: Series 3 - Episode 15 - 2018-08-31T18:30:00+00:00'
+WARNING: Use --future to download future programmes that are already available from iPlayer
+Matches:
+9222:	The Repair Shop: Series 3 - Episode 1, BBC Two, b0bg6pfm
+9223:	The Repair Shop: Series 3 - Episode 2, BBC Two, b0bg6vhd
+9224:	The Repair Shop: Series 3 - Episode 3, BBC Two, b0bg6zs6
+9225:	The Repair Shop: Series 3 - Episode 4, BBC Two, b0bg6zvw
+9226:	The Repair Shop: Series 3 - Episode 5, BBC Two, b0bg717x
+9227:	The Repair Shop: Series 3 - Episode 6, BBC Two, b0bgy2vp
+INFO: 6 matching programmes

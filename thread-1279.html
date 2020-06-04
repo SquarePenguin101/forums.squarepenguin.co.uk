@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Disable cache update in PVR</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Disable cache update in PVR</div>
+<div id="pagetitle"><h2>Disable cache update in PVR</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1687</h2></div><div class="dateline">30-04-2017, 01:57 AM</div>
+</div>
+<div class="message">Hi all, <br />
+<br />
+I'm using Refresh_Cache_V0_4.pl to refresh the cache which still seems to work well, but when I run PVR via the web UI it updates the cache normally (which then wipes out what Refresh_Cache_V0_4.pl has done). <br />
+<br />
+Now I know get iPlayer will refresh if the cache is greater than 4 hours old and it could be the amount of time Refresh_Cache_v0_4 takes because it is scraping a lot of html. <br />
+<br />
+If I altered the 14400 in this line to be say 144000<br />
+my &#36;cache_secs = &#36;opt-&gt;{expiry} || main::progclass( &#36;prog_type )-&gt;expiry() || 14400;<br />
+<br />
+Would that solve the problem of get_iPlayer automatically deciding to update the cache? <br />
+(This would obviously just be an interium thing until a better way of getting the info from BBC is found) <br />
+<br />
+Also many thanks for the great program and it is disappointing BBC decided to cut RSS. <br />
+<br />
+Cheers<br />
+Tel</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-04-2017, 02:11 AM</div>
+</div>
+<div class="message">There is an option for that. Hint: it is in the line of code you posted</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1687</h2></div><div class="dateline">30-04-2017, 02:21 AM</div>
+</div>
+<div class="message">Thanks alot.<br />
+<br />
+UPDATE : OK, I got PVR going again, one other gotcha was my original PVR search had a version of default, PVR would find the program, BUT the download would fail because the version should be original. <br />
+Removing the version of default in the PVR search fixed that. <br />
+(Don't know when that changed, but my old version before today was 2.90 so very likely my fault)<br />
+<br />
+I also have a batch file for downloading via PID if anyone wants it (It asks for the PID and also the file prefix and then runs the download with a hard coded output directory). <br />
+<br />
+NOTE Windows only, but hey, it's working. <br />
+<br />
+Cheers<br />
+Tel</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Disable cache update in PVR</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

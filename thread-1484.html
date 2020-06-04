@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Conversion to M4A performs poorly with output directory on slow network drive</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Conversion to M4A performs poorly with output directory on slow network drive</div>
+<div id="pagetitle"><h2>Conversion to M4A performs poorly with output directory on slow network drive</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1909</h2></div><div class="dateline">22-08-2017, 09:33 PM</div>
+</div>
+<div class="message">Hi, <br />
+<br />
+Using 3.01 on Win7. I notice that my radio downloads result first in a .dash.m4a file which then gets converted very slowly (~1.5x) to .m4a. <br />
+<br />
+Conversion in older versions was much quicker. Used to take 10 mins or so to process a 3 hour audio file. Now taking forever!<br />
+<br />
+Am using following command:<br />
+<br />
+get_iplayer --type=radio --get "&lt;what&gt;" --nopurge --tag-isodate --radiomode=good --output "&lt;where&gt;" --file-prefix="&lt;firstbcast&gt;_&lt;name&gt;_&lt;episode&gt;"<br />
+<br />
+Can I speed up the conversion process?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-08-2017, 10:43 AM</div>
+</div>
+<div class="message">Conversion speed is a function of system resources. It has nothing to do with get_iplayer itself. An overloaded CPU can slow down ffmpeg during conversion, but a slow disk - particularly a slow network disk - can have a much bigger effect. Converting at 1.5x is of course terrible, but so is 10 mins. A file that size should normally convert in seconds. Whatever is slowing you down is unique to your machine, so unless somebody can replicate the same terrible performance, there isn't much help we can  offer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1909</h2></div><div class="dateline">23-08-2017, 07:28 PM</div>
+</div>
+<div class="message">Thanks. My output argument is a network drive which will win no speed races, and for some reason write performance has dropped even lower lately. I am now get_iplayer-ing to an ssd and copying to the network only after the download is complete. <br />
+<br />
+Much better idea. Conversion now happening at ~800x.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Conversion to M4A performs poorly with output directory on slow network drive</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

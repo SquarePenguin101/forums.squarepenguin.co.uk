@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - podcasts not working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; podcasts not working</div>
+<div id="pagetitle"><h2>podcasts not working</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">02-04-2016, 10:29 PM</div>
+</div>
+<div class="message">Not been updating today:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --type=podcast --refresh<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Getting podcast Index Feeds<br />
+WARNING: Failed to get prodcast index from site<br />
+WARNING: Failed to get prodcast index from site<br />
+WARNING: Failed to get prodcast index from site<br />
+<br />
+<br />
+INFO: 0 Matching Programmes</code></div>
+</div>
+<br />
+Anyone else having problems?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">03-04-2016, 10:05 AM</div>
+</div>
+<div class="message">for the past few days I have been getting<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b"><span style="font-style: italic;" class="mycode_i">Warning Failed to get podcast index from site </span></span><br />
+<br />
+when trying to download the podcast info<br />
+<br />
+is this a general problem now or a temporary BBC glitch?<br />
+<br />
+I use the PVR scheduler which has been downloading a few podcasts before the last couple of days<br />
+<br />
+I tried a manual refresh as well to no avail<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh --type=podcast</code></div></div>I have been trying to download <br />
+Friday Night Comedy<br />
+and<br />
+comedy of the week</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-532</h2></div><div class="dateline">03-04-2016, 11:49 AM</div>
+</div>
+<div class="message">I've been having the same problem since morning of Sat 2/Apr.<br />
+<br />
+The Failure messages come up pretty much instantly so It looks more like get_iplayer can't resolve the DNS for a site rather than a timeout failure because it's not getting a response.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">03-04-2016, 01:46 PM</div>
+</div>
+<div class="message">It seems to be a 404 - Page not found.<br />
+<br />
+Running the refresh with <kbd>--verbose</kbd> shows that the page it is trying to access is <a href="http://downloads.bbc.co.uk/podcasts/ppg.xml">http://downloads.bbc.co.uk/podcasts/ppg.xml</a> and trying that in a browser returns a 404 error.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-04-2016, 03:43 PM</div>
+</div>
+<div class="message">The podcast index data is indeed gone.  No great surprise - that data source was obsolete long ago, so get_iplayer has been living on borrowed time. I planned to deprecate and then remove podcast support from get_iplayer anyway, but it appears the BBC may have beaten me to it.  If the podcast index doesn't reappear within a week, it is probably gone for good.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">03-04-2016, 07:17 PM</div>
+</div>
+<div class="message">thanks for the info. there's not a lot I record from podcasts, just the friday night comedy and comedy of the week, so I can add the progs for friday night comedy to the radio selections. comedy of teh week is a little harder as it tends to be odds and sods, but it will speed things up if I dont use podcasts as they take ages to download the cache</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">03-04-2016, 07:59 PM</div>
+</div>
+<div class="message">As of now the following URLs still seem to be working... <br />
+<br />
+<a href="http://open.live.bbc.co.uk/aps/programmes/a-z/by/podcast/all.json">http://open.live.bbc.co.uk/aps/programme...t/all.json</a><br />
+<a href="http://open.live.bbc.co.uk/aps/programmes/a-z/by/podcast/all.xml">http://open.live.bbc.co.uk/aps/programme...st/all.xml</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-04-2016, 08:00 PM</div>
+</div>
+<div class="message">I have restored podcast support in the development version of get_iplayer (see installation docs in wiki for how to obtain). However, be advised that podcast support will still be deprecated in the next release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">03-04-2016, 08:23 PM</div>
+</div>
+<div class="message">Thanks for your continuing support.<br />
+<br />
+I know the podcasts are easy to pick up by other methods, but I will miss the ability to grab something on a topic of interest from across the bbc's  output by a simple one line command rather than having to search through the numerous websites!  Mind you, I think the podcasts are being would down slowly anyway - there used to be radio 2 &amp; 6 music ones that are no longer maintained.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">05-04-2016, 07:05 AM</div>
+</div>
+<div class="message">Two more feeds which I think have a longer life-expectancy are:<br />
+<br />
+<a href="http://polling.bbc.co.uk/podcasts.json">http://polling.bbc.co.uk/podcasts.json</a><br />
+<br />
+<a href="http://polling.bbc.co.uk/podcasts/featured.json">http://polling.bbc.co.uk/podcasts/featured.json</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">08-04-2016, 08:44 AM</div>
+</div>
+<div class="message">Today, I notice that the podcasts were all downloaded - the feed is back up (though for how long? ... and I've already gone to using a podcast client)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-04-2016, 10:32 AM</div>
+</div>
+<div class="message">Thanks for the update. You should definitely stick with a podcast client, in which case you may find this useful:<br />
+<br />
+<a href="http://www.bbc.co.uk/podcasts.opml">http://www.bbc.co.uk/podcasts.opml</a><br />
+<br />
+It's the podcast index in more common OPML form.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; podcasts not working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

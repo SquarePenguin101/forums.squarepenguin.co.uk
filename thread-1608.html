@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can get_iplayer download Blue Planet II in UHD? (Answer: No)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can get_iplayer download Blue Planet II in UHD? (Answer: No)</div>
+<div id="pagetitle"><h2>Can get_iplayer download Blue Planet II in UHD? (Answer: No)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1841</h2></div><div class="dateline">11-12-2017, 11:50 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+apologies if this has already been asked.<br />
+<br />
+Does get_iplayer allow download of Ultra HD content?<br />
+<br />
+I am aware that the BBC have released Blue Planet II in UHD to Sky Q Boxes and Smart TVs.<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2017, 12:54 PM</div>
+</div>
+<div class="message">No, unfortunately.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1841</h2></div><div class="dateline">12-12-2017, 10:11 AM</div>
+</div>
+<div class="message">is this likely to be something that will be added?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2017, 03:07 PM</div>
+</div>
+<div class="message">Not likely, from me at least. I don't have a suitable TV to work with, and UHD is only enabled in the TV app afaik. If you can sniff your network traffic, you can probably grab the MPEG-DASH manifest URLs (or HLS playlist equivalents) accessed by your TV and use them with youtube-dl. That is strictly off-topic here, so if you have questions about that approach, take them to a forum where youtube-dl is discussed. There may be other downloaders that can do the job as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2028</h2></div><div class="dateline">22-12-2017, 01:18 PM</div>
+</div>
+<div class="message">I've got a Roku Streaming Stick+ - which seems to be the only external player solution enabled for the Beta Blue Planet II HLG UHD trial.<br />
+<br />
+I sniffed the network traffic (Netgear router with port mirroring upstream of my Wireless access point as the Roku is wifi only) whilst playing a UHD Blue Planet II stream and have the http URLs used for the .mpd manifest, the IS.mp4 and the audio and video .m4s chunks.  <br />
+<br />
+Whilst I can manually download the .m4s audio and video chunks and the .mp4 (header?) using youtube_dl, I can't seem to automate the process.  (Doing a quick manual download of 20 video .m4s files and the IS.mp4 header and cat-ing them together creates a playable mp4 with HEVC 2160/25p video in it)<br />
+<br />
+Would having example .mpd (MPEG DASH manifests) help add this functionality to get_iplayer or is this simply not a development priority at the moment?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-12-2017, 05:09 PM</div>
+</div>
+<div class="message">Thanks for the offer, but I have been able to look at DASH manifests for those programmes that were provided by someone else. The manifests could be accommodated by get_iplayer with some changes, but that isn't the main issue. get_iplayer would need to be able to discover the manifest URLs from the programme PID. As you surmise, it's not a priority - not that I could do anything about it, anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2028</h2></div><div class="dateline">23-12-2017, 03:03 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-12-2017, 05:09 PM)</span></cite>Thanks for the offer, but I have been able to look at DASH manifests for those programmes that were provided by someone else. The manifests could be accommodated by get_iplayer with some changes, but that isn't the main issue. get_iplayer would need to be able to discover the manifest URLs from the programme PID. As you surmise, it's not a priority - not that I could do anything about it, anyway.</blockquote><br />
+Thanks.  Totally understand.<br />
+<br />
+I've worked out a way to download the audio and video .mp4 and .m4s chunks in a semi-automated fashion from sniffed URLs, using a text file of URLs, wget and cat to create an audio and video mp4 and then merge them with mkvtoolnix.  Seems to play OK in Kodi on 10-bit HEVC friendly device (and with my TV in manual HLG mode)<br />
+<br />
+Is there any way of determining the total number of .m4s chunks in an mpeg-dash stream, or do you just keep going until you error? (I've been sniffing the beginning and end of shows to find the highest number .m4s)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1936</h2></div><div class="dateline">30-12-2017, 02:38 PM</div>
+</div>
+<div class="message">is it possible for you to share your semi automated way, or send me a pm with details?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-12-2017, 04:46 PM</div>
+</div>
+<div class="message">Not here. If you have some information germane to get_iplayer, start a new thread. This one is closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can get_iplayer download Blue Planet II in UHD? (Answer: No)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

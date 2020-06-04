@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+<div id="pagetitle"><h2>How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1155-2.html">2</a> <a href="thread-1155-3.html">3</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">06-02-2017, 01:52 PM</div>
+</div>
+<div class="message">Hi guys,<br />
+I've been using 2.97 and older versions for yonks, and with the deprecation of aactomp3 function, Im wondering if there's a switch to invoke ffmpeg to convert from M4a to mp3 when downloaded. Im running get_iplayer on the latest Raspbian on a Pi3.<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 02:13 PM</div>
+</div>
+<div class="message">See advanced section of FAQ list</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1365</h2></div><div class="dateline">06-02-2017, 03:16 PM</div>
+</div>
+<div class="message">Apologies for being a bit thick but...<br />
+<br />
+I've reverted back to version 2.97 (Win 10) after finding that the output to mp3 no longer works.<br />
+Am I correct in thinking that to get an mp3 output with version 2.98 I need to type in... <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get 123 --command-radio='ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 320k -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3"'</code></div></div><br />
+...then use ...<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get 12345 --preset=aactomp3</code></div></div><br />
+...to download a show?<br />
+<br />
+If that's correct will I have type in '--preset=aactomp3' every time?<br />
+<br />
+Thanks,<br />
+<br />
+Andrew.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 03:43 PM</div>
+</div>
+<div class="message">You're mixing up two different examples. Have another look at the documentation. It shows you how to create a preset before using it. <br />
+<br />
+A preset gives you the choice of converting radio programmes to MP3 only when you need to, so you would need to include <kbd>--preset</kbd> in your commands as shown in the example. If you want to convert every single radio programme to MP3 every single time no matter what, you can set <kbd>--command-radio</kbd> in your default preferences. Use just <kbd>--prefs-add</kbd> instead of <kbd>--prefs-add --preset aactomp3</kbd>. Just remember to override <kbd>--command-radio</kbd> manually if you want to do something different with your radio programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1365</h2></div><div class="dateline">06-02-2017, 04:35 PM</div>
+</div>
+<div class="message">Thanks.<br />
+<br />
+I'll take another look at the docs to see if I can understand what to do.<br />
+I only use get_iplayer for radio rips, essentially to copy to CD for the missus to listen to stuff in her car.<br />
+<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">06-02-2017, 06:02 PM</div>
+</div>
+<div class="message">Sorry, Im really struggling with this, where do I save --command-radio, and would I need to type anything other than get_iplayer --pvr, when all settings are entered correctly?<br />
+Id I do prefs-add command-radio, it saves a blank file in .get_iplayer/presets.<br />
+<br />
+TIA<br />
+Steve<br />
+<hr class="mycode_hr" />
+If I type this<br />
+<kbd>get_iplayer --force --pid b08crt5z --command-radio='ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 320k -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3"'</kbd><br />
+<br />
+It works and converts to an mp3, how do I incorporate this into my permanent preferences?<br />
+(I only ever download Radio)<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 06:20 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 06:02 PM)</span></cite>It works and converts to an mp3, how do I incorporate this into my permanent preferences?<br />
+(I only ever download Radio)</blockquote>The documentation provides an example (using MP3 VBR) of exactly that. Have another look and adjust to suit if you want to use other ffmpeg parameters.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-287</h2></div><div class="dateline">06-02-2017, 07:40 PM</div>
+</div>
+<div class="message">Er, where in the docs?  I've got exactly the same question but following the link in the Radio section (<a href="https://squarepenguin.co.uk/guides/radio-download-guide/#how-do-i-make-get-iplayer-automatically-convert-radio-programmes-to-mp3">https://squarepenguin.co.uk/guides/radio...mes-to-mp3</a>) just takes me to "This is an advanced topic beyond the scope of this introductory guide" and then links to the Custom Commands WIKI with "Create a preset named aactomp3  that can be used to extract the audio from a radio programme "</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">06-02-2017, 07:41 PM</div>
+</div>
+<div class="message">@startreksteve<br />
+<br />
+Scroll a <a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation#radio-examples">little further down</a> than you're currently reading in the Example Commands list.<br />
+<br />
+@user-2<br />
+<br />
+Do you use bold heading instead of h4 for a set reason (i.e. something breaks if you don't)? If not, I'll change the smaller headings like I have done in this example above (they're visually identical) as you can get anchor links directly to them with a simple click.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 07:56 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 07:41 PM)</span></cite>Do you use bold heading instead of h4 for a set reason (i.e. something breaks if you don't)? If not, I'll change the smaller headings like I have done in this example above (they're visually identical) as you can get anchor links directly to them with a simple click.</blockquote>By all means, edit away. The idea was to get people to read the whole section on custom commands so they might actually understand the different ways to approach the problem, but that has clearly failed at the first hurdle.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">06-02-2017, 08:08 PM</div>
+</div>
+<div class="message">Aha!<br />
+got it, that seems to work fine but the finished mp3 is a little larger, no worries, I'll have a fiddle about with the bitrates..<br />
+<br />
+Cheers<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">06-02-2017, 08:18 PM</div>
+</div>
+<div class="message">I think it might just be above most users desire to parse the volume of info now. <br />
+<br />
+The amount of 'adjacent knowledge' needed is higher too, like these commands come from simple building block principles but collecting that knowledge over the wiki is a big barrier for many (not least the time factor, let alone motivation). <br />
+<br />
+It'll probably reduce the support burden to be able to link directly to this solution (at least) as I'm sure there will be more coming who were relying on the `--aactomp3` option. <br />
+<br />
+I'll edit the Wiki as time allows.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 08:28 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 08:08 PM)</span></cite>got it, that seems to work fine but the finished mp3 is a little larger, no worries, I'll have a fiddle about with the bitrates..</blockquote>One more thing: Previous versions of get_iplayer used constant bit rate encoding for MP3 by default. If you opt to try variable bit rate encoding to save a bit on storage, I suggest that before going all in, you test a few files with your particular hardware to make sure they play OK and that the sound quality suits you. Everyone's hardware (and ears) are different.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">06-02-2017, 08:39 PM</div>
+</div>
+<div class="message">One final question, after conversion, can I tell it to automatically delete the m4a?<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 08:54 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 08:39 PM)</span></cite>One final question, after conversion, can I tell it to automatically delete the m4a?</blockquote>You can string together multiple system commands in <kbd>--command-radio</kbd>. Combine them just as you would if typing them at a command prompt. Obviously, you need to be careful and only call <kbd>rm</kbd> if ffmpeg completes successfully. Work out your desired sequence at a command prompt before trying it with <kbd>--command-radio</kbd>. That said, if you're going to use more a couple of commands you will likely find it better to encapsulate all your post-processing in a shell script and then invoke the script from <kbd>--command-radio</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">06-02-2017, 08:56 PM</div>
+</div>
+<div class="message">Yeah, I used to do that with version 2.95..<br />
+I used to move the converted m4a's to another folder and delete them manually every few weeks.<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2017, 09:01 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 08:56 PM)</span></cite>I used to move the converted m4a's to another folder and delete them manually every few weeks.</blockquote>Wise move. For anyone else: This would be preferable to deleting m4a files as you go. No point in wasting bandwidth to re-download if something goes wrong when you don't have to.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">07-02-2017, 09:25 AM</div>
+</div>
+<div class="message">I checked that M4A folder after I said that, and there was 10gb of files in it! obviously I DONT empty it every few weeks! No wonder Im running out of space!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">10-02-2017, 12:31 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2017, 06:02 PM)</span></cite>Sorry, Im really struggling with this, where do I save --command-radio, and would I need to type anything other than get_iplayer --pvr, when all settings are entered correctly?<br />
+Id I do prefs-add command-radio, it saves a blank file in .get_iplayer/presets.<br />
+<br />
+TIA<br />
+Steve<br />
+<hr class="mycode_hr" />
+If I type this<br />
+get_iplayer --force --pid b08crt5z --command-radio='ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 320k -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3"'<br />
+<br />
+<br />
+<br />
+It works and converts to an mp3, how do I incorporate this into my permanent preferences?<br />
+(I only ever download Radio)<br />
+<br />
+Steve</blockquote></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">10-02-2017, 07:50 PM</div>
+</div>
+<div class="message">Its stopped working again now with the following error:<br />
+<br />
+libmp3lame IS installed<br />
+<br />
+: A B7 production for BBC Radio 4.<br />
+                    : <br />
+                    : EPISODE<br />
+                    : <a href="http://www.bbc.co.uk/programmes/b08crt5z">http://www.bbc.co.uk/programmes/b08crt5z</a><br />
+                    : <br />
+                    : SERIES<br />
+                    : <a href="http://www.bbc.co.uk/programmes/b08f1dfw">http://www.bbc.co.uk/programmes/b08f1dfw</a><br />
+  Duration: 00:13:37.92, start: 0.000000, bitrate: 129 kb/s<br />
+    Stream #0:0(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)<br />
+    Metadata:<br />
+      handler_name    : SoundHandler<br />
+    Stream #0:1: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 150x84 [SAR 72:72 DAR 25:14], 90k tbr, 90k tbn, 90k tbc<br />
+Unknown encoder 'libmp3lame'<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+ERROR: Command Exit Code: 1</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1155-2.html">2</a> <a href="thread-1155-3.html">3</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1768 @@
+get_iplayer v2.95, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/I_love_subtitles/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	force = 1
+	get = 1
+	isodate = 1
+	pid = http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot
+	subsrequired = 1
+	subtitles = 1
+	tvmode = flashhigh
+	verbose = 1
+
+INFO: Search args: 'http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot'
+INFO: Will try prog types: tv
+INFO: Got 4299 file cache entries for tv
+Cleaning pid Old: 'http://www.bbc.co.uk/iplayer/episode/b07m57mz/forces-of-nature-with-brian-cox-4-the-pale-blue-dot',  New: 'b07m57mz'
+INFO: Getting page http://www.bbc.co.uk/programmes/b07m57mz.rdf
+INFO: Episode-only pid detected
+INFO: Trying pid: b07m57mz using type: tv
+INFO Trying to stream pid using type tv
+INFO: pid found in cache
+Matches:
+1078:	Forces of Nature with Brian Cox - The Pale Blue Dot, BBC One, b07m57mz
+
+INFO: 1 Matching Programmes
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b07m57mz.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b07m57mz.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p042ldvg/proto/rtmp?cb=72848
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p042ldvg/proto/rtmp?cb=76019
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Getting page http://www.bbc.co.uk/programmes/p042ldvg.rdf
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b07m57mt/proto/rtmp?cb=31662
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b07m57mt/proto/rtmp?cb=23796
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b07m57mt.rdf
+INFO: Will search for versions: original
+INFO: Mode list: flashhigh
+INFO: Checking existence of original version
+INFO: Version = original
+INFO: flashhigh1,flashhigh2 modes will be tried for version original
+INFO: Trying flashhigh1 mode to record tv: Forces of Nature with Brian Cox - 4. The Pale Blue Dot
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original                 
+
+INFO: Getting Subtitles from http://www.bbc.co.uk/iplayer/subtitles/ng/modav/bUnknown-629ff581-b527-47be-9d80-55409402687a_b07m57mt_1469478015121.xml
+INFO: Getting page http://www.bbc.co.uk/iplayer/subtitles/ng/modav/bUnknown-629ff581-b527-47be-9d80-55409402687a_b07m57mt_1469478015121.xml
+INFO: Downloading Subtitles to '/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.srt'
+INFO: rtmpver: 
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+INFO: 
+INFO: rtmpdump: This program dumps the media content streamed over RTMP.
+INFO: 
+INFO: --help|-h               Prints this help screen.
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing
+INFO: --auth|-u string        Authentication string to be appended to the connect string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number
+INFO: --flashVer|-f string    Flash version string (default: "LNX 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)
+INFO: 
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.
+INFO: 
+INFO: rtmpdump version 2.4
+INFO: RTMP_URL: rtmp://vod-rtmp-uk-live.edgesuite.net:1935/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4, tcUrl: rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4, application: ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4, authString: auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.16.6/StandardMediaPlayerChromelessFlash.swf, file: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4, file_done: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.mp4
+INFO: Begin recording file: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv
+
+
+INFO: Command: "rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "mp4:secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4?auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4" "--host" "vod-rtmp-uk-live.edgesuite.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.16.6/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4" "--app" "ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b07m57mz" "--resume" "-o" "/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : vod-rtmp-uk-live.edgesuite.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4?auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4
+DEBUG: tcUrl    : rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.16.6/StandardMediaPlayerChromelessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/iplayer/episode/b07m57mz
+DEBUG: app      : ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: 09 25 a9 45 c9 0f 1a 58 cc 7e 3c e0 29 ef 45 10
+DEBUG: dc 8d f0 d2 a7 76 0e e8 f5 b8 3b 1d 83 af c7 c9
+DEBUG: SWFSize  : 1122136
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 430
+DEBUG: HandShake: Initial client digest: 
+DEBUG: cb 07 39 d2 fc 7d e0 b8 81 b0 11 ad a6 7f b8 0e
+DEBUG: ac b8 db fe 0e 0f 94 7c e1 f5 e3 5a 7e db 31 e0
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 1959512515
+DEBUG: HandShake: FMS Version   : 5.0.7.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest: 
+DEBUG: e3 d4 b2 70 ac cb 3f d6 e4 6c 10 25 96 f3 46 bd
+DEBUG: 51 49 0d 93 f2 01 1f 95 20 61 e0 b3 74 70 0c ca
+DEBUG: HandShake: Client signature calculated:
+DEBUG: 36 d4 71 b3 7f ed 5f ac ed d8 52 b7 00 6e b2 b6
+DEBUG: 0c dd 70 b8 5b cf 73 73 65 62 85 46 1e dd 30 23
+DEBUG: HandShake: Server sent signature:
+DEBUG: f1 af d8 fa b1 11 b0 5e 6b 8f e2 a7 3c 67 0d f1
+DEBUG: 13 d7 fc de fb 31 8c 1b 6c 13 01 49 8e 40 e8 32
+DEBUG: HandShake: Digest key: 
+DEBUG: ec b6 f7 31 a8 88 5f 34 7f b5 f7 19 ae cc f5 11
+DEBUG: fb 9e 1c cc c4 5b 5c 32 f1 08 47 a5 b7 d8 9e b6
+DEBUG: HandShake: Signature calculated:
+DEBUG: f1 af d8 fa b1 11 b0 5e 6b 8f e2 a7 3c 67 0d f1
+DEBUG: 13 d7 fc de fb 31 8c 1b 6c 13 01 49 8e 40 e8 32
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 1250000
+DEBUG: HandleClientBW: client BW = 1250000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 242 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:	FMS/5,0,7,7054>
+DEBUG: Property: <Name:       capabilities, NUMBER:	127.00>
+DEBUG: Property: <Name:               mode, NUMBER:	1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetConnection.Connect.Success>
+DEBUG: Property: <Name:        description, STRING:	Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:	0.00>
+DEBUG: Property: <Name:               data, OBJECT>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:	5,0,7,7054>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4?auth=daEcocxaTbUbDaYdTbPaBbvaqdVaodqdwcB-bxLQkx-bWG-FpoDFoCoOBnHsxD&aifp=v001&slist=secure/480kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656289636.mp4;secure/1500kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656288732.mp4;secure/3200kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468661751804.mp4;secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 10275 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 20515 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 328 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:	Playing and resetting secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4.>
+DEBUG: Property: <Name:            details, STRING:	secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	qAAkALzA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 322 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:	Started playing secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4.>
+DEBUG: Property: <Name:            details, STRING:	secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	qAAkALzA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 494 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:	3510.00>
+DEBUG: Property: <Name:       moovPosition, NUMBER:	36.00>
+DEBUG: Property: <Name:              width, NUMBER:	640.00>
+DEBUG: Property: <Name:             height, NUMBER:	360.00>
+DEBUG: Property: <Name:       videocodecid, STRING:	avc1>
+DEBUG: Property: <Name:       audiocodecid, STRING:	mp4a>
+DEBUG: Property: <Name:         avcprofile, NUMBER:	77.00>
+DEBUG: Property: <Name:           avclevel, NUMBER:	30.00>
+DEBUG: Property: <Name:             aacaot, NUMBER:	2.00>
+DEBUG: Property: <Name:     videoframerate, NUMBER:	25.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:	48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:	2.00>
+DEBUG: Property: <Name:          trackinfo, OBJECT>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:	87750000.00>
+DEBUG: Property: <Name:          timescale, NUMBER:	25000.00>
+DEBUG: Property: <Name:           language, STRING:	und>
+DEBUG: Property: <Name:  sampledescription, OBJECT>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:	avc1>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:	168479744.00>
+DEBUG: Property: <Name:          timescale, NUMBER:	48000.00>
+DEBUG: Property: <Name:           language, STRING:	und>
+DEBUG: Property: <Name:  sampledescription, OBJECT>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:	mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              3510.00
+INFO:   moovPosition          36.00
+INFO:   width                 640.00
+INFO:   height                360.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            77.00
+INFO:   avclevel              30.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                87750000.00
+INFO:   timescale             25000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                168479744.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+
+0.577 kB / 0.00 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 30755 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40995 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+200.611 kB / 1.96 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 51235 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 61475 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 71717 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+388.757 kB / 3.88 sec (0.1%)
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 92197 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+516.757 kB / 5.00 sec (0.1%)
+DEBUG: RTMP_ClientPacket, received: invoke 102437 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 112677 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+644.757 kB / 6.64 sec (0.1%)
+DEBUG: RTMP_ClientPacket, received: invoke 122917 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 133157 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+772.757 kB / 7.92 sec (0.2%)
+DEBUG: RTMP_ClientPacket, received: invoke 143397 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 153637 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+
+900.757 kB / 9.24 sec (0.2%)
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+
+1220.757 kB / 12.64 sec (0.3%)
+1476.757 kB / 14.92 sec (0.4%)
+1732.757 kB / 17.64 sec (0.5%)
+2052.757 kB / 21.31 sec (0.6%)
+2372.757 kB / 24.28 sec (0.6%)
+2692.757 kB / 27.40 sec (0.7%)
+3008.345 kB / 30.24 sec (0.8%)
+3328.345 kB / 33.58 sec (0.9%)
+3648.345 kB / 36.88 sec (1.0%)
+3904.345 kB / 39.76 sec (1.1%)
+4160.345 kB / 41.88 sec (1.1%)
+4435.805 kB / 44.60 sec (1.2%)
+4691.805 kB / 47.32 sec (1.3%)
+4956.713 kB / 50.12 sec (1.4%)
+5212.713 kB / 52.76 sec (1.5%)
+5468.713 kB / 55.00 sec (1.5%)
+5724.713 kB / 58.24 sec (1.6%)
+5980.713 kB / 60.92 sec (1.7%)
+6236.713 kB / 63.52 sec (1.8%)
+6556.713 kB / 66.48 sec (1.8%)
+6812.713 kB / 69.55 sec (1.9%)
+7117.273 kB / 71.76 sec (2.0%)
+7373.273 kB / 74.84 sec (2.1%)
+7693.273 kB / 78.16 sec (2.2%)
+8013.273 kB / 81.19 sec (2.3%)
+8269.273 kB / 83.82 sec (2.3%)
+8525.273 kB / 86.60 sec (2.4%)
+8845.273 kB / 90.00 sec (2.5%)
+9165.273 kB / 92.92 sec (2.6%)
+9485.273 kB / 95.92 sec (2.7%)
+9741.273 kB / 98.88 sec (2.8%)
+9997.273 kB / 101.52 sec (2.8%)
+10317.273 kB / 104.77 sec (2.9%)
+10608.256 kB / 107.48 sec (3.0%)
+10864.256 kB / 110.00 sec (3.1%)
+11184.256 kB / 113.44 sec (3.2%)
+11440.256 kB / 116.16 sec (3.3%)
+11696.256 kB / 118.76 sec (3.3%)
+12016.256 kB / 121.71 sec (3.4%)
+12336.256 kB / 125.20 sec (3.5%)
+12656.256 kB / 128.24 sec (3.6%)
+12912.256 kB / 131.00 sec (3.7%)
+13232.256 kB / 134.16 sec (3.8%)
+13488.256 kB / 136.80 sec (3.8%)
+13808.256 kB / 140.00 sec (3.9%)
+14064.256 kB / 142.81 sec (4.0%)
+14320.256 kB / 145.68 sec (4.1%)
+14636.825 kB / 148.00 sec (4.2%)
+14892.825 kB / 150.66 sec (4.2%)
+15148.825 kB / 153.24 sec (4.3%)
+15404.825 kB / 155.84 sec (4.4%)
+15660.825 kB / 158.88 sec (4.5%)
+15916.825 kB / 161.32 sec (4.5%)
+16172.825 kB / 164.04 sec (4.6%)
+16428.825 kB / 166.53 sec (4.7%)
+16748.825 kB / 169.76 sec (4.8%)
+17068.825 kB / 173.20 sec (4.9%)
+17324.825 kB / 176.00 sec (5.0%)
+17580.825 kB / 178.64 sec (5.0%)
+17900.825 kB / 182.00 sec (5.1%)
+18156.825 kB / 184.68 sec (5.2%)
+18476.825 kB / 187.08 sec (5.3%)
+18784.812 kB / 190.04 sec (5.4%)
+19040.812 kB / 192.80 sec (5.4%)
+19360.812 kB / 196.20 sec (5.5%)
+19616.812 kB / 199.08 sec (5.6%)
+19872.812 kB / 201.32 sec (5.7%)
+20192.812 kB / 204.60 sec (5.8%)
+20512.812 kB / 208.15 sec (5.9%)
+20832.812 kB / 211.20 sec (6.0%)
+21152.812 kB / 214.48 sec (6.1%)
+21408.812 kB / 217.16 sec (6.1%)
+21664.812 kB / 220.00 sec (6.2%)
+21920.812 kB / 222.76 sec (6.3%)
+22176.812 kB / 225.17 sec (6.4%)
+22496.812 kB / 228.36 sec (6.5%)
+22816.535 kB / 231.00 sec (6.5%)
+23072.535 kB / 233.72 sec (6.6%)
+23392.535 kB / 237.33 sec (6.7%)
+23648.535 kB / 240.00 sec (6.8%)
+23968.535 kB / 243.04 sec (6.9%)
+24224.535 kB / 245.64 sec (6.9%)
+24480.535 kB / 248.28 sec (7.0%)
+24736.535 kB / 250.94 sec (7.1%)
+25051.377 kB / 254.02 sec (7.2%)
+25307.377 kB / 256.64 sec (7.3%)
+25563.377 kB / 259.31 sec (7.3%)
+25883.377 kB / 262.44 sec (7.4%)
+26139.377 kB / 265.08 sec (7.5%)
+26459.377 kB / 268.35 sec (7.6%)
+26715.377 kB / 270.92 sec (7.7%)
+26971.377 kB / 273.71 sec (7.7%)
+27291.377 kB / 276.50 sec (7.8%)
+27611.377 kB / 280.00 sec (7.9%)
+27867.377 kB / 283.16 sec (8.0%)
+28187.377 kB / 286.00 sec (8.1%)
+28507.377 kB / 288.96 sec (8.2%)
+28699.377 kB / 291.00 sec (8.2%)
+28827.377 kB / 292.32 sec (8.3%)
+29211.377 kB / 296.68 sec (8.4%)
+29595.377 kB / 300.52 sec (8.5%)
+29851.377 kB / 303.20 sec (8.6%)
+30043.377 kB / 304.84 sec (8.6%)
+30361.292 kB / 307.48 sec (8.7%)
+30745.292 kB / 311.88 sec (8.8%)
+31001.292 kB / 314.52 sec (8.9%)
+31193.292 kB / 316.48 sec (9.0%)
+31385.292 kB / 318.48 sec (9.0%)
+31641.292 kB / 320.84 sec (9.1%)
+31961.292 kB / 324.12 sec (9.2%)
+32345.292 kB / 328.04 sec (9.3%)
+32665.292 kB / 331.46 sec (9.4%)
+33049.292 kB / 335.36 sec (9.5%)
+33497.292 kB / 339.64 sec (9.6%)
+33881.292 kB / 343.36 sec (9.7%)
+34265.292 kB / 347.56 sec (9.9%)
+34585.292 kB / 351.00 sec (10.0%)
+34905.292 kB / 354.24 sec (10.0%)
+35161.292 kB / 356.84 sec (10.1%)
+35417.292 kB / 359.08 sec (10.2%)
+35737.292 kB / 362.52 sec (10.3%)
+35993.292 kB / 365.00 sec (10.3%)
+36312.255 kB / 367.92 sec (10.4%)
+36568.255 kB / 370.52 sec (10.5%)
+36824.255 kB / 373.36 sec (10.6%)
+37130.207 kB / 376.08 sec (10.7%)
+37386.207 kB / 378.76 sec (10.7%)
+37642.207 kB / 381.76 sec (10.8%)
+37962.207 kB / 385.00 sec (10.9%)
+38282.207 kB / 388.32 sec (11.0%)
+38569.814 kB / 391.16 sec (11.1%)
+38889.814 kB / 394.04 sec (11.2%)
+39145.814 kB / 396.68 sec (11.3%)
+39401.814 kB / 399.25 sec (11.3%)
+39685.397 kB / 402.36 sec (11.4%)
+39941.397 kB / 405.00 sec (11.5%)
+40261.397 kB / 408.28 sec (11.6%)
+40581.397 kB / 411.24 sec (11.7%)
+40837.397 kB / 413.92 sec (11.7%)
+41157.397 kB / 417.08 sec (11.8%)
+41444.403 kB / 420.00 sec (11.9%)
+41700.403 kB / 422.96 sec (12.0%)
+41956.403 kB / 425.36 sec (12.1%)
+42276.403 kB / 429.08 sec (12.2%)
+42532.403 kB / 431.80 sec (12.3%)
+42906.365 kB / 434.68 sec (12.3%)
+43162.365 kB / 437.56 sec (12.4%)
+43418.365 kB / 440.16 sec (12.5%)
+43674.365 kB / 442.64 sec (12.6%)
+43930.365 kB / 445.28 sec (12.6%)
+44250.365 kB / 448.96 sec (12.7%)
+44570.365 kB / 452.08 sec (12.8%)
+44890.365 kB / 455.28 sec (12.9%)
+45146.365 kB / 458.20 sec (13.0%)
+45466.365 kB / 460.76 sec (13.1%)
+45714.305 kB / 463.28 sec (13.1%)
+46034.305 kB / 466.60 sec (13.2%)
+46290.305 kB / 469.16 sec (13.3%)
+46546.305 kB / 472.08 sec (13.4%)
+46802.305 kB / 474.48 sec (13.5%)
+47122.305 kB / 477.80 sec (13.6%)
+47378.305 kB / 481.00 sec (13.7%)
+47688.469 kB / 483.24 sec (13.7%)
+47944.469 kB / 485.80 sec (13.8%)
+48200.469 kB / 488.44 sec (13.9%)
+48520.469 kB / 491.76 sec (14.0%)
+48794.146 kB / 494.64 sec (14.0%)
+49050.146 kB / 497.00 sec (14.1%)
+49306.146 kB / 499.92 sec (14.2%)
+49626.146 kB / 503.08 sec (14.3%)
+49882.146 kB / 505.96 sec (14.4%)
+50202.146 kB / 509.32 sec (14.5%)
+50458.146 kB / 511.68 sec (14.5%)
+50763.499 kB / 514.36 sec (14.6%)
+51019.499 kB / 517.08 sec (14.7%)
+51275.499 kB / 519.92 sec (14.8%)
+51531.499 kB / 522.36 sec (14.8%)
+51787.499 kB / 525.27 sec (14.9%)
+52107.499 kB / 528.45 sec (15.0%)
+52463.531 kB / 532.04 sec (15.1%)
+52719.531 kB / 534.68 sec (15.2%)
+53039.531 kB / 538.04 sec (15.3%)
+53359.531 kB / 541.27 sec (15.4%)
+53679.531 kB / 544.60 sec (15.5%)
+53935.531 kB / 546.76 sec (15.5%)
+54255.531 kB / 550.32 sec (15.6%)
+54575.531 kB / 553.72 sec (15.7%)
+54831.531 kB / 556.24 sec (15.8%)
+55138.742 kB / 558.76 sec (15.9%)
+55458.742 kB / 562.36 sec (16.0%)
+55714.742 kB / 565.00 sec (16.0%)
+56034.742 kB / 568.52 sec (16.1%)
+56290.742 kB / 571.20 sec (16.2%)
+56546.742 kB / 573.82 sec (16.3%)
+56866.742 kB / 577.16 sec (16.4%)
+57250.742 kB / 580.10 sec (16.5%)
+57509.762 kB / 582.72 sec (16.6%)
+57765.762 kB / 586.16 sec (16.6%)
+58085.762 kB / 588.68 sec (16.7%)
+58356.762 kB / 591.48 sec (16.8%)
+58612.762 kB / 594.36 sec (16.9%)
+58868.762 kB / 596.68 sec (16.9%)
+59124.762 kB / 599.32 sec (17.0%)
+59380.762 kB / 602.00 sec (17.1%)
+59636.762 kB / 604.64 sec (17.2%)
+59956.762 kB / 608.20 sec (17.3%)
+60276.762 kB / 611.28 sec (17.4%)
+60532.762 kB / 614.12 sec (17.4%)
+60788.762 kB / 616.80 sec (17.5%)
+61095.783 kB / 619.46 sec (17.6%)
+61351.783 kB / 622.28 sec (17.7%)
+61607.783 kB / 624.84 sec (17.8%)
+61927.783 kB / 627.73 sec (17.8%)
+62183.783 kB / 630.36 sec (17.9%)
+62439.783 kB / 633.36 sec (18.0%)
+62695.783 kB / 635.72 sec (18.1%)
+63015.783 kB / 639.44 sec (18.2%)
+63386.005 kB / 642.30 sec (18.2%)
+63644.996 kB / 645.00 sec (18.3%)
+63900.996 kB / 647.64 sec (18.4%)
+64220.996 kB / 651.28 sec (18.5%)
+64476.996 kB / 653.92 sec (18.6%)
+64732.996 kB / 656.64 sec (18.7%)
+64988.996 kB / 659.32 sec (18.7%)
+65278.360 kB / 661.96 sec (18.8%)
+65598.360 kB / 664.92 sec (18.9%)
+65854.360 kB / 667.48 sec (19.0%)
+66110.360 kB / 670.16 sec (19.0%)
+66366.360 kB / 673.16 sec (19.1%)
+66622.360 kB / 675.72 sec (19.2%)
+66942.360 kB / 678.88 sec (19.3%)
+67198.360 kB / 681.64 sec (19.4%)
+67507.401 kB / 684.16 sec (19.4%)
+67763.401 kB / 687.08 sec (19.5%)
+68083.401 kB / 690.00 sec (19.6%)
+68403.401 kB / 693.52 sec (19.7%)
+68659.401 kB / 696.36 sec (19.8%)
+68915.401 kB / 698.80 sec (19.9%)
+69171.401 kB / 701.36 sec (19.9%)
+69427.401 kB / 704.12 sec (20.0%)
+69683.401 kB / 706.60 sec (20.1%)
+69939.401 kB / 709.20 sec (20.2%)
+70259.401 kB / 712.94 sec (20.3%)
+70570.022 kB / 715.72 sec (20.3%)
+70890.022 kB / 718.76 sec (20.4%)
+71146.022 kB / 721.20 sec (20.5%)
+71466.022 kB / 724.44 sec (20.6%)
+71722.022 kB / 727.48 sec (20.7%)
+71978.022 kB / 729.76 sec (20.7%)
+72298.022 kB / 733.08 sec (20.8%)
+72554.022 kB / 735.84 sec (20.9%)
+72810.022 kB / 738.80 sec (21.0%)
+73130.022 kB / 741.52 sec (21.1%)
+73386.022 kB / 744.12 sec (21.2%)
+73642.022 kB / 747.04 sec (21.2%)
+73962.022 kB / 750.06 sec (21.3%)
+74218.022 kB / 752.88 sec (21.4%)
+74509.050 kB / 755.12 sec (21.5%)
+74829.050 kB / 758.44 sec (21.6%)
+75085.050 kB / 761.12 sec (21.6%)
+75341.050 kB / 763.76 sec (21.7%)
+75597.050 kB / 766.40 sec (21.8%)
+75853.050 kB / 769.04 sec (21.9%)
+76109.050 kB / 771.68 sec (21.9%)
+76365.050 kB / 774.32 sec (22.0%)
+76621.050 kB / 777.04 sec (22.1%)
+76941.050 kB / 780.48 sec (22.2%)
+77197.050 kB / 783.24 sec (22.3%)
+77453.050 kB / 785.88 sec (22.3%)
+77709.050 kB / 788.32 sec (22.4%)
+78023.437 kB / 790.76 sec (22.5%)
+78279.437 kB / 793.40 sec (22.6%)
+78535.437 kB / 796.20 sec (22.6%)
+78791.437 kB / 798.68 sec (22.7%)
+79047.437 kB / 801.28 sec (22.8%)
+79303.437 kB / 804.20 sec (22.9%)
+79559.437 kB / 806.88 sec (22.9%)
+79815.437 kB / 809.22 sec (23.0%)
+80071.437 kB / 812.24 sec (23.1%)
+80327.437 kB / 814.52 sec (23.2%)
+80647.437 kB / 817.84 sec (23.3%)
+80903.437 kB / 820.40 sec (23.3%)
+81223.437 kB / 824.08 sec (23.4%)
+81479.437 kB / 826.71 sec (23.5%)
+81735.437 kB / 829.44 sec (23.6%)
+82055.437 kB / 831.76 sec (23.6%)
+82311.437 kB / 834.44 sec (23.7%)
+82567.437 kB / 837.12 sec (23.8%)
+82887.437 kB / 840.36 sec (23.9%)
+83143.437 kB / 843.24 sec (24.0%)
+83463.437 kB / 846.68 sec (24.1%)
+83719.437 kB / 849.34 sec (24.1%)
+84039.437 kB / 852.63 sec (24.2%)
+84295.437 kB / 855.00 sec (24.3%)
+84671.863 kB / 858.60 sec (24.4%)
+84927.863 kB / 861.12 sec (24.5%)
+85183.863 kB / 863.76 sec (24.6%)
+85439.863 kB / 866.36 sec (24.6%)
+85759.863 kB / 869.52 sec (24.7%)
+86079.863 kB / 873.28 sec (24.8%)
+86335.863 kB / 875.76 sec (24.9%)
+86591.863 kB / 878.12 sec (25.0%)
+86847.863 kB / 880.76 sec (25.0%)
+87103.863 kB / 883.40 sec (25.1%)
+87359.863 kB / 886.12 sec (25.2%)
+87679.863 kB / 889.08 sec (25.3%)
+87935.863 kB / 891.76 sec (25.4%)
+88191.863 kB / 894.32 sec (25.4%)
+88447.863 kB / 897.00 sec (25.5%)
+88767.863 kB / 899.92 sec (25.6%)
+89023.863 kB / 902.60 sec (25.7%)
+89343.863 kB / 905.88 sec (25.8%)
+89599.863 kB / 908.52 sec (25.8%)
+89919.863 kB / 911.92 sec (25.9%)
+90161.762 kB / 914.36 sec (26.0%)
+90417.762 kB / 917.36 sec (26.1%)
+90728.052 kB / 920.00 sec (26.2%)
+91048.052 kB / 923.32 sec (26.3%)
+91368.052 kB / 926.44 sec (26.3%)
+91624.052 kB / 929.08 sec (26.4%)
+91880.052 kB / 931.72 sec (26.5%)
+92136.052 kB / 934.28 sec (26.6%)
+92392.052 kB / 937.00 sec (26.6%)
+92712.052 kB / 940.32 sec (26.7%)
+92968.052 kB / 942.96 sec (26.8%)
+93288.052 kB / 945.68 sec (26.9%)
+93608.052 kB / 948.92 sec (27.0%)
+93928.052 kB / 952.32 sec (27.1%)
+94184.052 kB / 955.04 sec (27.2%)
+94504.052 kB / 958.52 sec (27.3%)
+94760.052 kB / 961.00 sec (27.3%)
+95016.052 kB / 963.52 sec (27.4%)
+95272.052 kB / 966.08 sec (27.5%)
+95528.052 kB / 968.68 sec (27.5%)
+95784.052 kB / 971.67 sec (27.6%)
+96104.052 kB / 974.96 sec (27.7%)
+96479.958 kB / 978.36 sec (27.8%)
+96735.958 kB / 981.08 sec (27.9%)
+96991.958 kB / 983.76 sec (28.0%)
+97247.958 kB / 986.60 sec (28.1%)
+97598.595 kB / 989.28 sec (28.1%)
+97854.595 kB / 991.96 sec (28.2%)
+98110.595 kB / 994.88 sec (28.3%)
+98366.595 kB / 997.20 sec (28.4%)
+98622.595 kB / 1000.00 sec (28.4%)
+98878.595 kB / 1003.08 sec (28.5%)
+99198.595 kB / 1005.96 sec (28.6%)
+99454.595 kB / 1008.68 sec (28.7%)
+99769.008 kB / 1011.64 sec (28.8%)
+100089.008 kB / 1014.59 sec (28.9%)
+100409.008 kB / 1017.96 sec (29.0%)
+100665.008 kB / 1021.08 sec (29.0%)
+100921.008 kB / 1023.64 sec (29.1%)
+101241.008 kB / 1026.88 sec (29.2%)
+101493.735 kB / 1029.55 sec (29.3%)
+101813.735 kB / 1032.08 sec (29.4%)
+102133.735 kB / 1035.44 sec (29.4%)
+102453.735 kB / 1038.68 sec (29.5%)
+102709.735 kB / 1041.43 sec (29.6%)
+102965.735 kB / 1044.08 sec (29.7%)
+103266.597 kB / 1047.10 sec (29.8%)
+103525.591 kB / 1049.60 sec (29.9%)
+103845.591 kB / 1053.12 sec (30.0%)
+104101.591 kB / 1055.36 sec (30.0%)
+104357.591 kB / 1057.88 sec (30.1%)
+104631.067 kB / 1060.76 sec (30.2%)
+104951.067 kB / 1064.08 sec (30.3%)
+105207.067 kB / 1066.76 sec (30.3%)
+105463.067 kB / 1069.36 sec (30.4%)
+105783.067 kB / 1072.68 sec (30.5%)
+106039.067 kB / 1075.20 sec (30.6%)
+106295.067 kB / 1078.12 sec (30.7%)
+106647.149 kB / 1081.40 sec (30.8%)
+106903.149 kB / 1083.68 sec (30.8%)
+107159.149 kB / 1086.28 sec (30.9%)
+107479.149 kB / 1089.64 sec (31.0%)
+107735.149 kB / 1092.64 sec (31.1%)
+108055.149 kB / 1095.68 sec (31.2%)
+108311.149 kB / 1098.64 sec (31.3%)
+108567.149 kB / 1100.92 sec (31.3%)
+108887.149 kB / 1104.48 sec (31.4%)
+109259.973 kB / 1107.52 sec (31.5%)
+109515.973 kB / 1110.16 sec (31.6%)
+109771.973 kB / 1113.28 sec (31.7%)
+110027.973 kB / 1115.48 sec (31.7%)
+110347.973 kB / 1118.84 sec (31.8%)
+110603.973 kB / 1121.80 sec (31.9%)
+110859.973 kB / 1124.76 sec (32.0%)
+111177.946 kB / 1127.44 sec (32.1%)
+111433.946 kB / 1130.00 sec (32.1%)
+111753.946 kB / 1133.24 sec (32.2%)
+112073.946 kB / 1136.48 sec (32.3%)
+112329.946 kB / 1139.52 sec (32.4%)
+112644.650 kB / 1142.16 sec (32.5%)
+112964.650 kB / 1145.16 sec (32.6%)
+113284.650 kB / 1148.48 sec (32.7%)
+113540.650 kB / 1151.48 sec (32.8%)
+113860.650 kB / 1154.76 sec (32.8%)
+114116.650 kB / 1157.40 sec (32.9%)
+114372.650 kB / 1160.00 sec (33.0%)
+114692.650 kB / 1163.24 sec (33.1%)
+115072.108 kB / 1166.48 sec (33.2%)
+115392.108 kB / 1170.00 sec (33.3%)
+115712.108 kB / 1173.48 sec (33.4%)
+115968.108 kB / 1175.77 sec (33.4%)
+116224.108 kB / 1178.52 sec (33.5%)
+116480.108 kB / 1181.00 sec (33.6%)
+116800.108 kB / 1184.64 sec (33.7%)
+117120.108 kB / 1187.96 sec (33.8%)
+117376.108 kB / 1190.36 sec (33.9%)
+117696.108 kB / 1193.92 sec (34.0%)
+118016.108 kB / 1196.64 sec (34.0%)
+118333.272 kB / 1199.60 sec (34.1%)
+118589.272 kB / 1202.22 sec (34.2%)
+118845.272 kB / 1204.80 sec (34.3%)
+119165.272 kB / 1208.12 sec (34.4%)
+119421.272 kB / 1210.84 sec (34.4%)
+119677.272 kB / 1213.72 sec (34.5%)
+119933.272 kB / 1216.16 sec (34.6%)
+120221.188 kB / 1218.80 sec (34.7%)
+120477.188 kB / 1221.52 sec (34.8%)
+120733.188 kB / 1224.12 sec (34.8%)
+121053.188 kB / 1227.48 sec (34.9%)
+121373.188 kB / 1230.72 sec (35.0%)
+121629.188 kB / 1233.72 sec (35.1%)
+121949.188 kB / 1236.52 sec (35.2%)
+122250.917 kB / 1239.56 sec (35.3%)
+122506.917 kB / 1241.96 sec (35.3%)
+122762.917 kB / 1244.60 sec (35.4%)
+123018.917 kB / 1247.32 sec (35.5%)
+123274.917 kB / 1250.00 sec (35.6%)
+123573.504 kB / 1253.04 sec (35.6%)
+123829.504 kB / 1255.52 sec (35.7%)
+124085.504 kB / 1258.26 sec (35.8%)
+124341.504 kB / 1260.64 sec (35.9%)
+124597.504 kB / 1263.47 sec (35.9%)
+124917.504 kB / 1266.60 sec (36.0%)
+125173.504 kB / 1269.24 sec (36.1%)
+125429.504 kB / 1272.16 sec (36.2%)
+125727.632 kB / 1274.88 sec (36.3%)
+126047.632 kB / 1278.06 sec (36.4%)
+126310.724 kB / 1280.68 sec (36.4%)
+126630.724 kB / 1283.84 sec (36.5%)
+126950.724 kB / 1287.04 sec (36.6%)
+127222.646 kB / 1289.76 sec (36.7%)
+127478.646 kB / 1292.37 sec (36.8%)
+127798.646 kB / 1295.68 sec (36.9%)
+128054.646 kB / 1298.32 sec (36.9%)
+128310.646 kB / 1300.92 sec (37.0%)
+128630.646 kB / 1304.28 sec (37.1%)
+128886.646 kB / 1306.92 sec (37.2%)
+129142.646 kB / 1309.84 sec (37.3%)
+129398.646 kB / 1312.52 sec (37.3%)
+129654.646 kB / 1315.12 sec (37.4%)
+129974.646 kB / 1318.56 sec (37.5%)
+130294.646 kB / 1321.80 sec (37.6%)
+130614.646 kB / 1324.12 sec (37.7%)
+130934.646 kB / 1327.40 sec (37.8%)
+131254.646 kB / 1330.72 sec (37.9%)
+131510.646 kB / 1333.68 sec (37.9%)
+131766.646 kB / 1336.48 sec (38.0%)
+132022.646 kB / 1339.08 sec (38.1%)
+132278.646 kB / 1341.84 sec (38.2%)
+132534.646 kB / 1344.48 sec (38.3%)
+132909.807 kB / 1347.40 sec (38.3%)
+133165.807 kB / 1350.00 sec (38.4%)
+133421.807 kB / 1352.96 sec (38.5%)
+133694.857 kB / 1355.92 sec (38.6%)
+134014.857 kB / 1359.00 sec (38.7%)
+134270.857 kB / 1361.56 sec (38.7%)
+134526.857 kB / 1364.20 sec (38.8%)
+134846.857 kB / 1367.52 sec (38.9%)
+135166.857 kB / 1370.69 sec (39.0%)
+135422.857 kB / 1373.52 sec (39.1%)
+135678.857 kB / 1376.12 sec (39.2%)
+135998.857 kB / 1379.39 sec (39.2%)
+136318.857 kB / 1382.56 sec (39.3%)
+136574.857 kB / 1385.00 sec (39.4%)
+136894.857 kB / 1388.44 sec (39.5%)
+137150.857 kB / 1391.08 sec (39.6%)
+137406.857 kB / 1393.80 sec (39.7%)
+137715.597 kB / 1396.48 sec (39.7%)
+138035.597 kB / 1399.36 sec (39.8%)
+138291.597 kB / 1402.07 sec (39.9%)
+138547.597 kB / 1404.92 sec (40.0%)
+138803.597 kB / 1407.32 sec (40.0%)
+139123.597 kB / 1410.60 sec (40.1%)
+139379.597 kB / 1413.48 sec (40.2%)
+139699.597 kB / 1416.72 sec (40.3%)
+139891.597 kB / 1418.76 sec (40.4%)
+140211.597 kB / 1422.08 sec (40.5%)
+140467.597 kB / 1424.44 sec (40.5%)
+140723.597 kB / 1427.48 sec (40.6%)
+140979.597 kB / 1429.80 sec (40.7%)
+141299.597 kB / 1432.48 sec (40.8%)
+141555.597 kB / 1435.04 sec (40.8%)
+141811.597 kB / 1438.14 sec (40.9%)
+142067.597 kB / 1440.96 sec (41.0%)
+142323.597 kB / 1443.40 sec (41.1%)
+142643.597 kB / 1446.68 sec (41.2%)
+142899.597 kB / 1449.08 sec (41.2%)
+143219.597 kB / 1452.28 sec (41.3%)
+143475.597 kB / 1455.04 sec (41.4%)
+143731.597 kB / 1458.01 sec (41.5%)
+144043.715 kB / 1460.52 sec (41.6%)
+144299.715 kB / 1463.12 sec (41.6%)
+144619.715 kB / 1466.48 sec (41.7%)
+144875.715 kB / 1469.24 sec (41.8%)
+145131.715 kB / 1471.52 sec (41.9%)
+145387.715 kB / 1474.12 sec (41.9%)
+145707.715 kB / 1477.88 sec (42.1%)
+145963.715 kB / 1480.00 sec (42.1%)
+146219.715 kB / 1482.68 sec (42.2%)
+146539.715 kB / 1486.00 sec (42.3%)
+146859.715 kB / 1489.36 sec (42.4%)
+147172.058 kB / 1492.20 sec (42.5%)
+147428.058 kB / 1494.60 sec (42.5%)
+147684.058 kB / 1497.68 sec (42.6%)
+147940.058 kB / 1499.96 sec (42.7%)
+148196.058 kB / 1502.92 sec (42.8%)
+148452.058 kB / 1505.20 sec (42.8%)
+148708.058 kB / 1507.92 sec (42.9%)
+149028.058 kB / 1511.24 sec (43.0%)
+149284.058 kB / 1514.32 sec (43.1%)
+149604.058 kB / 1516.88 sec (43.2%)
+149860.058 kB / 1519.24 sec (43.2%)
+150116.058 kB / 1522.26 sec (43.3%)
+150372.058 kB / 1524.65 sec (43.4%)
+150661.727 kB / 1527.68 sec (43.5%)
+150917.727 kB / 1530.32 sec (43.5%)
+151173.727 kB / 1533.01 sec (43.6%)
+151429.727 kB / 1535.44 sec (43.7%)
+151749.727 kB / 1538.92 sec (43.8%)
+152069.727 kB / 1542.55 sec (43.9%)
+152387.857 kB / 1545.00 sec (44.0%)
+152643.857 kB / 1548.24 sec (44.1%)
+152899.857 kB / 1550.76 sec (44.1%)
+153219.857 kB / 1554.00 sec (44.2%)
+153475.857 kB / 1556.48 sec (44.3%)
+153789.080 kB / 1559.44 sec (44.4%)
+154045.080 kB / 1562.12 sec (44.5%)
+154301.080 kB / 1564.84 sec (44.5%)
+154557.080 kB / 1567.04 sec (44.6%)
+154813.080 kB / 1569.68 sec (44.7%)
+155069.080 kB / 1572.40 sec (44.7%)
+155389.080 kB / 1575.68 sec (44.8%)
+155645.080 kB / 1578.28 sec (44.9%)
+155901.080 kB / 1580.92 sec (45.0%)
+156221.080 kB / 1584.28 sec (45.1%)
+156477.080 kB / 1587.20 sec (45.2%)
+156797.080 kB / 1590.48 sec (45.3%)
+157117.080 kB / 1593.04 sec (45.3%)
+157437.080 kB / 1596.12 sec (45.4%)
+157693.080 kB / 1599.16 sec (45.5%)
+157949.080 kB / 1601.84 sec (45.6%)
+158205.080 kB / 1604.04 sec (45.6%)
+158461.080 kB / 1606.68 sec (45.7%)
+158717.080 kB / 1609.28 sec (45.8%)
+158973.080 kB / 1612.48 sec (45.9%)
+159229.080 kB / 1615.00 sec (46.0%)
+159549.080 kB / 1617.56 sec (46.0%)
+159805.080 kB / 1620.16 sec (46.1%)
+160074.725 kB / 1623.20 sec (46.2%)
+160330.725 kB / 1625.68 sec (46.3%)
+160586.725 kB / 1628.56 sec (46.3%)
+160906.725 kB / 1631.44 sec (46.4%)
+161162.725 kB / 1634.44 sec (46.5%)
+161482.725 kB / 1637.40 sec (46.6%)
+161738.725 kB / 1640.04 sec (46.7%)
+161994.725 kB / 1643.16 sec (46.8%)
+162314.725 kB / 1645.80 sec (46.8%)
+162634.725 kB / 1648.88 sec (46.9%)
+162954.725 kB / 1652.48 sec (47.0%)
+163210.725 kB / 1655.00 sec (47.1%)
+163466.725 kB / 1657.68 sec (47.2%)
+163742.445 kB / 1660.36 sec (47.3%)
+163998.445 kB / 1663.00 sec (47.3%)
+164254.445 kB / 1665.28 sec (47.4%)
+164510.445 kB / 1668.39 sec (47.5%)
+164766.445 kB / 1670.84 sec (47.6%)
+165086.445 kB / 1674.16 sec (47.6%)
+165342.445 kB / 1676.68 sec (47.7%)
+165598.445 kB / 1679.36 sec (47.8%)
+165854.445 kB / 1682.03 sec (47.9%)
+166238.278 kB / 1685.28 sec (48.0%)
+166494.278 kB / 1687.96 sec (48.0%)
+166750.278 kB / 1690.60 sec (48.1%)
+167070.278 kB / 1694.40 sec (48.2%)
+167326.278 kB / 1697.20 sec (48.3%)
+167646.278 kB / 1699.60 sec (48.4%)
+167901.653 kB / 1702.29 sec (48.4%)
+168221.653 kB / 1705.52 sec (48.5%)
+168477.653 kB / 1708.60 sec (48.6%)
+168733.653 kB / 1711.32 sec (48.7%)
+169053.653 kB / 1714.28 sec (48.8%)
+169373.653 kB / 1717.52 sec (48.9%)
+169629.653 kB / 1720.52 sec (49.0%)
+169949.653 kB / 1723.68 sec (49.1%)
+170269.653 kB / 1726.72 sec (49.1%)
+170589.653 kB / 1729.68 sec (49.2%)
+170845.653 kB / 1732.84 sec (49.3%)
+171101.653 kB / 1735.23 sec (49.4%)
+171421.653 kB / 1738.60 sec (49.5%)
+171723.732 kB / 1741.28 sec (49.6%)
+171979.732 kB / 1743.60 sec (49.6%)
+172235.732 kB / 1746.24 sec (49.7%)
+172491.732 kB / 1748.88 sec (49.8%)
+172811.732 kB / 1752.20 sec (49.9%)
+173067.732 kB / 1755.00 sec (50.0%)
+173323.732 kB / 1757.88 sec (50.0%)
+173643.732 kB / 1761.12 sec (50.1%)
+173899.732 kB / 1763.80 sec (50.2%)
+174155.732 kB / 1766.52 sec (50.3%)
+174411.732 kB / 1769.08 sec (50.4%)
+174731.732 kB / 1772.32 sec (50.4%)
+175051.732 kB / 1775.04 sec (50.5%)
+175371.732 kB / 1778.28 sec (50.6%)
+175627.732 kB / 1780.76 sec (50.7%)
+175883.732 kB / 1783.48 sec (50.8%)
+176139.732 kB / 1786.12 sec (50.8%)
+176395.732 kB / 1789.08 sec (50.9%)
+176651.732 kB / 1791.72 sec (51.0%)
+176907.732 kB / 1794.36 sec (51.1%)
+177227.452 kB / 1796.76 sec (51.1%)
+177483.452 kB / 1799.36 sec (51.2%)
+177803.452 kB / 1802.96 sec (51.3%)
+178123.452 kB / 1805.96 sec (51.4%)
+178379.452 kB / 1808.80 sec (51.5%)
+178699.452 kB / 1812.33 sec (51.6%)
+178955.452 kB / 1814.64 sec (51.6%)
+179211.452 kB / 1817.44 sec (51.7%)
+179467.452 kB / 1820.00 sec (51.8%)
+179787.452 kB / 1823.24 sec (51.9%)
+180043.452 kB / 1825.88 sec (52.0%)
+180426.004 kB / 1829.36 sec (52.1%)
+180682.004 kB / 1832.28 sec (52.2%)
+181002.004 kB / 1835.12 sec (52.2%)
+181258.004 kB / 1838.16 sec (52.3%)
+181529.235 kB / 1841.08 sec (52.4%)
+181849.235 kB / 1843.64 sec (52.5%)
+182105.235 kB / 1846.48 sec (52.6%)
+182425.235 kB / 1849.60 sec (52.6%)
+182681.235 kB / 1852.72 sec (52.7%)
+182937.235 kB / 1855.00 sec (52.8%)
+183229.590 kB / 1857.66 sec (52.9%)
+183485.590 kB / 1860.28 sec (52.9%)
+183741.590 kB / 1862.96 sec (53.0%)
+183997.590 kB / 1865.60 sec (53.1%)
+184253.590 kB / 1868.32 sec (53.2%)
+184509.590 kB / 1871.08 sec (53.3%)
+184814.401 kB / 1874.12 sec (53.3%)
+185070.401 kB / 1876.68 sec (53.4%)
+185326.401 kB / 1879.28 sec (53.5%)
+185592.892 kB / 1881.66 sec (53.6%)
+185848.892 kB / 1884.28 sec (53.6%)
+186104.892 kB / 1886.92 sec (53.7%)
+186360.892 kB / 1889.80 sec (53.8%)
+186616.892 kB / 1892.24 sec (53.9%)
+186872.892 kB / 1894.84 sec (53.9%)
+187128.892 kB / 1897.52 sec (54.0%)
+187448.892 kB / 1901.24 sec (54.1%)
+187704.892 kB / 1903.60 sec (54.2%)
+187960.892 kB / 1906.12 sec (54.3%)
+188216.892 kB / 1908.86 sec (54.3%)
+188536.892 kB / 1911.44 sec (54.4%)
+188792.892 kB / 1914.08 sec (54.5%)
+189048.892 kB / 1917.08 sec (54.6%)
+189304.892 kB / 1919.66 sec (54.6%)
+189639.576 kB / 1923.04 sec (54.7%)
+189895.576 kB / 1925.28 sec (54.8%)
+190151.576 kB / 1928.02 sec (54.9%)
+190471.576 kB / 1931.40 sec (55.0%)
+190791.576 kB / 1934.60 sec (55.1%)
+191047.576 kB / 1937.20 sec (55.1%)
+191303.576 kB / 1940.00 sec (55.2%)
+191623.576 kB / 1943.48 sec (55.3%)
+191879.576 kB / 1945.96 sec (55.4%)
+192251.058 kB / 1949.50 sec (55.5%)
+192507.058 kB / 1952.12 sec (55.6%)
+192827.058 kB / 1955.39 sec (55.7%)
+193083.058 kB / 1958.04 sec (55.7%)
+193339.058 kB / 1960.76 sec (55.8%)
+193403.058 kB / 1961.32 sec (55.8%)
+193787.058 kB / 1965.16 sec (55.9%)
+194171.058 kB / 1969.32 sec (56.1%)
+194467.565 kB / 1971.61 sec (56.1%)
+194723.565 kB / 1974.24 sec (56.2%)
+194979.565 kB / 1976.84 sec (56.3%)
+195235.565 kB / 1979.48 sec (56.3%)
+195491.565 kB / 1982.16 sec (56.4%)
+195747.565 kB / 1985.00 sec (56.5%)
+196122.519 kB / 1988.72 sec (56.6%)
+196378.519 kB / 1991.28 sec (56.7%)
+196634.519 kB / 1993.96 sec (56.8%)
+196890.519 kB / 1996.72 sec (56.8%)
+197146.519 kB / 1999.48 sec (56.9%)
+197503.301 kB / 2002.40 sec (57.0%)
+197759.301 kB / 2005.04 sec (57.1%)
+198079.301 kB / 2008.56 sec (57.2%)
+198399.301 kB / 2012.04 sec (57.3%)
+198655.301 kB / 2014.40 sec (57.3%)
+198911.301 kB / 2017.36 sec (57.4%)
+199167.301 kB / 2020.00 sec (57.5%)
+199482.782 kB / 2022.80 sec (57.6%)
+199738.782 kB / 2025.28 sec (57.7%)
+200058.782 kB / 2028.84 sec (57.8%)
+200314.782 kB / 2031.48 sec (57.8%)
+200634.782 kB / 2034.32 sec (57.9%)
+200890.782 kB / 2037.00 sec (58.0%)
+201146.782 kB / 2039.72 sec (58.1%)
+201402.782 kB / 2042.36 sec (58.1%)
+201701.867 kB / 2045.00 sec (58.2%)
+201957.867 kB / 2047.64 sec (58.3%)
+202277.867 kB / 2050.96 sec (58.4%)
+202533.867 kB / 2053.60 sec (58.5%)
+202789.867 kB / 2056.72 sec (58.5%)
+203109.867 kB / 2059.80 sec (58.6%)
+203365.867 kB / 2062.44 sec (58.7%)
+203621.867 kB / 2065.00 sec (58.8%)
+203941.867 kB / 2068.52 sec (58.9%)
+204197.867 kB / 2071.10 sec (59.0%)
+204453.867 kB / 2073.76 sec (59.0%)
+204836.667 kB / 2076.84 sec (59.1%)
+205092.667 kB / 2079.36 sec (59.2%)
+205412.667 kB / 2082.72 sec (59.3%)
+205668.667 kB / 2085.32 sec (59.4%)
+205944.626 kB / 2088.04 sec (59.4%)
+206200.626 kB / 2091.12 sec (59.5%)
+206520.626 kB / 2094.36 sec (59.6%)
+206776.626 kB / 2097.00 sec (59.7%)
+207032.626 kB / 2099.64 sec (59.8%)
+207352.626 kB / 2102.96 sec (59.9%)
+207672.626 kB / 2106.28 sec (60.0%)
+207992.626 kB / 2109.60 sec (60.1%)
+208248.626 kB / 2112.24 sec (60.1%)
+208504.626 kB / 2114.64 sec (60.2%)
+208824.626 kB / 2117.76 sec (60.3%)
+209144.626 kB / 2120.40 sec (60.4%)
+209464.626 kB / 2124.20 sec (60.5%)
+209720.626 kB / 2126.48 sec (60.5%)
+209976.626 kB / 2129.08 sec (60.6%)
+210317.892 kB / 2132.28 sec (60.7%)
+210573.892 kB / 2135.00 sec (60.8%)
+210893.892 kB / 2138.72 sec (60.9%)
+211213.892 kB / 2141.52 sec (61.0%)
+211490.115 kB / 2144.24 sec (61.0%)
+211753.222 kB / 2146.92 sec (61.1%)
+212009.222 kB / 2149.56 sec (61.2%)
+212265.222 kB / 2152.24 sec (61.3%)
+212521.222 kB / 2154.84 sec (61.3%)
+212777.222 kB / 2157.56 sec (61.4%)
+213033.222 kB / 2160.08 sec (61.5%)
+213353.222 kB / 2163.90 sec (61.6%)
+213673.222 kB / 2167.24 sec (61.7%)
+213929.222 kB / 2169.88 sec (61.8%)
+214185.222 kB / 2172.52 sec (61.8%)
+214569.222 kB / 2175.48 sec (61.9%)
+214883.949 kB / 2178.68 sec (62.0%)
+215139.949 kB / 2181.36 sec (62.1%)
+215395.949 kB / 2184.00 sec (62.2%)
+215651.949 kB / 2186.64 sec (62.2%)
+215971.949 kB / 2190.00 sec (62.3%)
+216227.949 kB / 2192.72 sec (62.4%)
+216483.949 kB / 2195.40 sec (62.5%)
+216799.124 kB / 2198.36 sec (62.6%)
+217119.124 kB / 2201.64 sec (62.7%)
+217375.124 kB / 2204.28 sec (62.8%)
+217631.124 kB / 2206.96 sec (62.8%)
+217951.124 kB / 2210.08 sec (62.9%)
+218271.124 kB / 2213.24 sec (63.0%)
+218527.124 kB / 2215.88 sec (63.1%)
+218783.124 kB / 2218.56 sec (63.2%)
+219039.124 kB / 2221.20 sec (63.2%)
+219359.124 kB / 2224.52 sec (63.3%)
+219615.124 kB / 2227.16 sec (63.4%)
+219871.124 kB / 2230.04 sec (63.5%)
+220191.124 kB / 2232.84 sec (63.6%)
+220511.124 kB / 2235.84 sec (63.6%)
+220789.900 kB / 2238.64 sec (63.7%)
+221045.900 kB / 2241.24 sec (63.8%)
+221365.900 kB / 2244.44 sec (63.9%)
+221621.900 kB / 2247.40 sec (64.0%)
+221877.900 kB / 2250.00 sec (64.1%)
+222133.900 kB / 2252.91 sec (64.1%)
+222453.900 kB / 2255.40 sec (64.2%)
+222737.388 kB / 2258.24 sec (64.3%)
+222998.809 kB / 2261.32 sec (64.4%)
+223254.809 kB / 2263.92 sec (64.4%)
+223510.809 kB / 2266.28 sec (64.5%)
+223766.809 kB / 2269.28 sec (64.6%)
+224022.809 kB / 2271.44 sec (64.7%)
+224371.998 kB / 2274.86 sec (64.8%)
+224627.998 kB / 2277.68 sec (64.8%)
+224883.998 kB / 2280.24 sec (64.9%)
+225222.843 kB / 2283.80 sec (65.0%)
+225478.843 kB / 2286.24 sec (65.1%)
+225798.843 kB / 2289.92 sec (65.2%)
+226054.843 kB / 2292.56 sec (65.3%)
+226310.843 kB / 2295.00 sec (65.3%)
+226630.843 kB / 2298.13 sec (65.4%)
+226886.843 kB / 2300.84 sec (65.5%)
+227142.843 kB / 2303.80 sec (65.6%)
+227452.016 kB / 2306.36 sec (65.7%)
+227708.016 kB / 2308.80 sec (65.7%)
+227964.016 kB / 2311.68 sec (65.8%)
+228220.016 kB / 2314.00 sec (65.9%)
+228476.016 kB / 2316.92 sec (66.0%)
+228796.016 kB / 2319.96 sec (66.0%)
+229052.016 kB / 2322.92 sec (66.1%)
+229372.016 kB / 2325.84 sec (66.2%)
+229628.016 kB / 2328.56 sec (66.3%)
+229905.371 kB / 2330.96 sec (66.4%)
+230289.371 kB / 2335.00 sec (66.5%)
+230673.371 kB / 2339.16 sec (66.6%)
+230929.371 kB / 2341.88 sec (66.7%)
+231185.371 kB / 2344.38 sec (66.7%)
+231505.371 kB / 2347.68 sec (66.8%)
+231761.371 kB / 2350.04 sec (66.9%)
+232017.371 kB / 2352.76 sec (67.0%)
+232273.371 kB / 2355.40 sec (67.1%)
+232529.371 kB / 2358.52 sec (67.1%)
+232785.371 kB / 2361.05 sec (67.2%)
+233103.096 kB / 2363.68 sec (67.3%)
+233423.096 kB / 2366.76 sec (67.4%)
+233679.096 kB / 2369.40 sec (67.5%)
+233935.096 kB / 2371.88 sec (67.5%)
+234272.955 kB / 2375.28 sec (67.6%)
+234592.955 kB / 2378.86 sec (67.7%)
+234848.955 kB / 2381.52 sec (67.8%)
+235104.955 kB / 2384.08 sec (67.9%)
+235360.955 kB / 2386.60 sec (67.9%)
+235616.955 kB / 2389.08 sec (68.0%)
+235872.955 kB / 2391.76 sec (68.1%)
+236192.955 kB / 2395.16 sec (68.2%)
+236448.955 kB / 2398.12 sec (68.3%)
+236704.955 kB / 2400.96 sec (68.4%)
+237076.952 kB / 2403.96 sec (68.4%)
+237332.952 kB / 2406.36 sec (68.5%)
+237652.952 kB / 2409.98 sec (68.6%)
+237908.952 kB / 2412.40 sec (68.7%)
+238164.952 kB / 2415.04 sec (68.8%)
+238484.952 kB / 2418.64 sec (68.9%)
+238804.952 kB / 2421.64 sec (68.9%)
+239105.268 kB / 2424.44 sec (69.0%)
+239361.268 kB / 2426.96 sec (69.1%)
+239681.268 kB / 2430.23 sec (69.2%)
+239954.185 kB / 2433.00 sec (69.3%)
+240210.185 kB / 2435.96 sec (69.4%)
+240466.185 kB / 2438.20 sec (69.4%)
+240786.185 kB / 2441.52 sec (69.5%)
+241061.211 kB / 2444.39 sec (69.6%)
+241317.211 kB / 2447.04 sec (69.7%)
+241573.211 kB / 2449.68 sec (69.7%)
+241893.211 kB / 2452.68 sec (69.8%)
+242149.211 kB / 2455.49 sec (69.9%)
+242405.211 kB / 2458.24 sec (70.0%)
+242725.211 kB / 2461.72 sec (70.1%)
+243045.211 kB / 2464.76 sec (70.2%)
+243399.471 kB / 2468.12 sec (70.3%)
+243655.471 kB / 2470.40 sec (70.3%)
+243911.471 kB / 2473.44 sec (70.4%)
+244167.471 kB / 2475.96 sec (70.5%)
+244423.471 kB / 2478.40 sec (70.6%)
+244679.471 kB / 2481.28 sec (70.6%)
+244935.471 kB / 2484.00 sec (70.7%)
+245191.471 kB / 2486.32 sec (70.8%)
+245447.471 kB / 2489.24 sec (70.9%)
+245767.471 kB / 2492.56 sec (71.0%)
+246087.471 kB / 2495.80 sec (71.1%)
+246407.471 kB / 2498.60 sec (71.1%)
+246727.471 kB / 2501.76 sec (71.2%)
+246983.471 kB / 2504.19 sec (71.3%)
+247239.471 kB / 2506.92 sec (71.4%)
+247495.471 kB / 2509.68 sec (71.5%)
+247815.471 kB / 2512.92 sec (71.5%)
+248071.471 kB / 2515.44 sec (71.6%)
+248327.471 kB / 2518.32 sec (71.7%)
+248583.471 kB / 2520.92 sec (71.8%)
+248902.328 kB / 2523.64 sec (71.8%)
+249158.328 kB / 2526.52 sec (71.9%)
+249414.328 kB / 2529.20 sec (72.0%)
+249670.328 kB / 2531.80 sec (72.1%)
+249926.328 kB / 2534.20 sec (72.1%)
+250182.328 kB / 2536.90 sec (72.2%)
+250438.328 kB / 2539.52 sec (72.3%)
+250694.328 kB / 2542.14 sec (72.4%)
+250950.328 kB / 2545.00 sec (72.5%)
+251206.328 kB / 2547.84 sec (72.5%)
+251526.328 kB / 2551.12 sec (72.6%)
+251846.328 kB / 2553.60 sec (72.7%)
+252102.328 kB / 2556.07 sec (72.8%)
+252422.328 kB / 2559.76 sec (72.9%)
+252742.328 kB / 2562.92 sec (73.0%)
+252998.328 kB / 2565.88 sec (73.1%)
+253343.951 kB / 2568.64 sec (73.1%)
+253599.951 kB / 2571.24 sec (73.2%)
+253855.951 kB / 2573.88 sec (73.3%)
+254146.602 kB / 2577.20 sec (73.4%)
+254402.602 kB / 2579.80 sec (73.4%)
+254662.748 kB / 2582.48 sec (73.5%)
+254918.748 kB / 2585.00 sec (73.6%)
+255238.748 kB / 2588.32 sec (73.7%)
+255494.748 kB / 2591.00 sec (73.8%)
+255750.748 kB / 2594.08 sec (73.9%)
+256134.748 kB / 2596.96 sec (73.9%)
+256390.748 kB / 2600.00 sec (74.0%)
+256710.748 kB / 2603.40 sec (74.1%)
+257030.748 kB / 2606.60 sec (74.2%)
+257286.748 kB / 2609.28 sec (74.3%)
+257542.748 kB / 2611.76 sec (74.4%)
+257798.748 kB / 2614.55 sec (74.4%)
+258054.748 kB / 2617.00 sec (74.5%)
+258374.748 kB / 2620.20 sec (74.6%)
+258630.748 kB / 2622.92 sec (74.7%)
+258886.748 kB / 2625.41 sec (74.7%)
+259142.748 kB / 2628.08 sec (74.8%)
+259462.748 kB / 2630.80 sec (74.9%)
+259718.748 kB / 2633.48 sec (75.0%)
+259974.748 kB / 2636.20 sec (75.1%)
+260230.748 kB / 2638.92 sec (75.1%)
+260486.748 kB / 2641.75 sec (75.2%)
+260806.748 kB / 2645.00 sec (75.3%)
+261175.295 kB / 2648.40 sec (75.4%)
+261431.295 kB / 2651.00 sec (75.5%)
+261687.295 kB / 2653.72 sec (75.6%)
+261943.295 kB / 2656.68 sec (75.6%)
+262263.295 kB / 2659.52 sec (75.7%)
+262632.796 kB / 2663.08 sec (75.8%)
+262888.796 kB / 2665.44 sec (75.9%)
+263144.796 kB / 2668.24 sec (76.0%)
+263400.796 kB / 2670.76 sec (76.0%)
+263720.796 kB / 2674.00 sec (76.1%)
+264040.796 kB / 2677.32 sec (76.2%)
+264296.796 kB / 2680.00 sec (76.3%)
+264552.796 kB / 2683.08 sec (76.4%)
+264808.796 kB / 2685.84 sec (76.5%)
+265117.316 kB / 2688.44 sec (76.5%)
+265437.316 kB / 2691.64 sec (76.6%)
+265693.316 kB / 2694.32 sec (76.7%)
+265949.316 kB / 2696.96 sec (76.8%)
+266205.316 kB / 2700.00 sec (76.9%)
+266525.316 kB / 2703.00 sec (77.0%)
+266845.316 kB / 2705.88 sec (77.0%)
+267101.316 kB / 2708.32 sec (77.1%)
+267357.316 kB / 2711.12 sec (77.2%)
+267613.316 kB / 2713.64 sec (77.3%)
+267906.067 kB / 2716.36 sec (77.3%)
+268162.067 kB / 2719.21 sec (77.4%)
+268418.067 kB / 2721.96 sec (77.5%)
+268674.067 kB / 2724.56 sec (77.6%)
+268930.067 kB / 2727.16 sec (77.6%)
+269250.067 kB / 2730.20 sec (77.7%)
+269506.067 kB / 2733.20 sec (77.8%)
+269762.067 kB / 2735.80 sec (77.9%)
+270082.067 kB / 2738.44 sec (78.0%)
+270338.067 kB / 2741.36 sec (78.1%)
+270670.948 kB / 2744.72 sec (78.1%)
+270990.948 kB / 2748.04 sec (78.2%)
+271246.948 kB / 2750.32 sec (78.3%)
+271502.948 kB / 2752.96 sec (78.4%)
+271775.837 kB / 2755.56 sec (78.5%)
+272031.837 kB / 2758.36 sec (78.5%)
+272287.837 kB / 2761.04 sec (78.6%)
+272543.837 kB / 2763.80 sec (78.7%)
+272799.837 kB / 2766.52 sec (78.8%)
+273119.837 kB / 2769.72 sec (78.9%)
+273402.154 kB / 2772.35 sec (78.9%)
+273660.974 kB / 2774.68 sec (79.0%)
+273980.974 kB / 2778.00 sec (79.1%)
+274300.974 kB / 2781.20 sec (79.2%)
+274620.974 kB / 2784.60 sec (79.3%)
+274876.974 kB / 2787.20 sec (79.4%)
+275132.974 kB / 2789.92 sec (79.4%)
+275388.974 kB / 2792.48 sec (79.5%)
+275644.974 kB / 2795.16 sec (79.6%)
+275964.974 kB / 2798.40 sec (79.7%)
+276284.974 kB / 2801.92 sec (79.8%)
+276540.974 kB / 2804.52 sec (79.9%)
+276796.974 kB / 2807.04 sec (79.9%)
+277114.201 kB / 2810.00 sec (80.0%)
+277434.201 kB / 2813.32 sec (80.1%)
+277754.201 kB / 2816.32 sec (80.2%)
+278010.201 kB / 2818.92 sec (80.3%)
+278330.201 kB / 2822.28 sec (80.4%)
+278586.201 kB / 2824.96 sec (80.4%)
+278842.201 kB / 2827.64 sec (80.5%)
+279098.201 kB / 2830.16 sec (80.6%)
+279418.201 kB / 2833.56 sec (80.7%)
+279725.097 kB / 2836.20 sec (80.8%)
+280045.097 kB / 2839.47 sec (80.8%)
+280301.097 kB / 2842.44 sec (80.9%)
+280557.097 kB / 2845.00 sec (81.0%)
+280877.097 kB / 2848.43 sec (81.1%)
+281133.097 kB / 2850.96 sec (81.2%)
+281389.097 kB / 2853.68 sec (81.3%)
+281709.097 kB / 2856.88 sec (81.3%)
+281965.097 kB / 2859.56 sec (81.4%)
+282285.097 kB / 2862.56 sec (81.5%)
+282605.097 kB / 2865.80 sec (81.6%)
+282861.097 kB / 2868.48 sec (81.7%)
+283181.097 kB / 2871.80 sec (81.8%)
+283562.014 kB / 2875.20 sec (81.9%)
+283818.014 kB / 2878.12 sec (81.9%)
+284074.014 kB / 2880.36 sec (82.0%)
+284330.014 kB / 2883.12 sec (82.1%)
+284586.014 kB / 2885.68 sec (82.2%)
+284906.014 kB / 2889.00 sec (82.3%)
+285162.014 kB / 2891.72 sec (82.3%)
+285482.014 kB / 2895.12 sec (82.4%)
+285738.014 kB / 2897.80 sec (82.5%)
+286058.014 kB / 2900.44 sec (82.6%)
+286378.014 kB / 2903.80 sec (82.7%)
+286634.014 kB / 2906.36 sec (82.8%)
+286890.014 kB / 2909.16 sec (82.8%)
+287146.014 kB / 2912.00 sec (82.9%)
+287402.014 kB / 2914.80 sec (83.0%)
+287722.014 kB / 2917.76 sec (83.1%)
+288031.642 kB / 2920.48 sec (83.2%)
+288287.642 kB / 2923.24 sec (83.2%)
+288543.642 kB / 2925.72 sec (83.3%)
+288799.642 kB / 2928.32 sec (83.4%)
+289055.642 kB / 2931.00 sec (83.5%)
+289311.642 kB / 2933.64 sec (83.5%)
+289567.642 kB / 2936.30 sec (83.6%)
+289823.642 kB / 2938.96 sec (83.7%)
+290143.642 kB / 2942.32 sec (83.8%)
+290399.642 kB / 2944.88 sec (83.8%)
+290655.642 kB / 2947.68 sec (83.9%)
+290975.642 kB / 2951.04 sec (84.0%)
+291359.079 kB / 2954.16 sec (84.1%)
+291623.217 kB / 2956.88 sec (84.2%)
+291879.217 kB / 2959.48 sec (84.3%)
+292199.217 kB / 2962.80 sec (84.4%)
+292455.217 kB / 2965.48 sec (84.4%)
+292797.758 kB / 2969.08 sec (84.5%)
+293117.758 kB / 2972.33 sec (84.6%)
+293373.758 kB / 2975.00 sec (84.7%)
+293693.758 kB / 2978.13 sec (84.8%)
+293949.758 kB / 2980.72 sec (84.9%)
+294269.758 kB / 2983.92 sec (85.0%)
+294563.273 kB / 2986.84 sec (85.0%)
+294819.273 kB / 2989.52 sec (85.1%)
+295139.273 kB / 2992.76 sec (85.2%)
+295395.273 kB / 2995.36 sec (85.3%)
+295678.939 kB / 2998.08 sec (85.4%)
+295934.939 kB / 3000.64 sec (85.4%)
+296190.939 kB / 3003.69 sec (85.5%)
+296446.939 kB / 3006.00 sec (85.6%)
+296766.939 kB / 3009.36 sec (85.7%)
+297022.939 kB / 3012.01 sec (85.8%)
+297278.939 kB / 3015.00 sec (85.8%)
+297652.859 kB / 3018.36 sec (85.9%)
+297908.859 kB / 3020.84 sec (86.0%)
+298164.859 kB / 3023.56 sec (86.1%)
+298484.859 kB / 3026.92 sec (86.2%)
+298770.918 kB / 3029.64 sec (86.3%)
+299026.918 kB / 3031.92 sec (86.3%)
+299282.918 kB / 3034.47 sec (86.4%)
+299546.112 kB / 3037.24 sec (86.5%)
+299802.112 kB / 3040.00 sec (86.6%)
+300058.112 kB / 3043.08 sec (86.6%)
+300360.179 kB / 3045.36 sec (86.7%)
+300680.179 kB / 3048.96 sec (86.8%)
+300936.179 kB / 3051.48 sec (86.9%)
+301256.179 kB / 3054.64 sec (87.0%)
+301589.534 kB / 3058.32 sec (87.1%)
+301845.534 kB / 3060.88 sec (87.2%)
+302165.534 kB / 3064.12 sec (87.2%)
+302421.534 kB / 3066.60 sec (87.3%)
+302677.534 kB / 3069.24 sec (87.4%)
+302933.534 kB / 3071.88 sec (87.5%)
+303253.534 kB / 3075.32 sec (87.6%)
+303573.534 kB / 3078.57 sec (87.7%)
+303829.534 kB / 3081.32 sec (87.7%)
+304213.534 kB / 3085.00 sec (87.8%)
+304533.534 kB / 3087.96 sec (87.9%)
+304853.534 kB / 3091.20 sec (88.0%)
+305173.534 kB / 3094.52 sec (88.1%)
+305459.854 kB / 3097.32 sec (88.2%)
+305715.854 kB / 3100.00 sec (88.3%)
+306035.854 kB / 3103.36 sec (88.4%)
+306291.854 kB / 3106.00 sec (88.4%)
+306611.854 kB / 3109.20 sec (88.5%)
+306867.854 kB / 3111.60 sec (88.6%)
+307187.854 kB / 3115.00 sec (88.7%)
+307443.854 kB / 3118.04 sec (88.8%)
+307763.854 kB / 3120.96 sec (88.9%)
+308019.854 kB / 3123.44 sec (88.9%)
+308339.854 kB / 3127.00 sec (89.0%)
+308659.854 kB / 3129.96 sec (89.1%)
+308915.854 kB / 3132.68 sec (89.2%)
+309235.854 kB / 3136.32 sec (89.3%)
+309555.854 kB / 3139.00 sec (89.4%)
+309811.854 kB / 3141.68 sec (89.5%)
+310067.854 kB / 3144.28 sec (89.5%)
+310387.854 kB / 3147.60 sec (89.6%)
+310643.854 kB / 3150.00 sec (89.7%)
+310899.854 kB / 3152.76 sec (89.8%)
+311219.854 kB / 3155.95 sec (89.9%)
+311539.854 kB / 3159.40 sec (90.0%)
+311859.854 kB / 3162.52 sec (90.1%)
+312115.854 kB / 3165.00 sec (90.1%)
+312435.854 kB / 3168.24 sec (90.2%)
+312691.854 kB / 3170.80 sec (90.3%)
+312947.854 kB / 3173.48 sec (90.4%)
+313203.854 kB / 3175.96 sec (90.4%)
+313459.854 kB / 3178.68 sec (90.5%)
+313779.854 kB / 3182.25 sec (90.6%)
+314163.854 kB / 3185.32 sec (90.7%)
+314419.854 kB / 3188.40 sec (90.8%)
+314739.854 kB / 3191.44 sec (90.9%)
+314995.854 kB / 3194.32 sec (91.0%)
+315251.854 kB / 3196.92 sec (91.0%)
+315571.854 kB / 3200.20 sec (91.1%)
+315891.854 kB / 3203.28 sec (91.2%)
+316147.854 kB / 3205.80 sec (91.3%)
+316403.854 kB / 3208.40 sec (91.4%)
+316659.854 kB / 3211.16 sec (91.4%)
+316915.854 kB / 3213.88 sec (91.5%)
+317171.854 kB / 3216.36 sec (91.6%)
+317427.854 kB / 3218.92 sec (91.7%)
+317683.854 kB / 3221.68 sec (91.7%)
+317996.328 kB / 3224.28 sec (91.8%)
+318316.328 kB / 3227.63 sec (91.9%)
+318572.328 kB / 3230.24 sec (92.0%)
+318828.328 kB / 3233.12 sec (92.1%)
+319148.328 kB / 3236.52 sec (92.2%)
+319468.328 kB / 3239.80 sec (92.3%)
+319751.654 kB / 3242.44 sec (92.3%)
+320071.654 kB / 3245.32 sec (92.4%)
+320391.654 kB / 3248.76 sec (92.5%)
+320711.654 kB / 3252.04 sec (92.6%)
+320967.654 kB / 3254.88 sec (92.7%)
+321287.654 kB / 3257.64 sec (92.8%)
+321572.872 kB / 3260.52 sec (92.8%)
+321828.872 kB / 3263.24 sec (92.9%)
+322084.872 kB / 3265.92 sec (93.0%)
+322404.872 kB / 3269.24 sec (93.1%)
+322707.030 kB / 3272.32 sec (93.2%)
+322963.030 kB / 3275.00 sec (93.3%)
+323271.528 kB / 3277.72 sec (93.3%)
+323527.528 kB / 3280.56 sec (93.4%)
+323847.528 kB / 3283.71 sec (93.5%)
+324103.528 kB / 3286.32 sec (93.6%)
+324359.528 kB / 3289.32 sec (93.7%)
+324679.528 kB / 3292.76 sec (93.8%)
+324935.528 kB / 3295.36 sec (93.8%)
+325191.528 kB / 3298.16 sec (93.9%)
+325511.528 kB / 3301.00 sec (94.0%)
+325767.528 kB / 3303.76 sec (94.1%)
+326023.528 kB / 3306.24 sec (94.1%)
+326279.528 kB / 3308.92 sec (94.2%)
+326597.727 kB / 3311.72 sec (94.3%)
+326917.727 kB / 3314.76 sec (94.4%)
+327173.727 kB / 3317.87 sec (94.5%)
+327493.727 kB / 3321.08 sec (94.6%)
+327749.727 kB / 3323.68 sec (94.6%)
+328005.727 kB / 3326.44 sec (94.7%)
+328361.239 kB / 3329.36 sec (94.8%)
+328617.239 kB / 3332.28 sec (94.9%)
+328873.239 kB / 3334.92 sec (95.0%)
+329193.239 kB / 3338.52 sec (95.1%)
+329513.239 kB / 3341.60 sec (95.2%)
+329769.239 kB / 3344.36 sec (95.2%)
+330141.466 kB / 3347.44 sec (95.3%)
+330397.466 kB / 3350.00 sec (95.4%)
+330717.466 kB / 3353.72 sec (95.5%)
+331037.466 kB / 3357.08 sec (95.6%)
+331293.466 kB / 3359.62 sec (95.7%)
+331573.678 kB / 3362.32 sec (95.7%)
+331829.678 kB / 3364.96 sec (95.8%)
+332085.678 kB / 3367.64 sec (95.9%)
+332405.678 kB / 3370.84 sec (96.0%)
+332661.678 kB / 3373.36 sec (96.1%)
+332981.678 kB / 3376.84 sec (96.2%)
+333301.678 kB / 3380.00 sec (96.2%)
+333621.678 kB / 3383.36 sec (96.3%)
+333877.678 kB / 3386.00 sec (96.4%)
+334197.678 kB / 3389.28 sec (96.5%)
+334516.246 kB / 3391.88 sec (96.6%)
+334772.246 kB / 3394.40 sec (96.7%)
+335028.246 kB / 3397.48 sec (96.7%)
+335284.246 kB / 3400.00 sec (96.8%)
+335540.246 kB / 3402.96 sec (96.9%)
+335796.246 kB / 3405.36 sec (97.0%)
+336052.246 kB / 3408.16 sec (97.0%)
+336423.699 kB / 3411.44 sec (97.1%)
+336679.699 kB / 3414.12 sec (97.2%)
+336935.699 kB / 3416.64 sec (97.3%)
+337191.699 kB / 3419.16 sec (97.4%)
+337511.699 kB / 3422.36 sec (97.5%)
+337767.699 kB / 3425.00 sec (97.5%)
+338087.699 kB / 3428.60 sec (97.6%)
+338343.699 kB / 3431.12 sec (97.7%)
+338599.699 kB / 3433.92 sec (97.8%)
+338855.699 kB / 3436.32 sec (97.9%)
+339175.699 kB / 3439.68 sec (97.9%)
+339495.699 kB / 3443.16 sec (98.0%)
+339815.699 kB / 3445.76 sec (98.1%)
+340071.699 kB / 3448.36 sec (98.2%)
+340327.699 kB / 3451.16 sec (98.3%)
+340583.699 kB / 3453.82 sec (98.3%)
+340903.699 kB / 3457.28 sec (98.4%)
+341223.699 kB / 3460.20 sec (98.5%)
+341479.699 kB / 3463.23 sec (98.6%)
+341799.699 kB / 3465.84 sec (98.7%)
+342115.696 kB / 3469.04 sec (98.8%)
+342371.696 kB / 3471.92 sec (98.9%)
+342627.696 kB / 3474.56 sec (98.9%)
+342947.696 kB / 3477.87 sec (99.0%)
+343203.696 kB / 3480.20 sec (99.1%)
+343459.696 kB / 3482.80 sec (99.2%)
+343715.696 kB / 3485.36 sec (99.2%)
+344035.696 kB / 3489.08 sec (99.4%)
+344355.696 kB / 3492.28 sec (99.4%)
+344611.696 kB / 3494.92 sec (99.5%)
+344982.336 kB / 3498.00 sec (99.6%)
+345302.336 kB / 3501.40 sec (99.7%)
+345558.336 kB / 3504.28 sec (99.8%)
+345814.336 kB / 3507.00 sec (99.9%)
+346129.603 kB / 3509.97 sec (99.9%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Complete>
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:           duration, NUMBER:	283.00>
+DEBUG: Property: <Name:              bytes, NUMBER:	354436623.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 332 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:	Stopped playing secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4.>
+DEBUG: Property: <Name:            details, STRING:	secure/800kbps/modav/bUnknown-f4bb21da-2705-4c28-9771-2abae4689181_b07m57mt_1468656287559.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	qAAkALzA>
+DEBUG: Property: <Name:             reason, STRING:	>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+
+346129.603 kB / 3509.97 sec (99.9%)
+DEBUG: RTMP_Read returned: 0
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+INFO: Begin converting file: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv
+
+
+INFO: Command: "avconv" "-loglevel" "verbose" "-y" "-i" "/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv" "-vcodec" "copy" "-acodec" "copy" "-bsf:a" "aac_adtstoasc" "/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4"
+
+avconv version v12_dev0-3044-g40ad05b, Copyright (c) 2000-2016 the Libav developers
+  built on Jul 23 2016 23:12:14 with gcc 4.8 (Ubuntu 4.8.4-2ubuntu1~14.04.3)
+  configuration: 
+  libavutil     55. 20. 0 / 55. 20. 0
+  libavcodec    57. 25. 0 / 57. 25. 0
+  libavformat   57.  7. 1 / 57.  7. 1
+  libavdevice   56.  1. 0 / 56.  1. 0
+  libavfilter    6.  6. 0 /  6.  6. 0
+  libavresample  3.  0. 0 /  3.  0. 0
+  libswscale     4.  0. 0 /  4.  0. 0
+[h264 @ 0x278dd20] Reinit context to 640x368, pix_fmt: 0
+[flv @ 0x277c0a0] max_analyze_duration 5000000 reached
+Input #0, flv, from '/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv':
+  Metadata:
+    moovPosition    : 36
+    avcprofile      : 77
+    avclevel        : 30
+    aacaot          : 2
+    videoframerate  : 25
+    audiochannels   : 2
+    length          : 168479744
+    timescale       : 48000
+    sampletype      : mp4a
+  Duration: 00:58:30.00, start: 0.000000, bitrate: N/A
+    Stream #0:0: Video: h264 (Main)
+      yuv420p, 640x360 (0x0) [PAR 1:1 DAR 16:9]
+      25 fps, 1k tbn
+    Stream #0:1: Audio: aac (LC)
+      48000 Hz, stereo, fltp
+Output #0, mp4, to '/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4':
+  Metadata:
+    moovPosition    : 36
+    avcprofile      : 77
+    avclevel        : 30
+    aacaot          : 2
+    videoframerate  : 25
+    audiochannels   : 2
+    length          : 168479744
+    timescale       : 48000
+    sampletype      : mp4a
+    encoder         : Lavf57.7.1
+    Stream #0:0: Video: h264 (Main) [[33][0][0][0] / 0x0021]
+      yuv420p, 640x360 (0x0) [PAR 1:1 DAR 16:9], q=2-31, PAR 1:1 DAR 16:9
+      1k tbn
+    Stream #0:1: Audio: aac (LC) [[64][0][0][0] / 0x0040]
+      48000 Hz, stereo, fltp
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press ctrl-c to stop encoding
+frame= 9204 fps=  0 q=-1.0 size=   35855kB time=368.11 bitrate= 797.9kbits/s    
+frame=19423 fps=19422 q=-1.0 size=   75663kB time=776.88 bitrate= 797.9kbits/s    
+frame=29678 fps=19785 q=-1.0 size=  115569kB time=1187.07 bitrate= 797.5kbits/s    
+frame=39855 fps=19927 q=-1.0 size=  155232kB time=1594.16 bitrate= 797.7kbits/s    
+frame=50108 fps=20043 q=-1.0 size=  195156kB time=2004.28 bitrate= 797.7kbits/s    
+frame=60333 fps=20110 q=-1.0 size=  234946kB time=2413.27 bitrate= 797.5kbits/s    
+frame=70582 fps=20166 q=-1.0 size=  274879kB time=2823.24 bitrate= 797.6kbits/s    
+frame=80580 fps=20144 q=-1.0 size=  313817kB time=3223.16 bitrate= 797.6kbits/s    
+No more output streams to write to, finishing.
+frame=87750 fps=19990 q=-1.0 Lsize=  344938kB time=3509.96 bitrate= 805.1kbits/s    
+video:301636kB audio:40048kB other streams:0kB global headers:0kB muxing overhead: 0.952322%
+Input file #0 (/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4.flv):
+  Input stream #0:0 (video): 87750 packets read (308874954 bytes); 
+  Input stream #0:1 (audio): 164531 packets read (41009087 bytes); 
+  Total: 252281 packets (349884041 bytes) demuxed
+Output file #0 (/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4):
+  Output stream #0:0 (video): 87750 packets muxed (308874954 bytes); 
+  Output stream #0:1 (audio): 164531 packets muxed (41009087 bytes); 
+  Total: 252281 packets (349884041 bytes) muxed
+INFO: Command exit code 0 (raw code = 0)
+INFO: Converted file: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.partial.mp4
+INFO: Recorded file: /home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.mp4
+DEBUG: Record using flashhigh1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p040h5x9.jpg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p040h5x9.jpg
+INFO: Downloaded Thumbnail to '/home/I_love_subtitles/Forces_of_Nature_with_Brian_Cox_-_4._The_Pale_Blue_Dot_b07m57mz_original.jpg'
+WARNING: Cannot tag MP4 file

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Reverted back to V 2.95 both on Linux and Windows</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Reverted back to V 2.95 both on Linux and Windows</div>
+<div id="pagetitle"><h2>Reverted back to V 2.95 both on Linux and Windows</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">16-12-2016, 12:57 PM</div>
+</div>
+<div class="message">Hi there<br />
+comparing V 2.95 with V 2.97 on both Centos 7  Linux and Windows 10 Pro - V 2.97 seems to take around 30 - 50% longer to download both TV and Radio rather than the previous version V 2.95.<br />
+<br />
+Currently V 2.95 is still working for the things I generally want to download.<br />
+<br />
+I've got decent Internet so it's not the ISP / Internet causing this -- and I've tested it on the SAME hardware.<br />
+<br />
+Not sure what the problem is but with V2.95 I'm getting download speeds of often over 6Mb.s while on V 2.97 for the same file it goes back to around 1.9 - 2.4 Mb/s<br />
+<br />
+Hopefully there's a fix for this<br />
+<br />
+Also I see the generated file names have changed from ******.default.mp4  to *****.original.mp4 for TV and equivalent for Radio.  Not a problem though.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-12-2016, 01:23 PM</div>
+</div>
+<div class="message">Fix for what? You haven't demonstrated you're accessing exactly the same media streams in both versions (you very likely are not). It doesn't matter a bit that you tested on the same hardware. Your machine is unlikely to be the limiting factor. As I and many others can attest, get_iplayer will download much, much faster than 6 Mb/s. Don't assume your upstream conditions are the same everyone else's.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">17-12-2016, 10:18 AM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+I think there's a confusion here between MegaBYTES / sec and MegaBiITS /sec - my figures should be multiplied by 8 for MegaBITS/sec.<br />
+<br />
+I'm not sure what you mean by accessing the same streams<br />
+<br />
+For TV I use command get_iplayer --get --modes=best --pid=xxxxxxxx  so for the SAME PID I assume it's the same  content being downloaded.<br />
+<br />
+My downloaded content gets stored on to an SSD so slow Hard Disk access is also unlikely to be a problem<br />
+<br />
+I really appreciate the work you put in on this great program -- I was just posting my observations which I have repeated several times so I don't think it's anything to do with the ISP Internet variation.<br />
+<br />
+I know Internet speed is more than adequate -- I can stream full 1080p via VLC or PLEX without any problem - even if transcoding is occasionally needed.<br />
+<br />
+I know recent W10 updates caused all sorts of hassles with Internet too.<br />
+<br />
+Is there anything in the command line to increase download speed such as larger transmit packets etc --<br />
+<br />
+anyway thanks again for all the work you do on this program -- much appreciated by not only me but zillions of others.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-12-2016, 03:10 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-12-2016, 10:18 AM)</span></cite>I think there's a confusion here between MegaBYTES / sec and MegaBiITS /sec - my figures should be multiplied by 8 for MegaBITS/sec.</blockquote>get_iplayer can download much faster than 6 MB/s as well. But it's just a downloader. It can't get something faster than upstream will give it.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>For TV I use command get_iplayer --get --modes=best --pid=xxxxxxxx  so for the SAME PID I assume it's the same  content being downloaded.</blockquote>
+In this case, you're wrong in that assumption. Those release notes won't read themselves.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">18-12-2016, 10:20 AM</div>
+</div>
+<div class="message">Hi there<br />
+Thanks<br />
+<br />
+All fixed now running nicely with great speeds !!<br />
+<br />
+Bad case of "RTFM" I think I had.<br />
+<br />
+Thanks again<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-662</h2></div><div class="dateline">21-12-2016, 12:52 PM</div>
+</div>
+<div class="message">Hi, can I asked what you did to get this fixed? I updated to 2.97 and experienced the same problem. Did you just stick with 2.95 in the end?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">27-01-2017, 05:21 AM</div>
+</div>
+<div class="message">I definitely noticed a slow down in download speeds when I upgraded to GIP v2.97 at about the middle of December 2016. I've had some personal things to prevent me from spending more time to investigate so I can't say whether it is all the time or just some of the time that it's slower than before. I'd also be interested in what the solution was as mentioned previously.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-01-2017, 07:30 PM</div>
+</div>
+<div class="message">If you read the release notes you'll see that the default download quality has changed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">31-01-2017, 10:28 PM</div>
+</div>
+<div class="message">Thank You Mr SquarePenguin lol &amp; I'm sure that I can say on behalf of most people on here that we appreciate your time &amp; effort you put into the help &amp; advice that you give to us pilgrims that are not as experienced &amp; knowledgeable as yourself &amp; others like Pinky Dinky lol<br />
+Yes, I do know of the new 50fps version compared to the 25fps version download which obviously means a video file that is double in size which consequently means an increase in download time or a slower download speed. But I still thought that I had noticed a difference in the download speed even when using in the CLI at the end of the programme URL that I use, the extension --modes=flash, so that I get an HD download but at 25fps. Again, I could be wrong in thinking it is slower in downloading because I've not given enough time to monitor it closely.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Reverted back to V 2.95 both on Linux and Windows</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

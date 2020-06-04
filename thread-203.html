@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - An interface to the PVR</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; An interface to the PVR</div>
+<div id="pagetitle"><h2>An interface to the PVR</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-577</h2></div><div class="dateline">25-09-2014, 09:29 PM</div>
+</div>
+<div class="message">Hats off to the original get_iplayer team and to those who have picked up the baton and are maintaining it. Get_iplayer does what it says "on the tin" and does it well. I run mine on a RaspberryPI and using the web interface is slow. <br />
+I decided to create a small windows based interface to the PVR service. This takes advantage of the very excellent BBC site to find programmes (radio and tv) and then to drag and drop or copy and paste the <span style="font-weight: bold;" class="mycode_b">location link</span> to prepare the PVR to record the programme.<br />
+The programme called <span style="font-weight: bold;" class="mycode_b">PVRset1</span> is a windows exe file and can be downloaded from<br />
+<a href="https://app.box.com/s/25bs4pl8jpl3uushqbq9">Box</a>.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">PVRset1</span> relies on a fully working get_iplayer and specifically the PVR service that will check for new requests at a regular interval. On my PI system a cron job runs the PVR every 20 minutes. <br />
+<br />
+The first time it is run it will create the few files it needs including an .ini file. This INI file can be edited to establish the correct location of the PVR folder of the get_iplayer installation. The INI file can be changed to alter the default "always on top" setting.<br />
+<br />
+I hope this is of use</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-577</h2></div><div class="dateline">25-09-2014, 09:36 PM</div>
+</div>
+<div class="message">Here is the link <br />
+<a href="https://app.box.com/s/25bs4pl8jpl3uushqbq9">https://app.box.com/s/25bs4pl8jpl3uushqbq9</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-577</h2></div><div class="dateline">01-11-2014, 09:36 PM</div>
+</div>
+<div class="message">Following the major change that the BBC has made to the iplayer system I have updated pvrset1. I suggest that it is placed in the get_iplayer/pvr directory. There is now a bash script <span style="font-weight: bold;" class="mycode_b">run_pvr.sh</span> that converts the file created by pvrset1 to a get_iplayer --pid command line. It works for tv and radio but I have my doubts about the drag and drop functionality which is not reliable in WIN7.<br />
+The bash script should be run as a cron job, but of course it could be run manually. I suggest this file is also put in the get_iplayer/pvr directory.<br />
+Feedback welcome</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-577</h2></div><div class="dateline">02-11-2014, 10:34 PM</div>
+</div>
+<div class="message">The current version (3.1.0.18) is a win exe file but will produce the commands for get_iplayer running under Linux or Win</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; An interface to the PVR</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

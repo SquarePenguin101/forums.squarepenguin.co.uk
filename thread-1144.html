@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Problem with dashhigh in  openSUSE Leap 42.2</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problem with dashhigh in  openSUSE Leap 42.2</div>
+<div id="pagetitle"><h2>Problem with dashhigh in  openSUSE Leap 42.2</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1516</h2></div><div class="dateline">28-01-2017, 04:46 PM</div>
+</div>
+<div class="message">I was running GiP v2.97 on openSUSE Leap 42.1 with KDE desktop.  Radio downloads were fine using dashhigh mode.<br />
+<br />
+When I upgraded Leap 42.1 to 42.2 the resulting .m4a files caused problems with some renderers and on examination  I found that AtomicParsley was reporting these radio files with the following comment:-<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>AtomicParsley version: 0.9.6 (utf8)<br />
+------------------------------------------------------<br />
+Movie duration: 823.275 seconds (13:43.28) - 320.00* kbp/sec bitrate (*=approximate)<br />
+Low-level details. Total tracks: 1<br />
+Trk  Type  Handler                    Kind  Lang  Bytes<br />
+1    soun  SoundHandler               mp4a  eng   32930987<br />
+     320.00 kbp/s  MPEG-4 Unknown profile: 0x0    channels: (2)</code></div></div><br />
+An examination with ffprobe gave me the following similar information:-<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>FFprobe:<br />
+...Duration: 00:27:50.40, start: 0.000000, bitrate: 321 kb/s<br />
+    Stream #0:0(eng): Audio: aac (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 320 kb/s (default)<br />
+    Metadata:<br />
+      handler_name    : SoundHandler<br />
+    Stream #0:1: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 150x84 [SAR 72:72 DAR 25:14], 90k tbr, 90k tbn, 90k tbc</code></div></div><br />
+However files which play OK and were downloaded when openSUSE 42.1 was operating system gave me the expected info.  ie:-<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>320.00 kbp/s  MPEG-4 AAC Low Complexity/LC Profile    channels: [2]</code></div></div><br />
+It seems like the upgrade has broken something.  To overcome the problem in the short term I have changed the radiomode to "hafhigh" and this works fine.  With the limited testing I have done so far it appears ffmpeg is OK but I am at the limit of my knowledge and am posting here so others can help me identify the source of the problem.<br />
+<br />
+Budgie</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-01-2017, 05:11 PM</div>
+</div>
+<div class="message">You have this problem:<br />
+<br />
+<a href="/thread-1095.html">/thread-1095.html</a><br />
+<br />
+The <span style="font-weight: bold;" class="mycode_b">haf</span> streams tend to be a lot slower, so my advice is to follow the Ubuntu instructions for installation of a newer ffmpeg (it will work for openSUSE as well):<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/unixpkg">https://github.com/get-iplayer/get_iplayer/wiki/unixpkg</a><br />
+<br />
+When and if openSUSE updates its version of ffmpeg, you can back out those changes and go back to using the system-supplied ffmpeg.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1516</h2></div><div class="dateline">28-01-2017, 06:16 PM</div>
+</div>
+<div class="message">Hi user-2,<br />
+Very many thanks.  I had been pointed to the thread concerning ffmpeg and (wrongly) thought 3.2-6.5 had already fixed the problem.  Many thanks for the further help.  Have now installed latest version so we shall see how I get on tonight.<br />
+<br />
+Now that all radio three programmes are no longer in higher bit rate than any others I am finding my storage is being filled up by large files which are of spoken word.  I want dashhigh for third programme music but even podcast standard would be fine for radio shows.  I therefore ask if it is possible to set radio modes along with the search when adding titles to pvr list.  <br />
+<br />
+I have already asked on get_iplayer infradead list so please forgive me asking here but I would appreciate your advice.  <br />
+Many thanks once more.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-01-2017, 06:37 PM</div>
+</div>
+<div class="message">It's the "3.2" that matters, not the "6.5", which is presumably the SUSE package subversion. Any ffmpeg newer (or older) than 3.2 should be OK. <br />
+<br />
+As for recording quality settings, just add the desired <kbd>--radiomode</kbd> option to command line when creating pvr job with <kbd>--pvr-add.</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1516</h2></div><div class="dateline">04-02-2017, 05:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (28-01-2017, 06:37 PM)</span></cite>It's the "3.2" that matters, not the "6.5", which is presumably the SUSE package subversion. Any ffmpeg newer (or older) than 3.2 should be OK. <br />
+<br />
+As for recording quality settings, just add the desired <kbd>--radiomode</kbd> option to command line when creating pvr job with <kbd>--pvr-add.</kbd></blockquote><br />
+Hi and many thanks.  I have not been able to sort out the problem with the Packman version of ffmpeg so am using the one you recommended which works perfectly.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg version 3.2.2-static http://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2016 the FFmpeg developers<br />
+  built with gcc 5.4.1 (Debian 5.4.1-4) 20161202</code></div></div><br />
+As for my dumb question, yes I have re-read the guide, just in time to edit my pvr-list in the light of the new release.<br />
+<br />
+Very many thanks for this and the great deal of work you put in on this.  It is truly appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-02-2017, 05:43 PM</div>
+</div>
+<div class="message">get_iplayer 2.98 should work around that problem with ffmpeg 3.2, so it may be worth testing the Packman version again after updating get_iplayer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problem with dashhigh in  openSUSE Leap 42.2</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

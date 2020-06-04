@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Re-encode HD to 25fps with ffmpeg</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Re-encode HD to 25fps with ffmpeg</div>
+<div id="pagetitle"><h2>Re-encode HD to 25fps with ffmpeg</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2502</h2></div><div class="dateline">08-01-2020, 02:18 PM</div>
+</div>
+<div class="message">Hi, first of all thanks for a great utility.<br />
+<br />
+A couple of small suggestions:<br />
+<br />
+It would be nice to be able to download content at 1280x720 @ 25fps, not sure why anyone would want 50fps other than sport. I could convert 50&gt;25fps (with ffmpeg?) but it's an extra hassle.<br />
+<br />
+Is there an option to set the title to nothing in the mp4 file? I just want to use the filename as the title so I have to go into file properties/details and delete the title every time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">08-01-2020, 03:30 PM</div>
+</div>
+<div class="message">ffmpeg can alter the title field without any need to re-mux the file (so it is fast).<br />
+<br />
+I find that processing the download, keeping the frame rate at 50fps, but reducing the bit rate (to about 1.5Mbits/sec) halves the file size - but it's very slow - since a large file (4GB for a 2hr programme) has to be remuxed.<br />
+<br />
+I see no noticeable difference on the output, compared with either SD/HD programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2502</h2></div><div class="dateline">08-01-2020, 04:10 PM</div>
+</div>
+<div class="message">I found this works, but it's very slow:<br />
+<br />
+ffmpeg -i input.mp4 -preset medium -crf 20 -r:v 25 -c:a copy output.mp4<br />
+<br />
+crf defines the quality: 23 is default, 17 is effectively lossless. From a quick test 1280x720 converted to 25fps (crf=21) is about the same bitrate as SD 960x540 25fps, so crf=19/20 is probably about right.<br />
+<br />
+I guess I could create a script to convert multiple files and run it overnight.<br />
+<br />
+Sport I can understand, but I wonder why the BBC encode TV shows/drama at 50fps?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2502</h2></div><div class="dateline">08-01-2020, 05:34 PM</div>
+</div>
+<div class="message">p.s. here's a powershell script to convert multiple files:<br />
+<br />
+&#36;files = Get-ChildItem *.mp4<br />
+foreach (&#36;file in &#36;files)<br />
+{<br />
+	&#36;source = &#36;file.BaseName + &#36;file.Extension<br />
+	&#36;target = &#36;file.BaseName + "_25fps" + &#36;file.Extension<br />
+	&#36;bin = "ffmpeg.exe"<br />
+	&#36;args = "-i &#36;source -preset medium -crf 20 -r:v 25 -c:a copy &#36;target"<br />
+	Write-Output "&#36;bin &#36;args"<br />
+	Start-Process -FilePath &#36;bin -ArgumentList &#36;args -Wait<br />
+}</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2502</h2></div><div class="dateline">08-01-2020, 06:36 PM</div>
+</div>
+<div class="message">p.s. add some quotes to deal with spaces in filenames:<br />
+<br />
+&#36;source = "`"" + &#36;file.BaseName + &#36;file.Extension + "`""<br />
+&#36;target = "`"" + &#36;file.BaseName + "_25fps" + &#36;file.Extension + "`""</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2212</h2></div><div class="dateline">11-01-2020, 03:35 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (08-01-2020, 03:30 PM)</span></cite>I find that processing the download, keeping the frame rate at 50fps, but reducing the bit rate (to about 1.5Mbits/sec) halves the file size - but it's very slow - since a large file (4GB for a 2hr programme) has to be remuxed.<br />
+<br />
+I see no noticeable difference on the output, compared with either SD/HD programmes.</blockquote><br />
+... and to add to that, I found remuxing to a similar bit rate at both 50fps and then 25fps gave little difference in file size or quality either, making me wonder if the source itself [in my samples] really is 50fps or just puffed out to make things future proof. <br />
+<br />
+2GB per hour does seem excessive for a 720 HD program. Anything I want to keep I now remux down to H.265, but offline, as that is REALLY slow but does give tiny files for a given subjective quality if your AV stuff supports it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2502</h2></div><div class="dateline">11-01-2020, 04:48 PM</div>
+</div>
+<div class="message">Just a quick follow up, I discovered FFmpeg can use hardware acceleration if you have a suitable graphics card (Kepler and above).<br />
+<br />
+With my NVidia GTX 760, encoding a 6 min 720 50fps sample to 720 25fps in software takes about 3 mins, whereas in hardware it takes &lt;1 min and the CPU is only 40% utilised.<br />
+<br />
+With software encoding the CPU runs continuously at 100%, but you can cap it at say 75% in power options / advanced / processor power mgt. It reduces volts, clock speed and temps, but obviously takes longer.<br />
+<br />
+To use hardware acceleration, just replace the default software codec (libx264) with the gpu one (h264_nvenc):<br />
+<br />
+SW:<br />
+ffmpeg -i input.mp4 -c:v libx264 -c:a copy -r:v 25 -preset medium -crf 19 output.mp4<br />
+<br />
+HW:<br />
+ffmpeg -i input.mp4 -c:v h264_nvenc -c:a copy -r:v 25 -preset medium -crf 19 output.mp4<br />
+<br />
+I guess doing the encoding on a RAM drive might also prolong the life of your SSD...</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Re-encode HD to 25fps with ffmpeg</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

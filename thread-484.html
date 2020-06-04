@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Has Auntie changed something?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Has Auntie changed something?</div>
+<div id="pagetitle"><h2>Has Auntie changed something?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-986</h2></div><div class="dateline">25-07-2015, 09:24 AM</div>
+</div>
+<div class="message">Since Thursday, I have been unable to download any programmes, radio or TV. <br />
+<br />
+Searches work, but when you request a download, get-iplayer is unable to find a correctly named file to collect.<br />
+<br />
+Has Auntie, perhaps, changed the file naming convention?<br />
+<br />
+BR,<br />
+<br />
+Geoff<br />
+<hr class="mycode_hr" />
+I should add here that this is on Linux, specifically Raspbian Wheezy, using the Raspbian package of get-iplayer v2.94. I have the same version running on Win 7, but have not yet tried it. More when I know more.<br />
+<br />
+G</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-986</h2></div><div class="dateline">25-07-2015, 10:08 AM</div>
+</div>
+<div class="message">I can now report that TV downloads still work using get-iplayer 2.94 on Win 7, installed from the package on the downloads page.<br />
+<br />
+This would appear to be, at worst, a Linux-specific problem, or possibly Raspbian-specific. My iPlayer-fu and programming chops are collectively insufficient to tell which.<br />
+<br />
+Sorry for the forum noise.<br />
+<br />
+G</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">25-07-2015, 11:15 AM</div>
+</div>
+<div class="message">Hi G, <br />
+<br />
+You haven't provided any useful information with which we can help you. You've essentially said 'it's not working, why not?' :-)<br />
+<br />
+There could literally be a million reasons so to help us help you you need to provide more info. <br />
+<br />
+Please give us an example command that you are trying (the exact and full command) and the output that get_iplayer provides when this command is executed. <br />
+<br />
+When you reply to this post, click the green 'New Reply' button just below it and to the right to be taken to the full reply editor. There you can copy and paste the output into the 'get_iplayer output' box and it'll be neatly formatted so we can read it. The box can be opened by clicking on the little get_iplayer symbol in the line of buttons above the reply box. <br />
+<br />
+You can also style the full command you are using by pasting it into the editor, selecting it and clicking on the little keyboard button. This will style the command to make it easier to view, like this <kbd>--example commands</kbd>.<br />
+<br />
+We may need you to repeat this process and add the <kbd>--verbose</kbd> tag to your failing command to see a more detailed report of what is going on, but lets try with just the normal output first.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-986</h2></div><div class="dateline">25-07-2015, 11:48 PM</div>
+</div>
+<div class="message">I am ashamed to have to admit that this entire thread is the result of my jumping to the (wrong) conclusion.<br />
+<br />
+I have only been seeing problems on a Raspberry Pi running Raspbian Wheezy. Get-iplayer (v2.94) is invoked with a command like<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code> get_iplayer --modes=best -o /media/usbstick/ --get proms</code></div></div><br />
+Note the use of the -o option to direct output to a USB thumb drive. For some reason that is unclear to me, the thumb drive had become unmounted. A simple reboot fixed this, and it now works.<br />
+<br />
+Once again, apologies for the waste of bandwidth and time.<br />
+<br />
+Geoff</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">26-07-2015, 01:58 AM</div>
+</div>
+<div class="message">No problem, glad you got to the bottom of it!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-901</h2></div><div class="dateline">14-09-2015, 05:22 PM</div>
+</div>
+<div class="message">In answer to the title, in case any come here to get an answer to that, Aunty has definitely changed a few things.  I don't know the scope of it though.  If only some of us have the problems I think we can guess the cause.<br />
+<br />
+Back in the Spring when BBC went to Nitro, the "flashhigh" modes stopped working for me.  I've no other problems with other modes.  Until last week, and now the same thing happens with "flashhd".  Using "best" for modes results in downloads at "flashlow".  Not all programmes are affected.  This is the way it started with "flashhigh".  First only a few, then a few weeks later, everything.<br />
+<br />
+My WAG is that it's down to the rtmp source being configured differently than in the past.  At any rate, "Has Aunty changed anything?  Most definitely."</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">14-09-2015, 10:55 PM</div>
+</div>
+<div class="message">RTMP HD downloads via Level3 are a known issue:<br />
+<br />
+<a href="thread-520.html">/threa...-2796.html</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Has Auntie changed something?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download embedded clip...</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Cannot download embedded clip...</div>
+<div id="pagetitle"><h2>Cannot download embedded clip...</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-263</h2></div><div class="dateline">30-11-2013, 05:29 PM</div>
+</div>
+<div class="message">Hi there,<br />
+<br />
+Sorry to ask this but I've trawled the forums and other guides and I'm stuck.<br />
+<br />
+I want to download the clip on this page...<br />
+<br />
+<a href="http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/">http://www.bbc.co.uk/cbeebies/green-ball...-nativity/</a><br />
+<br />
+I've got Get_iplayer 2.85 running on Windows 7.<br />
+<br />
+I've tried the following commands:<br />
+<br />
+get_player --url="http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/"<br />
+get_iplayer "http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/"<br />
+get_iplayer <a href="http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/">http://www.bbc.co.uk/cbeebies/green-ball...-nativity/</a><br />
+<br />
+All with varying degrees of failure...<br />
+<br />
+Would someone be able to point me in the right direction,<br />
+<br />
+Kindest Regards,<br />
+<br />
+Lee</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-11-2013, 08:23 PM</div>
+</div>
+<div class="message">In this case you can download the clip by finding the "playlist" URL for the programme.  The playlist file contains information necessary for download.  You can look for the playlist URL by viewing the web page source in your browser and searching for "playlist:" (without quotes).  In this case, it would bring you to this line:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>playlist: http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/playlist/xml</code></div></div><br />
+<br />
+<br />
+Copy the URL from that line and use it in your get_iplayer command line instead of the page URL.  It appears that other Green Balloon Club clips are the same, so you can probably just add "/playlist/xml" to each URL you want to download.  It won't work with every CBeebies clip, though.  If you find a playlist URL in the form:<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/p01mb24w">http://www.bbc.co.uk/iplayer/playlist/p01mb24w</a><br />
+<br />
+you should grab the PID at the end (p01mb24w above) and use it with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div>.<br />
+<br />
+AFAICT, get_iplayer doesn't process the "playlist:" references because of the above ambiguity in how to process them.  That might be something I can fix, but no promises.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-263</h2></div><div class="dateline">30-11-2013, 08:53 PM</div>
+</div>
+<div class="message">Hi there,<br />
+<br />
+Thanks for taking the time to reply this late on a Saturday.<br />
+<br />
+Thanks for the pointer about the XML. The command that worked for me in the end was:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --url="http://www.bbc.co.uk/cbeebies/green-balloon-club/watch/green-balloon-club-nativity/playlist/xml" --type=all</code></div></div><br />
+<br />
+<br />
+Thank you so much for the help &amp; thank you for keeping the project alive!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-12-2013, 02:20 PM</div>
+</div>
+<div class="message">Since it's a video clip, you shouldn't need <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=all</code></div></div>.  The default type is <span style="font-weight: bold;" class="mycode_b">tv</span>, which is appropriate for a video clip.  Using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=all</code></div></div> may trigger a refresh of the radio and podcast caches, which can be slow and is unnecessary.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Cannot download embedded clip...</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

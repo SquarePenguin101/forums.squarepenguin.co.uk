@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio: 30 days and everything 320kbps?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio: 30 days and everything 320kbps?</div>
+<div id="pagetitle"><h2>Radio: 30 days and everything 320kbps?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1278</h2></div><div class="dateline">12-05-2016, 07:42 AM</div>
+</div>
+<div class="message">Many thanks to all those who have contributed to the development of get_iplayer over the years. And to the BBC for bringing us such fantastic programmes!<br />
+<br />
+My standard method of downloading BBC radio programmes in the best possible quality is to use:<br />
+<br />
+get_iplayer -g --type=radio --pid xxxxxxxx --raw --force (specific programme, using PID from relevant BBC schedule page)<br />
+<br />
+or <br />
+<br />
+get_iplayer -g --type=radio "keyword" --raw --force (multiple programmes with specific word in the title)<br />
+<br />
+When using the current (2.94) general-release version, I can draw from the past seven days of programmes with the latter - and all downloaded programmes are 128kbps aac/flv (with the exception of Radio 3, which is 320kps aac/flv)<br />
+<br />
+But if I use a development version of get_iplayer (specifically 2.95-dev), I can draw from the past 30 days of schedules - and everything (not just Radio 3 content) is downloaded in 320kbps (in this case, as aac/m4a). Great news for fans of Radio 1 and 6 Music!<br />
+<br />
+What's going on? All BBC radio streams are available as 320kbps aac streams (see here: <a href="http://www.smeggys.co.uk/viewtopic.php?t=28990&amp;f=12">http://www.smeggys.co.uk/viewtopic.php?t=28990&amp;f=12</a> - you can, out of interest, capture these in real-time with VLC's 'convert/save' option). But is this also now true of catch-up content? Have I stumbled on something currently in the BBC's development phase?<br />
+<br />
+I note from one of Dinky's posts in another thread (<a href="/thread-697.html">/thread-697.html</a>) that "the development version of get_iplayer picks up the full version because it uses DASH by default". Might that have some bearing on the issue? Another post (<a href="/thread-710.html">/thread-710.html</a>) refers to lovely '320kbps', although his command-line options are different to mine.<br />
+<br />
+I can't see evidence of any pointless transcoding to higher bitrates (e.g., ffmpeg) at work in Windows task manager, although AVG's LinkScanner (avgnsx.exe) is working harder - presumably on account of the larger amounts of data being shifted. But then again, the --raw and --force options are both supported by general and development versions of get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1278</h2></div><div class="dateline">12-05-2016, 08:22 AM</div>
+</div>
+<div class="message">Interestingly, episode 3 of John Heilpern's A Patriot for Us (Radio 4 Extra, PID: b0076y7v) currently won't download in 320kbps with 2.95-dev (as used above) an error message of 'no segments in playlist' being returned. But you can download the programme with v2.94, albeit in the usual 128kbps format. Different sources/streams, maybe?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-05-2016, 12:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-05-2016, 08:22 AM)</span></cite>Interestingly, episode 3 of John Heilpern's A Patriot for Us (Radio 4 Extra, PID: b0076y7v) currently won't download in 320kbps with 2.95-dev (as used above) an error message of 'no segments in playlist' being returned.</blockquote>That was due to a bug, now fixed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1278</h2></div><div class="dateline">14-05-2016, 08:51 AM</div>
+</div>
+<div class="message">Good to know. Any thoughts to as to my first post?<br />
+Cheers!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">17-05-2016, 09:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (14-05-2016, 08:51 AM)</span></cite>Good to know. Any thoughts to as to my first post?<br />
+Cheers!</blockquote><br />
+What's the question(s)? radiodaze? I read your post twice and not exactly sure what you want to know.<br />
+<br />
+A bit of info from my experience: I realised at the end of August 2015 that BBC Radio was beginning to rollout exciting upgrades to audio quality transmissions as part of the ongoing phases in the Audio Factory project, such that the week beginning 24th August BBC Radio 1 was broadcasting in 320kbps AAC (within the transport stream container, that can then be repackaged into an M4A container). However, the BBC's self-imposed 15-16kHz frequency cut-off (this applies to all formats of their broadcast such as FM, satellite, iplayer etc) was still evident. BBC Radio 3 was the only station at that time (during the Proms) to broadcast in full frequency (&gt;22kHz).<br />
+<br />
+The week commencing 28th Sept BBC Radio 1 broadcast without any frequency limits, which was awesome to find. I had actually noticed that Radio 3 and 6 Music were first to get this full frequency audio; presumably they were the test stations as the listener base is not as big as Radio 1, but enough to get realistic results for the Audio Factory devs. <br />
+<br />
+During this period (late summer / early autumn) I was capturing radio shows using the get_iplayer live recording functionality. It worked fine, but due to the upgrades and development at the BBC's end and extra demands placed upon the CDN servers etc etc there were interruptions in the broadcast (no audible issues, but rather data errors / latency issues that didn't affect the live audio) that get_iplayer hadn't been designed to cope with; in fact no live streaming progs could cope, but others allowed me to handle them. As user-2 <a href="/thread-525.html">pointed out to me</a>, get_iplayer's live recording wasn't a primary design concern. I actually used livestreamer as per user-2's suggestions and never got an error again (after adding some extra cmd coding). <br />
+<br />
+Fast forward a few months and all the server issues etc had abated and the get_iplayer live recording is good to use. But as you have also mentioned, the 2.95 dev version allows us to grab the 320kbps radio progs by default which is a game changer imo. I no longer record audio live and simply use get_iplayer (2.95 dev) as it was primarily designed to which is to access/provide archived shows.<br />
+<br />
+So I'd say that if you are happy to use the 2.95 dev version then you can simply capture the radio shows you want in 320kbps full frequency quality. If a show needs editing, I either extract the AAC &gt; edit in mp3directcut &gt; repackage back in to M4A OR use ffmpeg to split the section of audio you want from the M4A file (using the cmd line or a .cmd [aka .bat] file).<br />
+<br />
+Hope that helps or at least gives some extra info for you :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1278</h2></div><div class="dateline">19-05-2016, 08:24 AM</div>
+</div>
+<div class="message">Many thanks for your informative post, jaybeee! It seems I have been eclipsed by developments (I'm looking forward to the Beeb providing discrete surround-sound with the catch-up versions of TV programmes that feature it, together with 1080p video, but I'm not holding my breath). If I go to BBC iPlayer in my web browser for a specific radio programme (in this case 6 Music) and right-click after streaming begins, '320kbps DASH af_timelight_UK_dash' is shown. Even my local BBC radio's catchup is 320kbps! I have exclusively been using get_iplayer; the last time I used BBC iPlayer catchup as above, everything except Radio 3 was 128kbps or lower. I was aware of the 320kbps live streams for national networks (as mentioned in my original post) but when I stumbled on them they were in an experimental phase. I'm sure that many people in UK listening in via streaming radios and tuners are still relying on the 128kbps feeds. I was certainly unaware that the higher bitrates had been extended to catch-up. I was using the 'general release' version of get_iplayer, which currently only yields 128kbps with non Radio 3 content; any wonder I was none the wiser? It was only when experimenting with the development version that the change was noticed (together with the ability to retrieve radio content originally broadcast more than a week ago). I'm not sure what's carried live on BBC Radio Player, as the BBC still hasn't given users the ability to check.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">21-05-2016, 12:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-05-2016, 08:24 AM)</span></cite>I'm not sure what's carried live on BBC Radio Player, as the BBC still hasn't given users the ability to check.</blockquote><br />
+Do you mean you don't know what the quality of the live broadcast is on the BBC Radio Player?<br />
+<br />
+If so, when I capture the live transmitted data it's 320kbps 48kHz AAC in a Transport Stream.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio: 30 days and everything 320kbps?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

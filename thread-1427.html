@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can get_iplayer record BBC webcast?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can get_iplayer record BBC webcast?</div>
+<div id="pagetitle"><h2>Can get_iplayer record BBC webcast?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1841</h2></div><div class="dateline">01-06-2017, 12:18 PM</div>
+</div>
+<div class="message">Apologies if this has been answered elsewhere.<br />
+<br />
+Can someone tell me is/was there a way to record a webcast on the bbc?<br />
+<br />
+please and thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-06-2017, 12:28 PM</div>
+</div>
+<div class="message">Not with get_iplayer, unless it is later made available on the iPlayer site.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1841</h2></div><div class="dateline">01-06-2017, 12:30 PM</div>
+</div>
+<div class="message">thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1743</h2></div><div class="dateline">01-06-2017, 02:59 PM</div>
+</div>
+<div class="message">You could have a look at <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a>. I've not tried it, but they list the BBC website as supported by their app.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1858</h2></div><div class="dateline">22-06-2017, 07:16 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-06-2017, 02:59 PM)</span></cite>You could have a look at <a href="https://rg3.github.io/youtube-dl/">youtube-dl</a>. I've not tried it, but they list the BBC website as supported by their app.</blockquote><br />
+Yeah I tried that app but it didn't really work at all.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">23-06-2017, 03:38 PM</div>
+</div>
+<div class="message">youtube-dl is working for me, but it doesn't seem to record it as a traditional live stream; in that it downloads a "full"/"complete" file, that if the set hasn't finished then you get some dead-air at the start and not the complete set at the end. However, trying again as soon as the set has finished meant that the resulting file contained the entire set. However, you'll need to cut/split out the bit you need.<br />
+<br />
+If that isn't clear (which it prob isn't lol), then here's an example:<br />
+<br />
+- used youtube-dl to download Dua Lipa set (after she had finished as this then contained her entire set) <br />
+- a 1hr 23min mp4 was downloaded<br />
+- then used ffmpeg to split the part I needed out<br />
+<br />
+Here's the batch script I use to split/process these mp4 files (please note that it will process all mp4 files in the dir):<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>:: Name:     mp4-split-ffmpeg.cmd<br />
+:: Purpose:  Configures ffmpeg to losslessly split/crop an mp4 file<br />
+:: Author:   jaybeee @ themixingbowl.org<br />
+:: Revision: Nov 2015 - v0.1<br />
+<br />
+@ECHO OFF<br />
+<br />
+SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION<br />
+<br />
+:: variables begin with v<br />
+<br />
+:: set name of this script without file extension<br />
+SET vMe=%~n0<br />
+<br />
+:: set name of the parent directory where this script resides<br />
+SET vParent=%~dp0<br />
+<br />
+:: set location of ffmpeg ** CHANGE ME **<br />
+SET vffmpeg="C:&#92;Program Files (x86)&#92;ffmpeg&#92;bin&#92;ffmpeg.exe"<br />
+<br />
+<br />
+:: Ask for the user to enter the Start &amp; End times in hours, minutes, seconds<br />
+echo ** Enter Start Time of where to begin split in hh mm ss.mmm format when prompted **<br />
+SET /p vShh="Start Time (hh): " <br />
+SET /p vSmm="Start Time (mm): "<br />
+SET /p vSss="Start Time (ss.mmm): "<br />
+<br />
+echo ** Enter End Time of where to end split in hh mm ss.mmm format when prompted **<br />
+SET /p vEhh="End Time (hh): "<br />
+SET /p vEmm="End Time (mm): "<br />
+SET /p vEss="End Time (ss.mmm): "<br />
+<br />
+:: convert Start &amp; End input time to seconds<br />
+SET /A vStart=(%vShh%*3600)+(%vSmm%*60)+(%vSss)<br />
+SET /A vEnd=(%vEhh%*3600)+(%vEmm%*60)+(%vEss)<br />
+<br />
+:: call ffmpeg to split/crop (copy) out the video using -ss (start time) &amp; -to (end time) (-t [duration time])  <br />
+:: time can be: [HH:MM:SS.mmm] eg 01:59:58.123<br />
+:: Please note: -hide_banner will suppress printing the banner info. Ensure you are running an up to date ffmpeg version<br />
+MKDIR split-mp4<br />
+FOR %%f IN ("*.mp4") DO %vffmpeg% -i "%%f" -ss %vStart% -to %vEnd% -codec copy -movflags faststart -hide_banner "split-mp4&#92;%%~nf-split.mp4"<br />
+<br />
+:: Finish<br />
+ECHO Finished mp4 split<br />
+<br />
+:: pause can be used to view the extraction details<br />
+PAUSE<br />
+<br />
+:END<br />
+ENDLOCAL<br />
+ECHO ON<br />
+@EXIT /B 0</code></div></div><br />
+The script works in Windows and will require you to add the start time of where the split is to begin and end time of where split will finish.<br />
+<br />
+Hope it helps.<br />
+<br />
+EDIT: I suspect most of these live webcast streams will be made available on the iplayer in due course and then I would use get_iplayer to grab them as you'll have more quality options with which to choose from as well as less work to do, i.e. no splitting :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-06-2017, 03:43 PM</div>
+</div>
+<div class="message">Thread closed. If you want to discuss youtube-dl, do it on a site supporting youtube-dl.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can get_iplayer record BBC webcast?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

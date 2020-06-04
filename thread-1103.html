@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Is it possible to run multiple '--command's?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is it possible to run multiple '--command's?</div>
+<div id="pagetitle"><h2>Is it possible to run multiple '--command's?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">24-11-2016, 08:57 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+(Windows 7, Get_iplayer 2.97, ffmpeg 3.0) <br />
+<br />
+I'm attempting to use ffmpeg within get_iplayer to extract the .aac file from a .m4a &amp; then delete the original .m4a. ffmpeg appears to have no internal delete option so I'm trying to use Windows old DOS commands. <br />
+&lt;snip&gt; of relevant command:<br />
+ <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--command="ffmpeg.exe -i &#92;""&lt;filename&gt;"&#92;" -acodec copy &#92;""C:&#92;Downloads&#92;R&amp;M&#92;&lt;fileprefix&gt;.aac"&#92;" ren &#92;""&lt;filename&gt;"&#92;" &#92;""zxc.mp3"&#92;""</code></div></div><br />
+To test it I'm using DOS 'ren' rename command. The full command downloads the m4a, but ffmpeg creates a zero size .aac file &amp; then finishes. If I run one of either 'ffmpeg or 'ren' without the other, they both work as expected.<br />
+<br />
+ I've tried separating them out so there are two '--command' but whichever order they're in it only processes the latter.<br />
+<br />
+I've run out of ideas. Anybody able to help?<br />
+<br />
+2 side questions:<br />
+Is there a difference between --fileprefix &amp; --file-prefix?<br />
+<br />
+Is there a 'paste code' option in this forum? <br />
+<br />
+Cheers<br />
+Dave F.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-11-2016, 11:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-11-2016, 08:57 PM)</span></cite>--command="ffmpeg.exe -i \""&lt;filename&gt;"\" -acodec copy \""C:\Downloads\R&amp;M\&lt;fileprefix&gt;.aac"\" ren \""&lt;filename&gt;"\" \""zxc.mp3"\"" <br />
+<br />
+To test it I'm using DOS 'ren' rename command. The full command downloads the m4a, but ffmpeg creates a zero size .aac file &amp; then finishes. If I run one of either 'ffmpeg or 'ren' without the other, they both work as expected.</blockquote>Hint 1: Your shell needs some way to separate the two commands. Hint 2: It's the same as specifying multiple commands on one line in a batch file or at the command prompt. Google is your friend here. Work out the syntax at a command prompt before using <kbd>--command</kbd>.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I've tried separating them out so there are two '--command' but whichever order they're in it only processes the latter.</blockquote>
+You can only have one <kbd>--command</kbd> option. Last one wins if multiple specified.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Is there a difference between --fileprefix &amp; --file-prefix?</blockquote>
+No<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Is there a 'paste code' option in this forum? </blockquote>
+Toolbar in post editor</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">25-11-2016, 02:29 PM</div>
+</div>
+<div class="message">Thanks.<br />
+<br />
+For others users who may have the same problem, I used the '&amp;' symbol. Full Windows documentation:<br />
+<a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntcmds_shelloverview.mspx?mfr=true">https://www.microsoft.com/resources/docu...x?mfr=true</a><br />
+<br />
+From what I've read in the documentation I'm unsure how I was to deduce it was a shell with a shell or that multiple commands could be used. Could a couple of sentences be added to clarify that multiple commands are possible &amp; tips on how to achieve it?<br />
+<br />
+Cheers<br />
+DaveF</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-11-2016, 03:21 PM</div>
+</div>
+<div class="message">I've added some text in the usage examples to indicate that multiple commands can be used, but I'll stop there. Things vary between platforms, and we assume users will know how to use their command shells. Feel free to add tips or examples, though. Just make sure it's clear what platform(s) they're for.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is it possible to run multiple '--command's?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

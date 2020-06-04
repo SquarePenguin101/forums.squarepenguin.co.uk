@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to get Glastonbury live</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to get Glastonbury live</div>
+<div id="pagetitle"><h2>How to get Glastonbury live</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1320</h2></div><div class="dateline">24-06-2016, 07:05 PM</div>
+</div>
+<div class="message">How can I get glastonbury live using gip?<br />
+<br />
+e.g. <a href="http://www.bbc.co.uk/events/ewcj5v/live/c2rzp6">http://www.bbc.co.uk/events/ewcj5v/live/c2rzp6</a><br />
+<br />
+I've tried all the commands I can think of, but with no success.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">24-06-2016, 09:54 PM</div>
+</div>
+<div class="message">Hey,<br />
+<br />
+I am currently struggling with the same issue. I don't know how to get the live, but now I am trying to get the recorded programmes...<br />
+<br />
+You can try this link (for the recorded videos of Glastonbury <br />
+-&gt; <span style="font-weight: bold;" class="mycode_b"><a href="http://www.bbc.co.uk/iplayer/episodes/b007r6vx">http://www.bbc.co.uk/iplayer/episodes/b007r6vx</a> </span>)<br />
+and then right click over the video you want to download. Select "Copy link address" and then start to look for the vPID... <br />
+<br />
+So, the "2016: Blossoms" link is "http://www.bbc.co.uk/iplayer/episode/<span style="font-weight: bold;" class="mycode_b">p03y1gqq</span>/glastonbury-2016-blossoms".<br />
+<br />
+Open this link directly in your browser and then right click the page select "View page source". Then use your browser to find "vpid" in the source text from the BBC iPlayer (I use ctrl+F to do a search in my browser). You will see text that looks something like this (for "2016: James"):<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>... "hasDownloads":true,"vpid":"p03y1k36","sq ...</code></div></div><br />
+<br />
+Here the vPID is: "<span style="font-weight: bold;" class="mycode_b">p03y1k36</span>". Once you have the vPID you can download the video with <span style="text-decoration: underline;" class="mycode_u">get_iplayer.</span><br />
+<br />
+Normally, the "masterbrand" for Glastonbury is "BBC_Four", this time it seems to be that the "masterbrand" is "BBC". So, get_iplayer (at least my version) does not seem to find the Glastonbury programmes.<br />
+<br />
+Perhaps it would help to list here the Glastonbury programmes and the vPID to make it nice and easy for everyone?<br />
+<br />
+Cheers,<br />
+<br />
+Tiiveni.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">24-06-2016, 10:17 PM</div>
+</div>
+<div class="message">Hey,<br />
+<br />
+A list of the current recorded programmes for Glastonbury with the vPIDs...<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>2016: The Orchestra of Syrian Musicians with Damon Albarn &amp; Guests<br />
+A truly unique Glastonbury moment.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 46 mins<br />
+High DefinitionHD<br />
+"vpid":"p03y0j4c"<br />
+<br />
+2016: James<br />
+Manchester rockers James take to the stage to perform new and old songs.<br />
+First shown: 24 Jun 2016<br />
+Available for 29 days<br />
+Duration 30 mins<br />
+High DefinitionHD<br />
+"vpid":"b07h67vb"<br />
+<br />
+2016: NAO<br />
+The Park Stage gets a flavour of soul-tinged R&amp;B from the London singer songwriter.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 39 mins<br />
+High DefinitionHD<br />
+"vpid":"p03ybcjm"<br />
+<br />
+2016: ZZ Top &amp; the Lumineers<br />
+Texan trio ZZ Top rock up a storm on the Pyramid stage and neo-folk band the Lumineers.<br />
+First shown: 24 Jun 2016<br />
+Available for 29 days<br />
+Duration 60 mins<br />
+High DefinitionHD<br />
+"vpid":"b07hmq86"<br />
+<br />
+2016: Skepta<br />
+The London grime don shuts down the Pyramid Stage.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 32 mins<br />
+High DefinitionHD<br />
+"vpid":"p03y0hy7"<br />
+<br />
+2016: Blossoms<br />
+Hotly tipped Manchester band make their Glastonbury debut.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 31 mins<br />
+High DefinitionHD<br />
+"vpid":"p03y1j3j"<br />
+<br />
+2016: Christine and the Queens<br />
+A Glastonbury debut for the French chanteuse and her unique brand of irresistible pop.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 43 mins<br />
+"vpid":"p03y1ghb"<br />
+<br />
+2016: Foals<br />
+Oxford indie-rock five-piece Foals make their Pyramid stage debut.<br />
+First shown: 24 Jun 2016<br />
+Available for 29 days<br />
+Duration 60 mins<br />
+"vpid":"b07hms96"<br />
+<br />
+2016: Unknown Mortal Orchestra<br />
+The American and New Zealand band deliver a set of psychedelic rock.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 52 mins<br />
+"vpid":"p03ybchf"<br />
+ <br />
+2016: Friday Part 1<br />
+News from the first day of the festival and a catch-up with Friday's headliners, Muse.<br />
+First shown: 24 Jun 2016<br />
+Available for 29 days<br />
+Duration 30 mins<br />
+High DefinitionHD<br />
+"vpid":"b07hp5bc"<br />
+<br />
+2016: James<br />
+The indie veterans open up with classic anthems and songs from their new album.<br />
+First shown: 24 Jun 2016<br />
+Available for 1 month<br />
+Duration 63 mins<br />
+High DefinitionHD<br />
+"vpid":"p03y1k36"</code></div></div><br />
+<br />
+Cheers,<br />
+<br />
+Tiiveni.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2016, 10:46 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-06-2016, 07:05 PM)</span></cite>How can I get glastonbury live using gip?<br />
+<br />
+e.g. <a href="http://www.bbc.co.uk/events/ewcj5v/live/c2rzp6">http://www.bbc.co.uk/events/ewcj5v/live/c2rzp6</a></blockquote>The live programmes use the red button streams, which are not supported by get_iplayer.  You can feed the HLS master playlists for those streams to VLC or other media players. The URLs look like:<br />
+<br />
+<kbd><a href="http://a.files.bbci.co.uk/media/live/manifesto/audio_video/webcast/hls/uk/abr_hdtv/ak/sport_stream_XX.m3u8">http://a.files.bbci.co.uk/media/live/man...am_XX.m3u8</a></kbd><br />
+<kbd><a href="http://a.files.bbci.co.uk/media/live/manifesto/audio_video/webcast/hls/uk/abr_hdtv/llnw/sport_stream_XX.m3u8">http://a.files.bbci.co.uk/media/live/man...am_XX.m3u8</a></kbd><br />
+<br />
+where "XX" can be between 01 and 24 (I think) to access different streams. Only a few streams are available at any given time and some will just be showing a "closed" graphic. You'll have to do some trial and error to figure out which stream goes with which Glastonbury stage. At this moment 08-13 appear to be broadcasting.<br />
+<blockquote class="mycode_quote"><cite><span> (24-06-2016, 09:54 PM)</span></cite>So, the "2016: Blossoms" link is "http://www.bbc.co.uk/iplayer/episode/<span style="font-weight: bold;" class="mycode_b">p03y1gqq</span>/glastonbury-2016-blossoms".</blockquote>With the development version of get_iplayer you can download directly from that URL as normal (was broken in 2.94 by BBC changes), though some warning messages will be printed. Special event programmes sometimes don't have all the metadata that get_iplayer expects.<br />
+<blockquote class="mycode_quote"><cite><span> (24-06-2016, 09:54 PM)</span></cite>Here the vPID is: "<span style="font-weight: bold;" class="mycode_b">p03y1k36</span>". Once you have the vPID you can download the video with <span style="text-decoration: underline;" class="mycode_u">get_iplayer.</span></blockquote>You should expand on that for the benefit of other users since get_iplayer does not use vPIDs directly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2016, 11:04 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-06-2016, 09:54 PM)</span></cite>Normally, the "masterbrand" for Glastonbury is "BBC_Four", this time it seems to be that the "masterbrand" is "BBC". So, get_iplayer (at least my version) does not seem to find the Glastonbury programmes.</blockquote>Don't count on Glastonbury programmes on BBC Two/Four being indexed by get_iplayer. The listings appear to be missing some availability data that get_iplayer requires. It may get updated over the weekend, but it normally gets updated soon after the programme is broadcast.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">25-06-2016, 07:11 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-06-2016, 10:46 PM)</span>user-2 Wrote: <a href="https://forums.squarepenguin.co.uk/post-4150.html#pid4150">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (24-06-2016, 09:54 PM)</span></cite>So, the "2016: Blossoms" link is "http://www.bbc.co.uk/iplayer/episode/<span style="font-weight: bold;" class="mycode_b">p03y1gqq</span>/glastonbury-2016-blossoms".</blockquote>With the development version of get_iplayer you can download directly from that URL as normal, though some warning messages will be printed. Special event programmes sometimes don't have all the metadata that get_iplayer expects.</blockquote><br />
+Thank you user-2, I could not remember how to do this last night! Using the direct URL is very easy.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1043</h2></div><div class="dateline">25-06-2016, 02:58 PM</div>
+</div>
+<div class="message">You can watch the Red Button streams live with the Kodi addon "iPlayer WWW". <br />
+I am still looking for an epg schedule for them. If anyone knows of a source I would appreciate it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">26-06-2016, 12:53 PM</div>
+</div>
+<div class="message">This is one type of event where I think it is easier to use a satellite receiver. I have a skybox, and I record direct to USB stick. Then I pass the .ts files through mcebuddy, that removes the "adverts" or breaks, and makes then post clean-up even easier.<br />
+Although most of the sets I want have worked fine through GiP. <br />
+e.g. Muse<br />
+get_iplayer.cmd --type=tv --pid=p03xs070</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to get Glastonbury live</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer folder doesn't show up under Start Menu (Win7)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer folder doesn't show up under Start Menu (Win7)</div>
+<div id="pagetitle"><h2>get_iplayer folder doesn't show up under Start Menu (Win7)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-557</h2></div><div class="dateline">05-08-2014, 11:25 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I am trying to install "get_iplayer" on Win7, following the instructions given on this website. The installation seems to run through smoothly. Only, I don't have the "get_iplayer" folder in my Windows Start Menu.<br />
+<br />
+I can see the folder containing what I think is everything there needs to be in there. Searching for "get_iplayer" only shows me a ".get_iplayer" folder which doesn't have anything useful in it.<br />
+<br />
+I tried uninstalling and reinstalling and turned on the log details. I seem to see some sort of an error message after every line that reads "Extracting contents of ...", only the error message is always followed up by some garbage characters that don't tell me much.<br />
+<br />
+I tried to trace the errors in the Win7 "Event Viewer" but didn't see anything there. <br />
+<br />
+Does anyone have a suggestion for what I might be doing wrong? I did look through the Windows forums and didn't find anything relevant to my problem, but my apologies if I may have missed seeing something directly related there.<br />
+<br />
+Cheerio!<br />
+Vivek</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-557</h2></div><div class="dateline">06-08-2014, 08:13 PM</div>
+</div>
+<div class="message">Figured out the source of the "problem":<br />
+<br />
+I was logged in as a normal user and selected the option "Run as Administrator" when installing. The installation ran fine but no folder was created in the Windows Start Menu. I was however able to run the program from the folder where it was installed, well, almost until I got the error message that I didn't have permissions to overwrite an existing folder (The one on the admin account of course, as that was set as the default destination).<br />
+<br />
+So, the solution would be to temporarily change the user account type to "Administrator". This gets me the entry in the Start Menu. As far as using the program is concerned, I still could run it off the command window even otherwise as long as the destination folder was not in the admin user's space. That's all.<br />
+<br />
+A newbie error that one.<br />
+<br />
+Vivek</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2014, 09:43 PM</div>
+</div>
+<div class="message">Unfortunately, the installer is not really multi-user friendly.  It installs shortcuts and sets the output dir by default for the effective user running the installer.  If you've gained elevated privileges from a different user account, things get messed up as you described.  You can hack things to work properly, but really the installer needs some work.  As you noted, the best thing to do for now is to install while logged in as a user with Administrator privileges.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer folder doesn't show up under Start Menu (Win7)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

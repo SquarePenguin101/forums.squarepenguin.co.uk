@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Windows installer cannot download ffmpeg/rtmpdump on WinXP</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Windows installer cannot download ffmpeg/rtmpdump on WinXP</div>
+<div id="pagetitle"><h2>Windows installer cannot download ffmpeg/rtmpdump on WinXP</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1195</h2></div><div class="dateline">25-03-2016, 03:55 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+The windows setup program, "get_iplayer_setup_latest.exe", is having difficulties getting ffmpeg and rtmpdump, well it is on my windows XP machine at least.<br />
+<br />
+I already had GiP installed and I used Wireshark to inspect the data being sent and received.<br />
+<br />
+At the bit where one selects which components to install none of the checkboxes were already checked, I checked them all.<br />
+<br />
+It got stuck when it tried to get ffmpeg, with a pop-up saying "Download Failed: " and "Error: SendRequest Error".<br />
+<br />
+I found the problem in Wireshark....<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GET /builds/win32/static/ffmpeg-2.2.3-win32-static.7z HTTP/1.1<br />
+User-Agent: curl/7.21.7 (i386-pc-win32) libcurl/7.21.7 OpenSSL<br />
+    /0.9.8r zlib/1.2.5<br />
+Host: ffmpeg.zeranoe.com<br />
+Connection: Keep-Alive<br />
+Cache-Control: no-cache<br />
+<br />
+HTTP/1.1 301 Moved Permanently<br />
+Server: nginx/1.8.1<br />
+Date: Fri, 25 Mar 2016 12:34:42 GMT<br />
+Content-Type: text/html; charset=iso-8859-1<br />
+Content-Length: 283<br />
+Connection: keep-alive<br />
+Location: <br />
+https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-2.2.3-win32-static.7z<br />
+<br />
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;<br />
+&lt;html&gt;&lt;head&gt;<br />
+&lt;title&gt;301 Moved Permanently&lt;/title&gt;<br />
+&lt;/head&gt;&lt;body&gt;<br />
+&lt;h1&gt;Moved Permanently&lt;/h1&gt;<br />
+&lt;p&gt;The document has moved &lt;a <br />
+href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-2.2.3-win32-static.7z"&gt;here&lt;/a&gt;.&lt;/p&gt;<br />
+&lt;/body&gt;&lt;/html&gt;<br />
+<br />
+<br />
+It got VLC ok then had the same problem with rtmpdump...<br />
+<br />
+GET /builds/win32/external_libs/rtmpdump-20140302-git-79459a2-win32.7z <br />
+HTTP/1.1<br />
+User-Agent: curl/7.21.7 (i386-pc-win32) libcurl/7.21.7 OpenSSL/0.9.8r <br />
+zlib/1.2.5<br />
+Host: ffmpeg.zeranoe.com<br />
+Connection: Keep-Alive<br />
+Cache-Control: no-cache<br />
+<br />
+HTTP/1.1 301 Moved Permanently<br />
+Server: nginx/1.8.1<br />
+Date: Fri, 25 Mar 2016 13:34:37 GMT<br />
+Content-Type: text/html; charset=iso-8859-1<br />
+Content-Length: 300<br />
+Connection: keep-alive<br />
+Location: <br />
+https://ffmpeg.zeranoe.com/builds/win32/external_libs/rtmpdump-20140302-git-79459a2-win32.7z<br />
+<br />
+&lt;!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"&gt;<br />
+&lt;html&gt;&lt;head&gt;<br />
+&lt;title&gt;301 Moved Permanently&lt;/title&gt;<br />
+&lt;/head&gt;&lt;body&gt;<br />
+&lt;h1&gt;Moved Permanently&lt;/h1&gt;<br />
+&lt;p&gt;The document has moved &lt;a <br />
+href="https://ffmpeg.zeranoe.com/builds/win32/external_libs/rtmpdump-20140302-git-79459a2-win32.7z"&gt;here&lt;/a&gt;.&lt;/p&gt;<br />
+&lt;/body&gt;&lt;/html&gt;</code></div></div><br />
+<br />
+It got AtomicParsley then finished<br />
+<br />
+On XP, rtmpdump.exe is in folder...<br />
+C:\Program Files\get_iplayer\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin<br />
+<br />
+and ffmpeg.exe is in folder...<br />
+C:\Program Files\get_iplayer\FFmpeg\ffmpeg-2.2.3-win32-static\bin<br />
+<br />
+d4x</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-03-2016, 05:36 PM</div>
+</div>
+<div class="message">This appears to only affect XP. Presumably it is a SSL issue since zeranoe.com is forcing HTTPS via redirect. Since the problem is XP-only and likely buried somewhere in the installer platform code, I'm not going to waste any time on it. Use the installer from here instead:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer_win32/releases/latest">https://github.com/get-iplayer/get_iplay...ses/latest</a><br />
+<br />
+EDIT: link updated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1195</h2></div><div class="dateline">26-03-2016, 12:18 PM</div>
+</div>
+<div class="message">Many thanks for that. The person who posted about the problem on the GiP mailing list at infradead.org 6 days ago was an exceedingly happy bunny, I guess he had somehow not heard about this sites existence as an alternative place to get help.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Windows installer cannot download ffmpeg/rtmpdump on WinXP</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

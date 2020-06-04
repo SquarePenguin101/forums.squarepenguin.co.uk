@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Raspberry PI: ffmpeg missing libx264</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Raspberry PI: ffmpeg missing libx264</div>
+<div id="pagetitle"><h2>Raspberry PI: ffmpeg missing libx264</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1467</h2></div><div class="dateline">22-11-2016, 04:42 PM</div>
+</div>
+<div class="message">Hi all, I am trying to run get_iplayer on a raspberry pi "Raspbian GNU/Linux 7 (wheezy)" after using it for years on Windows. I followed the instructions here <a href="https://squarepenguin.co.uk/downloads/raspbian/">https://squarepenguin.co.uk/downloads/raspbian/</a>  to install get_iplayer and now have get_iplayer 2.97-ppa26, installed, however after installation I  was getting an error that ffmpeg could not be found so I followed the instructions here <a href="/thread-964.html">/thread-964.html</a> to install ffmpeg. get_iplayer now downloads and can find ffmpeg but I am now gettin the following error:<br />
+<br />
+<br />
+INFO: Begin converting file: /home/pi/i_player_recordings/Postman_Pat_Special_Delivery_Service_Series_3_-_1._Postman_Pat_and_the_Cornish_Caper_b083r6nt_original.partial.mp4.ts<br />
+/usr/bin/ffmpeg: error while loading shared libraries: libx264.so.142: cannot open shared object file: No such file or directory<br />
+<br />
+How do I install the required libraries and point ffmpeg to them?<br />
+<br />
+Please note I am a complete linux numpty so please be gentle.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-11-2016, 06:31 PM</div>
+</div>
+<div class="message">It looks like you need to install libx264 runtime library (to handle iPlayer video with ffmpeg). The package name should be libx264-142.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1478</h2></div><div class="dateline">29-11-2016, 07:20 PM</div>
+</div>
+<div class="message">I am struggling to get ffmpeg working and have followed the instructions, however when I run get_iplayer it downloads ok but I then get this error:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Recorded: 14.04MB in 00:00:10 at 11503kbps to /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts<br />
+INFO: Begin converting file: /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts<br />
+/usr/bin/ffmpeg: error while loading shared libraries: libx264.so.142: cannot open shared object file: No such file or directory<br />
+INFO: Command exit code 127 (raw code = 32512)<br />
+WARNING: Conversion failed - retaining /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts</code></div>
+</div>
+Any advice? The download process works perfectly, but since updating get_iplayer I cannot get the conversion to work..... <br />
+<br />
+I am sure it is really simple, but as a 'novice' I am struggling on this one ;-)<br />
+<br />
+<br />
+Many thanks for any help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1478</h2></div><div class="dateline">30-11-2016, 08:57 PM</div>
+</div>
+<div class="message">OK after many hours I've now fixed the above problem (I've no idea how but know it involved libx264-142). Now I have another problem that I can't seem to fix: <br />
+<br />
+raspberrypi 4.1.19+ #858 (I belive it is a Pi B+)<br />
+Writing the file to /media/usb/ (Mounted USB flash drive)<br />
+<br />
+Here is the verbose output:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+<span style="font-weight: bold;" class="mycode_b">pi@raspberrypi ~ &#36; get_iplayer --pid p03yjvsl --tvmode=best --force --verbose</span><br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer 2.97-ppa26, Copyright (C) 2008-2010 Phil Lewis</span><br />
+<span style="font-weight: bold;" class="mycode_b"> This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.</span><br />
+<span style="font-weight: bold;" class="mycode_b"> This is free software, and you are welcome to redistribute it under certain</span><br />
+<span style="font-weight: bold;" class="mycode_b"> conditions; use --conditions for details.</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: encodinglocale = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: encodinglocalefs = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: encodingconsoleout = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: encodingconsolein = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: &#36;{^UNICODE} = 0</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: User prefs dir: /home/pi/.get_iplayer</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: System options dir: /etc/get_iplayer/options</span><br />
+<span style="font-weight: bold;" class="mycode_b">Current options:</span><br />
+<span style="font-weight: bold;" class="mycode_b">       encodingconsolein = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">       encodingconsoleout = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">       encodinglocale = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">       encodinglocalefs = UTF-8</span><br />
+<span style="font-weight: bold;" class="mycode_b">       ffmpeg = /usr/bin/ffmpeg</span><br />
+<span style="font-weight: bold;" class="mycode_b">       force = 1</span><br />
+<span style="font-weight: bold;" class="mycode_b">       isodate = 1</span><br />
+<span style="font-weight: bold;" class="mycode_b">       output = /media/usb/</span><br />
+<span style="font-weight: bold;" class="mycode_b">       pid = p03yjvsl</span><br />
+<span style="font-weight: bold;" class="mycode_b">       tvmode = best</span><br />
+<span style="font-weight: bold;" class="mycode_b">       verbose = 1</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Search args: ''</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Will try prog types: tv</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Got 1699 file cache entries for tv</span><br />
+<span style="font-weight: bold;" class="mycode_b">Cleaning pid Old: 'p03yjvsl',  New: 'p03yjvsl'</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://www.bbc.co.uk/programmes/p03yjvsl.rdf">http://www.bbc.co.uk/programmes/p03yjvsl.rdf</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Episode-only pid detected</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Trying pid: p03yjvsl using type: tv</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Trying to stream pid using type tv</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: pid not found in tv cache</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Cleaning pid Old: 'p03yjvsl',  New: 'p03yjvsl'</span><br />
+<span style="font-weight: bold;" class="mycode_b">Matches:</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: 1 Matching Programmes</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Programme metadata URL = <a href="http://www.bbc.co.uk/programmes/p03yjvsl.xml">http://www.bbc.co.uk/programmes/p03yjvsl.xml</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://www.bbc.co.uk/programmes/p03yjvsl.xml">http://www.bbc.co.uk/programmes/p03yjvsl.xml</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p03yjvst/transferformat/hls?cb=58721">http://open.live.bbc.co.uk/mediaselector...s?cb=58721</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high,.mp4.csmil/master.m3u8?hdnea=st=1480535558~exp=1480557158~acl=/*800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high*~hmac=36540a29b95d70b97569a98eb01bb6365dcd33f4da54ef0b65e128cd676f0f08">http://cp401489-vh.akamaihd.net/i/iplaye...cd676f0f08</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03yjvst/transferformat/hls?cb=13409">http://open.live.bbc.co.uk/mediaselector...s?cb=13409</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high,.mp4.csmil/master.m3u8?hdnea=st=1480535558~exp=1480557158~acl=/*400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high*~hmac=6f5ba3611b0c624d968255aa453c7f2cc7b0ac66eff8877658bb40a3fb406a98">http://cp401489-vh.akamaihd.net/i/iplaye...a3fb406a98</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Found mode hlshigh1: (gip_hls_iplayer_778) hls h264 640x360 778kbps stream (CDN: akamai_hls_open/10)</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Found mode hlslow1: (gip_hls_iplayer_389) hls h264 512x288 389kbps stream (CDN: akamai_hls_open/10)</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Found mode hlsstd1: (gip_hls_iplayer_499) hls h264 640x360 499kbps stream (CDN: akamai_hls_open/10)</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1466) hls h264 832x468 1466kbps stream (CDN: akamai_hls_open/10)</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://www.bbc.co.uk/programmes/p03yjvst.rdf">http://www.bbc.co.uk/programmes/p03yjvst.rdf</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Will search for versions: original</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Mode list: hvfhd,hlshd,hvfsd,hvfvhigh,hlsvhigh,hvfhigh,hlshigh,hvfstd,hlsstd,hvflow,hlslow</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Checking existence of original version</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Version = original</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: hlsvhigh1,hlshigh1,hlsstd1,hlslow1 modes will be tried for version original</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Trying hlsvhigh1 mode to record tv: Natural World: 2016-2017 - The importance of giraffes</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Attempt number: 1 / 3</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: File name prefix = Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Begin recording file: /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts</span><br />
+<span style="font-weight: bold;" class="mycode_b">DEBUG: HLS playlist = <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high,.mp4.csmil/index_3_av.m3u8?hdnea=st=1480535558~exp=1480557158~acl=/*400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high*~hmac=6f5ba3611b0c624d968255aa453c7f2cc7b0ac66eff8877658bb40a3fb406a98">http://cp401489-vh.akamaihd.net/i/iplaye...a3fb406a98</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high,.mp4.csmil/index_3_av.m3u8?hdnea=st=1480535558~exp=1480557158~acl=/*400kbps/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_vlow,480kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_low,800kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_med,1500kbps/MP/2c978993552aa711015559e40c6e6495--video--2.-NW-GIRAFFES---GIRAFFE-FACT-FILE_flv_avc1_high*~hmac=6f5ba3611b0c624d968255aa453c7f2cc7b0ac66eff8877658bb40a3fb406a98">http://cp401489-vh.akamaihd.net/i/iplaye...a3fb406a98</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Recorded: 14.04MB in 00:00:13 at  8849kbps to /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Begin converting file: /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts</span><br />
+<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Command: "/usr/bin/ffmpeg" "-loglevel" "verbose" "-y" "-stats" "-i" "/media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts" "-vcodec" "copy" "-acodec" "copy" "-absf" "aac_adtstoasc" "/media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4"</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">ffmpeg version 0.8.17-6:0.8.17-2+rpi1+deb7u2, Copyright (c) 2000-2014 the Libav developers</span><br />
+<span style="font-weight: bold;" class="mycode_b"> built on Jun 18 2016 00:05:51 with gcc 4.6.3</span><br />
+<span style="font-weight: bold;" class="mycode_b"> configuration: --arch=arm --enable-pthreads --enable-runtime-cpudetect --extra-version='6:0.8.17-2+rpi1+deb7u2' --libdir=/usr/lib/arm-linux-gnueabihf --prefix=/usr --disable-yasm --disable-protocol=concat --enable-bzlib --enable-libdc1394 --enable-libdirac --enable-libfreetype --enable-frei0r --enable-gnutls --enable-libgsm --enable-libmp3lame --enable-librtmp --enable-libopencv --enable-libopenjpeg --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-vaapi --enable-vdpau --enable-libvorbis --enable-libvpx --enable-zlib --enable-gpl --enable-postproc --enable-swscale --enable-libcdio --enable-x11grab --enable-libx264 --enable-libxvid --shlibdir=/usr/lib/arm-linux-gnueabihf --enable-shared --disable-static</span><br />
+<span style="font-weight: bold;" class="mycode_b"> avdevice    configuration: --arch=arm --enable-pthreads --enable-runtime-cpudetect --extra-version='6:9.14-1rpi1rpi1' --libdir=/usr/lib/arm-linux-gnueabihf --prefix=/usr --disable-yasm --enable-bzlib --enable-libdc1394 --enable-libfreetype --enable-frei0r --enable-gnutls --enable-libgsm --enable-libmp3lame --enable-librtmp --enable-libopencv --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-vaapi --enable-vdpau --enable-libvorbis --enable-libvpx --enable-zlib --enable-gpl --enable-swscale --enable-libcdio --enable-x11grab --enable-libx264 --enable-libxvid --shlibdir=/usr/lib/arm-linux-gnueabihf --enable-shared --disable-static --enable-libopencore-amrnb --enable-version3 --enable-libopencore-amrwb --enable-version3 --enable-libvo-aacenc --enable-version3 --enable-libvo-amrwbenc --enable-version3</span><br />
+<span style="font-weight: bold;" class="mycode_b"> swscale     configuration: --arch=arm --enable-pthreads --enable-runtime-cpudetect --extra-version='6:9.14-1rpi1rpi1' --libdir=/usr/lib/arm-linux-gnueabihf --prefix=/usr --disable-yasm --enable-bzlib --enable-libdc1394 --enable-libfreetype --enable-frei0r --enable-gnutls --enable-libgsm --enable-libmp3lame --enable-librtmp --enable-libopencv --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-vaapi --enable-vdpau --enable-libvorbis --enable-libvpx --enable-zlib --enable-gpl --enable-swscale --enable-libcdio --enable-x11grab --enable-libx264 --enable-libxvid --shlibdir=/usr/lib/arm-linux-gnueabihf --enable-shared --disable-static --enable-libopencore-amrnb --enable-version3 --enable-libopencore-amrwb --enable-version3 --enable-libvo-aacenc --enable-version3 --enable-libvo-amrwbenc --enable-version3</span><br />
+<span style="font-weight: bold;" class="mycode_b"> postproc    configuration:</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libavutil    51. 22. 3 / 51. 22. 3</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libavcodec   53. 35. 0 / 53. 35. 0</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libavformat  53. 21. 1 / 53. 21. 1</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libavdevice  53.  2. 0 / 53.  2. 0</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libavfilter   2. 15. 0 /  2. 15. 0</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libswscale    2.  1. 0 /  2.  1. 1</span><br />
+<span style="font-weight: bold;" class="mycode_b"> libpostproc  52.  0. 0 / 52.  0.100</span><br />
+<span style="font-weight: bold;" class="mycode_b">The ffmpeg program is only provided for script compatibility and will be removed</span><br />
+<span style="font-weight: bold;" class="mycode_b">in a future release. It has been deprecated in the Libav project to allow for</span><br />
+<span style="font-weight: bold;" class="mycode_b">incompatible command line syntax improvements in its replacement called avconv</span><br />
+<span style="font-weight: bold;" class="mycode_b">(see Changelog for details). Please use avconv instead.</span><br />
+<span style="font-weight: bold;" class="mycode_b">At least one input file must be specified</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Command exit code 1 (raw code = 256)</span><br />
+<span style="font-weight: bold;" class="mycode_b">WARNING: Conversion failed - retaining /media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.partial.mp4.ts</span><br />
+<span style="font-weight: bold;" class="mycode_b">DEBUG: Record using hlsvhigh1 mode return code: '0'</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Loading recordings history</span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting thumbnail from <a href="http://ichef.bbci.co.uk/images/ic/150x84/p04hbg8f.jpg">http://ichef.bbci.co.uk/images/ic/150x84/p04hbg8f.jpg</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Getting page <a href="http://ichef.bbci.co.uk/images/ic/150x84/p04hbg8f.jpg">http://ichef.bbci.co.uk/images/ic/150x84/p04hbg8f.jpg</a></span><br />
+<span style="font-weight: bold;" class="mycode_b">INFO: Downloaded Thumbnail to '/media/usb/Natural_World_2016-2017_-_The_importance_of_giraffes_p03yjvsl_original.jpg'</span><br />
+<span style="font-weight: bold;" class="mycode_b">WARNING: Don't know how to tag MP4 file</span><br />
+</code></div>
+</div>
+<br />
+Any help gratefully received.<br />
+<br />
+Kind regards</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-12-2016, 05:27 PM</div>
+</div>
+<div class="message">For the benefit of future readers, I'm going to take a run at clearing up this RPi cluster**** once and for all.<ul class="mycode_list"><li>The Raspbian instructions on this site are incomplete. You will <span style="font-weight: bold;" class="mycode_b">NOT</span> have a fully-working version of get_iplayer at the end of the installation - additional steps are required.<br />
+</li>
+<li>Read <a href="https://github.com/get-iplayer/get_iplayer/wiki/release296#6-avconv-and-ffmpeg-25-not-compatible-with-hvf-modes">this section of the release notes</a> to understand why additional steps are required<br />
+</li>
+<li>Read <a href="https://github.com/get-iplayer/get_iplayer/wiki/release296#6-avconv-and-ffmpeg-25-not-compatible-with-hvf-modes">this section of the release notes</a> again to understand why additional steps are required<br />
+</li>
+<li>Also see the Raspbian section of this page: <a href="https://github.com/get-iplayer/get_iplayer/wiki/unixpkg">https://github.com/get-iplayer/get_iplayer/wiki/unixpkg</a><br />
+</li>
+<li>After installing get_iplayer, install a working version of ffmpeg on Raspbian Jessie by following the instructions here: <a href="/thread-964.html">/thread-964.html</a><br />
+</li>
+<li>Perform ALL of the steps in the above post, including the addition of ffmpeg to get_iplayer preferences. If you don't, get_iplayer will continue to use the obsolete avconv utility and your downloads will fail.<br />
+</li>
+<li>Depending on how you originally set up your system, you may find that some of the supporting libraries that ffmpeg requires to handle iPlayer media formats are not installed, leading to "error while loading shared libraries" messages. The missing libraries can be installed with your package manager. The name of the library in the error message will generally be the same, or nearly the same, as the related package. For example, libx264.so.142 (missing in the OP example) is installed with the libx264-142 package.<br />
+</li>
+</ul>
+EDIT: The ffmpeg build referenced above links to libx264-142, which is only supplied with Raspbian Jessie. Raspbian Wheezy users should configure get_iplayer to use avconv (instead of ffmpeg) and the <span style="font-weight: bold;" class="mycode_b">hls</span> TV modes. The default <span style="font-weight: bold;" class="mycode_b">hvf</span> TV modes will not work with avconv. This approach may work for Raspbian Jessie as well.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code># adjust path to avconv as necessary<br />
+get_iplayer --prefs-add --ffmpeg=/usr/bin/avconv --tvmode=hls</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1478</h2></div><div class="dateline">04-12-2016, 05:37 PM</div>
+</div>
+<div class="message">Many thanks for the replies, much appreciated. I have followed to the letter and understand why ffmpeg does not work. However I cannot find out how to install the missing libx264-142 package, or the repositories where it might be hiding. If I try to install libx264-142 the result is: "E: Unable to locate package libx264-142". It is not the end of the world if the .ts file is not converted to mpeg as I can still play it without the conversion. I shall wait for the next version to be ready and hope this solves it.  Kind regards.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2016, 07:33 PM</div>
+</div>
+<div class="message">I can see the relevant DEB file in the main Raspbian repository, but I have no way to verify that it works - I got rid of my Pi long ago. I can tell you that the next version of get_iplayer will be no help to you - these ffmpeg problems are purely related to Raspbian.  However, a Raspbian user will need to assist you from here. If none appears, you may want to try your luck on the get_iplayer mailing list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1467</h2></div><div class="dateline">04-12-2016, 11:28 PM</div>
+</div>
+<div class="message">ashgwr, I am having exactly the same problem trying to install the  libx264-142 package. The package appears to be installed with Raspbian Jessie so updating to that should, I would have thought, get things working but I have no idea as to why the package will not install on wheezy.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2016, 12:21 AM</div>
+</div>
+<div class="message">Looking at the package lists in Raspbian repo, it appears that libx264-142 is indeed only supplied with Jessie. Wheezy and Stretch have different versions. The person who created the ffmpeg build must have used Jessie - I've updated my earlier post accordingly. I can't say if you would do any harm by installing the libx264-142 DEB on a Wheezy machine, but it may not be a risk you should take just for get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1478</h2></div><div class="dateline">09-12-2016, 03:27 PM</div>
+</div>
+<div class="message">I have loaded Raspbian Jessie (clean new install) on the Pi and followed the instructions in this thread and it works perfectly with the conversion to mp4 at the end. I think I had missed the fact that Wheezy does not allow ffmpeg to work, Jessie does with get_iplayer.<br />
+<br />
+Regards</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-12-2016, 03:47 PM</div>
+</div>
+<div class="message">Good news. There appears to be a proper ffmpeg package available in the Raspian repo for stretch, so when that arrives you should be able to avoid this hassle in the future.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Raspberry PI: ffmpeg missing libx264</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Option --expires-since</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Option --expires-since</div>
+<div id="pagetitle"><h2>Option --expires-since</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">29-01-2019, 11:03 PM</div>
+</div>
+<div class="message">Running get_iplayer 3.18.0-MSWin32 from a Microsoft Windows 7 Home Premium (Version 6.1.7601) CMD shell.<br />
+<br />
+Please can we have an <kbd>--expires-since</kbd> option to bracket searches when used with the <kbd>--expires-before</kbd> option? This would be similar to the <kbd>--before</kbd>, <kbd>--since</kbd> and <kbd>--available-before</kbd>, <kbd>--available-since</kbd> option pairs.<br />
+<br />
+Also, if you're in the mood, how about a <kbd>--timeadded-before</kbd> and <kbd>--timeadded-since</kbd> pair?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-01-2019, 11:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-01-2019, 11:03 PM)</span></cite>Please can we have an <kbd>--expires-since</kbd> option to bracket searches when used with the <kbd>--expires-before</kbd> option?</blockquote><kbd>--expires-since </kbd>implies expiration has already passed, which means programme may no longer available, which means it has been removed from cache, which means you can't search for it, which means such an option would make no sense.  <br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (29-01-2019, 11:03 PM)</span></cite>Also, if you're in the mood, how about a <kbd>--timeadded-before</kbd> and <kbd>--timeadded-since</kbd> pair?</blockquote>Redundant. Read the descriptions of <kbd>--before</kbd> and <kbd>--since</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-01-2019, 11:51 PM</div>
+</div>
+<div class="message">It occurs to me that maybe what you're asking for is an <kbd>--expires-after</kbd> option so that you can identify programmes that expire between, say, 2 and 3 weeks in the future. If that is the case, feel free to have a crack yourself, but I have no interest in doing it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">30-01-2019, 02:31 AM</div>
+</div>
+<div class="message">The caches are nearly always out-of-date, even when refreshing at the default of every 4 hours. They'll only not include any expired items for, at best, a few minutes after a refresh.<br />
+<br />
+I would have found an <kbd>--expires-since</kbd> option useful as I tend to search offline for one-off programmes, documentaries, single episodes of a series, an interview of a favourite person on a regional radio station or a TV chat show, etc. I can prepare the downloads for when I'm next online. Sure, for regular programmes that I like to download, I can use the pvr.<br />
+<br />
+As for the timeadded options I suggested, I was thinking about searching the download history. Of course, <kbd>--before</kbd> and <kbd>--since</kbd> works for that as well, sorry!<br />
+<br />
+Is there an easy way to remove expired items from the tv and radio caches, other than by doing a refresh?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-01-2019, 12:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (30-01-2019, 02:31 AM)</span></cite>The caches are nearly always out-of-date, even when refreshing at the default of every 4 hours. They'll only not include any expired items for, at best, a few minutes after a refresh.</blockquote>At most, it adds up to 4 hours of programmes from 30 days prior. Those programmes aren't excluded from search results by default because some of them will still be available. You may get some "no streams available"  warnings if you try to download programmes from that very narrow band, but that is a negligible overhead. Expiration times in the programme index only govern how get_iplayer trims its cache. They can be inaccurate as estimates for when programmes actually expire from iPlayer, particularly since more programmes are becoming available beyond 30 days. <br />
+<blockquote class="mycode_quote"><cite><span> (30-01-2019, 02:31 AM)</span></cite>I would have found an <kbd>--expires-since</kbd> option useful as I tend to search offline for one-off programmes, documentaries, single episodes of a series, an interview of a favourite person on a regional radio station or a TV chat show, etc. I can prepare the downloads for when I'm next online. Sure, for regular programmes that I like to download, I can use the pvr.</blockquote>You can queue up as many one-off downloads as you like with <kbd>--pvr-queue</kbd>. The only thing you would need  to know about expiration is if it will arrive before you plan to download, which you can determine before queuing.<br />
+<blockquote class="mycode_quote"><cite><span> (30-01-2019, 02:31 AM)</span></cite>Is there an easy way to remove expired items from the tv and radio caches, other than by doing a refresh?</blockquote>No</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Option --expires-since</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

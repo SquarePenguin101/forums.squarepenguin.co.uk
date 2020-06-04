@@ -1,0 +1,23 @@
+INFO: Search term 'top of the pops' is a substring
+DEBUG: Search download_regex = top of the pops
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: 2015-08-22T23:50:00+01:00 = 2015, 08, 22, 23, 50, 00, 01, 00
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)'
+DEBUG: Using NoCookies user-agent 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)'
+Matches:
+1539:   Top of the Pops - 1979 - Big Hits, BBC Four, , default
+DEBUG: Getting Metadata for b03mpphy:
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b03mpphy.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b03mpphy.xml
+DEBUG: No Encoding used on http://www.bbc.co.uk/programmes/b03mpphy.xml
+WARNING: Could not parse programme metadata from http://www.bbc.co.uk/programmes/b03mpphy.xml
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b03mpphy
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b03mpphy
+ERROR: Failed to get version pid metadata from iplayer site

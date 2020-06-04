@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Puzzle about SCALAR reference when downloading</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Puzzle about SCALAR reference when downloading</div>
+<div id="pagetitle"><h2>Puzzle about SCALAR reference when downloading</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">12-05-2015, 02:38 PM</div>
+</div>
+<div class="message">When I download with get_iplayer, sometimes I receive the message:<br />
+Not a SCALAR reference at get_iplayer.pl line 7099.<br />
+I am then told that my recording is complete.<br />
+If I try to download again, I get the same message, but after a few goes the download will take place okay.<br />
+What is going on?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-05-2015, 03:44 PM</div>
+</div>
+<div class="message">That is a bug which has been fixed for next release.  Instead of that error, get_iplayer should print a warning about a missing element in an HLS playlist and continue processing.  It's most likely that one of the CDNs was returning a blank or malformed HLS playlist and it took a number of retries to get a working playlist and thus avoid the broken warning code.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">12-05-2015, 04:51 PM</div>
+</div>
+<div class="message">Thanks for the reply. But why has the problem only started now? If I read your reply correctly, surely I should have been receiving the error messages lots of times, rather than the problem starting for the first time a few days ago.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-05-2015, 09:36 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/puzzle-about-scalar-reference-when-downloading/#post-11444">Quote:</a>surely I should have been receiving the error messages lots of times, rather than the problem starting for the first time a few days ago.</blockquote>
+<br />
+Maybe you just got lucky previously and had no "missing element in an HLS playlist" during any of your downloads. <br />
+<br />
+Put another way: the error is caused by the way get_iplayer handles the CDN doing something wrong. If the CDN wasn't doing something wrong for you previously then you wouldn't have seen the error.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">13-05-2015, 06:44 PM</div>
+</div>
+<div class="message">Well, yes, I suppose I have to agree. I do often get lots of error messages when I download, but the download then proceeds okay. So maybe I was just lucky beforehand.<br />
+<br />
+The problem isn't a  major one, because I always manage to download ... eventually. So roll on the next release!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-929</h2></div><div class="dateline">02-06-2015, 11:57 PM</div>
+</div>
+<div class="message">It's worth knowing that the workaround until the issue is fixed, is to edit line 7099 by hand and change &#36;&#36;conn to &#36;conn</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">03-06-2015, 12:09 AM</div>
+</div>
+<div class="message">Or you can add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--exclude-supplier=akamai</code></div></div> or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--exclude-supplier=limelight</code></div></div> to your command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-837</h2></div><div class="dateline">03-06-2015, 06:12 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/puzzle-about-scalar-reference-when-downloading/#post-11588">Quote:</a>Itâs worth knowing that the workaround until the issue is fixed, is to edit line 7099 by hand and change &#36;&#36;conn to &#36;conn<br />
+<br />
+<a href="http://#11588">Quote</a></blockquote>
+<br />
+I also edited line 7107 and changed &#36;&#36;conn to &#36;conn</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">03-06-2015, 06:24 PM</div>
+</div>
+<div class="message">You don't need to do that anymore. Update to 2.93.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Puzzle about SCALAR reference when downloading</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR: reinstall required for browser to launch when shortcut run as administrator</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: reinstall required for browser to launch when shortcut run as administrator</div>
+<div id="pagetitle"><h2>Web PVR: reinstall required for browser to launch when shortcut run as administrator</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2513</h2></div><div class="dateline">18-01-2020, 02:57 PM</div>
+</div>
+<div class="message">When I try to start Web PVR Manager a command prompt window opens saying "Info: Listening on 127.0.0.1:1935" then nothing happens. If I run get_iplayer_pvr from within C:\Program Files (x86)\get_iplayer CMD window opens, the saved searches run and the programmes download. I am running Web PVR Manager as administrator.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">18-01-2020, 03:12 PM</div>
+</div>
+<div class="message">Try running http://localhost:1935/ in your browser - I've got mine bookmarked.<br />
+Note: <a href="http://127.0.0.1:1935/">http://127.0.0.1:1935/</a> is equivalent.<br />
+The Web PVR Manager is listening on that port for your input.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2513</h2></div><div class="dateline">18-01-2020, 03:19 PM</div>
+</div>
+<div class="message">I tried running http://localhost:1935/ and <a href="http://127.0.0.1:1935/">http://127.0.0.1:1935/</a> in my browser and get "Unable to connect" error.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">18-01-2020, 08:04 PM</div>
+</div>
+<div class="message">You need to have the Web PVR Manager started in an appropriate way before using the web interface.<br />
+In Linux, this can be made to happen as a background task very easily - presumably Windows can be made to do something similar?<br />
+<br />
+Haven't used Windows since XP times...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2416</h2></div><div class="dateline">22-01-2020, 12:33 AM</div>
+</div>
+<div class="message">I use Windows 10, and the Web PVR Manager *usually* loads correctly.<br />
+The script loads in a CMD window, it creates the server interface, and then shells to http://localhost:1935/<br />
+Occasionally the webpage refuses to load, probably because the server software took too long to go live; and I wait a few seconds then refresh the browser window. Only a couple of occasions has that failed to work. In which case I close the browser, close the CMD, and then try again.<br />
+If you always get 'unable to connect' that suggests to me there's something wrong with the software and the server interface isn't working.<br />
+Can you check if windows firewall or your antivirus software might be preventing perl from running?<br />
+Then I would download and install a new version.  It might be worth using windows to remove the old version first. <br />
+There is also a folder C:\Users\&lt;username&gt;\.get_iplayer which might contain any changes you made to the settings; maybe some changes to the web settings are causing the problem. This might survive a reinstallation, and therefore you should consider renaming that folder first. Don't delete it because you might want to recover named searches (the pvr subfolder). And it would mean rebuilding the iplayer cache and download history.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2416</h2></div><div class="dateline">22-01-2020, 12:42 AM</div>
+</div>
+<div class="message">I start the player from a shortcut, which runs <span style="font-weight: bold;" class="mycode_b">get_iplayer_cgi.cmd</span> - what happens if you type that in to the cmd window instead of get_iplayer_pvr.cmd ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">23-01-2020, 10:43 AM</div>
+</div>
+<div class="message">My shortcut runs get_iplayer_web_pvr.cmd</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">23-01-2020, 08:53 PM</div>
+</div>
+<div class="message">What version of GIP and which OS and version?  you don't say.<br />
+<br />
+I had problems with a Windows 10  (10.0.17763 Build 17763) and GIP 3.23<br />
+<br />
+Windows 10 (10.0.18363 Build 18363) it started working again and the previous build worked fine with 3.24<br />
+<br />
+Linux OS 19.04  has worked consistently on all versions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2513</h2></div><div class="dateline">24-01-2020, 12:51 PM</div>
+</div>
+<div class="message">I uninstalled and reinstalled the latest Get_iPlayer a number of times using the shortcut in the windows 10 start Get_iplayer folder. I tried this again this morning and checked the C:\Program Files (x86)\get_iplayer folder and noticed that the perl folder had not been removed. After manually deleting this and reinstalling Get_iPlayer everything is working correctly.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: reinstall required for browser to launch when shortcut run as administrator</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

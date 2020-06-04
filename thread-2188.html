@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I convert --raw output to MP4 with ffmpeg like get_iplayer does without --raw?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I convert --raw output to MP4 with ffmpeg like get_iplayer does without --raw?</div>
+<div id="pagetitle"><h2>How do I convert --raw output to MP4 with ffmpeg like get_iplayer does without --raw?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">03-02-2020, 08:39 PM</div>
+</div>
+<div class="message">Folks,<br />
+<br />
+Anyone know the ffmpeg commands used to convert the raw format to the resulting mp4?<br />
+<br />
+As I download to a RaspberryPi (first model) conversion can sometimes be slow so I use the --raw flag then convert using ffmpeg -i &lt;iplayer-file&gt; -vcodec copy -acodec copy output-file.mkv<br />
+<br />
+Pretty sure the --raw file downloads as an .flv file and normally that will play fine as it is but some TVs need mpg, mp4 or mkv<br />
+<br />
+Geffers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">03-02-2020, 08:47 PM</div>
+</div>
+<div class="message">get_iplayer doesn't usually transcode - it just remuxes the raw stream into an mp4.  ffmpeg is usually clever enough to do this with something like this:<br />
+&#36; ffmpeg -i &lt;iplayer-file&gt; -c:a copy -c:v copy output-file.mp4<br />
+but I'm not sure what the point of doing this outside get-iplayer would be?  Just don't use --raw.<br />
+<br />
+&gt;Pretty sure the --raw file downloads as an .flv file<br />
+not for a long time...  it's a few years since there has been flash media on the BBC website.<br />
+<br />
+If you can explain what your end goal is, people can probably give better advice about how to get there.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">03-02-2020, 09:07 PM</div>
+</div>
+<div class="message">Jon,<br />
+<br />
+Thank you for quick reply.<br />
+<br />
+What I omitted to mention was that conversion takes place on different machine.<br />
+<br />
+As mentioned; I download to an original Pi (before a Pi 2) and they are up to Pi 4 now.  The download is fine but the conversions can be slow on the old Pi - hence on occasions I use the --raw option.  I would then transfer file to another machine for conversion.  Only do this if time is a factor otherwise I just let the Pi get on with the conversion itself. <br />
+<br />
+Geffers</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I convert --raw output to MP4 with ffmpeg like get_iplayer does without --raw?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR search only finds some episodes?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR search only finds some episodes?</div>
+<div id="pagetitle"><h2>Web PVR search only finds some episodes?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1429</h2></div><div class="dateline">10-10-2016, 04:20 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I'm an occasional user of get_iplayer, but while setting up a new laptop I discovered the Web PVR for the first time.  Great piece of work, but having a small glitch. <br />
+<br />
+I exclusively use for downloading BBC Radio programs, and normally look up a programme on iPlayer Radio and then use the PID from the URL in a get_player command.  I wanted to download PID b018g3n8 (1st episode of Afternoon Drama : Charles Dickens from R4Extra). I tried searching with ticks in the correct boxes for pid, BBC Radio and filtered on channel Radio 4 Extra but got no results.  <br />
+<br />
+When I tried same search on the command line as &lt; get_iplayer --type=radio --pid=b018g3n8 &gt;, I got the following output:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Episode-only pid detected<br />
+INFO: Trying pid: b018g3n8 using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: dashhigh1,dashhigh2,hafhigh1,hafhigh2,dashstd1,dashstd2,hafstd1,hafstd2,hlsaacstd1,dashmed1,dashmed2,hafmed1,hafmed2,dashlow1,dashlow2,haflow1,haflow2,hlsaaclow1 modes will be tried for version original<br />
+INFO: Trying dashhigh1 mode to record radio: Afternoon Drama: Charles Dickens - A Tale of Two Cities - 1. Recalled to Life<br />
+INFO: File name prefix = Afternoon_Drama_Charles_Dickens_-_A_Tale_of_Two_Cities_-_1._Recalled_to_Life_b018g3n8_original</code></div></div>... and then it proceeded to download the programme.<br />
+<br />
+<br />
+Q1 Any reason why the PID search worked at command line but not in Web PVR?<br />
+Q2) What is get_iplayer doing when it says "checking existence of original version" after it says "pid not found in radio cache"<br />
+<br />
+As an aside, I use the &lt;look up pid on iPlayer&gt; method because many programmes I can find there don't show up on get_iplayer list - e.g. there are 18 available episodes on "Afternoon Drama" from BBC Radio on iPlayer but only 5 episodes show up on get_iplayer.<br />
+Q3) Any idea why the discrepancy?<br />
+<br />
+Simon<br />
+Win 10, get_iplayer 2.97.0 + web PVR</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-10-2016, 04:42 PM</div>
+</div>
+<div class="message">If you feed get_iplayer a PID via <kbd>--pid</kbd>, it can still work even if the PID is not found in the cache. The clue is the "INFO: pid not found in radio cache" message seen in the output from your successful download. The equivalent in the Web PVR is the Quick URL field. As to why you couldn't find that particular episode with a search, you probably haven't been updating your cache for long enough. See the Searching section of the FAQ list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1429</h2></div><div class="dateline">11-10-2016, 11:12 AM</div>
+</div>
+<div class="message">Thanks for reply.  I got a bit lost among the FAQs &amp; Guides but I'll go back &amp; have another read through.<br />
+S.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR search only finds some episodes?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

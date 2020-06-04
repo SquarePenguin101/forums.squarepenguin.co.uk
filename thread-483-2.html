@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Is no-artwork option working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is no-artwork option working</div>
+<div id="pagetitle"><h2>Is no-artwork option working</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-483-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">27-07-2015, 12:27 PM</div>
+</div>
+<div class="message">Thanks for your time and effort. <br />
+I tried a clean build OS, and new vm. I tried disabling the ethernet interface, but the picture still appears. If I copy without properties, the artwork is removed. It is in the file somewhere, there are no hidden files in the directory.<br />
+<br />
+I've uploaded the file with the art removed. it is the same size.<br />
+<br />
+<a href="http://www.mrg9999.com/pub/get_iplayer/The_Archers-s01e17725-The_Archers-2015-07-26%20-%20art%20removed.m4a">http://www.mrg9999.com/pub/get_iplayer/T...emoved.m4a</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-07-2015, 01:48 PM</div>
+</div>
+<div class="message">I took a look at the file sizes of what you posted and they're as follows:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>-rw-r-----@ 1  12560607 27 Jul 13:12 The_Archers-s01e17725-The_Archers-2015-07-26 - art removed.m4a<br />
+-rw-r-----@ 1  12560938 27 Jul 00:08 The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+-rw-r-----@ 1     36690 27 Jul 13:19 archers-b062kcdv.png</code></div></div><br />
+There's a 300 byte or so difference in the properties/no properties files. The artwork you posted is just under 37KB or so. It can't physically fit inside the files you posted at that size and with the reported file size differences - if they're correct.<br />
+<br />
+It sounds more like theres something on your system watching for media files and automatically downloading and/or associating artwork. <br />
+<br />
+If you are using a VM to download but are downloading to a network disk or local disk upon which you have some other programme monitoring for adding artwork it wouldn't matter if the VM was fresh or not. It's the OS in charge of the disk being downloaded to that's doing the adding. <br />
+<br />
+Having had a look at both files you uploaded, there's definitely no artwork in the files themselves. It seems that copying without properties removes the association between the m4a file and the album art on your system. <br />
+<br />
+My money is on another bit of software adding the album artwork and associating the m4a file to it. <br />
+<br />
+You mentioned using iOS. iTunes will associate artwork to downloaded media without embedding it in side the file itself, it keeps the artwork in the database I believe and simply adds an association to the media file. That would fit with what's seemingly happening here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2015, 01:49 PM</div>
+</div>
+<div class="message">If you disable the ethernet interface you won't be able to download anything, much less the thumbnail image, so I don't know what you were trying to prove with that.<br />
+<br />
+Since the new file is the same size as the one you previously posted (which supposedly contained embedded artwork), that tells you that there is no embedded artwork in either one.  <br />
+<br />
+You said you copied the file "without properties" and the image disappeared.  Those properties aren't stored in the file, so you need to find out what is creating filesystem metadata properties for your files.   Neither get_iplayer nor AtomicParsley creates filesystem metadata.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">27-07-2015, 09:59 PM</div>
+</div>
+<div class="message">I downed the interface, to see if vlc was pulling the image in real time, over the web. I monitored the connection with wireshark - zilch.<br />
+The first file in VLC has the image, the second, doesn't (just shows the traffic cone), it's definitely in the file somewhere!!<br />
+I did try m4art --extract and nothing in there. I'm extremely puzzled.<br />
+I installed a new win7 from iso, only installed get_iplayer  and it the image appears in vlc or mplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2015, 11:48 PM</div>
+</div>
+<div class="message">You can't extract artwork with mp4art because it isn't there.  You won't be able to extract it with AtomicParsley for the same reason - I checked.<br />
+<br />
+VLC caches artwork from files opened from disk, so no network access would be necessary.  You would need to remove the relevant images from VLC's artwork cache before testing further.  VLC won't pull from the net unless you've configured it to do so, and I think that is disabled by default.  <br />
+<br />
+As for mplayer, I assume you're referring to some kind of gui interface to mplayer. The only one I have is SMPlayer, and it doesn't show any embedded artwork for your files.  To my knowledge, mplayer itself doesn't display embedded artwork in audio files.  FWIW: PotPlayer, mpv and iTunes don't display artwork for your files, either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">28-07-2015, 01:34 AM</div>
+</div>
+<div class="message">I installed a virgin linux-mint virtual machine, installed get iplayer 2.9.4 from PPA.<br />
+ran the same commands and options (Although I'm getting mightily confused by now!) and get the same result in vlc, ie the picture. <br />
+<br />
+As I've said, I can delete the image  with external tools, so not a problem. I just want to work out why.<br />
+I've put the files on my webserver  (<a href="http://www.mrg9999.com/pub/get_iplayer/">http://www.mrg9999.com/pub/get_iplayer/</a>)<br />
+<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>drwxr-xr-x  2 gerald gerald     4096 Jul 28 01:09 .<br />
+drwxr-xr-x 24 gerald gerald     4096 Jul 28 00:53 ..<br />
+-rw-r--r--  1 gerald gerald 12471296 Jul 28 00:58 test1-with-art.mp3<br />
+-rw-r--r--  1 gerald gerald 12466176 Jul 28 01:02 test2-no-artwork.mp3<br />
+</code></div>
+</div>
+<br />
+command line<br />
+get_iplayer --type=radio --pid=b0639jpg --force --overwrite --verbose  --aactomp3 --output "." --no-artwork<br />
+<br />
+<br />
+screenshot of vlc<br />
+<br />
+Linux directory shows artwork / noartwork<br />
+[Image: <a href="http://www.mrg9999.com/pub/get_iplayer/linux2.PNG">http://www.mrg9999.com/pub/get_iplayer/linux2.PNG</a>]<br />
+<br />
+<br />
+<br />
+[Image: <a href="http://www.mrg9999.com/pub/get_iplayer/get_iplayer-linux.PNG">http://www.mrg9999.com/pub/get_iplayer/g...-linux.PNG</a>]<br />
+<br />
+<br />
+Tried posting the log using the widget , but I received a 413, Entity too large.<br />
+The logfile is at   (1.6MB)<br />
+<a href="http://www.mrg9999.com/pub/get_iplayer/logfile">http://www.mrg9999.com/pub/get_iplayer/logfile</a><br />
+<br />
+I'll really quite understand if  you don't respond.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-07-2015, 02:15 PM</div>
+</div>
+<div class="message">Stop trying to use VLC to prove your point.  You already know that it can grab cover art from files or from the net, and that it caches cover art separately from media files.  Once you load a file in VLC tagged as an episode of The Archers that contains cover art, that image will be cached and used for other files tagged as episodes of The Archers.  There is no way for us to know if you configured VLC to avoid that, and I don't even think you can avoid it with VLC 2.2.  I was wrong about the default setting - you have to opt out of network metadata retrieval.  Forget VLC and use a tool that only reads what is in the file, not what is cached on disk or stuffed into filesystem metadata.  At the very least pick up a copy of Mediainfo, which will tell you if cover art is present.  Otherwise you are just chasing your tail.   <br />
+<br />
+We can't support VLC or any other media player.  If your iOS podcast app is choking on embedded artwork, take it up with the developer.  For all we know that problem may have nothing to do with artwork.  All you have demonstrated thus far is that both VLC and get_iplayer work as intended insofar as embedded artwork is concerned. The logs you provided earlier showed that get_iplayer (via AtomicParsley) did not embed artwork in the M4A output files.  The two M4A files you provided did not contain embedded artwork.  The Caja screenshot you posted shows the MP3 file you downloaded with get_iplayer does not contain embedded artwork.  Your claims cannot be verified on Linux, OS X, or Windows.  Multiple applications on all 3 platforms show that there is no artwork embedded when <kbd>--no-artwork</kbd> is used with get_iplayer.  There is nowhere else to go with this, so don't waste your time setting up any more VMs.  get_iplayer works the same on every platform.<br />
+<br />
+Tip for the future: If you're going to post a log file, at least have the courtesy to remove all the (50!) failed downloads.  You're not going to have artwork embedded in files that didn't download.  Nobody, me included, is going to wade through all that spew.  You weren't to know, but logs are useless for monitoring MP3 tagging.  I had you switch to M4A for a reason.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">28-07-2015, 05:44 PM</div>
+</div>
+<div class="message">Dinky<br />
+Thanks. I won't post anymore large files / screenshots.<br />
+<br />
+As I said on my very first post, I can remove the image from the file or wherever it is, so that vlc displays its default image, so that it plays  properly in pplayer (IOS). <br />
+I'm sorry about the log file size, I didn't realise under linux, it did this, I just piped it to logfile  on my webserver directory, it was about 1am, I'm far from my best.<br />
+<br />
+ I ran it again just now 17:00 (verbose) and the logfile was 11k, both times.<br />
+<br />
+On linux --no-artwork the file has no artwork, without it has artwork. I think you're right, there is something on windows that is getting and caching the artwork, even if it's not in the current directory.<br />
+<br />
+In future, I'll probably use linux for get_iplayer, much more consistent result.<br />
+<br />
+<br />
+Once again thank you for all your assistance, I've definitely learned from the experience. I'll try and not be such &lt;insert preferred rooster based expletive&gt; in future.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-483-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is no-artwork option working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

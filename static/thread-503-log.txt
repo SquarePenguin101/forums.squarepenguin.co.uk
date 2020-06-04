@@ -1,0 +1,157 @@
+INFO: Checking existence of default version
+INFO: flashvhigh1,flashvhigh2,hlsvhigh1,hlsvhigh2,hlsvhigh3,hlsvhigh4 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Charlie and Lola: Series 2 - 15. Will You Please Stop Messing About?
+INFO: File name prefix = Charlie and Lola.s02e15.WEBRip.x264-iPlayer                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+ERROR: rtmp server sent error
+ERROR: rtmp server requested close
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Charlie and Lola: Series 2 - 15. Will You Please Stop Messing About?
+INFO: File name prefix = Charlie and Lola.s02e15.WEBRip.x264-iPlayer                 
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+ERROR: Closing connection: NetStream.Failed
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh2 mode
+INFO: Trying hlsvhigh1 mode to record tv: Charlie and Lola: Series 2 - 15. Will You Please Stop Messing About?
+INFO: File name prefix = Charlie and Lola.s02e15.WEBRip.x264-iPlayer                 
+avconv version 11.4, Copyright (c) 2000-2014 the Libav developers
+  built on Jun  1 2015 06:05:57 with Apple LLVM version 6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)
+[h264 @ 0x7ffe71000400] non-existing SPS 0 referenced in buffering period
+[h264 @ 0x7ffe71000400] non-existing SPS 32 referenced in buffering period
+[h264 @ 0x7ffe71000400] non-existing SPS 0 referenced in buffering period
+[h264 @ 0x7ffe71000400] non-existing SPS 32 referenced in buffering period
+[mpegts @ 0x7ffe7181c600] max_analyze_duration 5000000 reached
+[mpegts @ 0x7ffe7181c600] Estimating duration from bitrate, this may be inaccurate
+[h264 @ 0x7ffe710cc400] non-existing SPS 0 referenced in buffering period
+[h264 @ 0x7ffe710cc400] non-existing SPS 32 referenced in buffering period
+[hls,applehttp @ 0x7ffe70812800] max_analyze_duration 5000000 reached
+Input #0, hls,applehttp, from 'http://cp143012-i.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/p02ym013_b006lpmq_1439400393373,480kbps/modav/p02ym013_b006lpmq_1439400392046,800kbps/modav/p02ym013_b006lpmq_1439400392629,1500kbps/modav/p02ym013_b006lpmq_1439400394259,.mp4.csmil/index_3_av.m3u8?hdnea=st=1439415104~exp=1439436704~acl=/*400kbps/modav/p02ym013_b006lpmq_1439400393373,480kbps/modav/p02ym013_b006lpmq_1439400392046,800kbps/modav/p02ym013_b006lpmq_1439400392629,1500kbps/modav/p02ym013_b006lpmq_1439400394259*~hmac=68120bac5656bc2964f45d0250c7dc006c93d67656ef34b63a0592197c193373':
+  Duration: 00:10:45.00, start: 0.100667, bitrate: 0 kb/s
+  Program 0 
+    Metadata:
+      variant_bitrate : 0
+    Stream #0.0: Video: h264 (Main), yuv420p, 832x468 [PAR 1:1 DAR 16:9], 25 fps, 90k tbn, 50 tbc
+    Stream #0.1: Audio: aac, 48000 Hz, stereo, fltp, 95 kb/s
+    Stream #0.2: Data: [21][0][0][0] / 0x0015
+Output #0, mpegts, to '/Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.partial.mp4.ts':
+  Metadata:
+    encoder         : Lavf56.1.0
+    Stream #0.0: Video: libx264, yuv420p, 832x468 [PAR 1:1 DAR 16:9], q=2-31, 90k tbn, 90k tbc
+    Stream #0.1: Audio: libfaac, 48000 Hz, stereo, 95 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press ctrl-c to stop encoding
+Continuity check failed for pid 4095 expected 1 got 0bitrate=1675.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1673.8kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1644.0kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1645.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1658.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1644.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1658.8kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1645.0kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1645.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 0 bitrate=1645.1kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1645.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1645.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1645.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1645.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1647.9kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1649.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1649.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1650.9kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1645.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1645.8kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1645.8kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1645.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 09 bitrate=1648.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1648.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1649.1kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 07 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 05 bitrate=1646.3kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1647.1kbits/s    
+Continuity check failed for pid 4095 expected 1 got 05 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 07 bitrate=1647.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1647.2kbits/s    
+Continuity check failed for pid 4095 expected 1 got 07 bitrate=1648.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 09 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1647.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1647.7kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1647.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 07 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 05 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 01 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 00 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 09 bitrate=1647.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1648.1kbits/s    
+Continuity check failed for pid 4095 expected 1 got 06 bitrate=1646.6kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 02 bitrate=1646.5kbits/s    
+Continuity check failed for pid 4095 expected 1 got 08 bitrate=1646.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 04 bitrate=1647.4kbits/s    
+Continuity check failed for pid 4095 expected 1 got 01 bitrate=1646.4kbits/s    
+frame=16118 fps= 27 q=-1.0 Lsize=  129582kB time=644.68 bitrate=1646.6kbits/s    
+video:110456kB audio:7563kB other streams:0kB global headers:0kB muxing overhead: 9.797787%
+avconv version 11.4, Copyright (c) 2000-2014 the Libav developers
+  built on Jun  1 2015 06:05:57 with Apple LLVM version 6.1.0 (clang-602.0.53) (based on LLVM 3.6.0svn)
+[h264 @ 0x7fa64c81b200] non-existing SPS 0 referenced in buffering period
+[h264 @ 0x7fa64c81b200] non-existing SPS 32 referenced in buffering period
+[h264 @ 0x7fa64c81b200] non-existing SPS 0 referenced in buffering period
+[h264 @ 0x7fa64c81b200] non-existing SPS 32 referenced in buffering period
+[mpegts @ 0x7fa64c00b000] max_analyze_duration 5000000 reached
+Input #0, mpegts, from '/Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.partial.mp4.ts':
+  Duration: 00:10:44.72, start: 1.400000, bitrate: 1646 kb/s
+  Program 1 
+    Metadata:
+      service_name    : Service01
+      service_provider: Libav
+    Stream #0.0[0x100]: Video: h264 (Main), yuv420p, 832x468 [PAR 1:1 DAR 16:9], 25 fps, 90k tbn, 50 tbc
+    Stream #0.1[0x101]: Audio: aac, 48000 Hz, stereo, fltp, 94 kb/s
+[mp4 @ 0x7fa64c00c200] Codec for stream 0 does not use global headers but container format requires global headers
+[mp4 @ 0x7fa64c00c200] Codec for stream 1 does not use global headers but container format requires global headers
+Output #0, mp4, to '/Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.partial.mp4':
+  Metadata:
+    encoder         : Lavf56.1.0
+    Stream #0.0: Video: libx264, yuv420p, 832x468 [PAR 1:1 DAR 16:9], q=2-31, 90k tbn, 90k tbc
+    Stream #0.1: Audio: libfaac, 48000 Hz, stereo, 94 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press ctrl-c to stop encoding
+[NULL @ 0x7fa64c81b200] non-existing SPS 0 referenced in buffering period
+[NULL @ 0x7fa64c81b200] non-existing SPS 32 referenced in buffering period
+frame=16118 fps=2122 q=-1.0 Lsize=  118277kB time=644.68 bitrate=1503.0kbits/s    
+video:110456kB audio:7356kB other streams:0kB global headers:0kB muxing overhead: 0.394460%
+INFO: Recorded /Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e15.WEBRip.x264-iPlayer.mp4
+
+INFO: MP4 tagging MP4 file
+
+ Started writing to temp file.
+ Progress: ===========================================> 78% ------------|
+ Finished writing to temp file.
+New tv programme: 'Charlie and Lola: Series 2 - 15. Will You Please Stop Messing About?', 'Charlie can only watch his favourite TV show after he and Lola have completed some chores.'

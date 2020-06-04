@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No matching programmes listed after cache refresh</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; No matching programmes listed after cache refresh</div>
+<div id="pagetitle"><h2>No matching programmes listed after cache refresh</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">24-07-2017, 03:57 PM</div>
+</div>
+<div class="message">
+<a href="static/thread-1465-aid244.png"><img src="static/thread-1465-aid244.png"/></a>
+<br />When I initially run the program I get the screen saying:<br />
+<br />
+"INFO: Getting tv Index Feeds (this may take a few minutes)"<br />
+<br />
+"INFO: Using sequential indexing"<br />
+<br />
+Then after a few minutes it says underneath that:<br />
+<br />
+"INFO: 0 Matching Programmes"<br />
+"logout"<br />
+<br />
+Normally what used to happen after a few minutes is it would come up with a long list of all programmes available on iPlayer but for some unknown reason now it won't find anything. Can anybody help with this issue?<br />
+<br />
+I have attached a screenshot for info.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2017, 04:43 PM</div>
+</div>
+<div class="message">Post the output from <kbd>get_iplayer --show-options</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">25-07-2017, 04:43 PM</div>
+</div>
+<div class="message"><a href="static/thread-1465-aid245.png"><img src="static/thread-1465-aid245.png"/></a>
+  <br />Have attached the screenshot of you request<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-07-2017, 05:00 PM</div>
+</div>
+<div class="message">Thanks. I thought you might have some bogus settings interfering with search, but nothing there. Run just <kbd>get_iplayer</kbd> (from a command prompt, not from Finder), which should dump a list of programmes. If not, try an actual search with <kbd>get_iplayer eastenders</kbd>. If that doesn't show results, check that your cache file actually has something in it with <kbd>wc -l &#36;HOME/.get_iplayer/tv.cache</kbd>. The line count should be four figures. Your earlier post showed the programme data being downloaded (the dots), so something should be there. If nothing there, try an explicit refresh with <kbd>get_iplayer --refresh</kbd> and another search. Since you haven't installed Mojolicious to speed up cache updates, you can use <kbd>--refresh-include="BBC Four"</kbd> (or similar) to limit the cache update for testing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">26-07-2017, 11:43 AM</div>
+</div>
+<div class="message"><a href="static/thread-1465-aid246.png"><img src="static/thread-1465-aid246.png"/></a>
+<br />
+<a href="static/thread-1465-aid247.png"><img src="static/thread-1465-aid247.png"/></a>
+<br />
+I have tried the line count and refresh but still nothing comes up. Here is the screen shot from both. Not sure if I did the line count correctly or not but you can see from these screenshots what I typed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2017, 11:49 AM</div>
+</div>
+<div class="message">Thanks. Run <kbd>get_iplayer --refresh </kbd>again, then post the output from <kbd>get_iplayer --verbose eastenders</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2017, 12:01 PM</div>
+</div>
+<div class="message">Sorry - I didn't look at your screenshot closely enough. You haven't shown that your cache is populated after all. You didn't follow my instructions to check the line count of your cache file. You posted the line count for the get_iplayer script itself, which is pointless.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">27-07-2017, 09:41 AM</div>
+</div>
+<div class="message"><a href="static/thread-1465-aid248.png"><img src="static/thread-1465-aid248.png"/></a>
+  <br />Ok apologies I have now done what you said and it says the line count is 1.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2017, 10:53 AM</div>
+</div>
+<div class="message">Thanks. That shows the cache isn't being populated, which is why searches fail. Post the output from <kbd>get_iplayer --verbose --refresh --refresh-include="BBC Four"</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">27-07-2017, 02:34 PM</div>
+</div>
+<div class="message">Ok here are the results of those commands.<br />
+The VERBOSE command I have pasted below as it is quite long.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Last login: Thu Jul 27 09:36:51 on ttys000<br />
+ramptons-mbp:~ Ours&#36; ~/get_iplayer --verbose<br />
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+ NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: /Users/Ours/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+Current options:<br />
+encodingconsolein = UTF-8<br />
+encodingconsoleout = UTF-8<br />
+encodinglocale = UTF-8<br />
+encodinglocalefs = UTF-8<br />
+verbose = 1<br />
+ybbcy = 1<br />
+<br />
+INFO: Search args: '.*'<br />
+INFO: ffmpeg version string = not found<br />
+INFO: ffmpeg version number = unknown<br />
+INFO: Got 0 file cache entries for tv<br />
+<br />
+INFO: Getting tv Index Feeds (this may take a few minutes)<br />
+INFO: Will refresh channel BBC Alba<br />
+INFO: Will refresh channel BBC Four<br />
+INFO: Will refresh channel BBC News<br />
+INFO: Will refresh channel BBC One<br />
+INFO: Will refresh channel BBC One Cambridgeshire<br />
+INFO: Will refresh channel BBC One Channel Islands<br />
+INFO: Will refresh channel BBC One East<br />
+INFO: Will refresh channel BBC One East Midlands<br />
+INFO: Will refresh channel BBC One London<br />
+INFO: Will refresh channel BBC One North East &amp; Cumbria<br />
+INFO: Will refresh channel BBC One North West<br />
+INFO: Will refresh channel BBC One Northern Ireland<br />
+INFO: Will refresh channel BBC One Northern Ireland<br />
+INFO: Will refresh channel BBC One Oxfordshire<br />
+INFO: Will refresh channel BBC One Scotland<br />
+INFO: Will refresh channel BBC One Scotland<br />
+INFO: Will refresh channel BBC One South<br />
+INFO: Will refresh channel BBC One South East<br />
+INFO: Will refresh channel BBC One South West<br />
+INFO: Will refresh channel BBC One Wales<br />
+INFO: Will refresh channel BBC One Wales<br />
+INFO: Will refresh channel BBC One West<br />
+INFO: Will refresh channel BBC One West Midlands<br />
+INFO: Will refresh channel BBC One Yorks &amp; Lincs<br />
+INFO: Will refresh channel BBC One Yorkshire<br />
+INFO: Will refresh channel BBC Parliament<br />
+INFO: Will refresh channel BBC Two<br />
+INFO: Will refresh channel BBC Two England<br />
+INFO: Will refresh channel BBC Two Northern Ireland<br />
+INFO: Will refresh channel BBC Two Scotland<br />
+INFO: Will refresh channel BBC Two Wales<br />
+INFO: Will refresh channel CBBC<br />
+INFO: Will refresh channel CBeebies<br />
+INFO: Will refresh channel S4C<br />
+<br />
+INFO: Using sequential indexing<br />
+DEBUG: Getting feed <a href="http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week">http://www.bbc.co.uk/bbcalba/programmes/.../this_week</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week">http://www.bbc.co.uk/bbcalba/programmes/.../this_week</a><br />
+.<br />
+INFO: Got 0 programmes for BBC Alba<br />
+DEBUG: Getting feed <a href="http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week">http://www.bbc.co.uk/bbcfour/programmes/.../this_week</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week">http://www.bbc.co.uk/bbcfour/programmes/.../this_week</a><br />
+.<br />
+INFO: Got 0 programmes for BBC Four<br />
+DEBUG: Getting feed <a href="http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week">http://www.bbc.co.uk/bbcnews/programmes/.../this_week</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week">http://www.bbc.co.uk/bbcnews/programmes/.../this_week</a><br />
+.<br />
+</code></div>
+</div>
+EDIT: excess spew removed<br />
+<a href="static/thread-1465-aid249.png"><img src="static/thread-1465-aid249.png"/></a>
+<br /><br />
+<a href="static/thread-1465-aid250.png"><img src="static/thread-1465-aid250.png"/></a>
+<br /></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2017, 02:59 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (27-07-2017, 02:34 PM)</span></cite>Ok here are the results of those commands.<br />
+The VERBOSE command I have pasted below as it is quite long.</blockquote>That's why I gave you a command that wouldn't produce so much output. If you won't follow my instructions, especially when I give you commands to copy and paste, we're not going to make much progress.<br />
+<br />
+The output suggests you're not actually receiving schedule data used to update the cache. Load this in your browser and post a screenshot of the result:<br />
+<br />
+<a href="http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week">http://www.bbc.co.uk/bbcfour/programmes/.../this_week</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">27-07-2017, 04:29 PM</div>
+</div>
+<div class="message"><a href="static/thread-1465-aid251.png"><img src="static/thread-1465-aid251.png"/></a>
+  <br />The link shows the following web page</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2017, 04:43 PM</div>
+</div>
+<div class="message">That is the expected result, so problem is isolated to get_iplayer. What version of macOS are you using?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">27-07-2017, 04:59 PM</div>
+</div>
+<div class="message">It is 10.9.5.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2017, 05:04 PM</div>
+</div>
+<div class="message">That's the problem. There is a bug in one of the Perl modules on 10.9. It's possible to make get_iplayer work on 10.9 by upgrading that module (see manual installation info in macOS install doc in wiki), but I'm afraid I won't help you with that if you run into problems. As the doc makes clear, I only support 10.10+.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1885</h2></div><div class="dateline">27-07-2017, 07:08 PM</div>
+</div>
+<div class="message">Ok I may have a look into that.<br />
+However I have just tried downloading something and it actually works. I can use the iPlayer website to get the info (either URL or the PID) and just use the --PID= or --URL command to start the download as you see below. Even thought the cache is empty, is this normal and ok to do or do you think there are problems doing that?<br />
+<br />
+<br />
+<br />
+Last login: Thu Jul 27 18:59:10 on ttys000<br />
+ramptons-mbp:~ Ours&#36; ~/get_iplayer --pid=b08zf78h<br />
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO: Episode PID detected<br />
+INFO: Trying pid: b08zf78h using type: tv<br />
+INFO: Trying to download PID using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hlshd1,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,dvfxsd1,dvfxsd2,hlsvhigh1,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2 modes will be tried for version original<br />
+INFO: Trying hlshd1 mode to record tv: Officially Amazing: Goes Bunkers - 11. Marble Moving, Horseboard Slaloming, Tennis Tricking<br />
+WARNING: Required ffmpeg utility not found - not converting .ts file<br />
+INFO: File name prefix = Officially_Amazing_Goes_Bunkers_-_11._Marble_Moving_Horseboard_Slaloming_Tennis_Tricking_b08zf78h_original                 <br />
+INFO: Begin recording file: /Users/Ours/Officially_Amazing_Goes_Bunkers_-_11._Marble_Moving_Horseboard_Slaloming_Tennis_Tricking_b08zf78h_original.video.ts<br />
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]<br />
+Recording:    47.28 MiB / ~496.71 MiB   9.5%   14.5 Mibit/s 00:04:07 remaining</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2017, 08:44 PM</div>
+</div>
+<div class="message">That is normal. You don't need the cache to download via PID or URL.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; No matching programmes listed after cache refresh</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

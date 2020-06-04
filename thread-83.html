@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - New OS X 10.9 installation - connection timeout</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; New OS X 10.9 installation - connection timeout</div>
+<div id="pagetitle"><h2>New OS X 10.9 installation - connection timeout</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-280</h2></div><div class="dateline">12-12-2013, 09:11 AM</div>
+</div>
+<div class="message">I'm very new to Macs (just bought one this weekend, which came with 10.9 Mavericks), but relatively comfortable with command lines etc - I've been happily using get_iplayer on my PC for a year or two.<br />
+<br />
+I've followed the 'manual Mac OS X installation' instructions to the letter.  get_iplayer itself seems to work in that it downloads the index of programmes etc.<br />
+But when I get to the 'test doing some downloads' bit, rtmpdump gets stuck every time: it says "Connecting..." for ages, then it eventually times out with the following:<br />
+<br />
+ERROR: RTMP_Connect0, failed to connect socket. 60 (Operation timed out)<br />
+<br />
+It then retries for each of the various stream qualities (flashvhigh2 etc etc) but I get the same error every time.<br />
+Eventually, I have to use Ctrl-C to cancel.<br />
+<br />
+I can confirm that I can watch iPlayer fine via Safari/Flash, which would suggest it's not an issue with my network connection. I'm in the UK too, so there are no strange proxies/VPNs or anything confusing the issue.<br />
+<br />
+I'm certain that I'm missing something simple... any help would be much appreciated! :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-280</h2></div><div class="dateline">12-12-2013, 09:55 AM</div>
+</div>
+<div class="message">Out of curiosity, I just tried Get iPlayer Automator, and it has a similar issue: if I Show Log, I see it waiting on "Connecting..." for a long while at the RTMPDUMP stage, then it shows:<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+<br />
+Then it tries the other qualities as per the command line version. :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-280</h2></div><div class="dateline">12-12-2013, 10:27 AM</div>
+</div>
+<div class="message">Sorry chaps... I've just tried another wifi connection and it worked fine.  It must be some port or other which is blocked on the 'public' office wifi that I was using.<br />
+<br />
+I'm still stumped as to how the same programme worked OK from Safari via Flash on that same connection, though.<br />
+<br />
+It would be great if I could use the same technique that the Flash/Safari version is using to download on the command line, as it's going to kill my mobile data allowance otherwise!  ;)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2013, 11:48 AM</div>
+</div>
+<div class="message">rtmpdump connects via TCP port 1935, which is often blocked on office networks, VPNs, etc., since it is only used for Flash streaming.  The player on the iPlayer site works differently to rtmpdump, so playback on the site is no guarantee that rtmpdump can access the same programme.  Get iPlayer Automator just executes get_iplayer, so results will be the same.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-280</h2></div><div class="dateline">12-12-2013, 12:02 PM</div>
+</div>
+<div class="message">Thanks for the explanation.  I'm glad it's not my mistake for once!  ;)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; New OS X 10.9 installation - connection timeout</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

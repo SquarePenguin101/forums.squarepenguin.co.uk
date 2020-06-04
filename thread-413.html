@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Iplayer fails - error in line 7099</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Iplayer fails - error in line 7099</div>
+<div id="pagetitle"><h2>Iplayer fails - error in line 7099</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">02-06-2015, 02:54 PM</div>
+</div>
+<div class="message">I've applied the fix for the BBC error recorded today. Now, if I try and download a TV show, I get:<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05xzwg6 using type: radio<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+1733:	Jonathan Strange &amp; Mr Norrell - The Education of a Magician, BBC One Cambridgeshire, , default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+Not a SCALAR reference at get_iplayer.pl line 7099.<br />
+<br />
+Are you aware of this? Did I do something wrong?<br />
+<br />
+regards<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">02-06-2015, 02:58 PM</div>
+</div>
+<div class="message">I see this will be fixed in a couple of days (from another post in the Windows forum). Please ignore it for now.<br />
+<br />
+regards<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-932</h2></div><div class="dateline">03-06-2015, 09:07 AM</div>
+</div>
+<div class="message">Adding <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ignore-supplier=akamai</code></div></div> worked for me. Got it from <a href="https://github.com/get-iplayer/get_iplayer/issues/152">https://github.com/get-iplayer/get_iplayer/issues/152</a><br />
+<br />
+J</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-837</h2></div><div class="dateline">03-06-2015, 06:22 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/iplayer-fails-error-in-line-2099/#post-11594">Quote:</a>Adding <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ignore-supplier=akamai</code></div></div> worked for me. Got it from <a href="https://github.com/get-iplayer/get_iplayer/issues/152">https://github.com/get-iplayer/get_iplayer/issues/152</a><br />
+<br />
+J<br />
+<br />
+<a href="http://#11594">Quote</a></blockquote>
+<br />
+Thanks, should be <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--exclude-supplier=akamai</code></div></div> as per the link you gave, but no worries.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">05-06-2015, 11:42 PM</div>
+</div>
+<div class="message">I've downloaded and installed 2.94. Backed out all the temporary fixes and it all works nicely now.<br />
+<br />
+Many thanks<br />
+<br />
+Alan</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Iplayer fails - error in line 7099</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I run multiple get_iplayer commands from a single .bat file?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I run multiple get_iplayer commands from a single .bat file?</div>
+<div id="pagetitle"><h2>How do I run multiple get_iplayer commands from a single .bat file?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2325</h2></div><div class="dateline">29-01-2019, 04:45 PM</div>
+</div>
+<div class="message">Hi guys<br />
+<br />
+I'd like to create a batch script that I can just run and it'll pick up any new episodes of the shows I want, but I'm struggling to get it to work. Any ideas how? <br />
+<br />
+I tried putting this into a bat file (created in Notepad++ in the correct format);<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:<br />
+cd "&#92;Program Files (x86)&#92;get_iplayer&#92;"<br />
+get_iplayer --refresh<br />
+get_iplayer -g --pid-recursive --pid b01qv24w <br />
+get_iplayer -g --pid-recursive --pid b01bsr61 <br />
+get_iplayer -g --pid-recursive --pid b006xxw3<br />
+pause</code></div></div><br />
+I've also tried it like this;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:<br />
+cd "&#92;Program Files (x86)&#92;get_iplayer&#92;"<br />
+get_iplayer --refresh<br />
+get_iplayer --pid-recursive --pid b01qv24w --pid b01bsr61 --pid b02mms7s <br />
+pause</code></div></div><br />
+But that doesn't do it. It runs, does the indexing, but then just closes the cmd. What do I need to do to get it working? <br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-01-2019, 06:11 PM</div>
+</div>
+<div class="message">If you're trying to learn batch script programming, that's fair enough, but I suggest you let get_iplayer do the work. Use the PVR functionality - that's what it is for. If you don't want to do that, here is a hint relevant to your script: As you're told in the documentation, when you launch get_iplayer, you're actually launching another batch script (get_iplayer.cmd). Do some googling on the different ways to do that and their implications. As it is, you have no way to return to the main script after the first get_iplayer command finishes.<br />
+<br />
+Also, it is unnecessary to make the installation directory your working directory. If your value of %PATH% is screwed up such get_iplayer is not available from any working directory, you need to reinstall or fix %PATH%. In any event, you generally don't want to let a script you invoke interactively persist a change of working directory after it exits. Google for info on how to make such environment changes local to the script itself.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">29-01-2019, 09:12 PM</div>
+</div>
+<div class="message">Hi Finchy505,<br />
+For how you've outlined your problem, Dinky's suggestion of using get_iplayer's pvr options is probably the way you want to go. However, for other downloads a batch script may be appropriate. So, here's some ideas:<ul class="mycode_list"><li><span style="font-weight: bold;" class="mycode_b">From the get_iplayer Prompt</span><br />
+I notice you've included the <kbd>--get</kbd> option in your examples which isn't needed when using <kbd>--pid</kbd>. Additionally, running your commands will pick up all available episodes including ones you've already downloaded—you probably want to include the <kbd>--hide</kbd> option to avoid all the <span style="font-style: italic;" class="mycode_i">already in history</span> warnings. You also have three separate commands; it can all be done in one:<br />
+</li>
+</ul>
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --hide --pid-recursive --pid b01qv24w,b01bsr61,b006xxw3</code></div></div><ul class="mycode_list"><li><span style="font-weight: bold;" class="mycode_b">Using a get_iplayer Preset</span><br />
+You could use <kbd>--preset</kbd> (<kbd>-z</kbd>) to add the options you want and then run that preset:<br />
+</li>
+</ul>
+<span style="text-decoration: underline;" class="mycode_u">Create the Preset</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -zMySeries --prefs-add --hide --pid-recursive --pid b01qv24w,b01bsr61,b006xxw3</code></div></div><br />
+<span style="text-decoration: underline;" class="mycode_u">Run the Preset</span><br />
+<span style="font-style: italic;" class="mycode_i">(You can include additional options if you want; for example </span><kbd>--test</kbd><span style="font-style: italic;" class="mycode_i">.)</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -zMySeries<br />
+get_iplayer -zMySeries -t</code></div></div><br />
+<span style="text-decoration: underline;" class="mycode_u">View the Preset's Options</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -zMySeries --prefs-show</code></div></div><br />
+<span style="text-decoration: underline;" class="mycode_u">Update the Preset</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -zMySeries --prefs-add &lt;replacement and/or new options&gt;<br />
+get_iplayer -zMySeries --prefs-del &lt;option(s) to be removed&gt;</code></div></div><br />
+<span style="text-decoration: underline;" class="mycode_u">Delete the Preset</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -zMySeries --prefs-clear</code></div></div><ul class="mycode_list"><li><span style="font-weight: bold;" class="mycode_b">Using a Batch Script</span><br />
+I can't give a tutorial on batch scripts here, but the trick to downloading when using get_iplayer in a script is to prefix the get_iplayer command with <kbd>cmd /c</kbd>. It's also probably best to use <kbd>.cmd</kbd> as the file extension instead of <kbd>.bat</kbd>. Here's a quick example:<br />
+</li>
+</ul>
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>@echo off<br />
+echo Downloading new episodes for my series<br />
+cmd /c get_iplayer --hide --pid-recursive ^<br />
+    --subdir-format "Kids&#92;&lt;nameshort&gt;&#92;Series&lt; 00seriesnum&gt;" ^<br />
+    --pid b01qv24w,b01bsr61<br />
+cmd /c get_iplayer --hide --pid-recursive --pid b006xxw3<br />
+echo Finished downloading<br />
+exit /b 0</code></div></div>Note, the caret (<kbd>^</kbd>) in batch scripts escapes the next character (newlines in this example) so although the first download command is split across three lines in the script, it is treated as a single line and a single get_iplayer command.<br />
+<br />
+I hope this helps.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">29-01-2019, 10:31 PM</div>
+</div>
+<div class="message">I don't use windows much, but this is what I use.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>::get_iplayer.cmd --type=radio --pid-recursive   --pid=n,n,n  --force <br />
+<br />
+::RECURSIVE<br />
+get_iplayer.cmd --type=radio --pid-recursive --pid=pid1,pid2,pid3<br />
+<br />
+get_iplayer.cmd --type=tv --pid-recursive    --pid=pid1,pid2,pid3<br />
+<br />
+::NORMAL<br />
+get_iplayer.cmd --type=tv    --pid=pid1,pid2,pid3<br />
+<br />
+get_iplayer.cmd --type=radio --pid=pid1,pid2,pid3</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2325</h2></div><div class="dateline">30-01-2019, 08:35 AM</div>
+</div>
+<div class="message">Thanks for the replies guys. I'll have a look through the options and see what works best for me. I'm not trying to learn batch script programming, I'm just looking for the quickest and easiest way to have a way of picking up all new episodes with a couple of clicks. I've not used the pvr part of get_iplayer before as it seemed it needs some time to get an understanding of it. I have a small operation today so will have a few days in bed, so will hopefully have time to read up to try to get my head around it!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">01-02-2019, 10:02 AM</div>
+</div>
+<div class="message">If it's of any use, this is the script I run nightly via the task scheduler:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cd C:&#92;Program Files (x86)&#92;get_iplayer<br />
+set &#36;batchFile="D:&#92;iPlayer Recordings&#92;Batch.txt"<br />
+set &#36;logFile="D:&#92;iPlayer Recordings&#92;PVR-log.txt"<br />
+call get_iplayer --type=tv,radio --refresh<br />
+<br />
+(echo.<br />
+echo ------------------------------------------------------------<br />
+echo ---------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%time%&nbsp;&nbsp;&nbsp;&nbsp;%date%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ---------<br />
+echo ------------------------------------------------------------<br />
+echo.) &gt;&gt;%&#36;logFile%<br />
+<br />
+if exist %&#36;batchFile% (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo Batch file import started<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;( echo. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo Batch file import started<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo. ) &gt;&gt;%&#36;logFile%<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for /f "delims=" %%a in ('type %&#36;batchFile%') do (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo Batch checking %%a &gt;&gt;%&#36;logFile%<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;call get_iplayer --get --quiet --whitespace %%a &gt;&gt;%&#36;logFile%<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo. &gt;&gt;%&#36;logFile%<br />
+&nbsp;&nbsp;&nbsp;&nbsp;) else (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo No batch file import<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;) &gt;&gt;%&#36;logFile%<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+call get_iplayer --pvr --quiet --whitespace 2&gt;&gt;%&#36;logFile%<br />
+<br />
+move "D:&#92;iPlayer Recordings&#92;*.mp4" "D:&#92;iPlayer Recordings&#92;Downloaded&#92;"<br />
+move "D:&#92;iPlayer Recordings&#92;*.m4a" "D:&#92;iPlayer Recordings&#92;Downloaded&#92;"</code></div></div><br />
+It reads a text file (Batch.txt) containing the programme names that it should look for and download. An example of the content there would be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"Les Miserables"<br />
+"New Wild"<br />
+"Slipstream" --type=radio</code></div></div><br />
+My set-up is both this and the built-in PVR. I have the PVR set for "long term" stuff that I always want to download, and I use the batch file for individual series of stuff like that so I don't have to mess around with the PVR too much, plus I can remotely access and edit the batch.txt file easily when I'm travelling and want to set something to be grabbed.<br />
+<br />
+Everything is logged to the log file, and then once downloaded it's moved to the downloaded folder out of the way.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">01-02-2019, 02:35 PM</div>
+</div>
+<div class="message">Darren<br />
+Nice batch file ;)<br />
+<br />
+I have something similar in Linux. I text myself  shows I want to listen to and a script grabs them from messages.android.com and passes them to get_iplayer and drops them on the cloud so I can listen to them anywhere. I find the BBC app very hit and miss, often shows don't appear for "copyright reasons".</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I run multiple get_iplayer commands from a single .bat file?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

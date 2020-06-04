@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Repeat programme downloaded with different filename than earlier broadcast</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Repeat programme downloaded with different filename than earlier broadcast</div>
+<div id="pagetitle"><h2>Repeat programme downloaded with different filename than earlier broadcast</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2416</h2></div><div class="dateline">22-01-2020, 12:11 AM</div>
+</div>
+<div class="message">BBC have just started repeats of Francesco's Mediterranean Voyage, which I downloaded some time ago, using a simple search:<br />
+<span style="font-weight: bold;" class="mycode_b">francesco_name_tv</span><br />
+fields name<br />
+fps25 0<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+search0 francesco<br />
+<br />
+I was surprised that get_iplayer is downloading the repeat alongside the old version, and I noticed that there is a subtle difference in filename, despite an identical PID<br />
+<span style="font-weight: bold;" class="mycode_b">New:</span><br />
+Francescos_Mediterranean_Voyage_-_01._Arrivederci_Venezia_b00cjs85_editorial.mp4<br />
+<span style="font-weight: bold;" class="mycode_b">Old:</span><br />
+Francescos_Mediterranean_Voyage_-_1._Arrivederci_Venezia_b00cjs85_original.mp4<br />
+<br />
+I looked at the episode details where I can see (alongside lots of other stuff)<br />
+<span style="font-weight: bold;" class="mycode_b">player</span> <a href="https://www.bbc.co.uk/iplayer/episode/b00cjs85">https://www.bbc.co.uk/iplayer/episode/b00cjs85</a><br />
+<span style="font-weight: bold;" class="mycode_b">fileprefix</span> Francescos_Mediterranean_Voyage_-_01._Arrivederci_Venezia_b00cjs85_editorial<br />
+<br />
+So it looks like get_iplayer doesn't rely on the PID alone, and does an exact filename match when detecting previous downloads. Would a matching PID not be enough?  Or do PIDs get re-used over time?<br />
+I think the editorial v original part of a filename might cause repetition problems for other users. The 01 versus 1 part of the filename might be easier to parse and ignore.<br />
+Not a big deal, but I'm making a mild suggestion that get_iplayer might simply match the PID rather than a full filename. Or might match Francescos_Mediterranean_Voyage_-_01._Arrivederci_Venezia, but with omission of the 0. After all, the web interface shows Episode Number 1, not 01.<br />
+<br />
+[This behaviour is the same whether using the web interface or downloading from the command line]</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Repeat programme downloaded with different filename than earlier broadcast</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO Trying to stream pid using type tv
+INFO: pid found in cache
+Matches:
+790:	Horizon: 2014-2015 - Which Universe Are We In?, BBC Two England, , default
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashhd1,flashhd2,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashhd1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhd1 mode
+INFO: Trying flashhd2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhd2 mode
+INFO: Trying flashvhigh1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashstd2 mode
+INFO: Trying flashlow1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-default-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashlow2 mode
+INFO: Checking existence of original version
+INFO: flashhd1,flashhd2,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version original
+INFO: Trying flashhd1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhd1 mode
+INFO: Trying flashhd2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhd2 mode
+INFO: Trying flashvhigh1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashstd2 mode
+INFO: Trying flashlow1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-original-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashlow2 mode
+INFO: Checking existence of audiodescribed version
+INFO: flashhigh1,flashhigh2 modes will be tried for version audiodescribed
+INFO: Trying flashhigh1 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-audiodescribed-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Horizon: 2014-2015 - 17. Which Universe Are We In?
+INFO: File name prefix = Horizon_2014-2015-17._Which_Universe_Are_We_In-Horizon_2014-2015-audiodescribed-b0695t56                 
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+WARNING: You may see this warning if rtmpdump has malfunctioned
+WARNING: Use --verbose to print the output from rtmpdump
+INFO: skipping flashhigh2 mode
+ERROR: Failed to record 'Horizon: 2014-2015 - 17. Which Universe Are We In? (b0695t56)'

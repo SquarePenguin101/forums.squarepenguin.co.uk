@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 50fps Downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; 50fps Downloads</div>
+<div id="pagetitle"><h2>50fps Downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-599</h2></div><div class="dateline">06-07-2015, 04:49 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I have already done a post about this in the "General Topics" forum but I get the impression from the answers that I have so far received that get_iplayer does not yet support 50fps. Am I correct?<br />
+<br />
+If yes then I would be very grateful if the developers of get_iplayer could enable support for 50fps.<br />
+<br />
+Thank you very much.<br />
+<br />
+Kind regards<br />
+<br />
+Tim</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-07-2015, 02:52 PM</div>
+</div>
+<div class="message">The 50 fps streams are Adobe HDS. get_iplayer relies on rtmpdump and ffmpeg for downloading.  The former will never support HDS, and the latter won't any time soon, not to mention all the old ffmpeg versions in the wild that will never support it. It is unlikely those streams will ever be available to get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-599</h2></div><div class="dateline">08-07-2015, 04:16 PM</div>
+</div>
+<div class="message">Hi user-2<br />
+<br />
+Thank you very much for your reply.<br />
+<br />
+I suspect that you are unlikely to know the answer to this but I will ask you just in case: I have just downloaded a Firefox add-on called HDS Link Detector but for some reason, it can't detect the links on iPlayer pages. Do you have any idea why?<br />
+<br />
+Thank you very much.<br />
+<br />
+Kind regards<br />
+<br />
+Tim</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-07-2015, 04:47 PM</div>
+</div>
+<div class="message">I have no idea if it ever worked with iPlayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-995</h2></div><div class="dateline">01-08-2015, 07:47 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I have just downloaded a Firefox add-on called HDS Link Detector but for some reason, it can't detect the links on iPlayer pages.</blockquote>
+<br />
+I've just downloaded the same extension and was able to use the extension successfully. I needed to grab a php script from <a href="https://github.com/K-S-V/Scripts/blob/master/AdobeHDS.php">https://github.com/K-S-V/Scripts/blob/ma...obeHDS.php</a> and install php and php5-curl in Ubuntu and the extension worked.<br />
+<br />
+The extension gives you a link (actually two links. One for the ident and one for the programme video file) that you paste into your terminal to download the hds stream in the format of <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>php AdobeHDS.php --manifest &lt;link to manifest file&gt; --delete</code></div></div><br />
+Running the command downloaded the programme video file which was a flv file with an incomprehensible file name but I was able to use ffmpeg to convert the file to an mp4 (with acodec copy and vcodec copy) and play the file with VLC.<br />
+<br />
+I'm not sure what licence the AdobeHDS.php script is using but I feel that this is more possible that the thread is suggesting so far.<br />
+<br />
+I'm happy to share what I've got so far.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-995</h2></div><div class="dateline">02-08-2015, 11:21 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I'm not sure what licence the AdobeHDS.php script is using</blockquote>
+<br />
+<a href="https://github.com/K-S-V/Scripts/blob/master/License.txt">https://github.com/K-S-V/Scripts/blob/ma...icense.txt</a> says GPL v3</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1006</h2></div><div class="dateline">22-08-2015, 02:39 AM</div>
+</div>
+<div class="message">Not sure if anyone else has noticed - but the "50fps" material currently appears to just be double framed 25p, so no quality improvement over 25p at 25fps - just a double sized file! (look at a segment in a video editor where you can scroll through frame by frame and you'll see every second frame is identical).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-995</h2></div><div class="dateline">22-08-2015, 05:45 PM</div>
+</div>
+<div class="message">That's because BBC broadcasts stuff at 25fps to make it more film-like and the only way of up-framing that to 50fps is by double-framing it.<br />
+<br />
+Try some of the sport output. I'm a rugby league fan (a rarity for a southerner) and watch The Super League Show and that's definitely 50fps in the higher HDS streams and the highlights of the FA Community Shield was 50fps.<br />
+<br />
+EDIT: A Question Of Sport is 50fps and at 30 minutes long, shouldn't take long to download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1043</h2></div><div class="dateline">27-09-2015, 01:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (08-07-2015, 02:52 PM)</span></cite>The 50 fps streams are Adobe HDS. get_iplayer relies on rtmpdump and ffmpeg for downloading.  The former will never support HDS, and the latter won't any time soon, not to mention all the old ffmpeg versions in the wild that will never support it. It is unlikely those streams will ever be available to get_iplayer.</blockquote><br />
+I hope you will be able to support HDS/HLS because the BBC Blog post says they are going to "replace the current RTMP for Flash based players". <br />
+<br />
+There is a Kodi addon in development to support the 50fps streams for viewing but not downloading: <a href="http://forum.kodi.tv/showthread.php?tid=239378">http://forum.kodi.tv/showthread.php?tid=239378</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">27-09-2015, 02:15 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I hope you will be able to support HDS/HLS because the BBC Blog post says they are going to "replace the current RTMP for Flash based players".</blockquote>
+<br />
+This change has been known for quite some time and HLS modes are already supported in the current version of GiP.<br />
+<br />
+HDS might never be supported by GiP.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1043</h2></div><div class="dateline">27-09-2015, 02:35 PM</div>
+</div>
+<div class="message">Are the HLS streams only going to be 25fps to your knowledge?<br />
+<br />
+Answering my own question, it looks like you are on the case already. :)<br />
+<a href="https://github.com/get-iplayer/get_iplayer/issues/202">https://github.com/get-iplayer/get_iplayer/issues/202</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2016, 07:31 PM</div>
+</div>
+<div class="message">50 fps support released as <span style="font-weight: bold;" class="mycode_b">hvfhd</span> and <span style="font-weight: bold;" class="mycode_b">hvfsd</span> recording modes in get_iplayer 2.95</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1043</h2></div><div class="dateline">03-07-2016, 07:42 PM</div>
+</div>
+<div class="message">Nice. :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">06-07-2016, 11:27 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-08-2015, 02:39 AM)</span></cite>Not sure if anyone else has noticed - but the "50fps" material currently appears to just be double framed 25p, so no quality improvement over 25p at 25fps - just a double sized file! (look at a segment in a video editor where you can scroll through frame by frame and you'll see every second frame is identical).</blockquote><br />
+The audio is better though. The aac is 125kbps in the 50fps vids compared to 93kbps aac in the 25fps. So an audio improvement at least :-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; 50fps Downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

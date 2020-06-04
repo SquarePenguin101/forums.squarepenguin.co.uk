@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Implement 'No TV' preference switch</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Implement 'No TV' preference switch</div>
+<div id="pagetitle"><h2>Implement 'No TV' preference switch</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-07-2016, 03:11 PM</div>
+</div>
+<div class="message">Issue: Upcoming law change requires a TV license to view TV programmes via any catch up service<br />
+<br />
+Desired outcome: Allow get_iplayer users without a TV license (or with servers in locations not covered by a TV license) to abide my the law by preventing accidental TV downloads.<br />
+<br />
+Proposed solution: Implement a <kbd>--no-tv</kbd> preference switch that disables all TV downloads but allows radio/podcast etc. <br />
+<br />
+Inspiration for this feature request: <a href="http://lists.infradead.org/pipermail/get_iplayer/2016-July/009216.html">http://lists.infradead.org/pipermail/get...09216.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-07-2016, 04:01 PM</div>
+</div>
+<div class="message">Just add <kbd>--type=radio</kbd> to your preferences, delete your <kbd>tv.cache</kbd> file, delete any PVR jobs that include <kbd>--type=tv</kbd>, never use <kbd>--type=tv</kbd> in a command line to override your preferences, and don't download any TV programmes directly with <kbd>--pid</kbd> or <kbd>--url</kbd>. It should be easy to stick to those rules, especially if you have the nous to run get_iplayer on a remote server. It's the equivalent of disconnecting your aerial and having the discipline to leave it disconnected. As long as you exclude TV programmes from cache refreshes and search results with <kbd>--type=radio</kbd>, get_iplayer isn't going to download any unless you tell it directly to do so - so don't do that if you don't have a TV licence.<br />
+<br />
+EDIT: You can of course add <kbd>--type=radio,liveradio,podcast</kbd> to your preferences if want everything you're entitled to without a TV licence, though I don't think you really want <kbd>podcast</kbd> in there. It would really slow down automatic cache refreshes, so you would only want to update the podcast cache on an ad hoc basis.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-07-2016, 11:52 PM</div>
+</div>
+<div class="message">So it turns out that the origin of this request was someone who apparently has some sort of VPS or other hosted get_iplayer setup for multiple users. I can kind of see a use case for a <kbd>--no-tv</kbd> option in that environment, and it would be possible to implement, but there is an even easier way to hack the get_iplayer script to disable TV programmes (remove 'tv' and 'livetv' entries in <kbd>%prog_types</kbd> hash defined near top of script). Still, that use case is not compelling enough for me, at least, to invest any effort. Any solution could easily be subverted unless you lock down the system to an extreme level.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Implement 'No TV' preference switch</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

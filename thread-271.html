@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --purl option rather than using --pid ?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; --purl option rather than using --pid ?</div>
+<div id="pagetitle"><h2>--purl option rather than using --pid ?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-715</h2></div><div class="dateline">09-11-2014, 12:57 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+How about adding a --purl option, where you could just copy and paste the whole URL for an episode in, and it would extract it for you?  [I would suggest --url, but it's taken]<br />
+<br />
+Rationale: You could just copy and paste the URL without having to edit the prog ID out of it<br />
+<br />
+Example usage: get_iplayer --purl=http://www.bbc.co.uk/iplayer/episode/b045ghfb/world-war-i-at-home-the-zeppelin-terror <br />
+as opposed to having to edit that down and use:<br />
+get_iplayer --pid=b045ghfb</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 12:59 AM</div>
+</div>
+<div class="message">That's what <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--url</code></div></div> is for</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-715</h2></div><div class="dateline">09-11-2014, 01:08 AM</div>
+</div>
+<div class="message">Ahh. I never twigged that because the help is non-obvious...<br />
+<br />
+ --url "&lt;url&gt;"                    Record the embedded media player in the specified URL. Use with --type=&lt;type&gt;.<br />
+<br />
+So, how do you know what type it is? Hence why a --purl option might be easier...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-11-2014, 01:23 AM</div>
+</div>
+<div class="message">As explained in the <a href="https://squarepenguin.co.uk/wiki/options/#search-options">Options Wiki page Search Options section</a> <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type</code></div></div> can be one of the following <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>livetv,tv,liveradio,radio,all</code></div></div>. As it states, tv is default.<br />
+<br />
+So, look at the embedded media on the page at the particular URL you want. Determine if it is one of those options (it's pretty obvious) and use that type. In practice, live streams are broken so all you need to know is if it is radio as the default will already download TV automatically, which is helpfully made very obvious on the page. <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--url</code></div></div> literally does exactly what you want. The only thing you need to know is if the programme is a radio show, in which case you'd use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=radio</code></div></div> in the command to download it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 01:29 AM</div>
+</div>
+<div class="message">As for <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type</code></div></div>, you could do worse than read the documentation.  But, I think it will be obvious to you whether to use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=tv</code></div></div> or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=radio</code></div></div>. TV is the one with pictures :} <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=tv</code></div></div> is the default, so not required for video.  If the URL you use doesn't have an embedded media player for the particular programme episode, you're wasting your time since there is obviously nothing to record, so the help text is telling you like it is.  Sorry, but no <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--purl</code></div></div> option - it would be completely redundant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-715</h2></div><div class="dateline">09-11-2014, 01:43 AM</div>
+</div>
+<div class="message">I get it now. Cheers :)<br />
+<br />
+And yes maybe I should have read the whole documentation rather than just Googling for forum posts which only mentioned - - pid and not the - - url option ... Sorry :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; --purl option rather than using --pid ?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

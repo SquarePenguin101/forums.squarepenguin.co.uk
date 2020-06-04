@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - XPath error : Undefined namespace prefix</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; XPath error : Undefined namespace prefix</div>
+<div id="pagetitle"><h2>XPath error : Undefined namespace prefix</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1643</h2></div><div class="dateline">07-05-2017, 09:12 AM</div>
+</div>
+<div class="message">Getting this error, previously all working<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>XPath error : Undefined namespace prefix<br />
+error : xmlXPathCompiledEval: evaluation failed at /usr/local/bin/get_iplayer line 7430.</code></div></div><br />
+Option set<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output /Users/user/Documents/TV/<br />
+tvmode best<br />
+type tv,radio<br />
+radiomode better</code></div></div><br />
+<br />
+Seem to be related to subtitle<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/usr/local/bin/get_iplayer --subtitles --pvr  <br />
+get_iplayer 3.00-homebrew.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+Running PVR Searches:<br />
+An_Art_Lovers_Guise<br />
+Arena<br />
+Dr_Who<br />
+Matches:<br />
+1577: Doctor Who: Series 10 - Knock Knock, BBC One, b08qd9ww<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of editorial version<br />
+INFO: hlshd1,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,dvfxsd1,dvfxsd2,hlsvhigh1,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2 modes will be tried for version editorial<br />
+INFO: Trying hlshd1 mode to record tv: Doctor Who: Series 10 - 4. Knock Knock<br />
+INFO: File name prefix = Doctor Who Series 10 - 4. Knock Knock b08qd9ww editorial                 <br />
+<br />
+INFO: Downloading subtitles to: /Users/user/Documents/TV/Doctor Who Series 10/Doctor Who Series 10 - 4. Knock Knock b08qd9ww editorial.srt<br />
+XPath error : Undefined namespace prefix<br />
+ error : xmlXPathCompiledEval: evaluation failed at /usr/local/bin/get_iplayer line 7430.</code></div></div><br />
+<br />
+Seems to be specific to last nights Dr Who for some reason - doing a --subtitle-only collects the subtitles for other shows but not this one?<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>1575:&nbsp;&nbsp;&nbsp;&nbsp;Doctor Who: Series 10 - Smile, BBC Two, b08nz0vk<br />
+INFO: Downloading subtitles to: /Users/user/Documents/TV/Doctor Who Series 10/Doctor Who Series 10 - 2. Smile b08nz0vk original.srt<br />
+1576:&nbsp;&nbsp;&nbsp;&nbsp;Doctor Who: Series 10 - Thin Ice, BBC Two, b08pmk0q<br />
+INFO: Downloading subtitles to: /Users/user/Documents/TV/Doctor Who Series 10/Doctor Who Series 10 - 3. Thin Ice b08pmk0q original.srt<br />
+1577:&nbsp;&nbsp;&nbsp;&nbsp;Doctor Who: Series 10 - Knock Knock, BBC One, b08qd9ww<br />
+INFO: Downloading subtitles to: /Users/user/Documents/TV/Doctor Who Series 10/Doctor Who Series 10 - 4. Knock Knock b08qd9ww editorial.srt<br />
+XPath error : Undefined namespace prefix<br />
+ error : xmlXPathCompiledEval: evaluation failed at /usr/local/bin/get_iplayer line 7430.</code></div></div><br />
+Using the latest release on mac homebrew<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/usr/local/bin/get_iplayer --subtitles --pvr&nbsp;&nbsp;<br />
+get_iplayer 3.00-homebrew.0, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-05-2017, 09:20 AM</div>
+</div>
+<div class="message">get_iplayer version and you have read the release notes in the wiki?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1643</h2></div><div class="dateline">07-05-2017, 09:48 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-05-2017, 09:20 AM)</span></cite>get_iplayer version and you have read the release notes in the wiki?</blockquote><br />
+3.0 and yes I have been reading <a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation">https://github.com/get-iplayer/get_iplay...umentation</a> <br />
+<br />
+Overall this get_iplayer is fantastic as a previous user of GiA I didn't realise how get_iplayer could actually do everything I needed and solve many of the limitations of GiA its just understanding how it works and making it do what you want.<br />
+<br />
+The issue I am seeing seems to be with subtitles and collecting subtitles and the show at the same time, I'm currently experimenting with running the subtitle collection as a second run through to see if it is some issue with it collecting subtitles before the video it belongs to.<br />
+<br />
+Anyway thanks for the feedback just thought you should see the error.<br />
+<br />
+all the best<br />
+A</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-05-2017, 09:52 AM</div>
+</div>
+<div class="message">So you dont have the latest version and you havent read the release notes in the wiki?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1643</h2></div><div class="dateline">07-05-2017, 03:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-05-2017, 09:52 AM)</span></cite>So you dont have the latest version and you havent read the release notes in the wiki?</blockquote><br />
+Wouldn't it have been more productive to say "I think this might be solved in 3.0.1 which was released yesterday" or "3.0.1 was released yesterday have you updated?"<br />
+<br />
+It was (the problem) and it is now working (thanks for your help).<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-05-2017, 04:29 PM</div>
+</div>
+<div class="message">Not really. You would have been spoon fed some information that was already provided in another area. Now you know where to look to help yourself. <br />
+<br />
+This is a project run by volunteers, you are expected to attempt to help yourself. <br />
+<br />
+Had you searched the forums with the error you'd have found other posts with the answer. <br />
+<br />
+Had you read the forum rules you have found only the latest version  is supported. The latest version is named on the front page of the forum, or cross checkable in the download area. <br />
+<br />
+Had you also read the forum rules you'd have found the 'How to request support' thread and had you then read that you'd have seen we expect you to read the release notes and what information you need to include in any support request.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; XPath error : Undefined namespace prefix</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

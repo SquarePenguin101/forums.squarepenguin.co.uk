@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I copy output file with --command using Windows FTP client?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I copy output file with --command using Windows FTP client?</div>
+<div id="pagetitle"><h2>How do I copy output file with --command using Windows FTP client?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1975</h2></div><div class="dateline">10-03-2018, 05:05 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+this has got me stumped and I was wondering if somebody can point me to a solution.<br />
+<br />
+I have been using COMMAND to copy downloaded files to a different directory.<br />
+<br />
+However, I would now like to copy these files, as soon as they get downloaded, to a Humax HD Recorder, which is accessible through FTP.<br />
+<br />
+In all the trials I did, I could not manage to pass the &lt;filename&gt; parameter to the FTP command in Windows.<br />
+<br />
+How can I solve this?<br />
+<br />
+What else could I do?<br />
+<br />
+What could be a solution to copy a downloaded program to a FTP server?<br />
+<br />
+The reason I want to do this is to have the recordings downloaded using GIP immediately available on the Humax, because its interface is more usable for a member of my family who is unfortunately unable to turn on the PC and use the PC to view the program.<br />
+<br />
+TIA<br />
+<br />
+Lorenz</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">10-03-2018, 10:15 PM</div>
+</div>
+<div class="message">There is a piece of software called Webdrive. I don't know if this will do what you want.<br />
+<br />
+With this you assign a drive letter to an FTP folder. You can then download directly to that 'drive'. I don't know if this will work with data coming from something like iPlayer though.<br />
+<br />
+There is a 10-day free trial so you can test it and it's not horrendously expensive if it solve your issue.<br />
+<br />
+<a href="https://southrivertech.com/products/webdrive/">https://southrivertech.com/products/webdrive/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">12-03-2018, 01:28 AM</div>
+</div>
+<div class="message">Without detail of the errors you're getting it's difficult to solve.<br />
+<br />
+I suspect your problem's to do with escaping and quoting various characters. The escape character in the Windows command shell is the caret <kbd>^</kbd> and special characters that may need escaping or quoting are: <kbd>&lt;space&gt; &amp; ( ) [ ] { } ^ = ; ! ' + , ` ~</kbd>. For get_iplayer the escape character is the backslash <kbd>\</kbd> and for your ftp program you'll have to look at the documentation. Doubling-up embedded double-quotes may also be necessary.<br />
+<br />
+Have you tried something like the following, which should get the command successfully through the Windows shell to get_iplayer?<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --command "ftp put ""&lt;filename&gt;"" moreFtpArgs" --moreGipArgs</code></div></div>Hope this helps.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1975</h2></div><div class="dateline">12-03-2018, 01:58 PM</div>
+</div>
+<div class="message">I'd like to thank you all for the comments and pointers to a solution.<br />
+<br />
+The issue was that I wanted to copy what I download using GIP to a Humax HD recorder to allow a member of my family (who is familiar with operating the Humax but not a computer) to watch recordings.<br />
+<br />
+With all the help here, I solved the problem using <span style="font-weight: bold;" class="mycode_b">WinSCP</span> as an FTP client. <br />
+<br />
+On my system, GIP outputs to J:\Videos\iPlayer Recordings on the PC, while I wanted the copies to go to "My Video/iPlayer" on the Humax main HD.<br />
+humaxftp and 0000 are the default username and password for the Humax FTP server.<br />
+<br />
+I added to the options file in %USERPROFILE%\.get_iplayer\ the following line<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>command "C:&#92;Program Files (x86)&#92;WinSCP&#92;WinSCP.com" /command "open ftp://humaxftp:0000@192.168.1.21/ -passive=0" "lcd ""J:&#92;Videos&#92;iPlayer Recordings""" "cd ""/mnt/hd2/My Video/iPlayer""" "put ""&lt;filename&gt;""" "exit"</code></div></div><br />
+Note the single, double, triple quotes.<br />
+I suspect other FTP clients will also allow a similar syntax.<br />
+I could not figure out how to pass &lt;filename&gt; to Windows' own FTP client. <br />
+<br />
+mastermonkey mentioned Webdrive as way to assign a letter to an FTP directory. <br />
+Following their lead, I also discovered but did not try:<br />
+FTP drive  <a href="http://www.killprog.com/fdrve.html">http://www.killprog.com/fdrve.html</a><br />
+FTP Use <a href="https://www.ferrobackup.com/map-ftp-as-disk.html">https://www.ferrobackup.com/map-ftp-as-disk.html</a><br />
+Drivemaker <a href="http://backupchain.com/en/drivemaker/">http://backupchain.com/en/drivemaker/</a><br />
+All freeware<br />
+<br />
+HIH<br />
+<br />
+Lnz</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I copy output file with --command using Windows FTP client?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

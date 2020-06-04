@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - flv conversion failed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; flv conversion failed</div>
+<div id="pagetitle"><h2>flv conversion failed</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1171</h2></div><div class="dateline">21-01-2016, 10:34 AM</div>
+</div>
+<div class="message">I am trying out get_iplayer 2.94 on OpenSUSE Leap and get the error at the end of any download. In this case I was downloading a BBC TV program and end up with the .flv file. In the past I have used get_iplayer on various Fedora releases for some time with no issues but now want to move to OpenSUSE hence this testing. There is an OpenSUSE package but it wont download anything I've tried as I suspect it is old. It could be that I am missing a package but not sure what so any suggestions would help. All the usual stuff like ffmpeg etc is installed. I have saved the verbose output but at the time of the error it does not add anything to the error message.<br />
+<br />
+Stuart</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-01-2016, 11:00 AM</div>
+</div>
+<div class="message">Well, what is the error message?<br />
+<br />
+And it isn't clear how you installed get_iplayer, did you follow the instructions in the wiki?<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/opensuse/">https://squarepenguin.co.uk/wiki/opensuse/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1171</h2></div><div class="dateline">21-01-2016, 01:24 PM</div>
+</div>
+<div class="message">I installed get_iplayer by downloading it and extracting it to my local directory, that is the version I use via a bash script to download using a PID I obtain from the BBC iPlayer site. <br />
+<br />
+The error is  "WARNING: flv conversion failed - retaining flv file", simply renaming the file to a .mp4 and it plays OK. <br />
+<br />
+I will try the link you pointed to but I did expect the download to work unless I'm missing some package or other.<br />
+<br />
+Stuart</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-01-2016, 02:16 PM</div>
+</div>
+<div class="message">That is the effect, not the cause.  Upload your entire verbose log to a pastebin site (scrub username if necessary) and post the link.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1171</h2></div><div class="dateline">21-01-2016, 04:26 PM</div>
+</div>
+<div class="message"><a href="static/thread-638-get-iplayer_debug.txt">get-iplayer_debug.txt</a><br />
+OK I'll upload it when I get a moment.<br />
+<br />
+What I have done is to install the OpenSUSE version as you suggested, that does work and at least did download the video but two things were wrong, first it downloaded the audio described version which I did NOT want and second it gave the same error about not being able to do the conversion. However renaming the file to a .mp4 and it plays OK in Kaffeine.<br />
+<br />
+Stuart</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-01-2016, 05:56 PM</div>
+</div>
+<div class="message">Thanks.  As you can see from the log, your ffmpeg appears not to match the supporting libraries. That could be the result of mixing repos with different packaging for ffmpeg and dependencies, but only you would know how you installed things on your machine. I can't say if that is the source of the "Invalid data found when processing input" error when converting the FLV, but it seems plausible. Sorting out a clean ffmpeg installation seems like the place to start. <br />
+<br />
+The log also shows that you did not download the audio described version of that programme. AD versions are not available at that bitrate and video resolution, so not sure why you say that is what you got. I couldn't unequivocally rule out a mistake at the BBC end, but that would be a pretty unusual one. It doesn't happen here, anyway.<br />
+<br />
+On Leap system with a clean ffmpeg installation everything works as it should, so all I can tell you is to sort out ffmpeg and see if that fixes things. Until then, you can add <kbd>--raw</kbd> to your get_iplayer commands to avoid the FLV-&gt;MP4 conversion for the time being.  Changing file extensions shouldn't be necessary. Your media player should still interpret files as FLV regardless of extension.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1171</h2></div><div class="dateline">22-01-2016, 08:52 AM</div>
+</div>
+<div class="message">I suspect what has happened was that initially on first install I added some video editors which required ffmpeg and that was installed from the default OpenSUSE Leap and Packman repositories. So if I have differing versions it has been done by the Package Manager as I have done nothing to force and product installs. I only added the specific repo for get_iplayer AFTER I ran that verbose log. I will re-run that verbose log to see if there are any differences.<br />
+<br />
+Bear in mind this is my first use of OpenSUSE although I've been using Linux for years now it is the first time I have used a package manager with priorities so I have left everything as default. <br />
+<br />
+Stuart</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2016, 12:31 PM</div>
+</div>
+<div class="message">Since openSUSE keeps ffmpeg at arm's length (due to use of restricted formats), it is a bit of a free-for-all, which can lead to such problems. If you follow the openSUSE community instructions for restricted formats on a clean system, you will have the Packman build of ffmpeg, which works fine with get_iplayer. Some of the other ffmpeg builds might work, but you would want to have dependencies that match the main ffmpeg package in order to know you at least have a coherent installation. If you have trouble untangling things, I suggest you try the SUSE forums, where you might find more help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1171</h2></div><div class="dateline">22-01-2016, 02:15 PM</div>
+</div>
+<div class="message">That's my problem, I cant see what is wrong when looking at Package Manager, it all looks OK so I'm not sure what you think is wrong. All the ffmpeg stuff which shows as installed seems to be from packman.<br />
+<br />
+Stuart<br />
+<br />
+Update: I just double checked and there were 3 (I think) which had been installed from the OpenSUSE repo and I have replaced then with the ones from packman. Others which were from OpenSUSE dont have a packman version so I hope this will sort that out at least. I'll test again to see what happens.<br />
+<br />
+Update2: Yes that fixed it. Although it still says "WARNING: Cannot tag MP4 file" at the end but that does not bother me. Sorry to have bothered you with this, it is a learning curve getting my head round a different packaging methodology from Fedora and others I've used.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2016, 04:37 PM</div>
+</div>
+<div class="message">For anyone who wonders why this is necessary: get_iplayer requires additional codecs only available in the Packman build of ffmpeg. <br />
+<br />
+"Cannot tag MP4 file" appears because you haven't installed AtomicParsley.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; flv conversion failed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Correct value for --channel to filter 6 Music programmes?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Correct value for --channel to filter 6 Music programmes?</div>
+<div id="pagetitle"><h2>Correct value for --channel to filter 6 Music programmes?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">27-11-2016, 03:10 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+To check the correct spelling of a radio channel I used &lt;channel&gt;. It returned 'BBC Radio 6 Music'<br />
+<br />
+I then used it in --channel "BBC Radio 6 Music". It failed to download. I amended it to "BBC 6 Music" &amp; it worked as expected.<br />
+<br />
+Is this an error or am I missing something?<br />
+<br />
+Cheers<br />
+DaveF.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-11-2016, 05:05 PM</div>
+</div>
+<div class="message">Looks like get_iplayer needs to be tweaked to catch up with changes in BBC metadata. But you don't need the whole channel name for filtering. You only need the unique part, so "6 Music" will suffice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">27-11-2016, 05:47 PM</div>
+</div>
+<div class="message">Thanks<br />
+<br />
+Again the documentation I've read doesn't make that clear.<br />
+<br />
+Is --channel used when '--get'ting? <br />
+<br />
+Is there any documentation explaining what get_iplayer uses its index cache for? When searching for specific programs: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"get_iplayer" --get --type radio --channel "BBC 6 Music" --fields=name "Radcliffe"</code></div></div><br />
+Does it search the cache before looking online? <br />
+<br />
+I'm aware <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include="BBC 6 Music"</code></div></div><br />
+filters the cache to just one channel's output, but If I'm only after a specific program &amp; the 'download_history' file tests to see if it's already been transferred, it still seems a bit excessive. I'm sure I must be missing something?<br />
+<br />
+Cheers<br />
+Dave F.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-11-2016, 06:25 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (27-11-2016, 05:47 PM)</span></cite>Is --channel used when '--get'ting?</blockquote>Only when used in conjunction with a search string. If <kbd>--get</kbd> is used with the index number(s) from a programme, <kbd>--channel</kbd> is ignored.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Does it search the cache before looking online? </blockquote>
+get_iplayer does not search online.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-include="BBC 6 Music"</code></div></div>filters the cache to just one channel's output, but If I'm only after a specific program &amp; the 'download_history' file tests to see if it's already been transferred, it still seems a bit excessive. I'm sure I must be missing something?</blockquote>
+Presumably that's why the developer made it your choice. Some users only ever care about a few programmes from a few channels and don't want to bother caching data for any others. You don't ever have to cache any programme data if you really don't want to. Just use <kbd>--pid</kbd> to download the specific programme of interest. Put a humongous value for <kbd>--expiry</kbd> in your preferences to prevent the automatic cache refresh kicking in if you slip up.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Correct value for --channel to filter 6 Music programmes?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

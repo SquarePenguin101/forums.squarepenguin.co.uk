@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --command-radio problem</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; --command-radio problem</div>
+<div id="pagetitle"><h2>--command-radio problem</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">20-03-2017, 08:50 AM</div>
+</div>
+<div class="message">hello there.<br />
+<br />
+i was previously using aactomp3 in my options file and this worked. i upgraded get_iplayer to 2.99 and had to remove this option.<br />
+<br />
+i added this to the options file<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>commandradio ffmpeg -loglevel error -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -q:a 0 -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"</code></div></div><br />
+when i tried to download a radio program and convert to mp3.  the <kbd>iPM_-_My_referendum_b08j8mtq_original.mpa</kbd> file is there but i get an error <kbd>iPM_-_My_referendum_b08j8mtq_original.mp3: No such file or directory. info:Command exit code 1 (raw code = 256) Error: Command Exit Code: 1.</kbd><br />
+<br />
+it looks like the conversion to mp3 has not worked but i don't know why. any help would be appreciated.<br />
+i am using windows and installed get_iplayer using get_iplayer-2.99.0.exe</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-03-2017, 11:49 AM</div>
+</div>
+<div class="message">Remove "-loglevel error" from the commandradio option value and try it again. You should see the full spew from ffmpeg when it attempts convert the file. If that doesn't tell you anything, <a href="thread-706.html">follow our instructions</a> to provide a full report so we can see what is happening on your machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">21-03-2017, 05:12 AM</div>
+</div>
+<div class="message">this is the output from the prompt. when i get a chance i will get a verbose log.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;Ethereal&gt;get_iplayer --type=radio -g --force 26134<br />
+get_iplayer 2.99-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+Matches:<br />
+26134:  You and Yours - Leasehold abuse, Care homes, Death of diesel, BBC Rad<br />
+4, b08j997r<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hafhigh1,hafhigh2,hafstd1,hafstd2,dafmed1,dafmed2,hafmed1,hafmed2,daflo<br />
+daflow2,haflow1,haflow2,hlsaaclow1 modes will be tried for version original<br />
+INFO: Trying hafhigh1 mode to record radio: You and Yours - Leasehold abuse,<br />
+e homes, Death of diesel<br />
+INFO: File name prefix = You_and_Yours_-_Leasehold_abuse_Care_homes_Death_of_<br />
+sel_b08j997r_original<br />
+INFO: Begin recording file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;Yo<br />
+nd_Yours_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.audio<br />
+<br />
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]<br />
+<br />
+INFO: Recorded: 98.69 MiB (00:41:11) [387] in 00:07:28 at 1.76 Mibit/s<br />
+INFO: Saved HLS audio file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;Yo<br />
+nd_Yours_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.hls.t<br />
+INFO: Begin converting audio file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;R<br />
+o&#92;You_and_Yours_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_origina<br />
+ls.ts<br />
+size=   96955kB time=00:41:10.42 bitrate= 321.5kbits/s speed=54.4x<br />
+INFO: Converted to file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;You_a<br />
+Yours_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.partial.<br />
+<br />
+INFO: Recorded file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;You_and_Y<br />
+s_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.m4a<br />
+<br />
+INFO: Begin tagging file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;You_<br />
+_Yours_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.m4a<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =========================================&gt; 74% --------------|<br />
+ Finished writing to temp file.<br />
+INFO: Tagged file: &#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;You_and_You<br />
+-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.m4a<br />
+ffmpeg version N-84014-g9e6b269 Copyright (c) 2000-2017 the FFmpeg developers<br />
+  built with gcc 6.3.0 (GCC)<br />
+  configuration: --enable-gpl --enable-version3 --enable-cuda --enable-cuvid<br />
+nable-d3d11va --enable-dxva2 --enable-libmfx --enable-nvenc --enable-avisynth<br />
+enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-ico<br />
+--enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable<br />
+bfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplu<br />
+-enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --en<br />
+e-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librtmp --enable<br />
+bsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwo<br />
+e --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-lib<br />
+ --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --ena<br />
+-libxavs --enable-libxvid --enable-libzimg --enable-lzma --enable-zlib<br />
+  libavutil      55. 48.100 / 55. 48.100<br />
+  libavcodec     57. 83.100 / 57. 83.100<br />
+  libavformat    57. 66.104 / 57. 66.104<br />
+  libavdevice    57.  3.100 / 57.  3.100<br />
+  libavfilter     6. 76.100 /  6. 76.100<br />
+  libswscale      4.  3.101 /  4.  3.101<br />
+  libswresample   2.  4.100 /  2.  4.100<br />
+  libpostproc    54.  2.100 / 54.  2.100<br />
+Output #0, ipod, to '&#92;&#92;FreeNAS&#92;Working&#92;Completed&#92;__British TV&#92;Radio&#92;You_and_Y<br />
+s_-_Leasehold_abuse_Care_homes_Death_of_diesel_b08j997r_original.m4a':<br />
+Output file #0 does not contain any stream<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+ERROR: Command Exit Code: 1</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-03-2017, 11:27 AM</div>
+</div>
+<div class="message">Thanks for the log. Your <kbd>--command-radio</kbd> value is incorrect and not what you posted originally. If it isn't obvious to you what is missing, copy/paste the command I provided in the documentation to reset. Don't type it into the options file yourself. Leave out "-loglevel error" permanently.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">21-03-2017, 12:44 PM</div>
+</div>
+<div class="message">still not working.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-03-2017, 05:41 PM</div>
+</div>
+<div class="message">And still not correct. You'd better tell me where you're getting the command from. There may be a typo lurking out there.<br />
+<br />
+EDIT: Even so, you should be able to figure it out from your original post.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">21-03-2017, 05:59 PM</div>
+</div>
+<div class="message">i don't have a clue about these things which is why i copied the code from here - <a href="https://github.com/get-iplayer/get_iplayer/wiki/aactomp3">https://github.com/get-iplayer/get_iplay...i/aactomp3</a><br />
+<br />
+i can't tell by looking what the problem is which was why i posted here. thank you<br />
+<br />
+Always convert every radio programme to MP3 format at best variable bit rate (VBR) and automatically delete M4A file by setting <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--command-radio</code></div></div><br />
+ in preferences:<br />
+<br />
+Windows:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --command-radio="ffmpeg -loglevel error -i &#92;""&lt;filename&gt;"&#92;" -c:v copy -c:a libmp3lame -q:a 0 -id3v2_version 3 -write_id3v1 1 -y &#92;""&lt;dir&gt;/&lt;fileprefix&gt;.mp3"&#92;" &amp;&amp; del &#92;""&lt;filename&gt;"&#92;""</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-03-2017, 06:14 PM</div>
+</div>
+<div class="message">Well, that's not what is going into your options, and I can't say why. It works fine here. Maybe you'll have to edit your options file directly.<br />
+<br />
+I've already told you that you are missing something. Look at the settings printed at the top of your log and compare that value of <kbd>commandradio</kbd> to what it should be from the documentation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-03-2017, 11:16 PM</div>
+</div>
+<div class="message">Here's a diff of what your log file contains vs what you should see. It's a small but crucial difference:<br />
+<br />
+<a href="https://www.diffchecker.com/k3NOWrtX">https://www.diffchecker.com/k3NOWrtX</a><br />
+<br />
+Left side is your log. Right side is what you should see. <br />
+<br />
+Notice the little <kbd>-i</kbd> that is highlighted in green? That's what you are missing. <br />
+<br />
+My guess is something went wrong the first time you copied the command which lead to the initial error and then the second time when user-2 asked you to remove <kbd>-loglevel error</kbd> you accidentally removed the <kbd>-i</kbd> along with it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">22-03-2017, 05:38 AM</div>
+</div>
+<div class="message">i fixed the -i and tried a different setting (cbr) - they both failed.<br />
+<br />
+thanks for you help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">22-03-2017, 11:33 AM</div>
+</div>
+<div class="message">Dinky - I'm stepping out of my comfort zone here as a non-Windows user but it looks like there's possibly a problem here. <br />
+<br />
+<kbd>&lt;dir&gt;</kbd> isn't handling UNC file paths correctly. <br />
+<br />
+ethereal is outputting to a mapped drive at <kbd>\\FreeNAS</kbd> using the UNC path format. <br />
+<br />
+<kbd>&lt;dir&gt;</kbd> is outputting double backslashes <kbd>\\</kbd> in the directory path which is fine with conventional file paths rooted in a drive letter (though possibly not needed as is looks like it's some kind of raw string? Do the backslashes actually need escaping?) but when it comes to mapped drives with UNC format paths it's doubling up the initial <kbd>\\</kbd> to produce <kbd>\\\\</kbd> which is an invalid format.<br />
+<br />
+In ethereal's case here that's leading to:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>\\\\FreeNAS\\Working\\Completed\\__British TV\\Radio/iPM_-_My_referendum_b08j8mtq_original.mp3: No such file or directory</code></div>
+</div>
+<br />
+The full text of that section is below so you can see the context:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Running command 'ffmpeg -loglevel error -i "\\FreeNAS\Working\Completed\__British TV\Radio\iPM_-_My_referendum_b08j8mtq_original.m4a" -c:v copy -c:a libmp3lame -b:a 320k -id3v2_version 3 -write_id3v1 1 -y "\\\\FreeNAS\\Working\\Completed\\__British TV\\Radio/iPM_-_My_referendum_b08j8mtq_original.mp3" &amp;&amp; del "\\FreeNAS\Working\Completed\__British TV\Radio\iPM_-_My_referendum_b08j8mtq_original.m4a"'<br />
+<br />
+INFO: Command: ffmpeg -loglevel error -i "\\FreeNAS\Working\Completed\__British TV\Radio\iPM_-_My_referendum_b08j8mtq_original.m4a" -c:v copy -c:a libmp3lame -b:a 320k -id3v2_version 3 -write_id3v1 1 -y "\\\\FreeNAS\\Working\\Completed\\__British TV\\Radio/iPM_-_My_referendum_b08j8mtq_original.mp3" &amp;&amp; del "\\FreeNAS\Working\Completed\__British TV\Radio\iPM_-_My_referendum_b08j8mtq_original.m4a"<br />
+<br />
+\\\\FreeNAS\\Working\\Completed\\__British TV\\Radio/iPM_-_My_referendum_b08j8mtq_original.mp3: No such file or directory<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+ERROR: Command Exit Code: 1</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-03-2017, 11:34 AM</div>
+</div>
+<div class="message">I can see the underlying problem now. It looks like a bug. Map your NAS share to a drive letter and change your output directories accordingly. For example, if the share point is <kbd>\\FreeNAS\Working</kbd> mapped to <kbd>D:</kbd>, then <kbd>outputradio</kbd> would be <kbd>D:\Completed\__British TV\Radio</kbd>. Use whatever is correct for your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">22-03-2017, 06:49 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-03-2017, 11:34 AM)</span></cite>I can see the underlying problem now. It looks like a bug. Map your NAS share to a drive letter and change your output directories accordingly. For example, if the share point is <kbd>\\FreeNAS\Working</kbd> mapped to <kbd>D:</kbd>, then <kbd>outputradio</kbd> would be <kbd>D:\Completed\__British TV\Radio</kbd>. Use whatever is correct for your system.</blockquote><br />
+that works now - thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-03-2017, 07:50 PM</div>
+</div>
+<div class="message">Good. That will be fixed in next release.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; --command-radio problem</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

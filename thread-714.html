@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Odd problem, raspberry pi and 2 servers.....</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Odd problem, raspberry pi and 2 servers.....</div>
+<div id="pagetitle"><h2>Odd problem, raspberry pi and 2 servers.....</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">03-05-2016, 07:49 PM</div>
+</div>
+<div class="message">HI <br />
+<br />
+I have an odd problem that I just can't seem to resolve.<br />
+<br />
+I use the raspberry pi version of GIP and have 2 zyxel servers (nsa325 and nas540) to download to.<br />
+<br />
+Both servers have the same fstab entries (bar ip address) and mount OK with read and write. But when I select download with  --mkv, it works on the nsa325, but the exact same command for the nas540 always fails with unsupported video codec.<br />
+<br />
+I have tried this on 4 different reapberry pi and always the same problem. It is repeatable too in that starting the download again always crashes out at the same point.<br />
+<br />
+How can it download and convert on one smb mounted server and fail on another?<br />
+Where are the log files?<br />
+<br />
+Any help to my confusion would be most welcome :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2016, 08:22 PM</div>
+</div>
+<div class="message">Read this and fill in the gaps in your report:<br />
+<br />
+<a href="thread-706.html">thread-706.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">04-05-2016, 04:56 PM</div>
+</div>
+<div class="message">I do apologise!<br />
+<br />
+Version gip = 2.94-ppa23<br />
+version = raspberry pi (running xbian OS) with kernel 4.4.8 (happend also with previoius kernels)<br />
+<br />
+So when I do this to download and convert to the NAS540 it fails as shown.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>xbian@kitchen ~ &#36; get_iplayer --get --pid=b04gvnfv --modes=best --whitespace --nopurge --file-prefix="&lt;nameshort&gt;-&lt;senum&gt;-&lt;episodeshort&gt;" --mkv --output /mnt/540/ --force<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+849:    Our School: Series 1 - We Are Year 7, CBBC, , default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhd1,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashhd1 mode to record tv: Our School: Series 1 - 1. We Are Year 7<br />
+INFO: File name prefix = Our School-s01e01-We Are Year 7<br />
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:   duration              1700.04<br />
+INFO:   moovPosition          36.00<br />
+INFO:   width                 1280.00<br />
+INFO:   height                720.00<br />
+INFO:   videocodecid          avc1<br />
+INFO:   audiocodecid          mp4a<br />
+INFO:   avcprofile            100.00<br />
+INFO:   avclevel              41.00<br />
+INFO:   aacaot                2.00<br />
+INFO:   videoframerate        25.00<br />
+INFO:   audiosamplerate       48000.00<br />
+INFO:   audiochannels         2.00<br />
+INFO: trackinfo:<br />
+INFO:   length                42501000.00<br />
+INFO:   timescale             25000.00<br />
+INFO:   language              und<br />
+INFO: sampledescription:<br />
+INFO:   sampletype            avc1<br />
+INFO:   length                81601536.00<br />
+INFO:   timescale             48000.00<br />
+INFO:   language              und<br />
+INFO: sampledescription:<br />
+INFO:   sampletype            mp4a<br />
+494677.196 kB / 1700.01 sec (99.9%)<br />
+Download complete<br />
+avconv version 11.6-6:11.6-1~deb8u1+rpi1, Copyright (c) 2000-2014 the Libav developers<br />
+ built on Mar 22 2016 15:53:22 with gcc 4.9.2 (Raspbian 4.9.2-10)<br />
+[flv @ 0x1007200] max_analyze_duration 5000000 reached<br />
+Input #0, flv, from '/mnt/540/Our School-s01e01-We Are Year 7.partial.mkv.flv':<br />
+ Metadata:<br />
+   moovPosition    : 36<br />
+   avcprofile      : 100<br />
+   avclevel        : 41<br />
+   aacaot          : 2<br />
+   videoframerate  : 25<br />
+   audiochannels   : 2<br />
+   length          : 81601536<br />
+   timescale       : 48000<br />
+   sampletype      : mp4a<br />
+ Duration: 00:28:20.04, start: 0.000000, bitrate: N/A<br />
+   Stream #0.0: Video: h264 (High), yuv420p, 1280x720 [PAR 1:1 DAR 16:9], 25 fps, 1k tbn, 50 tbc<br />
+   Stream #0.1: Audio: aac, 48000 Hz, stereo, fltp<br />
+[matroska @ 0x1008e80] Codec for stream 0 does not use global headers but container format requires global headers<br />
+[matroska @ 0x1008e80] Codec for stream 1 does not use global headers but container format requires global headers<br />
+Output #0, matroska, to '/mnt/540/Our School-s01e01-We Are Year 7.partial.mkv':<br />
+ Metadata:<br />
+   moovPosition    : 36<br />
+   avcprofile      : 100<br />
+   avclevel        : 41<br />
+   aacaot          : 2<br />
+   videoframerate  : 25<br />
+   audiochannels   : 2<br />
+   length          : 81601536<br />
+   timescale       : 48000<br />
+   sampletype      : mp4a<br />
+   encoder         : Lavf56.1.0<br />
+   Stream #0.0: Video: libx264, yuv420p, 1280x720 [PAR 1:1 DAR 16:9], q=2-31, 1k tbn, 1k tbc<br />
+   Stream #0.1: Audio: aac, 48000 Hz, stereo<br />
+Stream mapping:<br />
+ Stream #0:0 -&gt; #0:0 (copy)<br />
+ Stream #0:1 -&gt; #0:1 (copy)<br />
+Press ctrl-c to stop encoding<br />
+[flv @ 0x1007200] Unsupported video codec (8)<br />
+frame=  148 fps= 38 q=-1.0 Lsize=    1852kB time=5.88 bitrate=2579.9kbits/s<br />
+video:1780kB audio:68kB other streams:0kB global headers:0kB muxing overhead: 0.212185%<br />
+INFO: Recorded /mnt/540/Our School-s01e01-We Are Year 7.mkv</code></div></div><br />
+<br />
+<br />
+But if I issue the same command to save on the nsa325 server it works every time! - <br />
+The error suggests avconv is  missing a codec, but why/how can it work on the 325 and not the 540? If the pi was missing a codec it would surely fail on both, no?<br />
+What am I not getting here?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2016, 07:06 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-05-2016, 04:56 PM)</span></cite>But if I issue the same command to save on the nsa325 server it works every time! - <br />
+The error suggests avconv is  missing a codec, but why/how can it work on the 325 and not the 540?</blockquote>No way even to guess until you post the output from the command that works when downloading to 325. There may be nothing useful there, but we can't know until we see it.<br />
+<br />
+Other things to look at:<br />
+<ul class="mycode_list"><li>Try a different programme to see if the same problem occurs. Use something small like an episode of Weather for the Week Ahead.<br />
+</li>
+<li>Try to play the .flv file left behind on 540. If it won't play, it may be getting corrupted such that re-muxing also fails. The error appears to come in decoding of the .flv file<br />
+</li>
+<li>Try to re-mux the .flv file outside of get_iplayer: <br />
+<kbd>avconv -i file.flv -c:a copy -c:v copy -y file.mkv</kbd><br />
+</li>
+<li>Try downloading with <kbd>--modes=flashhigh</kbd> to see if the problem is unique to HD version<br />
+</li>
+<li>Try downloading with <kbd>--modes=hlsbest</kbd> to see if the problem is unique to Flash format<br />
+</li>
+</ul>
+No need to post output from any of those.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">04-05-2016, 08:55 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-05-2016, 07:06 PM)</span></cite>No way even to guess until you post the output from the command that works when downloading to 325. There may be nothing useful there, but we can't know until we see it.<br />
+<br />
+Where do I find 'the output from the command that works'? I have looked in /etc and /.getiplayer and nothing there! - The web site about posting suggests a link to this info, but there is nothing there for me using firefox latest...<br />
+<br />
+<br />
+<ul class="mycode_list"><li>Try a different programme to see if the same problem occurs. Use something small like an episode of Weather for the Week Ahead.<br />
+</li>
+</ul>
+It happens on all programs I have tried for months now. Believe me this is my last resort coming on here as I really hit the end of the testing line with my knowledge!<br />
+<ul class="mycode_list"><li>Try to play the .flv file left behind on 540. If it won't play, it may be getting corrupted such that re-muxing also fails. The error appears to come in decoding of the .flv file<br />
+</li>
+</ul>
+There is no flv file left behind as it gets deleted once it thinks the mkv is done.<br />
+<ul class="mycode_list"><li>Try to re-mux the .flv file outside of get_iplayer: <br />
+<kbd>avconv -i file.flv -c:a copy -c:v copy -y file.mkv</kbd><br />
+</li>
+</ul>
+See above. But I can d/l without the --mkv and then try that, would that help?<br />
+<ul class="mycode_list"><li>Try downloading with <kbd>--modes=flashhigh</kbd> to see if the problem is unique to HD version<br />
+</li>
+<li>Try downloading with <kbd>--modes=hlsbest</kbd> to see if the problem is unique to Flash format<br />
+</li>
+</ul>
+That I will try tomorrow. the download command line is the same for both, just that /mnt/325 is changed for /mnt/540 to map to the other server. This obviously works as it downloads fully and tires to mkv it.<br />
+<br />
+Thanks for the suggestions, maybe we will get to the bottom of this one yet! ;)</blockquote></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">04-05-2016, 09:12 PM</div>
+</div>
+<div class="message">Guess I don't understand how quotes work on here either ;)<br />
+<br />
+Just did a test to get without --mkv and the file downloads fully, but then gets converted to mp4 even nothing in the command asked for this! - I also did --prefs-clear and tried again (without rebooting if that makes a difference) and still the same. <br />
+<br />
+I have to say the quality was rather pixellated on the image with what I can only describe as transparency and latency in the image. Does that make sense?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2016, 10:08 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-05-2016, 08:55 PM)</span></cite>Where do I find 'the output from the command that works'?</blockquote>The same way you got the output for the command that didn't work, which you posted earlier<br />
+<blockquote class="mycode_quote"><cite><span> (04-05-2016, 08:55 PM)</span></cite>There is no flv file left behind as it gets deleted once it thinks the mkv is done.</blockquote>In that case, download with <kbd>--raw</kbd>, which will retain the FLV file and prevent re-muxing to MP4<br />
+<blockquote class="mycode_quote"><cite><span> (04-05-2016, 08:55 PM)</span></cite>That I will try tomorrow. the download command line is the same for both, just that /mnt/325 is changed for /mnt/540 to map to the other server. This obviously works as it downloads fully and tires to mkv it.</blockquote>Again, seeing is believing, so post the output from a successful download.<br />
+<blockquote class="mycode_quote"><cite><span> (04-05-2016, 09:12 PM)</span></cite>Just did a test to get without --mkv and the file downloads fully, but then gets converted to mp4 even nothing in the command asked for this!</blockquote>That is the default behaviour<br />
+<blockquote class="mycode_quote"><cite><span> (04-05-2016, 09:12 PM)</span></cite>I have to say the quality was rather pixellated on the image with what I can only describe as transparency and latency in the image. Does that make sense?</blockquote>There is no way to answer that without having the file, though I suspect those are playback problems rather than any intrinsic problems with the file, unless your machine is too underpowered or avconv is butchering the video.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">04-05-2016, 11:02 PM</div>
+</div>
+<div class="message">Just done a quick test....<br />
+<br />
+D/l to the 540 using --raw gives a good flv file with no image quality issues.<br />
+<br />
+Then converting with avconv to mkv manually (as you posted above) gives a full mkv file of expected size, but has the quality issues.<br />
+<br />
+The output you want disappears from the box (I use putty to talk to the pi) and it only holds so much data. After a while the mkv conversion starts adding lines every second or more and so scrolls the start off the screen. Is this output available in a log file somewhere?<br />
+<br />
+Cheers, you have helped me to get a handle on this now! :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-05-2016, 12:29 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-05-2016, 11:02 PM)</span></cite>Then converting with avconv to mkv manually (as you posted above) gives a full mkv file of expected size, but has the quality issues.</blockquote>When re-muxing, ffmpeg is reading the entire file off the NAS, processing it in system memory and then writing it all back to the same disk in a different container format. You have an underpowered machine and possibly a slow network disk, which can cause glitches and failures (though I've never seen your original error in such circumstances). Although I gave up on it long ago, I know some people get by OK with get_iplayer on RPi, so that suggests your 540 could be the issue. Yours is not a general problem, so the underlying cause must lie somewhere in your particular setup. Perhaps you can configure your get_iplayer output directory on a SD card to see if that helps, and then copy the final files to 540 outside get_iplayer. And of course you could do the same thing with the 325.<br />
+<blockquote class="mycode_quote"><cite><span> (04-05-2016, 11:02 PM)</span></cite>The output you want disappears from the box (I use putty to talk to the pi) and it only holds so much data. After a while the mkv conversion starts adding lines every second or more and so scrolls the start off the screen. Is this output available in a log file somewhere?</blockquote>Redirect standard output and error streams to a file as with any other command-line utility. If you don't know how to do that, Google is your friend.<br />
+<br />
+There isn't anything more I can tell you on this. Perhaps a RPi user with better first-hand experience will happen by. Good luck.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-359</h2></div><div class="dateline">11-05-2016, 07:58 PM</div>
+</div>
+<div class="message">I believe that it might be caused by scrimping on the HDD usedin the 540 as this time I went for Seagate NAS instead of WD reds.<br />
+<br />
+It's the only thing that's different and I have no way to confirm this, but it looks most likely.<br />
+<br />
+Darn it!<br />
+<br />
+Anyone got some 6TB WD reds they would like to donate to a good cause? :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Odd problem, raspberry pi and 2 servers.....</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

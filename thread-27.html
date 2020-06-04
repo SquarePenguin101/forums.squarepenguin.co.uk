@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - please help, need mp3 and higher bitrate</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; please help, need mp3 and higher bitrate</div>
+<div id="pagetitle"><h2>please help, need mp3 and higher bitrate</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-55</h2></div><div class="dateline">28-08-2013, 05:12 AM</div>
+</div>
+<div class="message">For the love of god, can someone please explain to me (in a completely idiot proof way) how to download BBC radio in MP3 format.  I'm using windows web pvr manager.  I have tried reading the faqs and guides...it's not working.  I'm sure it's entirely my fault, but I need a *simple* step-by-step retard proof explanation.  I just want to set it to automatically dl every episode of a radio 6 programme in mp3 format at the highest quality.  I tried adding "flashaudio" to the mode option in my saved pvr search list thing, but when I click run pvr it gives me an error: <br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaudio) available for this programme with version 'default' (try using --modes=flashaaclow,rtspaaclow,wma)<br />
+ERROR: Failed to record 'programme name - 21/08/2013 (b038btvj)'<br />
+<br />
+I...don't know what I'm doing.  I can only get it to record in m4a at 48 kbps.  When I used Radio Downloader it always recorded at a higher bitrate than that.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">28-08-2013, 08:42 AM</div>
+</div>
+<div class="message">You can simply save a preference for MP3 conversion, but you are going to need to use the command line 'version' of get_iplayer.<br />
+<br />
+Seeing as you managed to create a user account here and successfully post in this forum you clearly possess the necessary skill to type some words into the command line, so there is no reason not to use it!<br />
+<br />
+So instead of opening the web PVR manager, open the standard get_iplayer command line.<br />
+<br />
+Once there, you can save a preference for automatically converting to MP3 by following exactly what is written in the Radio Download guide <a href="https://squarepenguin.co.uk/guides/radio-download-guide/#How_do_I_make_get_iplayer_automatically_convert_radio_programmes_to_MP3?">HERE</a>. Use the global preference command (the second one) and that should be it.<br />
+<br />
+You don't need to change the quality level of downloaded radio programmes, get_iplayer will automatically download the highest quality one available which is often 96kbps or something like that, they're not provided by the BBC in particularly high bitrate in the first place.<br />
+<br />
+Once you have saved that preference for converting to MP3, go and try another download via the web PVR manager and see what happens.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-08-2013, 11:50 AM</div>
+</div>
+<div class="message">As the error message tells you, that programme is not available as flashaudio (MP3).  Only local radio programmes are available in that format, not programmes from national stations such as 6 Music.  Do you really, truly need to convert to MP3?  I've come across a number of Radio Downloader converts who grew accustomed to MP3 because earlier versions of RD gave them no choice.  But even later versions of RD kept downloads in native format unless configured to do otherwise.  If you have a piece of hardware that will only accept MP3, then fair enough, but there is often no compelling reason to convert.<br />
+<br />
+Your error message also suggests that you are accessing iPlayer from outside the UK, which means that the higher bit rate is not available to you.  It that is the case, by using the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--aactomp3</code></div></div> option, you will be converting 48 kbps AAC audio to 128 kbps MP3 audio.  This would have been the default behaviour of Radio Downloader as well if it was configured to convert AAC to MP3. It may not sound any worse than the original, but it probably won't sound better either.  <br />
+<br />
+One more thing: please refrain from slinging pejoratives like "retard".  I know you employed it in self-deprecation, but that only serves to reinforce the point.  We only need your get_iplayer questions in order to provide assistance.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; please help, need mp3 and higher bitrate</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

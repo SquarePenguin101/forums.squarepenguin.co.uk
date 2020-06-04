@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can't get cache to  --refresh with Homebrew get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can't get cache to  --refresh with Homebrew get_iplayer</div>
+<div id="pagetitle"><h2>Can't get cache to  --refresh with Homebrew get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">30-10-2017, 10:52 AM</div>
+</div>
+<div class="message">I have updated to get_iplayer 3.06_1-homebrew (running on macOS 10.12.6) but can't get the cache to refresh. Whenever I search for anything, I get old (last week's) data. <br />
+<br />
+Trying "get_iplayer -–refresh" goes through the motions, but still with no new programmes.<br />
+<br />
+I have no problems downloading via --pid (after it says initially the programme can't be found).<br />
+<br />
+Any suggestions?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 02:31 PM</div>
+</div>
+<div class="message">Post the output from these commands:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer -V<br />
+perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 02:35 PM</div>
+</div>
+<div class="message">And these as well:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5" perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION&#92;n";'<br />
+PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5" perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION&#92;n";'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">30-10-2017, 02:52 PM</div>
+</div>
+<div class="message">Here's the first one, from my portable device (which also isn't bringing back the results I'd expect): <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GPC-MacBook-Pro:~ GPC&#36; get_iplayer -v<br />
+get_iplayer 3.06_1-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: Profile dir: /Users/gpc/.get_iplayer<br />
+INFO: User options file: /Users/gpc/.get_iplayer/options<br />
+INFO: System options file: /etc/get_iplayer/options<br />
+Current options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;encodingconsolein = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;encodingconsoleout = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;encodinglocale = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;encodinglocalefs = UTF-8<br />
+&nbsp;&nbsp;&nbsp;&nbsp;output = /Users/gpc/Desktop/Transfer&#92; to&#92; Mac&#92; Mini<br />
+&nbsp;&nbsp;&nbsp;&nbsp;verbose = 1<br />
+<br />
+INFO: Search args: '.*'<br />
+INFO: Got 125 file cache entries for tv<br />
+INFO: Search term '.*' is a substring<br />
+DEBUG: Search download_regex = .*<br />
+DEBUG: Search channel_regex = .*<br />
+DEBUG: Search category_regex = .*<br />
+DEBUG: Search exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search channel_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search category_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search since = 999999<br />
+DEBUG: Search before = -999999<br />
+DEBUG: Search available_since = <br />
+DEBUG: Search expires_before = <br />
+<br />
+Matches:<br />
+1:&nbsp;&nbsp;&nbsp;&nbsp;A Matter of Life and Debt: Series 1 - Episode 15, BBC Two, b09c5dx1<br />
+2:&nbsp;&nbsp;&nbsp;&nbsp;Alba Today - 30/10/2017, BBC Alba, b09cf6xr<br />
+3:&nbsp;&nbsp;&nbsp;&nbsp;Alba Today - 30/10/2017, BBC Alba, b09cnp6p<br />
+4:&nbsp;&nbsp;&nbsp;&nbsp;Alphablocks: Series 4 - Name, CBeebies, b030t556<br />
+5:&nbsp;&nbsp;&nbsp;&nbsp;Arthur: Series 15 - Buster's Bombs, CBBC, b03gph16<br />
+6:&nbsp;&nbsp;&nbsp;&nbsp;Asia Business Report - 30/10/2017, BBC News, b09ckdkm<br />
+7:&nbsp;&nbsp;&nbsp;&nbsp;Asra: Cyfres 2 - Ysgol Crud y Werin, Aberdaron, S4C, p05jjsjr<br />
+8:&nbsp;&nbsp;&nbsp;&nbsp;Asra: Cyfres 2 - Ysgol y Wern, Caerdydd 1, S4C, p05k543z<br />
+9:&nbsp;&nbsp;&nbsp;&nbsp;BBC Business Live - 30/10/2017, BBC News, b09ckdp4<br />
+10:&nbsp;&nbsp;&nbsp;&nbsp;BBC Newsroom Live - 30/10/2017, BBC News, b09ckdp8<br />
+11:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkr<br />
+12:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkv<br />
+13:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkx<br />
+14:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC Two, b09d5v57<br />
+15:&nbsp;&nbsp;&nbsp;&nbsp;BOOKtalk - Chris Skidmore, BBC Parliament, b09fp4pf<br />
+16:&nbsp;&nbsp;&nbsp;&nbsp;Baby Jake: Series 2 - Baby Jake Loves Balloons, CBeebies, b01n2w38<br />
+17:&nbsp;&nbsp;&nbsp;&nbsp;Bach a Mawr - Pennod 30, S4C, p02j99zq<br />
+18:&nbsp;&nbsp;&nbsp;&nbsp;Ben a Mali a'u byd bach o hud - Poli Lindys, S4C, p02b4jx1<br />
+19:&nbsp;&nbsp;&nbsp;&nbsp;Bing - Lost, CBeebies, b048slzg<br />
+20:&nbsp;&nbsp;&nbsp;&nbsp;Bing - Eggy Head, CBeebies, b05vhfnx<br />
+21:&nbsp;&nbsp;&nbsp;&nbsp;Blero'n Mynd i Ocido: Cyfres 2016 - Blero'n Colli Balwn, S4C, p046flvr<br />
+22:&nbsp;&nbsp;&nbsp;&nbsp;Blero'n Mynd i Ocido: Cyfres 2016 - Diwrnod Gwlyb Heulog, S4C, p047v3xg<br />
+23:&nbsp;&nbsp;&nbsp;&nbsp;Breakfast (BBC News Channel) - 30/10/2017, BBC News, b09ckdp2<br />
+24:&nbsp;&nbsp;&nbsp;&nbsp;Breakfast - 30/10/2017, BBC One, b09bztf8<br />
+25:&nbsp;&nbsp;&nbsp;&nbsp;Business Briefing - 30/10/2017, BBC News, b09dccty<br />
+26:&nbsp;&nbsp;&nbsp;&nbsp;Caught Red Handed: Series 6 - Episode 1, BBC Two, b097n8r0<br />
+27:&nbsp;&nbsp;&nbsp;&nbsp;Charlie and Lola: Series 3 - You're Coming Home With Me, CBeebies, b009w046<br />
+28:&nbsp;&nbsp;&nbsp;&nbsp;Chwedlau Tinga Tinga: Cyfres 2014 - Pam fod Parot Methu Cadw Cyfri, S4C, p02sbts4<br />
+29:&nbsp;&nbsp;&nbsp;&nbsp;Chwedlau Tinga Tinga: Cyfres 2014 - Pam fod gan Iâr Gini Ddotiau?, S4C, p02sv9dd<br />
+30:&nbsp;&nbsp;&nbsp;&nbsp;City Boy Fight Club - -, BBC One, p04sh9lt<br />
+31:&nbsp;&nbsp;&nbsp;&nbsp;Countryfile Autumn Diaries: 2017 - Episode 1, BBC One, b09d974n<br />
+32:&nbsp;&nbsp;&nbsp;&nbsp;Danger Mouse: Series 1 - The Spy Who Came in with a Cold, CBBC, b07zjdkm<br />
+33:&nbsp;&nbsp;&nbsp;&nbsp;Dateline London - 28/10/2017, BBC News, b09ckd6k<br />
+34:&nbsp;&nbsp;&nbsp;&nbsp;Digbi Draig: Cyfres 1 - Adenydd, S4C, p0502m9q<br />
+35:&nbsp;&nbsp;&nbsp;&nbsp;Digbi Draig: Cyfres 1 - Digbi Dwy Ddraig, S4C, p0514m35<br />
+36:&nbsp;&nbsp;&nbsp;&nbsp;Dwylo'r Enfys: Cyfres 1 - Owen, S4C, p02bdhls<br />
+37:&nbsp;&nbsp;&nbsp;&nbsp;Dwylo'r Enfys: Cyfres 1 - Efa, S4C, p02c0r86<br />
+38:&nbsp;&nbsp;&nbsp;&nbsp;Fugitives: Series 1 Cutdowns - Episode 1, BBC One, b09dhswj<br />
+39:&nbsp;&nbsp;&nbsp;&nbsp;Getting the Builders In: Series 1 - Episode 1, BBC One, b09dcxds<br />
+40:&nbsp;&nbsp;&nbsp;&nbsp;Go Jetters: Series 1 - The Taj Mahal, India, CBeebies, b075pnny<br />
+41:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Dr Bernice A. King - CEO, The King Center, BBC News, b09ckdkh<br />
+42:&nbsp;&nbsp;&nbsp;&nbsp;Hafod Haul: Cyfres 2 - Pennod 1, S4C, p02b549b<br />
+43:&nbsp;&nbsp;&nbsp;&nbsp;Hafod Haul: Cyfres 2 - Pennod 3, S4C, p02bdhpv<br />
+44:&nbsp;&nbsp;&nbsp;&nbsp;Hey Duggee: Series 1 - The We Love Animals Badge, CBeebies, b05yxjnv<br />
+45:&nbsp;&nbsp;&nbsp;&nbsp;Holby City: Series 19 - Things Left Unsaid, BBC Two, b09c4wz1<br />
+46:&nbsp;&nbsp;&nbsp;&nbsp;Homes Under the Hammer: Series 18 - Episode 61, BBC One, b04xt5zy<br />
+47:&nbsp;&nbsp;&nbsp;&nbsp;Joins BBC News - 30/10/2017, BBC One, b09b4gfb<br />
+48:&nbsp;&nbsp;&nbsp;&nbsp;Justin's House: Series 1 - Moving In, CBeebies, b0162gdl<br />
+49:&nbsp;&nbsp;&nbsp;&nbsp;Kate and Mim-Mim: Series 2 - Boomer's First Flight, CBeebies, b0948kg8<br />
+50:&nbsp;&nbsp;&nbsp;&nbsp;Let's Play: Series 1 - Policeman, CBeebies, b01qmc0l<br />
+51:&nbsp;&nbsp;&nbsp;&nbsp;MOTD Kickabout: Round-Up - 30/10/2017, CBBC, b09d97lz<br />
+52:&nbsp;&nbsp;&nbsp;&nbsp;Marcaroni: Cyfres 1 - Dillad Tu Chwith, S4C, p02g3g5p<br />
+53:&nbsp;&nbsp;&nbsp;&nbsp;Meripwsan: Cyfres 2015 - Trefnu, S4C, p034dlby<br />
+54:&nbsp;&nbsp;&nbsp;&nbsp;Meripwsan: Cyfres 2015 - Olwynion, S4C, p034nsbn<br />
+55:&nbsp;&nbsp;&nbsp;&nbsp;Millie Inbetween: Series 1 - Bigging-Up Dad, CBBC, b04mlr6m<br />
+56:&nbsp;&nbsp;&nbsp;&nbsp;Money for Nothing: Series 4 - Episode 15, BBC Two, b09c5swp<br />
+57:&nbsp;&nbsp;&nbsp;&nbsp;Mr Bloom: Here and There: Series 2 - New Forest Ponies, CBeebies, b04t6m0g<br />
+58:&nbsp;&nbsp;&nbsp;&nbsp;My Life: Series 8 - Surf's Up, CBBC, b08frrv8<br />
+59:&nbsp;&nbsp;&nbsp;&nbsp;Newsday - 30/10/2017, BBC News, b09ckdk5<br />
+60:&nbsp;&nbsp;&nbsp;&nbsp;Newsday - 30/10/2017, BBC News, b09ckdkk<br />
+61:&nbsp;&nbsp;&nbsp;&nbsp;Newsround - 30/10/2017, CBBC, b09d04sn<br />
+62:&nbsp;&nbsp;&nbsp;&nbsp;Newsround - 30/10/2017, CBBC, b09d04sq<br />
+63:&nbsp;&nbsp;&nbsp;&nbsp;Octonauts: Series 4 - Octonauts and the Bomber Worms, CBeebies, b09c14y6<br />
+64:&nbsp;&nbsp;&nbsp;&nbsp;Octonots: Cyfres 2011 - Yr Octonots a'r Storm Danfor, S4C, p02k43m1<br />
+65:&nbsp;&nbsp;&nbsp;&nbsp;Odd Squad - Worst First Day Ever, CBBC, b07n7gvq<br />
+66:&nbsp;&nbsp;&nbsp;&nbsp;Olobob Top: Series 1 - Whooshy Wotsit, CBeebies, b0905t3d<br />
+67:&nbsp;&nbsp;&nbsp;&nbsp;Operation Ouch!: Series 6 - Exceptional Eyebrows, CBBC, b09c1ls5<br />
+68:&nbsp;&nbsp;&nbsp;&nbsp;Pablo: Series 1 - The Noise Dragon, CBeebies, b098gqr4<br />
+69:&nbsp;&nbsp;&nbsp;&nbsp;Patchwork Pals - Frog, CBeebies, b08m97fs<br />
+70:&nbsp;&nbsp;&nbsp;&nbsp;Peter Rabbit: Series 1 - The Tale of the Unguarded Garden, CBeebies, b036myy2<br />
+71:&nbsp;&nbsp;&nbsp;&nbsp;Politics Europe - 27/10/2017, BBC Parliament, b09c5k87<br />
+72:&nbsp;&nbsp;&nbsp;&nbsp;Popi'r Gath - Mynydd Caws, S4C, p02g3fvm<br />
+73:&nbsp;&nbsp;&nbsp;&nbsp;Postman Pat: Special Delivery Service: Series 2 - Postman Pat and the Runaway Bees, CBeebies, b01qxz8l<br />
+74:&nbsp;&nbsp;&nbsp;&nbsp;Question Time - 26/10/2017, BBC Two, b09c1q8b<br />
+75:&nbsp;&nbsp;&nbsp;&nbsp;ROY: Series 4 - Fright of a Lifetime, CBBC, b05nyr1r<br />
+76:&nbsp;&nbsp;&nbsp;&nbsp;Raa Raa the Noisy Lion: Series 2 - The Monkey That Roared, CBeebies, b01cbmy2<br />
+77:&nbsp;&nbsp;&nbsp;&nbsp;Rank the Prank - Who's Got Talent?, CBBC, b07vcf4j<br />
+78:&nbsp;&nbsp;&nbsp;&nbsp;Rugby League World Cup: 2017 - 29/10/2017 - Highlights, BBC One, b09d91vs<br />
+79:&nbsp;&nbsp;&nbsp;&nbsp;Sam Tân: Cyfres 6 - Dwbwl Trwbwl, S4C, p02b4q0g<br />
+80:&nbsp;&nbsp;&nbsp;&nbsp;Sam Tân: Cyfres 6 - Tân Gwyllt i Mandy, S4C, p02d8lxy<br />
+81:&nbsp;&nbsp;&nbsp;&nbsp;Sara a Cwac: Cyfres 2013 - Pobi Teisen, S4C, p02b5435<br />
+82:&nbsp;&nbsp;&nbsp;&nbsp;Scream Street - Summer Sucks!, CBBC, b09cby67<br />
+83:&nbsp;&nbsp;&nbsp;&nbsp;See Hear: On Tour - Amsterdam, BBC Two, b09dh3fl<br />
+84:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Northern Ireland Affairs Committee, BBC Parliament, b09c5k89<br />
+85:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Brexit and the Future of Customs Services Committee, BBC Parliament, b09cyg0q<br />
+86:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Future of Policing Committee, BBC Parliament, b09fp608<br />
+87:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Channel 4 Committee, BBC Parliament, b09fq5zd<br />
+88:&nbsp;&nbsp;&nbsp;&nbsp;Shark Bites - Backshall's Best Shark Bites, CBBC, b09d97m1<br />
+89:&nbsp;&nbsp;&nbsp;&nbsp;Show Me Show Me: Series 5 - Sky and Splashing, CBeebies, b03lyy7n<br />
+90:&nbsp;&nbsp;&nbsp;&nbsp;Show Me Show Me: Series 6 - Donkeys and Piers, CBeebies, b06mvdv6<br />
+91:&nbsp;&nbsp;&nbsp;&nbsp;Something Special: We're All Friends: Series 8 - Gymnastics, CBeebies, b01nqvbd<br />
+92:&nbsp;&nbsp;&nbsp;&nbsp;Speechless - -, BBC Four, b09cfky7<br />
+93:&nbsp;&nbsp;&nbsp;&nbsp;Sport Today - 30/10/2017, BBC News, b09ckdkp<br />
+94:&nbsp;&nbsp;&nbsp;&nbsp;Stiw: Cyfres 2013 - Helfa Calan Gaea', S4C, p035v8xl<br />
+95:&nbsp;&nbsp;&nbsp;&nbsp;Sunday Politics London - 30/10/2017, BBC Parliament, b09ckg47<br />
+96:&nbsp;&nbsp;&nbsp;&nbsp;Teletubbies: Series 2 - Backwards Forwards, CBeebies, b08r2l4b<br />
+97:&nbsp;&nbsp;&nbsp;&nbsp;Teletubbies: Series 2 - Take Off, CBeebies, b09bbt43<br />
+98:&nbsp;&nbsp;&nbsp;&nbsp;Ten Minute Rule Bill - 25/10/2017, BBC Parliament, b09fc0z4<br />
+99:&nbsp;&nbsp;&nbsp;&nbsp;The Briefing - 30/10/2017, BBC News, b09dcctw<br />
+100:&nbsp;&nbsp;&nbsp;&nbsp;The Briefing - 30/10/2017, BBC News, b09dcd1q<br />
+101:&nbsp;&nbsp;&nbsp;&nbsp;The Dog Ate My Homework: Series 4 - Sports Day Special - Kitty v Olive, CBBC, b08dm1sq<br />
+102:&nbsp;&nbsp;&nbsp;&nbsp;The Graham Norton Show: Series 22 - Episode 5, BBC One, b09c6mc0<br />
+103:&nbsp;&nbsp;&nbsp;&nbsp;The Hairy Builder - Doncaster Mansion House, BBC Two, b07kx18f<br />
+104:&nbsp;&nbsp;&nbsp;&nbsp;The Numtums: Series 1 - Animals, CBeebies, b01f5hjj<br />
+105:&nbsp;&nbsp;&nbsp;&nbsp;The Search for the Lost Manuscript: Julian of Norwich - -, BBC Four, b07l6bd0<br />
+106:&nbsp;&nbsp;&nbsp;&nbsp;The Week in Parliament - 27/10/2017, BBC News, b09c5k8c<br />
+107:&nbsp;&nbsp;&nbsp;&nbsp;The Week in Parliament - 30/10/2017, BBC Parliament, b09cyg0n<br />
+108:&nbsp;&nbsp;&nbsp;&nbsp;The Women's Football Show: 2017 - 29/10/2017, BBC One, b09dhgpq<br />
+109:&nbsp;&nbsp;&nbsp;&nbsp;Tiny Tumble: Series 1 - Up a Gum Tree, CBeebies, b01rhw54<br />
+110:&nbsp;&nbsp;&nbsp;&nbsp;Tomos a'i Ffrindiau - Boncyffion Bywiog, S4C, p02b4myz<br />
+111:&nbsp;&nbsp;&nbsp;&nbsp;Twirlywoos: Series 1 - Behind, CBeebies, b054tdlp<br />
+112:&nbsp;&nbsp;&nbsp;&nbsp;Twirlywoos: Series 2 - On Top Of, CBeebies, b072w18g<br />
+113:&nbsp;&nbsp;&nbsp;&nbsp;Twm Tisian - Jar Bisgedi, S4C, p02b4wkl<br />
+114:&nbsp;&nbsp;&nbsp;&nbsp;Twm Tisian - Siopa, S4C, p02dtffc<br />
+115:&nbsp;&nbsp;&nbsp;&nbsp;Victoria Derbyshire - 30/10/2017, BBC News, b09ckdp6<br />
+116:&nbsp;&nbsp;&nbsp;&nbsp;Waybuloo: Series 3 - Yojojo Wants to Share, CBeebies, b01093q9<br />
+117:&nbsp;&nbsp;&nbsp;&nbsp;Weather for the Week Ahead - 30/10/2017, BBC One, b09b4gf8<br />
+118:&nbsp;&nbsp;&nbsp;&nbsp;Westminster Hall - 30/10/2017, BBC Parliament, b09cy2fn<br />
+119:&nbsp;&nbsp;&nbsp;&nbsp;What We Do in the Shadows - -, BBC Two, b053fyv3<br />
+120:&nbsp;&nbsp;&nbsp;&nbsp;Who's Afraid of Conceptual Art? - -, BBC Four, b07w6gkt<br />
+121:&nbsp;&nbsp;&nbsp;&nbsp;Wmff - Pawb Yn Copio Wncwl Harri, S4C, p02h7g3v<br />
+122:&nbsp;&nbsp;&nbsp;&nbsp;Woolly and Tig: Series 2 - Excited, CBeebies, b01rcfs8<br />
+123:&nbsp;&nbsp;&nbsp;&nbsp;Worst Year of My Life... Again - Episode 11, CBBC, b046v6lb<br />
+124:&nbsp;&nbsp;&nbsp;&nbsp;Y Dywysoges Fach - Nid y fi wnaeth, S4C, p02b4kkh<br />
+125:&nbsp;&nbsp;&nbsp;&nbsp;Y Teulu Mawr: Cyfres 2010 - Noson Fawr Mrs Mawr, S4C, p02sv9br<br />
+INFO: 125 matching programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">30-10-2017, 02:56 PM</div>
+</div>
+<div class="message">Second command simply yields: 1.996<br />
+<br />
+Third command yields: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Can't locate Mojolicious.pm in @INC (you may need to install the Mojolicious module) (@INC contains: /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.2 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .).<br />
+BEGIN failed--compilation aborted.</code></div></div><br />
+Fourth command yields: 2.052<br />
+<br />
+Final command: 7.48</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 02:56 PM</div>
+</div>
+<div class="message">For others: that is upper-case <kbd>-V</kbd>. Saves some screen real estate.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 03:01 PM</div>
+</div>
+<div class="message">That all confirms your installation is OK. Now post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh<br />
+get_iplayer --since 24 "daily politics"<br />
+get_iplayer --prefs-show</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">30-10-2017, 03:05 PM</div>
+</div>
+<div class="message">(Sorry about the -V vs. -v)<br />
+<br />
+Here's another long one from the first command:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GPC-MacBook-Pro:~ gpc&#36; get_iplayer --refresh<br />
+get_iplayer 3.06_1-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+..................................<br />
+INFO: Added 42 tv programmes to cache<br />
+Matches:<br />
+1:&nbsp;&nbsp;&nbsp;&nbsp;A Matter of Life and Debt: Series 1 - Episode 15, BBC Two, b09c5dx1<br />
+2:&nbsp;&nbsp;&nbsp;&nbsp;Afternoon Live - 30/10/2017, BBC News, b09ckdpg<br />
+3:&nbsp;&nbsp;&nbsp;&nbsp;Alba Today - 30/10/2017, BBC Alba, b09cf6xr<br />
+4:&nbsp;&nbsp;&nbsp;&nbsp;Alba Today - 30/10/2017, BBC Alba, b09cnp6p<br />
+5:&nbsp;&nbsp;&nbsp;&nbsp;Alphablocks: Series 4 - Name, CBeebies, b030t556<br />
+6:&nbsp;&nbsp;&nbsp;&nbsp;Arthur: Series 14 - DW, Queen of the Comeback, CBBC, b00xjzkb<br />
+7:&nbsp;&nbsp;&nbsp;&nbsp;Arthur: Series 15 - Buster's Bombs, CBBC, b03gph16<br />
+8:&nbsp;&nbsp;&nbsp;&nbsp;Asia Business Report - 30/10/2017, BBC News, b09ckdkm<br />
+9:&nbsp;&nbsp;&nbsp;&nbsp;Asra: Cyfres 2 - Ysgol Crud y Werin, Aberdaron, S4C, p05jjsjr<br />
+10:&nbsp;&nbsp;&nbsp;&nbsp;Asra: Cyfres 2 - Ysgol y Wern, Caerdydd 1, S4C, p05k543z<br />
+11:&nbsp;&nbsp;&nbsp;&nbsp;BBC Business Live - 30/10/2017, BBC News, b09ckdp4<br />
+12:&nbsp;&nbsp;&nbsp;&nbsp;BBC News at One - 30/10/2017, BBC One, b09bztfh<br />
+13:&nbsp;&nbsp;&nbsp;&nbsp;BBC Newsline: Lunchtime News - 30/10/2017, BBC One, b09bzxkw<br />
+14:&nbsp;&nbsp;&nbsp;&nbsp;BBC Newsroom Live - 30/10/2017, BBC News, b09ckdp8<br />
+15:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkr<br />
+16:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkv<br />
+17:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdkx<br />
+18:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC News, b09ckdpd<br />
+19:&nbsp;&nbsp;&nbsp;&nbsp;BBC News - 30/10/2017, BBC Two, b09d5v57<br />
+20:&nbsp;&nbsp;&nbsp;&nbsp;BBC Wales Today: Lunchtime News - 30/10/2017, BBC One, b09bzw7z<br />
+21:&nbsp;&nbsp;&nbsp;&nbsp;BOOKtalk - Chris Skidmore, BBC Parliament, b09fp4pf<br />
+22:&nbsp;&nbsp;&nbsp;&nbsp;Baby Jake: Series 2 - Baby Jake Loves Balloons, CBeebies, b01n2w38<br />
+23:&nbsp;&nbsp;&nbsp;&nbsp;Bach a Mawr - Pennod 30, S4C, p02j99zq<br />
+24:&nbsp;&nbsp;&nbsp;&nbsp;Bargain Hunt: Series 48 - Kedleston 26, BBC One, b09dd0xv<br />
+25:&nbsp;&nbsp;&nbsp;&nbsp;Ben a Mali a'u byd bach o hud - Poli Lindys, S4C, p02b4jx1<br />
+26:&nbsp;&nbsp;&nbsp;&nbsp;Bing - Lost, CBeebies, b048slzg<br />
+27:&nbsp;&nbsp;&nbsp;&nbsp;Bing - Eggy Head, CBeebies, b05vhfnx<br />
+28:&nbsp;&nbsp;&nbsp;&nbsp;Blero'n Mynd i Ocido: Cyfres 2016 - Blero'n Colli Balwn, S4C, p046flvr<br />
+29:&nbsp;&nbsp;&nbsp;&nbsp;Blero'n Mynd i Ocido: Cyfres 2016 - Diwrnod Gwlyb Heulog, S4C, p047v3xg<br />
+30:&nbsp;&nbsp;&nbsp;&nbsp;Breakfast (BBC News Channel) - 30/10/2017, BBC News, b09ckdp2<br />
+31:&nbsp;&nbsp;&nbsp;&nbsp;Breakfast - 30/10/2017, BBC One, b09bztf8<br />
+32:&nbsp;&nbsp;&nbsp;&nbsp;Business Briefing - 30/10/2017, BBC News, b09dccty<br />
+33:&nbsp;&nbsp;&nbsp;&nbsp;Byd o Liw: Cestyll - Dinas Brân, S4C, p05k546m<br />
+34:&nbsp;&nbsp;&nbsp;&nbsp;Caught Red Handed: Series 6 - Episode 1, BBC Two, b097n8r0<br />
+35:&nbsp;&nbsp;&nbsp;&nbsp;Celwydd Noeth: Cyfres 3 - Pennod 20, S4C, p05jt8xx<br />
+36:&nbsp;&nbsp;&nbsp;&nbsp;Charlie and Lola: Series 3 - You're Coming Home With Me, CBeebies, b009w046<br />
+37:&nbsp;&nbsp;&nbsp;&nbsp;Chwedlau Tinga Tinga: Cyfres 2014 - Pam fod Parot Methu Cadw Cyfri, S4C, p02sbts4<br />
+38:&nbsp;&nbsp;&nbsp;&nbsp;Chwedlau Tinga Tinga: Cyfres 2014 - Pam fod gan Iâr Gini Ddotiau?, S4C, p02sv9dd<br />
+39:&nbsp;&nbsp;&nbsp;&nbsp;City Boy Fight Club - -, BBC One, p04sh9lt<br />
+40:&nbsp;&nbsp;&nbsp;&nbsp;Class Dismissed: Series 1 - First Day of Term, CBBC, b06zzp4r<br />
+41:&nbsp;&nbsp;&nbsp;&nbsp;Countryfile Autumn Diaries: 2017 - Episode 1, BBC One, b09d974n<br />
+42:&nbsp;&nbsp;&nbsp;&nbsp;Daily Politics - 30/10/2017, BBC Two, b09dh84c<br />
+43:&nbsp;&nbsp;&nbsp;&nbsp;Danger Mouse: Series 1 - The Spy Who Came in with a Cold, CBBC, b07zjdkm<br />
+44:&nbsp;&nbsp;&nbsp;&nbsp;Dateline London - 28/10/2017, BBC News, b09ckd6k<br />
+45:&nbsp;&nbsp;&nbsp;&nbsp;Digbi Draig: Cyfres 1 - Adenydd, S4C, p0502m9q<br />
+46:&nbsp;&nbsp;&nbsp;&nbsp;Digbi Draig: Cyfres 1 - Digbi Dwy Ddraig, S4C, p0514m35<br />
+47:&nbsp;&nbsp;&nbsp;&nbsp;Doctors: Series 19 - Once upon a Time, BBC One, b09cygfl<br />
+48:&nbsp;&nbsp;&nbsp;&nbsp;Dwylo'r Enfys: Cyfres 1 - Owen, S4C, p02bdhls<br />
+49:&nbsp;&nbsp;&nbsp;&nbsp;Dwylo'r Enfys: Cyfres 1 - Efa, S4C, p02c0r86<br />
+50:&nbsp;&nbsp;&nbsp;&nbsp;East Midlands Today: Lunchtime News - 30/10/2017, BBC One, b09bzz7l<br />
+51:&nbsp;&nbsp;&nbsp;&nbsp;Fugitives: Series 1 Cutdowns - Episode 1, BBC One, b09dhswj<br />
+52:&nbsp;&nbsp;&nbsp;&nbsp;Getting the Builders In: Series 1 - Episode 1, BBC One, b09dcxds<br />
+53:&nbsp;&nbsp;&nbsp;&nbsp;Go Jetters: Series 1 - The Taj Mahal, India, CBeebies, b075pnny<br />
+54:&nbsp;&nbsp;&nbsp;&nbsp;Grandpa In My Pocket: Series 4 - Squeak! Squeak! Mr Squeak!, CBeebies, b03tcj16<br />
+55:&nbsp;&nbsp;&nbsp;&nbsp;HARDtalk - Dr Bernice A. King - CEO, The King Center, BBC News, b09ckdkh<br />
+56:&nbsp;&nbsp;&nbsp;&nbsp;Hafod Haul: Cyfres 2 - Pennod 1, S4C, p02b549b<br />
+57:&nbsp;&nbsp;&nbsp;&nbsp;Hafod Haul: Cyfres 2 - Pennod 3, S4C, p02bdhpv<br />
+58:&nbsp;&nbsp;&nbsp;&nbsp;Heno - Fri, 27 Oct 2017, S4C, p05jxn9z<br />
+59:&nbsp;&nbsp;&nbsp;&nbsp;Hey Duggee: Series 1 - The We Love Animals Badge, CBeebies, b05yxjnv<br />
+60:&nbsp;&nbsp;&nbsp;&nbsp;Holby City: Series 19 - Things Left Unsaid, BBC Two, b09c4wz1<br />
+61:&nbsp;&nbsp;&nbsp;&nbsp;Homes Under the Hammer: Series 18 - Episode 61, BBC One, b04xt5zy<br />
+62:&nbsp;&nbsp;&nbsp;&nbsp;I Can Cook: Series 2 - Baked Crumble Nectarines, CBeebies, b00w5nnf<br />
+63:&nbsp;&nbsp;&nbsp;&nbsp;Joins BBC News - 30/10/2017, BBC One, b09b4gfb<br />
+64:&nbsp;&nbsp;&nbsp;&nbsp;Just Kidding: Series 3 - Episode 1, CBBC, b05yxcyx<br />
+65:&nbsp;&nbsp;&nbsp;&nbsp;Justin's House: Series 1 - Moving In, CBeebies, b0162gdl<br />
+66:&nbsp;&nbsp;&nbsp;&nbsp;Kate and Mim-Mim: Series 2 - Boomer's First Flight, CBeebies, b0948kg8<br />
+67:&nbsp;&nbsp;&nbsp;&nbsp;Let's Play: Series 1 - Policeman, CBeebies, b01qmc0l<br />
+68:&nbsp;&nbsp;&nbsp;&nbsp;London News: Lunchtime News - 30/10/2017, BBC One, b09bzynh<br />
+69:&nbsp;&nbsp;&nbsp;&nbsp;Look East: Lunchtime News - 30/10/2017, BBC One, b09c0185<br />
+70:&nbsp;&nbsp;&nbsp;&nbsp;Look North (East Yorkshire and Lincolnshire): Lunchtime News - 30/10/2017, BBC One, b09bzyyb<br />
+71:&nbsp;&nbsp;&nbsp;&nbsp;Look North (North East and Cumbria): Lunchtime News - 30/10/2017, BBC One, b09bzy4p<br />
+72:&nbsp;&nbsp;&nbsp;&nbsp;Look North (Yorkshire): Lunchtime News - 30/10/2017, BBC One, b09bzvk6<br />
+73:&nbsp;&nbsp;&nbsp;&nbsp;MOTD Kickabout: Round-Up - 30/10/2017, CBBC, b09d97lz<br />
+74:&nbsp;&nbsp;&nbsp;&nbsp;Marcaroni: Cyfres 1 - Dillad Tu Chwith, S4C, p02g3g5p<br />
+75:&nbsp;&nbsp;&nbsp;&nbsp;Marrying Mum and Dad: Series 6 - Inflatables, CBBC, b091flzz<br />
+76:&nbsp;&nbsp;&nbsp;&nbsp;Matilda and the Ramsay Bunch: Series 3 - The Ramsays Are Go, CBBC, b08pq98f<br />
+77:&nbsp;&nbsp;&nbsp;&nbsp;Melody: Series 1 - Let's Race, CBeebies, b03l2jz1<br />
+78:&nbsp;&nbsp;&nbsp;&nbsp;Meripwsan: Cyfres 2015 - Trefnu, S4C, p034dlby<br />
+79:&nbsp;&nbsp;&nbsp;&nbsp;Meripwsan: Cyfres 2015 - Olwynion, S4C, p034nsbn<br />
+80:&nbsp;&nbsp;&nbsp;&nbsp;Midlands Today: Lunchtime News - 30/10/2017, BBC One, b09bzvrb<br />
+81:&nbsp;&nbsp;&nbsp;&nbsp;Millie Inbetween: Series 1 - Bigging-Up Dad, CBBC, b04mlr6m<br />
+82:&nbsp;&nbsp;&nbsp;&nbsp;Money for Nothing: Series 4 - Episode 15, BBC Two, b09c5swp<br />
+83:&nbsp;&nbsp;&nbsp;&nbsp;Mr Bloom: Here and There: Series 2 - New Forest Ponies, CBeebies, b04t6m0g<br />
+84:&nbsp;&nbsp;&nbsp;&nbsp;My Life: Series 8 - Surf's Up, CBBC, b08frrv8<br />
+85:&nbsp;&nbsp;&nbsp;&nbsp;Newsday - 30/10/2017, BBC News, b09ckdk5<br />
+86:&nbsp;&nbsp;&nbsp;&nbsp;Newsday - 30/10/2017, BBC News, b09ckdkk<br />
+87:&nbsp;&nbsp;&nbsp;&nbsp;Newsround - 30/10/2017, CBBC, b09d04sn<br />
+88:&nbsp;&nbsp;&nbsp;&nbsp;Newsround - 30/10/2017, CBBC, b09d04sq<br />
+89:&nbsp;&nbsp;&nbsp;&nbsp;Newyddion S4C - Mon, 30 Oct 2017 12:00, S4C, p05k545w<br />
+90:&nbsp;&nbsp;&nbsp;&nbsp;Newyddion S4C - Mon, 30 Oct 2017 14:00, S4C, p05k546w<br />
+91:&nbsp;&nbsp;&nbsp;&nbsp;North West Today: Lunchtime News - 30/10/2017, BBC One, b09bzxxm<br />
+92:&nbsp;&nbsp;&nbsp;&nbsp;Octonauts: Series 4 - Octonauts and the Bomber Worms, CBeebies, b09c14y6<br />
+93:&nbsp;&nbsp;&nbsp;&nbsp;Octonots: Cyfres 2011 - Yr Octonots a'r Storm Danfor, S4C, p02k43m1<br />
+94:&nbsp;&nbsp;&nbsp;&nbsp;Odd Squad - Worst First Day Ever, CBBC, b07n7gvq<br />
+95:&nbsp;&nbsp;&nbsp;&nbsp;Olobob Top: Series 1 - Whooshy Wotsit, CBeebies, b0905t3d<br />
+96:&nbsp;&nbsp;&nbsp;&nbsp;Operation Ouch!: Series 6 - Exceptional Eyebrows, CBBC, b09c1ls5<br />
+97:&nbsp;&nbsp;&nbsp;&nbsp;Pablo: Series 1 - The Noise Dragon, CBeebies, b098gqr4<br />
+98:&nbsp;&nbsp;&nbsp;&nbsp;Patchwork Pals - Frog, CBeebies, b08m97fs<br />
+99:&nbsp;&nbsp;&nbsp;&nbsp;Peter Rabbit: Series 1 - The Tale of the Unguarded Garden, CBeebies, b036myy2<br />
+100:&nbsp;&nbsp;&nbsp;&nbsp;Points West: Lunchtime News - 30/10/2017, BBC One, b09bzw1b<br />
+101:&nbsp;&nbsp;&nbsp;&nbsp;Politics Europe - 27/10/2017, BBC Parliament, b09c5k87<br />
+102:&nbsp;&nbsp;&nbsp;&nbsp;Popi'r Gath - Mynydd Caws, S4C, p02g3fvm<br />
+103:&nbsp;&nbsp;&nbsp;&nbsp;Postman Pat: Special Delivery Service: Series 2 - Postman Pat and the Runaway Bees, CBeebies, b01qxz8l<br />
+104:&nbsp;&nbsp;&nbsp;&nbsp;Question Time - 26/10/2017, BBC Two, b09c1q8b<br />
+105:&nbsp;&nbsp;&nbsp;&nbsp;ROY: Series 4 - Fright of a Lifetime, CBBC, b05nyr1r<br />
+106:&nbsp;&nbsp;&nbsp;&nbsp;Raa Raa the Noisy Lion: Series 2 - The Monkey That Roared, CBeebies, b01cbmy2<br />
+107:&nbsp;&nbsp;&nbsp;&nbsp;Rank the Prank - Who's Got Talent?, CBBC, b07vcf4j<br />
+108:&nbsp;&nbsp;&nbsp;&nbsp;Reporting Scotland: Lunchtime News - 30/10/2017, BBC One, b09bzx4m<br />
+109:&nbsp;&nbsp;&nbsp;&nbsp;Rugby League World Cup: 2017 - Day 3 Highlights, BBC One, b09d91vs<br />
+110:&nbsp;&nbsp;&nbsp;&nbsp;Sam Tân: Cyfres 6 - Dwbwl Trwbwl, S4C, p02b4q0g<br />
+111:&nbsp;&nbsp;&nbsp;&nbsp;Sam Tân: Cyfres 6 - Tân Gwyllt i Mandy, S4C, p02d8lxy<br />
+112:&nbsp;&nbsp;&nbsp;&nbsp;Sara a Cwac: Cyfres 2013 - Yn y Sw, S4C, p02b51vh<br />
+113:&nbsp;&nbsp;&nbsp;&nbsp;Sara a Cwac: Cyfres 2013 - Pobi Teisen, S4C, p02b5435<br />
+114:&nbsp;&nbsp;&nbsp;&nbsp;Scream Street - Summer Sucks!, CBBC, b09cby67<br />
+115:&nbsp;&nbsp;&nbsp;&nbsp;See Hear: On Tour - Amsterdam, BBC Two, b09dh3fl<br />
+116:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Northern Ireland Affairs Committee, BBC Parliament, b09c5k89<br />
+117:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Brexit and the Future of Customs Services Committee, BBC Parliament, b09cyg0q<br />
+118:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Future of Policing Committee, BBC Parliament, b09fp608<br />
+119:&nbsp;&nbsp;&nbsp;&nbsp;Select Committees - Channel 4 Committee, BBC Parliament, b09fq5zd<br />
+120:&nbsp;&nbsp;&nbsp;&nbsp;Shark Bites - Backshall's Best Shark Bites, CBBC, b09d97m1<br />
+121:&nbsp;&nbsp;&nbsp;&nbsp;Show Me Show Me: Series 5 - Sky and Splashing, CBeebies, b03lyy7n<br />
+122:&nbsp;&nbsp;&nbsp;&nbsp;Show Me Show Me: Series 6 - Donkeys and Piers, CBeebies, b06mvdv6<br />
+123:&nbsp;&nbsp;&nbsp;&nbsp;Something Special: We're All Friends: Series 8 - Gymnastics, CBeebies, b01nqvbd<br />
+124:&nbsp;&nbsp;&nbsp;&nbsp;South East Today: Lunchtime News - 30/10/2017, BBC One, b09bzwqr<br />
+125:&nbsp;&nbsp;&nbsp;&nbsp;South Today: Lunchtime News - 30/10/2017, BBC One, b09bzwy2<br />
+126:&nbsp;&nbsp;&nbsp;&nbsp;Speechless - -, BBC Four, b09cfky7<br />
+127:&nbsp;&nbsp;&nbsp;&nbsp;Sport Today - 30/10/2017, BBC News, b09ckdkp<br />
+128:&nbsp;&nbsp;&nbsp;&nbsp;Spotlight: Lunchtime News - 30/10/2017, BBC One, b09bzwjj<br />
+129:&nbsp;&nbsp;&nbsp;&nbsp;Stiw: Cyfres 2013 - Helfa Calan Gaea', S4C, p035v8xl<br />
+130:&nbsp;&nbsp;&nbsp;&nbsp;Sunday Politics London - 30/10/2017, BBC Parliament, b09ckg47<br />
+131:&nbsp;&nbsp;&nbsp;&nbsp;Teacup Travels: Series 1 - Snake Bracelet, CBeebies, b054stxq<br />
+132:&nbsp;&nbsp;&nbsp;&nbsp;Teletubbies: Series 2 - Backwards Forwards, CBeebies, b08r2l4b<br />
+133:&nbsp;&nbsp;&nbsp;&nbsp;Teletubbies: Series 2 - Take Off, CBeebies, b09bbt43<br />
+134:&nbsp;&nbsp;&nbsp;&nbsp;Ten Minute Rule Bill - 25/10/2017, BBC Parliament, b09fc0z4<br />
+135:&nbsp;&nbsp;&nbsp;&nbsp;The Briefing - 30/10/2017, BBC News, b09dcctw<br />
+136:&nbsp;&nbsp;&nbsp;&nbsp;The Briefing - 30/10/2017, BBC News, b09dcd1q<br />
+137:&nbsp;&nbsp;&nbsp;&nbsp;The Code: Series 1 - Episode 15, BBC Two, b079r7ry<br />
+138:&nbsp;&nbsp;&nbsp;&nbsp;The Dog Ate My Homework: Series 4 - Episode 9, CBBC, b08c2vvb<br />
+139:&nbsp;&nbsp;&nbsp;&nbsp;The Dog Ate My Homework: Series 4 - Sports Day Special - Kitty v Olive, CBBC, b08dm1sq<br />
+140:&nbsp;&nbsp;&nbsp;&nbsp;The Graham Norton Show: Series 22 - Episode 5, BBC One, b09c6mc0<br />
+141:&nbsp;&nbsp;&nbsp;&nbsp;The Hairy Builder - Doncaster Mansion House, BBC Two, b07kx18f<br />
+142:&nbsp;&nbsp;&nbsp;&nbsp;The Numtums: Series 1 - Animals, CBeebies, b01f5hjj<br />
+143:&nbsp;&nbsp;&nbsp;&nbsp;The Planners - Episode 3, BBC Two, b01qrt24<br />
+144:&nbsp;&nbsp;&nbsp;&nbsp;The Search for the Lost Manuscript: Julian of Norwich - -, BBC Four, b07l6bd0<br />
+145:&nbsp;&nbsp;&nbsp;&nbsp;The Week in Parliament - 27/10/2017, BBC News, b09c5k8c<br />
+146:&nbsp;&nbsp;&nbsp;&nbsp;The Week in Parliament - 30/10/2017, BBC Parliament, b09cyg0n<br />
+147:&nbsp;&nbsp;&nbsp;&nbsp;The Women's Football Show: 2017 - 29/10/2017, BBC One, b09dhgpq<br />
+148:&nbsp;&nbsp;&nbsp;&nbsp;This Is BBC One HD - 30/10/2017, BBC One, b09bzt5h<br />
+149:&nbsp;&nbsp;&nbsp;&nbsp;Tiny Tumble: Series 1 - Up a Gum Tree, CBeebies, b01rhw54<br />
+150:&nbsp;&nbsp;&nbsp;&nbsp;Tomos a'i Ffrindiau - Boncyffion Bywiog, S4C, p02b4myz<br />
+151:&nbsp;&nbsp;&nbsp;&nbsp;Top Class: Series 2 - Round One, CBBC, b08c2ny0<br />
+152:&nbsp;&nbsp;&nbsp;&nbsp;Twirlywoos: Series 1 - Behind, CBeebies, b054tdlp<br />
+153:&nbsp;&nbsp;&nbsp;&nbsp;Twirlywoos: Series 2 - On Top Of, CBeebies, b072w18g<br />
+154:&nbsp;&nbsp;&nbsp;&nbsp;Twm Tisian - Jar Bisgedi, S4C, p02b4wkl<br />
+155:&nbsp;&nbsp;&nbsp;&nbsp;Twm Tisian - Siopa, S4C, p02dtffc<br />
+156:&nbsp;&nbsp;&nbsp;&nbsp;Victoria Derbyshire - 30/10/2017, BBC News, b09ckdp6<br />
+157:&nbsp;&nbsp;&nbsp;&nbsp;Waybuloo: Series 3 - Yojojo Wants to Share, CBeebies, b01093q9<br />
+158:&nbsp;&nbsp;&nbsp;&nbsp;Weather for the Week Ahead - 30/10/2017, BBC One, b09b4gf8<br />
+159:&nbsp;&nbsp;&nbsp;&nbsp;Westminster Hall - 30/10/2017, BBC Parliament, b09cy2fn<br />
+160:&nbsp;&nbsp;&nbsp;&nbsp;What We Do in the Shadows - -, BBC Two, b053fyv3<br />
+161:&nbsp;&nbsp;&nbsp;&nbsp;Who's Afraid of Conceptual Art? - -, BBC Four, b07w6gkt<br />
+162:&nbsp;&nbsp;&nbsp;&nbsp;Wmff - Pawb Yn Copio Wncwl Harri, S4C, p02h7g3v<br />
+163:&nbsp;&nbsp;&nbsp;&nbsp;Woolly and Tig: Series 2 - Excited, CBeebies, b01rcfs8<br />
+164:&nbsp;&nbsp;&nbsp;&nbsp;Worst Year of My Life... Again - Episode 11, CBBC, b046v6lb<br />
+165:&nbsp;&nbsp;&nbsp;&nbsp;Wussywat the Clumsy Cat - Hot, CBeebies, b061v7fw<br />
+166:&nbsp;&nbsp;&nbsp;&nbsp;Y Dywysoges Fach - Nid y fi wnaeth, S4C, p02b4kkh<br />
+167:&nbsp;&nbsp;&nbsp;&nbsp;Y Teulu Mawr: Cyfres 2010 - Noson Fawr Mrs Mawr, S4C, p02sv9br<br />
+INFO: 167 matching programmes</code></div></div><hr class="mycode_hr" />
+…and…<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GPC-MacBook-Pro:~ gpc&#36; get_iplayer --since 24 "daily politics"<br />
+get_iplayer 3.06_1-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+42:&nbsp;&nbsp;&nbsp;&nbsp;Daily Politics - 30/10/2017, BBC Two, b09dh84c<br />
+INFO: 1 matching programmes</code></div></div><br />
+Finally:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GPC-MacBook-Pro:~ gpc&#36; get_iplayer --prefs-show<br />
+Options in '/Users/gpc/.get_iplayer/options'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;output = /Users/gpc/Desktop/Transfer&#92; to&#92; Mac&#92; Mini</code></div></div><br />
+(Confirms the only tinkering I've ever done with the installation is where my files get output to)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 03:24 PM</div>
+</div>
+<div class="message">Sorry, that should have been:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh --search bogus</code></div></div>to avoid the spew, though in this case the spew is instructive. Your cache is updating fine, but it also appears to be nearly empty. I'll have to ponder on that one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">30-10-2017, 03:40 PM</div>
+</div>
+<div class="message">Here you go, and thanks for all the investigative work:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>GPC-MacBook-Pro:~ gpc&#36; get_iplayer --refresh --search bogus<br />
+get_iplayer 3.06_1-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+..................................<br />
+INFO: Added 4 tv programmes to cache<br />
+INFO: 0 matching programmes</code></div></div><br />
+Keep me posted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2017, 08:41 PM</div>
+</div>
+<div class="message">I can't reproduce this behaviour. Temporarily rename your tv.cache file (see FAQ list for location) so that get_iplayer will repopulate it. Then, post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh --search=bogus</code></div></div>followed by:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --list=channel</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">31-10-2017, 09:11 AM</div>
+</div>
+<div class="message">Looking in there, I've got both:<br />
+tv.cache<br />
+tv.cache.old<br />
+and<br />
+radio.cache<br />
+radio.cache.old<br />
+<br />
+Wonder if that has any bearing? Anyway, I deleted the "old" versions and renamed the current versions. Rand the code and got the responses:<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+....................................................................<br />
+INFO: Added 2376 tv programmes to cache<br />
+INFO: 0 matching programmes<br />
+<br />
+and:<br />
+<br />
+BBC Alba (113)<br />
+BBC Four (68)<br />
+BBC News (273)<br />
+BBC One (609)<br />
+BBC Parliament (89)<br />
+BBC Two (176)<br />
+CBBC (266)<br />
+CBeebies (413)<br />
+S4C (369)<br />
+<br />
+I then did a search for a programme I knew wasn't appearing before… and it worked!<br />
+<br />
+Thank you!!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-10-2017, 10:32 AM</div>
+</div>
+<div class="message">Nothing to do with .old files. They are backup copies. Cache corruption a possible cause, but not worth investigating further.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-10-2017, 02:51 PM</div>
+</div>
+<div class="message">Also: You may wish to run <kbd>get_iplayer --cache-rebuild</kbd> to restore older listings not picked up by <kbd>--refresh</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1963</h2></div><div class="dateline">31-10-2017, 03:50 PM</div>
+</div>
+<div class="message">Done, nice one.<br />
+<br />
+Can't thank you enough for your dogged investigation of the problem. And for your continued development of get_iplayer. <br />
+<br />
+All is <span style="font-style: italic;" class="mycode_i">very</span> much appreciated.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can't get cache to  --refresh with Homebrew get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

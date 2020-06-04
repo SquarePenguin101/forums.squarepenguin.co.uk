@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to re-do a conversion from FLV to M4A</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to re-do a conversion from FLV to M4A</div>
+<div id="pagetitle"><h2>How to re-do a conversion from FLV to M4A</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1857</h2></div><div class="dateline">11-06-2017, 12:04 PM</div>
+</div>
+<div class="message">Hopefully, this is an easy question to answer!<br />
+<br />
+I ran out of space on my HDD while downloading a programme.  The download was successful, creating the FLV file (which plays OK in VLC on the PC), but it was unable to perform the conversion to M4A. I like to view the programmes on a networked TV, and I'm pretty sure that won't recognise the FLV format, so I'd like to complete the process.<br />
+<br />
+The error is:<br />
+"av_interleaved_write_frame(): No space left on device<br />
+Error writing trailer of C:\_documents\iPlayer\get_iplayer_-_b08qd9ww_b08qd9ww_e<br />
+ditorial.partial.mp4: No space left on deviceframe=55823 fps=416 q=-1.0 Lsize=<br />
+644750kB time=00:37:12.91 bitrate=2365.4kbits/s speed=16.6x<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Conversion failed - retaining video file: C:\_documents\iPlayer\get_ipl<br />
+ayer_-_b08qd9ww_b08qd9ww_editorial.rtmp.flv"<br />
+<br />
+I've freed up plenty of space on the HDD now. As the FLV is still on the PC, I thought there would be a command in Get_iPlayer to simply re-do the conversion, without having to download the content again. I haven't found one, despite looking through the guides and forums.<br />
+<br />
+Can anyone help with this? Or will it be easier just to use an external file converter?<br />
+<br />
+I'm using v2.99 on Windows Vista, with default installation options (Atomic Parsley and ffmpeg installed).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1251</h2></div><div class="dateline">11-06-2017, 10:06 PM</div>
+</div>
+<div class="message">I would suggest you use ChrisPC Free Video Converter which is free and work well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">12-06-2017, 12:38 AM</div>
+</div>
+<div class="message">Just run the original command again with --force like you were going to re-download and GiP should see the completed download and move straight on to the conversion process.<br />
+<br />
+Also you might want to think about upgrading to 3.01 as this contains a lot of major changes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1857</h2></div><div class="dateline">13-06-2017, 01:49 PM</div>
+</div>
+<div class="message">Thanks for the tip, tvfan. I'd hoped there would be an easy way to do this.<br />
+Gunzerboy, I'll check out that software too. Could be useful for converting some of my home videos.<br />
+<br />
+Great forum!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">16-06-2017, 11:26 PM</div>
+</div>
+<div class="message">yeah, def re-run the command and force it to dl and overwrite (if already there).<br />
+<br />
+converting flv to mp4 can be tricky since flv files can contain many different types of media. See <a href="https://superuser.com/questions/772569/which-ffmpeg-command-do-i-use-to-passthrough-flv-to-mp4/1009539#1009539">here</a> &amp; <a href="https://addpipe.com/blog/flv-to-mp4/">here</a> for guides on how to convert.<br />
+<br />
+That being said, with any BBC flv I've ended up with then the command <kbd>ffmpeg -i video.flv -c copy -movflags faststart video.mp4</kbd> has worked fine when using <a href="https://ffmpeg.zeranoe.com/builds/">ffmpeg</a>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1857</h2></div><div class="dateline">17-06-2017, 11:21 PM</div>
+</div>
+<div class="message">Thanks for the ffmpeg command Jaybee. I'll give this a try.<br />
+I'd wondered if I could use that tool as a stand-alone, but I've found it difficult to navigate through ffmpeg's online documentation so far. It does look like a very useful tool though, so I really need to press on and learn how to use it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">18-06-2017, 09:05 PM</div>
+</div>
+<div class="message">it's fairly easy tbh. I've created a load of scripts that I run. Saves me having to mess with the command line.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to re-do a conversion from FLV to M4A</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

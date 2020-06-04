@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - TV thumbnails changed in 2.95</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; TV thumbnails changed in 2.95</div>
+<div id="pagetitle"><h2>TV thumbnails changed in 2.95</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">20-07-2016, 10:47 PM</div>
+</div>
+<div class="message">Radio programmes downloading fine with relevant thumbnails, but TV programmes are no longer adding the thumbnails. Has this feature been removed or do I need to specify something now. Or is it broken?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-07-2016, 10:10 AM</div>
+</div>
+<div class="message">No, it's not broken. How did you determine that there are no thumbnails?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">21-07-2016, 01:18 PM</div>
+</div>
+<div class="message">I think I can see what's happening now.<br />
+<br />
+I download this, for example...<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/p040v4xf/murder-in-successville-series-2-6-memoirs">http://www.bbc.co.uk/iplayer/episode/p04...-6-memoirs</a><br />
+<br />
+But I don't get the image shown at the above link for the specific episode, which I used to get.<br />
+I now get a generic 'series' thumbnail which seems to come from this page...<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b07h1mnp">http://www.bbc.co.uk/programmes/b07h1mnp</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-07-2016, 01:35 PM</div>
+</div>
+<div class="message">That is by design. Brand/series images are now used instead of episode frame grabs. I neglected to add this change to the 2.95 release notes - now corrected at GitHub.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">21-07-2016, 01:38 PM</div>
+</div>
+<div class="message">Okay. Is there any way to force the program to download the episode thumbnail rather than the series one?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-07-2016, 02:21 PM</div>
+</div>
+<div class="message">No. However, if you want the image for a particular show you can find it in the HTML source of its iPlayer episode page (e.g., <a href="http://www.bbc.co.uk/iplayer/episode/p040v4xf/murder-in-successville-series-2-6-memoirs">http://www.bbc.co.uk/iplayer/episode/p04...-6-memoirs</a>). Search for "og:image", which will locate this:<br />
+<br />
+&lt;meta property="og:image" content="http://ichef.bbci.co.uk/images/ic/1200x675/p042112x.jpg"/&gt;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">21-07-2016, 02:25 PM</div>
+</div>
+<div class="message">That's cool. Thanks for your help.<br />
+<br />
+Is there a way to update the thumbnail manually?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">21-07-2016, 08:04 PM</div>
+</div>
+<div class="message">I also notice this causes problems with TV programmes that have no series thumbnail, such as <a href="http://www.bbc.co.uk/programmes/b07mnbys/episodes/player">http://www.bbc.co.uk/programmes/b07mnbys...des/player</a>. Get_iplayer finds no thumbnail so downloads none.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-07-2016, 10:10 PM</div>
+</div>
+<div class="message">That is a BBC problem. They put a series image in the programme metadata and then misconfigured it, so the image download failed. You can tell something is wrong by looking at the series home page. There is a blank space where the series image should be. It happens sometimes, particular on the kiddie channels. You can fix it up manually, of course.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">02-08-2016, 12:39 PM</div>
+</div>
+<div class="message">This happens e.g. on downloads of the Mary Whitehouse Experience (series PID p028s846). When you request <a href="https://ichef.bbci.co.uk/images/ic/480x270/.jpg">https://ichef.bbci.co.uk/images/ic/480x270/.jpg</a> what is actually served is a PNG image.<br />
+<br />
+In this case, where get_iplayer warns that the thumbnail downloading failed, is it possible to fallback to the individual programme image?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-08-2016, 01:11 PM</div>
+</div>
+<div class="message">Maybe, but two broken images don't make a compelling case. Besides, there is no reason to think they won't break the occasional episode image as well.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; TV thumbnails changed in 2.95</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

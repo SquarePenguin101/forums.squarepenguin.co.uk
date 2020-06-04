@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - pid metadata problem</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; pid metadata problem</div>
+<div id="pagetitle"><h2>pid metadata problem</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-516-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-1013</h2></div><div class="dateline">31-08-2015, 11:03 PM</div>
+</div>
+<div class="message">Hi everyone ,<br />
+<br />
+I am using Windows 10 and cannot download programmes using any of the methods , including the pid one . The error messages are : <br />
+<br />
+WARNING : Could not parse programme metadata from ....<br />
+<br />
+ERROR : Failed to get version pid metadata from iplayer site<br />
+<br />
+My command was : get_iplayer --pid=&lt;PID&gt;<br />
+<br />
+I also tried to download subtitles using : get_iplayer --pid=&lt;PID&gt; --subtitles-only<br />
+<br />
+thanking you all</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2015, 12:19 AM</div>
+</div>
+<div class="message">That is not enough information to work with.  Show the actual command used, and post the full output as a .txt file attachment (for one programme ONLY).  Otherwise, there is no way to verify your report or provide any assistance.  All we can tell from the information provided is that get_iplayer received some garbage data, but we need an example from you to test.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1013</h2></div><div class="dateline">01-09-2015, 05:56 PM</div>
+</div>
+<div class="message">Hi there ,<br />
+Sorry about the lack of information . Actually , I've tried to download several TV programmes but always without success. In any case , I'm attaching the output for a randomly selected iplayer programme which failed to download using the pid method .<br />
+Thanks a lot.<bt/><br/>
+<a href="static/thread-516-output_sample_error_pid.txt">output_sample_error_pid.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">01-09-2015, 06:56 PM</div>
+</div>
+<div class="message">Ok. Firstly the command you are using will not work as it is. You need to specify a modes option to use. In your case it would be something like <kbd>get_iplayer --modes=flashstd --pid=b0687919</kbd><br />
+<br />
+The second problem is the fact that for some reason you can't get the PID metadata so get_iplayer cannot actually trigger the download.<br />
+<br />
+Even using your original command I get told which modes I can try for that programme to make it work<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+883:    Pound Shop Wars: Series 2 - Forty New Shops, BBC One Cambridgeshire, , d<br />
+efault<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes () available for this programme with version 'default'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,hlshd,hls<br />
+high,hlslow,hlsstd,hlsvhigh,subtitles</code></div>
+</div>
+<br />
+Are you in the UK?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2015, 07:07 PM</div>
+</div>
+<div class="message">@user-1013: Thanks.  Unfortunately, I can't reproduce your problem.  If you have curl (or wget) and know how to use it, download  <a href="http://www.bbc.co.uk/programmes/b0687919.xml">http://www.bbc.co.uk/programmes/b0687919.xml</a> to a .txt file and post it as an attachment.  If you don't, load that URL in a browser, save it as plain text to a .txt file and post it as an attachment.  You're obviously getting something different from that URL than I am.<br />
+<br />
+@user-585: I hate to tell you, but something appears to be wrong with your configuration.  <kbd>--modes</kbd> is absolutely not required (there is a built-in default).  Check your user options file for an empty <kbd>modes</kbd> value.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">01-09-2015, 07:29 PM</div>
+</div>
+<div class="message">Thanks user-2.<br />
+<br />
+Options file only has an expiry value stored in it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2015, 08:49 PM</div>
+</div>
+<div class="message">@user-585: try <kbd>get_iplayer --show-options</kbd> and see if <kbd>modes</kbd> or <kbd>tvmode</kbd> is set.  If not, then I'm all out of clues.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1013</h2></div><div class="dateline">03-09-2015, 12:03 AM</div>
+</div>
+<div class="message">Thanks to both of you .<br />
+<br />
+@user-585: I tried your suggestion of making the mode explicit as in <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=flashstd --pid=b0687919</code></div></div><br />
+but to no avail . <br />
+<br />
+@user-2: I can't seem to find the user options file . Have searched in the get_iplayer installation (on Windows 10) . <br />
+I am attaching two text files : <br />
+1. the wget xml file from <a href="http://www.bbc.co.uk/programmes/b0687919.xml">http://www.bbc.co.uk/programmes/b0687919.xml</a>  (I have never used wget so hope this is what you needed)<br />
+2. the output from the <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-options</code></div></div>command .<br />
+Thanks .<br/><br/>
+<a href="static/thread-516-b0687919.xml.txt">b0687919.xml.txt</a><br/>
+<a href="static/thread-516-show_options_output.txt">show_options_output.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">03-09-2015, 12:43 PM</div>
+</div>
+<div class="message">Hi I'm seeing the same problem on a Windows 10 system, it was working fine with get_iplayer following upgrade from Windows 7, but I then did a clean install of Windows 10 and reinstalled get_iplayer from the installer. <br />
+Started getting WARNING: Could not parse programme metadata from <a href="http://www.bbc.co.uk/programmes/b03mpphy.xml">http://www.bbc.co.uk/programmes/b03mpphy.xml</a> type errors.<br />
+<br />
+If I run get_iplayer as Administrator then I don't get the error- is this some sort of file permissions problem?<br />
+<br />
+I've attached debug output for successful (Admin) and unsuccessful (user) output for the command:<br />
+<br />
+get_iplayer --debug --info "top of the pops"<br />
+<br />
+Any suggestions as to what has gone wrong?<br />
+<br />
+Thanks<br/><br/>
+<a href="static/thread-516-debug_no_get_xml_user.txt">debug_no_get_xml_user.txt</a><br/>
+<a href="static/thread-516-debug_get_xml_admin.txt">debug_get_xml_admin.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-09-2015, 07:34 PM</div>
+</div>
+<div class="message">@user-1013: Thanks for the xml output, which looks OK.  Check if the situation described by @user-763 applies to you (installed get_iplayer as administrator but use it as non-administrator).<br />
+<br />
+@user-763: Thanks for the additional input.  It's not impossible that permissions might be the cause, but there could be other causes.  The behaviour suggests your non-admin user somehow can't load the DLL containing the XML parser (libexpat-1_.dll in get_iplayer installation directory). The install dir permissions must be OK since you can run get_iplayer and perl, but to be safe you can check the permissions on the DLL files in that directory.  They should just inherit the directory permissions, though.  It's also possible that for some reason the XML parser DLL can't access one or more system DLLs (it doesn't have any other dependencies).  And I suppose anti-virus could be at fault somehow, but that is iffy. Whatever the reason, I can't reproduce the problem on a clean Win 10 system, though there is no way to know if we are testing like for like.<br />
+<br />
+At this point, all I can suggest is to make a small change to the <kbd>get_iplayer.pl</kbd> script in your installation directory (make a backup of existing script first), if a) you're comfortable editing text files; b) you know how to launch applications as administrator.  <br />
+<br />
+Find this line:<br />
+<br />
+<kbd>main::logger "WARNING: Could not parse programme metadata from &#36;url\n";</kbd><br />
+<br />
+And change it to:<br />
+<br />
+<kbd>main::logger "WARNING: Could not parse programme metadata from &#36;url (&#36;@)\n";</kbd><br />
+<br />
+That will print the error message produced by Perl - there may be something instructive in there. DON'T edit the file in Notepad.  Use Notepad++ or another proper text editor.  You will need to run the text editor as administrator to edit the file properly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-09-2015, 07:48 PM</div>
+</div>
+<div class="message">An additional note: You should install get_iplayer while logged in with the user account you are going to employ for regular use.  You can temporarily put a non-admin account in the Administrators group to get the installation done.  Most users don't notice, but there are some flaws in the installer that cause problems on multi-user systems.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">03-09-2015, 10:11 PM</div>
+</div>
+<div class="message">@user-2 many thanks for your reply. <br />
+The patched script gives this output:<br />
+WARNING: Could not parse programme metadata from <a href="http://www.bbc.co.uk/programmes/b03mpphy.xml">http://www.bbc.co.uk/programmes/b03mpphy.xml</a> (Can't load 'C:/Program Files (x86)/get_iplayer/lib/auto/XML/LibXML/LibXML.dll' for module XML::LibXML: load_file:The specified module could not be found at DynaLoader.pm line 190.<br />
+ at XML/LibXML.pm line 156.<br />
+BEGIN failed--compilation aborted at XML/LibXML.pm line 156.<br />
+Compilation failed in require at XML/LibXML/SAX.pm line 19.<br />
+BEGIN failed--compilation aborted at XML/LibXML/SAX.pm line 19.<br />
+Compilation failed in require at (eval 66) line 1.<br />
+<br />
+I confess I'm at a loss with this one, the file is there and all permissions are normal (compared it to the previous working version-always keep a backup!)<br />
+<br />
+The system is  single user with Adminstrator rights, the installation completes normally (done it twice now), everything else works normally -Iplayer via a browser etc. I've completely deinstalled (not just disabled) my antivirus/firewall (Eset Smart Security) the only way this runs correctly is if I launch a command window (run as administrator) and run get_iplayer from the elevated command window.<br />
+I'd previously tested get_iplayer as a clean install on a Windows Insider build on the same machine to check compatibility before migrating with no issues, it also worked fine after the Windows 7 to Windows 10 migration, so I'm not surprised that you can't reproduce the problem.<br />
+Any further input welcome!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">04-09-2015, 12:03 AM</div>
+</div>
+<div class="message">Further update, created new user on system, completely uninstalled get_iplayer (deleted all directories after uninstall). Reinstalled get_iplayer as new user- result exactly the same problem! I can run get_iplayer from elevated command prompt (run as Administrator) but using a normal command prompt it fails with the same error as before.<br />
+<br />
+It is beginning to look like it's time for the big reset on this build.....</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">04-09-2015, 06:50 AM</div>
+</div>
+<div class="message">Finally fixed it!<br />
+I had to associate .dll file extension with perl.exe in the get_iplayer directory. <br />
+It then worked from non Administrator command window. <br />
+The downside was that all .dll files on the system were associated with perl.exe. <br />
+Cleared that by editing the registry entries in [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.dll]<br />
+Even though the .dll were no longer associated with perl.exe get_iplayer now functions normally.<br />
+Weird eh? <br />
+I've no idea whether this has any bearing on the OP problem, apologies for hijacking the thread and many thanks to @user-2 for the debug info.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2015, 11:42 AM</div>
+</div>
+<div class="message">Weird is the word. I don't know why perl.exe wouldn't have been able to load DLLs. It obviously doesn't happen on most Windows systems, so none of this made sense to me. A couple of additional notes - To correct my mistake: LibXML.dll loads the libxml2 parser (<kbd>libxml2-2_.dll</kbd> in install dir). Also, an issue with LibXML.dll failing to load has been reported before (with no resolution recorded), so it's not necessarily unique to Windows 10.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1013</h2></div><div class="dateline">04-09-2015, 10:36 PM</div>
+</div>
+<div class="message">@user-763: Thanks for putting me on the track for a solution to the problem . In fact , in my case , get_iplayer was installed under an account with full Administrator rights . So what I had to do was to open an elevated command prompt window to run get_iplayer - and it worked ! (I used the CONTROL+SHIFT+ENTER shortcut key to launch the elevated command prompt from the search box) . <br />
+ So I think the source of the problem may be Window 10's insistence that scripts run on an elevated command prompt ? <br />
+@user-2: thanks for all your help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">05-09-2015, 04:02 AM</div>
+</div>
+<div class="message">@user-1013 - I don't believe that Windows 10 HAS an insistence on running scripts from elevated command windows.<br />
+What you are seeing is not "normal" behavior for get_iplayer and in fact you won't be able to run things like the Web PVR manager successfully unless you can get the script to execute successfully from a normal user mode command window. <br />
+As user-2 has stated he is running with no problems on a clean install of Windows 10, I was running quite happily on a migrated Windows 10 install and I have another migrated (Windows 7 to Windows 10) system that is also running get_iplayer without any issues.<br />
+I will shortly be doing a clean install on that migrated system so I will be interested to see if I encounter the same problem again.<br />
+As a matter of interest what version of Windows 10 are you running? (Home, Pro, x32 or x64) and was it migrated or a clean install? <br />
+I had the issue with a clean install of Windows 10 Home x64 UK English iso downloaded from Microsoft using the media creation tool.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1013</h2></div><div class="dateline">05-09-2015, 08:53 AM</div>
+</div>
+<div class="message">@user-763: I am running Windows 10 Pro x64 . Have never used the PVR manager but will look into it . Mine was an upgrade from Windows 8.2 Thanks .</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1067</h2></div><div class="dateline">18-10-2015, 08:46 PM</div>
+</div>
+<div class="message">@user-763 how did you associate .dlls with perl.exe? Just tell windows to open dlls with perl.exe?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1067</h2></div><div class="dateline">18-10-2015, 08:59 PM</div>
+</div>
+<div class="message">Associating with .dlls with perl.exe made no difference to webpvr for me...should I have expected it to?<br />
+<hr class="mycode_hr" />
+OK, so, getting exactly the same problem as the OP.<br />
+<br />
+Let my machine move to Win10, expecting to use WebPVR still, but no joy, tried the dll association trick - did nothing (as far as I can see) but command line (e.g. get_iplayer --pid=b0687919 ) works fine from admin cmd prompt...<br />
+<br />
+Any chance we'll get webPVR working again, or do I need to learn command line get_iplayer, again?<br />
+<br />
+Cheers<br />
+<br />
+Argon0</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-516-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; pid metadata problem</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

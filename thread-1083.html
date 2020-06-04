@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR List edits</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; PVR List edits</div>
+<div id="pagetitle"><h2>PVR List edits</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-617</h2></div><div class="dateline">03-11-2016, 12:30 AM</div>
+</div>
+<div class="message">I don't seem to get anything up when I try and edit the links in the PVR list in the web. <br />
+Downloaded the new version, but it doesn't do anything different as far as I can see. Well, not in the bits I see anyhow.<br />
+<br />
+Tried in Chrome and Opera</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-11-2016, 04:12 PM</div>
+</div>
+<div class="message">I assume you are attempting to edit the contents of one or more pvr jobs rather than editing any links in the pvr list. The latter functionality does not exist, nor would it make sense. Editing of pvr jobs works fine here. <a href="thread-706.html">Follow our instructions</a> to provide a full report. Otherwise, we have no idea what combination of software you have. Without that, we can only assume that you do not actually have the most recent version of get_iplayer (2.97) and are thus still affected by recent changes to Chrome and Opera.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-617</h2></div><div class="dateline">12-11-2016, 10:39 AM</div>
+</div>
+<div class="message">Sorry, obviously not being as clear as I thought. (And I've been on holiday, hence slowness of reply)<br />
+<br />
+I am using the web PVR. <br />
+I have downloaded the new version and run the installation, no obvious errors.<br />
+The 'PVR List' page says at the top 'Click to Edit any PVR Search'<br />
+Clicking used to allow me to edit search strings (for instance to go from ^Blue Jam&#36; to just ^Blue Jam so that if the second series turned up as "BlueJam: Series 2" it would still be captured) now it is going nothing.<br />
+<br />
+Aha.<br />
+stand alone says:<br />
+get_iplayer Web PVR Manager v2.97-windows.0, ©2009-2010 Phil Lewis<br />
+<br />
+Web says:<br />
+get_iplayer Web PVR Manager v2.94, ©2009-2010 Phil Lewis - Licensed under GPLv3<br />
+<br />
+That explains why the web page isn't behaving, but is there an additional step required to synch the web and the download?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2016, 11:45 AM</div>
+</div>
+<div class="message">There is no additional step. Only you would know how your system got into that state, but it's not worth the effort to diagnose. Uninstall get_iplayer from Control Panel, manually delete the installation directory if not removed during uninstall, manually delete any and all old get_iplayer installations (you appear to have at least one), delete any leftover Start Menu shortcuts and folders related to get_iplayer, then re-install as normal.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-617</h2></div><div class="dateline">14-11-2016, 11:13 PM</div>
+</div>
+<div class="message">Aha! I think I have worked out what the problem is, though as you say, it may well be only fixable as you describe.<br />
+<br />
+I think previous versions of the installer prompted for a save location, the 2.97.0 doesn't and just defaults straight into c:\program files (x86).<br />
+<br />
+Because my PC has a small SSD drive for the OS and a hefty drive for general store, I've had the previous versions always going onto D:\ As a result I'm uninstalling and installing the C:\ version merrily, while leaving the D:\, which for some reason the Web PVR shortcut is looking at untouched.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2016, 11:23 PM</div>
+</div>
+<div class="message">The original installer did several things wrong, including menu shortcuts. There could have been a permissions problem in replacing them with new installer. You may only need to fix shortcuts to point to the correct installation directory, though perhaps safer to wipe clean and re-install.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; PVR List edits</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

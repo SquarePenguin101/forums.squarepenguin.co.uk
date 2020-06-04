@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I mount a network share to use for my output directory?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I mount a network share to use for my output directory?</div>
+<div id="pagetitle"><h2>How do I mount a network share to use for my output directory?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">25-04-2018, 08:41 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I'm using Xubuntu and have installed get_iplayer without any issues but I now want to redirect the downloads to a folder on my QNAP.<br />
+<br />
+I have tried changing the output location as below:<br />
+<br />
+get_iplayer --prefs-add --output smb://qnap.local/files/get_iplayer_downloads/<br />
+<br />
+The result is a folder called "qnap.local" is created under the home directory?<br />
+<br />
+I've tried a few variations on the above (including using ip address) and the result is that each time a folder with the initial part of the string is created under the "Home" directory. I can browse to the Qnap no problem in the file explorer using smb://qnap.local and access all the shares?<br />
+<br />
+I'm sure i'm doing something wrong (i'm very much a Linux beginner) but can't figure out what?<br />
+<br />
+Thanks, Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1503</h2></div><div class="dateline">25-04-2018, 10:14 AM</div>
+</div>
+<div class="message">You will need to mount the shared folder on your main machine, rather than using the SMB path.<br />
+<br />
+in the home directory create a folder called "iplayer_downloads"<br />
+<br />
+To do this open a "terminal window" and try the following command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>mkdir ~/iplayer_downloads</code></div></div>This creates an empty folder (so you can link the NAS folder so that your Linux machine sees it as a local folder.)<br />
+Then:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo mount -t cifs -o username=admin,password=admin //qnap.local/files/get_iplayer_downloads/&nbsp;&nbsp;~/iplayer_downloads</code></div></div>replace "admin" and "password" with your NAS logiin details. You will loose the link if you reboot the linux machine, This is just to test to see if you can link it.<br />
+<br />
+If it works then a permanent link can be created easily.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">25-04-2018, 12:27 PM</div>
+</div>
+<div class="message">Hi, thanks for helping me out. I created the directory but there is an issue when trying to mount:<br />
+<br />
+jon@XubuntuQNAP:~&#36; sudo mount -t cifs -o username=*****,password=*********** //qnap.local/files/Get_iplayer/Downloads/  ~/iplayer_downloads<br />
+mount: wrong fs type, bad option, bad superblock on //qnap.local/files/Get_iplayer/Downloads/,<br />
+       missing codepage or helper program, or other error<br />
+       (for several filesystems (e.g. nfs, cifs) you might<br />
+       need a /sbin/mount.&lt;type&gt; helper program)<br />
+<br />
+       In some cases useful info is found in syslog - try<br />
+       dmesg | tail or so.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1503</h2></div><div class="dateline">25-04-2018, 12:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (25-04-2018, 12:27 PM)</span></cite>Hi, thanks for helping me out. I created the directory but there is an issue when trying to mount:<br />
+<br />
+jon@XubuntuQNAP:~&#36; sudo mount -t cifs -o username=*****,password=*********** //qnap.local/files/Get_iplayer/Downloads/  ~/iplayer_downloads<br />
+mount: wrong fs type, bad option, bad superblock on //qnap.local/files/Get_iplayer/Downloads/,<br />
+       missing codepage or helper program, or other error<br />
+       (for several filesystems (e.g. nfs, cifs) you might<br />
+       need a /sbin/mount.&lt;type&gt; helper program)<br />
+<br />
+       In some cases useful info is found in syslog - try<br />
+       dmesg | tail or so.</blockquote><br />
+try without the " -t cifs "<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo mount -o username=admin,password=admin //qnap.local/files/get_iplayer_downloads/&nbsp;&nbsp;~/iplayer_downloads</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">25-04-2018, 02:23 PM</div>
+</div>
+<div class="message">I managed to get the mount to work after installing cifs-utils but I now get an error when get_iplayer attempts to write the file:<br />
+<br />
+ERROR: Cannot open (write): /home/jon/iplayer_downloads/Alphablocks_Series_3_-_18._Book_b01py6g1_original.video.ts<br />
+<br />
+I also can't create any new folders or documents within it.<br />
+<br />
+I assume it is a permissions issue due to the folder being created as sudo but haven't been able to fix it yet, even running Thunar as sudo does not seem to allow me to change the permissions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1503</h2></div><div class="dateline">27-04-2018, 01:19 AM</div>
+</div>
+<div class="message">Sorry for the delay.<br />
+<br />
+Not too familiar with QNAP devices.<br />
+<br />
+Check to see if you can give "guest" or "anonymous" user read/write privileges to the required folder.<br />
+Or you could try creating a qnap user with the exact same username and password as your linux machine. Give the new qnap user full privileges to the shared folder then use that login instead of the admin one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">27-04-2018, 08:30 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I realized I could write to the share as the root user but not as a regular user so for that reason I don't think it is the QNAP permissions that are the issue (no root user specified on the QNAP permissions).<br />
+<br />
+I'll try adding the mount in permanently in fstab, there seems to be more cmds you can apply when adding that way to specify which users have access. I'll post back here how I get on.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">27-04-2018, 08:53 AM</div>
+</div>
+<div class="message">It appears I had to explicitly enter the user and group permissions in the cmd (uid &amp; gid):<br />
+<br />
+sudo mount -t cifs -o username=*****,password=*****,uid=jon,gid=jon //qnap.local/Get_iPlayer/ ~Get_iPlayer<br />
+<br />
+Thanks for the help :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2145</h2></div><div class="dateline">27-04-2018, 03:01 PM</div>
+</div>
+<div class="message">Just in case this is useful for others to make this permanent I added the following lines to fstab located at /etc/fstab<br />
+<br />
+//qnap.local/Get_iPlayer /home/jon/Get_iPlayer cifs username=****,password=****,uid=jon,gid=jon<br />
+<br />
+Thanks again for the help</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I mount a network share to use for my output directory?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

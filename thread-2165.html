@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio now downloads at 96kbps - previously 320kbps</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Radio now downloads at 96kbps - previously 320kbps</div>
+<div id="pagetitle"><h2>Radio now downloads at 96kbps - previously 320kbps</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2503</h2></div><div class="dateline">09-01-2020, 09:46 PM</div>
+</div>
+<div class="message">First post, hope it's okay...<br />
+<br />
+gip v3.24, Win 7, fibre to the cabinet (talktalk), 72Mbps connection (download rate).<br />
+<br />
+Since just after Christmas, all radio has downloaded at 96kbps. Same with gip v3.23.<br />
+<br />
+I d/l via cmd window, with; <br />
+<br />
+get_iplayer -g [cached programme number] or [--pid=] --type=radio --command-radio="ffmpeg -loglevel error -i \""&lt;filename&gt;"\" -c:v copy -c:a libmp3lame -b:a 160k -id3v2_ version 3 - write _id3v1  1 -y \""&lt;dir&gt;/&lt;fileprefix&gt;.mp3"\"" --o=e:\bbcradio\<br />
+<br />
+(to copy tagging info to the mp3) (this doesn't copy the Lyrics though; any hints please...?)<br />
+<br />
+To test, I have tried get_iplayer -g --pid=b068td6z --force --o=e:\bbcradio\ , from which a file that downloaded 320kbps, 32.7Mb on 27.12.2019 now downloads 96kbps, 9.85Mb.  I have also tried including -- radiomode best and dafhigh, no difference. <br />
+<br />
+I did send a question to BBC Sounds asking whether bitrates had been reduced; the reply was that a number of random programmes had been checked and all were streaming at 320kbps. I did not however say that this was a problem for me when downloading using gip......<br />
+<br />
+I have checked --prefs added ('options'), I only have nopurge 1, and refreshexcludegroups bbc radio 3, and the like. <br />
+<br />
+Has anyone else had the same experience please?<br />
+<br />
+Regards, thehod</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">09-01-2020, 11:11 PM</div>
+</div>
+<div class="message">I do not see that problem despite a similar download pattern. My consumption is primarily radio, the raw download is m4a at 320k and I have a commandradio to produce mp3 at 160k which my playback device can handle. This is on Arch Linux but capabilities should be the same on Win 7.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">10-01-2020, 06:02 PM</div>
+</div>
+<div class="message"><a href="https://github.com/get-iplayer/get_iplayer/wiki/modes#radio">https://github.com/get-iplayer/get_iplay...odes#radio</a><br />
+<br />
+explains how to use the radiomode parameter to achieve the desired kbps<br />
+<br />
+320 kbps 	get_iplayer --prefs-add --radiomode=best 	default<br />
+128 kbps 	get_iplayer --prefs-add --radiomode=better 	<br />
+96 kbps 	get_iplayer --prefs-add --radiomode=good 	<br />
+48 kbps 	get_iplayer --prefs-add --radiomode=worst</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2506</h2></div><div class="dateline">10-01-2020, 11:52 PM</div>
+</div>
+<div class="message">@thehod, are you facing this issue from within the UK? <br />
+<br />
+I'm living on the continent, and 96kbps is the best bitrate I can get since early December 2019. Before then, programmes were available at 320kbps even from abroad.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2503</h2></div><div class="dateline">11-01-2020, 02:28 PM</div>
+</div>
+<div class="message">Thank you petef and forget.it <br />
+<br />
+To joh - yes, I am in the UK.<br />
+<br />
+With much embarrassment, I have found that the problem was of my own making, caused by the use of something that I cannot mention here...  ;)  <br />
+<br />
+I could explain further but in view of the Forum Rules, I fear I should not.  <br />
+<br />
+p-m by email outside of the Forum is fine for those interested, thanks (provided I have set things correctly - as above, very much a new user...!).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Radio now downloads at 96kbps - previously 320kbps</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

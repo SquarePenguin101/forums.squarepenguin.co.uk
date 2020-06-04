@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Comodo firewall breaks get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Comodo firewall breaks get_iplayer</div>
+<div id="pagetitle"><h2>Comodo firewall breaks get_iplayer</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-564-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">16-10-2015, 08:09 PM</div>
+</div>
+<div class="message">This command starts the tv index feeds (attached)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-10-2015, 12:42 AM</div>
+</div>
+<div class="message">Thanks. That tells me the problem is with cmd.exe and not get_iplayer.  The start menu shortcut fails because it invokes cmd.exe, which then starts get_iplayer, yet you can run get_iplayer fine from cmd.exe opened standalone. That is a bit baffling in itself. It could be a permissions problem with your system directory, it could be interference from a "security" package, it could be the phase of the moon. Perhaps someone here with a higher tolerance for Windows can shed some further light on the issue, but I'm throwing in the towel.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">17-10-2015, 03:27 AM</div>
+</div>
+<div class="message">Run the command <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Windows&#92;System32&#92;cmd.exe /k get_iplayer.cmd --search dontshowanymatches</code></div></div> from an Administrator command window after changing directory to C:\Program Files (x86)\get_iplayer, if it runs OK (no access denied message) then check the permissions as follows:<br />
+Right click on Windows\System32 folder, select properties, then select security tab. The Users group should have Read &amp; Execute, List folder contents and Read ticked in the allow column. <br />
+If they are OK then check cmd.exe right click again and select Properties, then select security tab as before. The users group should have Read &amp; Execute and Read ticked in the allow column.<br />
+If these are OK then as Dinky says it is likely to be a security package or possibly a registry corruption, I'm inclined not to spend too much time checking the moon phase[Image: <a href="/images/icons/wink.png">/image...s/wink.png</a>]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">17-10-2015, 10:34 AM</div>
+</div>
+<div class="message">@user-2 many thanks for your perseverance it has narrowed the problem down<br />
+<br />
+@erffmt I'm getting an access denied message when i run that command (attached)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">17-10-2015, 09:11 PM</div>
+</div>
+<div class="message">Did you check the permissions on Windows\System32 and cmd.exe? Something is stopping you accessing cmd.exe, if it is not permissions it could be security policy setting, antivirus/firewall software etc. <br />
+Don't think you are going to fix it toing and froing on this forum.<br />
+If you can't get someone knowledgeable to investigate the issue I would suggest a clean install of Windows 10 and reload all your software packages. <br />
+Sorry I can't be of more help but I'm throwing in the towel as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">19-10-2015, 09:51 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-10-2015, 09:11 PM)</span></cite>Did you check the permissions on Windows\System32 and cmd.exe? Something is stopping you accessing cmd.exe, if it is not permissions it could be security policy setting, antivirus/firewall software etc. <br />
+Don't think you are going to fix it toing and froing on this forum.<br />
+If you can't get someone knowledgeable to investigate the issue I would suggest a clean install of Windows 10 and reload all your software packages. <br />
+Sorry I can't be of more help but I'm throwing in the towel as well.</blockquote><br />
+Yes all permissions are in order and same problem with firewall and av turned off. Thanks for your help anyway. Much as I love get_iplayer I can stand the dread thought of reinstalling windows and all my software again at this point. <br />
+<br />
+If anyone has solved or has any ideas what might be stopping access to cmd.exe i'd be grateful if you could post here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-10-2015, 10:55 AM</div>
+</div>
+<div class="message">@Fullyabsorbent<br />
+<br />
+I'm late to the party here but you said your firewall/AV was off but have you tried ensuring that UAC is turned off too? It can cause all sorts of odd issues like this.<br />
+<br />
+You could also try creating a new user and seeing if you experience the same behaviour using that account. <br />
+<br />
+As to the original error, googling the error code indicates it's a dll problem (possibly that the .ddl is not digitally signed or similar issue). I found the link below specifically referring to this issue with cmd.exe, so you could follow the steps user-2 suggested and then check the Open Event Viewer log as it suggests for more detailed information:<br />
+<br />
+<a href="http://answers.microsoft.com/en-us/windows/forum/all/cmdexe-error-0xc0000142/21efc574-3279-441b-b3fd-005e46914564">http://answers.microsoft.com/en-us/windo...5e46914564</a><br />
+<br />
+As a now non-windows user I can't test anything directly but hopefully that offers a couple more avenues to try.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">19-10-2015, 12:40 PM</div>
+</div>
+<div class="message">@SquarePenguin<br />
+<br />
+Thanks for your suggestions. I have disabled UAC and I Ran get_iplayer as a new user but that didn't solve the problem.<br />
+<br />
+I took a look at events viewer but couldn't see anything related to the problem - although i'm not 100% sure what exactly i should be looking for in there. Remember when i ran SFC/ Scannow i did not get any errors.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-10-2015, 06:46 PM</div>
+</div>
+<div class="message">I'm retrieving my towel temporarily...<br />
+<br />
+@user-1061: Needless to say, it's not worth stripping your machine to bare metal just for get_iplayer.  The thing to do now is see how well the get_iplayer CLI works.  You know you can run it from a command prompt, so try some searches and downloads. As long as your command shell is messed up, I don't think you will ever be able to use the web pvr because it shells out to run the CLI for every operation. <br />
+<br />
+As you might have gleaned from the thread that SP referenced, problems with the command shell may not be related to <kbd>cmd.exe</kbd> <span style="font-style: italic;" class="mycode_i">per se</span>. Other things can interfere with initialising the command shell environment. You may find clues in the security log in event viewer (though a bit unlikely), or you may find clues profiling <kbd>cmd.exe</kbd> in ProcMon (though it's hard to say). We have seen similar problems caused by obsolete DOS drivers left over from old Windows installations or obsolete games, or by startup crapware installed with third-party drivers.  You already know get_iplayer works fine if you boot in safe mode, which implies that your system files and permissions are OK and the problem lies elsewhere. Only you know what you have installed on your system.  For signs, look at startup entries in registry and start menu, check content of system PATH environment variable, maybe even check your <kbd>autoexec.nt</kbd> file if you have one.<br />
+<br />
+As an alternative, get_iplayer CLI and web pvr both work fine with Cygwin (you'll need packages from Cygwin Ports for dependencies). And of course, you always have the option to get VirtualBox, install your favourite Linux/Unix, and run get_iplayer from there.  Just point your output directory to a directory shared with the host machine. <br />
+<br />
+Towel relinquished once more...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">20-10-2015, 11:09 AM</div>
+</div>
+<div class="message">Problem Solved!<br />
+<br />
+I was just about to throw in the towel myself but decided to give Revo Uninstaller a try. Uninstalled get_iplayer in Advanced mode which deep scans the registry. Revo simply employed the get_iplayer uninstaller to to its job but came up with several registry entries which were mainly (if not exclusively) tied into permissions with my firewall (comondo). (I had previously scanned the registry for any remaining get_iplayer entries after a previous manual uninstall but none had shown up). I selected these and deleted them, restarted, reinstalled get_iplayer with the firewall off and hey presto. seems to be up and running. Many thanks for everyone's help and suggestions.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-564-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Comodo firewall breaks get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

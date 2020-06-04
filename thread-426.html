@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot upgrade to new version</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot upgrade to new version</div>
+<div id="pagetitle"><h2>Cannot upgrade to new version</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-615</h2></div><div class="dateline">05-06-2015, 09:00 AM</div>
+</div>
+<div class="message">I just tried upgrading to the new version, and I get this error:<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>INFO: Current version is 2.91<br />
+INFO: Checking for latest version from <a href="http://www.infradead.org">www.infradead.org</a><br />
+INFO: Newer version 2.94 available<br />
+INFO: Updating get_iplayer.pl (from 2.91 to 2.94)<br />
+ERROR: Could not create backup file get_iplayer.pl.old - Update aborted</blockquote>
+Any idea how I fix this? I thought it might be that I already have a file called get_iplayer.pl.old, but I can't find one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-06-2015, 09:13 AM</div>
+</div>
+<div class="message">Don't use self-update on Windows.  Use the installer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">05-06-2015, 09:15 AM</div>
+</div>
+<div class="message">That could be a permissions issue (not having priv's to write to the folder, if you have get_iplayer installed under program files). <br />
+<br />
+Try opening a command prompt with administator priv's (start menu &gt; All Programs &gt; Accessories &gt; right click on Command Prompt and select "run as administrator" and select yes - at least on my Win7 box) then navigate to your get_iplayer install folder and type <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --update</code></div></div> and it should do the biz for you.<br />
+<br />
+Then afterwards do the cache refresh as DinkyPumpkin recommends <a href="https://squarepenguin.co.uk/wiki/releasenotes/release293/">in the release notes</a> down near the bottom (or if you aren't happy with the command line, maybe try downloading and running the installer as suggested there).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-615</h2></div><div class="dateline">16-06-2015, 09:11 AM</div>
+</div>
+<div class="message">Thanks, ran as administrator and it worked fine (I thought I already had Console set to always open as administrator, but clearly not).<br />
+<br />
+Took me a while to do, as the forum doesn't seem to send notification on replies!<br />
+<br />
+Thanks for the tips.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-963</h2></div><div class="dateline">27-06-2015, 01:30 PM</div>
+</div>
+<div class="message">I had the same problem, which was resolved by turning off the firewall. But, now, get_iplayer will also not fetch without disabling my firewall. Didn't think about 'Run as administrator'. I'll try to run get_iplayer as administrator...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-06-2015, 01:59 PM</div>
+</div>
+<div class="message">@leobingo: This topic has absolutely nothing to do with your firewall issue.  The OP was for some reason attempting to perform a self-update of the get_iplayer script on Windows after using the installer for the previous version.  That is absolutely not necessary and generally a bad idea - that is why we have an installer.  If you have to run get_iplayer as administrator, you either didn't install it properly or something is wrong with the permissions on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-06-2015, 02:19 PM</div>
+</div>
+<div class="message">I should add that the Windows installation of get_iplayer is a bit restrictive in that it assumes you will run it under the user account you used to install it (the common single machine, single user scenario).  If you install as one user and try to run get_iplayer as a different user, you may run into problems with file permissions depending on your setup.  But again, if you need to be an administrator to get out through your firewall, something is wrong with the firewall configuration.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">28-06-2015, 07:56 PM</div>
+</div>
+<div class="message">To be clear, in my case I only need to use admin privs if I want to update via the command line (as opposed to the installer). Normal operations work perfectly using a standard account.<br />
+<br />
+And the update only needs it as the program in my case is installed in the program files directory, which needs admin privs to have anything updated/added/changed in it. That's perfectly normal behaviour for Windows (7 Home Premium in my case), nothing unexpected at all. And I'm sure had I installed it somewhere else outside that folder then even update would work fine without admin privs (presuming somewhere else similarly didn't need it by default).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-06-2015, 10:07 PM</div>
+</div>
+<div class="message">I'm baffled why you elected to do that, but it's your choice. I just don't want future visitors getting the notion that they should do likewise.  On Windows, either always use the installer, or never use the installer.  When you use get_iplayer --update, only the Perl scripts are updated, but the main scripts are not the whole payload carried by the installer. You run the potential risk of getting your scripts out of sync with other components.  It doesn't happen often, but some users have been bitten when they updated just the scripts and failed to update the embedded Perl distribution, for example.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">30-06-2015, 09:48 PM</div>
+</div>
+<div class="message">Because that particular simple explanation is one I've never seen before, and thus never considered...<br />
+<br />
+I shall take your method up from the next update :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot upgrade to new version</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

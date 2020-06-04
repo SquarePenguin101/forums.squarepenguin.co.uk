@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Don't Download on Duration Mismatch</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Don't Download on Duration Mismatch</div>
+<div id="pagetitle"><h2>Don't Download on Duration Mismatch</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2098</h2></div><div class="dateline">24-03-2018, 02:03 AM</div>
+</div>
+<div class="message">The use case for this feature is best demonstrated in short programmes, e.g. Prayer for the Day and Bells on Sunday. Both of these appear on Iplayer straight away after broadcast and the recordings typically last somewhere between 3 minutes 30 and 5 minutes. The programme itself is only 2 minutes long, which is reflected in the metadata.<br />
+<br />
+Eventually (within a few hours on weekdays, but on the next working day at weekends), revised copies get uploaded to Iplayer which have been properly cropped, so they are much closer to the advertised 2 minutes (usually 1 minute 55 or something like that). I want Get_Iplayer to wait until the revised copy gets uploaded before it attempts a download.<br />
+<br />
+This can currently be achieved using the "before" option, but it needs to be set very high (around 55) to account for the weekend. It would be better if Get_Iplayer could ascertain the duration of the file it is about to download, compare it with the advertised duration and, if there is a difference, abort the download. For the option to be most effective it would need to be an offset rather than an exact match, and I would be adding it to individual PVR jobs rather than my preferences file!<br />
+<br />
+Example: the advertised programme duration is 2 minutes.<br />
+--duration-offset=20<br />
+Only files with a duration between 1 minute 40 and 2 minutes 20 will be downloaded. Files outside these limits will be ignored and the programme will not be added to the download history, so it will be tried again next time the PVR runs.<br />
+<br />
+I am assuming the file duration can be calculated prior to download using information in the headers. Obviously, if this is not possible then I understand that the option cannot be implemented.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-03-2018, 07:42 PM</div>
+</div>
+<div class="message">Sorry, but it's a no from me. Few people would use this, and I'm not willing to support it. You can't get an estimate of the actual duration of a programme without parsing the stream data, which would be a waste for something that would not be useful for very many programmes. It sounds like you just want to wait until a later edit is available. EDIT: Removed suggestion to use --available-since to target Bells on Sunday edit - it doesn't always work. Use --before to hold off until edit is available.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Don't Download on Duration Mismatch</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

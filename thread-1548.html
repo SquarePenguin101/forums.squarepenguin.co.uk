@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download schedule pages to update cache on Debian Wheezy</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot download schedule pages to update cache on Debian Wheezy</div>
+<div id="pagetitle"><h2>Cannot download schedule pages to update cache on Debian Wheezy</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">25-10-2017, 10:46 PM</div>
+</div>
+<div class="message">In my case it fails to download the schedule, e.g.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41<br />
+.<br />
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42<br />
+.<br />
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42<br />
+<br />
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w40<br />
+<br />
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w39<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42<br />
+.<br />
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+.<br />
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41<br />
+.<br />
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41<br />
+<br />
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42<br />
+<br />
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+.<br />
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+<br />
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41<br />
+<br />
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week</code></div></div><br />
+I can download the same url with wget or open it in a browser just fine<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;wget http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+--2017-10-25 23:45:00--  http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+Resolving www.bbc.co.uk (www.bbc.co.uk)... 212.58.246.55, 212.58.244.27<br />
+Connecting to www.bbc.co.uk (www.bbc.co.uk)|212.58.246.55|:80... connected.<br />
+HTTP request sent, awaiting response... 301 Moved Permanently<br />
+Location: https://www.bbc.co.uk/schedules/p020dmkf/this_week [following]<br />
+--2017-10-25 23:45:00--  https://www.bbc.co.uk/schedules/p020dmkf/this_week<br />
+Connecting to www.bbc.co.uk (www.bbc.co.uk)|212.58.246.55|:443... connected.<br />
+HTTP request sent, awaiting response... 302 Found<br />
+Location: /schedules/p020dmkf/2017/w43 [following]<br />
+--2017-10-25 23:45:06--  https://www.bbc.co.uk/schedules/p020dmkf/2017/w43<br />
+Reusing existing connection to www.bbc.co.uk:443.<br />
+HTTP request sent, awaiting response... 200 OK<br />
+Length: 878731 (858K) [text/html]<br />
+Saving to: `this_week'<br />
+<br />
+100%[================================================================================================================================================================================&gt;] 878,731      974K/s   in 0.9s    <br />
+<br />
+2017-10-25 23:45:11 (974 KB/s) - `this_week' saved [878731/878731]</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 10:20 AM</div>
+</div>
+<div class="message">It would have been nice if you had mentioned your OS. To recapitulate from another thread: BBC schedule pages are now being redirected to HTTPS URLs. Systems with obsolete Perl modules, like Wheezy, could have problems with that. In particular, it looks like some versions of IO::Socket::SSL cause problems for Mojolicious. Set up a local library for Perl modules (described in the get_iplayer install docs) and install the latest versions of both to override obsolete system packages.<br />
+<br />
+For others: This a completely different problem with completely different symptoms than the issue which necessitated the release of v3.06, reported here:<br />
+<br />
+<a href="/thread-1546.html">/thread-1546.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">26-10-2017, 03:14 PM</div>
+</div>
+<div class="message">Thank you. Even though I saw that it was a different issue than the other thread, I mistakenly thought it was related so I didn't think the OS was relevant (it turns out it was).<br />
+For the time being I'll use it without mojolicious, the box is slow enough that it doesn't really matter.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1912</h2></div><div class="dateline">26-10-2017, 05:03 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (26-10-2017, 10:20 AM)</span></cite>It would have been nice if you had mentioned your OS. To recapitulate from another thread: BBC schedule pages are now being redirected to HTTPS URLs. Systems with obsolete Perl modules, like Wheezy, could have problems with that. In particular, it looks like obsolete versions of IO::Socket::SSL cause problems for Mojolicious. Set up a local library for Perl modules (described in the get_iplayer install docs) and install the latest versions of both to override obsolete system packages.<br />
+<br />
+For others: This a completely different problem with completely different symptoms than the issue which necessitated the release of v3.06, reported here:<br />
+<br />
+<a href="/thread-1546.html">/thread-1546.html</a></blockquote><br />
+I got the same issue and I have updated IO::Socket::SSL to the latest. Now it works fine! Thanks you!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot download schedule pages to update cache on Debian Wheezy</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Launch Web PVR on system startup</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Launch Web PVR on system startup</div>
+<div id="pagetitle"><h2>Launch Web PVR on system startup</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-08-2015, 10:33 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+As a bit of an experiment, I'm looking at setting up Get_iPlayer on my headless Raspberry Pi, with control via another computer on my network (a Windows PC). I've got it installed as per the guide, but if I try to connect to it across my network the connection is refused.<br />
+<br />
+I presume as I'm connecting from another machine rather than via localhost (as the machine is headless it's not what I want to do), I need to perhaps tweak something somewhere to allow the permission? Or is it going to require installing something more to allow this connection?<br />
+<br />
+Also what would I need to do the get the web pvr to run in the background at boot-up, or isn't that possible?<br />
+<br />
+I have Get_iPlayer running fine on the laptop locally, but would prefer it to run on the Pi if possible as that is set up as a general server on my network and so always on.<br />
+<br />
+Thanks for any assistance to get this tweaked to work, if it's possible :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-08-2015, 12:24 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (17-08-2015, 10:33 PM)</span></cite>I presume as I'm connecting from another machine rather than via localhost (as the machine is headless it's not what I want to do), I need to perhaps tweak something somewhere to allow the permission? Or is it going to require installing something more to allow this connection?</blockquote>Run without <kbd>--listen</kbd> option and it will listen on all configured IP addresses.  Do not do that if your machine is accessible on a public network.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Also what would I need to do the get the web pvr to run in the background at boot-up, or isn't that possible?</blockquote>
+You would need to create an init script appropriate to your platform that would start/stop the web pvr server.  Google is your friend here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">18-08-2015, 06:53 PM</div>
+</div>
+<div class="message">Thanks.<br />
+<br />
+Being a noob to Linux I'm still finding my way about in it - how would I go about starting the web pvr without the --listen option? I can't find anything on the man page nor the wiki to give me any pointers there. The Pi only has one port (VPN) open to the internet via port forwarding, so I guess it should be OK.<br />
+<br />
+One other question - is it OK to copy pvr entries and caches from Windows (c:/users/&lt;username&gt;/.get_iplayer) to Pi (~/.get_iplayer) to keep my pvr targets and caches/history files?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-08-2015, 11:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-08-2015, 06:53 PM)</span></cite>Being a noob to Linux I'm still finding my way about in it - how would I go about starting the web pvr without the --listen option? I can't find anything on the man page nor the wiki to give me any pointers there. The Pi only has one port (VPN) open to the internet via port forwarding, so I guess it should be OK.</blockquote>By that I mean don't use the <kbd>--listen</kbd> option when launching the web pvr server (or use <kbd>--listen=0.0.0.0</kbd>).  If you're using the wrapper script (<kbd>get_player_web_pvr</kbd>), you'll need to set <kbd>LISTEN=0.0.0.0</kbd> in its config file (<kbd>/etc/default/get_iplayer</kbd>) instead.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>One other question - is it OK to copy pvr entries and caches from Windows (c:/users/&lt;username&gt;/.get_iplayer) to Pi (~/.get_iplayer) to keep my pvr targets and caches/history files?</blockquote>
+You'll need to change the line endings in all the files from CR-LF to LF.  Don't bother with the cache files.  Just rebuild them on the new machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">19-08-2015, 09:03 PM</div>
+</div>
+<div class="message">Thanks - worked fine.<br />
+<br />
+Although I've decided to do it another way - installed xrdp and I'm just going to use the remote desktop into the Pi and to the web PVR directly from the Pi's desktop. Seems a simpler and more secure way of doing it, with the pvr itself running as a cron job.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">12-09-2015, 11:25 AM</div>
+</div>
+<div class="message">I'm coming back on this, as I'm now trying to remove the GUI part of things to optimise the Pi being headless (shift the memory assignment to minimise the GPU assignment).<br />
+<br />
+I'm running under Raspbian, so is it going to be simply using a call in rc.local to the get_iplayer_web_pvr wrapper, or would there be a more optimised way to call the script directly?<br />
+<br />
+Also as when I run the script from the command line it takes control until I crtl-c out of it, I suspect if I just do the rc.local call it will block getting to any kind of command prompt as the script never exits? Is there a simple way to run the pvr server in the background so as not to block things?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-09-2015, 01:32 PM</div>
+</div>
+<div class="message">The web pvr server doesn't have a command prompt.  If you launch it in a terminal session, you see its STDERR output and you can signal it via Ctrl-C, but you can't interact with it. It should run fine from rc.local.<br />
+<br />
+When launching from rc.local, keep a few things in mind:  <br />
+<ol type="1" class="mycode_list"><li>By default, the script will run as root with <kbd>/</kbd> as both &#36;HOME and the working directory (and thus the default get_iplayer output directory).  You probably don't want either of those things to be true. Create a user account for get_iplayer, run the script from rc.local as that user, and explicitly configure the get_iplayer output directory for that user. The user options file in the usual location (<kbd>&#36;HOME/get_iplayer/options</kbd>) will apply, so make configuration changes there.<br />
+</li>
+<li>You may wish to capture STDOUT/STDERR from the web pvr server.  If so, make the appropriate redirections in your rc.local entry.<br />
+</li>
+<li>If you use the get_iplayer_web_pvr wrapper, you will need to change the listening port in <kbd>/etc/default/get_iplayer_web_pvr</kbd>.<br />
+</li>
+</ol>
+<br />
+EDIT: You can also set GETIPLAYERUSERPREFS and IPLAYER_OUTDIR in the spawned process environment to set get_iplayer config directory and output directory, respectively.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">12-09-2015, 09:53 PM</div>
+</div>
+<div class="message">Thanks. I think I can follow most of that, although the use of a second user account is a little beyond my current knowledge (time for a little investigation).<br />
+<br />
+At the moment the PVR is running under a crontab job, so it's just the setting it up for new programmes. I know I can do it from the command line, but that's a little awkward at times and the web one is a bit easier. I currently have it outputting to a shared folder on my NAS box (mounted as /mnt/iPlayer) and that part is working fine, as is the listening port change you advised me of before (with the PVR server stared manually via SSH). It's that last part I'd like to remove, and just have it start up in the background at boot-up.<br />
+<br />
+So if I enter the following in rc.local would it work (with a suitably set options file to configure the output folder to /mnt/iplayer and to set the listening port), or is the second user a requirement and if so would I have to log in as that user to have the server run? This Pi is my general home server headless one, and runs things like piHole (ad-blocking DNS), openVPN and BYSync in addition to get_iplayer.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>./get_iplayer_web_pvr &gt; /mnt/iplayer/stdout.txt 2&gt; /mnt/iplayer/stderr.txt</code></div></div><br />
+Sorry to ask so many questions, but as I said I'm not so experienced with Linux and so don't want to break the boot by dropping a script into the wrong place in the start-up sequence.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-09-2015, 10:30 PM</div>
+</div>
+<div class="message">If you can run get_iplayer CLI as root in a terminal session and everything works, then it should work the same when launched as root by rc.local. <br />
+<br />
+I wouldn't log to the NAS - use <kbd>/var/log</kbd> instead.  There is a chance the NAS might not be available at boot, and you want to be able to log that error from get_iplayer.<br />
+<br />
+There is no need to separate stdout and stderr - just dup stderr to stdout.  There are only few lines emitted to stdout at launch - the rest goes to stderr. <br />
+<br />
+Don't prefix the script with ".".  Like I said before, rc.local will have <kbd>/</kbd> as working directory - that is not where get_player_web_pvr should be installed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">12-09-2015, 11:00 PM</div>
+</div>
+<div class="message">Ok, so just <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer_web_pvr &amp;&gt; /var/log/get_iplayer.log</code></div></div><br />
+in the rc.local ?<br />
+<br />
+Basically what I'm aiming to do is from a cold boot have the Pi end up at the log-in prompt, with the various services/apps (get_iplayer server, openVPN, piHole DNS, BTsync etc) running. At the moment I have all that except the get_iplayer one - there I have to SSH in and run it before connecting my web browser and doing the PVR editting etc.<br />
+<br />
+My concern is that when the get_iplayer server runs, as the script runs in the foreground and doesn't release until crtl-c is sent, that it will stop the boot process until that is manually done, which will block getting to the log-in prompt and possibly some of the other services/apps. Hence why I'm looking to background the server start-up so things can carry on whilst it runs. I tried just adding the &amp; to the end (Google tells me that is the way to background a task), but it still needs crtl-c to get the terminal prompt back).<br />
+<br />
+<br />
+From some Google browsing I've found the code line:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>su iplayer -c '/home/pi/get_iplayer_web_pvr &gt;&gt; /var/log/get_iplayer.log 2&gt;&amp;1 &amp;'</code></div></div><br />
+which I think may be what I need to use? Where iplayer is the second user created before, which would presumably also need to have the content of the .get_iplayer folder from the user pi's home directory copied into an equivalent folder.<br />
+<br />
+Am I on the right lines here? Sorry for all the questions but I'm still learning this kind of stuff and would like to avoid screwing up the whole thing and having to recreate the thing from my backup image.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-09-2015, 11:53 PM</div>
+</div>
+<div class="message">The code you derived from Google is what you need (the first example is definitely wrong).  If you don't want to keep the log between restarts (it won't be of much use to you), change <kbd>&gt;&gt;</kbd> to <kbd>&gt;</kbd> .<br />
+<br />
+Don't get hung up on terminal sessions and Ctrl-C.  The web pvr server is just that: a server. It was written to run in the background - it works just fine from rc.local.  You don't have to launch it from a terminal session - the system invokes rc.local for you at boot. As you've discovered, the ampersand detaches the web pvr server and runs it in the background.  You don't need Ctrl-C to stop it - you can stop the web pvr server with <kbd>kill</kbd>, <kbd>pkill</kbd>, etc., like any other process if necessary.  The system will stop the web pvr server at shutdown.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">13-09-2015, 08:55 AM</div>
+</div>
+<div class="message">Thanks again - I'll give it a full test-out later this week. I'm off on a business trip for a few days later and I don't want to risk breaking the server beforehand (I'll need the OpenVPN part of it whilst away) as I wouldn't have time to repair it.<br />
+<br />
+Will confirm all is OK (or ask more questions) once I've tested. But thanks again for guiding me with this so far.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-09-2015, 06:52 PM</div>
+</div>
+<div class="message">OK, I've now had time to try it, and with a bit of tweaking it's working. The rc.local line in the end was:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>su -c 'get_iplayer_web_pvr &gt; ~/get_iplayer.log 2&gt;&amp;1 &amp;' iplayer</code></div></div><br />
+with iplayer as the second user, and I decided to just dump the log into the user home folder to save worrying about access privs etc. <br />
+<br />
+Takes a while to run at start-up and when you connect, but that's entirely due to it being on a busy Pi1 and no issue at all. So I can now happily say that my server Pi can be fully headless, and I can drop the GPU memory down to give it more to work with at the command line.<br />
+<br />
+Thanks again for helping get this up and running, and for such a great project overall.<br />
+<br />
+Editted to add - found a bit of an oddity.<br />
+<br />
+If I just reboot the Pi and then let everything boot up, the log contains:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;</code></div></div><br />
+<br />
+and the Pi cannot access the internet (as the Pi is also acting as the DNS server for my network, including itself presumably). However as soon as I connect to the get_iplayer PVR from my laptop, the log fills up as it should:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;<br />
+INFO: Listening on 0.0.0.0:1935<br />
+WARNING: Insecure Remote access is allowed, use --listen=127.0.0.1 to limit to &#36;<br />
+GET: /<br />
+DEBUG: get_iplayer options: "modes=default" "force=0" "refreshfuture=1" "future&#36;<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-&#36;</code></div></div><br />
+and then everything works fine again.<br />
+<br />
+Not sure quite why that may be, as the server looks to be running correctly in the background (if I connect a display to the Pi it gets to the log-in prompt at boot-up).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-09-2015, 07:57 PM</div>
+</div>
+<div class="message">Oops, just noted the code bits got chopped. They should be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --showoptions<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --showoptions<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --listplugins</code></div></div><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --showoptions<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --showoptions<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nopurge --nocopyright --listplugins<br />
+INFO: Listening on 0.0.0.0:1935<br />
+WARNING: Insecure Remote access is allowed, use --listen=127.0.0.1 to limit to this host only<br />
+GET: /<br />
+DEBUG: get_iplayer options: "modes=default" "force=0" "refreshfuture=1" "future=1" "subtitles=0" "fields=name" "type=tv,radio,podcast" "search=.*" "history=0" "versionlist=default" "hide=0" "thumb=0" "skipdeleted=0" "nopurge=1" "listformat=ENTRY|&lt;index&gt;|&lt;thumbnail&gt;|&lt;pid&gt;|&lt;available&gt;|&lt;type&gt;|&lt;name&gt;|&lt;episode&gt;|&lt;versions&gt;|&lt;duration&gt;|&lt;desc&gt;|&lt;channel&gt;|&lt;categories&gt;|&lt;timeadded&gt;|&lt;guidance&gt;|&lt;web&gt;|&lt;seriesnum&gt;|&lt;episodenum&gt;|&lt;filename&gt;|&lt;mode&gt;" "page=1" "pagesize=10" "sortmatches=index"<br />
+INFO: Command: /usr/bin/get_iplayer --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --expiry=999999999 --webrequest modes%3Ddefault?force%3D0?refreshfuture%3D1?future%3D1?subtitles%3D0?fields%3Dname?type%3Dtv%2Cradio%2Cpodcast?search%3D.%2A?history%3D0?versionlist%3Ddefault?hide%3D0?thumb%3D0?skipdeleted%3D0?nopurge%3D1?listformat%3DENTRY%7C%3Cindex%3E%7C%3Cthumbnail%3E%7C%3Cpid%3E%7C%3Cavailable%3E%7C%3Ctype%3E%7C%3Cname%3E%7C%3Cepisode%3E%7C%3Cversions%3E%7C%3Cduration%3E%7C%3Cdesc%3E%7C%3Cchannel%3E%7C%3Ccategories%3E%7C%3Ctimeadded%3E%7C%3Cguidance%3E%7C%3Cweb%3E%7C%3Cseriesnum%3E%7C%3Cepisodenum%3E%7C%3Cfilename%3E%7C%3Cmode%3E?page%3D1?pagesize%3D10?sortmatches%3Dindex</code></div></div>Basically it's working, I'm just not sure why the other processes are getting blocked until i connect (neither ping nor sudo apt-get update can see the net, but as soon as I connect to the server both work fine again until I reboot the Pi).<br />
+Not a major issue, just thought I'd report it as an oddity.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-09-2015, 09:59 PM</div>
+</div>
+<div class="message">I think you need to background the parent shell (note closing quote):<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>su iplayer -c 'get_iplayer_web_pvr &gt; ~/get_iplayer.log 2&gt;&amp;1' &amp;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-09-2015, 10:39 PM</div>
+</div>
+<div class="message">Thanks - tried it and it looks better.<br />
+<br />
+The get_iplayer log still just lists the first three lines until you connect, but if you now leave it a few minutes the ping out to the internet starts to work. So I guess it's just the time it takes for everything including the DNS server to start up and get stabilised on the slow Pi. I'm not sure whether the old code would do the same, but yours is running well enough now so I'll go with that.<br />
+<br />
+It looks Ok now though, so I'll see how it goes and confirm that long-term everything is stable and working well enough to support what it needs to (DNS server, VPN server etc). But it's working well enough for now anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-09-2015, 11:18 PM</div>
+</div>
+<div class="message">On second thought, I doubt the change made any difference. I misunderstood your earlier post. It just sounds like buffered stderr isn't being flushed until you connect and force some more output to it.  Forgot about redirection to log file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">21-09-2015, 09:26 PM</div>
+</div>
+<div class="message">Fair enough, anyway it's working well now and the Pi is now completely headless.<br />
+<br />
+So job's done and all is happy in Pi-land. Thanks again (and I now have my account password issue sorted too, to top it all off).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">22-09-2015, 04:02 PM</div>
+</div>
+<div class="message">Ah, glad you got that sorted Darren. I am just catching up with stuff here on the site and saw your email about having issues but good to see you sorted it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1141</h2></div><div class="dateline">13-05-2018, 09:21 PM</div>
+</div>
+<div class="message">Darren, I'd like to get a headless pi running similar to you description. Is there a summary of all of the steps required anywhere? Thanks in advance.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Launch Web PVR on system startup</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

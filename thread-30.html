@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - perl.exe problem</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; perl.exe problem</div>
+<div id="pagetitle"><h2>perl.exe problem</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-57</h2></div><div class="dateline">01-09-2013, 09:52 AM</div>
+</div>
+<div class="message">Hi all<br />
+ <br />
+Iâm running Win7 64bit, and only recently started to get these errors when I start up the program (screenshots below)<br />
+ <br />
+<a href="http://i.imgur.com/TjiyKAq.png">http://i.imgur.com/TjiyKAq.png</a><br />
+ <br />
+<a href="http://i.imgur.com/278RdJD.png">http://i.imgur.com/278RdJD.png</a><br />
+ <br />
+Iâve tried reinstalling get_iplayer using the auto installer, but no luck, it just wonât work. My perl.exe has the MD5 hash 4E341C9DE7A9C52A56DA9BD997BAC52B<br />
+ <br />
+Thanks in advance for any help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2013, 06:46 PM</div>
+</div>
+<div class="message">The checksum is OK.  The error 5 suggests that access is denied to some resource, but offers no clue if it's a component required by perl.exe or a location used by get_iplayer.  Since the problem only recently cropped up, the logical inference is that something you recently installed or reconfigured has done something naughty to your system.  Any bells ringing?<br />
+<br />
+A place to start would be to attempt to narrow down the problem a bit.  Open a normal command prompt (not the Get_iPlayer shortcut in Start menu), then navigate to installation directory (C:\Program Files (x86)\get_iplayer).  Once there, try to run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer</code></div></div>, with no arguments.  If that fails, try to run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -V</code></div></div>.  If perl.exe runs when get_iplayer doesn't, that would tend to rule out any problems with DLL dependencies in the bundled version of Perl.  You may also want to run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sfc /scannow</code></div></div> just to make sure a system library wasn't messed with, though that seems less likely.<br />
+<br />
+If you're feeling energetic, you may want to try the ProcMon utility to monitor the activities of perl and get_iplayer during launch.  It might reveal where access is being denied.  Some basic instructions can be found here:<br />
+<br />
+<a href="/reply/reply-to-unable-to-install-4/">/reply...install-4/</a><br />
+<br />
+The only change to those instructions are: a) set up your filter for Process Name = perl.exe rather than get_iplayer_setup_latest.exe; b) instead of running get_iplayer_setup_latest.exe, invoke the Get_iPlayer shortcut in the Start menu.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-57</h2></div><div class="dateline">01-09-2013, 06:58 PM</div>
+</div>
+<div class="message">I've uploaded my log from ProcMon<br />
+<br />
+<a href="https://dl.dropboxusercontent.com/u/7014775/Logfile.PML">https://dl.dropboxusercontent.com/u/7014775/Logfile.PML</a><br />
+<br />
+Many thanks again user-2, I can't thank you enough for your troubleshooting help.<br />
+<br />
+I wonder if avast has do to with anything...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2013, 08:06 PM</div>
+</div>
+<div class="message">What were the results of those tests from the command prompt?  And to confirm: You were trying to launch get_iplayer, not just perl.exe, when you generated the ProcMon log, right?  Your log shows no evidence that any elements of get_iplayer itself were accessed.  That would be the case if perl.exe can't initialise, but I want to be sure.  AFAICT from your log, perl.exe can access its supporting libraries OK, so that doesn't seem to be the problem.<br />
+<br />
+I would definitely try running get_iplayer with Avast disabled or removed.  It wouldn't be the first time an antivirus package interfered with get_iplayer.  Have a look at whatever logs or events Avast generates to see if there is any evidence it was messing around with perl or get_iplayer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; perl.exe problem</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

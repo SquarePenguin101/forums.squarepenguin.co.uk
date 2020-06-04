@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Need to change output directory</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need to change output directory</div>
+<div id="pagetitle"><h2>Need to change output directory</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-43</h2></div><div class="dateline">02-08-2013, 09:55 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I want to change the pout put directory for downloaded files. From the command line I have tried <br />
+--output "/c/directory/" but it says not a recognised internal or external command. I've looked through the guides but everything I've tried doesn't work<br />
+<br />
+Thanks in advance<br />
+<br />
+Tony</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-08-2013, 10:02 AM</div>
+</div>
+<div class="message">You are on the Windows Forum so I assume your using Windows as your operating system. <br />
+<br />
+In <a href="https://squarepenguin.co.uk/guides/tv-download-guide/#How_do_I_change_or_specify_where_get_iplayer_saves_downloaded_programmes?">this section</a> of the guide, it tells you how to use the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> command correctly. It also gives you a link to <a href="http://technet.microsoft.com/en-us/magazine/ff678296.aspx">this page</a> where it explains how to find the path to a folder on Windows.<br />
+<br />
+The path you used in the example above is similar to what you might use on Linux, not Windows, and suggests you didn't read the guide/resources closely enough.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-43</h2></div><div class="dateline">02-08-2013, 10:16 AM</div>
+</div>
+<div class="message">Hi Square Penguin<br />
+<br />
+Thanks for your quick reply, I am using windows and typing the output command from the command line, is this correct ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-08-2013, 10:28 AM</div>
+</div>
+<div class="message">Show us the complete command you are running - we can't guess at it.  Your error message has nothing to do with the output directory per se, so it's likely your mistake is somewhere else.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-43</h2></div><div class="dateline">02-08-2013, 10:35 AM</div>
+</div>
+<div class="message">C:\program files\get_iplayer&gt; --output "/i/music getiplayer/"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-43</h2></div><div class="dateline">02-08-2013, 10:42 AM</div>
+</div>
+<div class="message">sorry I meant to type 2 dashes before the output command</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-08-2013, 11:24 AM</div>
+</div>
+<div class="message">Are you trying to set a global preference for all downloads or simply specify an output location for individual downloads? Both are possible. <br />
+<br />
+Firstly, know that <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/i/music getiplayer/</code></div></div> will go to the root of your c: drive, i.e your main hard drive in the folder "i" inside which will be sub-folder "music getiplayer". If that's what you want, fine. But I suspect you may want it to go to the hard drive with letter "i:", in which case you need to get the correct path to the folder.<br />
+<br />
+It could look like this for example, which is a command I use to save to my S: drive:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"S:&#92;2 - TV Shows"</code></div></div><br />
+The link I gave you tells you how to easily copy the exact path to a particular folder, which you can then paste into the get_iplayer command line window. Read the info at the link I gave you.<br />
+<br />
+Read it.<br />
+<br />
+Secondly, you can use the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> command <span style="font-weight: bold;" class="mycode_b">DURING</span> each download to specify the download location like this example from the guide:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get "Top Gear" --tvmode=best --type=tv --channel="BBC Two" --file-prefix="&lt;nameshort&gt;-&lt;senum&gt;-&lt;episodeshort&gt;" --output "/media/TV Shows 1/2 - TV Shows/Top Gear/Season 19"</code></div></div><br />
+<br />
+Note the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> location at the end of the command.<br />
+<br />
+Alternatively, you can specify a default download directory by saving a preference. Identify the folder you want downloads to go into and use the following command to save a preference:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --output="S:&#92;2 - TV Shows"</code></div></div><br />
+You can get more advanced and have it set a preference to only save TV shows to this directory:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --outputtv="S:&#92;2 - TV Shows"</code></div></div><br />
+You could even set a preference to only save TV shows to this location and have each show put into a sub folder based on the programme name<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --outputtv="S:&#92;2 - TV Shows" --subdir --subdir-format="&lt;nameshort&gt;&lt;-seriesnum&gt;"</code></div></div><br />
+I don't use these options personally and have pulled them from the usage guide, so there might be one or two adjustments needed to get it to work perfectly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-08-2013, 11:28 AM</div>
+</div>
+<div class="message">Two things here:<br />
+<br />
+You've forgotten the most obvious part: the get_iplayer command itself.  You can't use just the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> option without the get_iplayer command.  And it makes no sense to run the get_iplayer command with just the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> option - it doesn't do anything.<br />
+<br />
+Hopefully that previous paragraph is irrelevant because you are in fact actually trying to run a complete get_iplayer command.  But when I said show us the complete command you are running, I meant exactly that: <span style="font-weight: bold;" class="mycode_b">the complete command</span>.  And I told you that the error message has nothing to do with the output directory, yet you only provided the parameter for the output directory.  We <span style="font-weight: bold;" class="mycode_b">cannot</span> guess what you are doing - you have to show us.  Try again.<br />
+<br />
+Beyond that, your output directory looks a bit suspicious.  Do you really have a directory named "i" at the top level of your C: drive?  You're using Windows, so specify directory paths in normal Windows format: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"C:&#92;dir1&#92;dir2"</code></div></div>. get_iplayer can cope with forward slashes, but it doesn't matter if the path is incorrect.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-43</h2></div><div class="dateline">02-08-2013, 03:50 PM</div>
+</div>
+<div class="message">Thanks guys, I've got it working now. I wanted to set the global download to a different drive and folder than the c drive and I can see where I was going wrong now, thanks for your prompt replies and advice<br />
+<br />
+Cheers<br />
+<br />
+Tony</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-17</h2></div><div class="dateline">18-09-2013, 02:17 PM</div>
+</div>
+<div class="message">Hi<br />
+I wonder if you could tell me what is wrong with this command which I am using to change all output to a different directory. All I get is list of 1000+ programmes returned. I am a windows user and input the command lines directly. Files still download to the old default (desktop)<br />
+<br />
+&lt;blockquote&gt;get_iplayer --output âC:\Users\Dell-Studio-Laptop\Music\archive\â<br />
+<br />
+<br />
+Thanks<br />
+<br />
+Nick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-17</h2></div><div class="dateline">18-09-2013, 02:26 PM</div>
+</div>
+<div class="message">I should clarify that I am using a double hyphen before the command which has been auto corrected in the post to a long dash..<br />
+Nick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-09-2013, 03:43 PM</div>
+</div>
+<div class="message">Any command line option, including <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div>, will only apply to a single command invocation.  Since you had nothing else on the command line, get_iplayer performed the default action: listing all available TV programmes.  Presumably you want to make your new output location permanent.  To do that, you need save it in your preferences with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div>.  See:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/#saving-settings">https://squarepenguin.co.uk/wiki/documen...g-settings</a><br />
+<br />
+Select your command string and click the "code" button instead of "b-quote" to prevent WordPress from mangling it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-17</h2></div><div class="dateline">19-09-2013, 08:51 AM</div>
+</div>
+<div class="message">Thanks dinkypumkin: with your help I set a new default directory. Two comments which I hope may be helpful:<br />
+1. I imagine many people will use one default directory (especially those who have swum here from the sad wreckage of Radio Downloader) so it might be worth flagging up both the global default and programme specific routes for changing directory in the help note.<br />
+2. If you make an error in changing directory, it is much quicker to change it by going to the 'output' file at \.get_iplayer (open with notepad) and changing the text there.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-09-2013, 09:00 AM</div>
+</div>
+<div class="message">walthamstownick: I might link to this thread or DP's specific answer in the guide if I see other struggling with this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-681</h2></div><div class="dateline">09-11-2014, 01:54 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/need-to-change-output-directory/#post-1269">Quote:</a>&lt;/div&gt;Any command line option, including <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div>, will only apply to a single command invocation.  Since you had nothing else on the command line, get_iplayer performed the default action: listing all available TV programmes.  Presumably you want to make your new output location permanent.  To do that, you need save it in your preferences with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div>.  See:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/#saving-settings">https://squarepenguin.co.uk/wiki/documen...g-settings</a><br />
+<br />
+Select your command string and click the âcodeâ button instead of âb-quoteâ to prevent WordPress from mangling it.</blockquote>
+<br />
+Many thanks for this post! I appreciate it.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need to change output directory</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

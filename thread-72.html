@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Need help recording a program please</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Need help recording a program please</div>
+<div id="pagetitle"><h2>Need help recording a program please</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-244</h2></div><div class="dateline">20-11-2013, 06:40 PM</div>
+</div>
+<div class="message">Hi, I have installed get_iplayer on OS X (10.9) per instructions and am trying to use the web GUI to download a program but it is not working.  Here are relevant details:<br />
+<br />
+get_player version 2.85<br />
+followed instructions to install here: <a href="https://squarepenguin.co.uk/guides/mac-os-x-quick-install-guide/">https://squarepenguin.co.uk/guides/mac-o...all-guide/</a><br />
+launch using this command: get_iplayer.cgi --listen 127.0.0.1 --port 1935<br />
+<br />
+I am able to navigate web GUI and search for program.  I select it and click record button and get the following on the web page:<br />
+Recording The Following Programmes<br />
+<br />
+HARDtalk - Dr Nayna Patel - Medical Director, Akanksha Infertility Clinic, India (b03j0tyc)<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+394: HARDtalk - Dr Nayna Patel - Medical Director, Akanksha Infertility Clinic, India, BBC News, News,TV, default,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) available for this programme with version 'default' (try using --modes=)<br />
+ERROR: Failed to record 'HARDtalk - Dr Nayna Patel - Medical Director, Akanksha Infertility Clinic, India (b03j0tyc)'<br />
+Recording complete<br />
+<br />
+In the terminal window I get:<br />
+<br />
+INFO: Starting Recording Now<br />
+DEBUG: get_iplayer options: "pid=b03j0tyc" "type=tv" "modes=default" "force=0" "refreshfuture=0" "subtitles=0" "hide=0" "thumb=0"<br />
+INFO: Command: ./get_iplayer --nopurge --nocopyright --expiry=999999999 --hash --webrequest pid%3Db03j0tyc?type%3Dtv?modes%3Ddefault?force%3D0?refreshfuture%3D0?subtitles%3D0?hide%3D0?thumb%3D0<br />
+DEBUG: Forked STDOUT reader with PID 69683<br />
+DEBUG: Forked STDERR reader with PID 69684<br />
+<br />
+I know I managed to do this a couple months ago, but now I can't get it to work and can't remember what bit I may have missed to make this work.<br />
+<br />
+Any help would be much appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-11-2013, 06:49 PM</div>
+</div>
+<div class="message">I suspect that you are trying to access iPlayer from outside the UK.  See the first question in the FAQs:<br />
+<br />
+<a href="https://squarepenguin.co.uk/faqs/">https://squarepenguin.co.uk/faqs/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-244</h2></div><div class="dateline">20-11-2013, 07:00 PM</div>
+</div>
+<div class="message">Thanks for the fast reply.  You are correct.  However, my IP does not seem blocked as I can access the show and watch it on BBC Player.  I also tried a London based VPN as a test and get the same result.<br />
+<br />
+Is there some more detailed log or some test you can think of to confirm what might be going wrong for me??</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-11-2013, 07:44 PM</div>
+</div>
+<div class="message">Sorry, you're on your own with VPNs and proxies.  The "No specified modes" error is a fairly reliable indicator of geo-blocking, but all I can offer is the obvious: all VPNs and proxies are not equal.  Some may be blocked and some may not provide a working IP even though in the UK.  And even if you have managed to slip through the net and access the programme on the iPlayer site, that doesn't necessarily mean get_iplayer can access the programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-244</h2></div><div class="dateline">20-11-2013, 07:52 PM</div>
+</div>
+<div class="message">Fair enough.  I think I know where to focus my efforts now at least.  On suggestion, since you seem to be a (the?) developer would be to make the error more clear and to mention something about geo-blocking.  Thanks again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Need help recording a program please</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - http://localhost:1935 not working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; http://localhost:1935 not working</div>
+<div id="pagetitle"><h2>http://localhost:1935 not working</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-752</h2></div><div class="dateline">04-12-2014, 03:04 AM</div>
+</div>
+<div class="message">Just downloaded &amp; installed version 2.90<br />
+<br />
+Whilst pvr_manager command line starts ok, http://localhost:1935 doesn't work (just goes to . Tuned off firewall &amp; anti-virus but makes no difference. Am running Vista. Probably something quite simple but can't find any solution<br />
+<br />
+In case pvr_manager command window is erroneous, this is what it shows:<br />
+<br />
+DEBUG: Command: ".\get_iplayer.cmd" --encoding-locale=UTF-8 --encoding-console-o<br />
+ut=UTF-8 --nopurge --nocopyright --showoptions<br />
+DEBUG: Command: ".\get_iplayer.cmd" --encoding-locale=UTF-8 --encoding-console-o<br />
+ut=UTF-8 --nopurge --nocopyright --showoptions<br />
+DEBUG: Command: ".\get_iplayer.cmd" --encoding-locale=UTF-8 --encoding-console-o<br />
+ut=UTF-8 --nopurge --nocopyright --listplugins<br />
+INFO: Listening on 127.0.0.1:1935<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2014, 12:43 PM</div>
+</div>
+<div class="message">"just goes to"?  Just goes to what?  Try loopback address (127.0.0.1) instead of localhost.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-752</h2></div><div class="dateline">04-12-2014, 09:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/httplocalhost1935-not-working/#post-10646">Quote:</a>&lt;/div&gt;âjust goes toâ?  Just goes to what?  Try loopback address (127.0.0.1) instead of localhost.</blockquote>
+<br />
+Sorry - should have wriiten "goes to page not found" or sends me to a search engine page with <br />
+<br />
+127.0.0.1 changes to 127.0.0.1/es_home.htm and brings up WinTV DVB-T Electronic Program Guide for Hauppage - which is the tv video card. So there's some kind of conflict<br />
+<br />
+Any advice</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2014, 12:30 AM</div>
+</div>
+<div class="message">Search engine page with what?  Did you try 127.0.0.1:1935, not just 127.0.0.1?  You obviously have some kind of web server already running on your machine, presumably an unhelpful service related to your TV card, but it's not likely also to be bound to port 1935.  Whatever is running on your machine could also be interfering with resolving the localhost alias to your machine, but there is no way for me to know.  Bottom line: it appears that some third-party software has messed up your machine.  You'll have to find out what it is and what it's doing.  get_iplayer is working correctly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2014, 12:51 AM</div>
+</div>
+<div class="message">Another thing to do is to check <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>c:&#92;windows&#92;system32&#92;drivers&#92;etc&#92;hosts</code></div></div> and make sure localhost hasn't been remapped.  Unlikely, but you never know.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-757</h2></div><div class="dateline">05-12-2014, 09:33 PM</div>
+</div>
+<div class="message">I get the same issue when I start the pvr manager (2.90 on Win 7) - I just refresh the page after a few seconds and it works as expected. The latest version seems to take a bit longer to setup the correct port for the web page.<br />
+<br />
+Many thanks for this great tool!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; http://localhost:1935 not working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+INFO: Search term 'top of the pops' is a substring
+DEBUG: Search download_regex = top of the pops
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: 2015-08-22T23:50:00+01:00 = 2015, 08, 22, 23, 50, 00, 01, 00
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 7.1; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.12'
+DEBUG: Using NoCookies user-agent 'Mozilla/5.0 (Windows NT 7.1; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.12'
+Matches:
+1581:   Top of the Pops - 1979 - Big Hits, BBC Four, default
+DEBUG: Getting Metadata for b03mpphy:
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b03mpphy.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b03mpphy.xml
+DEBUG: No Encoding used on http://www.bbc.co.uk/programmes/b03mpphy.xml
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 7.1; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.12'
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 7.1; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.12'
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b03mppbx/proto/rtmp?cb=62542
+DEBUG: No Encoding used on http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b03mppbx/proto/rtmp?cb=62542
+
+<?xml version="1.0" encoding="UTF-8"?><mediaSelection xmlns="http://bbc.co.uk/2008/mp/mediaselection"><!--This code and data form part of 

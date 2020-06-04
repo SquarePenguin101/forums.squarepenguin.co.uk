@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - What unit of measurement does &quot;expires&quot; use in tv.cache?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; What unit of measurement does &quot;expires&quot; use in tv.cache?</div>
+<div id="pagetitle"><h2>What unit of measurement does &quot;expires&quot; use in tv.cache?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2391</h2></div><div class="dateline">12-06-2019, 05:32 PM</div>
+</div>
+<div class="message">Hi all, I'm interested in analysing the iPlayer database so I'm working with the tv.cache file (going to bring it into Tableau to do some visualisations). I've read the file into R, and exported it as a .csv file (using "|" as the delimeter). However, some of the columns have me baffled - most make sense, e.g. "name" refers to title of series/film, "episode" refers to the episode, etc. Some weren't clear to begin with, but I figured out, e.g. "duration" uses seconds as the unit, so all you have to do is divide by 60 to get the duration in minutes. However, one column that doesn't make sense to me is "expires". Here's an example of the data: 1561382400.<br />
+<br />
+Does anyone know what unit this is using? The title in question supposedly expires in 11 days (according to its page on the iPlayer). It would also be helpful if someone could point me in the direction of any further information about the data stored in the cache, assuming it exists?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-852</h2></div><div class="dateline">13-06-2019, 09:17 AM</div>
+</div>
+<div class="message">It's a Linux system timestamp<br />
+<br />
+Where 1561382400 would be Monday, 24 June 2019 13:20:00 UTC<br />
+<br />
+Info <a href="https://en.wikipedia.org/wiki/Unix_time">https://en.wikipedia.org/wiki/Unix_time</a><br />
+Calculator <a href="https://www.epochconverter.com/">https://www.epochconverter.com/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2391</h2></div><div class="dateline">13-06-2019, 09:38 AM</div>
+</div>
+<div class="message">Brilliant, that all makes sense now. Had never heard of this before!<br />
+<br />
+Thanks for the quick reply.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1730</h2></div><div class="dateline">15-06-2019, 02:49 PM</div>
+</div>
+<div class="message">Technically it's the Unix time (or Unix epoch). It's the number of seconds since 00:00:00 January 1st 1970 (UTC to be exact, and minus leap seconds). Pretty common in time measurements in computer applications.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; What unit of measurement does &quot;expires&quot; use in tv.cache?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

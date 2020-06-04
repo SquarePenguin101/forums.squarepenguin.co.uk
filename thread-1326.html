@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Empty subtitles with V3</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Empty subtitles with V3</div>
+<div id="pagetitle"><h2>Empty subtitles with V3</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1741</h2></div><div class="dateline">02-05-2017, 10:28 AM</div>
+</div>
+<div class="message">I've just upgraded to V3, previous one had of course stopped working with whatever changes the BBC have made. Had to add the program directory and that for the utils and perl to the beginning of the path to get everything working.<br />
+<br />
+If I use either the new default for subtitle handling or the mono or raw option then the download fails with odd parsing errors, I've added the option <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --subsfmt=default</code></div></div><br />
+to put the processing back to the older method, however, although the video downloads now I get an empty subtitle file. <br />
+<br />
+Example output<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+7818:	Timeshift: Series 16 - Penny Blacks and Twopenny Blues: How Britain Got Stuck on Stamps, BBC Four, b082v57b<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hlshd1,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,dvfxsd1,dvfxsd2,hlsvhigh1,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,hlsstd1,hlsxstd1,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2 modes will be tried for version original<br />
+INFO: Trying hlshd1 mode to record tv: Timeshift: Series 16 - 3. Penny Blacks and Twopenny Blues: How Britain Got Stuck on Stamps<br />
+INFO: File name prefix = Timeshift_Series_16_-_3._Penny_Blacks_and_Twopenny_Blues_How_Britain_Got_Stuck_on_Stamps_b082v57b_original                 <br />
+<br />
+INFO: Downloading subtitles to: D:\Users\Ian\Desktop\iPlayer Recordings/Timeshift_Series_16_-_3._Penny_Blacks_and_Twopenny_Blues_How_Britain_Got_Stuck_on_Stamps_b082v57b_original.srt<br />
+WARNING: Subtitles empty<br />
+INFO: Begin recording file: D:\Users\Ian\Desktop\iPlayer Recordings\Timeshift_Series_16_-_3._Penny_Blacks_and_Twopenny_Blues_How_Britain_Got_Stuck_on_Stamps_b082v57b_original.video.ts<br />
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]</code></div>
+</div>
+It's so far on both programs I've fetched both via CLI and web interface.<br />
+<br />
+FWIW I also have a warning about pocdcast but there's no podcast specified in my PVR list. There was one but I've deleted it. Both restarted the PC and removed and reinstalled get_iplayer but no difference seen.<br />
+<br />
+-- <br />
+Ian</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 11:02 AM</div>
+</div>
+<div class="message">Your example works fine here. Probably a temporary upstream glitch. If not, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1741</h2></div><div class="dateline">02-05-2017, 12:06 PM</div>
+</div>
+<div class="message">I downloaded a previous Horizon episode with the command<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer&gt;get_iplayer --pid=b05n8jqs --subtitles --metadata=xbmc_movie --force --verbose &gt; D:&#92;temp&#92;log.txt 2&gt;&amp;1</code></div></div><br />
+Same as before the SRT file is empty, the video has saved. I have this program already once with subtitles so it did work in the previous version. <a href="https://www.dropbox.com/s/9cnrgtlcuryc91a/get_iplayer-log.7z?dl=0">Link to compressed log</a>  sorry in all it's about 15MB can't attach the compressed file directly.<br />
+<br />
+-- <br />
+Ian</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 12:45 PM</div>
+</div>
+<div class="message">You are apparently not using the Windows installation I provide, so I'm afraid I can't offer any support. You're definitely not using the provided version of ffmpeg, and I suspect you have overlaid the get_iplayer script onto an old Perl distribution with broken or missing HTTPS support. Moreover, you appear to be using get_iplayer outside the UK. Thread closed - see forum rules.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Empty subtitles with V3</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

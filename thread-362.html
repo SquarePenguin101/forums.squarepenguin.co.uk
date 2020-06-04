@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Using a Windows Thin Client for get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Using a Windows Thin Client for get_iplayer</div>
+<div id="pagetitle"><h2>Using a Windows Thin Client for get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-859</h2></div><div class="dateline">20-02-2015, 10:01 PM</div>
+</div>
+<div class="message">I thought that other Windows users of get_iplayer might be interested in my experiments with a Thin Client.<br />
+<br />
+I use get_iplayer to download programs to my network drive and often leave the PVR running on my laptop to capture things that interest me. I wanted to offload the PVR to a separate machine, just running the search function on my laptop to add items to the PVR list.  <br />
+<br />
+I donât have the Linux experience to get get_iplayer running directly on one of my network drives, so I needed a Windows solution.<br />
+<br />
+I could rustle up a disused desktop machine, but I donât really have a place to put it; nor do I want the fan noise. I decided to try using a fanless Thin Client instead. My solution consists of the following:<br />
+<br />
+Hardware: HP T620 Thin Client, 2GB Ram, 16GB Solid State Disk. 1.65 GHz AMD GX-217GA, Gigabit Ethernet. OS: Windows 7 Embedded. Running headless (i.e. no monitor, mouse or keyboard). Using TeamViewer for remote access when necessary.<br />
+<br />
+I mapped a share on a network drive as âD:â and installed get_iplayer on this drive. I also configured get_iplayer to save downloaded material on a network drive.<br />
+<br />
+That left only the cache and PVR files etc. on the SSD (the stuff in c:\Users\UserName\.get_iplayer). I had to ask on the forum to find out how to point get_iplayer to a different location for this (thank you!). This is done by pointing the Environment Variable âGETIPLAYERUSERPREFSâ to a directory on a network drive.<br />
+<br />
+I then made the following changes to the get_player set-up:<br />
+<br />
+In get_iplayer.cgi.cmd, I replaced 127.0.0.1 with 0.0.0.0 so that I can run the PVR manager on my laptop (or on other machines on my network) by pointing a browser tot http://ThinClient:1935<br />
+<br />
+In pvr_manager.cmd, I removed the last line (.\pvr_manager.url) so that the browser is not launched on the thin client.<br />
+<br />
+Instead, I added:<br />
+<br />
+start "PVR" "run_pvr_scheduler.bat"<br />
+<br />
+so that the PVR scheduler runs instead. I then added the pvr_manager.cmd shortcut to Startup so that everything fires up on boot. I changed the BIOS settings so that the machine boots when power is applied. I have yet to experiment with unplanned power outages, but I think that I may need to delete pvr_lock if it is present on power up â perhaps someone can comment. Iâm not sure whether recovery from that situation will be completely without human intervention â that would be expecting rather a lot, but might be possible.<br />
+<br />
+As far as I can tell, this setup seems to work well. It is perhaps little slow, but I have yet to place the Thin Client and disks together on the GigE part of my network.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-859</h2></div><div class="dateline">21-02-2015, 08:30 AM</div>
+</div>
+<div class="message">Update: Looking in the Program Files/get_iplayer directory after a few downloads and config changes, it looks as if there is nothing frequently written there... which would make sense. So it looks as if the SSD would be safe for the program files as long as the config and output files go on network disk.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-02-2015, 05:55 PM</div>
+</div>
+<div class="message">Program Files\get_iplayer is only written during installation.<br />
+<br />
+As I said in the other thread, the lock file will be overwritten unless the process that created it is still running, so I wouldn't expect any issue on reboot.<br />
+<br />
+Using a network drive is always going to be slow, fatally so if the drive or network can't keep up.  During a normal download, the entire contents of the programme is pushed back and forth over the wire 5 times, and written to disk 3 times.  One hour of HD video is about 1 GB, so it can add up.  Your configuration seems to be adequate, but some users have foundered using network disks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-02-2015, 05:58 PM</div>
+</div>
+<div class="message">I wouldn't expect reboot issues re: starting the pvr, but there is no guarantee that any interrupted download would restart properly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-859</h2></div><div class="dateline">28-02-2015, 04:42 PM</div>
+</div>
+<div class="message">Thanks, DP. Fortunately I'm only an SD user... my TV is not large enough to require the HD file.<br />
+<br />
+I'm glad I didn't read any of the posts about network disks being too slow before I set everything up that way :-)<br />
+<br />
+Just for reference, the drives I'm using is a WD My Book Live with Gigabit Ethernet. Actually, the Thin Client has a Gigabit Ethernet card too... but for convenience of location I'm not currently running the machine on the Gigabit part of my network, so it is only seeing 100Mbps. It is a low-end drive, cost-wise, so not screamingly fast <br />
+<br />
+I had not thought about about the multiple passes. It is just an academic question, as I don't need or intend to do it, but could one do some of the processing on a local HD and only transfer to the network disk at the end? I suppose that would require a lot of unpicking scripts to place various things at different locations.<br />
+<br />
+I have a Â£13.50 40GB USB hard drive attached to the machine now (outside the box) so it is not quite a "thin" client any more :-). But I can imagine that a persistent HD user could finagle something along the lines of writing things to local HD before uploading it finally to the Network drive.<br />
+<br />
+Anyway... that is all just idle speculation, as my solution works for me (for the moment).<br />
+<br />
+Thanks for all the input.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-859</h2></div><div class="dateline">28-02-2015, 05:26 PM</div>
+</div>
+<div class="message">I see that some of my last rambling is already addressed by another question:<br />
+<br />
+<a href="/topic/define-a-temp-directory/">/topic...directory/</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Using a Windows Thin Client for get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

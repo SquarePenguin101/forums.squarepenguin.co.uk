@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - regular expressions, PVR using web interface</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; regular expressions, PVR using web interface</div>
+<div id="pagetitle"><h2>regular expressions, PVR using web interface</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-67</h2></div><div class="dateline">25-09-2013, 06:36 PM</div>
+</div>
+<div class="message">I want to have the system record all programs with names that start with "Dick Francis" (or "Paul Temple", etc...), and know I can edit entries in "PVR list", but can't recall enough of regexp to figure out how to make that happen.  What do I need?<br />
+I think I can get all series of entries that have series number by replacing the digit with "\d" (but it's not happened yet.  Is that correct?<br />
+tnx, doug</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2013, 01:23 AM</div>
+</div>
+<div class="message">This one of those of those <a href="http://en.wiktionary.org/wiki/give_a_man_a_fish_and_you_feed_him_for_a_day._Teach_a_man_to_fish_and_you_feed_him_for_a_lifetime">"teach a man to fish"</a> situations.  If you're going to employ regular expressions you should avail yourself of one of the many, many regex tutorials on the internet to teach yourself the basics.  Anchoring a match to the beginning of a string will almost certainly be one of the concepts covered in every tutorial.  I'll start you off with a hint:  In the Web PVR, click on the underlined series name of one of the "Dick Francis - Straight" episodes and look at what appears in the "Search" field: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>^Dick Francis - Straight&#36;</code></div></div>. That pattern ensures an exact match for that series name, with no extra characters at the beginning or end.<br />
+<br />
+More generally, do you really need regular expressions here?  A search in the <span style="font-weight: bold;" class="mycode_b">Name</span> field using just "Dick Francis" (or "Paul Temple") seems unlikely to turn up false positives.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-67</h2></div><div class="dateline">28-09-2013, 10:33 PM</div>
+</div>
+<div class="message">Yes, except that ^Dick Francis&#36; doesn't pick up "Dick Francis - Straight" whereas ^Dick Francis - Straight&#36; does.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">28-09-2013, 11:17 PM</div>
+</div>
+<div class="message">Right, but <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>^Dick Francis</code></div></div> will pick up "Dick Francis - Straight".<br />
+<br />
+DP was giving you a hint, not the answer. I know nothing of regex and simply read <a href="http://www.zytrax.com/tech/web/regex.htm#simple">this page</a> which told me using the caret anchors the search to the start of the target string. <br />
+<br />
+The &#36; anchors the search to the end of the target string. Using both therefore means 'match the whole string' whereas using just the caret means 'make sure this term is at the start of the target string'.<br />
+<br />
+At least, that's what my 2 minute reading suggests.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; regular expressions, PVR using web interface</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

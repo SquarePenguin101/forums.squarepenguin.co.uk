@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Firewall settings</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Firewall settings</div>
+<div id="pagetitle"><h2>Firewall settings</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-963</h2></div><div class="dateline">27-06-2015, 09:51 AM</div>
+</div>
+<div class="message">I have successfully used get_iplayer for about 2 years (command line only), but after updating to 2.94 I get only errors. When turning off the Windows firewall, everything works OK. Can anyone help me? Version 2.92 worked OK, and therefore it must be some new call or port that is being blocked. I see nothing obvious when looking at the 'outbound' and 'inbound' rules and have not made any recent changes to my firewall settings. Thanks!<br />
+<br />
+A topic on firewall settings would be a nice addition to the forum.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-06-2015, 01:53 PM</div>
+</div>
+<div class="message">The ports used by get_iplayer have not changed.  You're not going to get very far if you don't even include the error message you received.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-06-2015, 02:23 PM</div>
+</div>
+<div class="message">I should make clear, if it isn't obvious, that get_iplayer and associated tools only make outbound connections.  The only scenarios where I've seen outbound connections blocked is when an anti-virus or security package interferes with the system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-963</h2></div><div class="dateline">27-06-2015, 09:55 PM</div>
+</div>
+<div class="message">Thank you for your reply. I should have included the error msg that occurs with v2.94 when my (Windows) firewall is enabled. Hopefully attached is a png file that will be informative. The errors repeat until I Ctrl-C.<br />
+When my firewall is disabled, the show is fetched without a problem.<br />
+When my firewall is enabled, and I use v. 2.92, the show is fetched without a problem.<br />
+I run Windows 7 64-bit and Trend Micro AV. The above results are identical with or without my AV enabled.<br />
+I do not run another firewall and have made very few changes to the defaults since installation - and no changes lately.<br />
+Thanks again for your thoughts. Ultimately I will solve this, but am thankful for guidance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-963</h2></div><div class="dateline">04-07-2015, 08:58 AM</div>
+</div>
+<div class="message">&gt;&gt; You're not going to get very far if you don't even include the error message you received.<br />
+<br />
+Looks like I didn't get very far even when including the error message.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2015, 12:07 PM</div>
+</div>
+<div class="message">There was nothing in the log output that you didn't already know.  Something on your machine is preventing rtmpdump from connecting via port 1935 to the media servers.  It's very unlikely you configured your firewall to do that, so the likely culprit is still anti-virus.  All I can suggest is to make sure every single service installed by your AV is stopped and try get_iplayer again.  You may have to go into the system service manager to stop some of them, but I don't know about your particular setup.  Your AV may have blacklisted get_iplayer 2.94 for some reason, but again, I have no way of knowing.  You can use this site to see if the port 1935 is open to your web browser:<br />
+<br />
+<a href="http://www.therealtimeweb.com/index.cfm/2004/10/2/fms-port-tester">http://www.therealtimeweb.com/index.cfm/...ort-tester</a><br />
+<br />
+If so, then that would tend to confirm it's an application block rather than a port 1935 block.  How you get around that would depend on your AV package.<br />
+<br />
+You can also try <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--tvmode=hlsbest</code></div></div>. That uses port 80, which doesn't appear blocked on your machine.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Firewall settings</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Converting external ts files</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Converting external ts files</div>
+<div id="pagetitle"><h2>Converting external ts files</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">04-07-2017, 09:03 AM</div>
+</div>
+<div class="message">I've got some .ts files from outside get_iplayer (from my PVR box) which I'd like to convert to mp4 files.<br />
+<br />
+Is it possible to use the ffmpeg set-up built into get_iplayer for this, or is that not possible? I see that the downloads from the BBC are initially also .ts files, but they are then converted afterwards to mp4 (for video).<br />
+<br />
+I know I could install it separately, but I'd prefer not to duplicate things on my system if I can to save space, and also not run the risk of screwing up gi's working by adding a separate ffmpeg install in parallel.<br />
+<br />
+This is on my Windows 10 set-up, in case that's relevant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2017, 10:21 AM</div>
+</div>
+<div class="message">You can use the ffmpeg.exe provided with get_iplayer - there is nothing special about it. Although it isn't necessary in this case, you could use a different ffmpeg build as well - it won't interfere with get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">06-07-2017, 11:24 AM</div>
+</div>
+<div class="message">Thanks - tested it last night and it worked, albeit rather slowly just using the defaults (although it's a low powered netbook so nothing blindingly fast was expected).<br />
+<br />
+Can I ask what settings/parameters you set up for use with GI conversions, as they seem to be quicker on the same machine (with the understanding of course that it's different source material). Just so I can test them to optimise things, as with the number of options available in FFMPEG it's a bit bewildering how to get the thing set up properly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-07-2017, 12:10 PM</div>
+</div>
+<div class="message">It sound like you're trying to transcode your files. get_iplayer doesn't transcode. It only performs a remux to put audio/video streams into an MP4 container, which is faster than transcoding.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">07-07-2017, 09:08 AM</div>
+</div>
+<div class="message">Thanks again - that would explain it perhaps yes.<br />
+<br />
+It's TVHeadend output pulled from an HDHomerun device, so I'm not entirely certain of the format it's using. But converting the .ts file to a .mp4 reduces the file size to about 1/3 of the original (using the default ffmpeg settings) so there's definitely a lot of work going on there. it just takes about 3-4 hours to do a typical film.<br />
+<br />
+I'll have a play with the multitude of options and see what I can optimise anyway, just thought I'd ask first to learn from others experience and save a bit of effort.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Converting external ts files</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+get_iplayer 3.01-windows.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\xxxxx/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	get = 1
+	modes = tvbetter
+	output = C:\Users\xxxxx\Videos\iPlayer Recordings
+	tvmode = tv25fps
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '123'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Additionally getting cached programme data for tv
+INFO: Got 7706 file cache entries for tv
+Matches:
+123:	Alba Today - 02/05/2017, BBC Alba, b08njpss
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b08njpss.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b08njpss.json
+WARNING: Some recording modes were remapped to new values
+WARNING: Input mode list remapped from 'tv25fps' to 'tvdefault'
+WARNING: Please update your preferences
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b08njpsd/transferformat/dash?cb=82953
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b08njpsd/transferformat/dash?cb=66828
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b08njpsd/transferformat/hls?cb=80185
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b08njpsd/transferformat/hls?cb=02704
+INFO: No streams available for 'original' version (b08njpsd) - skipping
+INFO: No streams available for 'original' version (b08njpsd) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata

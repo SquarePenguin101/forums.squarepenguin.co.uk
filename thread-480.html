@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - metadata broken ?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; metadata broken ?</div>
+<div id="pagetitle"><h2>metadata broken ?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">19-07-2015, 06:11 PM</div>
+</div>
+<div class="message">Have just downloaded the entire BBC Reith Lectures series (multiple years).  <br />
+<br />
+The file metadata is messed up; perhaps I have a problem this end, but other files download ok.<br />
+<br />
+The symptom is that important data like "comments" and "year" and "album" are all THE SAME for all files and seem to default to some 2015 value (Jeffery Sachs features).<br />
+<br />
+Since the filenames contain no dates (another problem), the lack of this data makes it impossible to semi-automatically file the various series, and a major job to do manually (only by visually comparing known series/espisode titles).<br />
+<br />
+Anyone else seeing this?<br />
+<br />
+Can I provide any useful debug info?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-07-2015, 10:20 AM</div>
+</div>
+<div class="message">Provide a get_iplayer command that will download one - and only one - of your programmes with incorrect metadata.  I need to be able to compare like for like.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">20-07-2015, 10:52 AM</div>
+</div>
+<div class="message">Thanks.  I only ever use the Web PVR interface (or run get_iplayer with no arguments) so am not familiar with constructing the cmd line version (though I know it can be done). Is there somewhere the web interface logs the cmds that were generated so I can retrieve and try them manually?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">20-07-2015, 11:21 AM</div>
+</div>
+<div class="message">Further: I discovered my "podcast.cache" and have extracted a few lines from it below. There are around 100 Reith podcasts and all but the more recent seem to have the same "Jeffery Sachs ..." comment.  I'm beginning to suspect that this is a BBC problem perhaps?<br />
+<br />
+Should I (somehow) rebuild the cache or just talk to the BBC ??  <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>224332|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qj64d.mp3|Tue, 05 Nov 2013 00:00:00 +0000|I Found Myself in the Art World|||default|2511||BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433347475||http://www.bbc.co.uk/radio4/reith|<br />
+224333|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qsjwq.mp3|Sun, 14 Dec 1952 00:00:00 +0000|The Psychology of Encounters|||default|1835|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224334|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qskqr.mp3|Sun, 01 Dec 1963 00:00:00 +0000|The Fulfilment of Lives|||default|1731|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224335|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qsl41.mp3|Tue, 12 Dec 1972 00:00:00 +0000|Wanted: An Instrument For Crisis Management|||default|1708|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224336|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qsl58.mp3|Sun, 30 Nov 1969 01:00:00 +0100|Global Changes - Actual and Possible|||default|1680|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224337|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qslk7.mp3|Sun, 16 Nov 1969 01:00:00 +0100|Impact of Man on His Environment|||default|1738|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224338|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qslsf.mp3|Sun, 20 Dec 1953 00:00:00 +0000|The Sciences and Man's Community|||default|1830|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|<br />
+224339|podcast|The Reith Lectures|http://open.live.bbc.co.uk/mediaselector/5/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p02qsm0l.mp3|Sun, 09 Nov 1969 01:00:00 +0100|Man and Nature|||default|1748|Jeffrey Sachs delivers the first of five lectures, recorded at The Royal Society, London. Sachs outlines the challenges facing mankind and argues that we must adapt to the new age.|BBC Radio 4|Society &amp; Culture|http://ichef.bbci.co.uk/images/ic/1408x1408/p02sft7k.jpg|1433325308||http://www.bbc.co.uk/radio4/reith|</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">20-07-2015, 11:31 AM</div>
+</div>
+<div class="message">Please don't dump a chunk of output into the post without marking it as code. <br />
+<br />
+If you don't select the text and hit the code button (available in the little set of buttons above the editor) or manually wrap it in [code] tags in the quick reply box, it is unreadable. <br />
+<br />
+I've fixed your post this time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-07-2015, 01:52 PM</div>
+</div>
+<div class="message">The BBC have made major changes to their podcasts in recent weeks, and it appears that one of those changes broke some of the podcast feed parsing in get_iplayer, at least for the Reith Lectures podcast.  I suspect some other podcasts may be affected as well.  You have two choices:<br />
+<ol type="1" class="mycode_list"><li>Get a proper podcast application and re-download the programmes<br />
+</li>
+<li>Re-download with get_iplayer from the command line using <kbd>--no-tag</kbd> so that the default metadata is not overwritten. For example, you could download the whole set in batches of ten by repeatedly running the following command until all have been retrieved:<br />
+</li>
+</ol>
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=podcast "The Reith Lectures" --limit-matches=10 --hide --no-tag --get</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">20-07-2015, 02:07 PM</div>
+</div>
+<div class="message">Thanks very much for investigating and for the recommendations.<br />
+<br />
+I tried extracting a few of the URLs from the cache and hacked a simple HTML file from which I could download them.  They loaded fine with good metadata.  I could do the rest the same way.<br />
+<br />
+Am interested in your comment re using --no-tag ... <br />
+<br />
+Why would it be desireable to over-write the default metadata?  OK, maybe sometimes it's lacking, so maybe better to provide by over-writing, than no data at all.  I can see that. Any other reason?<br />
+<br />
+And second, can I set --no-tag as a default when running the web PVR?<br />
+<br />
+Many thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-07-2015, 02:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-07-2015, 02:07 PM)</span></cite>I tried extracting a few of the URLs from the cache and hacked a simple HTML file from which I could download them.  They loaded fine with good metadata.  I could do the rest the same way.</blockquote>You can generate list of all the URLs with:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=podcast "The Reith Lectures" --listformat="&lt;pid&gt;"</code></div></div><blockquote class="mycode_quote"><cite>Quote:</cite>Why would it be desireable to over-write the default metadata?  OK, maybe sometimes it's lacking, so maybe better to provide by over-writing, than no data at all.  I can see that. Any other reason?</blockquote>
+Not that I know of.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>And second, can I set --no-tag as a default when running the web PVR?</blockquote>
+Not recommended unless you really, truly want every single download - not just podcasts - to be untagged.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; metadata broken ?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

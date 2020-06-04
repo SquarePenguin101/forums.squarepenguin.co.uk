@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Add option to embed soft subtitles in output files</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Add option to embed soft subtitles in output files</div>
+<div id="pagetitle"><h2>Add option to embed soft subtitles in output files</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2010</h2></div><div class="dateline">18-12-2017, 05:16 AM</div>
+</div>
+<div class="message">Goal: Automatic inclusion of subtitles into the mp4 file, for compatibility with players that are unable to read .srt files.<br />
+<br />
+Current workaround: Manual use of Subler on osx for each file.<br />
+<br />
+Almost functional workaround: user-specified command to call ffmpeg a second time. The problem is that the artwork added during the tagging phase is lost.<br />
+<br />
+I am working on a changelist to support my goal by moving the postproc() code that merges the audio and video until after subtitles are downloaded but before tagging.<br />
+<br />
+I am curious if A) if there is a better way to achieve my goal; or B) if there is a reason that the code is structured as is it that I need to be careful about to ever have a chance of a pull request being accepted. I see that there have been recent changes on github to subtitle processing, so it would also be good to know if there are planned changes near this code.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">18-12-2017, 02:31 PM</div>
+</div>
+<div class="message">The artwork for a get_iplayer mp4 is stored in the mp4 container as a second video stream in mjpeg format. Unfortunately, after further manipulation of the mp4 that stream does not seem to be recognized as cover art by players even when it still exists.<br />
+<br />
+What you could do is to add another step to your almost functional workaround to add the artwork back.<br />
+<br />
+Here's the steps (Windows I'm afraid, but should be straightforward to convert to other operating systems).<br />
+<hr class="mycode_hr" />
+Starting with the downloaded, converted and tagged get_iplayer file: <span style="font-style: italic;" class="mycode_i">in.mp4</span> and the get_iplayer downloaded subtitles file: <span style="font-style: italic;" class="mycode_i">in.srt</span> both in the current directory and with <span style="font-style: italic;" class="mycode_i">ffmpeg</span> and <span style="font-style: italic;" class="mycode_i">atomicparsley</span> in the PATH.<br />
+<ol type="1" class="mycode_list"><li>Extract the thumbnail from the mp4<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;ffmpeg -i in.mp4 -c copy -map 0:2 out.jpg</code></div></div></li>
+<li>Add the subtitles as a stream<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;ffmpeg -i in.mp4 -i in.srt -c copy -c:s mov_text -map 0:0 -map 0:1 -map 1:0 -metadata:s:s:0 "language=eng" out.mp4</code></div></div>Note: I've not bothered copying the mjpeg stream (<span style="text-decoration: underline;" class="mycode_u">-map 0:2</span>), since I'll be adding the artwork back in the next step.<br />
+</li>
+<li>Add back the artwork as an mjpeg stream<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;atomicparsley out.mp4 --freefree --overWrite --artwork out.jpg</code></div></div></li>
+<li>Check the output (optional)<ul class="mycode_list"><li><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\&gt;ffmpeg -i out.mp4 2&gt;&amp;1 | find "Stream #"<br />
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 1280x720 [SAR 1:1 DAR 16:9],<br />
+        2309 kb/s, 25 fps, 25 tbr, 90k tbn, 50 tbc (default)<br />
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 93 kb/s (default)<br />
+    Stream #0:2(eng): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)<br />
+    Stream #0:3: Video: mjpeg, yuvj420p(pc, bt470bg/unknown/unknown), 192x108 [SAR 72:72 DAR 16:9],<br />
+        90k tbr, 90k tbn, 90k tbc</code></div>
+</div>
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\&gt;atomicparsley out.mp4 -t | find "covr"<br />
+    Atom "covr" contains: 1 piece of artwork</code></div>
+</div>
+</li>
+</ul>
+</li>
+<li>Clean up (optional)<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;del in.* out.jpg</code></div></div></li>
+</ol>
+If you've used the <span style="text-decoration: underline;" class="mycode_u">--thumb</span> option when downloading the programme you can skip step 1 and use the downloaded thumbnail in step 3.<br />
+<hr class="mycode_hr" />
+<br />
+After this process you'll end up with a tagged (with artwork) <span style="font-style: italic;" class="mycode_i">out.mp4</span> file with video, audio, subtitles and mjpeg streams.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-12-2017, 08:35 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-12-2017, 05:16 AM)</span></cite>Goal: Automatic inclusion of subtitles into the mp4 file, for compatibility with players that are unable to read .srt files.</blockquote><br />
+EDIT: Someone has taken on this task for v3.13<br />
+<br />
+<span style="text-decoration: line-through;" class="mycode_s">It's a no from me. I'm not willing to support such functionality. If you or anyone else should wish to implement this in get_iplayer yourself, I'm obliged to caution you: If you want to add such new features, you must take over as maintainer.</span><br />
+<br />
+If you're on a computer you always have SRT-capable options, so this is mostly pertinent to hardware players. There is no way I can support hardware players if problems arise. get_iplayer does as little as possible with its output and leaves it up to you to adapt it for whatever systems you use. The only reason it even does SRT conversion is because the native TTML subtitles are useless with most players.<br />
+<br />
+You can easily add soft subtitles to your MP4 output file with SublerCLI (macOS only) or mp4box, which both can be automated via <kbd>--command</kbd>. There may be other applications that also can do the job. The only caveat is that mp4box barfs on 50fps DASH video files. You shouldn't get those unless HLS isn't available for some unknown reason, or you specifically request them, but that's not a good idea on macOS since iTunes/QuickTime can't play the video in DASH-derived files, even after re-muxing. If there is an incantation to make those files QT-compatible without transcoding, I don't know it. <br />
+<br />
+Two tips: 1) use <kbd>-optimize</kbd> with SublerCLI so the file is re-optimised for streaming (mp4box does this by default); 2) if your player can't handle (or ignore) the formatting tags used for subtitle colours, use <kbd>--subs-mono</kbd> with get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2056</h2></div><div class="dateline">04-02-2018, 01:17 PM</div>
+</div>
+<div class="message">Just signed up to report that I've been successful in this area. As noted above, private modifications are unsupported. This is accepted. Upon each release of GIP, I modify a copy of the code (renamed get_iplayer.pl), naming the modified code get_iplayer2.pl.<br />
+<br />
+To get this to work, the srt file is downloaded first:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer.pl --pid xxxxxxxx --modes=best --raw --subtitles-only</code></div></div><br />
+If there are no subtitles, the srt file does not exist, run the unmodified GIP:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer.pl --pid xxxxxxxx --modes=best --radiomode --raw</code></div></div><br />
+If there are subtitles, the srt file does exist, run the modified GIP:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer2.pl --pid xxxxxxxx --modes=best --radiomode --raw</code></div></div><br />
+This can be wrapped up into a batch file, which can make life easier! ;-)<br />
+<br />
+For get_iplayer2.pl, the postproc() modifications are below:<br />
+<br />
+In the ffmpeg call, change <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;prog-&gt;{filepart},</code></div></div>to create a temporary file<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>join('',&#36;prog-&gt;{dir},'&#92;&#92;',&#36;prog-&gt;{fileprefix},'.temp.mp4'),</code></div></div><br />
+Add this immediately after the ffmpeg call returns<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>main::logger "INFO: Adding subtitles&#92;n";<br />
+<br />
+@cmd = (<br />
+        &#36;bin-&gt;{ffmpeg},<br />
+        @{ &#36;binopts-&gt;{ffmpeg} },<br />
+        '-i', join('',&#36;prog-&gt;{dir},'&#92;&#92;',&#36;prog-&gt;{fileprefix},'.temp.mp4'),<br />
+        '-i', join('',&#36;prog-&gt;{dir},'&#92;&#92;',&#36;prog-&gt;{fileprefix},'.srt'),<br />
+        '-c:v', 'copy',<br />
+        '-c:a', 'copy', '-metadata:s:a:0', 'language=eng',<br />
+        '-c:s', 'mov_text', '-metadata:s:s:0', 'language=eng',<br />
+        &#36;prog-&gt;{filepart},<br />
+);<br />
+<br />
+# Add subtitles<br />
+&#36;return = main::run_cmd( 'STDERR', @cmd );</code></div></div><br />
+To keep things tidy, remove the temporary files, so after<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>unlink( &#36;audio_file, &#36;video_file );</code></div></div>add these 2 lines:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>unlink( join('',&#36;prog-&gt;{dir},'&#92;&#92;',&#36;prog-&gt;{fileprefix},'.temp.mp4') );<br />
+unlink( join('',&#36;prog-&gt;{dir},'&#92;&#92;',&#36;prog-&gt;{fileprefix},'.srt') );</code></div></div><br />
+<span style="font-weight: bold;" class="mycode_b">Disclaimer</span>: As mentioned, this code is unsupported. I spent quite some time fiddling to get this to work satisfactority, but feel free to fiddle some more. Note that the options '--radiomode --raw' worked for me, SWAPPING THEM AROUND DID NOT, so adding more options to the command may work or may not work for you.<br />
+<br />
+Also, atomic parsley sometimes throws a wobbly (code 1280, I think), which I just ignore.<br />
+<br />
+Hope this is useful to someone here...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-03-2018, 08:01 PM</div>
+</div>
+<div class="message">Embedding of soft subtitles implemented in v3.13</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Add option to embed soft subtitles in output files</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

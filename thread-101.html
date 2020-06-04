@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - download_history gets deleted</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; download_history gets deleted</div>
+<div id="pagetitle"><h2>download_history gets deleted</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-330</h2></div><div class="dateline">19-01-2014, 06:29 PM</div>
+</div>
+<div class="message">I've searched the mailing list and the general web, read the docs and whatever else I could find. My perl isn't too good but I couldn't find an explanation in the source either.<br />
+<br />
+My problem is that my history file seems to like disappearing. It's happened twice in the last two or three months meaning that my pvr options will start downloading programs I have already seen/recorded. I thought that perhaps it is a "feature" that it gets reset when becoming too large, but I find no reference to this anywhere I've looked. So now I'm thinking that it is a bug. I have no evidence but my thought is that the program crashes with the file still open, or perhaps I'm shutting down in the middle of a PVR cron job thus invalidating the file. Nobody else seems to mention this problem and by the time I've realised, my log file which is stored in tmp, has long gone.<br />
+<br />
+I know this isn't a good bug report but I'm taking some action now, seeing as it's happened twice. I've moved my pvr logfile to a more permanent position and I've added another cronjob to make a daily backup of my history to restore it if it happens again.<br />
+<br />
+This is get_iplayer 2.85, rtmpdump 2.4, arch linux.<br />
+<br />
+Oh.. great script. Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-01-2014, 07:26 PM</div>
+</div>
+<div class="message">Needless to say, this has never occurred to anyone else that I'm aware of.  I have no idea what could lead to random deletions of the history file.  Just to be clear, this is the file we're talking about: &#36;HOME/.get_iplayer/download_history<br />
+<br />
+As to your hypothesis: The history file isn't open while downloading.  It is opened/closed to be read into memory on startup.  After each download the history file is opened/closed for appending the current entry, then it is opened/closed again to be re-read into memory.  Not very efficient, but nothing that would spontaneously delete a file.  The file is never deleted by get_iplayer.<br />
+<br />
+If your logging turns up any clues, please add to this thread.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; download_history gets deleted</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

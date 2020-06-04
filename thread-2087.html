@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can --subs-only Imply --no-subs-embed?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Can --subs-only Imply --no-subs-embed?</div>
+<div id="pagetitle"><h2>Can --subs-only Imply --no-subs-embed?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">30-08-2019, 02:30 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">Running get_iplayer 3.22.0-MSWin32 from a Microsoft Windows 7 Home Premium (Version 6.1.7601) CMD shell.</span><br />
+<br />
+I recently downloaded some subtitles for a programme I'd already downloaded with embedded subtitles so I could have an external, colour srt file.<br />
+<br />
+I did this with a command similar to<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --subs-only --pid &lt;pid&gt;</code></div></div>It wasn't until later that I discovered this resulted in an external, monochrome srt file.<br />
+<br />
+This confused me for ages, but eventually I realised my mistake and was able to download the subtitles by including the option <kbd>--no-subs-embed</kbd> (my preferences include <kbd>--subs-embed</kbd>).<br />
+<br />
+I (now) appreciate that the release notes to v3.21 do specify that to download colour subtitles, the option <kbd>--no-subs-embed</kbd> should be specified. However, my initial, but wrong, command seemed intuitive to me: when using <kbd>--subs-only</kbd>, no embedding of subtitles into an mp4 container is done so the effect of subtitle embedding options on the conversion of the ttml didn't cross my mind when constructing my initial command.<br />
+<br />
+Could the  <kbd>--subs-only</kbd> option be made to imply <kbd>--no-subs-embed</kbd> in some future release? The resultant srt would then be produced in accordance with the user's <kbd>--[no-]subs-mono</kbd> setting from: the command line, a preset, the user's preferences or the get_iplayer default.<br />
+<br />
+Thanks for considering this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-09-2019, 12:15 PM</div>
+</div>
+<div class="message">Sorry, no. If you save <kbd>--subs-embed</kbd> in preferences, we have to assume that is the style you prefer unless otherwise specified. We can't know whether or not you will embed the subtitles yourself if downloaded separately. Use a preset if you want to save keystrokes when overriding your preferences.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">03-09-2019, 04:45 PM</div>
+</div>
+<div class="message">That's fine. I now know to use <kbd>--no-subs-embed</kbd> should I ever want external, colour subtitles again. It was just that it took me a while to figure out why I was getting monochrome subtitles and I thought someone else might also get flummoxed in the same situation. It's not immediately obvious why <kbd>--no-subs-embed</kbd> would be required with <kbd>--subs-only</kbd>.<br />
+<br />
+Thanks anyway for considering this, Dinky.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Can --subs-only Imply --no-subs-embed?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

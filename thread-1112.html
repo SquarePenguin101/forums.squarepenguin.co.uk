@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Im getting &quot;inconsistent file sizes and errors in videos&quot; as well</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Im getting &quot;inconsistent file sizes and errors in videos&quot; as well</div>
+<div id="pagetitle"><h2>Im getting &quot;inconsistent file sizes and errors in videos&quot; as well</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1472</h2></div><div class="dateline">02-12-2016, 06:17 PM</div>
+</div>
+<div class="message">
+<a href="static/thread-1112-aid197.png"><img src="static/thread-1112-aid197.png"/></a>
+<br />
+<br />
+Regarding the issue reported yesterday in this forum, i've been getting exactly the same issue for over a week now.<br />
+I'm in the UK and have been using GiP for years and haven't changed my Broadband service for over a year.<br />
+I have tried numerous files, several times, over several days. all with the same result.<br />
+I've alter the --tvmode and this hasn't altered the results.<br />
+There are no reported issues on iPlayer for these programmes.<br />
+<br />
+I note FFmpeg has a later version - is it worth updating this ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-12-2016, 07:12 PM</div>
+</div>
+<div class="message">Try a more recent version of ffmpeg and report back if it makes any difference. However, I can tell you that the supplied version works just fine, as it must do for virtually everyone else. You can also try downloading with <kbd>--raw</kbd> (skips re-muxing to take ffmpeg out of the equation) to get the base .ts file and check it for problems. ffmpeg may simply be choking on corrupted bits of the .ts file. Use the timestamps around the error messages to get approximate locations.<br />
+<br />
+EDIT: If you are using a VPN, turn it off and try again.<br />
+<br />
+EDIT 2: You can't infer anything from the size of the output files because you can't establish that they have been screwed up in exactly the same manner.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1472</h2></div><div class="dateline">02-12-2016, 08:13 PM</div>
+</div>
+<div class="message">Thanks - will report back.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1472</h2></div><div class="dateline">05-12-2016, 10:08 AM</div>
+</div>
+<div class="message">
+<a href="static/thread-1112-aid200.png"><img src="static/thread-1112-aid200.png"/></a>
+<br />
+<br />
+Right here goes...<br />
+<br />
+As you say FFmpeg is working for everybody else, so I went with the --raw option <br />
+<br />
+Downloaded using GiP --raw a .TS file and for comparison a .MP4 (ADTS errors in FFmpeg as before <br />
+<br />
+in attached pic)<br />
+<br />
+VLC played .TS file and sound broke from 2:17 to 2:27<br />
+VLC played .MP4 and sound broke before this and didn't come back.<br />
+Played it again, skipping to 2:00 and it had same break at 2:17 as .TS file had<br />
+<br />
+WMP handles the sound breaks better, in that it skips the bad part, but carries on<br />
+WMP playing the .MP4 file had numerous breaks, 1:13-1:17, 2:17-2:27 and many many more<br />
+<br />
+I was able to play the programme on iPlayer without a sound glitch, and even downloaded it in SD <br />
+<br />
+which played fine at the 2:17 point.<br />
+<br />
+At this point I'm assuming a variety of data glitches which are spotted by FFmpeg, and some that <br />
+<br />
+are actually present in the .TS file.<br />
+<br />
+Update - downloaded .TS file again - different glitches - all ok at 2:17-2:27<br />
+Different sized file as well.<br />
+<br />
+<br />
+<br />
+Update - ran TsChecker - showed 108 discontinuity errors in one and 69 in the 2nd run<br />
+<br />
+eg -----------------------------------------------------------<br />
+## File = C:\Users\Steve\Desktop\iPlayer Recordings\QI_XL_Series_N_-_5._Not_Nearly.ts<br />
+Included PIDs (*=PCR) = 32, 33*, 34<br />
+Root PIDs found = 0<br />
+First and last PCR = 00:00:09.9, 00:44:06.1  (in pid #33)<br />
+Duration = 00:43:56.2<br />
+<br />
+Checking in progress<br />
+@00:02:18.2 (pid=33): Discontinuity, expected=2, found=0<br />
+@00:02:18.2 (pid=34): Discontinuity, expected=12, found=0<br />
+@00:02:25.9 (pid=33): Discontinuity, expected=5, found=0<br />
+@00:02:25.9 (pid=34): Discontinuity, expected=14, found=0<br />
+@00:02:33.6 (pid=0): Discontinuity, expected=2, found=4<br />
+@00:04:28.8 (pid=33): Discontinuity, expected=14, found=0<br />
+@00:04:28.8 (pid=34): Discontinuity, expected=9, found=0<br />
+@00:04:36.4 (pid=0): Discontinuity, expected=3, found=4<br />
+@00:04:51.8 (pid=33): Discontinuity, expected=6, found=0<br />
+ &lt;snip&gt;<br />
+---------------------------------------------------------------<br />
+The first error at least tying up with the first break when played with VLC<br />
+<br />
+So I assume that if .TS files have bad data they will produce bad .MP4 files<br />
+I haven't any old .TS files, but thought I'd run FFmpg in verify mode on some files produced on <br />
+<br />
+15/11 and 22/11 no errors, files after 26/11 gave errors such as shown<br />
+<br />
+eg ------------------------------------------<br />
+[aac @ 03a3b340] Number of bands (58) exceeds limit (47).<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+Error while decoding stream #0:1: Not yet implemented in FFmpeg, patches welcome<br />
+[aac @ 03a3b340] Number of bands (72) exceeds limit (47).<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] invalid band type<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] Number of bands (64) exceeds limit (47).<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] skip_data_stream_element: Input buffer exhausted before END element found<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] Expected to read 11 SBR bytes actually read 13.<br />
+[aac @ 03a3b340] channel element 0.6 is not allocated<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] channel element 2.5 is not allocated<br />
+Error while decoding stream #0:1: Invalid data found when processing input<br />
+[aac @ 03a3b340] Inconsistent channel configuration.<br />
+[aac @ 03a3b340] get_buffer() failed<br />
+ &lt;snip&gt;<br />
+----------------------------------------------<br />
+<br />
+What can have changed or is this all down to poor broadband ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2016, 06:39 PM</div>
+</div>
+<div class="message">Thanks. That confirms my suspicion that it had nothing to do with ffmpeg. Discontinuities are not necessarily a problem, though they appear to be in this case. ffmpeg can usually cope if the packets are intact. As to why you are getting corrupted files, I have no idea. If you download via VPN or proxy, that would be a likely culprit, or it could just be poor broadband. You are accessing different media streams via the iPlayer site and BBC Downloads app, so you can't infer much from how those behave.<br />
+<br />
+Try <kbd>--tvmode=hlsvhigh</kbd> to see if the equivalent mobile-oriented stream fares any better. If that fails, try <kbd>--tvmode=flashvhigh</kbd> to see if the equivalent RTMP stream works better. The latter would only be a temporary solution since RTMP support is on the way out. If both fail, try youtube-dl. Its downloader may be more robust than get_iplayer's.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1472</h2></div><div class="dateline">05-12-2016, 07:02 PM</div>
+</div>
+<div class="message">Thanks for the reply, I've backtracked through old stuff and found that all files after a certain date have poor MP4 files, and re-downloading some of the older files only gives me a corrupt copy.<br />
+<br />
+Info on different streams for, BBC download uses maximum broadband for the required time - say 30mins,<br />
+whereas GiP gets a very broken service, gaps of 15 to 10 seconds every 20 to 30 seconds of data !!<br />
+<br />
+No VPN, or proxy - so off to try your suggestions.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Im getting &quot;inconsistent file sizes and errors in videos&quot; as well</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

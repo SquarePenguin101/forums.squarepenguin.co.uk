@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to install: You do not have the appropriate permissions</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to install: You do not have the appropriate permissions</div>
+<div id="pagetitle"><h2>Unable to install: You do not have the appropriate permissions</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-31</h2></div><div class="dateline">19-07-2013, 12:20 AM</div>
+</div>
+<div class="message">Hi, I am unable to install get-iplayer on a windows 7 system. I have tried running it as administrator, running file explorer as admin, changing priviliges for the exe file and even running the command prompt as admin and using dos to run the exe. All methods end with "you do not have the appropriate permissions etc".<br />
+When needing to run as admin at other times/programs I have not had problems.<br />
+Any help gratefully received. Thanks, Ian</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-07-2013, 08:28 AM</div>
+</div>
+<div class="message">Have you tried the steps detailed here:<br />
+<br />
+<a href="/topic/cannot-open-setup-file/#post-867">/topic.../#post-867</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-07-2013, 08:01 PM</div>
+</div>
+<div class="message">Immediately after you get the error from the installer, open Event Viewer (Start -&gt; type "Event" in search field to locate it).  Look at all the logs under Windows Logs and check if they contain any messages indicating which resource has had access denied.<br />
+<br />
+If you have a previous get_iplayer installation:<br />
+<br />
+1. Do a full uninstall<br />
+<br />
+2. Delete these folders if they exist:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer<br />
+C:&#92;Program Files (x86)&#92;get_iplayer<br />
+C:&#92;ProgramData&#92;get_iplayer<br />
+C:&#92;Users&#92;&lt;your_user_name&gt;&#92;AppData&#92;Local&#92;VirtualStore&#92;Program Files&#92;get_iplayer</code></div></div><br />
+<br />
+3. Make a backup copy and then delete this folder if it exists:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;&lt;your_user_name&gt;&#92;.get_iplayer [note the .dot in the filename]</code></div></div><br />
+<br />
+4. Delete the get_iplayer folder from the Start menu if it is still present:<br />
+<br />
+All Programs -&gt; get_iplayer, then Right-Click,Delete.<br />
+<br />
+5. Delete these registry keys if they exist:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>HKEY_CURRENT_USER&#92;Software&#92;get_iplayer<br />
+HKEY_LOCAL_MACHINE&#92;SOFTWARE&#92;Microsoft&#92;Windows&#92;CurrentVersion&#92;Uninstall&#92;get_iplayer</code></div></div><br />
+<br />
+As always, proceed with caution when working in the registry.  If you are unsure how to delete registry keys, there are many references on the internet to explain the process.  Omit this step if you are uncomfortable with the task.<br />
+<br />
+6. Then try the installer again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-31</h2></div><div class="dateline">19-07-2013, 08:21 PM</div>
+</div>
+<div class="message">Thanks for the quick reply.<br />
+Yep, checked all those, get_iplayer has not been installed at any time previously.<br />
+No messages at all appear in Event Viewer/Windows Logs within 10 minutes prior to the failure to install the program.<br />
+The message in the "Failure" box says,<br />
+"Windows cannot access the specified device,path or file. You may not have the appropriate permissions to access them."</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-07-2013, 01:41 AM</div>
+</div>
+<div class="message">Just to be clear, you want to look for events after the installation, not prior.  If you have Event Viewer open while running the installer, you may need to refresh it after the installer error message appears.<br />
+<br />
+If Event Viewer shows nothing, it's time to reach for a bigger hammer.  Process Monitor is a free tool that monitors all kinds of system events: file access, registry access, etc.  Download it from:<br />
+<br />
+<a href="http://technet.microsoft.com/en-gb/sysinternals/bb896645.aspx">http://technet.microsoft.com/en-gb/sysin...96645.aspx</a>  <br />
+<br />
+Extract Procmon.exe anywhere - it is a standalone program.  There is also a help file you should extract to the same location.<br />
+<br />
+As soon as Procmon is running, type Ctrl-E to temporarily stop the default event capture.  Then type Ctrl-L to bring up the filter definition dialog.  Use the form fields at the top to create a filter definition of "Process Name is get_iplayer_setup_latest.exe". Click Add to add the filter to the list.  You should see it in the list at the bottom of the dialog with a checkmark in a green circle.  Click OK to return to the main window (the event list should clear), then type Ctrl-E again to restart event capture.  Note that this presumes you didn't change the name of the installer from  get_iplayer_setup_latest.exe when you downloaded it.  If you did change the file name, adjust the filter value accordingly.<br />
+<br />
+Now run the get_iplayer installer.  When it has exited, return to Procmon and type Ctrl-E again to stop capture.  Then type Ctrl-S to open the file save dialog.  Select "Events Displayed Using Current Filter", check "Also include profiling events", select "Native Process Monitor Format (PML)" and save the event trace.  If the file can be compressed to &lt;512KB, post it with your reply. If not, and you have access to Dropbox or Google Drive or similar where you can post public files, upload the event trace and post the link here and I'll take a look at it.<br />
+<br />
+If you can't get the file to me, then look through the event trace in the Procmon window for anything that shows a failure condition in the Results column.  Results like "NAME COLLISION" or "FILE LOCKED WITH ONLY READERS" don't count as failures.  Many "NAME NOT FOUND" won't be errors, but one might be in this case.  It should be a long list, but since I have no idea what to look for it seems best to start by capturing every event generated by the installer. Hopefully it will capture whatever resource is missing or is being denied.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-31</h2></div><div class="dateline">20-07-2013, 07:42 PM</div>
+</div>
+<div class="message">Thanks for the help, I'm working all weekend so probably wont get onto this until Monday or Tuesday.<br />
+I mentioned the 10 minutes prior to the failure to illustrate that there was nothing mentioned even going back 10 minutes prior, hope that makes sense. To clarify, no, nothing in the event viewer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to install: You do not have the appropriate permissions</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

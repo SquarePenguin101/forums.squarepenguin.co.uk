@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Debian Stretch crashes while running get_iplayer with NFS</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Debian Stretch crashes while running get_iplayer with NFS</div>
+<div id="pagetitle"><h2>Debian Stretch crashes while running get_iplayer with NFS</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 12:19 PM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+Since upgrading my machine to Debian Stretch, whenever I try to use get_iplayer to download anything, it completely crashes the machine. A message is emitted on the console saying that perl has been blocked for more than 2 minutes.<br />
+<br />
+It's storing the downloaded files on an NFS filesystem, but I've just done an rsync between 2 NFS mounted filesystems on the same machine, and that's working Ok. I don't think it's an issue there.<br />
+<br />
+Has anyone else seen anything similar?<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2017, 01:29 PM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so that - as much as possible - we can see what what get_iplayer is doing before the crash.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 03:02 PM</div>
+</div>
+<div class="message">Apologies for not providing sufficient information.<br />
+<br />
+The odd thing is, I've just tried to gather the logging requested, and it's run a successful pvr session for the first time since the upgrade.<br />
+<br />
+One thing I had done was remove the config setting to use the static version of ffmpeg. I thought I'd run another pvr session and had it crash, which was the reason I'd made the above post. Perhaps the reboot after that failed attempt was necessary to complete the transition back to the system ffmpeg?<br />
+<br />
+I'll try again a few times in the next few days and see if the problem recurs.<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 03:15 PM</div>
+</div>
+<div class="message">Typical. I thought I'd give it another go, and it's failed this time.<br />
+<br />
+Log file is attached. <br />
+<br />
+It looks like it failed mid-download of that Horrible Histories episode. It got this far:<br />
+<br />
+-rw-r--r-- 1 andy andy 465891328 Aug  6 15:05 /var/spool/media/videos/iPlayer-Download/Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original.video.ts<br />
+-rw-r--r-- 1 andy andy      3634 Aug  6 15:05 /var/spool/media/videos/iPlayer-Download/Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original.video.txt<br />
+<br />
+Hope this helps, appreciate any advice.<br />
+<br />
+Andy<br/><br/>
+<a href="static/thread-1473-get_iplayer.txt">get_iplayer.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2017, 03:49 PM</div>
+</div>
+<div class="message">It's not clear from that log whether the download actually starts. Do this instead, and post the log file:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b0909jrk --fps50 --log-progress &gt; log.txt 2&gt;&amp;1</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 07:01 PM</div>
+</div>
+<div class="message">Here you go. Seems to get part way through the download then just stop. Completely kills the machine when it does this.<br />
+<br />
+Thanks for the help so far.<br />
+<br />
+Andy<br/><br/>
+<a href="static/thread-1473-log.txt">Log.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 07:29 PM</div>
+</div>
+<div class="message">Looks like my assertion that NFS isn't a factor might have been wrong. I've just had the machine do exactly the same thing when carrying out a mv between two NFS mounts.<br />
+<br />
+Unless the logs I've provided point to some issue in get_iplayer, I suspect the issue might actually lie elsewhere.<br />
+<br />
+Once I get to the bottom of it I'll report back.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2017, 07:40 PM</div>
+</div>
+<div class="message">Your last log confirms that the problem isn't related to ffmpeg or get_iplayer. The last test was writing to your home directory (unlike the earlier test), so just to be sure: are you mounting your home directory via NFS as well? If so, then try one more test with <kbd>--output</kbd> configured to a location on an internal disk. I can see from the last log that get_iplayer is able to open, truncate, read, and write an output file. For it to hang and crash mid-download would lead me to suspect NFS as the culprit. The only thing get_iplayer is doing at that point is downloading chunks of the programme to the output file. It seems less likely the crashing problem would be in the network stack. In general, it isn't a great idea to have your output directory on a network drive because get_iplayer sends the entire file over the wire 5 times for each download, but everyone's setup will perform differently.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">06-08-2017, 08:07 PM</div>
+</div>
+<div class="message">No, the home directory isn't an NFS mount.<br />
+<br />
+However, there are other processes running on the machine that will be accessing NFS all the time, so it's possible it's general NFS access that is the issue.<br />
+<br />
+Will do some more digging and see what I can find.<br />
+<br />
+Andy</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Debian Stretch crashes while running get_iplayer with NFS</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

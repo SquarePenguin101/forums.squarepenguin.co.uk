@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Recording live BBC One English regions</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Recording live BBC One English regions</div>
+<div id="pagetitle"><h2>Recording live BBC One English regions</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1027</h2></div><div class="dateline">13-01-2016, 07:04 PM</div>
+</div>
+<div class="message">Will it be possible to record the English regional BBC One streams which have launched on iPlayer this week using a similar system to recording Wales, Scotland and Northern Ireland?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-01-2016, 10:23 PM</div>
+</div>
+<div class="message">Post the URLs for a few of the streams and I'll take a look</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1027</h2></div><div class="dateline">14-01-2016, 12:46 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-01-2016, 10:23 PM)</span></cite>Post the URLs for a few of the streams and I'll take a look</blockquote><br />
+East (West) <a href="http://www.bbc.co.uk/iplayer/live/bbcone?area=cambridge">http://www.bbc.co.uk/iplayer/live/bbcone?area=cambridge</a><br />
+East (East) <a href="http://www.bbc.co.uk/iplayer/live/bbcone?area=east">http://www.bbc.co.uk/iplayer/live/bbcone?area=east</a><br />
+Channel Islands <a href="http://www.bbc.co.uk/iplayer/live/bbcone?area=channel_islands">http://www.bbc.co.uk/iplayer/live/bbcone...el_islands</a><br />
+East Midlands: <a href="http://www.bbc.co.uk/iplayer/live/bbcone?area=east_midlands">http://www.bbc.co.uk/iplayer/live/bbcone...t_midlands</a><br />
+South East: <a href="http://www.bbc.co.uk/iplayer/live/bbcone?area=south_east">http://www.bbc.co.uk/iplayer/live/bbcone...south_east</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-01-2016, 01:20 PM</div>
+</div>
+<div class="message">You can do this now if you get the PID for those channels.  Start playing the regional stream of interest, then right-click on the flash player window. The pop-up will contain a line that looks like:<br />
+<br />
+<kbd>1700 kbps | HDS (akamai_hds) | bbc_one_channel_islands | 960x540</kbd><br />
+<br />
+The third token is the PID for that channel.  For example, to record for 30 minutes:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type livetv --pid bbc_one_channel_islands --get --stop 00:30:00 --file-prefix="BBC One Channel Islands &lt;dldate&gt; &lt;dltime&gt;"</code></div></div>The <kbd>--file-prefix</kbd> is necessary because get_iplayer doesn't know the name of the channel corresponding to that PID.<br />
+<br />
+It seems like it would be possible to include those streams in get_iplayer, but no promises that it will be in next release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1027</h2></div><div class="dateline">14-01-2016, 06:14 PM</div>
+</div>
+<div class="message">Many thanks Dinky, those instructions work fine for me for now.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Recording live BBC One English regions</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

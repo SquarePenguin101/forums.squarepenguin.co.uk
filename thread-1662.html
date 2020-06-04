@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - MP4 Mux is Cutting Show's Length (ffmpeg terminates early)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; MP4 Mux is Cutting Show's Length (ffmpeg terminates early)</div>
+<div id="pagetitle"><h2>MP4 Mux is Cutting Show's Length (ffmpeg terminates early)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2044</h2></div><div class="dateline">19-01-2018, 10:17 AM</div>
+</div>
+<div class="message">Good morning,<br />
+<br />
+I have had an ongoing issue with both the Web PVR Manager and standard Command Line get_iplayer.<br />
+<br />
+The partial files appear to download correctly and at the right size for the programme I'm attempting to grab but at the point where it is converted to an .mp4 file it seems to lose some of the information.<br />
+<br />
+I have attached a log.txt of The Miniaturist which I have attempted to download a number of times resulting in files that have not exceeded 45mins of its 90min run time.<br />
+But I would add that this has happened with a number of different programmes.<br />
+<br />
+There is no specific error as it doesn't seem to be acknowledging that there is an error.<br />
+Any help would be greatly appreciated, thanks.<br />
+<br />
+<br />
+Details:<br />
+<br />
+get_iplayer version: 3.12.0<br />
+<br />
+Windows 7 Home Premium - Service Pack 1<br />
+<br />
+Command Line: get_iplayer --pid=b09ld4xr --force --verbose &gt; C:\Users\log.txt 2&gt;&amp;1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-01-2018, 04:13 PM</div>
+</div>
+<div class="message">Thanks for the log. However, you are not using the version of ffmpeg delivered with get_iplayer, so your configuration is not supported. This is made clear to you in the Windows install doc. Revert to the ffmpeg delivered by the get_iplayer Windows installer and test again. If you create a new log file, add <kbd>--log-progress</kbd> to your get_iplayer command, which should indicate whether or not ffmpeg runs to completion.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2044</h2></div><div class="dateline">19-01-2018, 05:12 PM</div>
+</div>
+<div class="message">Good afternoon user-2,<br />
+<br />
+I apologise for the obvious oversight, I had tried a new version of FFMPEG in case that fixed the issue.<br />
+I should have reverted back before creating the log.<br />
+<br />
+That mistake has been rectified and please find attached a log with the correct version of FFMPEG.<br />
+<br />
+I have made sure to use the same programme (The Miniaturist - Ep1) and the problem is still present.<br />
+<br />
+Thanks for your patience.<br/><br/>
+<a href="static/thread-1662-log_Miniaturist_Ep1-Corrected_FFMPEG.txt">log_Miniaturist_Ep1-Corrected_FFMPEG.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-01-2018, 08:11 PM</div>
+</div>
+<div class="message">Thanks. You can see in the log that ffmpeg is indeed terminating too soon (around 18:00 in this case). Something similar has been reported when using a slow external drive, but that doesn't seem to be the case here. You could add <kbd>--ffmpeg-loglevel=info</kbd> to see if ffmpeg logs any useful additional info, but I wouldn't expect it to since it doesn't signal an error when it quits. You could also try <kbd>--tvmode=hvf</kbd> to see if the problem is unique to default video streams. And you could also try downloading a long radio programme to see if the problem is unique to video.<br />
+<br />
+Whatever that problem is, it is something peculiar to your system, though I have no way of knowing what it is. Unfortunately, there is nothing get_iplayer can do about this. You  may want to start downloading with <kbd>--raw</kbd> and re-muxing the .ts file separately, perhaps with a different tool.  If you can replicate the problem outside get_iplayer, perhaps you might find help somewhere that ffmpeg is discussed. I've got nothing, so if somebody else has a clue, chime in.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2044</h2></div><div class="dateline">19-01-2018, 08:18 PM</div>
+</div>
+<div class="message">Thank you for the help, I'll give those various bits a shot and if I'm really stuck I'll try grabbing the streams raw as suggested.<br />
+<br />
+Much obliged!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-01-2018, 09:01 PM</div>
+</div>
+<div class="message">Could you tell us the hardware specs for the machine get_iplayer is running on?<br />
+<br />
+It almost feels like an out of memory issue to me, ffmpeg isn't exactly free of memory leaks, but that's just a guess.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2044</h2></div><div class="dateline">19-01-2018, 09:46 PM</div>
+</div>
+<div class="message">Hey there,<br />
+<br />
+The spec of the machine is<br />
+<br />
+Processor: Intel Core2 Quad - Q9400 @ 2.66GHz<br />
+RAM: 8.00GB<br />
+64-bit Operating System<br />
+<br />
+Its an old system but this issue has only popped up in the past few months and its gotten to be a more regular problem over the past month.<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-01-2018, 11:10 PM</div>
+</div>
+<div class="message">You'd think with all that RAM it'd be OK. Hmm.<br />
+<br />
+It intrigues me that it's popped up and then gotten worse over a few months. That could suggest anything, but given others aren't seemingly experiencing the issue that narrows it to the field of things unique to your machine. <br />
+<br />
+Given its age that at least begins to include the possibility of a hardware issue. Have you checked disk health? Performed a full memtest perhaps? <br />
+<br />
+Probably good to rule these things out anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2044</h2></div><div class="dateline">28-01-2018, 10:19 PM</div>
+</div>
+<div class="message">Thanks for the help from everyone on this.<br />
+I haven't had much luck so have instead started using my laptop!<br />
+<br />
+Thank you again for all the assistance.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; MP4 Mux is Cutting Show's Length (ffmpeg terminates early)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,767 @@
+get_iplayer 3.05.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\augur\.get_iplayer
+INFO: User options file: C:\Users\augur\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+Current options:
+	cacherebuild = 1
+	cachereset = 1
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	nopurge = 1
+	output = H:\iPlayer Recordings
+	refreshlimit = 30
+	type = tv
+	verbose = 1
+
+INFO: Search args: '.*'
+INFO: Got 4 file cache entries for tv
+INFO: Will refresh channel BBC Alba
+INFO: Will refresh channel BBC Four
+INFO: Will refresh channel BBC News
+INFO: Will refresh channel BBC One
+INFO: Will refresh channel BBC One Cambridgeshire
+INFO: Will refresh channel BBC One Channel Islands
+INFO: Will refresh channel BBC One East
+INFO: Will refresh channel BBC One East Midlands
+INFO: Will refresh channel BBC One London
+INFO: Will refresh channel BBC One North East & Cumbria
+INFO: Will refresh channel BBC One North West
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Oxfordshire
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One South
+INFO: Will refresh channel BBC One South East
+INFO: Will refresh channel BBC One South West
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One West
+INFO: Will refresh channel BBC One West Midlands
+INFO: Will refresh channel BBC One Yorks & Lincs
+INFO: Will refresh channel BBC One Yorkshire
+INFO: Will refresh channel BBC Parliament
+INFO: Will refresh channel BBC Two
+INFO: Will refresh channel BBC Two England
+INFO: Will refresh channel BBC Two Northern Ireland
+INFO: Will refresh channel BBC Two Scotland
+INFO: Will refresh channel BBC Two Wales
+INFO: Will refresh channel CBBC
+INFO: Will refresh channel CBeebies
+INFO: Will refresh channel S4C
+
+INFO: Indexing tv programmes (concurrent)
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/2017/w39
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/2017/w40
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/2017/w41
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/2017/w42
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+
+INFO: Got 149 programmes for BBC Alba
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/2017/w39
+
+INFO: Got 139 programmes for BBC Alba
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/2017/w40
+
+INFO: Got 132 programmes for BBC Alba
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/2017/w41
+
+INFO: Got 72 programmes for BBC Four
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/2017/w42
+
+INFO: Got 156 programmes for BBC Alba
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+
+INFO: Got 78 programmes for BBC Four
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/2017/w39
+
+INFO: Got 80 programmes for BBC Four
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/2017/w40
+
+INFO: Got 70 programmes for BBC Four
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/2017/w41
+
+INFO: Got 275 programmes for BBC News
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/2017/w42
+
+INFO: Got 146 programmes for BBC Alba
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+
+INFO: Got 267 programmes for BBC News
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/2017/w39
+
+INFO: Got 72 programmes for BBC Four
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/2017/w40
+
+INFO: Got 267 programmes for BBC News
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/2017/w41
+
+INFO: Got 185 programmes for BBC One Cambridgeshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/2017/w42
+
+INFO: Got 270 programmes for BBC News
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+
+INFO: Got 275 programmes for BBC News
+WARNING: 'p05fyxtl, Newsbeat Documentaries - We Are Generation Z, BBC News' already exists (this channel = BBC News Channel 1506850200)
+WARNING: 'p05fyxtl, Newsbeat Documentaries - We Are Generation Z, BBC News' already exists (this channel = BBC News Channel 1506774600)
+WARNING: 'p05fyxtl, Newsbeat Documentaries - We Are Generation Z, BBC News' already exists (this channel = BBC News Channel 1506717000)
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/2017/w39
+
+INFO: Got 185 programmes for BBC One Cambridgeshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/2017/w40
+
+INFO: Got 183 programmes for BBC One Cambridgeshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/2017/w41
+
+INFO: Got 186 programmes for BBC One Channel Islands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/2017/w42
+
+INFO: Got 186 programmes for BBC One Cambridgeshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+
+INFO: Got 184 programmes for BBC One Cambridgeshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/2017/w39
+
+INFO: Got 185 programmes for BBC One Channel Islands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/2017/w40
+
+INFO: Got 185 programmes for BBC One Channel Islands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/2017/w41
+
+INFO: Got 183 programmes for BBC One Channel Islands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/2017/w42
+
+INFO: Got 186 programmes for BBC One East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+
+INFO: Got 184 programmes for BBC One Channel Islands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/2017/w39
+
+INFO: Got 185 programmes for BBC One East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/2017/w40
+
+INFO: Got 183 programmes for BBC One East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/2017/w41
+
+INFO: Got 185 programmes for BBC One East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/2017/w42
+
+INFO: Got 184 programmes for BBC One East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+
+INFO: Got 183 programmes for BBC One East Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/2017/w39
+
+INFO: Got 186 programmes for BBC One East Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/2017/w40
+
+INFO: Got 185 programmes for BBC One East Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/2017/w41
+
+INFO: Got 186 programmes for BBC One Yorks & Lincs
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/2017/w42
+
+INFO: Got 185 programmes for BBC One East Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+
+INFO: Got 184 programmes for BBC One East Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/2017/w39
+
+INFO: Got 185 programmes for BBC One Yorks & Lincs
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/2017/w40
+
+INFO: Got 183 programmes for BBC One Yorks & Lincs
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/2017/w41
+
+INFO: Got 186 programmes for BBC One
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/2017/w42
+
+INFO: Got 185 programmes for BBC One Yorks & Lincs
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+
+INFO: Got 187 programmes for BBC One
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/2017/w39
+
+INFO: Got 186 programmes for BBC One
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/2017/w40
+
+INFO: Got 184 programmes for BBC One
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/2017/w41
+
+INFO: Got 190 programmes for BBC One London
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/2017/w42
+
+INFO: Got 184 programmes for BBC One Yorks & Lincs
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+
+INFO: Got 191 programmes for BBC One London
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/2017/w39
+
+INFO: Got 188 programmes for BBC One London
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/2017/w40
+
+INFO: Got 185 programmes for BBC One
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/2017/w41
+
+INFO: Got 190 programmes for BBC One London
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/2017/w42
+
+INFO: Got 189 programmes for BBC One London
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+
+INFO: Got 182 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/2017/w39
+
+INFO: Got 181 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/2017/w40
+
+INFO: Got 183 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/2017/w41
+
+INFO: Got 177 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/2017/w42
+
+INFO: Got 180 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+
+INFO: Got 183 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/2017/w39
+
+INFO: Got 182 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/2017/w40
+
+INFO: Got 182 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/2017/w41
+
+INFO: Got 182 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/2017/w42
+
+INFO: Got 180 programmes for BBC One Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+
+INFO: Got 183 programmes for BBC One North East & Cumbria
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/2017/w39
+
+INFO: Got 185 programmes for BBC One North East & Cumbria
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/2017/w40
+
+INFO: Got 184 programmes for BBC One North East & Cumbria
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/2017/w41
+
+INFO: Got 185 programmes for BBC One North East & Cumbria
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/2017/w42
+
+INFO: Got 185 programmes for BBC One North West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+
+INFO: Got 186 programmes for BBC One North West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/2017/w39
+
+INFO: Got 185 programmes for BBC One North West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/2017/w40
+
+INFO: Got 186 programmes for BBC One North East & Cumbria
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/2017/w41
+
+INFO: Got 183 programmes for BBC One North West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/2017/w42
+
+INFO: Got 184 programmes for BBC One North West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+
+INFO: Got 185 programmes for BBC One Oxfordshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/2017/w39
+
+INFO: Got 183 programmes for BBC One Oxfordshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/2017/w40
+
+INFO: Got 186 programmes for BBC One Oxfordshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/2017/w41
+
+INFO: Got 184 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/2017/w42
+
+INFO: Got 185 programmes for BBC One Oxfordshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+
+INFO: Got 184 programmes for BBC One Oxfordshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/2017/w39
+
+INFO: Got 184 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/2017/w40
+
+INFO: Got 182 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/2017/w41
+
+INFO: Got 184 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/2017/w42
+
+INFO: Got 186 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+
+INFO: Got 183 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/2017/w39
+
+INFO: Got 186 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/2017/w40
+
+INFO: Got 184 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/2017/w41
+
+INFO: Got 185 programmes for BBC One South
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/2017/w42
+
+INFO: Got 182 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+
+INFO: Got 183 programmes for BBC One Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/2017/w39
+
+INFO: Got 183 programmes for BBC One South
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/2017/w40
+
+INFO: Got 185 programmes for BBC One South
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/2017/w41
+
+INFO: Got 186 programmes for BBC One South
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/2017/w42
+
+INFO: Got 186 programmes for BBC One South East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+
+INFO: Got 185 programmes for BBC One South East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/2017/w39
+
+INFO: Got 185 programmes for BBC One South West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/2017/w40
+
+INFO: Got 183 programmes for BBC One South East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/2017/w41
+
+INFO: Got 184 programmes for BBC One South
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/2017/w42
+
+INFO: Got 186 programmes for BBC One South West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+
+INFO: Got 184 programmes for BBC One South West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/2017/w39
+
+INFO: Got 184 programmes for BBC One South East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/2017/w40
+
+INFO: Got 183 programmes for BBC One South West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/2017/w41
+
+INFO: Got 183 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/2017/w42
+
+INFO: Got 181 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+
+INFO: Got 185 programmes for BBC One South West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/2017/w39
+
+INFO: Got 185 programmes for BBC One South East
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/2017/w40
+
+INFO: Got 179 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/2017/w41
+
+INFO: Got 181 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/2017/w42
+
+INFO: Got 183 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+
+INFO: Got 183 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/2017/w39
+
+INFO: Got 183 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/2017/w40
+
+INFO: Got 181 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/2017/w41
+
+INFO: Got 179 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/2017/w42
+
+INFO: Got 181 programmes for BBC One Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+
+INFO: Got 186 programmes for BBC One West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/2017/w39
+
+INFO: Got 184 programmes for BBC One West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/2017/w40
+
+INFO: Got 185 programmes for BBC One West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/2017/w41
+
+INFO: Got 185 programmes for BBC One West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/2017/w42
+
+INFO: Got 183 programmes for BBC One West
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+
+INFO: Got 186 programmes for BBC One West Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/2017/w39
+
+INFO: Got 183 programmes for BBC One West Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/2017/w40
+
+INFO: Got 185 programmes for BBC One Yorkshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/2017/w41
+
+INFO: Got 185 programmes for BBC One West Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/2017/w42
+
+INFO: Got 185 programmes for BBC One Yorkshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+
+INFO: Got 185 programmes for BBC One West Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/2017/w39
+
+INFO: Got 186 programmes for BBC One Yorkshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/2017/w40
+
+INFO: Got 183 programmes for BBC One Yorkshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/2017/w41
+
+INFO: Got 184 programmes for BBC One West Midlands
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/2017/w42
+
+INFO: Got 184 programmes for BBC One Yorkshire
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+
+INFO: Got 127 programmes for BBC Parliament
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/2017/w39
+
+INFO: Got 110 programmes for BBC Parliament
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/2017/w40
+
+INFO: Got 112 programmes for BBC Parliament
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/2017/w41
+
+INFO: Got 100 programmes for BBC Parliament
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/2017/w42
+
+INFO: Got 172 programmes for BBC Two England
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+
+INFO: Got 120 programmes for BBC Parliament
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/2017/w39
+
+INFO: Got 173 programmes for BBC Two England
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/2017/w40
+
+INFO: Got 173 programmes for BBC Two England
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/2017/w41
+
+INFO: Got 170 programmes for BBC Two England
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/2017/w42
+
+INFO: Got 163 programmes for BBC Two
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+
+INFO: Got 172 programmes for BBC Two
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/2017/w39
+
+INFO: Got 173 programmes for BBC Two
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/2017/w40
+
+INFO: Got 170 programmes for BBC Two
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/2017/w41
+
+INFO: Got 163 programmes for BBC Two England
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/2017/w42
+
+INFO: Got 177 programmes for BBC Two Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+
+INFO: Got 173 programmes for BBC Two
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/2017/w39
+
+INFO: Got 169 programmes for BBC Two Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/2017/w40
+
+INFO: Got 178 programmes for BBC Two Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/2017/w41
+
+INFO: Got 176 programmes for BBC Two Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/2017/w42
+
+INFO: Got 169 programmes for BBC Two Northern Ireland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+
+INFO: Got 164 programmes for BBC Two Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/2017/w39
+
+INFO: Got 175 programmes for BBC Two Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/2017/w40
+
+INFO: Got 172 programmes for BBC Two Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/2017/w41
+
+INFO: Got 174 programmes for BBC Two Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/2017/w42
+
+INFO: Got 174 programmes for BBC Two Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+
+INFO: Got 174 programmes for BBC Two Scotland
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/2017/w39
+
+INFO: Got 172 programmes for BBC Two Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/2017/w40
+
+INFO: Got 173 programmes for BBC Two Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/2017/w41
+
+INFO: Got 165 programmes for BBC Two Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/2017/w42
+
+INFO: Got 297 programmes for CBBC
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+
+INFO: Got 175 programmes for BBC Two Wales
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/2017/w39
+
+INFO: Got 294 programmes for CBBC
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/2017/w40
+
+INFO: Got 297 programmes for CBBC
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/2017/w41
+
+INFO: Got 299 programmes for CBBC
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/2017/w42
+
+INFO: Got 299 programmes for CBBC
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+
+INFO: Got 444 programmes for CBeebies
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w39
+
+INFO: Got 441 programmes for CBeebies
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w40
+
+INFO: Got 446 programmes for CBeebies
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w41
+
+INFO: Got 443 programmes for CBeebies
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/2017/w42
+
+INFO: Got 365 programmes for S4C
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+
+INFO: Got 458 programmes for CBeebies
+
+INFO: Got 357 programmes for S4C
+
+INFO: Got 368 programmes for S4C
+
+INFO: Got 365 programmes for S4C
+
+INFO: Got 371 programmes for S4C
+
+INFO: Added 0 tv programmes to cache
+INFO: Search term '.*' is a substring
+DEBUG: Search download_regex = .*
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+
+Matches:
+1:	Newsbeat Debates - Generation Misunderstood?, BBC News, b096pvrf
+2:	Newsbeat Documentaries - We Are Generation Z, BBC News, p05fyxtl
+3:	The Live Lounge Show: Series 1 - Miley Cyrus and More, BBC Four, b0964py6
+4:	The Live Lounge Show: Series 1 - Jay-Z and More, BBC Four, b0976m27
+INFO: 4 matching programmes

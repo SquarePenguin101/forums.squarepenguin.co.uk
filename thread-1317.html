@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - V3.00 - Required ffmpeg utility not found - not converting .ts file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; V3.00 - Required ffmpeg utility not found - not converting .ts file</div>
+<div id="pagetitle"><h2>V3.00 - Required ffmpeg utility not found - not converting .ts file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">01-05-2017, 08:59 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+First of all thanks for getting get_iplayer fixed.<br />
+<br />
+I mostly tend to run get_iplayer from the command line. I just tried the new version, and I'm getting this error message:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: Required ffmpeg utility not found - not converting .ts file</code></div></div><br />
+I'm not getting it when I'm running it from the web manager, so clearly there must be an option out of place or something like that.<br />
+<br />
+Could you enlighten me on what this warning is referring to and what I could do to fix it?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 11:05 PM</div>
+</div>
+<div class="message">Post the output from <kbd>get_iplayer --show-prefs</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">02-05-2017, 01:36 AM</div>
+</div>
+<div class="message">Thanks, but there's nothing there.<br />
+<br />
+In the meantime, I found the problem by having a look at the source code. It seems ffmpeg needs to be in the get_iplayer directory, or in a directory contained in path. And it wasn't. I moved it one up from the directory called utils, and that fixed it.<br />
+<br />
+Still strange that the web manager didn't complain about it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">02-05-2017, 03:20 AM</div>
+</div>
+<div class="message">I was going to say that I don't know about the Web Manager but for the CLI, that message for ffmpeg (fast forward mpeg) that it is either not in the same directory as the main GIP program or the directory where it is expected if GIP was installed using the Windows installer or it's not in the PATH &amp; that's why it cannot be found.<br />
+<br />
+With the Windows installer for GIP I can't remember where it puts ffmpeg but I think on my Windows 8.1 64bit laptop it was either in the bin or utils directory e.g.<br />
+<br />
+C:\Program Files (x86)\get_iplayer\bin<br />
+or<br />
+C:\Program Files (x86)\get_iplayer\utils<br />
+<br />
+But it's not there for me no more because I've moved it &amp; I've also put it in the PATH only recently &amp; I've never added anything to the Windows PATH before.<br />
+<br />
+I've created a directory called ffmpeg &amp; this is where it lives now.<br />
+<br />
+C:\ffmpeg\bin<br />
+<br />
+Within this directory I have 3 programs, ffmpeg, ffplay &amp; ffprobe.<br />
+<br />
+Now that I've added ";C:\ffmpeg\bin" to the PATH, then any of those 3 programs can be started at any point in a CLI whereas if the ffmpeg or the other 2 programs were not in the PATH but were just in the get_iplayer directory then they could only be invoked from the CLI where the get_iplayer is invoked.<br />
+<br />
+It's possible that DINKY would advise against moving ffmpeg from where it is installed when using the Windows installer but if not, or if anybody wants to know how to install ffmpeg &amp; how to put it in the PATH, then this link is quite useful &amp; will give you instructions with pictures of how to do it.<br />
+<a href="http://www.wikihow.com/Install-FFmpeg-on-Windows">http://www.wikihow.com/Install-FFmpeg-on-Windows</a><br />
+<br />
+By the way, the latest ffmpeg stable static version is 3.3 &amp; can be got from this link,<br />
+<a href="http://ffmpeg.zeranoe.com/builds/">http://ffmpeg.zeranoe.com/builds/</a><br />
+Other builds for Linux, OS etc I believe you can also get from this site.<br />
+<br />
+A tip I saw somewhere on the Net. When you add something to the PATH always start with a semi-colon, e.g. ; before you put anything else but the end of the last entry in the PATH there is no semi-colon at the end.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 09:35 AM</div>
+</div>
+<div class="message">It is likely that your system PATH environment variable is corrupt or broken, so when it's altered locally in the get_iplayer batch file you just wind up with a longer broken PATH. This has happened to other users and is often caused by a badly-behaved installer from some other application. It is noted in the Windows install doc. However, since you know how to work around it I won't waste my time or yours investigating further. Whatever is wrong with PATH would be unique to your machine, so there isn't any real help I could give anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">02-05-2017, 06:57 PM</div>
+</div>
+<div class="message">For clarity's sake, where are executables supposed to reside, and what is supposed to be added to the PATH for get_iplayer to work correctly?<br />
+<br />
+I had ffmpeg.exe in \get_iplayer\utils, and my PATH did contain \Program Files (x86)\get_iplayer, but not the utils directory. Is that how it was supposed to have been?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 07:22 PM</div>
+</div>
+<div class="message"><kbd>C:\Program Files (x86)\get_iplayer</kbd> is appended to system PATH by the installer. That is necessary to run get_iplayer from a normal command prompt.  ffmpeg.exe is supposed to reside in <kbd>C:\Program Files (x86)\get_iplayer\utils</kbd>, which is prepended to PATH at runtime. It is done this way to guarantee that get_iplayer uses the expected ffmpeg.exe. It is also done this way so it won't interfere with another ffmpeg that may be installed after get_iplayer. Not likely for most users, but a useful courtesy. If problems with system PATH become more prevalent I might change things, but this doesn't happen too often.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-559</h2></div><div class="dateline">03-08-2017, 02:55 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I have had this same problem since the new version came out, so I believe it's not a one off thing. I ran the old iplayer on win xp with no problems, the files immediately converted to m4a using the ffmpeg on the system and it was pretty fast. I use it on BBC radio programmes, and using the cmd line get_iplayer --pid=xxx --type=radio fetched me the programme in a m4a file quickly.<br />
+<br />
+With the latest version, i get the same error as above. I installed as per usual, on the very same machine. If it (the ffmpeg) worked previously, then shouldnt it work now?<br />
+<br />
+So with this error instead of getting a m4a file like before I am getting a ts file about 10 times the size it used to be.<br />
+<br />
+I checked my iplayer folder, the ffmpeg file is there as it should be. (ie C:\Program Files\get_iplayer\utils<br />
+<br />
+Somehow the programme isnt able to use it.<br />
+<br />
+hope u can advise, or fix it?<br />
+<br />
+anyway thanks for the good job getting it up and running again after the previous stumbling block by BBC ;)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; V3.00 - Required ffmpeg utility not found - not converting .ts file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Multiple Urls</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Multiple Urls</div>
+<div id="pagetitle"><h2>Multiple Urls</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-259</h2></div><div class="dateline">29-11-2013, 06:00 PM</div>
+</div>
+<div class="message">Is it possible to download multiple urls with get_iplayer? I've tried a few commands and it ignores them or fails. It appears the PIDS are not in the addresses I'm trying to download so couldn't use the multiple method others talk about.<br />
+<br />
+When doing one by one I use the 'get_iplayer *URL*' method.<br />
+<br />
+The links are short classic F1 clips so there are quite a lot of them around. Downloading one at a time could take a long time.<br />
+Example:<br />
+<a href="http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/7970518.stm">http://news.bbc.co.uk/sport1/hi/motorspo...970518.stm</a><br />
+<br />
+I don't mind using a different platform to do this, currently using the Windows version of get_iplayer as it was most convenient at the time.<br />
+<br />
+Any ideas are most appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-11-2013, 09:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/multiple-urls/#post-1614">Quote:</a>Is it possible to download multiple urls with get_iplayer?</blockquote>
+<br />
+Unfortunately, no.  When get_iplayer sees a bare URL as the first search term, it tries to download that single clip and then exits, similar to the way <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> works.  I think the simplest approach for you would be to assemble a list of one-off pvr jobs.  For each clip, run:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-queue --type=tv --url=&lt;URL&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+to add a job to the pvr list.  You have to copy each URL individually anyway, so it won't eat up much more time than assembling a command line with multiple URLs (if that option were available).  Once you've queued up all the clips you want, run:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr</code></div></div><br />
+<br />
+<br />
+<br />
+and they should all be downloaded in one go.  <br />
+<br />
+And of course, you could also assemble a batch file with one get_iplayer command for each clip.  Again, that wouldn't take much longer than assembling a command line with multiple URLs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-259</h2></div><div class="dateline">30-11-2013, 02:49 PM</div>
+</div>
+<div class="message">Thanks for this, worked a treat. I created what would be a batch file with the commands you said, then had to copy and paste contents into the Get_iplayer prompt.<br />
+<br />
+It occasionally comes up with a windows runtime box that has crashed or comes up with errors, presumably problems with the content.  Is there a command to ignore errors so it will just continue?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-259</h2></div><div class="dateline">30-11-2013, 02:52 PM</div>
+</div>
+<div class="message">It's the rtmpdump.exe that says it stops working...clicking ok continues it.  But if you have left it running overnight, it pauses everything until you click ok, so its just that it holds everything up a bit.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-12-2013, 04:39 PM</div>
+</div>
+<div class="message">If rtmpdump is randomly crashing, we probably can't provide much help. The problem will be unique to your system.  However, feel free to post a screenshot of the error dialog if it contains anything intelligible.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Multiple Urls</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

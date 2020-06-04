@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 4:3 video is captured at wrong aspect ratio whilst 'BBC' watermark is not.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 4:3 video is captured at wrong aspect ratio whilst 'BBC' watermark is not.</div>
+<div id="pagetitle"><h2>4:3 video is captured at wrong aspect ratio whilst 'BBC' watermark is not.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2263</h2></div><div class="dateline">09-10-2018, 03:10 PM</div>
+</div>
+<div class="message">I've been trying to use this fine tool to download some episodes of Louis Theroux's Weird Weekends, the first series of which is presented in the original 4:3 aspect ratio.  I don't think iPlayer has a native 4:3 profile so the video is encoded at 1280x720 using non-square pixels.  iPlayer itself recognises this fact (there must be a flag) and displays the picture correctly by squashing the 16:9 feed to 4:3 for display:<br />
+<br />
+[Image: <a href="https://preview.ibb.co/cTA1op/1.png">https://preview.ibb.co/cTA1op/1.png</a>]<br />
+<br />
+Tools including get_iplayer do not seem to see this flag so the resultant download when viewed back in VLC or WMP is stretched horizontally.  This is not a huge problem in itself because I can remux the file with the 4:3 flag resulting in a video that plays back natively at the correct aspect ratio.<br />
+<br />
+The problem comes when we look at the 'BBC' watermark in the corner of the picture.  As you can see in the first image, the watermark is overlaid in iPlayer in the correct location in the upper left of the viewport, which happens to be over the left vertical black bar that frames the 4:3 image.  get_iPlayer captures the watermark in the same location:<br />
+<br />
+[Image: <a href="https://preview.ibb.co/guB7Tp/2.png">https://preview.ibb.co/guB7Tp/2.png</a>]<br />
+<br />
+However this means that when the video is corrected to 4:3 aspect ratio, the watermark becomes horizontally squashed:<br />
+<br />
+[Image: <a href="https://preview.ibb.co/mN7319/3.png">https://preview.ibb.co/mN7319/3.png</a>]<br />
+<br />
+This suggests to me that the video and the watermark are two seperate entities/streams that are scaled/stretched independently of one-another in iPlayer.  If the watermark were 'burnt' into the video stream, it would either be crushed into the 4:3 frame in iPlayer, or not appear at all in the stream captured by get_iplayer.<br />
+<br />
+My questions therefore are:  Is this known about, can anything be done about it, and if not, could anyone explain how it happens?<br />
+<br />
+Thanks, Reg.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2263</h2></div><div class="dateline">20-10-2018, 04:32 PM</div>
+</div>
+<div class="message">Curiously enough, <a href="https://www.bbc.co.uk/iplayer/episode/b0077kk2/dads-army-series-1-1-the-man-and-the-hour">this</a> episode of Dad's Army is downloaded in 16:9, no squashing or stretching, with the 'BBC' watermark over the left side black bar.<br />
+<br />
+Sorry for the bump but I'd be very interested to know if the dev has any thoughts on this issue.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-10-2018, 07:12 PM</div>
+</div>
+<div class="message">As you're told in the documentation, these archive programmes are not supported, in part because you come across screwy edge cases like this. But here's a hint: When there is more than one version of a programme available to get_iplayer, it can pay to check the alternate version(s).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">27-10-2018, 02:40 PM</div>
+</div>
+<div class="message">If the OP is watching using VLC, then they can set the appropriate aspect ratio using the options under the Video, Aspect Ratio settings without needing to remux</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2263</h2></div><div class="dateline">09-11-2018, 12:39 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (27-10-2018, 02:40 PM)</span></cite>If the OP is watching using VLC, then they can set the appropriate aspect ratio using the options under the Video, Aspect Ratio settings without needing to remux</blockquote><br />
+Did you actually read my post, bro?</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 4:3 video is captured at wrong aspect ratio whilst 'BBC' watermark is not.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

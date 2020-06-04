@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Scheduled execution with both cache refresh and PVR run on Windows 10?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Scheduled execution with both cache refresh and PVR run on Windows 10?</div>
+<div id="pagetitle"><h2>Scheduled execution with both cache refresh and PVR run on Windows 10?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">15-08-2016, 02:00 PM</div>
+</div>
+<div class="message">I'd be interested to see the batch files that people are using for routine timer downloading of stuff.<br />
+<br />
+I have this set up on my machine, but since upgrading to Win10 I've had to split the file into two, as if I used one to both refresh and then PVR, it does the refresh and then closes without doing the PVR itself. For now I've had to split it into two bat files which are called sequentially using task scheduler. On Win7 the single combined file worked fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">15-08-2016, 05:45 PM</div>
+</div>
+<div class="message">They say life is a "work in progress" which describes my use of batch files with Windows and GiP.<br />
+<br />
+I split the download activity between two files, a batch file (loaded by freeware "System Scheduler") which executes the fetching of programmes listed in a text file.<br />
+<br />
+The download text files are stored on Dropbox (in the folder "D:\Dropbox\Get_iPlayer\0-TVdl\") so they can be read across different PCs if necessary. For example, I spend part of the year in the Philippines - when I am there I can scan the BBC schedules, decide which programmes I wish to download and enter them into the text file. Once saved, my UK PC picks up those files to do the downloading! ;-) In my case, that text file is a combination of URLs/PIDs together with the programme name in quotes, one URL/PID/programme name per line: e.g.<br />
+<br />
+TV.txt:<br />
+<br />
+--refresh<br />
+tv-0801-mon<br />
+====<br />
+<a href="http://www.bbc.co.uk/programmes/b06n399s">http://www.bbc.co.uk/programmes/b06n399s</a><br />
+<a href="http://www.bbc.co.uk/programmes/b044j57r">http://www.bbc.co.uk/programmes/b044j57r</a><br />
+"have I got"<br />
+====<br />
+<a href="http://www.bbc.co.uk/programmes/b07n22gd">http://www.bbc.co.uk/programmes/b07n22gd</a><br />
+<a href="http://www.bbc.co.uk/programmes/b07n22gg">http://www.bbc.co.uk/programmes/b07n22gg</a><br />
+"david attenborough"<br />
+<a href="http://www.bbc.co.uk/programmes/b0084kpm">http://www.bbc.co.uk/programmes/b0084kpm</a><br />
+"michael palin's new europe"<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b06bgp0l">http://www.bbc.co.uk/programmes/b06bgp0l</a><br />
+"blitz cities"<br />
+b07mh601<br />
+"new zealand"<br />
+====<br />
+<a href="http://www.bbc.co.uk/programmes/p030s5bx">http://www.bbc.co.uk/programmes/p030s5bx</a><br />
+"calculating ada"<br />
+====<br />
+<br />
+I use URLs/PIDs to make sure I'm downloading the correct version in a series. Out of laziness I often don't bother to strip out the "http://www.bbc.co.uk/programmes/" bit in front of the PID. I put both PIDs and programme names in to give me a cross check on what I'm downloading.<br />
+<br />
+I don't usually use "best" as the download option preferring to force the HD option so here is a typical batch file:<br />
+<br />
+tv-pidhdf.bat:<br />
+<br />
+set &#36;textFile="D:\Dropbox\Get_iPlayer\0-TVdl\tv.txt"<br />
+for /f "delims=" %%a in ('type %&#36;textFile%') do get_iplayer --modes=hlshd --force --pid %%a<br />
+<br />
+You can replace --modes=hlshd with your mode of choice, eg --tvmode=flashbest or --tvmode=flashhd, etc.<br />
+<br />
+I force the programme download (--force) for a specific reason - the programme may have previously been broadcast in the past and I downloaded an inferior version, e.g. standard rather than high definition. This gives me an opportunity to acquire a better version!<br />
+<br />
+Since the documented problems with the HLS feeds, I pipe the output to a text file so the batch file would now look like this:<br />
+<br />
+set &#36;textFile="D:\Dropbox\Get_iPlayer\0-TVdl\tv.txt"<br />
+for /f "delims=" %%a in ('type %&#36;textFile%') do get_iplayer --modes=hlshd --force --pid %%a &gt;&gt;F:\iPlayer\TV\log.txt<br />
+<br />
+The output including details of any errors is piped into the file log.txt located in "F:\iPlayer\TV\". I can then decide which programmes need to be re-downloaded. Incidentally, I prefer to open that text file using freeware "Notepad++" as this enables easier reading than Microsoft's "Notepad".<br />
+<br />
+If you're purely downloading based on searches of the programme name, you need to amend the above files  - in this case you would just remove the URLs/PIDs in the text file and replace the reference to "--pid"  with "--get" in the batch file.<br />
+<br />
+I have a similar set-up for radio programmes I wish to download.<br />
+<br />
+I find this a far more flexible route than the PVR, especially when you're adding or removing programmes. Also it removes the necessity of typing over and over the get_iplayer command with the appropriate strings needed using the CLI. Surely that's why batch files were invented, to remove tedious repetitive actions! I usually scan the schedules daily and enter up the text file for the programmes I wish to download on that day - if I'm away from home for a few days I can enter up the schedule in advance.<br />
+<br />
+The above template can be modified to suit individual requirements, I have around a dozen batch files that have evolved over the last couple of years.<br />
+<br />
+Hope this helps.<br />
+<br />
+<br />
+<br />
+Alan<br />
+<br />
+PS My main system is on Windows 7 but I don't see any reason why this wouldn't work on Windows 10.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-08-2016, 11:37 AM</div>
+</div>
+<div class="message">Interesting - yes it does help somewhat (or is at least another option that could be built in).<br />
+<br />
+My original batch file was just very simple, based on the PVR built into GI:<br />
+<br />
+cd c:\program files (x86)\get_iplayer<br />
+get_iplayer --refresh<br />
+get_iplayer --pvr<br />
+<br />
+The problem being it does the refresh and then stops (the terminal window closes). So I've had to split it into two batch files, which are run sequentially (the cd line is in both files). It works like that, but it's not exactly elegant hence I was wondering what else may work.<br />
+<br />
+I'll have a look into your method as well, as I'm often travelling on business too and being able to load up a text file of stuff to download could be very useful. At the moment I just do it via remote access into my home laptop, but a text batch file would be good I think.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2016, 11:57 AM</div>
+</div>
+<div class="message">Remember that you are running one batch file from another batch file. You just need to preface each get_iplayer invocation with "call".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-08-2016, 01:55 PM</div>
+</div>
+<div class="message">I think that may be the key here, although it used to work on Win7 and older versions of GI (although with a more explicit command line to run the perl scripts).<br />
+<br />
+Will certainly test that out tonight, although the input above about batch-feeding GI is also useful so the thread has been worthwhile anyway :)<br />
+<br />
+Editted to add - yup, adding the call commands works perfectly. Thanks Dinky :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2016, 02:15 PM</div>
+</div>
+<div class="message">If you invoke perl directly, "call" wouldn't apply and multiple commands would run sequentially as expected, on any version of Windows.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-08-2016, 02:31 PM</div>
+</div>
+<div class="message">Yes, it was when perl got removed from the path - I went from calling the scripts directly to batch files without realising it. It just happened to be coincident with when I went from Win7 to Win10, which confused things.<br />
+<br />
+Anyway the call command addition has done the business, so all is fine now anyway :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Scheduled execution with both cache refresh and PVR run on Windows 10?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

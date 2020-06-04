@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Segment not found?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Segment not found?</div>
+<div id="pagetitle"><h2>Segment not found?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1283</h2></div><div class="dateline">09-08-2016, 08:54 PM</div>
+</div>
+<div class="message">Hi all<br />
+<br />
+There appears to be an issue with some programs now where a segment of the program is missing, when the file downloads the program skips and the subtitles go out of sync, I'm not sure why this is happening as I'm watching the program on BBC iPlayer at the moment, could it be a new DRM?<br />
+<br />
+Thanks for any answers.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">09-08-2016, 10:44 PM</div>
+</div>
+<div class="message">Yes this is a current issue affecting HLS downloads , also documented in the Linux section of this forum (the segmented nature of this forum doesn't help these sorts of problems), it seems to be a problem at the BBC end of things. <br />
+<br />
+For now using flash, eg --tvmode=flashhd will produce fault free downloads , although we don't know how long this will be available. For me, HLSHD downloads are between 30 and 100 Mbps - be warned that FlashHd is much slower, four times slower for me! :-(<br />
+<br />
+The new hvf mode is another way around the problem although I would recommend reading around the subject. <br />
+<br />
+I'm download using a batch file which I've amended to pipe results into a text error file - I then examine the output and where there are missing segments I repeat the download using flash. <br />
+<br />
+Hope this helps<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1283</h2></div><div class="dateline">11-08-2016, 01:43 AM</div>
+</div>
+<div class="message">Thanks Alan <br />
+<br />
+I had to learn how to use the get_iplayer app rather than the web player app in order to follow your instructions, but it now means I can go back and redownload the programs that had faults when recording! <br />
+<br />
+I'm not sure how I would create a batch file similar to the one you have set up but it sounds like a logical way to pick up any errors.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1368</h2></div><div class="dateline">11-08-2016, 02:33 PM</div>
+</div>
+<div class="message">I'm using 'tvmode=flashvhigh' for 832x468 (my normal setting).<br />
+D/L times seem normal to me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">11-08-2016, 03:16 PM</div>
+</div>
+<div class="message">When you do switch to using HLS and HVF, you may well find a big speed increase :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">15-08-2016, 06:52 AM</div>
+</div>
+<div class="message">A problem in downloading "Full Steam Ahead" Episode 4.<br />
+<br />
+There are warnings of possible gaps in the prog.  Where these happen sounds leads several seconds ahead of video.<br />
+<br />
+I have oberved this on 2 progs recently.<br />
+<br />
+For "Full Steam Ahead" Episode 4, I have downloaded a second time with same consequence.  <br />
+<br />
+Full output below.<br />
+<br />
+Please advise.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+C:\Program Files (x86)\get_iplayer&gt;geturl <a href="http://www.bbc.co.uk/iplayer/episode/b07nwk5h/full-steam-ahead-episode-4">http://www.bbc.co.uk/iplayer/episode/b07...-episode-4</a><br />
+WARNING: Ignored option in C:\ProgramData/get_iplayer/options: 'mmsnothread = 1'<br />
+WARNING: Option 'mmsnothread' is no longer used and is scheduled for removal<br />
+WARNING: Please delete option 'mmsnothread' from C:\ProgramData/get_iplayer/options<br />
+INFO: Use --dump-opts to display all valid options<br />
+WARNING: Ignored option in C:\ProgramData/get_iplayer/options: 'lame = .\LAME\lame.exe'<br />
+WARNING: Option 'lame' is no longer used and is scheduled for removal<br />
+C:\Program Files (x86)\get_iplayer&gt;geturl <a href="http://www.bbc.co.uk/iplayer/episode/b07nwk5h/full-steam-ahead-episode-4">http://www.bbc.co.uk/iplayer/episode/b07...-episode-4</a> --force<br />
+WARNING: Ignored option in C:\ProgramData/get_iplayer/options: 'mmsnothread = 1'<br />
+WARNING: Option 'mmsnothread' is no longer used and is scheduled for removal<br />
+WARNING: Please delete option 'mmsnothread' from C:\ProgramData/get_iplayer/options<br />
+INFO: Use --dump-opts to display all valid options<br />
+WARNING: Ignored option in C:\ProgramData/get_iplayer/options: 'lame = .\LAME\lame.exe'<br />
+WARNING: Option 'lame' is no longer used and is scheduled for removal<br />
+WARNING: Please delete option 'lame' from C:\ProgramData/get_iplayer/options<br />
+INFO: Use --dump-opts to display all valid options<br />
+get_iplayer 2.95-dev, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b07nwk5h using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+<br />
+Full Steam Ahead<br />
+  1215: Episode 4, BBC Two, b07nwk5h<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hlshd1,hlsvhigh1,hlshigh1,hlslow1,hlslow2 modes will be tried for version original<br />
+INFO: Trying hlshd1 mode to record tv: Full Steam Ahead - 4. Episode 4<br />
+INFO: File name prefix = Full_Steam_Ahead-4._Episode_4-2016-08-11<br />
+<br />
+INFO: Downloading Subtitles to 'C:\iPlayer Recordings/Full_Steam_Ahead-4._Episode_4-2016-08-11.srt'<br />
+INFO: Begin recording file: C:\iPlayer Recordings\Full_Steam_Ahead-4._Episode_4-2016-08-11.partial.mp4.ts<br />
+Recording:    14.16MB / 1009.89MB  2699kbps   1.4% 00:50:22 remaining<br />
+WARNING: Segment not found (6) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,1500">http://cp401489-vh.akamaihd.net/i/iplaye...87118,1500</a><br />
+kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/segm<br />
+ent6_2_av.ts<br />
+WARNING: There may be a gap near 50 secs in programme<br />
+Recording:   213.44MB / 1009.89MB  2789kbps  21.1% 00:38:59 remaining<br />
+WARNING: Segment not found (74) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,150">http://cp401489-vh.akamaihd.net/i/iplaye...987118,150</a><br />
+0kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/seg<br />
+ment74_2_av.ts<br />
+WARNING: There may be a gap near 730 secs in programme<br />
+Recording:   268.07MB / 1009.89MB  2797kbps  26.5% 00:36:12 remaining<br />
+WARNING: Segment not found (93) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,150">http://cp401489-vh.akamaihd.net/i/iplaye...987118,150</a><br />
+0kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/seg<br />
+ment93_2_av.ts<br />
+WARNING: There may be a gap near 920 secs in programme<br />
+<br />
+WARNING: Segment not found (94) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,150">http://cp401489-vh.akamaihd.net/i/iplaye...987118,150</a><br />
+0kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/seg<br />
+ment94_2_av.ts<br />
+WARNING: There may be a gap near 930 secs in programme<br />
+Recording:   534.09MB / 1009.89MB  2801kbps  52.9% 00:23:11 remaining<br />
+WARNING: Segment not found (184) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,15">http://cp401489-vh.akamaihd.net/i/iplaye...4987118,15</a><br />
+00kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/se<br />
+gment184_2_av.ts<br />
+WARNING: There may be a gap near 1830 secs in programme<br />
+Recording:   880.05MB / 1009.89MB  2799kbps  87.1% 00:06:20 remaining<br />
+WARNING: Segment not found (302) <a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064987118,15">http://cp401489-vh.akamaihd.net/i/iplaye...4987118,15</a><br />
+00kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064983267,3200kbps/modav/bUnknown-88a91d19-f7ce-4794-8987-eb1941bad8fb_b07nwk5f_1470064988867,.mp4.csmil/se<br />
+gment302_2_av.ts<br />
+WARNING: There may be a gap near 3010 secs in programme<br />
+INFO: Recorded: 1031.00MB in 00:50:27 at  2790kbps to C:\iPlayer Recordings\Full_Steam_Ahead-4._Episode_4-2016-08-11.partial.mp4.ts<br />
+INFO: Begin converting file: C:\iPlayer Recordings\Full_Steam_Ahead-4._Episode_4-2016-08-11.partial.mp4.ts<br />
+[h264 @ 04927720] non-existing SPS 0 referenced in buffering period<br />
+    Last message repeated 1 times<br />
+[NULL @ 04927720] non-existing SPS 0 referenced in buffering period<br />
+INFO: Converted file: C:\iPlayer Recordings\Full_Steam_Ahead-4._Episode_4-2016-08-11.partial.mp4<br />
+INFO: Recorded file: C:\iPlayer Recordings\Full_Steam_Ahead-4._Episode_4-2016-08-11.mp4<br />
+<br />
+INFO: MP4 tagging MP4 file<br />
+'AtomicParsley' is not recognized as an internal or external command,<br />
+operable program or batch file.<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to tag MP4 file<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">16-08-2016, 11:48 AM</div>
+</div>
+<div class="message">I have just downloaded and installed V 2.95.2 for Windows and still getting "Segment[s] not found" on Full steam ahead Episode 4.<br />
+<br />
+Any help would be much appreciated.<br />
+<br />
+EDIT: duplicated output spew removed</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1368</h2></div><div class="dateline">16-08-2016, 12:16 PM</div>
+</div>
+<div class="message">Did you try using the FLASH mode as described in the previous posts ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">16-08-2016, 12:23 PM</div>
+</div>
+<div class="message">I have now:-<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes (flashigh) available for this programme with version 'original'<br />
+INFO: Try using --modes=flashhd,flashvhigh,flashhigh,flashstd,flashlow<br />
+ERROR: Failed to record 'Full Steam Ahead - 4. Episode 4 (b07nwk5h)'<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">16-08-2016, 12:39 PM</div>
+</div>
+<div class="message">Update.  I have now put the sting "modes HLS,HVF,HLSHD.flashHD,flash" in the Option file and I am succeeding in downloading Full Steam Ahead Episode 4, b07nwk5h at 720p<br />
+<br />
+I trust this will help me obtain the other problems on which I have had the problem, viz:-<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b07mdxpd/great-american-railroad-journeys-series-1-reversions-4-schenectady-to-niagara-falls">http://www.bbc.co.uk/iplayer/episode/b07...gara-falls</a><br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b07n6lbr/great-american-railroad-journeys-series-1-reversions-8-manassas-to-jamestown">http://www.bbc.co.uk/iplayer/episode/b07...-jamestown</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">16-08-2016, 01:31 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>INFO: No specified modes (flashigh) available for this programme with version 'original'</blockquote><br />
+The reason that didn't work before is because you made an error in the original command. You missed an 'h' in flash<span style="font-weight: bold;" class="mycode_b">h</span>igh.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">16-08-2016, 02:14 PM</div>
+</div>
+<div class="message">Notice that now.  Many thanks, apologues, maen ddrwg, etc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-08-2016, 06:31 PM</div>
+</div>
+<div class="message">Just to report, I think I've found two programmes which have HLS but no flashhd. The latest two episodes of Wild both fail under flashhd (no streams found), but work (with segments missing) under HLS.<br />
+<br />
+4189:   Wild: 2005-06 Shorts - Storm Geese, BBC Four, b0078zqn<br />
+4190:   Wild: 2005-06 Shorts - Eider Duck Island, BBC Four, b0078zwm</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-08-2016, 07:02 PM</div>
+</div>
+<div class="message">Not all programmes are available in HD. That is normal and has nothing to do with the recent problems.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">17-08-2016, 07:13 PM</div>
+</div>
+<div class="message">Yup you're right - flashvhigh1 worked.<br />
+<br />
+So used to everything being available in HD these days...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1386</h2></div><div class="dateline">28-08-2016, 04:14 PM</div>
+</div>
+<div class="message">Has the BBC fixed this?<br />
+<br />
+I started recording all the Olympics Table Tennis episodes a week or so back and at least 50% or so had the 'Segment not found'  issue. I only used to get it with earlier rounds, the finals stages (more recent) did not suffer.<br />
+<br />
+However, I have not had one 'Segment not found' issue in the last two or three days' worth of recordings even the early rounds. I used to get several a day previously.<br />
+<br />
+Coincidence or it's been fixed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2016, 07:35 PM</div>
+</div>
+<div class="message">Programmes from 26 Aug onwards appear to be fixed, but YMMV. Old programmes have not been repaired. The issue is generally moot with the latest get_iplayer, anyway. Thread closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Segment not found?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

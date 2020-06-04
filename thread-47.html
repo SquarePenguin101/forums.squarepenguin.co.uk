@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Subtitles</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Subtitles</div>
+<div id="pagetitle"><h2>Subtitles</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">27-09-2013, 06:23 PM</div>
+</div>
+<div class="message">As my username states I love subtitles...<br />
+<br />
+A nice feature would be if we could have an CLI switch to prevent downloads.<br />
+<br />
+For example if the get_iplayer does not detect any subtitles then it refuse to download the video (and possible the same for signed, auto description versions etc)<br />
+<br />
+personally for me any videos without subtitles is pretty much useless (am deaf). It is very annoying that BBC chooses to regularly delay or even fail to provide subtitles !<br />
+<br />
+thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-09-2013, 07:30 PM</div>
+</div>
+<div class="message">I haven't ever used subtitles. If you use the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subtitles</code></div></div> are you saying that even though that command is present, if no subtitles are included in the programme, get_iplayer will still download a subtitle free file?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">27-09-2013, 08:13 PM</div>
+</div>
+<div class="message">sorry if i wasnt clear...<br />
+<br />
+at the moment when i download with get_iplayer this is typical of CLI usuage e.g.<br />
+<br />
+./get_iplayer --output="/home/I_love_subtitles/Videos" --vmode=flashhigh --subtitles --refresh --get "name of programme"<br />
+<br />
+so the usual outcomes at the moment would be either :-<br />
+<br />
+1) The video is downloaded with the subtitles (thumbs up)<br />
+0r<br />
+2) The video is downloaded but without the subtitles (bbc being lazy gits or even just not bothered include the subtitles with the video).<br />
+<br />
+So, if we were to have a CLI switch let say like --chkservice="sub" then if no subtitles then get_iplayer will not download the video.<br />
+<br />
+So, when the subtitles are present then it will allow the downloading of the video.<br />
+<br />
+At the moment any videos which the bbc not included with subtitle it will still download the video regardless if it actual has the subtitles or not. This is useless to people (and deaf) who totally need the subtitles.<br />
+<br />
+The bbc does seem to have a bad habit of excluding subtitles.<br />
+<br />
+thanks for listening</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2013, 01:11 AM</div>
+</div>
+<div class="message">i_l_s: It would definitely be possible to add a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subtitles-required</code></div></div> option that would skip media download if associated subtitles couldn't be downloaded.  I don't know if it will make next release, but I'll implement it at some point.  I'll post on this thread when it's ready.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">28-09-2013, 08:46 AM</div>
+</div>
+<div class="message">Thanks user-2 that would be fab.<br />
+<br />
+Just been playing about with get_iplayer and noticed that...<br />
+<br />
+If I were to use the following in CLI <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--versions=signed</code></div></div> or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--versions=audiodescribed</code></div></div> it produces the desired filtering output, that I think would be useful to subtitles users.<br />
+<br />
+Maybe <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--versions=subtitles</code></div></div> be more fitting ?<br />
+<br />
+(I appreciate that I know nothing about what happens under the hood of get_iplayer)<br />
+<br />
+Have a good weekend everyone</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-10-2013, 12:10 AM</div>
+</div>
+<div class="message">get_iplayer 2.84 has a new <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subsrequired</code></div></div> option that will skip download of a programme when its subtitles are missing or empty.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">01-10-2013, 05:16 PM</div>
+</div>
+<div class="message">Thanks again user-2 for sprinkling your magic on get_iplayer, I have just tested the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subsrequired</code></div></div> and it seem to be working perfectly and will be making good use of it thanks again :)<br />
+<br />
+Would it be possible filter and list subtitles only ? e.g. when i use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get_iplayer</code></div></div> it lists all the programmes available. But with some sort of CLI to only list subtitles only ?<br />
+<br />
+I have noticed <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get_iplayer --versionlist=signed</code></div></div> <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get_iplayer --versionlist=audiodescribed</code></div></div> does offer filtered list.<br />
+<br />
+But so far <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get_iplayer --versionlist=subtitles</code></div></div> by the way I did have a look at the "perl codes" and seen <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>opensubtitled</code></div></div> mentioned but didn't seem to be working or is in the making ?<br />
+<br />
+Note to self : you really need to learn programming :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-10-2013, 07:09 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Would it be possible filter and list subtitles only ? e.g. when i use --get_iplayer it lists all the programmes available. But with some sort of CLI to only list subtitles only ?</blockquote>
+<br />
+No. The channel listing feeds used to populate get_iplayer's programme cache don't contain any information about subtitles.  It requires several additional downloads per programme to ascertain whether or not subtitles are available, and that's not practical to do.  Signed and audiodescribed programmes essentially have their own channels, so the version information can be included in the cache for searching.  And of course, the only way to determine if a subtitles file is in fact empty is to download it, and that's doubly impractical.<br />
+<br />
+If you want to check if a subtitles file exists for a particular programme, use:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --streaminfo &lt;index&gt;</code></div></div><br />
+If subtitles are available, amongst all the media streams (typically at the end) you will see the info for the subtitles stream, which will look like the listing below.  However, there is no guarantee that the subtitles file actually contains any subtitles.  Your first programming project can be a subtitles checker :)<br />
+<br />
+Subtitles stream info:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>stream:&nbsp;&nbsp;&nbsp;&nbsp; subtitles1<br />
+authstring: <br />
+bitrate:&nbsp;&nbsp;&nbsp;&nbsp;<br />
+ext:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srt<br />
+identifier: ng/modav/bUnknown-b005v7w3_b005v7w3_1380102712662.xml<br />
+priority:&nbsp;&nbsp; 10<br />
+server:&nbsp;&nbsp;&nbsp;&nbsp; http://www.bbc.co.uk/iplayer/subtitles/<br />
+streamer:&nbsp;&nbsp; http<br />
+streamurl:&nbsp;&nbsp;http://www.bbc.co.uk/iplayer/subtitles/ng/modav/bUnknown-b005v7w3_b005v7w3_1380102712662.xml<br />
+swfurl:&nbsp;&nbsp;&nbsp;&nbsp; http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf<br />
+type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (captions) http stream (CDN: http/10)</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-91</h2></div><div class="dateline">02-10-2013, 10:29 AM</div>
+</div>
+<div class="message">Thank you for your in-depth explanation, after doing a bit more probing I now see some of the issues you mentioned ...<br />
+<br />
+So i will have a think about writing something more advanced than those "hello world" tutorials ... <br />
+<br />
+wish me luck :) cos it might take me a while lol</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Subtitles</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

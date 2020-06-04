@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - masterchef not downloading with pvr scheduler</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; masterchef not downloading with pvr scheduler</div>
+<div id="pagetitle"><h2>masterchef not downloading with pvr scheduler</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">08-11-2017, 07:22 AM</div>
+</div>
+<div class="message">today I have noticed that masterchef is not downloading in the pvr scheduler, despite masterchef actually being in the tv.cache. Some other programs have downloaded.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>798|tv|MasterChef: The Professionals: Series 10|b09fg34w|2017-11-07T20:00:00+00:00|1512676800|Episode 1|10|1|default|3600|Six chefs face two daunting challenges - at the end of which, three are sent home.|BBC Two|||1510091170||http://www.bbc.co.uk/programmes/b09fg34w|</code></div></div><br />
+the PVR is<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four,CBBC,<br />
+exclude series 1, series 2, series 3, series 4, series 5, series 6<br />
+fields name<br />
+modes worse<br />
+output F:&#92;Media&#92;Television<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 ^Masterchef&#92;: The Professionals<br />
+fileprefix &lt;nameshort&gt; &lt;.senum&gt; &lt;.episodeshort&gt; &lt;.pid&gt; &lt;.channel&gt;</code></div></div><br />
+if I run get_iplayer masterchef I get this<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer masterchef<br />
+Matches:<br />
+798:    tv, MasterChef: The Professionals: Series 10 - Episode 1, BBC Two, b09fg34w<br />
+INFO: 1 matching programmes</code></div></div><br />
+it does download manually using the id number<br />
+<br />
+Also when I ran it this morning 35 TV programs were added but no radio shows were added<br />
+<br />
+I am on version 3.06, in windows 10</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">08-11-2017, 07:44 AM</div>
+</div>
+<div class="message">OK, I tried a new pvr for just masterchef and it found it.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four,CBBC,<br />
+fields name<br />
+modes worse<br />
+output F:&#92;Media&#92;Television<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 ^MasterChef<br />
+fileprefix &lt;nameshort&gt; &lt;.senum&gt; &lt;.episodeshort&gt; &lt;.pid&gt; &lt;.channel&gt;</code></div></div><br />
+the only difference I can see is the the line<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0 ^MasterChef&#92;: The Professionals</code></div></div><br />
+has the way the ":" is dealt with in the PVR changed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2017, 12:23 PM</div>
+</div>
+<div class="message">No</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">08-11-2017, 09:31 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (08-11-2017, 12:23 PM)</span></cite>No</blockquote><br />
+Then have you any idea why the pvr is not picked up by the scheduler. The last series worked fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2017, 12:15 AM</div>
+</div>
+<div class="message">No. Works fine here, and there is no way to diagnose from the information provided. Perhaps you had trailing whitespace in your search string.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">09-11-2017, 09:43 AM</div>
+</div>
+<div class="message">ok I figured it out. I have exclude series 1 in the exclude section and it is series 10 so it is picking that up<br />
+<br />
+is there a way to exclude things specifically so it does not make that mistake again?<br />
+would putting it in quotes work?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2017, 11:36 AM</div>
+</div>
+<div class="message">No. You'll need to formulate a regular expression that excludes series 1 but not future series. Still, how likely is it that series 1 will be rebroadcast?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">09-11-2017, 06:28 PM</div>
+</div>
+<div class="message">yes I have removed it from the exclude now. <br />
+do I mark as solved or do you</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; masterchef not downloading with pvr scheduler</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Run PVR not working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Run PVR not working</div>
+<div id="pagetitle"><h2>Run PVR not working</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-912</h2></div><div class="dateline">19-05-2015, 10:26 PM</div>
+</div>
+<div class="message">Hi, new to get_iplayer and managed to download it, install dependencies, and get the web UI up and running, and add a few shows to the PVR list all fine.  However, when running PVR all the downloads fail.  Receiving the following errors in the output:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>1120:&nbsp;&nbsp;&nbsp;&nbsp;First Minister's Question Time - 14/05/2015, BBC Radio Scotland, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: Please download and run latest installer or install the XML::Simple Perl module for more accurate programme metadata.<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: First Minister's Question Time - 14/05/2015<br />
+<br />
+INFO: File name prefix = First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Failed to open file! /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaacstd1 mode<br />
+INFO: Trying flashaacstd2 mode to record radio: First Minister's Question Time - 14/05/2015<br />
+<br />
+INFO: File name prefix = First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Failed to open file! /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaacstd2 mode<br />
+INFO: Trying flashaaclow1 mode to record radio: First Minister's Question Time - 14/05/2015<br />
+<br />
+INFO: File name prefix = First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Failed to open file! /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaaclow1 mode<br />
+INFO: Trying flashaaclow2 mode to record radio: First Minister's Question Time - 14/05/2015<br />
+<br />
+INFO: File name prefix = First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Failed to open file! /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file /home/pi/Downloads/get_iplayer-2.92/First_Ministers_Question_Time_-_14_05_2015_b05tr00w_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaaclow2 mode<br />
+ERROR: Failed to record 'First Minister's Question Time - 14/05/2015 (b05tr00w)'<br />
+WARNING: PVR Run: _First_Minister_s_Question_Time_name_radio: 1 download failure(s)</code></div></div><br />
+<br />
+<br />
+And it repeats that for each show in the PVR list.  Tried googling for potential solution, however kept turning up threads with slightly different variations on the error messages I am receiving and didn't seem relevant to me.  Folder and file permissions for the get_iplayer folder are fine.  I did however set the output folder to be a different one, I assume it downloads the file before moving it to the output folder - or is this potentially what the issue is?  <br />
+<br />
+Any idea what is going wrong here?<br />
+<br />
+Cheers,<br />
+<br />
+Abe</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-05-2015, 10:36 PM</div>
+</div>
+<div class="message">You have a permissions problem with /home/pi/Downloads/get_iplayer-2.92.  The output folder is where output goes - there is no intermediate step.  If the output folder is not writable, you get this error.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-05-2015, 10:48 PM</div>
+</div>
+<div class="message">Or perhaps the permissions problem is with the "different one".  Your post isn't clear about what you actually did.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Run PVR not working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

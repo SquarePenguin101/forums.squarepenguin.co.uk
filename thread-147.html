@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can only get radio in wma format</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Can only get radio in wma format</div>
+<div id="pagetitle"><h2>Can only get radio in wma format</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-510</h2></div><div class="dateline">23-04-2014, 09:16 AM</div>
+</div>
+<div class="message">I've recently upgraded my laptop to Xubuntu 14.04 (from a pretty old version of Mint, where I had an older version of get_iplayer working fine).  get_iplayer installed from the ppa (I got all the listed dependencies), and TV downloads work fine, however radio (which is most of what I want to get) will only do wma, which is pretty useless since it downloads in realtime.<br />
+<br />
+Here's an example of the output when I try a radio download (I don't actually want the Shipping Forecast, but it would be quick to download as a test!):<br />
+<br />
+<br />
+&#36; get_iplayer --type=radio --get 12482 <br />
+get_iplayer 2.86-ppa17, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+12482:	Shipping Forecast - 23/04/2014, BBC Radio 4, Radio<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaaclow1 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: Shipping Forecast - 23/04/2014<br />
+INFO: File name prefix = Shipping_Forecast_-_23_04_2014_b0414008_default                 <br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect0, failed to connect socket. 111 (Connection refused)<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaacstd1 mode<br />
+INFO: Trying flashaaclow1 mode to record radio: Shipping Forecast - 23/04/2014<br />
+INFO: File name prefix = Shipping_Forecast_-_23_04_2014_b0414008_default                 <br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect0, failed to connect socket. 111 (Connection refused)<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaaclow1 mode<br />
+INFO: You may wish to try --modes=wma for version default<br />
+INFO: Note that wma mode is real-time only, and thus is generally only suitable for recording live radio.<br />
+ERROR: Failed to record 'Shipping Forecast - 23/04/2014 (b0414008)'<br />
+<br />
+<br />
+<br />
+If I use modes=wma then it works:<br />
+<br />
+<br />
+&#36; get_iplayer --type=radio --get 12482 --modes=wma<br />
+get_iplayer 2.86-ppa17, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+12482:	Shipping Forecast - 23/04/2014, BBC Radio 4, Radio<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: wma1 modes will be tried for version default<br />
+INFO: Trying wma1 mode to record radio: Shipping Forecast - 23/04/2014<br />
+INFO: File name prefix = Shipping_Forecast_-_23_04_2014_b0414008_default                 <br />
+INFO: Streaming to file /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default_part01.wma<br />
+INFO: Streaming thread has completed for file /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default_part01.wma<br />
+INFO: Thread #1 Recorded 7.63MB in 00:11:07 at    94kbps to /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default_part01.wma<br />
+INFO: All streaming threads completed<br />
+<br />
+<br />
+<br />
+Does anyone have any idea of how I can get any other mode to work?  Many thanks for reading!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">23-04-2014, 10:32 AM</div>
+</div>
+<div class="message">This bit seems to be key:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: RTMP_Connect0, failed to connect socket. 111 (Connection refused)<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file /home/hedley/Shipping_Forecast_-_23_04_2014_b0414008_default.partial.m4a.flv via RTMP</code></div></div><br />
+<br />
+<br />
+<br />
+RTMPdump is notoriously flaky but you are certainly not the <a href="http://lists.infradead.org/pipermail/get_iplayer/2014-April/005683.html">only</a> <a href="http://lists.infradead.org/pipermail/get_iplayer/2014-April/005685.html">one</a> <a href="http://lists.infradead.org/pipermail/get_iplayer/2014-April/005699.html">currently</a> <a href="http://lists.infradead.org/pipermail/get_iplayer/2014-April/005702.html">experiencing</a> <a href="http:///forums/topic/slow-down-and-file-name-change/">issues</a> with radio downloads at the moment.<br />
+<br />
+The cause doesn't seem to be totally consistent across each user but RTMP is invariably involved. <br />
+<br />
+The usual advice is to wait a bit and try again. Having tested it myself on Windows I completed the raido downloads successfully and without any of the issues others are reporting which likely points to a connection issue or something on the Beeb's end when you are trying to execute a download.<br />
+<br />
+If you make an attempt now, do you face the same issue?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-510</h2></div><div class="dateline">23-04-2014, 02:09 PM</div>
+</div>
+<div class="message">I still seem to have the same issue right now.  :o(<br />
+<br />
+It didn't worked yesterday morning, yesterday night, this morning or now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-510</h2></div><div class="dateline">23-04-2014, 07:30 PM</div>
+</div>
+<div class="message">Just tried again and succeeded!  Hooray!<br />
+<br />
+Thanks for your help - I'd assumed it was not installed correctly, but I guess it's just temperamental.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Can only get radio in wma format</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

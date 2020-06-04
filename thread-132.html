@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Command exit code 1 on a particular pid</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Command exit code 1 on a particular pid</div>
+<div id="pagetitle"><h2>Command exit code 1 on a particular pid</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-489</h2></div><div class="dateline">13-03-2014, 04:25 PM</div>
+</div>
+<div class="message">There seems to be something different about this I am unable to download this program <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>http://www.bbc.co.uk/programmes/b03xsfrs</code></div></div><br />
+I tend to cut and paste various strings from notepad++ with just the pid appended and this is the first program that I've had problems with. This is the output which carries on for all modes<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Matches:<br />
+739:&nbsp;&nbsp;&nbsp;&nbsp;Mark Lawson Talks To... - David Bailey, BBC Four, Arts,Arts Culture &amp; the Media,Factual,Guidance,Life Stories,TV, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Mark Lawson Talks To... - David Bailey<br />
+INFO: File name prefix = Mark Lawson Talks To... - David Bailey<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Failed to open file! C:&#92;Users&#92;User&#92;Desktop&#92;iPlayer Recordings&#92;Mark Lawson Talks To...&#92;Mark Lawson Talks To... - David Bailey.partial.mp4.flv<br />
+<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;User&#92;Desktop&#92;iPlayer Recordings&#92;Mark Lawson Talks To...&#92;Mark Lawson Talks To... - David Bailey.partial.mp4.flv via RTMP</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-03-2014, 04:40 PM</div>
+</div>
+<div class="message">1) Check to see if this file exists on your c drive <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;User&#92;Desktop&#92;iPlayer Recordings&#92;Mark Lawson Talks To...&#92;Mark Lawson Talks To... - David Bailey.partial.mp4.flv</code></div></div>. If it does, delete it and retry your download.<br />
+<br />
+If that doesn't work...<br />
+<br />
+2) What is the exact command you are using please?<br />
+<br />
+3) Re-run your command while appending <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to it, then stick the resulting output in a text file and upload it as an attachment here so we can see.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-03-2014, 05:07 PM</div>
+</div>
+<div class="message">The problem is that Windows is stripping the trailing ellipsis, so the output subdirectory is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To</code></div></div> rather than the expected <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To...</code></div></div>.  Add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--no-subdir</code></div></div> to your command line for this particular programme and then relocate the file after download.  I'll update get_iplayer to replace the trailing ellipsis (already does leading ellipsis) and bump this thread when done.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-03-2014, 05:09 PM</div>
+</div>
+<div class="message">Oooh, good spot. I assumed those were added in the output somehow. Never assume, never never assume!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-489</h2></div><div class="dateline">13-03-2014, 07:55 PM</div>
+</div>
+<div class="message">That was quick! I tried simplifying the command, but clearly removed the wrong bits.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --subtitles --metadata=generic --thumbnail --whitespace --subdir --get --file-prefix="&lt;nameshort&gt; - &lt;episode&gt;" --get --fields=pid b03xsfrs</code></div></div><br />
+I've dropped the --subdir as suggested and it's worked except the mp4 retained the temp name.<br />
+<br />
+Cheers, Gents.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-489</h2></div><div class="dateline">13-03-2014, 07:59 PM</div>
+</div>
+<div class="message">I've pasted an extra --get in there by mistake :o</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-03-2014, 08:35 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/command-exit-code-1-on-a-particular-pid/#post-1935">Quote:</a><br />
+Iâve dropped the âsubdir as suggested and itâs worked except the mp4 retained the temp name.</blockquote>
+<br />
+Not sure that is even possible.  What was the final name of the file?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-03-2014, 08:37 PM</div>
+</div>
+<div class="message">get_iplayer is now updated to remove trailing ellipsis.  You'll probably never need to do it again, but if you want to try it out see:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadwin/">https://squarepenguin.co.uk/wiki/install...itheadwin/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-489</h2></div><div class="dateline">14-03-2014, 07:57 PM</div>
+</div>
+<div class="message">The file name was something like <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To... - David Bailey-temp-35446.mp4</code></div></div> the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To... - David Bailey.mp4</code></div></div> disappeared instead for some reason. It's never happened before and didn't happen again after retrying on <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div><br />
+Cheers, again. I should be able to wget that direct on my router.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-03-2014, 10:01 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/command-exit-code-1-on-a-particular-pid/#post-1942">Quote:</a>The file name was something like <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To... - David Bailey-temp-35446.mp4</code></div></div> the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Mark Lawson Talks To... - David Bailey.mp4</code></div></div> disappeared instead for some reason. Itâs never happened before and didnât happen again after retrying on <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div></blockquote>
+<br />
+That indicates the metadata tagging was aborted for some reason.  That happens very rarely, usually only when get_iplayer output directory is on a NAS.  Best to just draw a veil over that.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Command exit code 1 on a particular pid</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

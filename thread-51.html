@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Get iPlayer Info without header lines</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Get iPlayer Info without header lines</div>
+<div id="pagetitle"><h2>Get iPlayer Info without header lines</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-103</h2></div><div class="dateline">01-10-2013, 10:27 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I'm another <span style="font-style: italic;" class="mycode_i">very </span>grateful refugee from Radio Downloader and have been getting on pretty well with get_iPlayer for radio.<br />
+<br />
+I am currently using:<br />
+get_iPlayer version 2.83 under Windows 7 Pro.<br />
+<br />
+I load my programme choices into a DOS .bat file and let get_iPlayer do its thing.<br />
+<br />
+I would like to find a way to limit the header and trailer lines that get written to the program information text file. <br />
+<br />
+I use this command to get the current list of radio programmes:<br />
+get_iplayer --type=radio --listformat="&lt;index&gt;|&lt;type&gt;|&lt;channel&gt;|&lt;categories&gt;|&lt;name&gt;|&lt;desc&gt;" &gt; "C:\Temp\AvailableRadio.txt" <br />
+<br />
+and I'm 95% there. The --listformat switch limits which fields I want and how they should be delimited. However, I cannot find a way of telling the call to get_iPlayer to skip writing the copyright lines at the top:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.</span><br />
+<br />
+and the trailer row:<br />
+<span style="font-style: italic;" class="mycode_i">INFO: 3339 Matching Programmes</span><br />
+<br />
+Is there a switch or switch value that I can add to my command line above to stop the header and trailer being added to my list of programmes ?<br />
+<br />
+Also, is there a switch or switch-value that will cause the first row to be the name of the categories that I have specified in the --listformat switch ?<br />
+<br />
+Many thanks,<br />
+<br />
+DownUnderDave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-10-2013, 01:39 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Is there a switch or switch value that I can add to my command line above to stop the header and trailer being added to my list of programmes ?</blockquote>
+<br />
+You can remove the copyright notice with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--nocopyright</code></div></div>, but there is no way to omit the leading "Matches:"  or trailing "INFO: XXX Matching Programmes".<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Also, is there a switch or switch-value that will cause the first row to be the name of the categories that I have specified in the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>-âlistformat</code></div></div> switch ?</blockquote>
+<br />
+No<br />
+<br />
+You need to look outside get_iplayer to get the format you want.  It looks like you are trying to create a delimited text file with column headers, so first write the header line to your output file, before you run get_iplayer.  Then, filter the output from get_iplayer and append it to the output file.  You can filter the get_iplayer search results through <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>findstr</code></div></div> to remove extraneous lines. You need to include only the lines that begin with one or more digits followed by a pipe symbol, so try something like: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>findstr /b "[0-9][0-9]*|"</code></div></div><br />
+You could probably just pull out any lines that begin with a digit:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>findstr /b "[0-9]"</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-103</h2></div><div class="dateline">05-10-2013, 08:27 AM</div>
+</div>
+<div class="message">Hi user-2,<br />
+<br />
+Thanks for the rapid response, piping the delimited file through findstr should get me most of the way.<br />
+<br />
+Cheers,<br />
+<br />
+Dave</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Get iPlayer Info without header lines</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿NEW
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashaacstd1,flashaacstd2 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Graham Norton - Rumer, Ronan Kea
+ting and David Zippel
+
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file
+INFO: File name prefix = Graham_Norton_-_Rumer_Ronan_Keating_and_David_Zippel_b0
+4tcgn1_default
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Starting download at: 0.000 kB
+INFO: Metadata:
+INFO:   duration              10816.00
+INFO:   moovPosition          72.00
+INFO:   audiocodecid          mp4a
+INFO:   aacaot                2.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                519168000.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+177417.060 kB / 10815.98 sec (99.9%)
+Download complete
+
+INFO: Downloaded Thumbnail to 'C:\Users\User1\Desktop\iPlayer Recordings\Graham_N
+orton_-_Rumer_Ronan_Keating_and_David_Zippel_b04tcgn1_default.jpg'
+
+C:\Program Files (x86)\get_iplayer>
+
+
+OLD
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashaacstd1 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: The Chris Evans Breakfast Show -
+ 09/12/2014
+
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file
+INFO: File name prefix = The_Chris_Evans_Breakfast_Show_-_09_12_2014_b04sy2lb_de
+fault
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Starting download at: 0.000 kB
+INFO: Metadata:
+INFO:   duration              11100.04
+INFO:   moovPosition          36.00
+INFO:   audiocodecid          mp4a
+INFO:   aacaot                2.00
+INFO:   audiosamplerate       44100.00
+INFO:   audiochannels         2.00
+INFO: tags:
+INFO:   ┬®alb                 The Chris Evans Breakfast Show
+INFO:   aART                  BBC Radio 2
+INFO:   ┬®ART                 BBC Radio 2
+INFO:   ┬®cmt                 Chris Evans presents a fully interactive show for
+all the family.
+INFO:   cprt                  British Broadcasting Corporation ┬® 2014, all righ
+ts reserved.
+INFO:   ┬®gen                 Podcast
+INFO:   ┬®nam                 The Chris Evans Breakfast Show 09 12 2014
+INFO:   ┬®day                 2014
+INFO: trackinfo:
+INFO:   length                489511936.00
+INFO:   timescale             44100.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+181375.021 kB / 11100.02 sec (99.9%)
+Download complete
+
+INFO: Downloaded Thumbnail to 'C:\Users\User1\Desktop\iPlayer Recordings\The_Chri
+s_Evans_Breakfast_Show_-_09_12_2014_b04sy2lb_default.jpg'

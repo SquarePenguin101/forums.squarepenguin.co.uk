@@ -1,0 +1,64 @@
+import urllib
+import json
+
+
+
+class bbc:
+  def __init__(self):
+    self.index=0
+
+  def newline(self,id,title,channel,episode='',seriesnum='',episodenum=''):
+    self.index=self.index+1
+    try:
+      srs=str(int(seriesnum.split()[-1]))
+    except:
+      srs=''  
+    #index|type|name|pid|available|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web
+    line = '%d|%s|%s|%s|available|%s|%s|%s|versions|duration|desc|%s|categories|thumbnail|timeadded|guidance|web' % (self.index,self.service,title,id,episode,srs,episodenum,channel)
+    print line.encode('utf-8')
+    
+  def child_episodes(self,master,child):
+    #print "================== master ==============="
+    #for kk in master.keys():
+    #  try:
+    #    print kk,'->',master[kk]
+    #  except:
+    #    print kk, '(???)'  
+    #print "------------ child ----------"  
+    channel=''
+    if master.has_key('masterbrand_title'):
+      channel=master['masterbrand_title']
+    for episode in child:
+      #for kk in episode.keys():
+      #  try:
+      #    print kk,'->',episode[kk].encode('utf-8')
+      #  except:
+      #    print kk, '(???)'  
+      if channel=='' and episode.has_key('masterbrand_title'):
+        channel=episode['masterbrand_title']
+      self.newline(episode['id'],master['title'],channel,episode['title'],episode['series_title'],episode['position'])
+  
+  def scan_service(self,service,brand,letter):
+     self.service=service
+     url='http://www.bbc.co.uk/iplayer/ion/atoz/format/json/service_type/%s/masterbrand/%s/letter/%s/' % (service,brand,letter)
+     r=json.load(urllib.urlopen(url))
+     for programme in r['blocklist']:
+        oldindex=self.index
+        if programme.has_key('child_episodes'):
+          self.child_episodes(programme,programme['child_episodes'])
+        if programme.has_key('series'):
+          for series in programme['series']:
+            if series.has_key('child_episodes'):
+              self.child_episodes(programme,series['child_episodes'])
+        if oldindex==self.index:   
+          self.newline(programme['id'],programme['title'],programme['masterbrand_title'])
+
+    
+  def scan(self):
+    for brand in ('bbc_one','bbc_two','bbc_three','bbc_four'):
+      for letter in 'abcdefghijklmnopqrstuvwxyz':
+        self.scan_service('tv',brand,letter)
+      
+
+b=bbc()
+b.scan()

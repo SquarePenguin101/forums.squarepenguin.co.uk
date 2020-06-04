@@ -1,0 +1,14 @@
+cpanm (App::cpanminus) 1.7043 on perl 5.018002 built for darwin-thread-multi-2level
+Work directory is /Users/charliebuckland/.cpanm/work/1493637227.16309
+You have make /usr/bin/make
+You have LWP 6.05
+You have /usr/bin/tar: bsdtar 2.8.3 - libarchive 2.8.3
+You have /usr/bin/unzip
+Searching Mojolicous () on cpanmetadb ...
+! Finding Mojolicous on cpanmetadb failed.
+Searching Mojolicous () on metacpan ...
+! Could not find a release matching Mojolicous () on MetaCPAN.
+Searching Mojolicous on mirror http://www.cpan.org ...
+Downloading index file http://www.cpan.org/modules/02packages.details.txt.gz ...
+! Finding Mojolicous () on mirror http://www.cpan.org failed.
+! Couldn't find module or a distribution Mojolicous

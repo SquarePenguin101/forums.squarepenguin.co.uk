@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR manager/GiP crashes every 24 hrs or so</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR manager/GiP crashes every 24 hrs or so</div>
+<div id="pagetitle"><h2>Web PVR manager/GiP crashes every 24 hrs or so</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-10</h2></div><div class="dateline">06-08-2013, 07:17 AM</div>
+</div>
+<div class="message">I have the Web PVR Manager running under Win 7 64 bit, recording radio programmes to a NAS box.  Everything seems fine for about 24 hours or so, after which the browser windows report "Cannot connect to 127.0.0.1:1935" and the command line window, after many apparently successful "INFO: Refreshing" lines, reports:-<br />
+<br />
+"Cannot fork at get_iplayer.cgi line 307".<br />
+<br />
+At that point, I have to restart GiP altogether.  Everything runs fine for 24 hours or so, after which and so on.<br />
+<br />
+Any assistance gratefully received.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2013, 04:47 PM</div>
+</div>
+<div class="message">'Cannot fork' points to some kind of resource limitation: too many processes for system or user, memory or swap space exhausted, etc. It may have nothing to do with get_iplayer - 'cannot fork' may just be a symptom of a problem caused by some other application or service.  Consider any upgrades or changes you've made recently.  Recording directly to a NAS will be a bit more resource intensive since each download is pushed over the wire four times during re-muxing and tagging (that's several GB per hour of HD video), but I've no idea if that would make a difference in your case.  Whatever the cause, it is unique to your system.  My only suggestion is to run Task Mananger or Resource Monitor to see if your system is encountering resource limitations of some kind or some application is hogging memory, etc.  The get_iplayer processes will appear as 'perl.exe'.<br />
+<br />
+If you are running the Web PVR around the clock just to run PVR jobs, you might consider using Task Scheduler instead.  Some slightly outdated instructions are here:<br />
+<br />
+<a href="http://www.beebotron.org/helper_get_iplayer_help.php">http://www.beebotron.org/helper_get_iplayer_help.php</a><br />
+<br />
+Use the Vista instructions and note that you will already have this file:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&#92;get_iplayer--pvr.bat</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-10</h2></div><div class="dateline">08-08-2013, 07:27 AM</div>
+</div>
+<div class="message">Thanks very much for your reply.  There's no reason for - nor sign of - any resource limitation that I can see, yet the behaviour persists.<br />
+<br />
+I will try using Task Scheduler instead as you suggest.  But if I do this, does the cache still get refreshed automatically?<br />
+<br />
+Many thanks for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2013, 12:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/web-pvr-managergip-crashes-every-24-hrs-or-so/#post-1126">Quote:</a>I will try using Task Scheduler instead as you suggest.  But if I do this, does the cache still get refreshed automatically?</blockquote>
+<br />
+Yes</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-53</h2></div><div class="dateline">26-08-2013, 11:48 PM</div>
+</div>
+<div class="message">I can confirm this behaviour.<br />
+<br />
+Seems to happen when doing something on the web ui.<br />
+<br />
+The console will simply exit with the reported line 307.<br />
+<br />
+Except there is no code at line 307.<br />
+<br />
+I have had this issue on win 7 64 bit with 16G ram and on a win XP.<br />
+<br />
+I was searching, applying settings and saving searches at the time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-08-2013, 07:53 PM</div>
+</div>
+<div class="message">I can assure you that there is code at line 307.  You wouldn't have received that error message otherwise.  <br />
+<br />
+I never could duplicate this problem, so I've nothing more to add.  The fork() system call is emulated by Perl for Windows, so the Web PVR is really a single process, which is why my best guess is that some sort of resource limitation might be the culprit, but that is conjecture.  Until someone who knows what to look for encounters this problem, there's nothing to be done except restart your web pvr every day and/or use task scheduler for pvr runs.<br />
+<br />
+My only other suggestion is to roll back to an earlier version of Perl and see if it behaves better.  I don't know why it would make any difference, but it's easy enough to test.  You can reinstall get_iplayer with older Perl 5.12 using the previous version of the installer:<br />
+<br />
+<a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_4.5.exe">http://www.infradead.org/get_iplayer_win...up_4.5.exe</a><br />
+<br />
+You only need to reinstall the get_iplayer component.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-66</h2></div><div class="dateline">10-09-2013, 08:25 AM</div>
+</div>
+<div class="message">i encountered the same issue and ended up setting the task scheduler to run the pvr and then terminate it after a couple of hours every day, but it's working fine, so no issues there with that solution. :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-09-2013, 01:51 PM</div>
+</div>
+<div class="message">vibe666: There is no reason to force Task Scheduler to terminate after a fixed period of time.  No get_iplayer-related processes should be running when the pvr jobs are completed.  The Web PVR runs the pvr queue in a different way that is more expensive in terms of system resources.  The Web PVR server forks a copy of itself to handle each action invoked from the browser interface.  On Windows, there is some as-yet-unknown problem that eventually prevents the server from forking after an extended period of time. This problem was hidden until recently because the browser-based pvr queue auto-run had always been broken.  I may regret ever having fixed it :}  You avoid the whole mess by using Task Scheduler.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR manager/GiP crashes every 24 hrs or so</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

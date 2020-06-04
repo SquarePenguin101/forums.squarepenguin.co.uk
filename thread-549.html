@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - HD options missing for available programme</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; HD options missing for available programme</div>
+<div id="pagetitle"><h2>HD options missing for available programme</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-10-2015, 01:15 PM</div>
+</div>
+<div class="message">Hi,<br />
+I've just found this on iPlayer which is available and plays in HD but has no HD options available in get_iplayer.<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b00tr9ps/show-me-show-me-series-2-cutdowns-1-flying-and-monkeys">http://www.bbc.co.uk/iplayer/episode/b00...nd-monkeys</a><br />
+<br />
+--info shows:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>modes:          default: flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,fla<br />
+shstd2,flashvhigh1,flashvhigh2,hlshigh1,hlshigh2,hlshigh3,hlshigh4,hlslow1,hlslo<br />
+w2,hlslow3,hlslow4,hlsstd1,hlsstd2,hlsstd3,hlsstd4,hlsvhigh1,hlsvhigh2,hlsvhigh3<br />
+,hlsvhigh4,subtitles1<br />
+modes:          original: flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,fl<br />
+ashstd2,flashvhigh1,flashvhigh2,hlshigh1,hlshigh2,hlshigh3,hlshigh4,hlslow1,hlsl<br />
+ow2,hlslow3,hlslow4,hlsstd1,hlsstd2,hlsstd3,hlsstd4,hlsvhigh1,hlsvhigh2,hlsvhigh<br />
+3,hlsvhigh4,subtitles1</code></div>
+</div>
+<br />
+<br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-10-2015, 02:05 PM</div>
+</div>
+<div class="message">Did you watch it? It might say 'Watch in HD' but when that's selected it certainly isn't HD when you play it. Not for me at least. <br />
+<br />
+Seems like a simple categorisation mistake.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-10-2015, 02:47 PM</div>
+</div>
+<div class="message">Things have changed on the BBC side with the advent of their Video Factory initiative.  HLS HD streams will return in get_iplayer 2.95.  It is already implemented in the development version. There is no HD RTMP stream in this case - the web site is using HDS.<br />
+<br />
+Q: When is HD not HD?  A: When the BBC says "Watch in HD".  On the web site that now gets you 960x540 2800kbps 50fps video. The BBC are calling this HD and asserting that it's equivalent to the older 720p streams because of the higher frame rate. get_iplayer will have to adopt the BBC newspeak to track with the iPlayer site, but it's going to be confusing because: a) the notion of any video &lt;720p being called HD will seem a bit alien; b) the older 720p 25fps streams are still around for the moment. OTOH, In terms of bandwidth the old and new HD streams are roughly equivalent, which is the more important metric for get_iplayer. Plus, the new 720p streams are also 50fps, which makes for ridiculously big downloads - get ready for "vhd" mode.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-10-2015, 02:56 PM</div>
+</div>
+<div class="message">Thanks Dinky.<br />
+<br />
+There are still hlshd1 and flashhd1 streams being processed for most programmes. Watchdog (b06h7jlg) from last night is one example.<br />
+<br />
+But why are flashhd and hlshd not available in this instance? Is it just a processing glitch for this one programme? Other programmes still seem to be processing into all modes as far as I can see so far.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-10-2015, 03:04 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-10-2015, 02:56 PM)</span></cite>But why are flashhd and hlshd not available in this instance? Is it just a processing glitch for this one programme? Other programmes still seem to be processing into all modes as far as I can see so far.</blockquote>In 2.94 the RTMP stream data is used to find the HLS HD streams.  No RTMP HD, no HLS HD. That has changed with the advent of Video Factory streams.  As for why there is no RTMP HD stream, who knows?  They haven't used it on the web site for some time, so maybe they just didn't bother producing RTMP HD for this programme. The CBeebies crowd aren't going to be worried about the extra pixels. Stream data for kiddie progs can be squirrelly sometimes as well, for reasons unknown.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; HD options missing for available programme</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No specified modes error message</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; No specified modes error message</div>
+<div id="pagetitle"><h2>No specified modes error message</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-870</h2></div><div class="dateline">27-02-2015, 08:10 PM</div>
+</div>
+<div class="message">I have been using get_iplayer on a Windows 8 machine for a year or so with no real issues.<br />
+Tonight 27/2/2015 - it wasn't able to download a number of radio programmes reporting them all thus:<br />
+<br />
+10671:	Book of the Week - Tim Jeal - Explorers of the Nile: Episode 5, BBC Radio 4 Extra, <br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=)<br />
+INFO: You may receive this message if you are using get_iplayer outside the UK<br />
+ERROR: Failed to record 'Book of the Week - Tim Jeal - Explorers of the Nile: Episode 5 (b0156mt3)'<br />
+<br />
+I tried to download with this CLI <br />
+get_iplayer --force --type radio --get --pid b0156mt3<br />
+And get similar error messages.<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=)<br />
+INFO: You may receive this message if you are using get_iplayer outside the UK<br />
+<br />
+I tried using --modes=wma <br />
+I am in the Uk using a btbroadband service.<br />
+<br />
+Have the BBC yet again changed something that prevents get_iplayer downloads?<br />
+Philip</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">27-02-2015, 08:54 PM</div>
+</div>
+<div class="message">Downloads fine for me. Are you using version 2.91 of get_iplayer?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-870</h2></div><div class="dateline">28-02-2015, 09:26 AM</div>
+</div>
+<div class="message">Ah... Thought I was - Looks like its v2.90.<br />
+I'll upgrade to v2.91 and report back.<br />
+Philip</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-870</h2></div><div class="dateline">28-02-2015, 04:53 PM</div>
+</div>
+<div class="message">I've upgraded to V2.91 and its all back to normal. <br />
+Also used --helplong to find out that --tag-ID3sync exists to fix the thumbnail display in Windows.<br />
+Also had to change the <br />
+--file-prefix &lt;nameshort&gt;-episode&gt;-&lt;senum&gt;<br />
+ to <br />
+--file-prefix &lt;name&gt;-&lt;episode&gt;-&lt;senum&gt;<br />
+To get back to my usual file naming.<br />
+<br />
+For Windows users you have to update the<br />
+C:\ProgramData\get_iplayer\options <br />
+file by adding the following lines (slightly different syntax to that used in the CLI interface:-<br />
+<br />
+file-prefix &lt;name&gt;-&lt;episode&gt;-&lt;senum&gt;<br />
+tag &lt;id3sync&gt;<br />
+<br />
+Many thanks - next time I must not be lazy and will always get the latest version!<br />
+Philip</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-02-2015, 05:55 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/no-specified-modes-error-message/#post-11274">Quote:</a><br />
+For Windows users you have to update the<br />
+C:\ProgramData\get_iplayer\options</blockquote>
+<br />
+I recommend that you not maintain options in that file.  That is the system options file, applied for every user.  It is managed by the installer, and may be removed during uninstall. Most people probably don't have multi-user systems, but it is still better to set any custom options in the user options file (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%USERPROFILE%&#92;.get_iplayer&#92;options</code></div></div>).  Use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-del</code></div></div> to manage preferences.  See the Examples page in wiki.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>tag &lt;id3sync&gt;</blockquote>
+<br />
+That will be ignored. The correct form is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>tag_id3sync 1</code></div></div>.  Again, use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add</code></div></div> and get_iplayer will write the proper format.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-02-2015, 06:02 PM</div>
+</div>
+<div class="message">Error in last post (now corrected): user options file is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%USERPROFILE%&#92;.get_iplayer&#92;options</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-870</h2></div><div class="dateline">28-02-2015, 07:19 PM</div>
+</div>
+<div class="message">Thanks for the update.<br />
+Because I have never used the --prefs-add command a 'user' profile was never been created. I originally looked for an options file and just found the programme one.<br />
+I can also better understand the syntax in the profile file to that used for the CLI.<br />
+<br />
+The W8 machine I use is headless - no keyboard or screen. I access via Remote Desktop Connection.<br />
+It also switches itself on at 5pm and off at 11pm or I can boot via WakeMeOnLan or an iPhone app. My smart TV can then see see all the radio and video folders &amp; files so I can play the material on the TV. It's an old Dell 520 and has been very stable under W8 once the original video card (now not needed) was replaced.<br />
+<br />
+Years ago I did some unix CLI training for Netware 2.15 so a lot of catching up to do... <br />
+Phikip</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; No specified modes error message</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

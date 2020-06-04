@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I search for only episodes of &quot;School&quot;?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I search for only episodes of &quot;School&quot;?</div>
+<div id="pagetitle"><h2>How do I search for only episodes of &quot;School&quot;?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">07-11-2018, 11:28 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Trying to use the PVR features to download 'School'. However, if I apply a PVR search for this, it's also downloading 'School of Roars', 'Our School' etc.<br />
+<br />
+Is there a way to require the PVR search to exactly match the program title?<br />
+<br />
+Is there a list of directives that for pvr search files somewhere?<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">07-11-2018, 11:56 AM</div>
+</div>
+<div class="message">Ah, think I've found it. Didn't realise you could use regular expressions in a search.<br />
+<br />
+Used "^School:" as the search criteria, seems to do the job.<br />
+<br />
+Any better way?<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">07-11-2018, 11:57 AM</div>
+</div>
+<div class="message">I had the same problem. "^School:" does the job!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-11-2018, 12:26 PM</div>
+</div>
+<div class="message">I believe you can do exact matching with an additional anchor <kbd>&#36;</kbd> at the end of the string. <br />
+<br />
+So something like <kbd>^School&#36;</kbd> would exactly match just that word 'School' only, nothing with a longer title or if school was just part of the title.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">07-11-2018, 12:51 PM</div>
+</div>
+<div class="message">If you tried that option (as I did) you would see that it doesn't work, as the title is "School: Series 1". Best to check before offering advice. The &#36; closes off the search.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-11-2018, 03:15 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>If you tried that option (as I did) you would see that it doesn't work, as the title is "School: Series 1". Best to check before offering advice. The &#36; closes off the search. </blockquote>
+<br />
+You don't say?<br />
+<br />
+The fact is matches just 'School' is literally my point. <br />
+<br />
+I'm not suggesting to use that particular search term to find any particular programme, I'm using it as an example to show how to use a two anchors to match an exact string.<br />
+<br />
+My final sentence couldn't be clearer:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>So something like ^School&#36; would exactly match just that word 'School' only, nothing with a longer title or if school was just part of the title. </blockquote>
+<br />
+It quite obviously states it won't match if 'school' is just part of a longer title. I should hope it doesn't take a giant leap of imagination to see how this could be useful? Perhaps by matching against the entire programme title you are after - thereby only returning exact matches for that exact title and not futzing around with sub-string matches? <br />
+<br />
+Best to read what's being said properly before getting snarky.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I search for only episodes of &quot;School&quot;?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

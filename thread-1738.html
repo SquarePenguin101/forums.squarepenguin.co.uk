@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot find programmes from week of 19 March 2018 (Answer: rebuild cache)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot find programmes from week of 19 March 2018 (Answer: rebuild cache)</div>
+<div id="pagetitle"><h2>Cannot find programmes from week of 19 March 2018 (Answer: rebuild cache)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2117</h2></div><div class="dateline">30-03-2018, 01:18 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I have been trying to download various programmes from between 21-25 but not all. I can find The Hitchicker's guide to the galaxy but not home front or Tommies. Tried used the pid and refreshing the cache. Using 3.13.0 and the web interface on windows 10. Any idea what is going wrong or a way around it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-03-2018, 01:38 PM</div>
+</div>
+<div class="message">As you are clearly told in the release notes for 3.13 and in the documentation, the solution is to rebuild your cache. That is always the solution whenever recent programmes haven't been indexed and cached. Available programmes can always be downloaded with <kbd>--pid</kbd> or <kbd>--url</kbd> or via Quick URL in web pvr. You NEVER need to find programmes in search results in order to download.<br />
+<br />
+This thread is closed. All me-too posts and duplicates will be deleted or dumped here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2117</h2></div><div class="dateline">30-03-2018, 02:17 PM</div>
+</div>
+<div class="message">Could this be added to the FAQ? couldn't find out how to rebuild the cache for radio when searching the site. It might be obvious for people who undersands the get_iplayer interface but not to us who uses the web interface?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-03-2018, 06:50 PM</div>
+</div>
+<div class="message">For everyone else: A quick search for "rebuild cache" on this site or the documentation wiki will quickly lead you to the information you need. Or just put "get_iplayer" in front and ask Google. It was already in the FAQ list, but now it's there twice. And no, you can't do it in the web pvr, and you never will, as is true for a number of get_iplayer functions. If you are not willing to type commands at a prompt, you will have to live with those limitations.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2130</h2></div><div class="dateline">09-04-2018, 02:13 PM</div>
+</div>
+<div class="message">Just updated get_iplayer and run the web pvr, refreshed the cache and it wont show me anything other than what I got 19 days ago when I last used it? I've tried running just get_iplayer from command and forced a refresh and still nothing?<br />
+Any help would be greatly appreciated!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2131</h2></div><div class="dateline">09-04-2018, 09:18 PM</div>
+</div>
+<div class="message">I had the same issue. The command has changed since I used it last.<br />
+<br />
+Now it requires a search term:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer .*</code></div></div>lists all available programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2130</h2></div><div class="dateline">10-04-2018, 12:52 PM</div>
+</div>
+<div class="message">So uninstalled, cleared out the get_iplayer folder and then reinstalled, also checked firewall which seemed to have started blocking cmd.exe, added an exception and then ran this command<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer --cache-rebuild --type=tv</code></div>
+</div>
+<br />
+And we're back in business!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot find programmes from week of 19 March 2018 (Answer: rebuild cache)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

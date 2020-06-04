@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Episode title must be included in --file-prefix in order to appear in output filename</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Episode title must be included in --file-prefix in order to appear in output filename</div>
+<div id="pagetitle"><h2>Episode title must be included in --file-prefix in order to appear in output filename</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1239</h2></div><div class="dateline">18-10-2018, 02:38 PM</div>
+</div>
+<div class="message">Can someone point me in the right direction here. I am trying to get a generic (as possible) method to give me series and film names.<br />
+Currently I use the following which does most of the job:<br />
+<br />
+--fileprefix="&lt;nameshort&gt;&lt;.senum&gt;"<br />
+<br />
+But it falls down for certain programs two of which come to mind:<br />
+<br />
+Storyville - will just give me Storyville instead of say Storyville _City of Ghosts<br />
+and recently I find another<br />
+<br />
+Department Q - just ends up with Deparment Q and not the episode title and as there are 3 I tried to download the other day there was a filename conflict so the second and third failed.<br />
+<br />
+So is there an answer to getting these to come up whilst keeping my usual &lt;nameshort&gt;and conditional senum format?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-10-2018, 03:59 PM</div>
+</div>
+<div class="message">Not to belabour the obvious, but if you want to see the episode title in the output file name, you have to specify it in <kbd>--file-prefix</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1239</h2></div><div class="dateline">18-10-2018, 06:38 PM</div>
+</div>
+<div class="message">ok so I didn't realise for instance what would be regarded as the episode part for something like Storyville.<br />
+<br />
+ie. is Storyville the "shortname" and the title / subject the "episode"<br />
+<br />
+I also tried :<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fileprefix="&lt;name&gt;&lt;.senum&gt;"</code></div></div><br />
+hoping that &lt;name&gt; would be the whole thing but this didn't work.<br />
+<br />
+So are you saying I should do this?<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fileprefix="&lt;nameshort&gt;&lt;.senum&gt;&lt;.episodeshort&gt;"</code></div></div> or<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fileprefix="&lt;nameshort&gt;&lt;.senum&gt;&lt;.episode&gt;</code></div></div><br />
+Would that work?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-10-2018, 07:27 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-10-2018, 06:38 PM)</span></cite>ok so I didn't realise for instance what would be regarded as the episode part for something like Storyville.</blockquote>That's what <kbd>--info</kbd> is for.<br />
+<blockquote class="mycode_quote"><cite><span> (18-10-2018, 06:38 PM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fileprefix="&lt;nameshort&gt;&lt;.senum&gt;&lt;.episodeshort&gt;"</code></div></div></blockquote>This. However, there are some cases where it won't produce unique names, e.g., programmes like Shipping Forecast or news bulletins that broadcast multiple episodes in a single day. If you want to guarantee unique file names, stick with the default.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1239</h2></div><div class="dateline">19-10-2018, 11:33 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-10-2018, 07:27 PM)</span>user-2 Wrote: <a href="https://forums.squarepenguin.co.uk/post-8241.html#pid8241">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (18-10-2018, 06:38 PM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fileprefix="&lt;nameshort&gt;&lt;.senum&gt;&lt;.episodeshort&gt;"</code></div></div></blockquote>This. However, there are some cases where it won't produce unique names, e.g., programmes like Shipping Forecast or news bulletins that broadcast multiple episodes in a single day. If you want to guarantee unique file names, stick with the default.</blockquote>Ok no that's fine I just want to catch the film / episode variations. I can live with the rest.<br />
+Thank you for your help.<br />
+<br />
+<br />
+Louis</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Episode title must be included in --file-prefix in order to appear in output filename</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

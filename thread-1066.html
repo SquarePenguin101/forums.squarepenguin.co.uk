@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - boost audio for radio and podcasts only</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; boost audio for radio and podcasts only</div>
+<div id="pagetitle"><h2>boost audio for radio and podcasts only</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">02-10-2016, 02:49 PM</div>
+</div>
+<div class="message">Can someone (Dinky) remind me how I boost the audio of radio and podcasts only by say 2x without post processing my files?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">04-10-2016, 12:56 PM</div>
+</div>
+<div class="message">Do you mean increase the volume?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">05-10-2016, 12:20 AM</div>
+</div>
+<div class="message">Yes, increase the volume.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-10-2016, 03:40 PM</div>
+</div>
+<div class="message">You can't avoid post-processing - the files must be re-encoded.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">15-10-2016, 05:13 PM</div>
+</div>
+<div class="message">Use ReplayGain to add tags to the files that if your media player supports it will play at that volume. Foobar2000 is the best audio player that will do this for you/ You can set the default -db level to whatever you like. You can also permanently add this volume change to the files (mp3gain &amp; aacgain etc) using Foobar2000.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">20-10-2016, 11:55 PM</div>
+</div>
+<div class="message">What I've done is use ffmpeg , I was wondering how to automatically call it after iplayer has run without hacking the perl.<br />
+<br />
+:: call ffmpeg to transcode all mp3 files  recursively  and save in mp3 directory<br />
+:: assumes ffmpeg is in path<br />
+<br />
+set outdir=00louder-mp3<br />
+set volume=3<br />
+:: setting volume above 3 may  distort<br />
+if not exist %outdir% md %outdir%<br />
+::md %outdir%<br />
+::pause<br />
+set quality=5<br />
+for /r %%f IN ("*.mp3") DO ffmpeg -i "%%f" -acodec libmp3lame -q:a %quality% -af "volume=%volume%" "%outdir%\%%~nf-louder%volume%x.mp3"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-10-2016, 11:23 AM</div>
+</div>
+<div class="message">That sounds familiar -<br />
+<br />
+<a href="/thread-970.html">/thread-970.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">03-11-2016, 12:26 AM</div>
+</div>
+<div class="message">Doh! My short term memory is shot;) , Although this is slightly different, it is recursive. <br />
+<br />
+Dinky<br />
+Can you give me a --command example. I can't get it to work. <br />
+<br />
+I tried<br />
+<br />
+get_iplayer  --type=radio --force --pid=b07z3cw2 --output="D:\Media\getip\000test" --command="ffmpeg -i \""&lt;filename&gt;"\"  -acodec libmp3lame -qa:5 -af "volume=3"  \""&lt;dir&gt;/&lt;fileprefix&gt;.mp3"\""  <br />
+<br />
+it ignored the volume=3 setting to ffmpeg?<br />
+<br />
+probably obvious.<br />
+<br />
+Whereas if I run ffmpeg from the command line, it works fine. <br />
+ffmpeg -i &lt;infile&gt; -acodec libmp3lame -q:a5 -af "volume=3 " -o infile-%~nf</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-11-2016, 01:37 AM</div>
+</div>
+<div class="message">Construct your commands more carefully.  The audio quality option format is invalid in both. You also haven't escaped the quotes around the audio filter option value. You can get away with that in this case, but more complex filtergraphs may need the surrounding quotes preserved.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; boost audio for radio and podcasts only</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

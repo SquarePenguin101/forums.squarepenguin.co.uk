@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I match full programme names with regex?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I match full programme names with regex?</div>
+<div id="pagetitle"><h2>How do I match full programme names with regex?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2167</h2></div><div class="dateline">19-05-2018, 05:41 AM</div>
+</div>
+<div class="message">Unless I'm misunderstanding something, I think there might be a problem with the regex searching in programme names.<br />
+<br />
+Here's the last few results from a query for some snooker:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer "^Snooker:&#92;sWorld&#92;sChampionship:&#92;s2018" | tail<br />
+6258: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Morning Session, BBC Two, b0b2q9dd<br />
+6259: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session Part 2, BBC Two, b0b2q9dg<br />
+6260: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Evening Session, BBC Two, b0b2q9dj<br />
+6261: Snooker: World Championship: 2018 - Day 16 Final, Afternoon Session, BBC Two, b0b2qggy<br />
+6262: Snooker: World Championship: 2018 - Day 16 Final, Evening Session, BBC Two, b0b2qgh0<br />
+6263: Snooker: World Championship: 2018 - Day 17 Final, Afternoon Session, BBC Two, b0b2qmf2<br />
+6264: Snooker: World Championship: 2018 - Day 17 Final, Evening Session, BBC Two, b0b2qmf4<br />
+6265: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session, BBC One, b0b2wxnf<br />
+6266: Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC One, b0b3vj4d<br />
+INFO: 44 matching programmes</code></div></div><br />
+Looks great. Except... that's as far as the regex will go, adding just one more whitespace to the end causes it to fail when based on perl regex, it should not.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer "^Snooker:&#92;sWorld&#92;sChampionship:&#92;s2018&#92;s"<br />
+get_iplayer 3.14.0-darwin, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: 0 matching programmes</code></div></div><br />
+As will searching for anything beyond that point in the name, e.g. I can't search for "Semi Final".<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer "Semi&#92;sFinal"<br />
+get_iplayer 3.14.0-darwin, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: 0 matching programmes</code></div></div><br />
+It feels like perhaps "Snooker: World Championship: 2018" is the programme name and thus searchable and the rest is something else that is concatenated with it, but I tried showing just the name field and that shows the same information, so it seems like the "Day 15 Semi-Finals, Morning..." stuff is part of the name.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer --fields name "Snooker:&#92;sWorld&#92;sChampionship:&#92;s2018" | tail<br />
+6258: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Morning Session, BBC Two, b0b2q9dd<br />
+6259: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session Part 2, BBC Two, b0b2q9dg<br />
+6260: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Evening Session, BBC Two, b0b2q9dj<br />
+6261: Snooker: World Championship: 2018 - Day 16 Final, Afternoon Session, BBC Two, b0b2qggy<br />
+6262: Snooker: World Championship: 2018 - Day 16 Final, Evening Session, BBC Two, b0b2qgh0<br />
+6263: Snooker: World Championship: 2018 - Day 17 Final, Afternoon Session, BBC Two, b0b2qmf2<br />
+6264: Snooker: World Championship: 2018 - Day 17 Final, Evening Session, BBC Two, b0b2qmf4<br />
+6265: Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session, BBC One, b0b2wxnf<br />
+6266: Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC One, b0b3vj4d<br />
+INFO: 44 matching programmes</code></div></div><br />
+So it's confusing that I can't regex on that. Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1815</h2></div><div class="dateline">19-05-2018, 10:57 AM</div>
+</div>
+<div class="message">Looks like they are different fields.<br />
+<br />
+Using the Web Pvr interface I see...<br />
+<br />
+Name : Snooker: World Championship: 2018<br />
+Episode : Day 3, Morning Session<br />
+Description : Masters champion Mark Allen aims to book his place in round two.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-975</h2></div><div class="dateline">19-05-2018, 11:07 AM</div>
+</div>
+<div class="message">For ease, next time you can just use <kbd>--info</kbd>. For example:<br />
+<br />
+<kbd>get_iplayer --info --pid=b0b2q9dd</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2100</h2></div><div class="dateline">19-05-2018, 11:08 AM</div>
+</div>
+<div class="message">tv.cache is made up of fields the  &lt;space&gt;-&lt;space&gt; is between the two fields name and episode.<br />
+<br />
+Searching on fields name and episode, default is to search on the name field<br />
+<br />
+&#36; get_iplayer --field name "Snooker: World Championship: 2018" --field episode "Day 15 Semi-Finals" <br />
+get_iplayer v3.13, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+5951:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Morning Session, BBC Two, b0b2q9dd<br />
+5952:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session Part 2, BBC Two, b0b2q9dg<br />
+5953:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Evening Session, BBC Two, b0b2q9dj<br />
+5958:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session, BBC One, b0b2wxnf<br />
+INFO: 4 matching programmes<br />
+<br />
+There is no character after the 2018 apart from end of string 2018\s finds nothing, 2018&#36; for name field or ^Day 15 work for field episode.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2167</h2></div><div class="dateline">19-05-2018, 01:57 PM</div>
+</div>
+<div class="message">Fantastic. Thanks. My experiment using `--fields name` threw me off.<br />
+<br />
+I combed through the docs again, but I can't find a way to intersect the results instead of union. Is there a way?<br />
+<br />
+For example, say I only wanted the Semi-Final of the snooker.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer --field name snooker --field episode Semi-Final<br />
+get_iplayer 3.14.0-darwin, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+1129:&nbsp;&nbsp;&nbsp;&nbsp;BBC Young Musician: 2018 - Semi-Final, BBC Four, b0b23fm0<br />
+2438:&nbsp;&nbsp;&nbsp;&nbsp;Eurovision Song Contest: 2018 - Semi-Final One, BBC Four, b0b2lz6p<br />
+2439:&nbsp;&nbsp;&nbsp;&nbsp;Eurovision Song Contest: 2018 - Semi-Final Two, BBC Four, b0b2r32h<br />
+3398:&nbsp;&nbsp;&nbsp;&nbsp;Junior Bake Off: Series 4 - The Semi-Final, CBBC, b0844d40<br />
+5119:&nbsp;&nbsp;&nbsp;&nbsp;Only Connect: Series 13 - Semi-Final 1, BBC Four, b0b06sqj<br />
+5120:&nbsp;&nbsp;&nbsp;&nbsp;Only Connect: Series 13 - Semi-Final 2, BBC Four, b0b14wzl<br />
+6239:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 13 Semi-Finals, Afternoon Session, BBC Two, b0b1yx6s<br />
+6240:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 13 Semi-Finals, Evening Session, BBC Two, b0b1yx6v<br />
+6241:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 14 Semi-Finals, Morning Session, BBC Two, b0b1yym2<br />
+6242:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC Two, b0b1yym4<br />
+6243:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session - Part 2, BBC Two, b0b1yym6<br />
+6244:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 14 Semi-Finals, Evening Session, BBC Two, b0b1yym8<br />
+6246:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 15 Semi-Finals, Morning Session, BBC Two, b0b2q9dd<br />
+6247:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session Part 2, BBC Two, b0b2q9dg<br />
+6248:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 15 Semi-Finals, Evening Session, BBC Two, b0b2q9dj<br />
+6253:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session, BBC One, b0b2wxnf<br />
+6254:&nbsp;&nbsp;&nbsp;&nbsp;Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC One, b0b3vj4d<br />
+6312:&nbsp;&nbsp;&nbsp;&nbsp;Songs of Praise - Young Choir of the Year (Junior Semi-Final), BBC One, b0b1zmgm<br />
+6313:&nbsp;&nbsp;&nbsp;&nbsp;Songs of Praise - Young Choir of the Year (Senior Semi-Final), BBC One, b0b2sr0s<br />
+7160:&nbsp;&nbsp;&nbsp;&nbsp;The FA Cup: 2017/18 - Semi-Final: Manchester United v Tottenham Hotspur, BBC One, b0b0h031<br />
+7161:&nbsp;&nbsp;&nbsp;&nbsp;The FA Cup: 2017/18 - Semi-Final Highlights: Manchester United v Tottenham Hotspur, BBC One, b0b0h035<br />
+7162:&nbsp;&nbsp;&nbsp;&nbsp;The FA Cup: 2017/18 - Semi-Final Highlights: Chelsea v Southampton, BBC One, b0b0h637<br />
+INFO: 22 matching programmes</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1815</h2></div><div class="dateline">19-05-2018, 02:33 PM</div>
+</div>
+<div class="message">Your first post's use of tail, shows that you know about piping.<br />
+<br />
+How about filtering on one using get_iplayer then pipe the results through grep to filter on the other?<br />
+<br />
+Would that help?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2167</h2></div><div class="dateline">19-05-2018, 03:30 PM</div>
+</div>
+<div class="message">Yes, that is actually what I am doing. I do the basic search in get_iplayer, refine with grep, then extract the pids and get those. It's just a bit of hassle when get_iplayer does very nearly everything I want without having to use additional scripting. <br />
+<br />
+Thanks anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2100</h2></div><div class="dateline">19-05-2018, 04:03 PM</div>
+</div>
+<div class="message">--field when there is a list then fields are separated by a space so try<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer --field name,episode "Snooker.*&#92;sSemi-Final"</code></div></div>             <br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+get_iplayer v3.13, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+5905:   Snooker: World Championship: 2018 - Day 13 Semi-Finals, Afternoon Session, BBC Two, b0b1yx6s<br />
+5906:   Snooker: World Championship: 2018 - Day 13 Semi-Finals, Evening Session, BBC Two, b0b1yx6v<br />
+5907:   Snooker: World Championship: 2018 - Day 14 Semi-Finals, Morning Session, BBC Two, b0b1yym2<br />
+5908:   Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC Two, b0b1yym4<br />
+5909:   Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session - Part 2, BBC Two, b0b1yym6<br />
+5910:   Snooker: World Championship: 2018 - Day 14 Semi-Finals, Evening Session, BBC Two, b0b1yym8<br />
+5912:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Morning Session, BBC Two, b0b2q9dd<br />
+5913:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session Part 2, BBC Two, b0b2q9dg<br />
+5914:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Evening Session, BBC Two, b0b2q9dj<br />
+5919:   Snooker: World Championship: 2018 - Day 15 Semi-Finals, Afternoon Session, BBC One, b0b2wxnf<br />
+5920:   Snooker: World Championship: 2018 - Day 14 Semi-Finals, Afternoon Session, BBC One, b0b3vj4d<br />
+INFO: 11 matching programmes<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">19-05-2018, 06:38 PM</div>
+</div>
+<div class="message">You need to double up the backslashes. The shell is interpreting them first. So "Semi\sFinal" on the command line is passed to perl as SemisFinal. With doubling "Semi\\sFinal" is passed in as Semi\sFinal</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-05-2018, 08:10 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-05-2018, 06:38 PM)</span></cite>You need to double up the backslashes</blockquote>No, you don't. If that were true, the output above could not have been generated. If you think that is happening to you, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system. Identify your OS and shell.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2167</h2></div><div class="dateline">20-05-2018, 03:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-05-2018, 04:03 PM)</span></cite>--field when there is a list then fields are separated by a space so try<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer --field name,episode "Snooker.*&#92;sSemi-Final"  </code></div></div></blockquote><br />
+Thank you very much, this is exactly what I needed!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I match full programme names with regex?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+--- /usr/local/get_iplayer/get_iplayer	2015-06-15 18:09:27.000000000 -0400
++++ get_iplayer	2015-06-29 22:58:25.000000000 -0400
+@@ -7091,6 +7091,7 @@
+ 	if (!grep { /^#EXTINF:/ } @lines) {
+ 		my (@streams, $last_stream);
+ 		foreach my $line (@lines) {
++			return if ($line =~ /^##/);
+ 			if ($line =~ /^#EXT-X-STREAM-INF:(.*)$/) {
+ 				$last_stream = { parse_m3u_attribs($conn->{href}, $1) };
+ 				push @streams, $last_stream;

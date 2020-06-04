@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot get &quot;worse&quot; quality 640x360 stream for Celebrity Masterchef</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Cannot get &quot;worse&quot; quality 640x360 stream for Celebrity Masterchef</div>
+<div id="pagetitle"><h2>Cannot get &quot;worse&quot; quality 640x360 stream for Celebrity Masterchef</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">07-09-2017, 08:49 AM</div>
+</div>
+<div class="message">I downloaded celebrity masterchef via the run pvr sheduler<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four,CBBC,<br />
+fields name<br />
+modes worse<br />
+output F:&#92;Media&#92;Television&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 ^Celebrity Masterchef<br />
+fileprefix &lt;nameshort&gt; &lt;.episodeshort&gt; &lt;.senum&gt; &lt;.pid&gt; &lt;.channel&gt;</code></div></div><br />
+and despite it being set to worse which according to the documentation should be 640 * 360 resolution it downloads at 512 *288 resolution which would appear to be the "worst" mode<br />
+<br />
+I did try it at the command line<br />
+<br />
+get_iplayer --get "celebrity masterchef" --modes=worse<br />
+and it still came up at 512 * 288<br />
+<br />
+when I used it without the quotes<br />
+get_iplayer --get celebrity masterchef --modes=worse<br />
+<br />
+Celebrity Antiques Road came up at 640*360<br />
+<br />
+<br />
+<br />
+<br />
+if I use modes=good <br />
+then it does come up at 704*396<br />
+<br />
+<br />
+do the bbc sometimes not provide a 640*360 version for some programs?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-09-2017, 10:26 AM</div>
+</div>
+<div class="message">"Worse" equates to these formats: hlsstd,hlsxstd,hvflow,dvflow<br />
+<br />
+If you go and check the resolutions of these modes you'll see 512 * 288 is the size for one of them.<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2017, 10:51 AM</div>
+</div>
+<div class="message">The BBC made some changes and those 640x360 streams are no longer available. It looks like different 640x360 streams may be available, so it will be sorted in the next release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">07-09-2017, 03:28 PM</div>
+</div>
+<div class="message">cheers for that.<br />
+It seems some progs are still 640 and some arent.<br />
+I have a limited connection and the difference between worse and good is about 200Mb an hour. <br />
+<br />
+I have another question on modes<br />
+I had <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>mode good</code></div></div><br />
+in my options file<br />
+but in the pvr schedule file I had it set to <span style="font-weight: bold;" class="mycode_b">worse</span>, but it was still downloading in <span style="font-weight: bold;" class="mycode_b">good</span><br />
+<br />
+does the option file override the pvr file when it comes to the schedule PVR?<br />
+it seems that it does[/b]<br />
+<br />
+I have set the options file  to worse now</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2017, 03:41 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-09-2017, 03:28 PM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>mode good</code></div></div>in my options file</blockquote>That is invalid and will be ignored<br />
+<blockquote class="mycode_quote"><cite><span> (07-09-2017, 03:28 PM)</span></cite>does the option file override the pvr file when it comes to the schedule PVR?</blockquote>No. <a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-09-2017, 09:58 PM</div>
+</div>
+<div class="message">640x360 streams, where they exist, should be available again in v3.03 via <kbd>--modes=worst</kbd>.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Cannot get &quot;worse&quot; quality 640x360 stream for Celebrity Masterchef</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

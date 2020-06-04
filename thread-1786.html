@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Option to remux 50fps to 25fps after download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Option to remux 50fps to 25fps after download</div>
+<div id="pagetitle"><h2>Option to remux 50fps to 25fps after download</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">16-05-2018, 02:15 AM</div>
+</div>
+<div class="message">As the hlshd mode is no longer available for download for most programmes I would like to request an option be included in get_iplayer to remux 50fps files to 25fps. <br />
+Failing that could someone post detailed step by step instructions on how to remux files downloaded using the  --raw option to 25fps and then add the the metatdata.<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2155</h2></div><div class="dateline">16-05-2018, 09:08 AM</div>
+</div>
+<div class="message">Not knowing how you use get_iplayer, I'll outline how I use it and convert to 25fps on Mac.<br />
+<br />
+I don't use the PVR instead I have created some Automator services that are available in Safari and retrieve the URL from the currently displayed webpage as MP4 with embedded subtitles and metadata:<ul class="mycode_list"><li>HD 25 then 50fps TV<br />
+</li>
+<li>HD 25fps then SD 25fps TV<br />
+</li>
+<li>Best radio<br />
+</li>
+<li>Worst radio for podcast<br />
+</li>
+</ul>
+<br />
+The saved files get put into a structure &lt;show&gt;/&lt;season&gt;, but the HD 25/50 gets placed into a subfolder of this called 50fps. I can then quickly tell if the file is 50fps as it will be ~2GB/hour, if it isn't I move it up to the normal location.<br />
+<br />
+For the 50fps files I use HandBrakeCLI and have created a preset in the HandBrake application, based on one that suits me (AppleTV 1080p30 Surround), that takes the original file and forces (from memory, but these are the main changes):<ul class="mycode_list"><li>Constant frame rate of 25fps<br />
+</li>
+<li>Custom cropping of 0/0/0/0<br />
+</li>
+<li>Guestimated the average bitrate as 2340kbps<br />
+</li>
+<li>Audio is pass-thru<br />
+</li>
+<li>Subtitles included<br />
+</li>
+</ul>
+<br />
+Saved this as "BBC HD 25fps CFR" and then this can be used from the command line<br />
+<br />
+HandBrakeCLI --preset-import-gui --preset "BBC HD 25fps CFR" -i &lt;input 50fps file&gt; -o &lt;output 25fps file&gt;<br />
+<br />
+I've created an Automator dropper application that takes files dropped on it and does this and places the 25fps files in the right location. Seems to be working ok at the moment. The average bitrate kbps may need to be tweaked because 50fps bitrate isn't constant across downloaded files.<br />
+<br />
+This could be done without a preset or by using FFmpeg, but needs a deeper knowledge of the many options.<br />
+<br />
+All this does is resolve storage and playback issues, not the bandwidth. The best 25fps SD, for me, is good enough for most programmes and, unless playback of 50fps is problematic, the 50fps HD can be retained for occasional use such as nature documentaries. But then viewing is on an old 42" HD plasma TV and enhanced when I remember to put on my glasses.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Option to remux 50fps to 25fps after download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

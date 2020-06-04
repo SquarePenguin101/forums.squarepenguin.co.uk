@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Modes: hlshd1 versus hvfhd1</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Modes: hlshd1 versus hvfhd1</div>
+<div id="pagetitle"><h2>Modes: hlshd1 versus hvfhd1</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1232</h2></div><div class="dateline">02-04-2016, 09:59 AM</div>
+</div>
+<div class="message">Thank you for reading this.<br />
+<br />
+While downloading this programme, and enabling full debug output:<br />
+b0760h88<br />
+at URL<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b0760h88/sir-peter-maxwell-davies-master-and-maverick">http://www.bbc.co.uk/iplayer/episode/b07...d-maverick</a><br />
+<br />
+I noticed that there were three HD modes, and two classes of bandwidth. These are two of the three mode lines, the third being hvfhd2 with all other parameters identical to hvfhd1<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Found mode hlshd1: (gip_hls_iplayer_2325) hls h264 1280x720 2325kbps stream (CDN: akamai_hls_open/10)</code></div>
+</div>
+...and...<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Found mode hvfhd1: (gip_hvf_iplayer_5380) hls h264 1280x720 5380kbps stream (CDN: mf_limelight_uk_hls/2)</code></div>
+</div>
+The bit-rate of the hvfhd1 is more than twice that of hlshd1.<br />
+<br />
+When I instruct get_iplayer to use --modes=best then hlshd1, at 2325kbps is selected. I need to instruct --modes=hvfhd1 to receive 5380kbps.<br />
+<br />
+Can anyone tell me:<br />
+<ol type="1" class="mycode_list"><li>Is one mode going to give greater picture quality over the other?<br />
+</li>
+<li>If so, can the higher bitrate be chosen as the default stream for --modes=best?<br />
+<br />
+</li>
+</ol>
+yours,<br />
+J</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1232</h2></div><div class="dateline">02-04-2016, 11:04 AM</div>
+</div>
+<div class="message">Quick partial answer: the hvfhd feeds are 50p, whereas hlshd feeds are 25p. So that's the way to record programmes transmitted interlaced on the network.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-04-2016, 02:59 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (02-04-2016, 09:59 AM)</span></cite>Is one mode going to give greater picture quality over the other?</blockquote>As you discovered, the only real difference is frame rate, so for most programmes the doubled bandwidth and storage required for higher frame rate probably would be wasted.<br />
+<blockquote class="mycode_quote"><cite><span> (02-04-2016, 09:59 AM)</span></cite>If so, can the higher bitrate be chosen as the default stream for --modes=best?</blockquote>EDIT: Use<kbd>--tvmode=hvf</kbd> (best quality selected by default)<br />
+<br />
+For other users: this post refers to the development version of get_iplayer, which is completely unsupported and may not work for all users. It also refers to a feature that - like all unreleased features - may be removed at any time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1040</h2></div><div class="dateline">15-03-2017, 04:38 PM</div>
+</div>
+<div class="message">Interesting......<br />
+I still use tvmode=best and radiomode=best.<br />
+<br />
+They would appear to still be valid, or should I use something else???<br />
+<br />
+Martin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-03-2017, 04:40 PM</div>
+</div>
+<div class="message">You don't need to use either one - they are the default settings.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1040</h2></div><div class="dateline">15-03-2017, 04:43 PM</div>
+</div>
+<div class="message">Thanks Dinky, never know that........<br />
+Martin</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Modes: hlshd1 versus hvfhd1</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

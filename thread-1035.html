@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 2.96 - Unable to download olympic videos</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 2.96 - Unable to download olympic videos</div>
+<div id="pagetitle"><h2>2.96 - Unable to download olympic videos</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1397</h2></div><div class="dateline">05-09-2016, 02:17 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Firstly, I am using the 2.96 get_iplayer and windows. <br />
+<br />
+For some reason I'm unable to download any of the Rio Olympic videos on the BBC.<br />
+<br />
+For example I am trying to download the following using the following code which I use for other stuff but does not work for any of the Olympic videos,<br />
+<br />
+get_iplayer "http://www.bbc.co.uk/iplayer/episode/p042zddd/olympic-boxing-finals-sunday-ft-joe-joyce" --raw --modes flashvhigh<br />
+<br />
+Link to other videos, <a href="http://www.bbc.co.uk/iplayer/a-z/o">http://www.bbc.co.uk/iplayer/a-z/o</a><br />
+<br />
+Can someone please help?<br />
+<br />
+Thank you kindly<br />
+<br />
+Ozzy<br />
+<hr class="mycode_hr" />
+PS. I am a complete newb to using this software. Therefore, can you explain in step by step please if there is an answer.<br />
+<br />
+Many thanks<br />
+<br />
+Ozzy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">05-09-2016, 02:28 PM</div>
+</div>
+<div class="message">Seems like it's because you are adding <kbd>--modes flashvhigh</kbd>.<br />
+<br />
+Using <kbd>--info</kbd> to see the available modes the following are available:<br />
+<br />
+<kbd>hvfhd1,hvfhd2,hvfsd1,hvfsd2,hvfvhigh1,hvfvhigh2,hvfhigh1,hvfhigh2,hvfstd1,hvfstd2,hvflow1,hvflow2</kbd><br />
+<br />
+These correspond to the sizes:<br />
+<br />
+<kbd>hvfhd1=5832MB,hvfhd2=5832MB,hvfsd1=3299MB,hvfsd2=3299MB,hvfvhigh1=1907MB,hvfvhigh2=1907MB,hvfhigh1=1036MB,hvfhigh2=1036MB,hvfstd1=597MB,hvfstd2=597MB,hvflow1=369MB,hvflow2=369MB</kbd><br />
+<br />
+If you pick which size of file you want and try again with the correct available mode name you should be successful e.g an alternative way to form the command would be...<br />
+<br />
+<kbd>get_iplayer --get --pid=p042zddd --modes=hvfhigh1</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1397</h2></div><div class="dateline">05-09-2016, 02:53 PM</div>
+</div>
+<div class="message">It works - you're a life saver!!<br />
+<br />
+Thanks very much!! Really appreciate your help!!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">05-09-2016, 03:08 PM</div>
+</div>
+<div class="message">No problem.<br />
+<br />
+For future reference you don't necessarily need to specify the *exact* mode, there are placeholder modes that will download the correct mode up to a certain quality level, which is useful if you are on a metered connection. <br />
+<br />
+For instance you could use <kbd>--modes=best</kbd> to download whatever HD 50fps 5mbps modes are available, or you could use <kbd>--modes=vgood</kbd> to get 960x540 25fps at 1.7mbps. <br />
+<br />
+A full table of the options is available at the link below so you can choose the placeholder for you:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modes#tv">https://github.com/get-iplayer/get_iplay...i/modes#tv</a><br />
+<br />
+The table shows you in the example how to add whatever mode you choose as a preference so you don't have to add it each time (hint: <kbd>--prefs-add</kbd> is the bit in question). <br />
+<br />
+The way this placeholder things works is get_iplayer will download the maximum quality up to the limit you set, but if that's not available it'll try the next best lower quality and so on until something is available. <br />
+<br />
+It's a good way to 'set it and forget it'. I personally use <kbd>--modes=best</kbd> as I'm not on a slow or metered connection and that will pick up the best version available for anything.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1397</h2></div><div class="dateline">05-09-2016, 03:15 PM</div>
+</div>
+<div class="message">Again, many thanks!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 2.96 - Unable to download olympic videos</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - rtmpdump cannot download files larger than 4GB</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; rtmpdump cannot download files larger than 4GB</div>
+<div id="pagetitle"><h2>rtmpdump cannot download files larger than 4GB</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-554</h2></div><div class="dateline">01-08-2014, 03:42 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I've been trying to download a couple of large files via get_iplayer but there's a problem which eventually leads to a "Failed to read RTMP packet header" message causing the download to fail.<br />
+<br />
+The problem seems to be when I try to download iplayer shows that are larger than 2gb in size, I noticed after the kilobyte counter has gone up to just over 2000000kb (or 2gb) a minus symbol is added to the counter and the counter begins to count back down to 0kb and if the percentage of the file download doesn't reach 100% before it reaches 0kb then the "Failed to read RTMP packet header" appears leaving an unfinished .mp4.flv file of the incomplete download that is 3.99gb in size. is get_iplayer unable to download files larger than 4gb?<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-08-2014, 11:05 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/unable-to-download-large-video-files-from-iplayer/#post-6090">Quote:</a>Is get_iplayer unable to download files larger than 4gb?</blockquote>
+<br />
+In theory - yes.  In practice - rarely.  On Windows - almost never. It is a limitation of rtmpdump and the RTMP protocol.  Read this:<br />
+<br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05737.html">http://www.mail-archive.com/get_iplayer@...05737.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-554</h2></div><div class="dateline">01-08-2014, 08:58 PM</div>
+</div>
+<div class="message">Thanks for the response user-2, the hacked version of rtmpdump worked like a charm, downloading files larger than 4gb with no problem, thank you! :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">19-10-2014, 11:43 PM</div>
+</div>
+<div class="message">Hi,<br />
+Is there any problem using this with the new version of get_iplayer as RTMPDump has now been upgraded or do we just swap the files over like before?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-10-2014, 01:16 AM</div>
+</div>
+<div class="message">I haven't checked, but it should be OK to swap as before.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-570</h2></div><div class="dateline">14-11-2014, 05:07 PM</div>
+</div>
+<div class="message">This old chestnut, again.<br />
+<br />
+Is the 4gb limit fixed in v2.90? ... or do we still need to copy the hacked rtmpdump.exe over the installed version?<br />
+Main reason I ask is I see installation locations (Win7) are slightly different to v2.86, and the size of rtmpdump.exe seems to have significantly increased.<br />
+<br />
+Thanks for all the work of all those that have given Get_iPlayer a new lease of life!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2014, 07:16 PM</div>
+</div>
+<div class="message">The location and size of rtmpdump.exe is irrelevant, as is the version of get_iplayer.  Nothing has changed, nor is it ever likely to change.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; rtmpdump cannot download files larger than 4GB</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

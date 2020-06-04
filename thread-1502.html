@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can I have an example of a PVR pid-recursive search</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can I have an example of a PVR pid-recursive search</div>
+<div id="pagetitle"><h2>Can I have an example of a PVR pid-recursive search</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">11-09-2017, 09:20 AM</div>
+</div>
+<div class="message">I would like to create a saved PVR pid-recursive search (after seeing a <a href="/thread-1496-newpost.html">recent topic</a>)<br />
+<br />
+I've tried a number of different sytax, including:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b0909rxg --pid-recursive</code></div></div>and<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fields pid<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+search0 --pid=b093ypxy --pid-recursive</code></div></div><br />
+neither of which seem to work<br />
+<br />
+Could someone give me an example of a search I can save as a file to be used by the PVR?<br />
+<br />
+regards<br />
+<br />
+Roga</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1350</h2></div><div class="dateline">11-09-2017, 10:43 AM</div>
+</div>
+<div class="message">This works for me:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>jason@dino:~&#36; cat .get_iplayer/pvr/MarpleRadio<br />
+pid b03p87br<br />
+pidrecursive 1<br />
+type radio</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>jason@dino:~&#36; get-iplayer --pvrsingle MarpleRadio<br />
+get_iplayer 3.02-1-ge2c5943-ppa30c, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Running PVR Searches:<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+INFO: PVR Run: 'MarpleRadio'<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+INFO: radio series or brand PID detected (b03p87br)<br />
+INFO: BBC Radio 4 Extra - Miss Marple - Available now<br />
+INFO: Page 1 of 1<br />
+INFO:     The Mirror Crack'd From Side to Side (b007jvh5)<br />
+INFO:     The Body in the Library (b007jvht)<br />
+INFO: Trying to download PID: b007jvh5 using type: radio<br />
+INFO: PID found in cache: b007jvh5<br />
+Matches:<br />
+20032:  Miss Marple - The Mirror Crack'd From Side to Side, BBC Radio 4 Extra, b007jvh5, added 1 days 5 hours ago, expires in 28 days 17 hours - Lines from a Tennyson poem give Miss Marple a vital clue to a tragic murder.<br />
+INFO: 1 matching programmes<br />
+INFO: Miss Marple - The Mirror Crack'd From Side to Side (b007jvh5) Already in history (/mnt/3tb_0/jason_home/.get_iplayer/download_history) - use --force to override<br />
+INFO: Trying to download PID: b007jvht using type: radio<br />
+INFO: PID found in cache: b007jvht<br />
+Matches:<br />
+20033:  Miss Marple - The Body in the Library, BBC Radio 4 Extra, b007jvht, added 8 days 5 hours ago, expires in 21 days 17 hours - The spinster sleuth sets out to discover who murdered a mystery blonde.<br />
+INFO: 1 matching programmes<br />
+INFO: Miss Marple - The Body in the Library (b007jvht) Already in history (/mnt/3tb_0/jason_home/.get_iplayer/download_history) - use --force to override</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2017, 10:51 AM</div>
+</div>
+<div class="message">A PVR search with <kbd>--pid-recursive</kbd> is very, very rarely useful. It is really only appropriate for timed-release series not broadcast on linear services (e.g., a few BBC Three series) or programmes anthologised under a different title, like the Comedy of the Week podcast referenced in that other thread ( though for podcasts you should just use a podcast client and not jump through get_iplayer's hoops). Your example is definitely not one of those, so you'll be wasting your time. Just search for "Midnight's Children". <br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (11-09-2017, 09:20 AM)</span></cite>I would like to create a saved PVR pid-recursive search (after seeing a <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b0909rxg --pid-recursive</code></div></div></blockquote>That's a recursive download, but you have omitted the options necessary to save it as a PVR search . See the documentation and guides.<br />
+<blockquote class="mycode_quote"><cite><span> (11-09-2017, 09:20 AM)</span></cite><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0 --pid=b093ypxy --pid-recursive</code></div></div></blockquote>You've entered command options as search terms. Surely you wouldn't expect that to work, particularly since you're trying to perform an operation that shouldn't have search terms. Don't edit configuration files directly until you understand the syntax. Again, see the documentation, or better yet, let the command line do the work for you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">11-09-2017, 11:24 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>but you have omitted the options necessary to save it as a PVR search . See the documentation and guides.</blockquote>
+<br />
+I have tried to read those, and your previous reply regarding a saving a pid as a search, which is kind of why I asked here. I have had another look at <a href="https://github.com/get-iplayer/get_iplayer/wiki/pvr">pvr documentation</a> but I couldn't see a clear example.<br />
+<br />
+After a bit of messing about I found that <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-add _strike3_tv --pid=b093ypxy --pid-recursive</code></div></div> <br />
+from the command line did what I wanted which resulted in this saved text search:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pid b093ypxy<br />
+pidrecursive 1</code></div></div><br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>A PVR search with --pid-recursive is very, very rarely useful.</blockquote>
+<br />
+Well in this case it is, it is for set of programs with different titles for Strike from bbc2 TV which I don't think would be caught by the usual title search<br />
+regards<br />
+<br />
+Roga</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2017, 02:33 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-09-2017, 11:24 AM)</span></cite>I have had another look at <a href="https://github.com/get-iplayer/get_iplayer/wiki/pvr">pvr documentation</a> but I couldn't see a clear example.</blockquote>It's a wiki, so feel free to add an example specific to your use.<br />
+<blockquote class="mycode_quote"><cite><span> (11-09-2017, 11:24 AM)</span></cite>After a bit of messing about I found that <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-add _strike3_tv --pid=b093ypxy --pid-recursive</code></div></div></blockquote>No messing about required. All PVR searches are created from the command line the same way, with <kbd>--pvr-add</kbd> or <kbd>--pvr-queue</kbd>, as shown in the documentation. If for some reason you assumed there was something different about using <kbd>--pid</kbd> and <kbd>--pid-recursive</kbd>, that isn't the case, as you've demonstrated.<br />
+<blockquote class="mycode_quote"><cite><span> (11-09-2017, 11:24 AM)</span></cite>Well in this case it is, it is for set of programs with different titles for Strike from bbc2 TV which I don't think would be caught by the usual title search</blockquote>You could handle Strike by searching on the programme name, but it also would qualify as an anthology series, so a candidate for <kbd>--pid-recursive</kbd>.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Can I have an example of a PVR pid-recursive search</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

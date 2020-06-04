@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - RHEL 6 XML::LibXML is too old for 3.00</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; RHEL 6 XML::LibXML is too old for 3.00</div>
+<div id="pagetitle"><h2>RHEL 6 XML::LibXML is too old for 3.00</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">03-05-2017, 07:40 PM</div>
+</div>
+<div class="message">I upgraded to 3.00 from 2.94 and now have a bunch of reference issues with the program names and episodes. I started with:<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --cache-init --type="tv,radio"</blockquote>
+<br />
+<br />
+ When I do a get_iplayer --refresh --type="tv,radio" I get:<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>...<br />
+<br />
+<kbd>17817:  radio, XML::LibXML::Text=SCALAR(0x55de870) - XML::LibXML::Text=SCALAR(0x3fedc50), BBC World Service, p050kvwt<br />
+17818:  radio, XML::LibXML::Text=SCALAR(0x55de8a0) - XML::LibXML::Text=SCALAR(0x55de330), BBC World Service, p050sksq<br />
+<br />
+INFO: 7838 Matching Programmes</kbd></blockquote>
+<kbd></kbd><br />
+<br />
+<br />
+The web interface shows the same.  Interesting though, the description and channel fields are OK:<br />
+<br />
+Record<br />
+Queue<br />
+Add Series<br />
+<a href="http://www.bbc.co.uk/programmes/b01n2vrt">[Image: <a href="http://www.bbc.co.uk/iplayer/images/episode/b01n2vrt_150_84.jpg">http://www.bbc.co.uk/iplayer/images/epis...150_84.jpg</a>]</a><br />
+tv<br />
+XML::LibXML::Text=SCALAR(0x252dd80): XML::LibXML::Text=SCALAR(0x2e27630)<br />
+XML::LibXML::Text=SCALAR(0x20cff10)<br />
+Baby Jake and Captain Spacey go on a space adventure and play at space painting.<br />
+CBeebies<br />
+<br />
+0d 19h ago<br />
+<br />
+OS is RHEL 6.9:<br />
+<br />
+cat /etc/redhat-release<br />
+Scientific Linux release 6.9 (Carbon)<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 07:51 PM</div>
+</div>
+<div class="message">Update XML::LibXML Perl module to latest version</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">03-05-2017, 10:28 PM</div>
+</div>
+<div class="message">OK, thanks for the quick response.  Unfortunately my OS package already <span style="font-style: italic;" class="mycode_i">is</span> up to date:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>yum list perl*XML                <br />
+Installed Packages                                         <br />
+perl-XML-LibXML.x86_64                                                            1:1.70-5.el6                                                     @sl </blockquote>
+<br />
+and<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>yum upgrade perl*XML<br />
+No Packages marked for Update</blockquote>
+<br />
+...but I am guessing this isn't new enough.<br />
+<br />
+CPAN is the normal answer but the machine I am running on doesn't have a compiler so this doesn't work either:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>cpan[1]&gt; install XML::LibXML<br />
+Couldn't find your C compiler<br />
+Compilation failed in require at Makefile.PL line 94.<br />
+BEGIN failed--compilation aborted at Makefile.PL line 94.</blockquote>
+<br />
+I guess I will have to do some more work to get a build environment and keep you posted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 10:45 PM</div>
+</div>
+<div class="message">Version 1.70 appears to no longer be new enough, though I only discovered that after release when someone attempted to install on a long-dead macOS version. I'll have to raise the minimum required version in code, though I don't yet know what it should be.<br />
+<br />
+Without a compiler, I fear you are stuck. If you can, I suggest you update all the get_iplayer-related Perl modules, and I think there is some native code pulled in under LWP as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 11:49 AM</div>
+</div>
+<div class="message">I think I have a solution for this. The next release of get_iplayer should once again work with version 1.70.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">04-05-2017, 02:52 PM</div>
+</div>
+<div class="message">Great news about the solution for 1.70.  In the meantime I did upgrade LibXML manually.  On my minimal RHEL install I needed to run:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>yum remove perl-XML-LibXML<br />
+yum install libxml2-devel gcc<br />
+cpan -i XML::LibXML<br />
+cpan -i XML::SAX</blockquote>
+<br />
+Unfortunately that doesn't seem to have resolved the problem.  Some shows do have valid data but others still show the XML::LibXML objects.  This is the end of the ouptput from get_iplayer --refresh --type="tv,radio":<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>17819:  radio, XML::LibXML::Text=SCALAR(0x55de330) - XML::LibXML::Text=SCALAR(0x4454d20), BBC World Service, p050kwds<br />
+17820:  radio, XML::LibXML::Text=SCALAR(0x55de870) - XML::LibXML::Text=SCALAR(0x3fedc50), BBC World Service, p050kvwt<br />
+17821:  radio, XML::LibXML::Text=SCALAR(0x55de8a0) - XML::LibXML::Text=SCALAR(0x55de330), BBC World Service, p050sksq<br />
+17824:  radio, Y Talwrn: 2017 - Criw'r Llew Coch v Penllyn, BBC Radio Cymru, b08nx5xh<br />
+17827:  radio, Yasmin Evans - 01/05/2017, BBC Radio 1Xtra, b08n1kw0<br />
+17828:  radio, Yasmin Evans - 02/05/2017, BBC Radio 1Xtra, b08n1kx1<br />
+17829:  radio, Yasmin Evans - 03/05/2017, BBC Radio 1Xtra, b08n1ky0<br />
+17831:  radio, Yasser - The Great Escape Inside Knowledge, BBC Asian Network, b08ndj7n<br />
+17832:  radio, Yesterday in Parliament - 03/05/2017, BBC Radio 4, b08nsdpl<br />
+17834:  radio, You and Yours - Garden centres, Caribbean holiday nightmare, Buying fine art online, BBC Radio 4, b08njtjq<br />
+17835:  radio, You and Yours - What have you done to help your children or grandchildren buy a home?, BBC Radio 4, b08njtpn<br />
+17836:  radio, You and Yours - NHS Fraud, Over-50s' Finances, Nuisance Calls, BBC Radio 4, b08njv2g<br />
+17837:  radio, You and Yours - Jaeger; Viagogo; Online gambling, BBC Radio 4, b08njv66<br />
+17839:  radio, Your Country - Early May Bank Holiday (01/05/2017), BBC Radio Sheffield, p04zqjcn<br />
+<br />
+INFO: 8945 Matching Programmes</code></div>
+</div>
+<br />
+Any other thoughts?<br />
+<br />
+EDIT: Just realized that the refresh might have just replaced the new content leaving the original stuff there.  Would it be bad to run --cache-init again?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 03:00 PM</div>
+</div>
+<div class="message">You can do --cache-init again, though I can say for sure it will clean up all the bad entries.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">04-05-2017, 03:31 PM</div>
+</div>
+<div class="message">Well... I ran --cache-init again but it is still not perfect.  Here's some more output:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>17748:  radio, Wynne Evans - 02/05/2017, BBC Radio Wales, b08ndtvx<br />
+17749:  radio, Wynne Evans - 03/05/2017, BBC Radio Wales, b08ndtxr<br />
+17750:  radio, Wynne Evans - 04/05/2017, BBC Radio Wales, b08ndtzp<br />
+17754:  radio, XML::LibXML::Text=SCALAR(0x23e3a90) - XML::LibXML::Text=SCALAR(0x3c31720), BBC Radio 5 live, b08nrj5s<br />
+17755:  radio, XML::LibXML::Text=SCALAR(0x3195338) - XML::LibXML::Text=SCALAR(0x3a79580), BBC Essex, p04zzk4r<br />
+17756:  radio, XML::LibXML::Text=SCALAR(0x31dacc8) - XML::LibXML::Text=SCALAR(0x31d62d0), BBC Radio Jersey, p04zn2j6<br />
+17757:  radio, XML::LibXML::Text=SCALAR(0x31faa20) - XML::LibXML::Text=SCALAR(0x38e7fc0), BBC Radio 5 live sports extra, b08pjl6v<br />
+17758:  radio, XML::LibXML::Text=SCALAR(0x3203e18) - XML::LibXML::Text=SCALAR(0x3a0ae88), BBC Surrey, p050hzgx</code></div>
+</div>
+<br />
+Fortunately looks like most stuff is OK.  Thanks again for this great tool.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 03:38 PM</div>
+</div>
+<div class="message">You can try <kbd>--cache-reset --refresh-limit=30</kbd> to rebuild the whole thing from scratch, but it will take a good while. Hardly worth it if no shows of interest are affected.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; RHEL 6 XML::LibXML is too old for 3.00</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

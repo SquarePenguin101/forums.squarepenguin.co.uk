@@ -1,0 +1,98 @@
+get_iplayer 3.06.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\user\.get_iplayer
+INFO: User options file: C:\Users\user\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	nowrite = 1
+	output = C:\Users\user\Videos\iPlayer
+	pid = b0074513
+	refreshexcludegroupstv = local
+	subsonly = 1
+	subtitles = 1
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 6575 file cache entries for tv
+INFO: Got 6303 file cache entries for radio
+INFO: Cleaning PID - old: 'b0074513' new: 'b0074513'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0074513.json
+INFO: tv episode PID detected (b0074513)
+Matches:
+5688:	The League of Gentlemen: Series 1 - Welcome to Royston Vasey, BBC Four, b0074513
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0074513.json
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b000tm9z/transferformat/dash?cb=19044
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1510243545_ffe09215b97f472f82fe62223a32deec
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1510200345&e=1510243545&h=9078ac9b857ae930e87f66bbc346849f
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b000tm9z/transferformat/dash?cb=85395
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1510243549_b490275bddadf3e6974c9d99842e5c8a
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism/pc_hd_abr_v2_dash_master.mpd?s=1510200349&e=1510243549&h=4d70e4013d82030050f2fcd9f2e01e80
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b000tm9z/transferformat/hls?cb=26156
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/1500kbps/modav/p05lblxy_b000tm9z_1510183429851.mp4/master.m3u8?hdnea=st=1510221952~exp=1510243552~acl=/*p05lblxy_b000tm9z_1510183429851.mp4*~hmac=18baa3ee91757ebfea0fea5f4d4dd6d1e3f09a8948be8e76af94d500c8c5cb97
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.m3u8?__gda__=1510243552_8203bf1035ca2d0e9193f845d18b7dd6
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.m3u8?s=1510200352&e=1510243552&h=ebab19b0a5d00947f9e8f547745fe43b
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism.hlsv2.m3u8?at=lDk9gbzL88d1bbeb06796437a2d11448df1164c3c1aeebed55d89f2fb2000
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b000tm9z/transferformat/hls?cb=65718
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.m3u8?__gda__=1510243561_a79a73dce62da409da4fed1f96919729
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.m3u8?s=1510200361&e=1510243561&h=e71755c16d1b17f58f3e937d9d6c1625
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd/ab094b-b000tm9z/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.ism/vf_b000tm9z_27338143-676a-42c9-8e61-ba19ffe71dbd.m3u8?at=YymL4OAH24fc1930c1e8d55bcac3b44e19223e23e981f5d155d89f3847440
+INFO: Found mode 'dvfxsd1': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfxsd2': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvflow1': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvflow2': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'hlsvhigh1': (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode 'hvfxsd1': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxsd2': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode 'hvfxsd3': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh1': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh2': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode 'hvfhigh3': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh1': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh2': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfxhigh3': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfstd1': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfstd2': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfstd3': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvflow1': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvflow2': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvflow3': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'subtitles1': (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode 'subtitles2': (captions) http stream (CDN: mf_akamai_uk_plain/10)
+INFO: Found mode 'subtitles3': (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tdv16/transferformat/dash?cb=18823
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02tdv16/transferformat/dash?cb=07885
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tdv16/transferformat/hls?cb=47966
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02tdv16/transferformat/hls?cb=92984
+INFO: No streams available for 'store' version (p02tdv16) - skipping
+INFO: No streams found for 'store' version (p02tdv16) - deleting
+INFO: Searching for versions: original
+INFO: Downloading subtitles
+INFO: Getting URL: http://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-6dc3f082-7f2f-4410-818e-4e86a3e2736f_b000tm9z_1509582051026.xml?s=1510200349&e=1510243549&h=747a01163af0f3dd5e95d11835189e36
+:7: parser error : Char 0x0 out of allowed range
+        THE LEAGUE OF GENTLEMEN ` EP 1
+                                      ^
+:7: parser error : Premature end of data in tag title line 6
+        THE LEAGUE OF GENTLEMEN ` EP 1
+                                      ^
+:7: parser error : Premature end of data in tag metadata line 5
+        THE LEAGUE OF GENTLEMEN ` EP 1
+                                      ^
+:7: parser error : Premature end of data in tag head line 3
+        THE LEAGUE OF GENTLEMEN ` EP 1
+                                      ^
+:7: parser error : Premature end of data in tag tt line 2
+        THE LEAGUE OF GENTLEMEN ` EP 1
+                                      ^

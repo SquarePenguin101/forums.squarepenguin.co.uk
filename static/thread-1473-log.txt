@@ -1,0 +1,41 @@
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO Trying to download PID using type tv
+INFO: pid found in cache
+Matches:
+2870:	Horrible Histories: Series 7 - Ridiculous Romantics, CBBC, b0909jrk
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of original version
+INFO: hvfhd1,hvfhd2,hvfhd3,hvfhd4,hvfhd5,hvfhd6,dvfhd1,dvfhd2,dvfhd3,dvfhd4,hlshd1,hlshd2,hvfsd1,hvfsd2,hvfsd3,hvfsd4,hvfsd5,hvfsd6,dvfsd1,dvfsd2,dvfsd3,dvfsd4,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,hlsvhigh1,hlsvhigh2,hvfhigh1,hvfhigh2,hvfhigh3,hvfhigh4,hvfhigh5,hvfhigh6,dvfhigh1,dvfhigh2,dvfhigh3,dvfhigh4,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2,dvflow3,dvflow4 modes will be tried for version original
+INFO: Trying hvfhd1 mode to record tv: Horrible Histories: Series 7 - 3. Ridiculous Romantics
+INFO: File name prefix = Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original                 
+INFO: Resizing file: /home/andy/Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original.video.ts
+INFO: Resizing from 10334389 to 6599928 for resume
+INFO: Resume recording file: /home/andy/Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original.video.ts
+INFO: Resume recording at: 6.29 MiB (00:00:08) [2]
+Recording:    11.98 MiB / ~1196.93 MiB   1.0%   45.5 Mibit/s 00:03:28 remaining
+Recording:    23.95 MiB / ~1196.93 MiB   2.0%   70.6 Mibit/s 00:02:12 remaining
+Recording:    35.92 MiB / ~1196.93 MiB   3.0%  118.5 Mibit/s 00:01:18 remaining
+Recording:    47.89 MiB / ~1196.93 MiB   4.0%  110.9 Mibit/s 00:01:22 remaining
+Recording:    59.86 MiB / ~1196.93 MiB   5.0%  107.1 Mibit/s 00:01:24 remaining
+Recording:    71.83 MiB / ~1196.93 MiB   6.0%  131.1 Mibit/s 00:01:08 remaining
+Recording:    83.80 MiB / ~1196.93 MiB   7.0%  124.0 Mibit/s 00:01:11 remaining
+Recording:    95.78 MiB / ~1196.93 MiB   8.0%  119.3 Mibit/s 00:01:13 remaining
+Recording:   107.75 MiB / ~1196.93 MiB   9.0%  115.9 Mibit/s 00:01:15 remaining
+Recording:   119.72 MiB / ~1196.93 MiB  10.0%  113.4 Mibit/s 00:01:15 remaining
+Recording:   131.69 MiB / ~1196.93 MiB  11.0%  100.3 Mibit/s 00:01:24 remaining
+Recording:   143.66 MiB / ~1196.93 MiB  12.0%   99.9 Mibit/s 00:01:24 remaining
+Recording:   155.63 MiB / ~1196.93 MiB  13.0%   99.6 Mibit/s 00:01:23 remaining
+Recording:   167.61 MiB / ~1196.93 MiB  14.0%   99.3 Mibit/s 00:01:22 remaining
+Recording:   179.58 MiB / ~1196.93 MiB  15.0%  106.6 Mibit/s 00:01:16 remaining
+Recording:   191.55 MiB / ~1196.93 MiB  16.0%   92.6 Mibit/s 00:01:26 remaining
+Recording:   203.52 MiB / ~1196.93 MiB  17.0%   98.6 Mibit/s 00:01:20 remaining
+Recording:   215.49 MiB / ~1196.93 MiB  18.0%   93.0 Mibit/s 00:01:24 remaining
+Recording:   227.46 MiB / ~1196.93 MiB  19.0%   88.5 Mibit/s 00:01:27 remaining
+Recording:   239.43 MiB / ~1196.93 MiB  20.0%   93.3 Mibit/s 00:01:22 remaining

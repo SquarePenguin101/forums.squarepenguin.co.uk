@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Pid/Index found but no available download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Pid/Index found but no available download</div>
+<div id="pagetitle"><h2>Pid/Index found but no available download</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-802</h2></div><div class="dateline">25-12-2014, 12:39 AM</div>
+</div>
+<div class="message">Hi <br />
+I have a copy of get_iplayer running under ubuntu, I was unable to download this program; get_iplayer --pid=b012yq57 , I have tried the Index as well, I have installed a windows version 2.9.1 and it is unable to download as well, I can view it via the iplayer website.<br />
+<br />
+error message is below;<br />
+<span style="font-style: italic;" class="mycode_i"><br />
+C:\Program Files (x86)\get_iplayer&gt;get_iplayer --pid=b012yq57<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+1555:   Show Me Show Me: Series 3 - 25. Christmas Special: Snowflakes and Sparkl<br />
+es, CBeebies, Learning,Pre-School, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programme versions found</span><br />
+<br />
+any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-12-2014, 01:49 AM</div>
+</div>
+<div class="message">That programme has some bad metadata.  Use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--playlist-metadata</code></div></div> to revert to old metadata.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-806</h2></div><div class="dateline">29-12-2014, 11:35 AM</div>
+</div>
+<div class="message">Having the same problem, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programme versions found<br />
+<br />
+When I use <blockquote class="mycode_quote"><cite>Quote:</cite>--playlist-metadata</blockquote>
+ I get the folowing<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+I am able to play the program from the iPlayer website and have tryed using the pid from the url in that window also with the same results.<br />
+<br />
+Looking at the --info on a program that works vs one that doesnt the only difference I have noticed is that the two following feilds on the working info data, dont know if this is realted?<br />
+<br />
+verpids:        default: b04ww8xc<br />
+versions:       default<br />
+<br />
+Any idears?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">29-12-2014, 01:34 PM</div>
+</div>
+<div class="message">Are you using version 2.91<br />
+<br />
+Just tried it here and it downloaded fine with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--playlist-metadata</code></div></div>. Adding that command reverts to the old search method and if that still fails, get_iplayer will then scrape the programme page to look for the data it needs to download it. <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid b012yq57&nbsp;&nbsp;--playlist-metadata</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-806</h2></div><div class="dateline">29-12-2014, 02:52 PM</div>
+</div>
+<div class="message">I'm using get_iplayer 2.91-ppa21<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b008m7xk --tvmode=best --type=tv --file-prefix="&lt;nameshort&gt;" --playlist-metadata</code></div></div><br />
+Result <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer 2.91-ppa21, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+2493:&nbsp;&nbsp;&nbsp;&nbsp;XXYYZZ - -, BBC Three, , default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+WARNING: No programmes are available for this pid with version(s): default</code></div></div><br />
+<br />
+<br />
+There are currenly 6 programs that suffer the same, however other new content works fine.<br />
+<br />
+Any astiance woudl be greatly apresiated :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-806</h2></div><div class="dateline">29-12-2014, 03:18 PM</div>
+</div>
+<div class="message">Sorted, seem's that the program is listed and has info but at closere inspection to the iplayer page it says <br />
+<br />
+"Its not avalible at this time"<br />
+<br />
+Although it was on TV on staturday? anyway probelm solved, thank you for your time!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">29-12-2014, 05:50 PM</div>
+</div>
+<div class="message">It was on TV but the BBC do not have the rights to make it available on iPlayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-863</h2></div><div class="dateline">23-02-2015, 01:44 PM</div>
+</div>
+<div class="message">The error message "but no available download" also occurs if you are outside the UK but works Ok if you using a (<a href="http:///forums/topic/forum-rules/">REDACTED</a>). Im using v2.91 and the short name form works OK as well. No need for PID yet!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Pid/Index found but no available download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

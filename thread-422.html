@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer 2.94 unable to get a radio programme by PID (Mint 17)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; get_iplayer 2.94 unable to get a radio programme by PID (Mint 17)</div>
+<div id="pagetitle"><h2>get_iplayer 2.94 unable to get a radio programme by PID (Mint 17)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-936</h2></div><div class="dateline">03-06-2015, 11:48 PM</div>
+</div>
+<div class="message">I see that the BBC have broken listing feeds, but in the release notes for 2.93, "For the moment, radio listing feeds are unaffected". But it does not seem so on my machine.<br />
+<br />
+Could this be a new outside-UK restriction? Previously, TV iplayer was restricted to UK IP addresses, but the rest of the world (like me) could get radio. I do that. But it seems to have stopped working.<br />
+<br />
+For example:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; ./get_iplayer --type=radio --pid=b01ghlh2 -o gip_dir<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type radio<br />
+INFO: pid found in cache<br />
+Matches:<br />
+12897:&nbsp;&nbsp;&nbsp;&nbsp;The Jason Byrne Show: Series 2 - Animals, BBC Radio 4 Extra, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: Please download and run latest installer or install the XML::Simple Perl module for more accurate programme metadata.<br />
+ERROR: Failed to get version pid metadata from iplayer site</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+I am using Linux Mint 17.1 with get_iplayer 2.94 downloaded from <a href="ftp://ftp.infradead.org/pub/get_iplayer/get_iplayer-2.94.tar.gz">ftp://ftp.infradead.org/pub/get_iplayer/....94.tar.gz</a><br />
+I just extracted get_iplayer and run that.<br />
+<br />
+Am I doing something dumb, or am I just locked out?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-06-2015, 01:24 AM</div>
+</div>
+<div class="message">Install the XML::Simple Perl module.  Read the installation guide in the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-936</h2></div><div class="dateline">04-06-2015, 08:34 AM</div>
+</div>
+<div class="message">Thank you, and sorry to have wasted your time!<br />
+<br />
+I had installed libxml-libxml-simple-perl, which seemed to match what it says in<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/installation">https://github.com/get-iplayer/get_iplay...stallation</a> <br />
+-&gt; <a href="https://github.com/get-iplayer/get_iplayer/wiki/manual">https://github.com/get-iplayer/get_iplayer/wiki/manual</a> <br />
+but it didn't change the message about installing XML::Simple. But I only used the URL option, and it still worked fine (until this week) so I didn't worry about that message.<br />
+<br />
+I also ran<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cpanm LWP MP3::Info MP3::Tag Authen::SASL Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple</code></div></div>and it didn't make a difference, but what fixed it was:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>eval</code></div></div>perl -I ~/perl5/lib/perl5 -Mlocal::lib`<br />
+echo 'eval <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -I ~/perl5/lib/perl5 -Mlocal::lib</code></div></div>' &gt;&gt; ~/.profile`<br />
+<br />
+The drought is now over... until the next one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-06-2015, 11:35 AM</div>
+</div>
+<div class="message">That wasn't the correct package.  You needed libxml-simple-perl.  They haven't done you any favours with the package naming.  In general, Mint users should follow the Ubuntu/Mint installation instructions in the wiki.  Even if you are later required to update the get_iplayer script itself for some reason, all the dependencies will be taken care of.  The PPA is kept up to date, though, so that shouldn't be the case.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; get_iplayer 2.94 unable to get a radio programme by PID (Mint 17)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Raw Metadata Option</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Raw Metadata Option</div>
+<div id="pagetitle"><h2>Raw Metadata Option</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">26-01-2018, 03:35 PM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.12.0 from a Windows 7 command prompt.<br />
+<br />
+Would you consider adding a <span style="text-decoration: underline;" class="mycode_u">--metadataraw</span> option that dumps to file the JavaScript object notation (json) files that get_iplayer already retrieves when downloading? That is: the clip or episode json, the playlist json, the version json, etc. It would also be useful to include a <span style="text-decoration: underline;" class="mycode_u">--metadataraw-ancestors</span> option that, in addition, dumps to file the parent, grandparent and great-grandparent jsons that get_iplayer already retrieves when downloading a programme.<br />
+<br />
+Some of these data appear in the metadata xml that get_iplayer creates when the <span style="text-decoration: underline;" class="mycode_u">--metadata</span> option is specified, but some of it is discarded.<br />
+<br />
+Since the BBC have stated that these files may become unavailable soon, it would be useful to grab the information before it's lost—particularly for channels that consist mainly of repeats such as <span style="font-style: italic;" class="mycode_i">BBC Four</span>, <span style="font-style: italic;" class="mycode_i">CBBC</span>, <span style="font-style: italic;" class="mycode_i">CBeebies</span> and <span style="font-style: italic;" class="mycode_i">BBC Radio 4 Extra</span>. A user may not want to download a programme now, but may want to keep the data to re-consider when it is inevitably repeated. It would also prove useful in general for when a user wants to search their local download folder by actor or writer, for example. The credits are available in the version jsons, but get_iplayer currently discards these data.<br />
+<br />
+The dumped files could be saved alongside the downloaded programme and could be named by appending a suitable suffix to the <span style="text-decoration: underline;" class="mycode_u">--file-prefix</span>. For example, suggestions for file-prefix suffixes for a clip:<ul class="mycode_list"><li><span style="font-style: italic;" class="mycode_i">&lt;_pid&gt;.json</span><br />
+</li>
+<li><span style="font-style: italic;" class="mycode_i">&lt;_pid&gt;_playlist.json</span><br />
+</li>
+<li><span style="font-style: italic;" class="mycode_i">&lt;_pid&gt;&lt;_version&gt;_&lt;version_id&gt;.json</span><br />
+</li>
+<li><span style="font-style: italic;" class="mycode_i">&lt;_pid&gt;_&lt;parent_kind&gt;_&lt;parent_id&gt;.json</span> <br />
+Where <span style="font-style: italic;" class="mycode_i">parent_kind</span> is one of <span style="font-style: italic;" class="mycode_i">episode</span>, <span style="font-style: italic;" class="mycode_i">series</span> or <span style="font-style: italic;" class="mycode_i">brand</span>. And with similar suffixes for <span style="font-style: italic;" class="mycode_i">grandparent</span> and <span style="font-style: italic;" class="mycode_i">great-grandparent</span> where these exist.<br />
+</li>
+</ul>
+The <span style="font-style: italic;" class="mycode_i">&lt;pid&gt;</span> and/or <span style="font-style: italic;" class="mycode_i">&lt;version&gt;</span> parameters could be omited where the parameter already exist in the file-prefix.<br />
+<br />
+The option could also include a dump to a text file of the stream information for the download. This information is currently available through the <span style="text-decoration: underline;" class="mycode_u">--streaminfo</span> option, but this has to be run separately from the download command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-01-2018, 08:33 PM</div>
+</div>
+<div class="message">Thanks for the suggestion, but I'm afraid the answer from me is no. Of course, you can implement any features you like if you take over as get_iplayer maintainer. I have no interest in turning get_iplayer into some kind of data provider, nor do I think it is a good idea. The <kbd>--metadata</kbd> and <kbd>--streaminfo </kbd>functionalities are from before my time. I should have axed them long ago, but it didn't seem worth the bother. Perhaps I should reconsider - few users would miss them. Those options merely provide crude dumps of internal state that are useless to the core functions of get_iplayer. You would be better off creating a proper tool for the job, something that catalogued your downloads in a form more useful than a bunch of JSON files. It might be useful to other users if, say, you created a tool that generated the sort of catalogue you want from the get_iplayer download history.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">30-01-2018, 04:37 PM</div>
+</div>
+<div class="message">OT perhaps...<br />
+<br />
+But a great application for the Original Poster<br />
+would be to derive from the json file:<br />
+1) if the program is a repeat<br />
+2) if it is n of N in a series.<br />
+<br />
+It's getting harder to find such info from the web site<br />
+ - though it is often hidden in the json file<br />
+<br />
+just my 2c s</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Raw Metadata Option</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

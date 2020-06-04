@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Mint 17: ffmpeg error after update to 2.96</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Mint 17: ffmpeg error after update to 2.96</div>
+<div id="pagetitle"><h2>Mint 17: ffmpeg error after update to 2.96</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">22-08-2016, 04:06 PM</div>
+</div>
+<div class="message">Ok PPA update to 2.96 painless as ever.....so decided to download a latest episode and got this warning, turns out I didn't have ffmpeg<br />
+<br />
+WARNING: Required ffmpeg utility not found - not converting .ts file<br />
+<br />
+odd so I installed ffmpeg...found ppa source on Mint forum...<br />
+<br />
+try again...hooray no error.....but....I got this instead<br />
+<br />
+INFO: Begin converting file: /home/geoff/Full_Steam_Ahead_-_5._Episode_5_b07pkfg5_original.partial.mp4.ts<br />
+[mp4 @ 0x8ef1040] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 1800 &gt;= NOPTS<br />
+av_interleaved_write_frame(): Invalid argument<br />
+frame=    3 fps=0.0 q=-1.0 Lsize=      93kB time=00:00:00.02 bitrate=37978.3kbitINFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Conversion failed - retaining /home/geoff/Full_Steam_Ahead_-_5._Episode_5_b07pkfg5_original.partial.mp4.ts<br />
+<br />
+Hm!! I did have some problems a couple of days ago with the first 4 episodes as if it was recording millisecond gaps during the download, I simply put this down to some sort of connection issue.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-08-2016, 04:08 PM</div>
+</div>
+<div class="message">Those 2.96 release notes aren't going to read themselves...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">22-08-2016, 05:12 PM</div>
+</div>
+<div class="message">Ok...I've slapped wrist and read notes.....found ffmpeg under usr/share/ffmpeg so just changed release note to the following;<br />
+<br />
+get_iplayer --prefs-add --ffmpeg=/usr/share/ffmpeg<br />
+INFO: Added option 'ffmpeg' = '/usr/share/ffmpeg'<br />
+INFO: Options file /home/geoff/.get_iplayer/options updated<br />
+<br />
+<br />
+tried the download again using --force and got this;<br />
+<br />
+INFO: Begin converting file: /home/geoff/Full_Steam_Ahead_-_5._Episode_5_b07pkfg5_original.partial.mp4.ts<br />
+<br />
+open3: exec of /usr/share/ffmpeg -y -loglevel error -stats -i /home/geoff/Full_Steam_Ahead_-_5._Episode_5_b07pkfg5_original.partial.mp4.ts -vcodec copy -acodec copy -absf aac_adtstoasc /home/geoff/Full_Steam_Ahead_-_5._Episode_5_b07pkfg5_original.partial.mp4 failed at /usr/bin/get-iplayer line 2705.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-08-2016, 05:31 PM</div>
+</div>
+<div class="message"><br />
+<ol type="1" class="mycode_list"><li>/usr/share/ffmpeg had better be a directory - not a program binary - or something strange is going on. That's why you can't run it.<br />
+</li>
+<li>Completely get rid of whatever ffmpeg you installed - you've already established it isn't suitable - and follow the instructions in the release notes to install a working version.<br />
+</li>
+</ol>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">22-08-2016, 08:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-08-2016, 05:31 PM)</span></cite><br />
+<ol type="1" class="mycode_list"><li>/usr/share/ffmpeg had better be a directory - not a program binary - or something strange is going on. That's why you can't run it.<br />
+</li>
+<li>Completely get rid of whatever ffmpeg you installed - you've already established it isn't suitable - and follow the instructions in the release notes to install a working version.<br />
+</li>
+</ol>
+</blockquote><br />
+That's definitely the directory....removed that and tried a more recent ppa and that used a different directory....but same problem.<br />
+So following the release notes it works....because I have get iplayer as a ppa and it auto updates I never think to check release notes.<br />
+<br />
+Thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-08-2016, 08:47 PM</div>
+</div>
+<div class="message">get_iplayer and ffmpeg are too volatile for long-term support distro releases. That's why there is a get_iplayer PPA in the first place. However, I recommend everyone avoid PPA builds of ffmpeg with Mint 17/13. Installing a static build (as instructed in the release notes) has no effect on other packages and can easily be undone. When you upgrade to Mint 18, ffmpeg will be available in default repos and will be pulled in with get_iplayer upgrades.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">22-08-2016, 09:45 PM</div>
+</div>
+<div class="message">Since my last debacle which was down to me installing something that stopped get_iplayer and I ended up reinstalling Mint, it's been totally flawless not had a failure or a single error. The thing was instead of looking on here I immediately started to look for a solution to the ffmpeg error, that's how I ended up installing a ppa.<br />
+I even installed this on my W10 box and it worked straight out the tin :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Mint 17: ffmpeg error after update to 2.96</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Auto Thumbnail Size</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Auto Thumbnail Size</div>
+<div id="pagetitle"><h2>Auto Thumbnail Size</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-53</h2></div><div class="dateline">28-08-2013, 01:04 AM</div>
+</div>
+<div class="message">Partial from an --info output yields...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pid:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b039yx23<br />
+player:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://www.bbc.co.uk/iplayer/episode/b039yx23/Adele_Roberts_26_08_2013/<br />
+thumbfile:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V:&#92;_incoming&#92;_iplayer&#92;Adele_Roberts&#92;Adele_Roberts&#92;Adele_Roberts_-_26_08_2013_b039yx23_default.jpg<br />
+thumbnail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.bbc.co.uk/iplayer/images/episode/b039yx23_150_84.jpg<br />
+thumbnail1:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_86_48.jpg<br />
+thumbnail2:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_150_84.jpg<br />
+thumbnail3:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_178_100.jpg<br />
+thumbnail4:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_512_288.jpg<br />
+thumbnail5:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_528_297.jpg<br />
+thumbnail6:&nbsp;&nbsp;&nbsp;&nbsp; http://ichef.bbci.co.uk/programmeimages/episode/b039yx23_640_360.jpg</code></div></div><br />
+<br />
+coupled with the option ...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--thumbsize &lt;index|width&gt;&nbsp;&nbsp; Default thumbnail size/index to use for the current recording and metadata (see --info for thumbnailN: to get size/index)</code></div></div><br />
+I would like to use the above option in PVR mode like this...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>thumbsize 1000</code></div></div>where the nearest size found to 1000x1000px is saved as embedded art, in the above case <span style="font-weight: bold;" class="mycode_b">thumbnail6</span>.<br />
+<br />
+This would allow my player to look great when displaying embedded artwork from GiP recorded shows.<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-08-2013, 12:14 PM</div>
+</div>
+<div class="message">You just need to add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--thumbsize=6</code></div></div> to the command line when you create a PVR job.  If you don't want to do that every time, you can make it a permanent setting with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --thumbsize=6</code></div></div>.<br />
+<br />
+get_iplayer doesn't do any sort of nearest size match.  You have to use the width specified in the thumbnailN listings (e.g., N=6 -&gt; 640).  That's why you should stick to using the index numbers rather than specifying widths.  The specs aren't likely to change, but by using the largest index number, you'll be sure of getting the largest thumbnail available to get_iplayer.<br />
+<br />
+For most programmes, you can find a larger thumbnail by converting the "640_360" in the image URL to "832_468", "1024_576" or "1280_720".  Unfortunately, those URLs are not in the metadata available to get_iplayer, so you would need to download them yourself.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-53</h2></div><div class="dateline">28-08-2013, 12:21 PM</div>
+</div>
+<div class="message">A shame my idea can't be realised, but thank you for the tips, very useful.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Auto Thumbnail Size</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

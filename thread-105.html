@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Changing fileprefix</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Changing fileprefix</div>
+<div id="pagetitle"><h2>Changing fileprefix</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">27-01-2014, 08:47 PM</div>
+</div>
+<div class="message">I'm having issues changing my filename prefixes, I'm using this command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer â-prefs-add â-fileprefix &lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;</code></div></div><br />
+I get the error <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"&lt; was unexpected at this time"</code></div></div><br />
+What have I got wrong?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-01-2014, 08:50 PM</div>
+</div>
+<div class="message">The syntax for the file prefix command is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--file-prefix</code></div></div>.<br />
+<br />
+Note the hyphen/dash in the middle.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">27-01-2014, 09:05 PM</div>
+</div>
+<div class="message">Thanks for that but still no joy:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --prefs-add --file-prefix &lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;<br />
+&lt; was unexpected at this time.</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-01-2014, 09:09 PM</div>
+</div>
+<div class="message">You can specify it with or without the hyphen.  You need to enclose the argument to <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--file-prefix</code></div></div> in double quotes: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --file-prefix "&lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;"</code></div></div><br />
+<br />
+<br />
+<br />
+Angle brackets are shell metacharacters and thus must be quoted to prevent evaluation by the Windows command shell.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">27-01-2014, 09:09 PM</div>
+</div>
+<div class="message">Just noticed my copy and paste seems to have merged the double dashes, there's a double dash before prefs-add and file-prefix</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">27-01-2014, 09:11 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/changing-fileprefix/#post-1771">Quote:</a>&lt;/div&gt;You can specify it with or without the hyphen.  You need to enclose the argument to <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--file-prefix</code></div></div> in double quotes: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer â-prefs-add â-file-prefix "&lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;"</code></div></div><br />
+<br />
+Angle brackets are shell metacharacters and thus must be quoted to prevent evaluation by the Windows command shell.</blockquote>
+<br />
+That's given me:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --prefs-add --file-prefix "&lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;"<br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: 0 Matching Programmes</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-01-2014, 09:45 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/changing-fileprefix/#post-1771">Quote:</a>You can specify it with or without the hyphen.  You need to enclose the argument to <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--file-prefix</code></div></div> in double quotes: </blockquote>
+<br />
+Ah yes, you do. In my examples in the guide I also used a = sign like so:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer â-prefs-add â-file-prefix="&lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;"</code></div></div><br />
+Not sure if that is required too?<br />
+<br />
+@tahir: You can check to see if it was added to your preferences by viewing them using the following command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-show</code></div></div><br />
+Further, you can highlight text when entering it in the input box here on the forum and hit the 'code' button, which will wrap the text in backticks and display it neatly without altering it in (almost) any way. This is how you avoid Wordpress mashing up your double hyphens etc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-01-2014, 10:39 PM</div>
+</div>
+<div class="message">You can use either equals sign or space to separate option from value.<br />
+<br />
+@tahir: You copied from my earlier post, where I neglected to replace the em-dashes inserted by WordPress.  I've corrected my earlier post.  Make sure the options are prefixed by double-hyphens.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">28-01-2014, 04:10 PM</div>
+</div>
+<div class="message">Thanks guys, this has worked:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --file-prefix="&lt;firstbcast&gt;&lt;_name&gt;&lt;_senum&gt;"</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">28-01-2014, 04:13 PM</div>
+</div>
+<div class="message">Now that I've got it working....<br />
+<br />
+I really wanted just yyyymmdd_name_senum, is that possible?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-01-2014, 04:38 PM</div>
+</div>
+<div class="message">You can get yyyy-mm-dd_name_senum.  See:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/#substitution-parameters">https://squarepenguin.co.uk/wiki/documen...parameters</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">28-01-2014, 05:03 PM</div>
+</div>
+<div class="message">Looks like I need to use &lt;firstbcastdate&gt; but this doesn't add anything to the filename:<br />
+<br />
+firstbacst: 2014-01-21T104500Z_15_Minute_Drama_2.m4a<br />
+<br />
+firstbcastdate: _15_Minute_Drama_1.m4a</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-01-2014, 08:02 PM</div>
+</div>
+<div class="message">You need to upgrade to latest get_iplayer v2.85 to make use of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&lt;firstbcastdate&gt;</code></div></div>.  I see now from earlier post that you are two versions behind.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-341</h2></div><div class="dateline">28-01-2014, 08:10 PM</div>
+</div>
+<div class="message">Thanks dp, will do that now</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Changing fileprefix</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR not working -- Ubuntu</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR not working -- Ubuntu</div>
+<div id="pagetitle"><h2>PVR not working -- Ubuntu</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">06-06-2015, 02:40 PM</div>
+</div>
+<div class="message">I am suffering a PVR problem. It just refuses to do anything.<br />
+<br />
+I have<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --pvr-list<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+All PVR Searches:<br />
+<br />
+pvrsearch = drblake<br />
+	search0 = The Doctor Blake Mysteries<br />
+<br />
+pvrsearch = later<br />
+	search0 = later<br />
+</code></div>
+</div>
+<br />
+But this is what happens:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --pvr --verbose<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: /home/admin/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+INFO: Loaded PVR search 'wrongmans'<br />
+INFO: Loaded PVR search 'drblake'<br />
+INFO: Loaded PVR search 'later'<br />
+INFO: Loaded PVR search list<br />
+Running PVR Searches:<br />
+</code></div>
+</div>
+<br />
+It will not do any search, and actually will not even initiate an update of the listings if it should.<br />
+<br />
+get_iplayer works fine for doing a regular search and download. It is only pvr that is like this.<br />
+<br />
+I tried an uninstall and reinstall (I am on Ubuntu running from the ppa) but still no luck. Maybe I didn't remove everything?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-06-2015, 03:11 PM</div>
+</div>
+<div class="message">It appears you cut off the output at "Running PVR Searches:".  Post the full output (scrub username as necessary).  If you didn't cut off the the output yourself, then post the output from <kbd>get_iplayer --show-prefs</kbd> (scrub username as necessary).<br />
+<br />
+Try creating a new pvr job to see if it is processed.  If so, delete and re-create an existing pvr job to see if it is processed.  If so, since you only have 3 pvr jobs, delete and re-create the rest.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">06-06-2015, 03:24 PM</div>
+</div>
+<div class="message">Sorry, no, I didn't cut off at the search. That's the end! The line below that was the command prompt!<br />
+<br />
+Here is the output from prefs:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --show-prefs<br />
+Options in '/home/admin/.get_iplayer/options'<br />
+	command = AtomicParsley "&lt;filename&gt;" --stik &lt;ext&gt; --year &lt;firstbcast&gt; --tracknum &lt;episodenum&gt; --TVEpisodeNum &lt;episodenum&gt; --TVNetwork &lt;channel&gt; --artwork "&lt;thumbfile&gt;" --TVShowName &lt;name&gt;<br />
+	refreshfeedstv = schedule<br />
+	subdirformat = &lt;nameshort&gt;-&lt;seriesnum&gt;<br />
+	since = 504<br />
+	thumb = 1<br />
+	tag_podcast_radio = 1<br />
+	fileprefix = &lt;nameshort&gt;&lt;.senum&gt;&lt;.episodeshort&gt;<br />
+	output = /home/admin/iplayer<br />
+	subdir = 1<br />
+	modes = flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,flashaachigh,flashaacstd,flashaudio,flashaaclow,wma<br />
+	thumbsize = 6<br />
+	nopurge = 1<br />
+	metadata = generic<br />
+	search = (check-duration=1)<br />
+	subtitles = 1<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">06-06-2015, 03:26 PM</div>
+</div>
+<div class="message">And new pvr jobs do not work either. These jobs are new. I deleted all my old jobs already.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-06-2015, 03:42 PM</div>
+</div>
+<div class="message">As I suspected - you broke your settings.  Remove this line from your options file:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search = (check-duration=1)</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">06-06-2015, 10:51 PM</div>
+</div>
+<div class="message">Thanks.<br />
+I copied these settings from my windows box where they work fine! Strange.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR not working -- Ubuntu</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

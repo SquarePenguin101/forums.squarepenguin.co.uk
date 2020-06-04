@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can't locate HTTP/Cookies.pm in @INC</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can't locate HTTP/Cookies.pm in @INC</div>
+<div id="pagetitle"><h2>Can't locate HTTP/Cookies.pm in @INC</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1787</h2></div><div class="dateline">05-05-2017, 09:18 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I've been a long time user of GiA and am now trying to get back into the command line, but facing an error after installing get_iplayer via Homebrew and trying to initialise the cache:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --cache-init<br />
+Can't locate HTTP/Cookies.pm in @INC (@INC contains: /usr/local/Cellar/get_iplayer/3.00.0/libexec/perl5/lib /opt/local/lib/perl5/site_perl/5.16.3/darwin-thread-multi-2level /opt/local/lib/perl5/site_perl/5.16.3 /opt/local/lib/perl5/vendor_perl/5.16.3/darwin-thread-multi-2level /opt/local/lib/perl5/vendor_perl/5.16.3 /opt/local/lib/perl5/5.16.3/darwin-thread-multi-2level /opt/local/lib/perl5/5.16.3 /opt/local/lib/perl5/site_perl /opt/local/lib/perl5/vendor_perl .) at /usr/local/bin/get_iplayer line 58.<br />
+BEGIN failed--compilation aborted at /usr/local/bin/get_iplayer line 58.</code></div></div><br />
+I checked I have perl installed via:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -v<br />
+<br />
+This is perl 5, version 16, subversion 3 (v5.16.3) built for darwin-thread-multi-2level</code></div></div><br />
+After a bit of Google-ing I thought running this would solve it, but even after uninstalling and reinstalling get_iplayer (to pick up the newly available perl module) I get the same error:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cpan HTTP::Cookies</code></div></div><br />
+I used the default options on cpan, so it did a local lib installation.  Should I have gone for the sudo option instead?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-05-2017, 10:37 AM</div>
+</div>
+<div class="message">As I say in the instructions, only system Perl is supported, so it is up to you to figure out how to install modules. You appear to be using Macports Perl, and I can see that Macports provides a package for HTTP::Cookies, so you should remove your local lib and install that. Don't replace system-packaged modules unless there is a need to do so.<br />
+<br />
+FWIW, I don't see any values in @INC that would indicate local::lib is in effect, since presumably the local lib is under your home directory. I suspect you haven't configured it properly in your shell. If you decide to return to local::lib, then I suggest you install it according to the instructions I provide. But don't use sudo. The whole point of using local::lib for get_iplayer is to avoid the need for that.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1787</h2></div><div class="dateline">05-05-2017, 11:58 AM</div>
+</div>
+<div class="message">Thanks user-2 - you are my saviour.<br />
+<br />
+I don't know why I had macports perl (or even macports itself) installed, but I've uninstalled that now and get_iplayer is working.<br />
+<br />
+P.S.  How did you spot I had macports perl installed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-05-2017, 11:58 AM</div>
+</div>
+<div class="message">Macports default location is /opt/local</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Can't locate HTTP/Cookies.pm in @INC</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

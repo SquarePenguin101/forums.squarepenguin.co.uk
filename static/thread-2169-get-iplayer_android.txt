@@ -1,0 +1,82 @@
+Install get_iplayer on Android Phone:
+
+This describes how to install get_iplayer on a non-rooted phone, running a Ubuntu distribution on UserLAnd (app from Play Store).  Only the command-line interface is used.  Adding a desktop environment is possible, but I don’t think it is worth the effort or the overhead.  I just use  get_iplayer to download the programmes to the phone’s external SD card; then play the downloads (mp4 video and mp4a audio) in Android.  Linux distributions with apps like UserLAnd tend to have a minimal base system, so that’s why additional steps are needed where expected functions are missing.  It’s a bit easier if you are familiar with Linux systems like Ubuntu and use of command-line.
+UserLAnd does not root your phone and if you do not like it - just uninstall the app.  With just one distribution installed (Ubuntu), my phone shows 736 MB used by UserLAnd in internal storage.  You really need a SD card to store downloaded tv/radio files to avoid using up more of your internal storage.
+
+You will need:
+Android phone
+SD card fitted to your phone, recommend 32 GB minimum if you download tv programmes.
+Internet access
+
+1. Install Hacker’s Keyboard from Google Play.  Don’t worry about the name - it’s just a good standard qwerty keyboard, with keys that you need, e.g. Ctrl and arrow keys for a text editor like nano. Go through its settings to enable the keyboard and set input method.  In Settings > Keyboard mode, portrait: select 5-row compact layout. In Settings > Keyboard mode, landscape: select Full 5-row layout.
+
+2. Install UserLAND from Google Play.  More information at https://github.com/CypherpunkArmory/UserLAnd/wiki
+
+Click the app Ubuntu (the distributions are called “apps”).  When you start an app for the first time, it will ask you for login details like the username you’d like to associate with the app, the user’s password (which is also the ssh password), and the vnc password. You then select a connection type - pick SSH.  (Vnc is only for a desktop session.  You don’t actually need ssh or vnc which are facilities for remote connection from another device.)  Wait for UserLAnd to download and set up the file system.
+When complete, enter your user password at the user prompt and hit enter.  You should see:
+“<yourusername>@localhost:~$ “
+You are now ready to enter Linux commands.
+
+3. Update the system:
+Enter the following commands:
+sudo apt update
+sudo apt upgrade
+Now your system packages are up-to-date.
+
+Note that sudo must be used when installing or removing packages.  You must also use sudo when creating, modifying or moving files that are outside your home directory.  (I found I could operate on ‘root’ files without sudo, but file permissions were not being set correctly.  So, use sudo just as you would in Ubuntu on a desktop PC.
+
+Just for information, do the following commands:
+pwd
+This will show that you are currently at your user directory /home/<yourusername>.
+lsb_release -a
+This will tell you the Ubuntu release - currently mine is shown as 18.04, codename bionic.
+
+4. Install some additional packages:
+sudo apt install nano wget
+sudo apt install -y software-properties-common
+
+5. Install get-iplayer:
+The latest release of get_iplayer is not available from Ubuntu default repositories.  We need to install it from the get-iplayer PPA, see https://github.com/get-iplayer/get_iplayer/wiki/unixpkg and https://launchpad.net/~jon-hedgerows/+archive/ubuntu/get-iplayer
+sudo add-apt-repository ppa:jon-hedgerows/get-iplayer
+sudo apt update
+sudo apt install get-iplayer
+
+Check that ffmpeg (installed with get-iplayer) will run correctly.  Ffmpeg is used to convert raw streamed files to mp4 and m4a.  Without ffmpeg the downloaded files will be left in their raw streaming formats, which some players will not play. 
+Do:
+ffmpeg -h
+This should display help for ffmpeg command options, but I got an error:
+“ffmpeg error while loading shared libraries: libx264.so.152: cannot enable executable stack as shared object requires: Permission denied”
+If you get this error (the number after “.so.” may be different from 152), you need to install the utility execstack.  In Linux most libraries do not need an executable stack, therefore you should mark the particular library as not needing an executable stack.
+
+So, install the utility execstack:
+sudo apt install execstack
+
+Find the path to libx264.so.152, run:
+find /usr -name “libx264.so.*”
+I got two results:
+/usr/lib/arm-linux-gnueabihf/libx264.so.152
+and:
+/usr/lib/arm-linux-gnueabihf/x264-10bit/libx264.so.152
+
+We mark (clear with -c) the binary or shared library as not requiring an executable stack.  Mark the first result, run:
+sudo execstack -c /usr/lib/arm-linux-gnueabihf/libx264.so.*
+
+Try ffmpeg again, run:
+ffmpeg -h
+This worked ok, so I did not bother with the second result.
+
+Do:
+get_iplayer -h
+This should display help for get_iplayer command options, so we know it runs also.
+
+6. Change the default get_iplayer download location in the get_iplayer preferences:
+Do this before downloading any tv or radio programmes.  The default location is in the home directory /home/<yourusername> of the Ubuntu file system - you will not be able to “see” this in Android, when you want to play the video or audio files in Android.  So, we output get_iplayer files to /storage/<internal or sdcard> to make them available in your Android “Files” or “Downloads” app.  More information here: https://github.com/CypherpunkArmory/UserLAnd/wiki/Importing-and-exporting-files-in-UserLAnd 
+
+Do:
+get_iplayer --prefs-add --output="/storage/sdcard"
+(better to use ‘sdcard’ rather than ‘internal’ to avoid using up your internal storage.)
+
+7. Download a BBC programme using get_iplayer to check that everything is working:
+Try a tv programme and a radio programme.  When complete, switch to Android.  Launch your Downloads app and tap the menu (3 bars) at top left.  You should see ‘UserLAnd INTERNAL’ and
+‘UserLAnd SDCARD’ listed.  Tap ‘UserLAnd SDCARD’ and you will see your downloaded get_iplayer programmes.
+Alternatively, in your Downloads app or a third-party app like ES File Explorer, find the sdcard (external) and tap Android > data > tech.ula > files > storage

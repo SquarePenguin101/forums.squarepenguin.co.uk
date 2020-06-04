@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Manual installation of get_iplayer masking PPA version on Ubuntu 16.04</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Manual installation of get_iplayer masking PPA version on Ubuntu 16.04</div>
+<div id="pagetitle"><h2>Manual installation of get_iplayer masking PPA version on Ubuntu 16.04</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1701</h2></div><div class="dateline">13-11-2017, 02:43 PM</div>
+</div>
+<div class="message">I have a similar problem: tv.cache not updating on Ubuntu 16.04 Xenial.  However, it doesn't seem to be identical.  There's also a strange reference to v3.00 in the dbug output when I'm using Jon Davies 3.06 ppa.  I have null options file.<br />
+<br />
+Here are a few extracts from the debug:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>DEBUG: Parsing options from /etc/get_iplayer/options:<br />
+get_iplayer v3.00, Copyright (C) 2008-2010 Phil Lewis<br />
+---<br />
+---<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64&#36;<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcalba/programmes/s&#36">http://www.bbc.co.uk/bbcalba/programmes/s&amp;#36</a>;<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcfour/programmes/s&#36">http://www.bbc.co.uk/bbcfour/programmes/s&amp;#36</a>;<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcnews/programmes/s&#36">http://www.bbc.co.uk/bbcnews/programmes/s&amp;#36</a>;<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcone/programmes/sc&#36">http://www.bbc.co.uk/bbcone/programmes/sc&amp;#36</a>;<br />
+.<br />
+---<br />
+---<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcone/programmes/sc&#36">http://www.bbc.co.uk/bbcone/programmes/sc&amp;#36</a>;<br />
+<br />
+INFO: Got 152 programmes for<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcone/programmes/sc&#36">http://www.bbc.co.uk/bbcone/programmes/sc&amp;#36</a>;<br />
+<br />
+INFO: Got 182 programmes for<br />
+.<br />
+DEBUG: Downloading schedule page (1): <a href="http://www.bbc.co.uk/bbcone/programmes/sc&#36">http://www.bbc.co.uk/bbcone/programmes/sc&amp;#36</a>;<br />
+<br />
+INFO: Got 74 programmes for<br />
+---<br />
+---<br />
+DEBUG: Search expires_before = <br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'<br />
+DEBUG: Using NoCookies user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0'<br />
+<br />
+INFO: 0 Matching Programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-11-2017, 04:16 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>here's also a strange reference to v3.00 in the dbug output when I'm using Jon Davies 3.06 ppa</blockquote>
+Not that strange - you're running v3.00, which is no doubt masking get_iplayer from the PPA. Remove it and upgrade to 3.06 if you haven't actually done so.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1701</h2></div><div class="dateline">13-11-2017, 05:37 PM</div>
+</div>
+<div class="message">Thanks for the rapid response.<br />
+<br />
+That was one of my earlier thoughts, so I uninstalled and purged what was there (which synaptic said was 3.06) reinstalled to no avail.  Any other suggestions would be much appreciated.  BTW, it is exactly the same on two Ubuntu 16.04 systems.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; dpkg -s get-iplayer<br />
+Package: get-iplayer<br />
+Status: install ok installed<br />
+Priority: optional<br />
+Section: video<br />
+Installed-Size: 494<br />
+Maintainer: Jon Davies &lt;jon@hedgerows.org.uk&gt;<br />
+Architecture: all<br />
+Version: 3.06-ppa31a~xenial<br />
+Depends: libwww-perl, perl, libxml-simple-perl, libxml-libxml-perl, libmojolicious-perl, libcgi-pm-perl, atomicparsley (&gt;= 0.9.4), ffmpeg<br />
+Conffiles:<br />
+/etc/default/get_iplayer_web_pvr b9584e27941cbccadf3b3ac506479fb4<br />
+/etc/get_iplayer/options ac65b4c08cc405a9dc9b641c45658d69<br />
+Description: get_iplayer: BBC iPlayer Indexing Tool and PVR<br />
+<br />
+EDIT: dpkg spew removed<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-11-2017, 05:51 PM</div>
+</div>
+<div class="message">You'll have to find the rogue get_iplayer script and remove it yourself. You can tell from the version string that it didn't come from the PPA, so Synaptic won't help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1701</h2></div><div class="dateline">13-11-2017, 06:35 PM</div>
+</div>
+<div class="message">That was it:<br />
+<br />
+/usr/bin/get_iplayer is the 3.06, but I found 3.00 in /usr/local/bin/get_iplayer.<br />
+<br />
+Deleted that and ~/get_iplayer/tv.cache, --purge then --refresh and something seems to be happening again.<br />
+<br />
+Thanks again.<br />
+<br />
+PS: I wonder why it moved, but then I never have worked out what all these different /bin/s are about.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Manual installation of get_iplayer masking PPA version on Ubuntu 16.04</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

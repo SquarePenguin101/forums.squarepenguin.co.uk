@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Not getting all episodes of a series.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Not getting all episodes of a series.</div>
+<div id="pagetitle"><h2>Not getting all episodes of a series.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1463</h2></div><div class="dateline">10-11-2016, 10:45 AM</div>
+</div>
+<div class="message">Hi, just discovered get_iplayer and I'm really impressed. Using it to channel iPlayer content through PLEX and its working great.<br />
+<br />
+I am trying to download Topsy and Tim for the kids before the series is removed. <br />
+<br />
+When using iPlayer on the web I get episodes S01E19 to S03E03 however using Get_iplayer I am missing S01 and S02E05 to S02E25<br />
+<br />
+I've tried varying the search terms and refreshing the cache but without result. <br />
+<br />
+Can anyone help? I'm sorry if this is a basic question.<br />
+<br />
+Thanks<br />
+<br />
+Joe</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">10-11-2016, 11:26 AM</div>
+</div>
+<div class="message">Hi joew<br />
+<br />
+There are a number of ways of seeking out programme series such as this. My personal recommendation is to go to the programme page on the BBC website. The easiest way of finding this is by typing in "Topsy and Tim" (without the quotes) into the little white box on the top right of any BBC iplayer page. You might need to do some navigating around but, for example, if you find a page with a programme you can watch (such as "http://www.bbc.co.uk/iplayer/cbeebies/episode/b06cpkw3/topsy-and-tim-series-3-1-camping-weekend"), you will often find underneath a list of other programmes in the series. If you scroll right you will see a box saying "38 available episodes, view full list".<br />
+<br />
+Clicking on this takes you to page "http://www.bbc.co.uk/iplayer/cbeebies/episodes/b0499l2q", which does indeed show all the episodes currently available on the iplayer, spread over two pages. The "b0499l2q" is the programme PID and an easy way of picking up all the programmes is:<br />
+get_iplayer --pid-recursive --pid b0499l2q<br />
+<br />
+It usually works, if not you can load any missing programmes by clicking the relevant page to find the PID , eg "Series 3: 2 . Hospital visit" is "http://www.bbc.co.uk/iplayer/cbeebies/episode/b06dw6w3/topsy-and-tim-series-3-2-hospital-visit". To download that programme:<br />
+get_iplayer --pid b06dw6w3<br />
+<br />
+Hope this helps<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1463</h2></div><div class="dateline">10-11-2016, 12:11 PM</div>
+</div>
+<div class="message">Hi Alan<br />
+<br />
+Thank you for the quick reply. I'm using the Web UI, I don't suppose you know of a way of submitting the recursive command using the UI?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-11-2016, 12:12 PM</div>
+</div>
+<div class="message">Alan has given you a great rundown on how to get those episodes so I won't expand on that.<br />
+<br />
+The reason you're not seeing all the episodes in get_iplayer is due to how programmes are cached over time. The full explanation is in the FAQ (your specific question is in the 'searching' section):<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/faq">https://github.com/get-iplayer/get_iplayer/wiki/faq</a><br />
+<br />
+I know it's a bit of a dense document but it's essential you read through it all to understand some important bits about using get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">10-11-2016, 02:43 PM</div>
+</div>
+<div class="message">The --pid-recursive switch is only meant as a way of "catching up" on the episodes in a series, i.e. it's a meant as a one-off. I don't think you're meant to add it as a "regular" option as you would in the UI.<br />
+<br />
+Actually I don't use the UI because it simply isn't flexible enough, the command line offers far more flexibility - there will be episodes that don't show up using the UI. I just put "Tipsy and Topsy" into the search box in the PVR Manager and didn't get any hits and I have a long running fully populated cache! There is nothing to stop you putting "Tipsy and Topsy" into the search box and then clicking "Add Search to PVR" - that will pick up future programmes. I'm not an expert on the UI but I don't think there is a way of achieving what you require using it! Maybe someone else can confirm.<br />
+<br />
+I know I may be trying to get you to do something in a different way to how you wish to proceed but let me expand. There are lots of programmes that don't ever show up when you do a search by name - for example, Sports programme such as Wimbledon and nature series such as Springwatch and Autumnwatch which have only been "Red Button" broadcast options. I **ALWAYS** go back to the source and that's the BBC, the programme page will tell you everything that is available. The layout of the "Tipsy and Topsy" pages (as with other programmes on CBeebies) is rather different to the manstream channels, where there will normally be an "Episodes" box near the top of a search page and that's the page I aim for. In your case I had to do some more digging around to get to where I wanted. Using this route you have total access to all available programmes, whereas if you do a search by name you only get programmes listed that were broadcast in the past 30-odd days.<br />
+<br />
+Hope that helps.<br />
+<br />
+Alan</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Not getting all episodes of a series.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

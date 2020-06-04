@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web_PVR working spot on, but command line PVR acting up?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Web_PVR working spot on, but command line PVR acting up?</div>
+<div id="pagetitle"><h2>Web_PVR working spot on, but command line PVR acting up?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-562</h2></div><div class="dateline">16-08-2014, 04:05 PM</div>
+</div>
+<div class="message">Hi there,<br />
+<br />
+I've installed get_iplayer on my raspberry pi/Xbian box. It has a usb hard drive attached. The installation went fine, I successfully configured the web-pvr interface to be accessible within the home network, and directed the downloads toa folder on the local usb hard drive.<br />
+<br />
+Everything works as long as it is done from the web-pvr interface, either locally or through another computer on the network. PVR searches are listed in the web interface, download and play fine.<br />
+<br />
+BUT: when I run get_iplayer --pvr from the command line as the standard xbian user, it doesn't list any PVR searches entered through the web interface, and obviously doesn't download anything. Which means that I can't call on the PVR downloading service through CRON, which is annoying. <br />
+<br />
+Could somebody give me pointers as to how to solve this -presumed- user/permission problem? I found two "options" files (one in /home/xbian/.get_iplayer, one in /etc/get_iplayer), I assume there are also two folders for the PVR searches...?<br />
+<br />
+Thanks a lot,<br />
+fechter</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-562</h2></div><div class="dateline">16-08-2014, 04:37 PM</div>
+</div>
+<div class="message">...and I think I might have found the solution, which I can leave here for future reference.<br />
+<br />
+I started the web_pvr server throuch rc.local, which obviously (in retrospect) runs the server as root. Which is silly, unsafe &amp; not recommended, especially with the server listening on the local network.<br />
+<br />
+Apart from that it causing the CLI PVR call-up to fail, since that was run as the standard xbian user, and therefor not accessing the PVR searches saved as root.<br />
+<br />
+Problem solved by putting the following into rc.local: su xbian -c "/usr/bin/get_iplayer_web_pvr &amp;"<br />
+...which runs the web server as xbian. The PVR command is then run as a cron job, as the xbian user.<br />
+<br />
+Thanks for making me think this through, and a huge thanks for maintaining get_iplayer!<br />
+fechter</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2014, 06:20 PM</div>
+</div>
+<div class="message">Just a confirmation that you did indeed spot the problem.  If you're going to share pvr searches between CLI and Web PVR, the best thing is to create them with same user account in both.  That's because the pvr searches are by default saved in &#36;HOME/.get_iplayer/pvr for the current user.  Technically, you could create a shared location (referenced via <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--profile-dir</code></div></div>) accessible to both root and regular user, but that is a bit fragile.  So, if you're launching the web pvr server at boot, you'll want to invoke it as a regular user as above.  It generally is a good idea to run the service as a non-root user.  As always, make sure the service isn't accessible outside your local network.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Web_PVR working spot on, but command line PVR acting up?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

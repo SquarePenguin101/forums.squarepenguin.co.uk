@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot Download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot Download</div>
+<div id="pagetitle"><h2>Cannot Download</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-31-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">01-09-2013, 10:25 AM</div>
+</div>
+<div class="message">Howdy,<br />
+<br />
+I was invited at <a href="http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/">http://www.christopherdowning.co.uk/2012...-tutorial/</a> to post my problems here.<br />
+<br />
+This is what I posted:<br />
+<br />
+---<br />
+<br />
+andrew August 30, 2013 at 10:42 | Permalink Reply<br />
+I re-installed get_iplayer last night. Latest version 2.83 and 2.0.6 vlcplayer but still I get this:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: rtmpdump/flvstreamer 1.8 or later is required â please upgrade<br />
+INFO: skipping flashlow2 mode<br />
+ERROR: Failed to record âQuadrophenia â Quadrophenia: Can You See the Real Me? (b01k83bl)â</code></div></div><br />
+<br />
+It goes through all the options and then finishes with those lines. It seems the problem is the flvstreamer:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: You must specify a hostname (âhost) or url (-r ârtmp://host[:port]/playpathâ) containing a hostname</code></div></div><br />
+Can anyone help, please? Thanks.<br />
+<br />
+admin<br />
+admin August 30, 2013 at 15:45 | Permalink Reply<br />
+Which version of rtmpdump or flvstreamer are you using? The âWARNING: rtmpdump/flvstreamer 1.8 or later is required â please upgradeâ error seems to suggest you have an old version.<br />
+<br />
+andrew<br />
+andrew August 30, 2013 at 16:30 | Permalink Reply<br />
+The files which came with get_iplayer were the latest versions already but I downloaded the 2.4 version anyway. Before installing last night I removed the old version rmtp stuff when I got the option. I also added the latest flvstreamer to the RTMPDump directory. My guess was this is being used when I run get_iplayer:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>29/08/2013 14:49 136,225 flvstreamer_win32_latest.exe<br />
+09/01/2013 17:35 8,516 README.txt<br />
+09/01/2013 17:35 11,179 rtmpdump.1.html<br />
+09/01/2013 18:13 478,772 rtmpdump.exe<br />
+09/01/2013 18:13 473,757 rtmpgw.exe<br />
+09/01/2013 18:13 466,906 rtmpsrv.exe<br />
+09/01/2013 18:13 466,388 rtmpsuck.exe</code></div></div><br />
+<br />
+Every time I run one of the exes it screams for a hostname. Any ideas of what I should remove or add greatly welcome. Thanks.<br />
+<br />
+admin<br />
+admin August 30, 2013 at 16:52 | Permalink Reply<br />
+Iâm not that familiar with get_iplayer on Windows, so Iâm not sure I can be much help. You donât need both flvstreamer and rtmpdump though, they do the same job; you might as well delete flvstreamer because itâs basically just an old version of rtmpdump. Where did you download the Windows get_iplayer installer from?<br />
+<br />
+andrew<br />
+andrew August 30, 2013 at 18:59 | Permalink Reply<br />
+I got the files from <a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe">http://www.infradead.org/get_iplayer_win...latest.exe</a> if I remember correctly.<br />
+<br />
+I have removed flvstreamer â it makes no difference. So I have narrowed it down to the same issue I had from the start.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&#92;RTMPDump&gt;rtmpdump<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+ERROR: You must specify a hostname (âhost) or url (-r ârtmp://host[:port]/playpathâ) containing a hostname</code></div></div><br />
+<br />
+I checked â there is not rtmpdump apart from this version, which is clearly newer than 1.8 â¦<br />
+<br />
+Any ideas? Thanks.<br />
+<br />
+admin<br />
+admin August 30, 2013 at 20:48 | Permalink Reply<br />
+When you run get_iplayer try using the --rtmpdump option, followed by the path to RTMPDump. I think it might be trying to use an older version, which is why you get the â1.8 or later is required â please upgradeâ error.<br />
+<br />
+andrew<br />
+andrew August 31, 2013 at 10:36 | Permalink Reply<br />
+Thanks for your patience.<br />
+<br />
+I removed everything from the RTMPDump directory, downloaded this:<br />
+<a href="http://rtmpdump.mplayerhq.hu/download/rtmpdump-2.4-git-010913-windows.zip">http://rtmpdump.mplayerhq.hu/download/rt...indows.zip</a><br />
+<br />
+and dropped the files into said directory. I then pointed get_iplayer to the directory via ârtmpdump as suggested and still get the original error (WARNING: rtmpdump/flvstreamer 1.8 or later is required â please upgrade).<br />
+<br />
+I do not get this at all.<br />
+<br />
+SquarePenguin<br />
+SquarePenguin August 31, 2013 at 10:48 | Permalink Reply<br />
+Hello Andrew,<br />
+<br />
+Iâm the site admin for squarepenguin.co.uk, a website and support forum dedicated to get_iplayer.<br />
+<br />
+Would you mind popping over to the forums and posting there? Youâll be able to post screenshots and logs after you register and user-2 (get_iplayers maintainer) will see your post and offer expert advice.<br />
+<br />
+If you do pop over to the forum, please try to provide the following info:<br />
+<br />
+1) The EXACT re-installation procedure you undertook<br />
+2) The EXACT commands you are issuing to get_iplayer<br />
+3) Report the finding of the RTMP port checker at this link:<br />
+<br />
+<a href="http://www.therealtimeweb.com/index.cfm/2004/10/2/fms-port-tester?CFID=3217715&amp;CFTOKEN=69907408">http://www.therealtimeweb.com/index.cfm/...N=69907408</a><br />
+<br />
+Weâll probably ask you more questions as things get narrowed down but that should get us started.<br />
+<br />
+---<br />
+<br />
+1) I downloaded the latest version of VLC media player, installed it (it removed the old version), then installed the latest get_iplayer (it removed the old version).<br />
+<br />
+2) get_iplayer --get 595 --output d:/ --tvmode=flashhd, flashvhigh<br />
+<br />
+3) Attached are the port test results.<br />
+<br />
+<br />
+Many thanks in advance,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-09-2013, 10:56 AM</div>
+</div>
+<div class="message">user-2 might pop by at some point, but to get started:<br />
+<br />
+You say you pointed get_iplayer to RTMPdump via <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--rtmpdump</code></div></div> option. Can you post the output of the following command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-show</code></div></div><br />
+Also, run the altered command below to try and re-download that programme you want. The command below includes the --verbose command which if I remember rightly will let us see a bit more of what is going on...<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer âget 595 âoutput d:/ --tvmode=best --verbose</code></div></div><br />
+Post the results back here. Don't forget to use the 'code' button on the bar above to help format your response.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">01-09-2013, 11:51 AM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --prefs-show<br />
+Options in 'C:&#92;Users&#92;hammersteen/.get_iplayer/options'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtmptvopts = --swfVfy http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf</code></div></div><br />
+<br />
+---<br />
+<br />
+It goes through all the quality versions and finishes with:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Trying flashlow2 mode to record tv: Horizon - 2013-2014: What's Killing Our Bees? A Horizon Special<br />
+INFO: Attempt number: 1 / 50<br />
+WARNING: Required rtmpdump does not exist - cannot download Flash audio/video<br />
+DEBUG: Record using flashlow2 mode return code: 'next'<br />
+INFO: skipping flashlow2 mode<br />
+ERROR: Failed to record 'Horizon - 2013-2014: What's Killing Our Bees? A Horizon Special (b037y0zf)'</code></div></div><br />
+<br />
+---<br />
+<br />
+Thanks,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-09-2013, 12:17 PM</div>
+</div>
+<div class="message">Two things: <br />
+<br />
+1) You are running version 2.83 of get_iplayer and you need to revert the changes you made to SWF verification in order to circumvent the error code 256 failure under the last version of get_iplayer.<br />
+<br />
+2) There is a possibility here that somehow during the upgrade procedure, the updated RTMPdump was not included in PATH. <br />
+<br />
+I would recommend first that you completely uninstall get_iplayer. Then, reinstall it from the Windows installer <a href="http:///guides/windows-quick-install-guide/">here</a>.<br />
+<br />
+Reinstalling should take care of number 1, and might have an effect on number 2. Try it and report your findings. If you have a lot of PVR's saved and wish to retain your download history, you can keep them by copying the 'pvr' folder and 'download_history' file from the .get_iplayer hidden folder within your user directory, and then pasting them across after the re-install.<br />
+<br />
+Based on your reply above, the path to your .get_iplayer folder should be: C:\Users\hammersteen\.get_iplayer</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">01-09-2013, 05:17 PM</div>
+</div>
+<div class="message">Completely uninstalled all components, deleted get_iplayer directory, deleted system files. Restarted system. Downloaded everything from your link. Result:<br />
+<br />
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification<br />
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade<br />
+INFO: skipping flashlow2 mode<br />
+ERROR: Failed to record 'Octonauts: Series 1 - 30. The Giant Jelly (b00wnw3d)'<br />
+<br />
+Frankly, I am getting tired of this. It makes no sense whatsoever.<br />
+<br />
+Thanks,<br />
+Andrew</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2013, 05:50 PM</div>
+</div>
+<div class="message">A few additions to SP's instructions:<br />
+<br />
+1. When you uninstall get_iplayer you are offered the choice of deleting your preferences, etc.  If you did not elect to do so, you will need to take an additional step to remove the now-unnecessary fix for "error code 256".  See the "Reverting Your Changes" section in <a href="https://squarepenguin.co.uk/wiki/known-issues/swfurl/">this document</a>.  <br />
+<br />
+2. After uninstalling, delete the directory <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer</code></div></div> if it wasn't deleted by the uninstaller.  It may not be crucial, but it ensures a clean slate for re-install.<br />
+<br />
+3. If it still doesn't work after re-install, don't be tempted to monkey around with the installed files.  Your original problem had nothing to do with the rtmpdump installation per se, and then you somehow wound up with no rtmpdump at all, so leave the installation directory alone while you test things.<br />
+<br />
+4. After re-installing, do as SP instructed and run your download command with the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> option.  Also send the output from the command below, which shows system preferences created by the installer: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-options</code></div></div><br />
+<br />
+5. If you're having the same problem after re-install, open the get_iplayer command prompt (Get_iPlayer shortcut from the Start menu) and run:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -e "system('.&#92;RTMPDump&#92;rtmpdump.exe --help')"</code></div></div><br />
+<br />
+Something on your system is interfering with the launch of rtmpdump.exe from within get_iplayer, and this test command attempts to mimic that environment.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-09-2013, 05:53 PM</div>
+</div>
+<div class="message">Yep, that's annoying alright. <br />
+<br />
+Perhaps we'll need to specify the path to RTMPDump within get_iplayer's options. Not sure why that need would have arisen, but we can give it a try.<br />
+<br />
+The following command should add the exact path to RTMPDump to your preferences:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --rtmpdump "C:&#92;Program Files (x86)&#92;get_iplayer&#92;RTMPDump&#92;rtmpdump.exe"</code></div></div><br />
+You may need to adjust it for your particular install, but give it a try and let me know what happens when you attempt a download after adding this preference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">04-09-2013, 01:33 PM</div>
+</div>
+<div class="message">Thanks for suggestions. Sorry for late reply but I have been busy and what I wanted to iplayer has now expired. Anyway, Tried everything above. No change.<br />
+<br />
+---<br />
+<br />
+<code>
+C:\Program Files\get_iplayer&gt;get_iplayer --prefs-show
+Options in 'C:\Users\hammersteen/.get_iplayer/options'
+        rtmpdump = c:/Program Files/get_iplayer/RTMPDump
+
+---
+
+        atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+        ffmpeg = .\FFmpeg\ffmpeg-1.2-win32-static\bin\ffmpeg.exe
+        lame = .\LAME\lame.exe
+        mmsnothread = 1
+        mplayer = .\MPlayer\mplayer-svn-36348\mplayer.exe
+        nopurge = 1
+        output = C:\Users\hammersteen\Desktop\iPlayer Recordings
+        rtmpdump = c:/Program Files/get_iplayer/RTMPDump
+        verbose = 1
+        vlc = .\VLC\vlc-2.0.6\vlc.exe
+
+INFO: Search args: '614'
+INFO: Additionally getting cached programme data for tv
+INFO: Got 1010 file cache entries for tv
+Matches:
+614:    Pointless: Series 6 - Episode 21, BBC One, Entertainment,Games &amp; Quizzes
+,TV, default
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Getting page <a href="http://feeds.bbc.co.uk/iplayer/episode/b01dlvpk">http://feeds.bbc.co.uk/iplayer/episode/b01dlvpk</a>
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b01dlvpk.rdf">http://www.bbc.co.uk/programmes/b01dlvpk.rdf</a>
+INFO: iPlayer metadata URL = <a href="http://www.bbc.co.uk/iplayer/playlist/b01dlvpk">http://www.bbc.co.uk/iplayer/playlist/b01dlvpk</a>
+INFO: Getting page <a href="http://www.bbc.co.uk/iplayer/playlist/b01dlvpk">http://www.bbc.co.uk/iplayer/playlist/b01dlvpk</a>
+INFO: Using Not Live standard TV and Radio: b01dlvph
+INFO: Version: default, VersionPid: b01dlvph, Duration: 2700
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph?cb">http://www.bbc.co.uk/mediaselector/4/mti...01dlvph?cb</a>=
+60183
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_lo/limelight?cb=24176
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_lo/akamai?cb=38070
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_high/limelight?cb=09585
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_high/akamai?cb=13003
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_vlo/limelight?cb=26172
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv_vlo/akamai?cb=34506
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv/limelight?cb=61642
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/b01dlvph/ipl">http://www.bbc.co.uk/mediaselector/4/mti...1dlvph/ipl</a>
+ayer_streaming_h264_flv/akamai?cb=86855
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 3
+96kbps stream (CDN: akamai/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 3
+96kbps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: akamai/10)
+INFO: Found mode rtsplow1: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x2
+24 396kbps stream (CDN: limelight/5)
+INFO: Found mode rtsplow2: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x2
+24 396kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode subtitles1: (captions) http stream (CDN: http/10)
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b01dlvph.rdf">http://www.bbc.co.uk/programmes/b01dlvph.rdf</a>
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Will search for versions: default
+INFO: Mode list: flashvhigh,flashhigh,flashstd,flashnormal,flashlow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow
+1,flashlow2 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEaBdtdedTcgc1a9dfc2aVascrcObUcBb6-bsjYFW-bWG-IquGEqBpLD
+qEozH&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-b01dlvph_b01dlvph_137796638
+1814.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgef
+cs.net&amp;undefined&amp;auth=daEaBdtdedTcgc1a9dfc2aVascrcObUcBb6-bsjYFW-bWG-IquGEqBpLDq
+EozH&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966381
+814.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daE
+aBdtdedTcgc1a9dfc2aVascrcObUcBb6-bsjYFW-bWG-IquGEqBpLDqEozH&amp;aifp=v001&amp;slist=secu
+re/1500kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966381814.mp4, authString: auth
+=daEaBdtdedTcgc1a9dfc2aVascrcObUcBb6-bsjYFW-bWG-IquGEqBpLDqEozH&amp;aifp=v001&amp;slist=
+secure/1500kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966381814.mp4, swfUrl: http
+://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_
+emp.swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointless_Series_
+6_-_Episode_21_b01dlvpk_default.partial.mp4, file_done: C:\Users\hammersteen\Des
+ktop\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashvhigh1 mode return code: 'next'
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/1500kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966381814.mp4&amp;et=1378305039
+&amp;fmta-token=2a8d3d12bb84b15bb6ea6f07e325076c21e5c3ce8679cf6e303f00c55fdb7535&amp;aif
+p=v001&amp;slist=mp4:iplayerstream/secure_auth/1500kbps/modav/bUnknown-b01dlvph_b01d
+lvph_1377966381814.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=a
+dobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUn
+known-b01dlvph_b01dlvph_1377966381814.mp4&amp;et=1378305039&amp;fmta-token=2a8d3d12bb84b
+15bb6ea6f07e325076c21e5c3ce8679cf6e303f00c55fdb7535, application: a1414/e3?as=ad
+obe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnk
+nown-b01dlvph_b01dlvph_1377966381814.mp4&amp;et=1378305039&amp;fmta-token=2a8d3d12bb84b1
+5bb6ea6f07e325076c21e5c3ce8679cf6e303f00c55fdb7535, authString: as=adobe-hmac-sh
+a256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-b01dlv
+ph_b01dlvph_1377966381814.mp4&amp;et=1378305039&amp;fmta-token=2a8d3d12bb84b15bb6ea6f07e
+325076c21e5c3ce8679cf6e303f00c55fdb7535, swfUrl: <a href="http://www.bbc.co.uk/emp/releas">http://www.bbc.co.uk/emp/releas</a>
+es/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\ham
+mersteen\Desktop\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_def
+ault.partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Poi
+ntless_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashvhigh2 mode return code: 'next'
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEa2cMcsa4bkaSaUdFdud7acaYb3b2bGbS-bsjYFX-bWG-FptFInCoFB
+rEtzD&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380
+507.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEa2cMcsa4bkaSaUdFdud7acaYb3b2bGbS-bsjYFX-bWG-FptFInCoFBrE
+tzD&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-b01dlvph_b01dlvph_137796638050
+7.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEa2
+cMcsa4bkaSaUdFdud7acaYb3b2bGbS-bsjYFX-bWG-FptFInCoFBrEtzD&amp;aifp=v001&amp;slist=secure
+/800kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380507.mp4, authString: auth=da
+Ea2cMcsa4bkaSaUdFdud7acaYb3b2bGbS-bsjYFX-bWG-FptFInCoFBrEtzD&amp;aifp=v001&amp;slist=sec
+ure/800kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380507.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointless_Series_6_-_
+Episode_21_b01dlvpk_default.partial.mp4, file_done: C:\Users\hammersteen\Desktop
+\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashhigh1 mode return code: 'next'
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/800kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380507.mp4&amp;et=1378305041&amp;
+fmta-token=076b64704880a3a4a8019ef83768a7c1a7b3759a080dfc838cfb256d1bd10b70&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/800kbps/modav/bUnknown-b01dlvph_b01dlv
+ph_1377966380507.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnkno
+wn-b01dlvph_b01dlvph_1377966380507.mp4&amp;et=1378305041&amp;fmta-token=076b64704880a3a4
+a8019ef83768a7c1a7b3759a080dfc838cfb256d1bd10b70, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown
+-b01dlvph_b01dlvph_1377966380507.mp4&amp;et=1378305041&amp;fmta-token=076b64704880a3a4a8
+019ef83768a7c1a7b3759a080dfc838cfb256d1bd10b70, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-b01dlvph_b0
+1dlvph_1377966380507.mp4&amp;et=1378305041&amp;fmta-token=076b64704880a3a4a8019ef83768a7
+c1a7b3759a080dfc838cfb256d1bd10b70, swfUrl: <a href="http://www.bbc.co.uk/emp/releases/ip">http://www.bbc.co.uk/emp/releases/ip</a>
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.
+partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointles
+s_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashhigh2 mode return code: 'next'
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEdDciaEbhbwccbDanbgc3cDbLckcQcFb5-bsjYFV-bWG-KptDAoDoHD
+pFwwF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966382
+498.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEdDciaEbhbwccbDanbgc3cDbLckcQcFb5-bsjYFV-bWG-KptDAoDoHDpF
+wwF&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-b01dlvph_b01dlvph_137796638249
+8.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEdD
+ciaEbhbwccbDanbgc3cDbLckcQcFb5-bsjYFV-bWG-KptDAoDoHDpFwwF&amp;aifp=v001&amp;slist=secure
+/480kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966382498.mp4, authString: auth=da
+EdDciaEbhbwccbDanbgc3cDbLckcQcFb5-bsjYFV-bWG-KptDAoDoHDpFwwF&amp;aifp=v001&amp;slist=sec
+ure/480kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966382498.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointless_Series_6_-_
+Episode_21_b01dlvpk_default.partial.mp4, file_done: C:\Users\hammersteen\Desktop
+\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashstd1 mode return code: 'next'
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/480kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966382498.mp4&amp;et=1378305038&amp;
+fmta-token=3e04f3d7f73de118eb644928a01ec528af837f17232850eaebeeff9626182776&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/480kbps/modav/bUnknown-b01dlvph_b01dlv
+ph_1377966382498.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnkno
+wn-b01dlvph_b01dlvph_1377966382498.mp4&amp;et=1378305038&amp;fmta-token=3e04f3d7f73de118
+eb644928a01ec528af837f17232850eaebeeff9626182776, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown
+-b01dlvph_b01dlvph_1377966382498.mp4&amp;et=1378305038&amp;fmta-token=3e04f3d7f73de118eb
+644928a01ec528af837f17232850eaebeeff9626182776, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-b01dlvph_b0
+1dlvph_1377966382498.mp4&amp;et=1378305038&amp;fmta-token=3e04f3d7f73de118eb644928a01ec5
+28af837f17232850eaebeeff9626182776, swfUrl: <a href="http://www.bbc.co.uk/emp/releases/ip">http://www.bbc.co.uk/emp/releases/ip</a>
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.
+partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointles
+s_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashstd2 mode return code: 'next'
+INFO: skipping flashstd2 mode
+INFO: Trying flashlow1 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEcTc6b5cwbYavddcYaqdPcTa0dyalbibr-bsjYFX-bWG-GptEHpyoFB
+oHqyC&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380
+791.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEcTc6b5cwbYavddcYaqdPcTa0dyalbibr-bsjYFX-bWG-GptEHpyoFBoH
+qyC&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-b01dlvph_b01dlvph_137796638079
+1.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEcT
+c6b5cwbYavddcYaqdPcTa0dyalbibr-bsjYFX-bWG-GptEHpyoFBoHqyC&amp;aifp=v001&amp;slist=secure
+/400kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380791.mp4, authString: auth=da
+EcTc6b5cwbYavddcYaqdPcTa0dyalbibr-bsjYFX-bWG-GptEHpyoFBoHqyC&amp;aifp=v001&amp;slist=sec
+ure/400kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380791.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointless_Series_6_-_
+Episode_21_b01dlvpk_default.partial.mp4, file_done: C:\Users\hammersteen\Desktop
+\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashlow1 mode return code: 'next'
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Pointless: Series 6 - Episode 21
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Pointless_Series_6_-_Episode_21_b01dlvpk_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: c:/Program Files/get_iplayer/RTMPDump version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/400kbps/modav/bUnknown-b01dlvph_b01dlvph_1377966380791.mp4&amp;et=1378305040&amp;
+fmta-token=5afb6535cc8e66dfe2f21a6fffb0775955d68de4dcb171e7588932bcc7d831d4&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/400kbps/modav/bUnknown-b01dlvph_b01dlv
+ph_1377966380791.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnkno
+wn-b01dlvph_b01dlvph_1377966380791.mp4&amp;et=1378305040&amp;fmta-token=5afb6535cc8e66df
+e2f21a6fffb0775955d68de4dcb171e7588932bcc7d831d4, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown
+-b01dlvph_b01dlvph_1377966380791.mp4&amp;et=1378305040&amp;fmta-token=5afb6535cc8e66dfe2
+f21a6fffb0775955d68de4dcb171e7588932bcc7d831d4, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-b01dlvph_b0
+1dlvph_1377966380791.mp4&amp;et=1378305040&amp;fmta-token=5afb6535cc8e66dfe2f21a6fffb077
+5955d68de4dcb171e7588932bcc7d831d4, swfUrl: <a href="http://www.bbc.co.uk/emp/releases/ip">http://www.bbc.co.uk/emp/releases/ip</a>
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Pointless_Series_6_-_Episode_21_b01dlvpk_default.
+partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pointles
+s_Series_6_-_Episode_21_b01dlvpk_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashlow2 mode return code: 'next'
+INFO: skipping flashlow2 mode
+ERROR: Failed to record 'Pointless: Series 6 - Episode 21 (b01dlvpk)'
+</code>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">04-09-2013, 03:42 PM</div>
+</div>
+<div class="message">You haven't accurately referenced RTMPdump in your preferences, which you need to do.<br />
+<br />
+If you take a look at the first few lines after the output of the options command you pasted in your last reply, you'll see that Atomic Parsley and Lame etc all reference an .exe.<br />
+<br />
+You need to do the same with RTMPdump and reference the actual .exe, not the directory.<br />
+<br />
+If you install is in 'Program Files' directory, this should work:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --rtmpdump "C:&#92;Program Files&#92;get_iplayer&#92;RTMPDump&#92;rtmpdump.exe"</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2013, 04:08 PM</div>
+</div>
+<div class="message">andrew: I'm sorry to contradict SP, but your original problem probably had nothing to do with your preferences, so there is no need to change them.  As you've seen, get_iplayer will warn you if it can't locate rtmpdump.  Delete this file:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;hammersteen&#92;.get_iplayer&#92;options</code></div></div><br />
+to return your installation to a clean state.  Then do as I recommended in #4 and #5 in my earlier post.  As I said there, you have a problem that is external to get_iplayer, something that is interfering with the execution of rtmpdump by get_iplayer.  The root cause is something peculiar to your machine, and there are several possibilities, so you need to run those tests so we can look for clues that might narrow the field.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">04-09-2013, 04:14 PM</div>
+</div>
+<div class="message">Ah, I didn't see DP massive post (I must be blind or have posted at the same time or something) so ignore me and go with their advice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">04-09-2013, 05:22 PM</div>
+</div>
+<div class="message">I tried #4 and #5. As I said in my previous post - nothing makes a difference. My theory is that it uses the right rtmpdump.exe (it is the only such file on my system as I established early on (equally flvstreamer.exe)) so we are missing something else.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2013, 05:36 PM</div>
+</div>
+<div class="message">Let me be explicit:  You need to show us the output from the three commands I asked you to run in #4 and #5, using a known good configuration as I specified in my last post.  We already know it's the only rtmpdump on your system. Again, your problem has nothing to do with that.  We also already know rtmpdump is not working.  It is rare, but you're not the only one who has encountered this issue.  However, we're hoping you will be first one to help us diagnose the problem.  It may come to nothing, but without that command output we can't even guess at the cause.  We can't see what is happening on your machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">04-09-2013, 06:58 PM</div>
+</div>
+<div class="message">Everything you know there is<br />
+<br />
+I posted the #4 output in my post above (prior to the --verbose output). It is not show-options but -prefs-show.<br />
+<br />
+C:\Program Files\get_iplayer&gt;get_iplayer âprefs-show<br />
+Options in âC:\Users\hammersteen/.get_iplayer/optionsâ<br />
+rtmpdump = c:/Program Files/get_iplayer/RTMPDump<br />
+<br />
+---<br />
+<br />
+As for #5:<br />
+<br />
+C:\Program Files\get_iplayer&gt;perl -e "system('.\RTMPDump\rtmpdump.exe --help')"<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+<br />
+.\RTMPDump\rtmpdump.exe: This program dumps the media content streamed over RTMP<br />
+.<br />
+<br />
+--help|-h               Prints this help screen.<br />
+--url|-i url            URL with options included (e.g. rtmp://host[:port]/path<br />
+swfUrl=url tcUrl=url)<br />
+--rtmp|-r url           URL (e.g. rtmp://host[:port]/path)<br />
+--host|-n hostname      Overrides the hostname in the rtmp url<br />
+--port|-c port          Overrides the port in the rtmp url<br />
+--socks|-S host:port    Use the specified SOCKS proxy<br />
+--protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RT<br />
+MPE)<br />
+--playpath|-y path      Overrides the playpath parsed from rtmp url<br />
+--playlist|-Y           Set playlist before playing<br />
+--swfUrl|-s url         URL to player swf file<br />
+--tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")<br />
+<br />
+--pageUrl|-p url        Web URL of played programme<br />
+--app|-a app            Name of target app on server<br />
+--swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)<br />
+--swfsize|-x num        Size of the decompressed SWF file, required for SWFVerif<br />
+ication<br />
+--swfVfy|-W url         URL to player swf file, compute hash/size automatically<br />
+--swfAge|-X days        Number of days to use cached SWF hash before refreshing<br />
+--auth|-u string        Authentication string to be appended to the connect stri<br />
+ng<br />
+--conn|-C type:data     Arbitrary AMF data to be appended to the connect string<br />
+                        B:boolean(0|1), S:string, N:number, O:object-flag(0|1),<br />
+                        Z:(null), NB:name:boolean, NS:name:string, NN:name:numbe<br />
+r<br />
+--flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")<br />
+--live|-v               Save a live stream, no --resume (seeking) of live stream<br />
+s possible<br />
+--subscribe|-d string   Stream name to subscribe to (otherwise defaults to playp<br />
+ath if live is specifed)<br />
+--realtime|-R           Don't attempt to speed up download via the Pause/Unpause<br />
+ BUFX hack<br />
+--flv|-o string         FLV output file name, if the file name is - print stream<br />
+ to stdout<br />
+--resume|-e             Resume a partial RTMP download<br />
+--timeout|-m num        Timeout connection num seconds (default: 30)<br />
+--start|-A num          Start at num seconds into stream (not valid when using -<br />
+-live)<br />
+--stop|-B num           Stop at num seconds into stream<br />
+--token|-T key          Key for SecureToken response<br />
+--jtv|-j JSON           Authentication token for Justin.tv legacy servers<br />
+--hashes|-#             Display progress with hashes, not with the byte counter<br />
+--buffer|-b             Buffer time in milliseconds (default: 36000000)<br />
+--skip|-k num           Skip num keyframes when looking for last keyframe to res<br />
+ume from. Useful if resume fails (default: 0)<br />
+<br />
+--quiet|-q              Suppresses all command output.<br />
+--verbose|-V            Verbose command output.<br />
+--debug|-z              Debug level command output.<br />
+If you don't pass parameters for swfUrl, pageUrl, or auth these properties will<br />
+not be included in the connect packet.<br />
+<br />
+---<br />
+<br />
+Any use?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2013, 07:56 PM</div>
+</div>
+<div class="message">Thanks for doing #5, but you need to do the rest as well.  I asked to delete your options file for a reason, I asked you to then re-run your download with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> for a reason, and I asked you to use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--show-options</code></div></div> for a reason.  I need to see what happens when you run get_iplayer in a clean environment that I can see hasn't been altered by you in any way after installation.  None of your previous posts show that.  <br />
+<br />
+One more thing: Please send your output as attachments to your reply, rather than pasting the rather voluminous text into the post.  It will make it easier for me to compare with other logs and spare a lot of scrolling.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">05-09-2013, 02:17 PM</div>
+</div>
+<div class="message">Right. Deleted the options file. <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-show</code></div></div> produces nothing now. Here is the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> output:<br />
+<br />
+[Edited - text move to text file]<br />
+<br />
+Anything else? There have been many suggestions, I think I have followed them all up.<br />
+<br />
+Thanks,<br />
+Andrew<br/><br/>
+<a href="static/thread-31-Andrew_RTMPdump-Problem_Verbose.txt">Andrew_RTMPdump-Problem_Verbose.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">05-09-2013, 02:19 PM</div>
+</div>
+<div class="message">PS: I used the code button but somehow it was ignored.
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">05-09-2013, 03:08 PM</div>
+</div>
+<div class="message">Hi Andrew,<br />
+<br />
+Stick with us as we try and work this out for you, it would be great to tie down exactly what is going on here.<br />
+<br />
+So, a few things:<br />
+<br />
+1) I have edited your previous post to remove the text and place it in a text file. <br />
+<br />
+2) Please paste any future large outputs to a text file using a text editor on your computer because it will make things much easier to read and compare and mean it takes less time to get back to you. <br />
+<br />
+You can save the file and upload it to this forum when writing a post by using the 'Choose File' button below the reply box.<br />
+<br />
+Don't use Word or anything like that, it would need to be a plain text editor.<br />
+<br />
+If you need a text editor, I recommend <a href="http://notepad-plus-plus.org/download/">Notepad++</a> - it's free.<br />
+<br />
+3) When you want to display a command correctly, you can write it out, then select it and once it's selected you can hit the 'code' button above the reply box. <br />
+<br />
+This will wrap the selection in backticks which tells the forum to display the selection as code with a formatted background and it also keeps the exact text you entered.<br />
+<br />
+4) You said in your reply that:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>"<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-show</code></div></div> produces nothing now"</blockquote>
+<br />
+You need to use the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--show-options</code></div></div> and post the output here, don't use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-show</code></div></div> please.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--show-options</code></div></div> is a different command with a different function and we need to see that output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-58</h2></div><div class="dateline">05-09-2013, 03:19 PM</div>
+</div>
+<div class="message">Ok.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --show-options<br />
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Options from Files:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atomicparsley = .&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ffmpeg = .&#92;FFmpeg&#92;ffmpeg-1.2-win32-static&#92;bin&#92;ffmpeg.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lame = .&#92;LAME&#92;lame.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mmsnothread = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mplayer = .&#92;MPlayer&#92;mplayer-svn-36348&#92;mplayer.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nopurge = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output = C:&#92;Users&#92;hammersteen&#92;Desktop&#92;iPlayer Recordings<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtmpdump = .&#92;RTMPDump&#92;rtmpdump.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vlc = .&#92;VLC&#92;vlc-2.0.6&#92;vlc.exe<br />
+<br />
+Options from Command Line:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showoptions = 1<br />
+<br />
+Options Used:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atomicparsley = .&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ffmpeg = .&#92;FFmpeg&#92;ffmpeg-1.2-win32-static&#92;bin&#92;ffmpeg.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lame = .&#92;LAME&#92;lame.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mmsnothread = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mplayer = .&#92;MPlayer&#92;mplayer-svn-36348&#92;mplayer.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nopurge = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output = C:&#92;Users&#92;hammersteen&#92;Desktop&#92;iPlayer Recordings<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rtmpdump = .&#92;RTMPDump&#92;rtmpdump.exe<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showoptions = 1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vlc = .&#92;VLC&#92;vlc-2.0.6&#92;vlc.exe<br />
+<br />
+Search Args: .*</code></div></div><br />
+<br />
+<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-09-2013, 04:20 PM</div>
+</div>
+<div class="message">SP - Thanks for the edit and the follow-up.<br />
+<br />
+More suggestions:<br />
+<br />
+1. First, we need to check other methods of invoking rtmpdump from inside perl.  Open the get_iplayer command prompt and run these 2 commands:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -e "system('.&#92;RTMPDump&#92;rtmpdump.exe', '--help', '2&gt;&amp;1')"</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -e "print</code></div></div> `<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>.&#92;&#92;RTMPDump&#92;&#92;rtmpdump.exe&nbsp;&nbsp;--help 2&gt;&amp;1</code></div></div>`<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"</code></div></div><br />
+The formatting of the second command will look a bit odd here because I couldn't include the backticks in the command inside the backticks used to format a code block in this forum.  You should still be able to copy and paste it verbatim from your browser to the get_iplayer command prompt<br />
+<br />
+If either of those commands does not return the same output (i.e., the rtmpdump help text) as the earlier perl command I asked you to run, report what - if anything - it does produce as output.<br />
+<br />
+2. If you are running any kind of antivirus package, including Windows Defender, disable it completely to be sure it isn't doing any kind of on-access scanning.  Then try to download a programme with get_iplayer.  Regardless of whether or not that works, also take a look at your antivirus log (if keeps one) to see if it may have been interfering with rtmpdump or perl.<br />
+<br />
+3. You can try replacing the rtmpdump installed with get_iplayer.  I know you did this once before, but you only replaced it with the same version already installed.  Try this build instead:<br />
+<br />
+<a href="https://bitbucket.org/dinkypumpkin/rtmpdump/downloads/rtmpdump-v2.4-70-gf3605f5-get_iplayer.zip">https://bitbucket.org/dinkypumpkin/rtmpd...player.zip</a><br />
+<br />
+This is a bit of a reach since we know the installed version of rtmpdump on your machine will run outside get_iplayer, but it's quick to test.<br />
+<br />
+4. It's possible there is a library on your system that is incompatible with the version of Perl bundled with the installer.  You can roll back to the previous version to test this.  First, do a complete uninstall of get_iplayer and delete <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer</code></div></div>, as before.  Then download and run the previous incarnation of the installer:<br />
+<br />
+<a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_4.5.exe">http://www.infradead.org/get_iplayer_win...up_4.5.exe</a><br />
+<br />
+It will download the current versions of rtmpdump and other dependencies, but it will install an older version of Perl (5.12.3).  It's only speculation that this might help, but I do know there were no reports such as yours with the older version of Perl.  It's worth a try.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-31-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot Download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

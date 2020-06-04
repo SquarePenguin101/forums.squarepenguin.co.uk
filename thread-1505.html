@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Index Numbers Overlapping in TV and Radio Caches when using --refresh-future</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Index Numbers Overlapping in TV and Radio Caches when using --refresh-future</div>
+<div id="pagetitle"><h2>Index Numbers Overlapping in TV and Radio Caches when using --refresh-future</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">12-09-2017, 10:46 PM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.02-windows.0 from a Windows 7 command prompt.<br />
+<br />
+After updating the tv and radio caches using the command:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer --type tv,radio --refresh-future --refresh-include-groups national,regional,local --refresh-limit 30 --refresh</code></div>
+</div>
+<br />
+my .get_iplayer\tv.cache file contains 10,356 entries with the index field running from 1 to 10356 and my .get_iplayer\radio.cache file contains 22,098 entries with the index field running from 10001 to 32098.<br />
+<br />
+TV programmes with indices greater than 10000 are inaccessible to get_iplayer through the index field. For example, when I run the command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type tv 10135</code></div></div>(tv index 10135 is for pid b05vrlyb in my current cache)<br />
+<br />
+I get the <span style="font-weight: bold;" class="mycode_b">radio</span> programme with index 10135 (pid b092gc0s in my current cache):<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\&gt;get_iplayer --type tv 10135<br />
+Matches:<br />
+10135:  radio, 5 live Drive - 31/08/2017, BBC Radio 5 live, b092gc0s</code></div>
+</div>
+<br />
+Using the pid, I can show that get_iplayer does recognise the tv index of 10135:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\&gt;get_iplayer --type tv --fields pid b05vrlyb<br />
+Matches:<br />
+10135:  World's End - World's End, CBBC, b05vrlyb<br />
+INFO: 1 matching programmes</code></div>
+</div>
+<br />
+Is this a known bug?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-09-2017, 10:57 PM</div>
+</div>
+<div class="message">It is now. I think <kbd>--refresh-future</kbd> puts it over the limit. For now, use <kbd>--pid</kbd> or <kbd>--url</kbd> for ad hoc downloads, and perhaps stop using <kbd>--refresh-future</kbd> temporarily. This won't affect PVR functions. I'll fix this in the next release. Thanks for the report.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">12-09-2017, 11:09 PM</div>
+</div>
+<div class="message">Thanks, Dinky.<br />
+<br />
+I don't think this should be considered urgent since get_iplayer works fine with pids.<br />
+<br />
+I like full caches as it enables me to browse for programmes with my laptop, when I'm out and about or otherwise not connected to the internet. So I'll keep my preferences with the --refresh-future option set.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-09-2017, 09:59 PM</div>
+</div>
+<div class="message">Fixed in v3.03</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Index Numbers Overlapping in TV and Radio Caches when using --refresh-future</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Trouble getting BBC Radio programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Trouble getting BBC Radio programmes</div>
+<div id="pagetitle"><h2>Trouble getting BBC Radio programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 06:59 PM</div>
+</div>
+<div class="message">Hi all.<br />
+<br />
+I have been trying to begin using Get_iPlayer to continue downloading my favourite BBC radio dramas but I am not experienced with the command prompt method and am obviously doing something wrong.<br />
+<br />
+I followed the tutorial directions here, using 'get_iplayer --type=radio' to get the programme index (which incidentally is incomplete as the index appears on my screen to start at the letter 'T' - see image 1) and managed to even locate one or two shows with PIDs to download but when I selected 'get_iplayer --get 13309 which is a football World Cup 2022 debate, I get a failure message (see image 2).<br />
+<br />
+That entire 'command' line begins c:\Program Files\get_iplayer&gt;get_iplayer --get 13309<br />
+<br />
+I very much want to download <a href="http://www.bbc.co.uk/programmes/b01mny1l">The Martin Beck Killings</a>, a series of five dramas which have been going out as part of the Saturday Drama broadcast on BBC Radio 4 in recent weeks, but having tried to locate the broadcasts using various searches ("Saturday Drama", "The Martin Beck Killings" and "Saturday Drama The Martin Beck Killings") I have not been able to find or 'get' any of these shows and I am going to run out of time to get even one.<br />
+<br />
+If anyone can point me to the errors I am obviously making, I would be really grateful.<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-08-2013, 07:39 PM</div>
+</div>
+<div class="message">OK a few answers:<br />
+<br />
+1) The command Line window has a finite amount of rows which it will 'remember', this is often 1000. So you are seeing the index cut short at T simply because the Command Line window is limited in what it can show.<br />
+<br />
+2) I can download that file without issue. You are in the UK? You could try adding the following to the command to set a 'mode':<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--radiomode=best</code></div></div><br />
+3) Sometimes, programmes are available through the online service but not strictly from 'within' iPlayer. The Martin Back series appears to be an example of this. In cases like this, you need to identify the PID from the URL. In this case it is easy:<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b01mny1l">http://www.bbc.co.uk/programmes/b01mny1l</a><br />
+<br />
+It is simple the last part after the final / which is: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>b01mny1l</code></div></div><br />
+To download the programme, we have to specify this PID in the command. Putting this all together the command you should use is:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid b01mny1l</code></div></div><br />
+If you need to, add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--radiomode=best</code></div></div> to the end of the commandas I mentioned in answer 2.<br />
+<br />
+You can go to the other URL's for each episode you want and repeat the process for each PID, or I think you can collect up all the PIDs and put them in one command.<br />
+<br />
+The bottom line is that the Radio Download Guide needs some work, a lot of work. I don't use get_iplayer for radio downloads very much and I just haven't got round to the level of specificity that is required for the guide. It's one my to do list!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-08-2013, 07:49 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/trouble-getting-bbc-radio-programmes/#post-1055">Quote:</a><br />
+I followed the tutorial directions here, using âget_iplayer âtype=radioâ to get the programme index (which incidentally is incomplete as the index appears on my screen to start at the letter âTâ â see image 1) and </blockquote>
+<br />
+That is just the line wrapping in the console window.  It's fine.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>managed to even locate one or two shows with PIDs to download but when I selected âget_iplayer âget 13309 which is a football World Cup 2022 debate, I get a failure message (see image 2).<br />
+<br />
+That entire âcommandâ line begins c:\Program Files\get_iplayer&gt;get_iplayer âget 13309</blockquote>
+<br />
+You're trying to download a radio programme, so you must use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=radio</code></div></div>.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>broadcast on BBC Radio 4 in recent weeks, but having tried to locate the broadcasts using various searches (âSaturday Dramaâ, âThe Martin Beck Killingsâ and âSaturday Drama The Martin Beck Killingsâ) I have not </blockquote>
+<br />
+Again, you must use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--type=radio</code></div></div> when searching for "Saturday Drama" - it's a radio programme.<br />
+<br />
+It looks like the radio download guide needs some corrections.  We'll get those in as soon as possible.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 08:07 PM</div>
+</div>
+<div class="message">Thank you Square Penguin.<br />
+<br />
+OK, firstly I understand there is a limit of 1000 rows so I cannot see the complete index, although I still don't know how to view the first 1000 rows!<br />
+<br />
+Second point: Yes, I am in the UK but having tried again following your instructions, including the url snippet, and thus using the command: get_iplayer --type=radio --pid b01mny1l--radiomode=best, did not succeed in downloading the file (image 3 attached).<br />
+<br />
+I tried again using the same command, but minus the --radiomode=best suffix and again no joy (image 4).<br />
+<br />
+Thanks again!<br />
+<br />
+Regards, Jonaldinho.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-08-2013, 08:10 PM</div>
+</div>
+<div class="message">You have made an error in the 3rd image, you have left no gap between the PID and the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--radiomode=best</code></div></div>.<br />
+<br />
+Try this complete command for ease of copy and paste:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid b01mny1l --radiomode=best</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 08:23 PM</div>
+</div>
+<div class="message">Thanks very much for your assistance SP and DP.<br />
+<br />
+I know you do this voluntarily and I really appreciate your help.<br />
+<br />
+OK, I have tried again using the copy and paste complete command above, but once again, I am on the rocks.<br />
+<br />
+Image 5 shows what I am seeing.<br />
+<br />
+Thanks guys.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-08-2013, 08:28 PM</div>
+</div>
+<div class="message">Ah, now we're cooking with gas. That error is suggesting you have an issue with get_iplayer's dependencies, which the error suggests are unavailable. <br />
+<br />
+To get started, can you confirm when and how you installed get_iplayer (where you got the installer) and whether you have made any new installations recently (anything at all).<br />
+<br />
+I suspect user-2 will stop by soon enough and quiz you over this one too as it's getting over my ability level.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-08-2013, 08:38 PM</div>
+</div>
+<div class="message">I've no idea how you managed to not install get_iplayer's dependencies.  You would have had to actively de-select them when running the installer.  If you didn't use the installer, then do it now.  You'll only cause yourself more trouble attempting to configure a non-standard installation.  Run the Windows installer and select <span style="font-weight: bold;" class="mycode_b">all</span> components for installation.  If you already did that, then do it again and make sure that all the helper applications are downloaded and installed.  It will be obvious when this is happening while the installer is running.  If you still get the same errors (missing rtmpdump, mplayer, etc.)  then reply here with the output from this command:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-options</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 08:39 PM</div>
+</div>
+<div class="message">Hi Square Penguin.<br />
+<br />
+Like a few, I suppose, I took to get_iplayer following the recent loss of BBC programmes on Nerd of the Herd's Radio Downloader.<br />
+<br />
+I found out about Get_iPlayer from a post on the Radio Downloader forum where someone had mentioned it being a saviour for them now that RD was no longer providing the service.<br />
+<br />
+I have it installed about three or four weeks now and have since spent many an evening hour trying to get the tutorial instructions I found here to work for me but as you know, to no avail. To the best of my knowledge there have been no other installations added since then.<br />
+<br />
+Cheers, Jonaldinho.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-08-2013, 08:41 PM</div>
+</div>
+<div class="message">Ok, use this link to download the correct installer and then follow DP's instructions in the post above yours:<br />
+<br />
+<a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe">http://www.infradead.org/get_iplayer_win...latest.exe</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 08:44 PM</div>
+</div>
+<div class="message">Hi user-2.<br />
+<br />
+I did not actively deselect any part of the installation process, so I cannot give you a reason for the apparent partial installation.<br />
+<br />
+So, should I uninstall the program and try installing again?<br />
+<br />
+Cheers and thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-08-2013, 08:49 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/trouble-getting-bbc-radio-programmes/#post-1093">Quote:</a><br />
+So, should I uninstall the program and try installing again?</blockquote>
+<br />
+Yes</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 08:59 PM</div>
+</div>
+<div class="message">Square Penguin and user-2.<br />
+<br />
+Wow! It looks like we are in business here. I am downloading the Martin Beck show I am looking for as we speak. It's going to a desktop folder as opposed to where I usually store all of my other radio downloads, but that is a small issue and I can easily copy it across.<br />
+<br />
+I have to say this is the best forum experience I have ever had and I am really grateful for all of your help along the way.<br />
+<br />
+You will no doubt see me coming back as I get used to the command prompt method of computing, but it's good to learn new things, so I look forward to using Get_iPlayer for my future BBC radio drama needs.<br />
+<br />
+Thanks guys, and good luck going forward.<br />
+<br />
+Kind regards, Jonaldinho.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-40</h2></div><div class="dateline">01-08-2013, 09:12 PM</div>
+</div>
+<div class="message">Got it! Brilliant. I am really chuffed. Hopefully it will all become clearer from now onwards.<br />
+<br />
+Thanks again!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-08-2013, 09:42 PM</div>
+</div>
+<div class="message">Good news! If you get stuck/experience a problem again, just drop by and ask.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Trouble getting BBC Radio programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

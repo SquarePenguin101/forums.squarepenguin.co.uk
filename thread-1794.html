@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - What get_iplayer activities can run concurrently?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; What get_iplayer activities can run concurrently?</div>
+<div id="pagetitle"><h2>What get_iplayer activities can run concurrently?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">26-05-2018, 06:18 PM</div>
+</div>
+<div class="message">Are there dangers to running multiple instances of get-iplayer in different processes simultaneously? For example, running a refresh in one process and a download in another? Or running a TV refresh and a radio refresh in separate processes at the same time? etc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-05-2018, 07:17 PM</div>
+</div>
+<div class="message">Concurrent downloads would be OK. Concurrent TV/radio refreshes would not be OK (nor would that make sense). TV and radio refreshes in separate processes would be OK, but so little time would be saved it wouldn't be worth it. Concurrent downloads and refreshes would be OK, but concurrent searches and refreshes would not.  After initial installation, refreshes are relatively quick, so there is no reason not to have an updated cache before performing searches or launching any downloads. I suggest you control refreshes in your application and use <kbd>--expiry</kbd> with a very large value for every download to avoid an automatic refresh ever kicking off.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">26-05-2018, 07:36 PM</div>
+</div>
+<div class="message">Great, thank you. I've made a helpful (for me at least, maybe to others too!) summary table below. I had to make a few assumptions, but it sounds to me like the basic rule is: <span style="font-style: italic;" class="mycode_i">"don't read from or write to a cache file if there's a chance it might be written to at the same time"</span>.<br />
+<br />
+Thanks also for the <kbd>--expiry</kbd> tip. I'll do that.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>|            | Dnload | Refr TV | Refr Radio | Srch TV | Srch Radio<br />
+| Dnload     |   N    |   Y     |     Y      |   Y     |     Y     <br />
+| Refr TV    |   Y    |   N     |     Y      |   N     |     Y     <br />
+| Refr Radio |   Y    |   Y     |     N      |   Y     |     N     <br />
+| Srch TV    |   Y    |   N     |     Y      |   Y     |     Y     <br />
+| Srch Radio |   Y    |   Y     |     N      |   Y     |     Y      </code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-05-2018, 07:52 PM</div>
+</div>
+<div class="message">Concurrent downloads have a potential problem I forgot about: With concurrent downloads, there is a small risk that multiple processes could attempt to write to the download history file at the same time. The download itself will have completed by that point. However, get_iplayer will die if it can't open the history file, so you may need to catch that (exit code 11)  and re-run get_iplayer with <kbd>--mark-downloaded</kbd> to update the history.<br />
+<br />
+In the end, you may not want to bother with concurrent downloads. Depending on your upstream connection and the CDN load, get_iplayer can easily use up your available bandwidth with a single download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">26-05-2018, 08:07 PM</div>
+</div>
+<div class="message">Thanks. In that case I'll queue downloads to avoid them running simultaneously. I'd like to support simultaneous download and refresh because I don't think it makes sense to users if a refresh is delayed until whatever's currently downloading finishes. From what you say, this should be okay, so the current situation will work for what I need.<br />
+<br />
+I've edited the table to reflect "no simultaneous downloads".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">28-05-2018, 05:59 PM</div>
+</div>
+<div class="message">I've run the webpvr process with up to 6 downloads at the same time - no big issues. The BBC seems to be able to manage and I have 200mb download speed which I can use.<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">28-05-2018, 06:07 PM</div>
+</div>
+<div class="message">Thanks Alan for sharing your experience. My current code has a sequential download queue, but I might change it to allow simultaneous downloads, as you've described. In practice, I'm not sure it'll make a huge amount of difference, but from what you and @user-2 have said, the chance of a problem is very small (and even then, recoverable).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-05-2018, 10:58 AM</div>
+</div>
+<div class="message">I'm going to retract my earlier retraction. Concurrent downloads should be OK.  Although get_iplayer will die if it can't open the history file, that wouldn't be related to accessing it from multiple processes. The writes to the download history file should essentially be atomic if the entry is smaller than the I/O buffer size and the file is opened in append mode, which would always be the case. That wasn't always true, but it was fixed quite a while back. Many users, including me, have been doing concurrent downloads for a long time without ill effects.<br />
+<br />
+EDIT: But as I said before, concurrent downloads are worth the bother only if you can fill just a fraction of your available bandwidth with a single download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">29-05-2018, 11:45 AM</div>
+</div>
+<div class="message">@user-2, @user-926, thank you both. That's certainly useful general info to know. As I mentioned above, I'm currently doing only sequential downloads, but I might try concurrent in the future to see how it goes. Since I'm working on mobile, the processor/disk activity may be problematic with multiple simultaneous downloads (and especially, simultaneous ffmpeg conversions). But that's just a question of performance.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; What get_iplayer activities can run concurrently?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

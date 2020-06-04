@@ -1,0 +1,1159 @@
+get_iplayer 3.01-windows.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\Ed/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+INFO: Loaded PVR search 'Hamiltons_Ode-ssey'
+INFO: Loaded PVR search '_50_Things_That_Made_the_Modern_Economy_Series_1_name_radio'
+INFO: Loaded PVR search '_Hancock_s_Half_Hour_name_radio_podcast'
+INFO: Loaded PVR search '_Hancock_s_Half_Hour_Series_5_name_radio'
+INFO: Loaded PVR search '_Hancock_s_Half_Hour_Series_6_name_radio'
+INFO: Loaded PVR search '_Home_Front_-_Omnibus_name_radio'
+INFO: Loaded PVR search '_In_Their_Element_Series_1_name_radio'
+INFO: Loaded PVR search '_iPM_name_radio'
+INFO: Loaded PVR search '_More_or_Less_name_radio'
+INFO: Loaded PVR search '_News_Quiz_Extra_Series_20_name_radio'
+INFO: Loaded PVR search '_Paul_Sinha_s_Citizenship_Test_name_radio_podcast'
+INFO: Loaded PVR search '_Science_Stories_name_radio_podcast'
+INFO: Loaded PVR search '_Science_Stories_Series_4_name_radio'
+INFO: Loaded PVR search '_Steptoe_and_Son_Series_2_name_radio_podcast'
+INFO: Loaded PVR search '_TED_Radio_Hour_Series_4_name_radio_podcast'
+INFO: Loaded PVR search '_The_Cazalets_-_Omnibus_The_Light_Years_name_radio'
+INFO: Loaded PVR search '_The_English_Fix_Series_1_name_radio'
+INFO: Loaded PVR search '_The_Men_From_the_Ministry_name_radio_podcast'
+INFO: Loaded PVR search '_The_Missing_Hancocks_name_radio_podcast'
+INFO: Loaded PVR search '_The_Museum_of_Curiosity_Series_10_name_radio'
+INFO: Loaded PVR search '_The_Revenge_of_the_First_King_of_Mars_name_radio'
+INFO: Loaded PVR search '_The_Rivals_Series_4_name_radio'
+INFO: Loaded PVR search '_Tommies_name_radio_podcast'
+INFO: Loaded PVR search '_Voices_of_the_First_World_War_name_radio_podcast'
+INFO: Loaded PVR search '_Witness_name_radio_podcast'
+INFO: Loaded PVR search list
+Running PVR Searches:
+_50_Things_That_Made_the_Modern_Economy_Series_1_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^50 Things That Made the Modern Economy: Series 1$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got 4159 file cache entries for radio
+INFO: Search term '^50 Things That Made the Modern Economy: Series 1$' is a substring
+DEBUG: Search download_regex = ^50 Things That Made the Modern Economy: Series 1$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Hancock_s_Half_Hour_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Hancock's Half Hour$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Hancock's Half Hour$' is a substring
+DEBUG: Search download_regex = ^Hancock's Half Hour$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=75436
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=36544
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=71886
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Hancock_s_Half_Hour_name_radio_podcast: 1 download failure(s)
+_Hancock_s_Half_Hour_Series_5_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	metadata = generic
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '^Hancock's Half Hour: Series 5$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Hancock's Half Hour: Series 5$' is a substring
+DEBUG: Search download_regex = ^Hancock's Half Hour: Series 5$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Hancock_s_Half_Hour_Series_6_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '(Documents\Radio|Stuff\Downloaded|Radio)','^Hancock's Half Hour: Series 6$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '^Hancock's Half Hour: Series 6$' is a substring
+DEBUG: Search download_regex = ^Hancock's Half Hour: Series 6$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=00307
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=18382
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=74390
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Hancock_s_Half_Hour_Series_6_name_radio: 1 download failure(s)
+_Home_Front_-_Omnibus_name_radio
+Current options:
+	channel = BBC Radio 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '^Home Front - Omnibus$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Home Front - Omnibus$' is a substring
+DEBUG: Search download_regex = ^Home Front - Omnibus$
+DEBUG: Search channel_regex = (BBC Radio 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_In_Their_Element_Series_1_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	metadata = generic
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '^In Their Element: Series 1$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^In Their Element: Series 1$' is a substring
+DEBUG: Search download_regex = ^In Their Element: Series 1$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_iPM_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^iPM$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^iPM$' is a substring
+DEBUG: Search download_regex = ^iPM$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_More_or_Less_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^More or Less$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^More or Less$' is a substring
+DEBUG: Search download_regex = ^More or Less$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_News_Quiz_Extra_Series_20_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	metadata = generic
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '^News Quiz Extra: Series 20$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^News Quiz Extra: Series 20$' is a substring
+DEBUG: Search download_regex = ^News Quiz Extra: Series 20$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Paul_Sinha_s_Citizenship_Test_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Paul Sinha's Citizenship Test$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Paul Sinha's Citizenship Test$' is a substring
+DEBUG: Search download_regex = ^Paul Sinha's Citizenship Test$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Science_Stories_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Science Stories$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Science Stories$' is a substring
+DEBUG: Search download_regex = ^Science Stories$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=96061
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=49869
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=40634
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Science_Stories_name_radio_podcast: 1 download failure(s)
+_Science_Stories_Series_4_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Science Stories: Series 4$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Science Stories: Series 4$' is a substring
+DEBUG: Search download_regex = ^Science Stories: Series 4$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Steptoe_and_Son_Series_2_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Steptoe and Son: Series 2$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Steptoe and Son: Series 2$' is a substring
+DEBUG: Search download_regex = ^Steptoe and Son: Series 2$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=03277
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=29509
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=45710
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Steptoe_and_Son_Series_2_name_radio_podcast: 1 download failure(s)
+_TED_Radio_Hour_Series_4_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^TED Radio Hour: Series 4$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^TED Radio Hour: Series 4$' is a substring
+DEBUG: Search download_regex = ^TED Radio Hour: Series 4$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_The_Cazalets_-_Omnibus_The_Light_Years_name_radio
+Current options:
+	channel = BBC Radio 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	exclude = Hamilton's Ode-ssey
+	fields = name
+	get = 1
+	hide = 1
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '^The Cazalets - Omnibus: The Light Years$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Cazalets - Omnibus: The Light Years$' is a substring
+DEBUG: Search download_regex = ^The Cazalets - Omnibus: The Light Years$
+DEBUG: Search channel_regex = (BBC Radio 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = (Hamilton's Ode-ssey)
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_The_English_Fix_Series_1_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The English Fix: Series 1$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The English Fix: Series 1$' is a substring
+DEBUG: Search download_regex = ^The English Fix: Series 1$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_The_Men_From_the_Ministry_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The Men From the Ministry$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Men From the Ministry$' is a substring
+DEBUG: Search download_regex = ^The Men From the Ministry$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=27751
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=40886
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=54542
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _The_Men_From_the_Ministry_name_radio_podcast: 1 download failure(s)
+_The_Missing_Hancocks_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The Missing Hancocks$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Missing Hancocks$' is a substring
+DEBUG: Search download_regex = ^The Missing Hancocks$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=75791
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=76071
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=61571
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _The_Missing_Hancocks_name_radio_podcast: 1 download failure(s)
+_The_Museum_of_Curiosity_Series_10_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The Museum of Curiosity: Series 10$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Museum of Curiosity: Series 10$' is a substring
+DEBUG: Search download_regex = ^The Museum of Curiosity: Series 10$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_The_Revenge_of_the_First_King_of_Mars_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The Revenge of the First King of Mars$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Revenge of the First King of Mars$' is a substring
+DEBUG: Search download_regex = ^The Revenge of the First King of Mars$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_The_Rivals_Series_4_name_radio
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^The Rivals: Series 4$'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^The Rivals: Series 4$' is a substring
+DEBUG: Search download_regex = ^The Rivals: Series 4$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+_Tommies_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Tommies$','(Documents\Radio|Stuff\Downloaded|Radio)','(Documents\Radio|Stuff\Downloaded|Radio)','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Tommies$' is a substring
+DEBUG: Search download_regex = ^Tommies$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=46973
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=27873
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=11757
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Tommies_name_radio_podcast: 1 download failure(s)
+_Voices_of_the_First_World_War_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Voices of the First World War$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Voices of the First World War$' is a substring
+DEBUG: Search download_regex = ^Voices of the First World War$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=22306
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=29484
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=15740
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Voices_of_the_First_World_War_name_radio_podcast: 1 download failure(s)
+_Witness_name_radio_podcast
+Current options:
+	channel = BBC 6 Music,Radio 4,Radio 4 extra
+	commandradio = ffmpeg -i "<filename>" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "<dir>/<fileprefix>.mp3" && del "<filename>"
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	modes = default
+	nopurge = 1
+	output = D:\My Documents\Radio Stuff\Downloaded Radio
+	pvr = 1
+	refreshinclude = BBC Radio 6 Music,BBC Radio 4 FM,BBC Radio 4 Extra
+	type = radio
+	verbose = 1
+	versionlist = default
+	ybbcy = 1
+
+INFO: Search args: '^Witness$','(Documents\Radio|Stuff\Downloaded|Radio)'
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 4159 memcache entries for radio
+INFO: Search term '^Witness$' is a substring
+DEBUG: Search download_regex = ^Witness$
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Search term '(Documents\Radio|Stuff\Downloaded|Radio)' is a substring
+DEBUG: Search download_regex = (Documents\Radio|Stuff\Downloaded|Radio)
+DEBUG: Search channel_regex = (BBC 6 Music|Radio 4|Radio 4 extra)
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+12890:	Radio 2's Comedy Showcase - Hamilton's Ode-ssey, BBC Radio 4 Extra, b00s7m1t
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b00s7m1t.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00s7m1h/transferformat/dash?cb=99989
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00s7m1h/transferformat/hls?cb=21830
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00s7m1h/transferformat/hls?cb=91536
+INFO: No streams available for 'original' version (b00s7m1h) - skipping
+INFO: No streams available for 'original' version (b00s7m1h) - deleting
+WARNING: No media streams found for requested programme versions and recording modes.
+ERROR: Could not get programme metadata
+WARNING: PVR Run: _Witness_name_radio_podcast: 1 download failure(s)
+
+Skipping 'Hamiltons_Ode-ssey' (disabled)

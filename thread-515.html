@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - search string after '-' not found</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; search string after '-' not found</div>
+<div id="pagetitle"><h2>search string after '-' not found</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1012</h2></div><div class="dateline">31-08-2015, 10:37 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I'm running get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis in Linux Mint 17.2.<br />
+<br />
+If I look for radio programmes with "drama" in their title I get the following list:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>iplayer --type=radio "drama"<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+10001:    15 Minute Drama: Colin Douglas - The Gap - Episode 1, BBC Radio 4 Extra, <br />
+10002:    15 Minute Drama: Colin Douglas - The Gap - Episode 2, BBC Radio 4 Extra, <br />
+10003:    15 Minute Drama: Colin Douglas - The Gap - Episode 3, BBC Radio 4 Extra, <br />
+10004:    15 Minute Drama: Colin Douglas - The Gap - Episode 4, BBC Radio 4 Extra, <br />
+10005:    15 Minute Drama: Colin Douglas - The Gap - Episode 5, BBC Radio 4 Extra, <br />
+10006:    15 Minute Drama: Iris Murdoch: A Severed Head - Episode 1, BBC Radio 4, <br />
+10007:    15 Minute Drama: Iris Murdoch: A Severed Head - Episode 2, BBC Radio 4, <br />
+10008:    15 Minute Drama: Iris Murdoch: A Severed Head - Episode 3, BBC Radio 4, <br />
+10009:    15 Minute Drama: Iris Murdoch: A Severed Head - Episode 4, BBC Radio 4, <br />
+10010:    15 Minute Drama: Iris Murdoch: A Severed Head - Episode 5, BBC Radio 4, <br />
+10128:    Afternoon Drama: When Greed Becomes Hunger - The Pit, BBC Radio 4, <br />
+10129:    Afternoon Drama: When Greed Becomes Hunger - The Pen, BBC Radio 4, <br />
+10130:    Afternoon Drama - Chris Harrald - Mr Larkin's Awkward Day, BBC Radio 4 Extra, <br />
+10131:    Afternoon Drama - Matt Hartley - The Pursuit, BBC Radio 4 Extra, <br />
+10132:    Afternoon Drama - Rose Tremain - The Darkness of Wallis Simpson, BBC Radio 4 Extra, <br />
+11097:    Drama on 3: The Oresteia - The Libation Bearers, BBC Radio 3, <br />
+11098:    Drama: Brief Lives - Episode 2, BBC Radio 4, <br />
+11099:    Drama: Iris Murdoch: The Sea, the Sea - Episode 1, BBC Radio 4, <br />
+11100:    Drama: Iris Murdoch: The Sea, the Sea - Episode 2, BBC Radio 4, <br />
+11101:    Drama: Red and Blue - Alive, BBC Radio 4, <br />
+11102:    Drama - Fifteen Minutes, BBC Radio 4, <br />
+11103:    Drama - Closely Observed Trains, BBC Radio 4,</blockquote>
+Which lists 11103:    Drama - Closely Observed Trains, BBC Radio 4,<br />
+<br />
+But if I search for "Closely Observed Trains" get_iplayer reports no matches:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --type=radio "Closely Observed Trains"<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: 0 Matching Programmes</blockquote>
+After a little experimentation, it seems that get_iplayer doesn't find a programme title if the search string follows a '-' character!<br />
+<br />
+Is this a bug? Or am i doing something dumb?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-08-2015, 01:37 PM</div>
+</div>
+<div class="message">The hyphen is not relevant per se. It just separates the programme name from the episode title.  From <kbd>get_iplayer --help</kbd>:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>...<br />
+Search Options:<br />
+...<br />
+ --fields &lt;field1&gt;,&lt;field2&gt;,..    Searches only in the specified comma separated fields<br />
+ --long, -l                       Additionally search in programme descriptions and episode names (same as --fields=name,episode,desc )<br />
+...</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1012</h2></div><div class="dateline">31-08-2015, 02:14 PM</div>
+</div>
+<div class="message">Thanks Dinky.<br />
+<br />
+I guess I was <span style="text-decoration: line-through;" class="mycode_s">being dumb</span> unaware of that subtlety on my first use of the program!<br />
+<br />
+So you just use the option --long to make get_iplayer search all program fields.<br />
+So, for example <br />
+<br />
+<kbd>get_iplayer --long --type=radio "Closely Observed"</kbd><br />
+<br />
+now finds a match<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+11103:    Drama - Closely Observed Trains, BBC Radio 4, , 0 days 22 hours ago - Ian Kershaw adapts Czech writer Bohumil Hrabal's classic of postwar literature.</code></div>
+</div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; search string after '-' not found</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

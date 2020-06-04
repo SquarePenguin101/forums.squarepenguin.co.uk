@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - V3.24 bug fix</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; V3.24 bug fix</div>
+<div id="pagetitle"><h2>V3.24 bug fix</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1800</h2></div><div class="dateline">02-01-2020, 10:38 AM</div>
+</div>
+<div class="message">I was about to report a bug that I had found in version 3.23 when it mixes together a 'better' stream when downloading and it produces an incorrect MP4 muxed file.  It looks like it's downloading the audio and video and then uses ffmpeg to put them together and doesn't get it quite right.<br />
+<br />
+Or rather didn't, because version 3.24 fixes this.<br />
+<br />
+So, just a thanks for fixing a problem before I realised I had one.<br />
+<br />
+If you're interested:<br />
+<kbd>get_iplayer--pid b00nxn31 --tvmode=better</kbd><br />
+produced a file that is reported by 'mediainfo' as:<kbd>Video<br />
+ID                                      : 1<br />
+Format                                  : AVC<br />
+Format/Info                              : Advanced Video Codec<br />
+Format profile                          : Main@L3.1<br />
+Format settings, CABAC                  : Yes<br />
+Format settings, ReFrames                : 4 frames<br />
+Codec ID                                : avc1<br />
+Codec ID/Info                            : Advanced Video Coding<br />
+Duration                                : 56s 380ms<br />
+Bit rate                                : 48.6 Mbps<br />
+Width                                    : 960 pixels<br />
+Height                                  : 540 pixels<br />
+Display aspect ratio                    : 16:9<br />
+Frame rate mode                          : Variable<br />
+Frame rate                              : 4.115 fps<br />
+Minimum frame rate                      : 0.101 fps<br />
+Maximum frame rate                      : 90 000.000 fps<br />
+Original frame rate                      : 25.000 fps<br />
+Standard                                : PAL<br />
+Color space                              : YUV<br />
+Chroma subsampling                      : 4:2:0<br />
+Bit depth                                : 8 bits<br />
+Scan type                                : Progressive<br />
+Bits/(Pixel*Frame)                      : 22.799<br />
+Stream size                              : 327 MiB (94%)<br />
+Encoded date                            : UTC 1904-01-01 00:00:00<br />
+Tagged date                              : UTC 1904-01-01 00:00:00<br />
+Color range                              : Limited<br />
+Color primaries                          : BT.601 PAL<br />
+Transfer characteristics                : BT.470 System B, BT.470 System G<br />
+Matrix coefficients                      : BT.601</kbd><br />
+<br />
+The 3.24 version produces a much more reasonable:<br />
+<kbd>Duration                                : 28mn 38s<br />
+Bit rate                                : 1 596 Kbps<br />
+Width                                    : 960 pixels<br />
+Height                                  : 540 pixels<br />
+Display aspect ratio                    : 16:9<br />
+Frame rate mode                          : Constant<br />
+Frame rate                              : 25.000 fps<br />
+Standard                                : PAL</kbd><br />
+<br />
+So, whatever was done to fix this, thanks again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; V3.24 bug fix</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

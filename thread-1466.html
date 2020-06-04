@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio downloads fail when using invalid --aactomp3 option</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Radio downloads fail when using invalid --aactomp3 option</div>
+<div id="pagetitle"><h2>Radio downloads fail when using invalid --aactomp3 option</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1886</h2></div><div class="dateline">26-07-2017, 06:29 PM</div>
+</div>
+<div class="message">Hi folks,<br />
+<br />
+Having installed get_iplayer 3.0.0 and 3.0.1, my downloads of TV programmes are working fine, but nothing has been working in terms of downloading radio programme. I am, for example, using this sort of code: get_iplayer --pid=b08yrm17 --type=radio --aactomp3<br />
+<br />
+An error message always comes up: 'Assumed to be ffmpeg 3.0 or higher unless --ffmpeg-obsolete'.<br />
+<br />
+Can anyone advise me what to do to get radio show downloads working again?<br />
+<br />
+Many thanks,<br />
+Tom</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2017, 06:55 PM</div>
+</div>
+<div class="message">You could do worse than scroll back and read the beginning of the output. <kbd>--aactomp3</kbd> is no longer a valid option, so get_iplayer dumps a usage message.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1886</h2></div><div class="dateline">26-07-2017, 07:09 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (26-07-2017, 06:55 PM)</span></cite>You could do worse than scroll back and read the beginning of the output. <kbd>--aactomp3</kbd> is no longer a valid option, so get_iplayer dumps a usage message.</blockquote><br />
+Thank you!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">27-07-2017, 08:34 PM</div>
+</div>
+<div class="message">It is possible to convert downloaded radio to MP3, see e.g. <a href="https://github.com/get-iplayer/get_iplayer/wiki/aactomp3">https://github.com/get-iplayer/get_iplay...i/aactomp3</a><br />
+<br />
+If, like me, you want to convert all your radio programs to mp3, see the section <a href="https://github.com/get-iplayer/get_iplayer/wiki/aactomp3#always-convert-every-radio-programme-to-mp3-format-at-best-variable-bit-rate-vbr-and-automatically-delete-m4a-file-by-setting---command-radio-in-preferences">here</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2250</h2></div><div class="dateline">20-09-2018, 10:12 AM</div>
+</div>
+<div class="message">I can't download Sounds of the 60s anymore, since they changed the page for it.<br />
+<br />
+the page ends in "/m0000f3w", instead of the old format and the audio stream is on another page itself.<br />
+<br />
+here, have a look:<br />
+<a href="http://www.bbc.co.uk/programmes/m0000f3w">www.bbc.co.uk/programmes/m0000f3w</a><br />
+<br />
+This used to be the old format, where I'd just type this into the .cmd and it would get done:<br />
+get_iplayer --pid=b07vwdnk --type=radio --aactomp3<br />
+<br />
+Could somebody please help me?<br />
+<br />
+Edit: I'm using the new iplayer and have also added and attachment with the error.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2250</h2></div><div class="dateline">20-09-2018, 11:38 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-09-2018, 11:17 AM)</span></cite>Remove --aactomp3 it hasn't been supported for several releases.<br />
+<br />
+&gt;get_iplayer --pid=m0000f3w --type=radio<br />
+.....<br />
+Episodes:<br />
+Sounds of the 60s - 15/09/2018, BBC iPlayer, m0000f3w<br />
+INFO: 1 total programmes<br />
+<br />
+INFO: Downloading radio: 'Sounds of the 60s - 15/09/2018 (m0000f3w) [original]'<br />
+  6.9% of ~313.65 MB @   3.8 Mb/s ETA: 00:10:19 (hafhigh1/ll) [audio]</blockquote><br />
+Thank you so much! I can finally listen to BBC on the go again. :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Radio downloads fail when using invalid --aactomp3 option</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

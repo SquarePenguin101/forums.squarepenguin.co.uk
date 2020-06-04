@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR downloads failing</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; PVR downloads failing</div>
+<div id="pagetitle"><h2>PVR downloads failing</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">06-09-2016, 10:27 AM</div>
+</div>
+<div class="message">Since this morning my PVR scheduler downloads have failed<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four,<br />
+exclude series 1<br />
+fields name<br />
+modes flashaudio,good,hvfstd2<br />
+output F:&#92;Media&#92;Television&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 Ripper Street</code></div></div><br />
+<br />
+when the scheduler runs it returns this<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Ripper Street<br />
+Matches:<br />
+1608:   Ripper Street: Series 4 - Some Conscience Lost, BBC Two, b079ctc9<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: PVR Run: Ripper Street: 1 download failure(s)</code></div></div>however if I do it manually using the id number<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get 1608 --type=tv --tvmode=flashaudio,good,hvfstd2 --output=F:&#92;Media&#92;Television&#92;</code></div></div> it works<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Matches:<br />
+1608:   Ripper Street: Series 4 - Some Conscience Lost, BBC Two, b079ctc9<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hvfstd2,hvfhd1,hvfhd2,hvfsd1,hvfsd2,hvfvhigh1,hvfvhigh2,hvfhigh1,hvfhigh2,hvfstd1,hvfstd2,hvflow1,hvflow2 modes will be tried for version original<br />
+INFO: Trying hvfstd2 mode to record tv: Ripper Street: Series 4 - 3. Some Conscience Lost<br />
+INFO: File name prefix = Ripper_Street_Series_4_-_3._Some_Conscience_Lost_b079ctc9_original<br />
+INFO: Begin recording file: F:&#92;Media&#92;Television&#92;Ripper_Street_Series_4_-_3._Some_Conscience_Lost_b079ctc9_original.partial.mp4.ts<br />
+Recording:     0.96MB / 239.60MB  3950kbps   0.4% 00:08:14 remaining</code></div></div><br />
+<br />
+originally my pvr did not include the HVFstd2 option but after seeing it selected with the  id number command I added it to the PVR, but as you see it does not pick it up when the scheduler runs.<br />
+<br />
+it also happened with a couple of other TV programs that were working yesterday</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-09-2016, 12:20 PM</div>
+</div>
+<div class="message">Works fine here. You don't need hvfstd2 in <kbd>--modes</kbd>, and comparing with download by index doesn't really help since it bypasses the PVR function. You haven't provided enough information for diagnosis, so if you want to proceed further, <a href="thread-706.html">follow our instructions</a> and use <kbd>--pvr-single</kbd> to test only the pvr job that isn't working.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">06-09-2016, 03:19 PM</div>
+</div>
+<div class="message">I found the problem, I had set the <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>tvmode dashgood</code></div></div><br />
+for some reason in the options file<br />
+<br />
+I changed it to <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>tvmode good</code></div></div><br />
+<br />
+and it now works</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; PVR downloads failing</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

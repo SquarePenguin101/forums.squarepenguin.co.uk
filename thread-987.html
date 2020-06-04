@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloads not resuming with HLS?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Downloads not resuming with HLS?</div>
+<div id="pagetitle"><h2>Downloads not resuming with HLS?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1362</h2></div><div class="dateline">07-08-2016, 02:09 PM</div>
+</div>
+<div class="message">Since updating to 2.95 and having HLS the default download mechanism, I don't seem to be able to resume downloads any longer. Worse: get-iplayer appears to overwrite the original mostly-downloaded file and restarts from scratch.<br />
+<br />
+Have observed this both when I ctrl-c'd to continue downloading another time (as I could under rtmpdump), and when my connection dropped. The latter failed to auto-continue, too, with the following error:<br />
+<br />
+WARNING: Retry recording for '[...]'<br />
+INFO: File name prefix = [...]<br />
+<br />
+INFO: Subtitles not available for version(s): original<br />
+Can't locate object method "new" via package "Streamer::" (perhaps you forgot to load "Streamer::"?) at /usr/local/get_iplayer-latest/get_iplayer line 9097.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2016, 03:46 PM</div>
+</div>
+<div class="message">Resuming downloads from previous sessions is not supported with HLS or DASH streams. rtmpdump can do it for RTMP streams because it parses the structure and content of the partially-downloaded FLV file to find a resume point. However, it is unreliable and somewhat dependent on which build of rtmpdump you happen to have. That sort of functionality would be massive overkill for get_iplayer. <br />
+<br />
+Alternative approaches are no good so long as ffmpeg is in the mix since get_iplayer can't control how it processes HLS playlists, and it doesn't yet support DASH. Once I get rid of ffmpeg as a downloader option, I may revisit this. However, I don't see any way to automate the resume process. You would have to feed several pieces of information from the previous run back into get_iplayer, and that would be overcomplicated for virtually all users.<br />
+<br />
+There is limited capability for resuming HLS and DASH downloads after an interruption, but it can be thwarted if garbage data is retrieved when the retry is being initialised. There isn't anything get_iplayer can do about that, though I will improve that error message a bit.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1362</h2></div><div class="dateline">08-08-2016, 04:37 PM</div>
+</div>
+<div class="message">Ah, that's a shame - rtmpdump's resume worked fairly reliably for me (...but I'll still stick with HLS rather than try the fla fallback you provide). If you ever are in a place where you can look at this, could the data required from the previous run to resume for future runs be associated with the cache record for the episode, to prevent the user having to supply it? Or store a metadata file along with the file (ala youtube-dl)?<br />
+<br />
+Anyway, thanks for letting me know it's not just a borked install on my end, it's instead a limitation of the tools and formats that get_iplayer is forced to work with. It was just unfortunate that the first time I observed the behaviour was on a 10GB stream!<br />
+<br />
+Love the program, even if it has cost me terabytes of space.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2016, 08:12 PM</div>
+</div>
+<div class="message">Cache is not an option. Dumping to a separate file might be feasible, but that would require a bunch of housekeeping faff that I'm not willing to implement or support. If I were able to make this work, it would just print some options to tack onto the subsequent command line. But, I'm dubious about trying to support that as well. It seems like a bad idea to implement something that: a) will be difficult to explain; b) has a risk of producing glitchy output files.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Downloads not resuming with HLS?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

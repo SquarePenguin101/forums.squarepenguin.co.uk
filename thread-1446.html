@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer unable to copy cache?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer unable to copy cache?</div>
+<div id="pagetitle"><h2>get_iplayer unable to copy cache?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1867</h2></div><div class="dateline">29-06-2017, 01:30 AM</div>
+</div>
+<div class="message">Hello, I am a long time user of get_iplayer but no the most technical user so please baer with me!<br />
+<br />
+I was perviously using an older version 2.99 I think and I removed this and installed the new version of get_iplayer 3.01.0. This installs fine but I get the error message: <br />
+<br />
+ERROR: Cannot copy C:\Users\ElizabethsPC/.get_iplayer /tv.cache to C:\Users\ElizabethsPC/.get_iplayer /tv.cache.old:<br />
+<br />
+I have tried to rebuild the cache using the comand in the release notes: get_iplayer --cache-rebuild --type=tv,radio<br />
+<br />
+This then tries to get the radio index feeds with the message INFO: Using Concurrent indexing <br />
+<br />
+After a few minutes it then comes back with the same error as above <br />
+<br />
+ERROR: Cannot copy C:\Users\ElizabethsPC/.get_iplayer /tv.cache to C:\Users\ElizabethsPC/.get_iplayer /tv.cache.old:<br />
+<br />
+I tried again to uninstall and followed the guide to clean up my old installs of get_iplayer but I'm still getting the same error message and am struggling to find a solution. <br />
+<br />
+Any help would be great, thank you so much for your time and help in advance!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-06-2017, 07:23 PM</div>
+</div>
+<div class="message">First guess would be a permissions problem, though only you know how permissions are set up. Perhaps your disk is nearly full? See if you can perform the file copy outside of get_iplayer. <br />
+<br />
+Did you truncate those error messages, or did they really end with a colon? There may be additional information there in some cases. There is also a space before "/tv.cache" in the file paths that shouldn't be there. Presumably that is a typo in your post</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1867</h2></div><div class="dateline">03-07-2017, 08:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-06-2017, 07:23 PM)</span></cite>First guess would be a permissions problem, though only you know how permissions are set up. Perhaps your disk is nearly full? See if you can perform the file copy outside of get_iplayer. <br />
+<br />
+Did you truncate those error messages, or did they really end with a colon? There may be additional information there in some cases. There is also a space before "/tv.cache" in the file paths that shouldn't be there. Presumably that is a typo in your post</blockquote><br />
+Hi thanks for getting back to me sorry for the delay in responding couldn't get online over the weekend, that is the exact error message I am getting ending is a colon. The disk has a lot of free space and I don't know how to do the copy outside get_iplayer sorry.<br />
+here is an image of the error attached
+<br />
+<br />
+<a href="static/thread-1446-aid241.jpg"><img src="static/thread-1446-aid241.jpg"/></a>
+<br />
+<br />
+Any advice would be great</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1867</h2></div><div class="dateline">04-07-2017, 08:56 AM</div>
+</div>
+<div class="message">Hello again, I think I have managed to sort this, it turns out that there was a get_iplayer hidden folder which was in the wrong place i.e. not in appdata since finding and removing this it seems to be working fine. <br />
+<br />
+Thank you for all your help and sorry for taking up your time!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2017, 10:16 AM</div>
+</div>
+<div class="message">The hidden folder (presumably <kbd>C:\Users\ElizabethsPC\.get_iplayer</kbd>) is get_iplayer's profile directory, where settings and cache files are stored. Since removing it solved your problem, that confirms that the permissions on that folder were incorrect. You should find that the profile directory has been re-created in the same location. It doesn't live in AppData unless you explicitly configure get_iplayer to put it there.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; get_iplayer unable to copy cache?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

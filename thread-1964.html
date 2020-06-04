@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Future Programmes Warnings</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Future Programmes Warnings</div>
+<div id="pagetitle"><h2>Future Programmes Warnings</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">14-01-2019, 03:35 AM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.18.0-MSWin32 from a Windows 7 command promt.<br />
+<br />
+When searching my caches for programmes I get a nice listing of what I'm looking for. For example:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:&gt;get_iplayer --type radio --future "the rivals"<br />
+<br />
+Matches:<br />
+49857:  The Rivals: Series 4 - The Clairvoyants, BBC Radio 4, b080r360<br />
+49858:  The Rivals: Series 4 - The Stanway Cameo Mystery, BBC Radio 4, b081ld30<br />
+49859:  The Rivals: Series 4 - The Secret of Dunstan's Tower, BBC Radio 4, b082fgt8<br />
+49860:  The Rivals: Series 4 - The Mystery of the Scarlet Thread, BBC Radio 4, b082x79t<br />
+INFO: 4 matching programmes</code></div>
+</div>
+When I want to include only those programmes currently available I get the following search results:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:&gt;get_iplayer --type radio --no-future "the rivals"<br />
+<br />
+WARNING: Ignoring future programme (b082x79t): '49860: The Rivals: Series 4 - The Mystery of the Scarlet Thread - 2019-01-20T19:45:00+00:00'<br />
+WARNING: Use --future to download future programmes that are already available from iPlayer<br />
+Matches:<br />
+49857:  The Rivals: Series 4 - The Clairvoyants, BBC Radio 4, b080r360<br />
+49858:  The Rivals: Series 4 - The Stanway Cameo Mystery, BBC Radio 4, b081ld30<br />
+49859:  The Rivals: Series 4 - The Secret of Dunstan's Tower, BBC Radio 4, b082fgt8<br />
+INFO: 3 matching programmes</code></div>
+</div>
+get_iplayer is warning me that there is a future programme excluded from the results and giving me all the details of the programme excluded, despite me explicitly stating that I didn't want the information (by means of the <kbd>--no-future</kbd> option). These warnings take up more screen space than just listing the programme. To my mind this renders the <kbd>--no-future</kbd> option almost useless.<br />
+<br />
+Would you consider removing these warnings (at least when only searching and not downloading), or adding a <kbd>--suppress-future-warnings</kbd> (along with its negation, <kbd>--no-suppress-future-warnings</kbd>) option or something similar?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-01-2019, 08:22 PM</div>
+</div>
+<div class="message">It's a no from me, but it would be a trivial change to add a new option to suppress the warning, so feel free to submit a pull request.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Future Programmes Warnings</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

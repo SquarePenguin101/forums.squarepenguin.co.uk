@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Metadata not added to mp4?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Metadata not added to mp4?</div>
+<div id="pagetitle"><h2>Metadata not added to mp4?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">02-05-2017, 09:08 PM</div>
+</div>
+<div class="message">This is not a big problem since I can work around it, but it's something of an inconsistency and might indicate a bug in the metadata handling code (or a bug in my understanding of how  to use get_iplayer?!)? Since installing get_iplayer 3.00-windows.0 a couple of downloads have appeared without any metadata tags in them. It's not something I've ever noticed before.<br />
+<br />
+I'm on Windows10 and I use the following line to download:<br />
+get_iplayer --get --pid p02gyz6b --ffmpeg %FFMPEG% --output %ODIR% --tvmode best --fps50 --ffmpeg-force --subtitles --thumb<br />
+<br />
+<br />
+If I add "--metadata-only --metadata-format generic" to the command line I get a perfectly reasonable looking xml file. And running with the --debug flag looks like it picks up the metadata and reports no obvious error I could see.<br />
+<br />
+The PID example above is Adam Curtis Bitter Creek. I've had the same problem with another Adam Curtis film, HyperNormalisation p04b183c, and also the film Rescue Dawn (which is no longer available). Other downloads (using the same command line, which is scripted) have been OK.<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 09:16 PM</div>
+</div>
+<div class="message">Why do think the metadata is missing? In other words, how did you check it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">02-05-2017, 09:24 PM</div>
+</div>
+<div class="message">I have dbPowerAmp which includes an "Edit ID-Tag" tool. Usually this shows all the (presumably ID3?) tags that you might expect - Artist, Title, Album, Long Description, etc. For these unusual files it  shows the text "Contains no ID Tags" and then empty fields (for artist, title, ....) below it.<br />
+<br />
+In addition, the "Audio Properties" tab on the Windows file explorer properties only shows the filename and type - on previous files it shows other tags/data.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 09:41 PM</div>
+</div>
+<div class="message">In that case, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a full report so we can see what is happening on your system. There is no other way for us to see whether the tagging is broken or not executing. Use <kbd>--stop=300</kbd> so you don't have to download the whole programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">02-05-2017, 11:17 PM</div>
+</div>
+<div class="message">Following your instructions, I used the --stop=300 flag, and the tags appeared as normal! Typical I thought, it's fixed itself! I re-downloaded the full file. No tags. After a number of attempts with different values of stop, I am now convinced the problem is to do with filesize. Ordering my cache of unwatched downloads by size, sure enough any that were bigger than about 4GB had no tags ; any smaller than that seemed to have the expected tags. Some of those files were from earlier versions of get_iplayer (I had just never noticed the tag problem before), so I don't think the problem is related to the changes in v3.<br />
+<br />
+I haven't established the precise filesize, but it occurs between 4080742 kbytes and 4256557 kbytes (files of those sizes have and do not have tags, respectively), and suspiciously 4x1024x1024 is 4194304 - so I suspect the problem is that the tagging code (AtomicParsley?) is unable to handle files bigger than 4GB.<br />
+<br />
+I can still attach the verbose logs if you like, but looking at the final section where it carries out the tagging, there is no difference that I can see between the logs for a working and a non-working file. I used Winmerge on them and the only difference was the "--year" timestamp within the AtomicParlsey arguments. The last two lines of both files is:<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+INFO: Tagged file: L:\iPlayerDownloads\Adam_Curtis_-_Bitter_Lake_p02gyz6b_original.mp4</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 11:58 PM</div>
+</div>
+<div class="message">Post the logs</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">03-05-2017, 02:59 PM</div>
+</div>
+<div class="message">I'll restate this as a standalone problem report, which I hope is more convenient for you.<br />
+<br />
+Certain get_iplayer downloads do not end up with metadata tags attached to them. I have checked this with the Edit ID-Tag tool within dbPowerAmp, and also from the Windows file properties "Audio Properties" tab. The Edit ID-Tag tool reports "Contains no ID Tags".<br />
+<br />
+My experimentation suggests that the problem is caused by filesize - I have 8 or 9 downloaded files  which are over 4GB, and none of them have tags attached (most of these are from before the release of v3, so my initial suggestion that it was a v3 problem is probably wrong).<br />
+I have not yet found an example of a file &lt;4GB  with missing tags.<br />
+<br />
+I've put logs on pastebin.<br />
+<br />
+Command line:<br />
+<br />
+get_iplayer --get --pid p02gyz6b --ffmpeg F:\0\Multimedia\ffmpeg\ffmpeg-20170411-f1d80bc-win64-static\bin\ffmpeg.exe --output L:\iPlayerDownloads --tvmode best --fps50 --ffmpeg-force --subtitles --thumb --verbose --force &gt; L:\iPlayerDownloads\log-fullb.txt 2&gt;&amp;1<br />
+<br />
+produces a download with no tags. Log file here:<br />
+<a href="https://pastebin.com/2pVQLiwW">https://pastebin.com/2pVQLiwW</a><br />
+<br />
+<br />
+For comparison, command line:<br />
+<br />
+get_iplayer --get --pid p02gyz6b --ffmpeg F:\0\Multimedia\ffmpeg\ffmpeg-20170411-f1d80bc-win64-static\bin\ffmpeg.exe --output L:\iPlayerDownloads --tvmode best --fps50 --ffmpeg-force --subtitles --thumb --verbose --force --stop=300 &gt; L:\iPlayerDownloads\log-300b.txt 2&gt;&amp;1<br />
+<br />
+produces a download that *does* have tags as expected. Log file here:<br />
+<a href="https://pastebin.com/BGuz9P8V">https://pastebin.com/BGuz9P8V</a><br />
+<br />
+For completeness as far as the instructions go:<br />
+<br />
+ - the OS is Windows 10 Home version 1703 OS Build 15063.138<br />
+<br />
+ - the output L: drive is an internal SSD formatted with NTFS.<br />
+<br />
+ - get_iplayer -V returns:<br />
+get_iplayer 3.00-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">03-05-2017, 03:21 PM</div>
+</div>
+<div class="message">Is this not a problem with AtomicParsley? Did you google some keywords on the issue?<br />
+<br />
+Seems like the 4GB limit is a known issue.<br />
+<br />
+I guess it's relevant to get_iplayer as get_iplayer uses AtomicParsley but it doesn't seem like something fixable by get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 03:34 PM</div>
+</div>
+<div class="message">If file size is the problem, I can't duplicate it. I had no trouble tagging your programme on Windows 10. Archive programmes like this are not supported by get_iplayer, but I thought there might be a quick win if I could see your log. I see you're not using the provided ffmpeg, which is also unsupported. You might try the provided ffmpeg, though I can't think why it would make any difference. I can't tell from the log, but the behaviour you describe would make sense if you're using an obsolete version of AtomicParsley (&lt;0.94). I can't see how it would be invoked, but if you have an old copy of AP in PATH, it could cause trouble. [EDIT: not using an external drive] I've seen AP choke on big files and not return a error code. Look to see if its temp files are left behind in your output directory. The temp file gets the tags and then replaces the original (get_iplayer invokes AP with the --overWrite option). You could also try writing to your internal disk to see if makes any difference.<br />
+<br />
+Since I can't duplicate the problem, I'm afraid I'll have to leave this for someone else to pick up. If there is a problem with AP, there is nothing get_iplayer could do about it anyway. One suggestion for further testing: Download a copy of the programme without tags by using --no-tag. You can then apply AP to it directly for multiple tests. So long as you don't use --overWrite with AP, it creates a temp file with the tags and leaves the original untouched.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">03-05-2017, 03:47 PM</div>
+</div>
+<div class="message">I agree the issue is probably AtomicParsley, although I will experiment some more to be sure. To be honest, until I noticed this problem and started looking at the logs, I had never heard of AtomicParsley, so I wasn't aware it was a separate thing from get_iplayer! Whatever version of it I'm using is the one supplied with get_iplayer - which reports version"0.9.6 (utf16)".<br />
+<br />
+If you're successfully tagging files &gt;4GB, which version of AtomicParsley are you using (and where do I get it??)? My googling is not identifying a newer version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 03:55 PM</div>
+</div>
+<div class="message">You have the same version I have. That's the version provided with the installer. There is no newer version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 04:01 PM</div>
+</div>
+<div class="message">I also missed that L: was an internal drive. Ignore earlier comment re: slow drives</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1750</h2></div><div class="dateline">04-05-2017, 02:38 PM</div>
+</div>
+<div class="message">OK, I'm more confused now. AtomicParsley appears to show that the metadata *is* present in the file - but it's not getting exposed as ID tags as it usually does.<br />
+<br />
+However, I think we've fairly conclusively established that it's not a get_iplayer problem, so I'll take it away and investigate some more!<br />
+<br />
+Thanks for taking a look at it for me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 02:48 PM</div>
+</div>
+<div class="message">Well, at least one mystery is solved. Maybe it is a file size issue, just not the one you thought. Get MediaInfo and/or mp3tags and check with those. When I tested your programme, the whatever-is-used in Windows Explorer could see the tags in Properties dialog, but I don't have dbPowerAmp. Different applications might have slightly different notions of how to treat MP4 files. WMP and iTunes are the usual suspects, but it has changed over time.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Metadata not added to mp4?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

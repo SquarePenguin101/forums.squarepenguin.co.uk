@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Liveradio not working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Liveradio not working</div>
+<div id="pagetitle"><h2>Liveradio not working</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-730</h2></div><div class="dateline">14-01-2015, 03:39 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>me@my-laptop:/media/me/Data/Data/Music/Caithream Ciuil &gt; get-iplayer --stream 80140<br />
+get_iplayer 2.91-ppa21, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+80140:  liveradio, BBC Radio Nan Gaidheal - live<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programme versions found</blockquote>
+<br />
+I haven't tried every entry in the index, but I get the same result for most of those I have tried.<br />
+The exceptions appear to be the "national" stations - Radio 1/2/3/4.  For example, <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>me@my-laptop:/media/me/Data/Data/Music/Caithream Ciuil &gt; get-iplayer --stream 80135<br />
+get_iplayer 2.91-ppa21, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+80135:  liveradio, BBC Radio 4 FM - live<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaaclow1 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record liveradio: BBC Radio 4 FM - live<br />
+INFO: File name prefix = BBC_Radio_4_FM_live_2015-01-14_14_28_24                 <br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+WARNING: You haven't specified an output file (-o filename), using stdout<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting Live Stream<br />
+INFO: Metadata:<br />
+INFO:   duration              0.00<br />
+INFO:   audiodatarate         128.00<br />
+INFO:   audiosamplerate       44100.00<br />
+INFO:   audiosamplesize       16.00<br />
+INFO:   stereo                TRUE<br />
+INFO:   audiocodecid          10.00<br />
+INFO:   Encoder               ProSTREAM X/2<br />
+FLV     ï¿½</blockquote>
+<br />
+The change seems to have been introduced on Saturday, 10/01/2014.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-01-2015, 11:22 PM</div>
+</div>
+<div class="message">Thanks for the heads-up.  It looks like the Beeb have broken get_player's live radio streaming for regional stations. At first glance it looks like it can be fixed for next release, but I don't have the full picture yet.  Live streaming is dead last on my priority list, so no schedule. For now, you'll have to listen to Radio Nan Gaidheal by other means.  The WMA stream is still running at:<br />
+<br />
+<a href="http://www.bbc.co.uk/radio/listen/live/rng.asx">http://www.bbc.co.uk/radio/listen/live/rng.asx</a><br />
+<br />
+That supposedly will be replaced by a Shoutcast stream in the very near future.<br />
+<br />
+You can also hack a temporary solution.  In the get_player script, find the string "mobile-tablet-main" (there is only one instance) and replace it with "apple-ipad-hls", then use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes=hlsbest</code></div></div> with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--stream</code></div></div> in your get_player command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">15-01-2015, 01:49 AM</div>
+</div>
+<div class="message">I'm guessing catch-up content will be next then. They did say that radio would be first but anything is possible.<br />
+<br />
+Does it still look like get_iplayer will be able to cope with the changeover when it does happen with radio and TV?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-730</h2></div><div class="dateline">15-01-2015, 02:55 AM</div>
+</div>
+<div class="message">Thank you, Mr/Mrs/Miss/Ms (select applicable title to suit) Pumpkin. Your suggested hack has been installed and appears to work just fine.  :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-01-2015, 01:42 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/liveradio-not-working/#post-11060">Quote:</a><br />
+Does it still look like get_iplayer will be able to cope with the changeover when it does happen with radio and TV?</blockquote>
+<br />
+It's a mystery.  They've announced their general plan for radio (live and on-demand), but the devil will be in the details. Any problems only become visible after the BBC makes changes - this was a perfect example.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">15-01-2015, 09:03 PM</div>
+</div>
+<div class="message">Get_iplayer has offered HLS streams for us to try with on-demand content for a while though and those seem to work fine so far (don't think I've seen any hlshd modes yet). And the live TV/radio streams that are already officially on iPlayer seem to work too. Isn't that a good sign?</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Liveradio not working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

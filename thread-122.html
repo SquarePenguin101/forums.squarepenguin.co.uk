@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Probelem with --fields option</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Probelem with --fields option</div>
+<div id="pagetitle"><h2>Probelem with --fields option</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-431</h2></div><div class="dateline">02-03-2014, 01:39 PM</div>
+</div>
+<div class="message">I use the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer "^BBC News&#36;" --type=radio</code></div></div> to search.<br />
+The result is like below and full result is attached:<br />
+11104:	BBC News - 23/02/2014, BBC World Service, News,Radio<br />
+11126:	BBC News - 25/02/2014, BBC World Service, News,Radio<br />
+11147:	BBC News - 26/02/2014, BBC World Service, News,Radio<br />
+<br />
+So I only want to choose the programme on the 2014.02.26.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer "^BBC News&#36;" --type=radio --fields=episode "26/02/2014"</code></div></div>But the result is not my expectation.<br/><br/>
+<a href="static/thread-122-result.txt">result.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-03-2014, 04:03 PM</div>
+</div>
+<div class="message">In your second command, you've specified two search expressions: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"^BBC News&#36;"</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"26/02/2014"</code></div></div>.  Only the latter will be found in the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>episode</code></div></div> field.  In your first command with no <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fields</code></div></div> options specified, the search was performed against the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>name</code></div></div> field (the default).  A hint:  If you search against two fields, e.g., <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--fields=name,episode</code></div></div>, the search is performed against the space-concatenated values of both fields: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"&lt;name&gt; &lt;episode&gt;"</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-431</h2></div><div class="dateline">02-03-2014, 11:52 PM</div>
+</div>
+<div class="message">I don't want to search one string in both two fields.<br />
+I want to search <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"^BBC News&#36;"</code></div></div> in <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>name</code></div></div> field and search <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"26/02/2014"</code></div></div> in <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>episode</code></div></div> field.<br />
+how can I achieve this in one command?<br />
+<br />
+If above method could not be done in the get_iplayer command, how can I narrow done the result in the result.txt with your recommendation?<br />
+I have tried the below command but it is no effect.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --fields=name,episode "^BBC News&#36;" "26/02/2014"</code></div></div><br />
+Thank you user-2 very much!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-03-2014, 01:26 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/probelem-with-fields-option/#post-1882">Quote:</a>I donât want to search one string in both two fields.<br />
+<br />
+I want to search <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"^BBC News&#36;"</code></div></div> in <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>name</code></div></div> field and search <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"26/02/2014"</code></div></div> in <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>episode</code></div></div> field.<br />
+<br />
+how can I achieve this in one command?</blockquote>
+<br />
+You can't search two fields separately at the same time.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>If above method could not be done in the get_iplayer command, how can I narrow done the result in the result.txt with your recommendation?<br />
+<br />
+I have tried the below command but it is no effect.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --fields=name,episode "^BBC News&#36;" "26/02/2014"</code></div></div></blockquote>
+<br />
+Re-read my earlier post.  You're searching against a concatenation of two fields, so you should use one search expression, not two.  If you're searching against two concatenated fields, what do you suppose you should do with your two search expressions?  Another hint: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"^BBC News&#36;"</code></div></div> is a regular expression (do some googling if you don't know what those are) that limits the entire matched value to just "BBC News".  Since you're searching against a concatenation of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>name</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>episode</code></div></div>, that condition can never be met.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Probelem with --fields option</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - TVMode - 'best' is not the best</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TVMode - 'best' is not the best</div>
+<div id="pagetitle"><h2>TVMode - 'best' is not the best</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">05-05-2017, 04:24 AM</div>
+</div>
+<div class="message">After updating everything (ffmpeg and get_iplayer) I noticed that my shows were not coming down in best format.<br />
+<br />
+As an example, I took the season finale of Line of Duty. In the xml file it reports modes as such:<br />
+<br />
+&lt;modes&gt;dvfhd1,dvfhd2,dvfhd3,dvfhd4,dvfsd1,dvfsd2,dvfsd3,dvfsd4,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,dvfhigh1,dvfhigh2,dvfhigh3,dvfhigh4,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,dvflow1,dvflow2,dvflow3,dvflow4,subtitles1,subtitles2,subtitles3,subtitles4,subtitles5&lt;/modes&gt;<br />
+&lt;modeshort&gt;dvfhd&lt;/modeshort&gt;<br />
+&lt;modesizes&gt;dvfhd1=2083MiB,dvfhd2=2083MiB,dvfhd3=2083MiB,dvfhd4=2083MiB,dvfsd1=1155MiB,dvfsd2=1155MiB,dvfsd3=1155MiB,dvfsd4=1155MiB,dvfxsd1=659MiB,dvfxsd2=659MiB,dvfxsd3=659MiB,dvfxsd4=659MiB,dvfhigh1=645MiB,dvfhigh2=645MiB,dvfhigh3=645MiB,dvfhigh4=645MiB,dvfxhigh1=340MiB,dvfxhigh2=340MiB,dvfxhigh3=340MiB,dvfxhigh4=340MiB,dvflow1=180MiB,dvflow2=180MiB,dvflow3=180MiB,dvflow4=180MiB,subtitles1=104KiB,subtitles2=104KiB,subtitles3=104KiB,subtitles4=104KiB,subtitles5=104KiB&lt;/modesizes&gt;<br />
+<br />
+Oddly enough, in the console I see this output:<br />
+INFO: hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,hvfxhigh1,hvfxhigh2,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hvflow1,hvflow2,dvflow1,dvflow2,dvflow3,dvflow4 modes will be tried for version editorial<br />
+INFO: Trying hvfxsd1 mode to record tv: Line of Duty: Series 4 - 6. Episode 6<br />
+<br />
+I am not sure why there is a discrepency or where get_iplayer is getting the above list from as it differs from the XML. <br />
+<br />
+get_iplayer has a tvmode of 'best' set in the options.<br />
+<br />
+If I manually set dvfhd1 in the options using<br />
+get_iplayer --prefs-add --tvmode=dvfhd1<br />
+<br />
+Then it does download the highest quality version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">05-05-2017, 04:38 AM</div>
+</div>
+<div class="message">I think you need the --fps50 option? In the documentation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">05-05-2017, 04:53 AM</div>
+</div>
+<div class="message">Interesting about the 50fps option (which I hadn't seen before).<br />
+Certainly with get_iplayer2.99 and below I didn't have that set yet managed to get 720p content to come down.<br />
+<br />
+without adding the 50fps here's the resultant video file's info:<br />
+Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 960x540 [SAR 1:1 DAR 16:9], 1310 kb/s, 25 fps, 25 tbr, 90k tbn, 50 tbc (default)<br />
+<br />
+and using the tvmode of dvfhd I get:<br />
+Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 3318 kb/s, 50 fps, 50 tbr, 50k tbn, 100 tbc (default)<br />
+<br />
+So indeed it is 50fps. <br />
+<br />
+But does this mean that BBC have stopped releasing 25fps HD content? (coincidentally at the same time as the new get_iplayer was released)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">05-05-2017, 06:21 AM</div>
+</div>
+<div class="message">All of it is covered in the recent release notes. There have been quite a lot of changes in the last year and then some of those changes have been changed again. It's quite a long read which I went through yesterday so I'll try to summarise a couple of main points as I understand them. It may still require some further reading. <br />
+<br />
+The HVF HD and DVF HD streams are 720/50fps. This doubles the bandwidth and storage required (from 25fps) which not everyone wants and so you have to explicitly request them with --fps50. This is changed from some prior versions where they were offered by default for --tvmode=best.  I personally prefer it this new way. <br />
+<br />
+Without --fps50,  the --tvmode=best switch will only look for the best 25fps streams.<br />
+<br />
+The only 720/25fps streams now available in v3.00 is HLS HD type. The flash player streams which used rtmpdump and were also 720/25fps are now deprecated and removed from get_iplayer. <br />
+<br />
+Not all programs will have HLS HD streams available. And...at the moment there are problems with many of the HLS files being produced by the BBC (Segment not found, or Missing Segment errors). This is not a get_iplayer problem and cannot be resolved by get_iplayer. This also happened last year and was a problem for several months. If get_iplayer v3.00 tries to download an HLS HD stream and finds a missing segment, it will abort and try another type. And...that by default will only be another 25fps type. <br />
+<br />
+So in short if you use --tvmode=best then get_iplayer v3.00 will opt for an HLSHD stream and you have to hope it's not one of the currently broken ones, in which case you'll end up falling back to a lower resolution 25fps file. If you want the larger 720/50fps file you have to use --tvmode=best --fps50.  If you want a smaller resolution 50fps file you have to use a different tvmode, probably better instead of best. You'll have to look up those details here: <br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">https://github.com/get-iplayer/get_iplayer/wiki/modes</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">05-05-2017, 06:28 AM</div>
+</div>
+<div class="message">Oh, and btw there is now an HLS HD type available for that show - whereas it didn't appear in the XML output that you copied. Not all the feed types are always immediately available. Sometimes can take some hours for them to appear.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">05-05-2017, 06:33 AM</div>
+</div>
+<div class="message">Funnily enough, I read that exact page before posting here, just not very well! Or I didn't understand the implications.<br />
+Thanks for your help!<br />
+<br />
+Is there any way to disable falling back? What happens to me often is that a lower res version becomes available and it gets downloaded, then the higher res never comes down because the show is already in the cache. (yes, perhaps I'm starting a new topic with that question!)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">05-05-2017, 06:46 AM</div>
+</div>
+<div class="message">The documentation makes clear the tvmode shortcuts are Maximum quality versions as opposed to Minimum. There isn't a way that I'm aware of to stop it stepping down. Best you can do I believe is manually specify exactly which stream you want each time you run the CLI. I don't use the PVR so can't help there. <br />
+<br />
+<br />
+With regards to re-downloading files, get_iplayer actually tells you how to fix this if you run it via CLI. <br />
+<br />
+--force to download a previously downloaded episode. <br />
+--overwrite may be required as well if the old file hasn't been manually deleted. <br />
+<br />
+I wouldn't put these in your permanent preferences list though. <br />
+<br />
+Good luck.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-735</h2></div><div class="dateline">05-05-2017, 07:02 AM</div>
+</div>
+<div class="message">Ok thanks. Yes, I use pvr exclusively (except when I find out its downloaded an SD version and then I use CLI).<br />
+<br />
+Thanks again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TVMode - 'best' is not the best</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

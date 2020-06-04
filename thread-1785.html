@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How can I make use of subdir as a variable?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How can I make use of subdir as a variable?</div>
+<div id="pagetitle"><h2>How can I make use of subdir as a variable?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">15-05-2018, 03:37 PM</div>
+</div>
+<div class="message">I'm having problems with the use of subdir as variable in a GiP command.<br />
+<br />
+I'd like to copy a file automatically after each tv download using this command (set as a preference)<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>commandtv = cp /mnt/raid1/Media_Share/GiP_Downloads/Blank.hmi /mnt/raid1/Media_Share/GiP_Downloads/tv/"&lt;subdir&gt;/&lt;fileprefix&gt;.hmi"</code></div></div><br />
+But it runs into a problem like this :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cp: cannot create regular file '/mnt/raid1/Media_Share/GiP_Downloads/tv/&lt;subdir&gt;/A Tattoo To Change Your Life Series 1_-_3. Covering My Mastectomy Scars.hmi': No such file or directory</code></div></div><br />
+Where am I going wrong?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2018, 04:01 PM</div>
+</div>
+<div class="message">Read the documentation on substitution parameters before formulating command strings. There is no <kbd>&lt;subdir&gt;</kbd> parameter, so it is ignored when the command string is processed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">15-05-2018, 04:20 PM</div>
+</div>
+<div class="message">Been there, done that.<br />
+<br />
+Either I'm failing to understand the syntax of the substitution commands, or it's not meant to work as I think it should.<br />
+<br />
+Whatever I type as a parameter, I always get the result returned, viz :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=p05tyfry --listformat fileprefix</code></div></div><br />
+That produces this :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>A Tattoo To Change Your Life: Series 1 - Covering My Mastectomy Scars, BBC iPlayer, p05tyfry</code></div></div><br />
+As does<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--listformat dir</code></div></div><br />
+So I'm stuck. Sorry.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2018, 04:34 PM</div>
+</div>
+<div class="message">EDIT: <span style="text-decoration: line-through;" class="mycode_s">Two</span> Three problems:<ul class="mycode_list"><li>Substitution parameters won't be recognised without angle brackets<br />
+</li>
+<li><kbd>--listformat</kbd> is limited to fields in cache, which doesn't include <kbd>&lt;dir&gt;</kbd> or <kbd>&lt;fileprefix&gt;</kbd><br />
+</li>
+<li><kbd>--listformat</kbd> is for search results - it will be ignored when downloading with <kbd>--pid</kbd><br />
+</li>
+</ul>
+Again, read the documentation on substitution parameters. It tells you how to check values for a programme before downloading. However, you don't need to know the values to formulate command strings - that's the whole point of using them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">15-05-2018, 04:36 PM</div>
+</div>
+<div class="message">Ok. I'll give it another go.<br />
+<br />
+Thanks for the pointers.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">07-07-2018, 10:57 AM</div>
+</div>
+<div class="message">Still struggling with subdirs!<br />
+<br />
+I'm trying to generate a subdirectory for a radio programme and failing - as usual.<br />
+<br />
+If I look at "Tony Blackburn's Golden Hour - 06/07/2018 (b0b8bnzl)" and in particular the info, I can see this field :-<br />
+firstbcastdate: 2018-07-06 so my task is to generate a subdirectory of 'Tony Blackburn's Golden Hour' of the form 'yyyy'. I'm trying to do it with the following command :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --get 45418 --subdir --subdir-format="&lt;nameshort&gt;_&lt;firstbcastdate:0:4&gt;"</code></div></div><br />
+It's not working and all I get is a directory with the name 'Tony Blackburns Golden Hour_' and no subdirectory. Is it simply because it's a radio programme?<br />
+<br />
+Also, why is there a trailing underscore in the directory name? I've noticed it in other radio downloads.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-07-2018, 11:19 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-07-2018, 10:57 AM)</span></cite>It's not working and all I get is a directory with the name 'Tony Blackburns Golden Hour_' and no subdirectory. Is it simply because it's a radio programme?</blockquote>It's because you're using an invalid substitution parameter in <kbd>--subdir-format</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">07-07-2018, 12:17 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>It's because you're using an invalid substitution parameter in --subdir-format</blockquote>
+<br />
+I'm thoroughly confused now then because both parameters, &lt;nameshort&gt; and &lt;firstbcastdate&gt; are both listed in substitution parameters and indeed the docs say '--subdir-format &lt;format&gt; : The format to be used for subdirectory naming. Use substitution parameters in format string (see docs for list)' and I *thought* I was using substitution parameters.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">08-07-2018, 09:16 AM</div>
+</div>
+<div class="message">Making *some* progress.<br />
+<br />
+If I use the following :-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio -g 35020 --subdir --subdir-format="&lt;nameshort&gt;/&lt;firstbcastdate&gt;"</code></div></div>I get a Click folder with a subfolder with the name '2018-06-26' but it all goes wrong when I try to use &lt;firstbcastdate:0:4&gt; as I don't get any subfolder then.<br />
+<br />
+Is there a way to extract the year from the date in the way I desire or do I have to add some more code of my own to do that?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">09-07-2018, 12:11 PM</div>
+</div>
+<div class="message">Physician heal thyself - just in case somebody else wants a similar solution.<br />
+<br />
+Doubtless the code could be improved. I think I've left it too late to learn coding now but it works for me.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>subdir=&#36;(ls /mnt/raid2/Media_Share/GiP_Downloads/Click) ; short="&#36;{subdir:0:4}" ; mv /mnt/raid2/Media_Share/GiP_Downloads/Click/&#36;subdir /mnt/raid2/Media_Share/GiP_Downloads/Click/&#36;short</code></div></div><br />
+I've saved it as a preset so can call it as and when needed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-07-2018, 10:22 PM</div>
+</div>
+<div class="message">That will fail when you download another episode in the series, so I suspect you have left something out. Show a full command so others can evaluate it properly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">09-07-2018, 11:20 PM</div>
+</div>
+<div class="message">That's the complete command for that part of the operation.<br />
+<br />
+Perhaps I should explain my setup. All GiP downloads go into a GiP_Downloads folder which is then split into radio and tv. But each episode of a programme, be it radio or tv then has another script run to move it into either into a separate folder on the NAS (in the case of tv programmes) or on to a separate drive in the case of a radio file. That script checks for the existence of a folder with the same name and if it doesn't exist, the whole folder, with sub-folder gets moved. If it does exist, the script checks for the existence of a sub-folder with the same name as the new one my latest script creates. If there's no sub-folder, that gets moved to the relevant location and of course the downloaded file gets moved too. If there is a sub-folder then just the files get moved, be they m4a or mp3. The (by now) empty folders in the GiP_Downloads folder are then deleted.<br />
+<br />
+I do have one more script which copies in a .hmi file from the NAS for an M4A file as they get played on one of my Humax machines and they use an HMI file to track play time. That was where I started with this, trying to find a solution for the Blank.hmi file copy routine.<br />
+<br />
+Taking note of your comment, I agree that if there is an existing folder/sub-folder structure in existence, my routine will indeed fail. I might have a crack at adapting my copy procedure outlined above to cope with such an occurrence. If I make it work, I'll post back here for the benefit of others.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">25-08-2018, 10:00 AM</div>
+</div>
+<div class="message">I see that in the latest release, v3.17, my code is redundant as there are some new fields being exposed. Extract from the release notes says :-<br />
+Added additional substitution parameters: &lt;firstbcastyear, &lt;firstbcastmonth&gt;, &lt;firstbcastday&gt;.<br />
+<br />
+So all I can say is, Many thanks. Much appreciated.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How can I make use of subdir as a variable?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

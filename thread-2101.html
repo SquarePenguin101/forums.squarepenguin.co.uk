@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot seem to set outputradio pref with snap version of get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot seem to set outputradio pref with snap version of get_iplayer</div>
+<div id="pagetitle"><h2>Cannot seem to set outputradio pref with snap version of get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">26-09-2019, 05:07 PM</div>
+</div>
+<div class="message">I'm using get-iplayer 3.22 under Linux Mint 19.2<br />
+<br />
+After much experimentation I have to accept that I cannot get get-iplayer to accept my setting for outputradio in the --prefs-add command. The content of 'options'  in the .get_iplayer hidden folder in my &#36;Home directory is set as I request but the downloaded files are saved to the default (&#36;Home) directory. This happens even if I specify the required download directory using the --outputradio parameter in the --get request. However if I specify my desired download location using the -o option, then downloads are saved to my requested directory.<br />
+<br />
+I am also using get_iplayer 3.22 under Win 10. There things work exactly as I expect: I update my preferences using the --prefs-add option and thereafter downloads are placed in the requested location.<br />
+<br />
+What am I doing wrong in Linux?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-09-2019, 06:30 PM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a proper report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">29-09-2019, 11:05 AM</div>
+</div>
+<div class="message">Thanks for the clear instructions and beg pardon for not following them in the first place. Responding as per the numbered requirements in your Instructions page:<br />
+<br />
+1. Satisfied by original post<br />
+2. Ditto<br />
+3. Here is the response, showing that the prefs appear to be correct:<br />
+"tony@Studio-Mint:~&#36; get_iplayer --show-prefs<br />
+Options in '/home/tony/.get_iplayer/options'<br />
+outputradio = /home/tony/LJ_Downloads<br />
+4. Satisfied by original post<br />
+5. Using Mint 19.2 Cinnamon<br />
+6.1. Using this command:<br />
+"tony@Studio-Mint:~&#36; get-iplayer --type=radio --get 39049"<br />
+results in the file being written to the '/home/tony' directory, with the above prefs set. The verbose output log file it attached.<br />
+6.2. Using the command:<br />
+"tony@Studio-Mint:~&#36; get-iplayer --type=radio --get 39049  -o "/home/tony/LJ_Downloads""<br />
+results in the file being written to the requested directory (no verbose log file supplied)<br />
+6.3. Using the command:<br />
+"tony@Studio-Mint:~&#36; get-iplayer --type=radio --get 39049  --ouputradio  "/home/tony/LJ_Downloads""<br />
+results in the file being written to the '/home/tony'  directory (for obvious reasons, so no verbose log file supplied)<br />
+6.4. Using the command:<br />
+"tony@Studio-Mint:~&#36; get-iplayer --type=radio --get 39049  --outputradio  "/home/tony/LJ_Downloads""<br />
+results in the file being written to the requested directory (no verbose log file supplied)<br />
+7. I'm downloading the following item:<br />
+<a href="https://www.bbc.co.uk/programmes/m0008pvm">https://www.bbc.co.uk/programmes/m0008pvm</a><br />
+<br />
+BBC Radio 3 Late Junction Thursday 26th September 2019 "Radio Ping-Pong"<br />
+8. Don't think this applies.<br />
+9. Attached 'Get_322_log.txt' as requested</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-09-2019, 04:50 PM</div>
+</div>
+<div class="message">No log file attached.<br />
+<br />
+6.3 and 6.4 imply you ran an identical command with different results. In the unlikely event that is the case, you have bigger problems.<br />
+<br />
+If you haven't already, back up and delete the "options" file in your profile directory and re-create it with <kbd>--prefs-add</kbd>.<br />
+<br />
+Check <kbd>--show-prefs</kbd> with both <kbd>get_iplayer</kbd> and <kbd>get-iplayer</kbd> (underscore vs. hyphen). Since you have mixed them, it is worth checking. It is difficult, but not impossible, to get them out of sync, and we have no way of knowing what you have done on your machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">30-09-2019, 10:33 AM</div>
+</div>
+<div class="message">Hmm, not sure why you were unable to 'see' the log-file: I thought the procedure to attach a file to a post was clear enough for me to understand and I thought I followed it correctly. I'll try attaching here, too. Please let me know if I have followed the procedure correctly this time.<br />
+<br />
+Aha! I see you fell into the same trap as me in my items 6.3 and 6.4: they are not identical commands; one of them is in error and this error explains part of the problem I was having, as described in my original post. The error is in the spelling of 'ouputradio'. I must have read this part of the command line I was using dozens of times without noticing the error on input or the error message from get_iplayer on output. <br />
+<br />
+As stated in 6.4, getting the spelling correct results in my getting the expected results. This effect is the natural consequence of a person with perceptual  and age-related issues being required to use a CLI - but that's not a discussion to be opened here.<br />
+<br />
+The inconsistencies between the use of 'get-iplayer' and 'get_iplayer' are, I believe, limited to my typing in this forum and not to my actual usage of the product, but I will try your suggestion of resetting the options file, which has, in my case, very basic contents.<br />
+<a href="static/thread-2101-get-iplayer_debug.txt">Output log.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">30-09-2019, 11:10 AM</div>
+</div>
+<div class="message">Thanks for the pointer to the spelling of 'get_iplayer' being a possible source of problems. Being incapable for finding a more suitable source of 'get_iplayer' Version 3.22 for Linux, I used a Snap version, at <br />
+<br />
+"https://snapcraft.io/get-iplayer"<br />
+<br />
+and did not notice that this instalsl 'get-iplayer' 3.22 and not 'get_iplayer'. I continued to use the syntax 'get_iplayer' when setting prefs and trying to find/download programs..<br />
+<br />
+Having now changed to 'get-iplayer' 3.22, and  set prefs appropriately, I find that the problems in my OP no longer exist.<br />
+<br />
+I must say I find this all very frustrating and would like to 'complain' to somebody - anybody (to avoid kicking the cat).. I am not by any stretch of the imagination a programmer, developer, Linux expert or indeed any sort of expert. But I do like to listen to music available from the BBC in my own time. This issue resulting from 2 different spellings of 'get_iplayer' has cost me some days of frustration - days which are critical to me since, being almost in my 8th decade, I am extremely time poor.<br />
+<br />
+Can somebody sort this out?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-09-2019, 11:25 AM</div>
+</div>
+<div class="message">Thanks for the log. We could have saved some time if you had told us you were using the snap version of get_iplayer. As you can see from the log, <kbd>--outputradio</kbd> has not been set. As you can also see from the log - and as the documentation warns you - the profile directory for the snap version is not &#36;HOME/.get_iplayer, but &#36;HOME/snap/get-iplayer/common/.get_iplayer (&#36;SNAP_USER_COMMON/.get_iplayer in snap environment). As the documentation also tells you, we don't support the snap version, or any Linux package, and this is one reason why - packagers change things to suit the distro. That said, the spelling difference (which stems from Debian &gt; Ubuntu &gt; Mint package naming rules) doesn't matter if everything is installed correctly. If not, then your installation is screwed up in some way that we can't possibly know, and it would be a mutual waste of time to drill down into it. It's the sort of thing you can only unpick yourself. If you want to complain, take it up with the snap packager. get_iplayer itself is working as it should. Thread closed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-09-2019, 11:57 AM</div>
+</div>
+<div class="message">Added: &#36;SNAP_USER_COMMON/.get_iplayer in snap environment is &#36;HOME/snap/get-iplayer/common/.get_iplayer</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot seem to set outputradio pref with snap version of get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

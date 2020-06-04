@@ -1,0 +1,174 @@
+get_iplayer 3.13-homebrew, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /Users/paul/.get_iplayer
+INFO: User options file: /Users/paul/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	info = 1
+	pid = b0b2n9r3
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 2719 file cache entries for tv
+INFO: Got 3104 file cache entries for radio
+INFO: Cleaning PID - old: 'b0b2n9r3' new: 'b0b2n9r3'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0b2n9r3.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Failed to download JSON PID info: http://www.bbc.co.uk/programmes/b0b2n9r3.json
+WARNING: Could not determine PID type (b0b2n9r3). Trying to record PID directly.
+Episodes:
+get_iplayer - b0b2n9r3, BBC iPlayer, b0b2n9r3
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0b2n9r3.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Could not download programme metadata from http://www.bbc.co.uk/programmes/b0b2n9r3.json
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/b0b2n9r3/playlist.json
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b0b2n9r3/playlist.json
+INFO: iPlayer metadata URL (HTML) [default] = http://www.bbc.co.uk/iplayer/episode/b0b2n9r3/
+INFO: Getting URL: http://www.bbc.co.uk/iplayer/episode/b0b2n9r3/
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'default' version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [signed] = http://www.bbc.co.uk/iplayer/episode/b0b2n9r3/sign
+INFO: Getting URL: http://www.bbc.co.uk/iplayer/episode/b0b2n9r3/sign
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'signed' version retrieved from iPlayer site (HTML)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p066hht3?cb=35779
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/0a0e76-b0b3fqsm/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1525794506_8a7fd2f93abe85508b0159c17676d133
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/0a0e76-b0b3fqsm/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism/pc_hd_abr_v2_dash_master.mpd?s=1525751306&e=1525794506&h=fbbeba863db6362a580322d334335fca
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p066hht3?cb=49849
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/0a0e76-b0b3fqsm/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.ism/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.m3u8?__gda__=1525794506_4133e418ae2f1ae3183e04b443c18e28
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/0a0e76-b0b3fqsm/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.ism/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.m3u8?s=1525751306&e=1525794506&h=165444c5680dc6ffdb55a5241cd3183d
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/0a0e76-b0b3fqsm/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.ism/vf_b0b3fqsm_eaea7d22-caf5-4b31-b905-42f4bbb6df35.ism.hlsv2.m3u8?at=7FGY80_n392c56f32b2f6b6dc26abc6a7082635f24ec5cd756baeb011ee80
+INFO: Found mode    dvfxsd1:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvfxsd2:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_akamai_uk_dash/1
+INFO: Found mode  dvfxhigh1:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_limelight_uk_dash/2
+INFO: Found mode  dvfxhigh2:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_akamai_uk_dash/1
+INFO: Found mode    dvflow1:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvflow2:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_akamai_uk_dash/1
+INFO: Found mode    hvfxsd1:   gip_hvf_iplayer_1836  hls h264   960x540 25fps 1836kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvfxsd2:   gip_hvf_iplayer_1836  hls h264   960x540 25fps 1836kbps mf_limelight_uk_hls/1
+INFO: Found mode    hvfxsd3:   gip_hvf_iplayer_1836  hls h264   960x540 25fps 1836kbps mf_akamai_uk_hls/1
+INFO: Found mode   hvfhigh1:   gip_hvf_iplayer_1800  hls h264   704x396 50fps 1800kbps mf_bidi_uk_hls/3
+INFO: Found mode   hvfhigh2:   gip_hvf_iplayer_1800  hls h264   704x396 50fps 1800kbps mf_limelight_uk_hls/1
+INFO: Found mode   hvfhigh3:   gip_hvf_iplayer_1800  hls h264   704x396 50fps 1800kbps mf_akamai_uk_hls/1
+INFO: Found mode  hvfxhigh1:   gip_hvf_iplayer_1013  hls h264   704x396 25fps 1013kbps mf_bidi_uk_hls/3
+INFO: Found mode  hvfxhigh2:   gip_hvf_iplayer_1013  hls h264   704x396 25fps 1013kbps mf_limelight_uk_hls/1
+INFO: Found mode  hvfxhigh3:   gip_hvf_iplayer_1013  hls h264   704x396 25fps 1013kbps mf_akamai_uk_hls/1
+INFO: Found mode    hvfstd1:    gip_hvf_iplayer_865  hls h264   640x360 25fps  865kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvfstd2:    gip_hvf_iplayer_865  hls h264   640x360 25fps  865kbps mf_limelight_uk_hls/1
+INFO: Found mode    hvfstd3:    gip_hvf_iplayer_865  hls h264   640x360 25fps  865kbps mf_akamai_uk_hls/1
+INFO: Found mode    hvflow1:    gip_hvf_iplayer_599  hls h264   512x288 25fps  599kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvflow2:    gip_hvf_iplayer_599  hls h264   512x288 25fps  599kbps mf_limelight_uk_hls/1
+INFO: Found mode    hvflow3:    gip_hvf_iplayer_599  hls h264   512x288 25fps  599kbps mf_akamai_uk_hls/1
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0b3fqsm?cb=44754
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/0a0e76-b0b3fqsm/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1525794507_d8c2bc6cc7cd37cf5cd1d87500f1a137
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/0a0e76-b0b3fqsm/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism/pc_hd_abr_v2_dash_master.mpd?s=1525751307&e=1525794507&h=410d39853f8a76ed57099e734c1eee26
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0b3fqsm?cb=63009
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/0a0e76-b0b3fqsm/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.ism/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.m3u8?__gda__=1525794507_9a098572f7020dd7f0586d509d980b63
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/0a0e76-b0b3fqsm/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.ism/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.m3u8?s=1525751307&e=1525794507&h=f766802a667720d3d8ba45f0e8c71e5a
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/0a0e76-b0b3fqsm/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.ism/vf_b0b3fqsm_fa538244-08c5-4a34-9844-d70f1f65705a.ism.hlsv2.m3u8?at=Zo177bf109941776c2f957ed9b4ac2044eb8527d49f1b0d156baeb02130c0
+INFO: Found mode     dvfhd1:   gip_dvf_iplayer_5070 dash h264  1280x720 50fps 5070kbps mf_limelight_uk_dash/2
+INFO: Found mode     dvfhd2:   gip_dvf_iplayer_5070 dash h264  1280x720 50fps 5070kbps mf_akamai_uk_dash/1
+INFO: Found mode     dvfsd1:   gip_dvf_iplayer_2812 dash h264   960x540 50fps 2812kbps mf_limelight_uk_dash/2
+INFO: Found mode     dvfsd2:   gip_dvf_iplayer_2812 dash h264   960x540 50fps 2812kbps mf_akamai_uk_dash/1
+INFO: Found mode    dvfxsd1:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvfxsd2:   gip_dvf_iplayer_1604 dash h264   960x540 25fps 1604kbps mf_akamai_uk_dash/1
+INFO: Found mode  dvfxhigh1:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_limelight_uk_dash/2
+INFO: Found mode  dvfxhigh2:    gip_dvf_iplayer_827 dash h264   704x396 25fps  827kbps mf_akamai_uk_dash/1
+INFO: Found mode    dvflow1:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_limelight_uk_dash/2
+INFO: Found mode    dvflow2:    gip_dvf_iplayer_437 dash h264   512x288 25fps  437kbps mf_akamai_uk_dash/1
+INFO: Found mode     hvfhd1:   gip_hvf_iplayer_5714  hls h264  1280x720 50fps 5714kbps mf_bidi_uk_hls/3
+INFO: Found mode     hvfhd2:   gip_hvf_iplayer_5714  hls h264  1280x720 50fps 5714kbps mf_limelight_uk_hls/2
+INFO: Found mode     hvfhd3:   gip_hvf_iplayer_5714  hls h264  1280x720 50fps 5714kbps mf_akamai_uk_hls/1
+INFO: Found mode     hvfsd1:   gip_hvf_iplayer_3320  hls h264   960x540 50fps 3320kbps mf_bidi_uk_hls/3
+INFO: Found mode     hvfsd2:   gip_hvf_iplayer_3320  hls h264   960x540 50fps 3320kbps mf_limelight_uk_hls/2
+INFO: Found mode     hvfsd3:   gip_hvf_iplayer_3320  hls h264   960x540 50fps 3320kbps mf_akamai_uk_hls/1
+INFO: Found mode    hvfxsd1:   gip_hvf_iplayer_2040  hls h264   960x540 25fps 2040kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvfxsd2:   gip_hvf_iplayer_2040  hls h264   960x540 25fps 2040kbps mf_limelight_uk_hls/2
+INFO: Found mode    hvfxsd3:   gip_hvf_iplayer_2040  hls h264   960x540 25fps 2040kbps mf_akamai_uk_hls/1
+INFO: Found mode   hvfhigh1:   gip_hvf_iplayer_2004  hls h264   704x396 50fps 2004kbps mf_bidi_uk_hls/3
+INFO: Found mode   hvfhigh2:   gip_hvf_iplayer_2004  hls h264   704x396 50fps 2004kbps mf_limelight_uk_hls/2
+INFO: Found mode   hvfhigh3:   gip_hvf_iplayer_2004  hls h264   704x396 50fps 2004kbps mf_akamai_uk_hls/1
+INFO: Found mode  hvfxhigh1:   gip_hvf_iplayer_1216  hls h264   704x396 25fps 1216kbps mf_bidi_uk_hls/3
+INFO: Found mode  hvfxhigh2:   gip_hvf_iplayer_1216  hls h264   704x396 25fps 1216kbps mf_limelight_uk_hls/2
+INFO: Found mode  hvfxhigh3:   gip_hvf_iplayer_1216  hls h264   704x396 25fps 1216kbps mf_akamai_uk_hls/1
+INFO: Found mode    hvfstd1:   gip_hvf_iplayer_1069  hls h264   640x360 25fps 1069kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvfstd2:   gip_hvf_iplayer_1069  hls h264   640x360 25fps 1069kbps mf_limelight_uk_hls/2
+INFO: Found mode    hvfstd3:   gip_hvf_iplayer_1069  hls h264   640x360 25fps 1069kbps mf_akamai_uk_hls/1
+INFO: Found mode    hvflow1:    gip_hvf_iplayer_803  hls h264   512x288 25fps  803kbps mf_bidi_uk_hls/3
+INFO: Found mode    hvflow2:    gip_hvf_iplayer_803  hls h264   512x288 25fps  803kbps mf_limelight_uk_hls/2
+INFO: Found mode    hvflow3:    gip_hvf_iplayer_803  hls h264   512x288 25fps  803kbps mf_akamai_uk_hls/1
+INFO: Found mode subtitles1:               captions http  N/A       N/A   N/A      N/A mf_limelight_uk_plain/20
+INFO: Found mode subtitles2:               captions http  N/A       N/A   N/A      N/A sis/10
+INFO: Found mode subtitles3:               captions http  N/A       N/A   N/A      N/A mf_akamai_uk_plain/10
+INFO: Searching for versions: editorial
+INFO: File name prefix = Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial
+
+available:      2018-05-07T21:30:00+00:00
+brand:          Peter Kay's Car Share
+channel:        BBC One
+desc:           Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+desclong:       Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+descmedium:     Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+descshort:      Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+dir:            /Users/paul
+dldate:         2018-05-08
+dltime:         10:48:24
+duration:       1680
+durations:      audiodescribed: 1680
+durations:      editorial: 1680
+episode:        Unscripted
+episodenum:     3
+episodeshort:   Unscripted
+expires:        in 33 days 13 hours (2018-06-10T23:25:00+00:00)
+ext:            EXT
+filename:       /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.EXT
+filepart:       /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.partial.EXT
+fileprefix:     Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial
+guidance:       Yes
+index:          1744
+longname:       Peter Kay's Car Share
+modes:          audiodescribed: dvfxsd1,dvfxsd2,dvfxhigh1,dvfxhigh2,dvflow1,dvflow2,hvfxsd1,hvfxsd2,hvfxsd3,hvfhigh1,hvfhigh2,hvfhigh3,hvfxhigh1,hvfxhigh2,hvfxhigh3,hvfstd1,hvfstd2,hvfstd3,hvflow1,hvflow2,hvflow3
+modes:          editorial: dvfhd1,dvfhd2,dvfsd1,dvfsd2,dvfxsd1,dvfxsd2,dvfxhigh1,dvfxhigh2,dvflow1,dvflow2,hvfhd1,hvfhd2,hvfhd3,hvfsd1,hvfsd2,hvfsd3,hvfxsd1,hvfxsd2,hvfxsd3,hvfhigh1,hvfhigh2,hvfhigh3,hvfxhigh1,hvfxhigh2,hvfxhigh3,hvfstd1,hvfstd2,hvfstd3,hvflow1,hvflow2,hvflow3,subtitles1,subtitles2,subtitles3
+modesizes:      audiodescribed: dvfxsd1=329MB,dvfxsd2=329MB,dvfxhigh1=170MB,dvfxhigh2=170MB,dvflow1=90MB,dvflow2=90MB,hvfxsd1=386MB,hvfxsd2=386MB,hvfxsd3=386MB,hvfhigh1=378MB,hvfhigh2=378MB,hvfhigh3=378MB,hvfxhigh1=213MB,hvfxhigh2=213MB,hvfxhigh3=213MB,hvfstd1=182MB,hvfstd2=182MB,hvfstd3=182MB,hvflow1=126MB,hvflow2=126MB,hvflow3=126MB [estimated sizes only]
+modesizes:      editorial: dvfhd1=1041MB,dvfhd2=1041MB,dvfsd1=578MB,dvfsd2=578MB,dvfxsd1=329MB,dvfxsd2=329MB,dvfxhigh1=170MB,dvfxhigh2=170MB,dvflow1=90MB,dvflow2=90MB,hvfhd1=1200MB,hvfhd2=1200MB,hvfhd3=1200MB,hvfsd1=697MB,hvfsd2=697MB,hvfsd3=697MB,hvfxsd1=428MB,hvfxsd2=428MB,hvfxsd3=428MB,hvfhigh1=421MB,hvfhigh2=421MB,hvfhigh3=421MB,hvfxhigh1=255MB,hvfxhigh2=255MB,hvfxhigh3=255MB,hvfstd1=224MB,hvfstd2=224MB,hvfstd3=224MB,hvflow1=169MB,hvflow2=169MB,hvflow3=169MB,subtitles1=67kB,subtitles2=67kB,subtitles3=67kB [estimated sizes only]
+name:           Peter Kay's Car Share
+nameshort:      Peter Kay's Car Share
+pid:            b0b2n9r3
+player:         http://www.bbc.co.uk/iplayer/episode/b0b2n9r3/
+runtime:        28
+senum:          s01e03
+seriesnum:      1
+subsfile:       /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.srt
+subspart:       /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.partial.srt
+subsraw:        /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.ttml
+thumbfile:      /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.jpg
+thumbnail:      http://ichef.bbci.co.uk/images/ic/192x108/p02n639k.jpg
+timeadded:      4 days 10 hours ago (2018-05-03T23:05:46+00:00)
+title:          Peter Kay's Car Share: Unscripted
+tracklist:      /Users/paul/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_editorial.trk
+type:           tv
+verpids:        audiodescribed: p066hht3
+verpids:        editorial: b0b3fqsm
+version:        editorial
+versions:       audiodescribed,editorial
+web:            https://www.bbc.co.uk/programmes/b0b2n9r3
+
+INFO: Loaded history for first check.
+INFO: Loading recordings history

@@ -1,0 +1,91 @@
+get_iplayer 3.22.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: Start: 2019-09-15T20:24:36 (1568575476)
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\Derek\.get_iplayer
+INFO: User options file: C:\Users\Derek\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+INFO: Loaded PVR search 'adventure_show_name_tv_radio'
+INFO: Loaded PVR search 'ancient_britain_name_tv_radio'
+INFO: Loaded PVR search 'an_art_lovers_guide_name_tv_radio'
+INFO: Loaded PVR search 'Bach_name_radio'
+INFO: Loaded PVR search 'caesar_name_tv_radio'
+INFO: Loaded PVR search 'classical_century_name_tv_radio'
+INFO: Loaded PVR search 'cloud_lab_name_tv_radio'
+INFO: Loaded PVR search 'Composer_of_the_Week_name_tv_radio'
+INFO: Loaded PVR search 'early_music_name_tv_radio'
+INFO: Loaded PVR search 'edinburgh_nights_name_tv_radio'
+INFO: Loaded PVR search 'edinburgh_show_name_tv_radio'
+INFO: Loaded PVR search 'edinburgh_winners_name_tv_radio'
+INFO: Loaded PVR search 'Essential_Classics_name_tv_radio'
+INFO: Loaded PVR search 'genius_of_the_ancient_world_name_tv_radio'
+INFO: Loaded PVR search 'grand_tours_name_tv_radio'
+INFO: Loaded PVR search 'horizon_name_tv_radio'
+INFO: Loaded PVR search 'japan_name_tv_radio'
+INFO: Loaded PVR search 'landward_name_tv_radio'
+INFO: Loaded PVR search 'lie_to_you_name_tv_radio'
+INFO: Loaded PVR search 'mediterranean_name_tv_radio'
+INFO: Loaded PVR search 'mock_the_week_name_tv_radio'
+INFO: Loaded PVR search 'montalbano_name_tv_radio'
+INFO: Loaded PVR search 'neanderthals_name_tv_radio'
+INFO: Loaded PVR search 'news_for_you_name_tv_radio'
+INFO: Loaded PVR search 'New_World_Order_name_tv_radio'
+INFO: Loaded PVR search 'normans_name_tv_radio'
+INFO: Loaded PVR search 'planets_name_tv_radio'
+INFO: Loaded PVR search 'prom_name_radio'
+INFO: Loaded PVR search 'qi_name_tv'
+INFO: Loaded PVR search 'Queen_s_Hall_name_tv_radio'
+INFO: Loaded PVR search 'remarkable_places_name_tv_radio'
+INFO: Loaded PVR search 'rembrandt_name_tv_radio'
+INFO: Loaded PVR search 'Seven_Ages_of_Starlight_name_tv_radio'
+INFO: Loaded PVR search 'shaun_the_sheep_name_tv_radio'
+INFO: Loaded PVR search 'sicily_name_tv_radio'
+INFO: Loaded PVR search 'sky_at_night_name_tv_radio'
+INFO: Loaded PVR search 'stonehenge_name_tv_radio'
+INFO: Loaded PVR search '_Whisky_Galore__name_tv_radio'
+INFO: Loaded PVR search list
+Running PVR Searches:
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: PVR Run: 'prom_name_radio'
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	fields = name
+	get = 1
+	hide = 1
+	nopurge = 1
+	pvrsingle = prom_name_radio
+	type = radio
+	verbose = 1
+
+INFO: Search args: 'prom'
+INFO: Most recent addition (radio) = 2019-09-15T19:23:32+00:00 (1568575412)
+INFO: Got 17657 file cache entries for radio
+DEBUG: Cache expiry time for radio is 14400 secs - refresh in 14357 secs
+INFO: Search term 'prom' is a substring
+DEBUG: Search download_regex = prom
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 
+DEBUG: Search before = 
+DEBUG: Search available_since = 
+DEBUG: Search available_before = 
+DEBUG: Search expires_after = 
+DEBUG: Search expires_before = 
+
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: 0 matching programmes

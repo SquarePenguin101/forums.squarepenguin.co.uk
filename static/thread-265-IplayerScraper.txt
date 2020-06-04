@@ -1,0 +1,328 @@
+######################################################
+## iPlayerScraper									##
+## Version 0.99										##
+## Mick Putley										##
+##													##
+## 03 NOV 2014										##
+## Added rename fo files							##
+## Added moving file to GDrive for transportation	##
+## Added Email & SMS for new shows					##
+######################################################
+$VersionNumber = "0.99"
+
+Write-host "IPlayer Scraper vVersionNumber"
+Write-Host "************************"
+# Parameters
+$Get_iPlayerPath = "c:\program files (x86)\Get-iPlayer"
+$PerlPath = "C:\Program Files (x86)\Get_iPlayer\Perl.exe"
+$CSVPath = "c:\users\administrator\google drive\BBC iPlayer Shows.csv"
+$LPath = "C:\Logs\Scraper.Log"
+$GenericName = "C:\Users\Administrator\Videos\BBC iPlayer Feeds - s01e01.mp4"
+[Array] $Jobs = New-Object 'object[,]' 6,99
+## Arrary Layout #####################
+## Column 0 : Title					##
+## Column 1 : Show Pid (sPID)		##
+## Column 2 : Episode Pid (ePID)	##
+## Column 3 : Series				##
+## Column 4 : Episode				##
+## Column 5 : Proposed Filename		##
+######################################
+
+CD "C:\Program Files (x86)\Get_iPlayer"
+# Import the CSV of shows to be checked
+Import-CSV $CSVPath|ForEach-Object `
+{
+	
+	Add-Content $LPath "IPS:$VersionMumber`t$(Get-Date)`tProgram started"
+	Clear-Host
+	$Show = $_.Name
+	# Remove any colons
+	$Show = $Show -Replace ":", "-"
+	$sPID = $_.Pid
+	$Jobs.Clear()
+	Write-host "IPlayer Scraper v0.1"
+	Write-Host "***************"
+	Write-host "`n`n`n`n`nSearching for $Show (sPID: $sPID)`n`n" -ForegroundColor Yellow
+	Write-Host "Search Results" -ForegroundColor Yellow
+	#########################
+	# Special Case - BBC News
+	#########################
+	Add-Content $LPath "IPS:$VersionMumber`tStarting run for show:$SPid ($Show)"
+	If($Show -eq "BBC News at Six")
+	{
+		Add-Content $LPath "IPS:$VersionMumber`tSpecial Case, using alternate URL"
+		$url = "http://bbc.co.uk/programmes/b007mpkn/episodes/player"
+	}
+	ELSE
+	{
+		Add-Content $LPath "IPS:$VersionMumber`tUsing standard URL"
+		$url = "http://www.bbc.co.uk/iplayer/episodes/$sPID"
+	}
+	$regex = "href=`"\/iplayer\/episode/[a-z,0-9]{8}"
+	# Scrape entire show page for links
+	($result = Invoke-WebRequest $url).links|out-file -width 1000 "./links.txt"
+	# Reset the index for the jobs array and search result for lines that match the search pattern
+	$j = 0
+	select-string "./links.txt" -pattern $regex|foreach-object `
+	{
+		# Grab the line with the ePID and truncate
+		$ePID = $_.Line|select-String -AllMatches "\/iplayer\/episode\/[a-z,0-9]{8}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+		$ePID = $ePID.Substring(17)
+		# Grab the line with the series number and format in a way that TVRenamer and 'TheRenamer' will understand when they go to TVDB for details.
+		#Reset diagnostic style tracker
+        $SStyle = 0
+		########################################
+		# Series Style (1) Year as series number
+		########################################
+		$Series = $_.Line|select-String "title=`"$Show, [0-9]{4}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+		If($Series.Length -ne 0)
+		{
+			$Series = $Series.Substring($Show.Length + 9)
+            $SStyle = 1
+			Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+		}
+			If($Series.Length -eq 0)
+		{
+			###################################################################################
+			# Series Style (2) No series number, just episode number e.g. one story in chapters
+			###################################################################################
+			$Series = $_.Line|select-String "title=`"$Show, [0-9]{1,2}\."|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Series.Length -ne 0)
+			{
+				$Series = "1"
+                $SStyle = 2
+				Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+			}
+		}
+		If($Series.Length -eq 0)
+		{
+			###########################################
+			# Series Style (3) Only number for a series
+			###########################################
+			$Series = $_.Line|select-String "title=`"$Show, ([0-9]{1,2}[^\/0-9])"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Series.Length -ne 0)
+			{
+				$Series = $Series.Substring($Show.Length + 9)
+                $SStyle = 3
+				Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+			}
+		}
+		If($Series.Length -eq 0)
+		{
+			########################################
+			# Series Style (4) Has the word 'Series'
+			########################################
+		#	$Series = $_.Line|select-String "title=`"$Show, Series [0-9]{1,2}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+            $Series = $_.Line|select-String ", Series [0-9]{1,2}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Series.Length -ne 0)
+			{
+				$Series = $Series.Substring(9)
+                $SStyle = 4
+				Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+			}
+		}
+		If($Series.Length -eq 0)
+		{
+			########################################
+			# Series Style (5) Has the word 'Series'
+			########################################
+			$Series = $_.Line|select-String "title=`"$Show, Series [A-Z]{1}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Series.Length -ne 0)
+			{
+				$Series = $Series.Substring($Show.Length + 16)
+                [String]$Series = ([Int][Char]$Series) - 64
+                $SStyle = 5
+				Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+			}
+		}
+		If($Series.Length -eq 0)
+		{
+			########################################
+			# Series Style (6) Has the word 'Series'
+			########################################
+			$Series = $_.Line|select-String "title=`"$Show, [0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Series.Length -ne 0)
+			{
+				$Series = $Series.Substring($Show.Length + 15)
+                $SStyle = 6
+				Add-Content $LPath "IPS:$VersionMumber`tFor $SPid ($Show): Using Series style $SStyle"
+			}
+		}
+		If($Series.Length -ge 2)
+		{
+			$Series = "s$Series"		
+		}
+
+		If($Series.Length -eq 1)
+		{
+			$Series = "s0$Series"
+		}
+	
+		If($Series.Length -eq 0)
+		{
+			$Series = "s00"
+            $SStyle = 99
+		}
+        # For style debugging
+		# CoordinateXY 40 8
+        # Write-Host "Series Stye: $SStyle"
+		
+		##############################################
+		# Episode Style (1) The word 'episode not used
+		##############################################
+		$Episode = $_.Line|select-String -AllMatches ": [0-9]{1,2}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+		If($Episode.Length -ne 0)
+		{
+			$Episode = $Episode.Substring(2)
+		}
+		If($Episode.Length -eq 0)
+		{
+			#############################################
+			# Episode Style (2) The word 'Episode' exists
+			#############################################
+			$Episode = $_.Line|select-String -AllMatches ": Episode [0-9]{1,2}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+
+			If($Episode.Length -ne 0)
+			{
+				$Episode = $Episode.Substring(10)
+			}
+		}
+		If($Episode.Length -eq 0)
+		{
+			################################################################
+			# Episode Style (3) Programs sometimes have just a date as title
+			################################################################
+			$Episode = $_.Line|select-String -AllMatches "title=`"$Show, [0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Episode.Length -ne 0)
+			{
+				$Episode = $Episode.Substring($Show.Length + 9)
+			}
+		}
+		If($Episode.Length -eq 0)
+		{
+			########################################################
+			# Episode Style (4) Programs sometimes have just a title
+			########################################################
+			$Episode = $_.Line|select-String -AllMatches "title=`"$Show, [0-9]{1,2}\."|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+			If($Episode.Length -ne 0)
+			{
+				$Episode = $Episode.Substring($Show.Length + 9)
+				$Episode = $Episode.Trim(".")
+				
+			}
+		}
+		If($Episode.Length -eq 0)
+		{
+			########################################################
+			# Episode Style (5) Programs sometimes have just a title
+			########################################################
+			$Episode = $_.Line|select-String "title=`"$Show, Series [0-9]{1,2}:.*class"|Select-Object -ExpandProperty Matches|Select-Object -ExpandProperty Value
+           
+			If($Episode.Length -ne 0)
+			{
+				$Episode = $Episode.Substring($Show.Length + 16)
+                $TempTitle = $Episode -split "`""
+                $TempTitle = $TempTitle -split ":"
+                $Episode = $TempTitle[1]
+                $Episode = $Episode.SubString(1)
+				#Write-Host "Style 4a result:$Episode"
+				
+			}
+		}
+		If($Episode.Length -eq 0)
+		{
+			############################################################
+			# Episode Style (5) News programs sometimes have just a date
+			# ##########################################################
+			$Episode = [String](Get-Date).Day + "-" + [String](Get-Date).Month + "-" + [String](Get-Date).Year
+		}
+        # Remove any date slashes that have survived
+        $Episode = $Episode -replace "\/","-"
+		If($Episode.Length -gt 2)
+		{
+			$Episode = "e00.$Episode"
+		}
+		If($Episode.Length -eq 2)
+		{
+			$Episode = "e$Episode"
+		}
+		If($Episode.Length -eq 1)
+		{
+			$Episode = "e0$Episode"
+		}
+		################################################################################################
+		## Start custom show specific renames. The object is to assist show renaming software match what
+		## is in TVDB.COM
+		################################################################################################
+		## Custom Rule 001: University Challenge
+		## Synopsis       : The BBC mark season name as year, but TVDB.COM has it as a season number. 
+		## Example        : Season s2014 needs to be s44
+		## #############################################################################################
+		If($Show -eq "University Challenge")
+		{
+			
+			$ModifiedSeries = ($Series.substring(1) - 1970)
+			Add-Content $LPath "IPS:$VersionMumber`tCustom rule engaged, for $Show converting series: $Series into s$ModifiedSeries"
+			$Series = "s" + $ModifiedSeries
+		}
+		
+		$FileName = $Show + "." + $Series + $Episode
+		Write-Host "$Series`t$ePID`t$Episode`tProposed File Name: $Show.$Series$Episode"
+		$Jobs[0,$j] = $Show
+		$Jobs[1,$j] = $sPID
+		$Jobs[2,$j] = $ePID
+		$Jobs[3,$j] = $Series
+		$Jobs[4,$j] = $Episode
+		$Jobs[5,$j] = $FileName
+		$j++
+	}
+	# Display jobs array
+	Write-Host "`nArray Dump" -ForegroundColor Yellow
+	For($j = 0; $j -lt 1000;$j++)
+	{
+		If($Jobs[0,$j].Length -ne 0)
+		{
+			Write-Host "$($Jobs[0,$j])`t$($Jobs[1,$j])`t$($Jobs[2,$j])`t$($Jobs[3,$j])`t$($Jobs[4,$j])`t$($Jobs[5,$j])"
+		}
+	}
+	#Do Job
+	Write-Host "`nCommence Task List" -ForegroundColor Yellow
+	For($j = 0; $j -lt 99; $j++)
+	{
+		If($Jobs[2,$j].Length -ne 0)
+		{
+			write-host $command
+			&$PerlPath get_iplayer.pl --pid $($Jobs[2,$j])
+			If(test-path $GenericName)
+			{
+				Clear-Host
+				Write-Host "About to rename file"
+				
+				Write-Host "From: $GenericName"
+				Write-Host "To  : $($Jobs[5,$j])"
+				$NewName = $Jobs[5,$j] + ".mp4"
+				Add-Content $LPath "IPS:$VersionMumber`tRenaming $Show epidode to $NewName"
+				Rename-Item $GenericName $NewName
+				Start-Sleep 1
+				Add-Content $LPath "IPS:$VersionMumber`tMoving $Show episode filename: $NewName"
+				Move-Item "C:\Users\Administrator\Videos\$NewName" "C:\Users\Administrator\Google Drive"
+				$EmailTo = "<redacted email address>, <redactedemail address>"
+				$EmailFrom = "<redacted>"
+				$Subject = "New TV" 
+				$Body = $NewName
+				$SMTPServer = "smtp.gmail.com" 
+				$SMTPMessage = New-Object System.Net.Mail.MailMessage($EmailFrom,$EmailTo,$Subject,$Body)
+				$SMTPClient = New-Object Net.Mail.SmtpClient($SmtpServer, 587) 
+				$SMTPClient.EnableSsl = $true 
+				$SMTPClient.Credentials = New-Object System.Net.NetworkCredential("<redacted gmail account name>", "<redacted gmail password>"); 
+				$SMTPClient.Send($SMTPMessage)
+			}
+			Else
+			{
+				Write-Host "No files to move"
+			}
+		}
+	}
+}
+
+

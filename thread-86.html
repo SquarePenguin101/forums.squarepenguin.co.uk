@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio Program Missing in search</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio Program Missing in search</div>
+<div id="pagetitle"><h2>Radio Program Missing in search</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-288</h2></div><div class="dateline">20-12-2013, 08:06 PM</div>
+</div>
+<div class="message">Hi, all.<br />
+<br />
+I'm putting together a simple script which just takes search terms and grabs the relevant content on a periodically executed script to make sure I don't miss an episode of a given series.<br />
+<br />
+I noticed the radio series at <a href="http://www.bbc.co.uk/programmes/b00nk0wz">http://www.bbc.co.uk/programmes/b00nk0wz</a> and tried to find it using "Aping Evolution" as a search, but even if I choose type=radio and/or channel="BBC Radio 4" it is still missing from the search results. <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get-iplayer --type=radio "Aping Evolution"</code></div></div><br />
+<br />
+<br />
+In the end I had to run...<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get-iplayer --no-purge --type=radio --pid-recursive --pid=b00nk0wz</code></div></div><br />
+<br />
+<br />
+...to get the episodes, but this is impractical for my family to maintain subscriptions to episodes to deal with pids (compared to typing a new line with the human-readable title of the series in a text file).<br />
+<br />
+Can anyone explain where this programme is being stored as I can't find it within radio, and find it too hard to decode the data associated with the download to find out what search scope would find it. Perhaps get-iplayer experts can see more easily where this lives in BBC's metadata world.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-12-2013, 08:47 PM</div>
+</div>
+<div class="message">For that series, your only option is to use the command you showed.  Archived programmes don't appear in the data feeds that get_iplayer uses for searching.  They're catalogued internally by the BBC web site, so you have to find the PID there and specify it on the get_iplayer command line.  <br />
+<br />
+The notion of a "subscription" doesn't apply for archived programmes.  All the episodes of an archived series are already available, so <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid-recursive</code></div></div> is used to grab them in one go.  Once you find the series on the web site and download its episodes, you should never need to look it up again.  <br />
+<br />
+If a new series of a given programme is broadcast in the future, it will appear in the data feeds and thus will be searchable by get_iplayer as normal.  Is there some reason you don't want to use get_iplayer's PVR functionality for that?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-12-2013, 08:53 PM</div>
+</div>
+<div class="message">If you're not familiar with the PVR functionality, my esteemed colleague has written a guide:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/get_iplayer-pvr-guide/">https://squarepenguin.co.uk/guides/get_i...pvr-guide/</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio Program Missing in search</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

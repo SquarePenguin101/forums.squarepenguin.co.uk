@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Mojo::Reactor::Poll errors</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Mojo::Reactor::Poll errors</div>
+<div id="pagetitle"><h2>Mojo::Reactor::Poll errors</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">13-06-2018, 01:22 PM</div>
+</div>
+<div class="message">I've installed get_iplayer on Linux (Sailfish OS v.2.2.0.29). When I perform a refresh, the following errors are generated. The errors happen several times, so I've trimmed the output to remove repeats.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; /usr/share/harbour-getiplay/bin/get_iplayer --type=tv --refresh --force --nocopyright --nopurge --refresh-include-groups national --refresh-exclude-groups regional,local --atomicparsley /usr/share/harbour-getiplay/bin/AtomicParsley --ffmpeg /usr/share/harbour-getiplay/bin/ffmpeg --ffmpeg-loglevel info --log-progress --profile-dir /home/nemo/.config/harbour-getiplay/harbour-getiplay/.get_iplayer --no-proxy --listformat &lt;pid&gt;|&lt;episode&gt;|&lt;duration&gt;|&lt;channel&gt;|&lt;available&gt;|&lt;web&gt;|&lt;name&gt;|&lt;desc&gt;|&lt;thumbnail&gt; .*<br />
+INFO: Indexing tv programmes (concurrent)<br />
+Mojo::Reactor::Poll: I/O watcher failed: Can't call method "isa" on an undefined value at /usr/share/harbour-getiplay/lib/perl5/lib/perl5/Mojo/IOLoop/Stream/HTTPClient.pm line 25.<br />
+Mojo::Reactor::Poll: Timer failed: Timer not active at /usr/share/harbour-getiplay/lib/perl5/lib/perl5/Mojo/IOLoop/Stream.pm line 93.<br />
+INFO: Added 4954 tv programmes to cache</code></div></div><br />
+The errors happen on only two out of the three phones I'm using to test. All the phones are running the same OS, but may not all have the same packages installed, so it's probably some underlying dependency issue. The errors don't seem to be preventing it refreshing the cache (I'm not sure, but it may not be picking up all the programmes), and downloads are working fine.<br />
+<br />
+Does anyone have any idea what the problem might be, or which dependencies I might be missing?<br />
+<br />
+I'm using a local::lib, so all the perl dependencies were installed like this:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cpanm --self-contained Mojolicious</code></div></div><br />
+The following is the versioning info for the dependencies:<ul class="mycode_list"><li>get_iplayer - 3.14<br />
+</li>
+<li>Perl - 5.16.1<br />
+</li>
+<li>JSON::PP - 2.97001<br />
+</li>
+<li>LWP - 6.34<br />
+</li>
+<li>LWP::Protocol::https - 6.07<br />
+</li>
+<li>Mojolicious - 7.84<br />
+</li>
+<li>XML::LibXML - 2.0132<br />
+</li>
+<li>IO::Socket::SSL - 2.056<br />
+</li>
+</ul>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-06-2018, 05:30 PM</div>
+</div>
+<div class="message">The error suggests Mojolicious is accessing an HTTP stream after it has been closed. No idea why that happens on your phone. Some things to try:<br />
+<ul class="mycode_list"><li>Refresh with <kbd>--verbose</kbd>. That will surface any underlying HTTP or connection errors. If your cache was empty to start, the total above would be close to what I'd expect, but you need to run with <kbd>--verbose</kbd> to see if indexing of any schedule pages produced no entries due to errors.<br />
+</li>
+<li>The HTTP stream implementation in Mojolicious has changed recently. You could roll back to 7.82 or earlier to see if that makes a difference.<br />
+</li>
+<li>You can refresh with <kbd>--no-index-concurrent</kbd> to take Mojolicious out of the equation altogether, but that is much slower.<br />
+</li>
+<li>Test with a clean local::lib, created without --self-contained. That may have had no effect, but you could have acquired an incompatible module along the way. At any rate, you should never need --self-contained for get_iplayer with a proper Perl installation. Start with the minimal set of modules required by get_iplayer dependencies and work out from there. Your system's version of Perl is woefully obsolete, but it should be OK for get_iplayer, provided nobody has chopped and changed it.<br />
+</li>
+</ul>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">14-06-2018, 08:33 PM</div>
+</div>
+<div class="message">Thanks for all of the useful suggestions. I've not had a chance to roll back Mojolicious yet, but I'll give it a go to see whether it affects anything. In the meantime, here's the output of the refresh again, but this time with <kbd>--verbose</kbd> added. The failures are still appearing, but I'm afraid my log-fu is weak and it's still not clear to me whether it shows feeds being dropped.<br />
+<br />
+<a href="https://pastebin.com/7HtpqKkZ">https://pastebin.com/7HtpqKkZ</a><br />
+<br />
+I had to remove some of the 'Added' lines to satisfy pastebin, but hopefully I didn't remove anything important.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-06-2018, 09:47 PM</div>
+</div>
+<div class="message">The logging in that area will be slightly more intelligible in the next release, but I can still see that you are in fact losing cache entries from the pages that generate errors. Some of those entries are recovered through indexing of later repeats or regional variants, in the case of BBC Two.<br />
+<br />
+The log doesn't shed any further light on the underlying problem. get_iplayer currently ignores any connection errors on the first two attempts to download a schedule page (though that will be changing), so nothing there. I note that the Mojo error messages only appear for pages with a failed first attempt. But without a reproducible test case, I can't even guess at cause and effect. If the errors always occur on the same pages, that could be illustrative, but that seems unlikely to be the case.<br />
+<br />
+You can get additional debugging traces from Mojolicious by setting environment vars (see Mojo docs re: MOJO_CLIENT_DEBUG and MOJO_IOLOOP_DEBUG). I don't know if that will get you any closer, but it might expose underlying connection errors (beware huge spew of HTTP traffic). You might also try refreshing with <kbd>--index-maxconn</kbd> values less than 5 - maybe something is screwy with polling.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">29-06-2018, 06:07 PM</div>
+</div>
+<div class="message">Thanks for all of your help with this @user-2. I tried the different logging options, and also tried all of the other Mojolocious parameters that can be controlled using environment variables, but none of them fixed the issue or provided more insight. After a bundle of testing, it seems that on the devices that exhibit this problem, they can handle two connections without any problem, but anything higher than this will start to trigger failure messages.<br />
+<br />
+If I ever get to the bottom of it I'll post the results here for completeness, Sadly I've not been able to find the underlying reason yet, but it's pretty clear the issue is with Mojolicous on particular devices/perl installations, and not with get_iplayer. And I also want to thanks <a href="https://github.com/revad">@revad</a> for his support testing and debug on his devices.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Mojo::Reactor::Poll errors</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

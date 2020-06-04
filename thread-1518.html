@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - MP4 conversions skipped in PVR (ffmpeg version detection problem)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; MP4 conversions skipped in PVR (ffmpeg version detection problem)</div>
+<div id="pagetitle"><h2>MP4 conversions skipped in PVR (ffmpeg version detection problem)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">02-10-2017, 09:40 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Just upgraded to the latest version, and seeing this:<br />
+<br />
+WARNING: ffmpeg 2.5 or higher is required to convert hvf downloads to MP4<br />
+WARNING: Use --raw to bypass MP4 conversion and retain .ts file<br />
+WARNING: Use --ffmpeg-force to override checks and force MP4 conversion attempt<br />
+<br />
+andy@xcp-dl:~&#36; get_iplayer -V<br />
+get_iplayer v3.03, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+I've put the following in my options file:<br />
+<br />
+ffmpeg /home/andy/ffmpeg-3.3.4-64bit-static/ffmpeg<br />
+ffmpegforce 1<br />
+<br />
+As far as I can tell, I'm using a recent ffmpeg:<br />
+<br />
+andy@xcp-dl:~&#36; /home/andy/ffmpeg-3.3.4-64bit-static/ffmpeg -V<br />
+ffmpeg version 3.3.4-static <a href="http://johnvansickle.com/ffmpeg/">http://johnvansickle.com/ffmpeg/</a>  Copyright (c) 2000-2017 the FFmpeg developers<br />
+<br />
+Any suggestions?<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">03-10-2017, 10:13 AM</div>
+</div>
+<div class="message">A bit more info, while looking in the code I realised there's another line of debug that would be useful.<br />
+<br />
+Before the messages I posted above, I get:<br />
+<br />
+WARNING: Your version of ffmpeg () does not support conversion of hvf downloads to MP4 - not converting .ts file<br />
+<br />
+Looks like it's not correctly determining the version of ffmpeg. However, given that I've specified a specific path to ffmpeg in the settings file, should it even be doing this step?<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">03-10-2017, 10:18 AM</div>
+</div>
+<div class="message">A bit more info.<br />
+<br />
+The 'system' ffmpeg is reporting its version as '3.2.7-1~deb9u1'. I wonder is this confusing it?<br />
+<br />
+If so, why isn't it using the 'static' version I've pointed it to in the config file?<br />
+<br />
+andy@xcp-dl:~&#36; get_iplayer --prefs-show<br />
+Options in '/home/andy/.get_iplayer/options'<br />
+        refreshexcludegroupsradio = local<br />
+        type = all<br />
+        radiomode = best<br />
+        fps50 = 1<br />
+        ffmpeg = /home/andy/ffmpeg-3.3.4-64bit-static/ffmpeg<br />
+        tvmode = best<br />
+        ffmpegforce = 1<br />
+        nopurge = 1<br />
+<br />
+Thanks again<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-10-2017, 11:17 AM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">03-10-2017, 11:50 AM</div>
+</div>
+<div class="message">Trying to do that, but now finding that sometimes it's downloading episodes and converting them, when previously it's failed.<br />
+<br />
+I'll keep digging to see if I can cause it to happen consistently. Sadly, the main time it fails is when running --pvr, which sadly doesn't give the same results each time you run it.<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-10-2017, 01:42 PM</div>
+</div>
+<div class="message">BTW, you don't need that alternate version of ffmpeg. The version in Stretch works fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">03-10-2017, 01:45 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I thought that would be the case, but figured it was worth trying the static version.<br />
+<br />
+I'm a little confused that it seems to sometimes work and sometimes not. Not sure if there's something funky going on with the VM that it's running on!<br />
+<br />
+Will let you know if I get further information.<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">04-10-2017, 10:41 AM</div>
+</div>
+<div class="message">Ok, log files attached, using both the 'Debian' ffmpeg, and the static one. Apologies they're long, but the only way I could get the issue to happen repeatably was to run the full --pvr scan from cron.<br />
+<br />
+Interestingly, when trying to download "Saving Lives at Sea", it doesn't display a valid ffmpeg version string, so downloads a .ts file. However, later when it tries to download "The Next Step", it does display the ffmpeg version string (and then goes on to complain that the .mp4 file already exists).<br />
+<br />
+Any help?<br />
+<br />
+Thanks<br />
+<br />
+Andy<br/><br/>
+<a href="static/thread-1518-get-iplayer-static-ffmpeg.txt">get-iplayer-static-ffmpeg.txt</a><br/>
+<a href="static/thread-1518-get-iplayer-system-ffmpeg.txt">get-iplayer-system-ffmpeg.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-10-2017, 08:27 PM</div>
+</div>
+<div class="message">I can see that the internal variables containing ffmpeg version info appear to get overwritten or undefined somewhere along the way, but I can't reproduce that behaviour. A few random thoughts (not much hope for any of them, though):<br />
+<ul class="mycode_list"><li>Somehow you have a file without a corresponding history entry. Fix the problem with "The Next Step" by moving <kbd>/var/spool/xbmc/iPlayer-Download/The_Next_Step_Series_5_-_8._12_Hour_Party_People_b097rtf9_original.mp4</kbd> somewhere else and allowing it to re-download before the later attempt at "Saving Lives at Sea".<br />
+</li>
+<li>Perhaps try <kbd>get_iplayer --pvr-single saving_lives</kbd> to see if there is something peculiar to that pvr search. <br />
+</li>
+<li>Back up and empty <kbd>&#36;HOME/.get_iplayer/pvr</kbd>, then start adding those pvr searches back into that folder in small batches. Start with those that are current and may actually locate programmes. There may be a bad apple that can be isolated.<br />
+</li>
+</ul>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">04-10-2017, 08:37 PM</div>
+</div>
+<div class="message">I'll give those a try.<br />
+<br />
+Just to clarify something, I've been manually editing the download history to remove these files and force them to be downloaded again (for test purposes). It's not something I do on a regular basis, but it could be related.<br />
+<br />
+I'll try doing the pvr-single operations you suggest.<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">04-10-2017, 08:53 PM</div>
+</div>
+<div class="message">Ok, some more information.<br />
+<br />
+If I remove the latest episodes of Saving Lives at Sea and Next Step from both the directory and history, I can download them both as MP4 if I use pvr-single.<br />
+<br />
+If I remove them again from directory and history file, then run a full --pvr, Next Step downloads as MP4, and Saving Lives downloads as .ts.<br />
+<br />
+So it looks like something in the script is resetting (clearing?) the ffmpeg version when a full PVR scan is run.<br />
+<br />
+For now, I might just write a shell script that goes over all of the individual PVR files, running get_iplayer with pvr-single for each one. That's a nasty workaround, but might get me back up and running for now. <br />
+<br />
+Happy to run any test versions if you think it might help.<br />
+<br />
+Thanks for the assistance.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-10-2017, 09:05 PM</div>
+</div>
+<div class="message">Rename "saving_lives" to "a_saving_lives" so that it will be executed first. If only the first download works regardless of content, then that would at least establish a pattern of sorts, though it would explain nothing. And try more than two searches that produce downloads to see if it really is only the first that works.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-10-2017, 10:42 PM</div>
+</div>
+<div class="message">You can stop thrashing your machine. I found the problem, and it is a bug in v3.03. I'll get v3.04 tonight or tomorrow, but in the meantime roll back to v3.02, or just wait for v3.04.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">04-10-2017, 10:56 PM</div>
+</div>
+<div class="message">That's good news.<br />
+<br />
+Will look out for a new version. Thanks for looking into it.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-10-2017, 12:13 AM</div>
+</div>
+<div class="message">Fixed in v3.04</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">05-10-2017, 10:01 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Updated and ran a full pvr scan from cron. For some reason it didn't email me the log (will look into that) but it <span style="font-weight: bold;" class="mycode_b">has</span> downloaded everything as mp4, so looks like that did the trick.<br />
+<br />
+Thanks for all your assistance.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-10-2017, 10:03 AM</div>
+</div>
+<div class="message">Good news. Thanks for the bug report.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; MP4 conversions skipped in PVR (ffmpeg version detection problem)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

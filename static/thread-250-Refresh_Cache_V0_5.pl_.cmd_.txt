@@ -1,0 +1,5 @@
+cd %USERPROFILE%/get_iplayer/
+cls
+perl.exe Refresh_Cache_V0_5.pl
+pause
+exit

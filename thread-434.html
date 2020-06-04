@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - XML::Simple error, only when running via crontab</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; XML::Simple error, only when running via crontab</div>
+<div id="pagetitle"><h2>XML::Simple error, only when running via crontab</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-952</h2></div><div class="dateline">10-06-2015, 09:30 AM</div>
+</div>
+<div class="message">Hi, <br />
+<br />
+I have what seems like a strange problem. I'm running on Linux and have followed the manual installation instructions and have the PVR setup to run via crontab. Everything was fine until a few days ago when I noticed that nothing was downloading so checked the logs and saw the XML:Simple error mentioned in the 2.94 update. Updated to 2.94 and still the same problem. I checked and have XML::Simple installed (installed via local::lib). I ran the PVR manually and everything worked - the error only seems to happen when running via crontab. I tried making a script to run the PVR, with the eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib' line at the start of the script, in case it was an environment issue when running via cron, but still the same error. <br />
+<br />
+Any ideas at all on what could be the issue? I can run it manually but obviously it is not as convenient so if I can get it back up and running via cron it would be great! <br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-06-2015, 10:46 AM</div>
+</div>
+<div class="message">You need to see the output from <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -I ~/perl5/lib/perl5 -Mlocal::lib</code></div></div> under cron. It's possible cron is running as root and you set up local::lib under your personal account.  You shouldn't use local::lib unless absolutely necessary, though.  What distro do you use?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-952</h2></div><div class="dateline">15-06-2015, 07:35 PM</div>
+</div>
+<div class="message">Sorry for the delay in getting back about this. I don't have root access where I was running it so I had to run it using local::lib. Thanks for the advice, it definitely was the account/environment in which cron was running, so I solved it by running get_iplayer using 'Perl -I', so:<br />
+<br />
+perl -I /location/of/local/perl/lib get_iplayer --pvr<br />
+<br />
+That seemed to do the trick. Just thought that I would post how I solved it in case anyone else has a similar issue.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; XML::Simple error, only when running via crontab</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

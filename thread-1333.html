@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - V3.00 quite slow off the mark</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; V3.00 quite slow off the mark</div>
+<div id="pagetitle"><h2>V3.00 quite slow off the mark</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">02-05-2017, 07:19 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+One of the most considerable differences I noticed between v3.00 and previous versions, is the time it takes before get_iplayer actually starts downloading. I measured an average of about 45 seconds between the time it tells me "INFO: 1 Matching Programmes", and the time the download actually begins. I thought it was idle, but sniffing the network interface, I saw it was polling loads of different download links.<br />
+<br />
+Is this behaviour related to the fact that it now has to scrape web content to get the links, as mentioned in the release notes, in which case I can assume it's normal behaviour?<br />
+<br />
+For what it's worth, I tried forcing it a specific format to download (e.g. hldshd1), so that it wouldn't have to test all possible formats for eligibility, but that only brought it down to about 30 seconds delay. Not really worth the extra hassle.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 07:56 PM</div>
+</div>
+<div class="message">Not related to web scraping at all. get_iplayer downloads stream playlists to parse for stream parameters to map to recording modes. It's a blunt instrument, to be sure, but it would take a bit of work to replace.<br />
+<br />
+45 seconds is pretty slow, though that no doubt reflects your upstream connection. You should be able speed things up a bit by using <kbd>--exclude-supplier</kbd> to omit 1 or 2 of the CDNs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">03-05-2017, 02:14 AM</div>
+</div>
+<div class="message">Ok, I have no idea what might be causing it, but I'll leave it for now. If I come across a solution/root cause, I'll report back.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; V3.00 quite slow off the mark</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

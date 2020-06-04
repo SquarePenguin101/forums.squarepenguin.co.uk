@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR search list is blank</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR search list is blank</div>
+<div id="pagetitle"><h2>Web PVR search list is blank</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1520</h2></div><div class="dateline">02-02-2017, 09:23 PM</div>
+</div>
+<div class="message">This is a strange one and I apologise if it is already here somewhere (I have searched on the forum, checked the guides etc.).<br />
+<br />
+I have a Windows 10 system with the latest version of Get_iPlayer, well two in fact. My current system works perfectly well (but I had to completely disable UAC to get the files downloading anywhere outside of my user folders), but my new system (with UAC intact and using a standard Administractor profile instead of the "hidden" admin profile) appears to be working when I refresh the cache, shows files being identified but then shows nothing in the list of available programmes.<br />
+<br />
+I did have this before on my old system but after either a windows update or a Get_iPlayer update, but can't remember what I did to resolve it.<br />
+I use Firefox as the browser, have tried turning the Windows firewall off and can't think what to try next.<br />
+Is this a browser issue or something with the system itself?<br />
+Has anyone else seen this issue?<br />
+I tried a fresh install of Get_iPlayer, also tried copying over files from my current system and then tried both again. I have tried cleaning up the "old" version repeatedly (because it says on installation that it was installed for a previous user) but can't see what else on my system is still befing referenced - I have deleted all files, edited registry entries and still it refers to a previous version.<br />
+I'm not even sure that is what the problem is anyway.<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-02-2017, 11:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (02-02-2017, 09:23 PM)</span></cite>I have tried cleaning up the "old" version repeatedly (because it says on installation that it was installed for a previous user) but can't see what else on my system is still befing referenced - I have deleted all files, edited registry entries and still it refers to a previous version.</blockquote>That's not what it says. It only warns you that <span style="font-weight: bold;" class="mycode_b">if</span> you're installing under a different account than you normally use with get_iplayer that you will need to complete the cleanup yourself. The whole point is that the installer doesn't know if the previous installation was done under a different account.<br />
+<br />
+I have no idea what you mean by "shows files being identified", so you had better post a screenshot to show what is happening. You should also check whether or not you've merely screwed up your settings. Post the output from <kbd>get_iplayer --show-options</kbd>, and also try to do a search from the command prompt, e.g., <kbd>get_iplayer Taboo</kbd>. If that doesn't return results, the problem is in get_iplayer, not the Web PVR.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1520</h2></div><div class="dateline">03-02-2017, 08:35 PM</div>
+</div>
+<div class="message">** EDIT: I have found out what the issue is. I will post my original response intact because {a}I have gone to the effort of getting all the information for you and {b} it will give you and the other forum users a good laugh.<br />
+The original response is below **<br />
+<br />
+Just to be clear, on my current (working) system, the "user" is my name, but the new system was set up with a user of "me". That was why I started getting the error message.<br />
+However, I have followed the instructions to clear everything I could find of the Get_iPlayer installation from my new system and even then went through the steps to rename the "user" to match my current system, but I still seeing the same message each time I reinstall Get_iPlayer.<br />
+<br />
+Anyway, to answer your specific points, when I say "shows files being identified" I mean that performing a cache refresh shows radio programmes being added;<br />
+[Image: <a href="http://www.wildgrove.org.uk/Hosted%20Images/Refresh.jpg">http://www.wildgrove.org.uk/Hosted Images/Refresh.jpg</a>]<br />
+<br />
+But then when I go back to the search page and refresh that, it shopws nothing available:<br />
+[Image: <a href="http://www.wildgrove.org.uk/Hosted%20Images/search.jpg">http://www.wildgrove.org.uk/Hosted%20Images/search.jpg</a>]<br />
+<br />
+Here is the result of the --show-options instruction:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;Adrian&gt;get_iplayer --show-options<br />
+WARNING: Deprecated option(s) found in C:&#92;Users&#92;Adrian/.get_iplayer/options:<br />
+WARNING: aactomp3 = 1<br />
+WARNING: Deprecated options will be removed in a future release<br />
+INFO: Use --dump-options to display all valid options<br />
+WARNING: Deprecated option(s) found in ./.get_iplayer/options:<br />
+WARNING: aactomp3 = 1<br />
+WARNING: Deprecated options will be removed in a future release<br />
+INFO: Use --dump-options to display all valid options<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Options from Files:<br />
+        aactomp3 = 1<br />
+        output = C:&#92;Applications&#92;get_iplayer<br />
+<br />
+Options from Command Line:<br />
+        showoptions = 1<br />
+<br />
+Options Used:<br />
+        aactomp3 = 1<br />
+        encodingconsolein = cp850<br />
+        encodingconsoleout = cp850<br />
+        encodinglocale = cp1252<br />
+        encodinglocalefs = cp1252<br />
+        isodate = 1<br />
+        output = C:&#92;Applications&#92;get_iplayer<br />
+        showoptions = 1<br />
+<br />
+Search Args: .*</code></div></div><br />
+Here is the result of performing a search for radio programmes:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Users&#92;Adrian&gt;get_iplayer --type=radio "quiz"<br />
+WARNING: Deprecated option(s) found in C:&#92;Users&#92;Adrian/.get_iplayer/options:<br />
+WARNING: aactomp3 = 1<br />
+WARNING: Deprecated options will be removed in a future release<br />
+INFO: Use --dump-options to display all valid options<br />
+WARNING: Deprecated option(s) found in ./.get_iplayer/options:<br />
+WARNING: aactomp3 = 1<br />
+WARNING: Deprecated options will be removed in a future release<br />
+INFO: Use --dump-options to display all valid options<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+19616:  News Quiz Extra: Series 19 - Episode 1, BBC Radio 4 Extra, b08871kg<br />
+19617:  News Quiz Extra: Series 19 - Episode 2, BBC Radio 4 Extra, b0890f2r<br />
+19618:  News Quiz Extra: Series 19 - Episode 3, BBC Radio 4 Extra, b08bwvgm<br />
+19619:  News Quiz Extra: Series 19 - Episode 4, BBC Radio 4 Extra, b08chtsg<br />
+21618:  Round Britain Quiz - Programme 10, 2016-17, BBC Radio 4, b086nzgd<br />
+21619:  Round Britain Quiz - Programme 11, 2016-17, BBC Radio 4, b087psl7<br />
+21620:  Round Britain Quiz - The Final, 2016-17, BBC Radio 4, b088f0nb<br />
+24065:  The News Quiz: Series 92 - Episode 1, BBC Radio 4, b086tg0g<br />
+24066:  The News Quiz: Series 92 - Episode 2, BBC Radio 4, b087ts7k<br />
+24067:  The News Quiz: Series 92 - Episode 3, BBC Radio 4, b088jj6g<br />
+24068:  The News Quiz: Series 92 - Episode 4, BBC Radio 4, b08bbnc4<br />
+<br />
+INFO: 11 Matching Programmes</code></div></div><br />
+<br />
+**EDIT: So, just in case you haven't spotted it, having done all this I theorised that as the command line search is clearly working, it might be something I have missed in the web PVR settings, so I fired it up again to double check.<br />
+I noticed that the "channels containing" parameter was entered as "Radio4", not "Radio 4". So I added the space and refreshed the page.<br />
+Guess what?<br />
+Now I will log off and give myself a good slapping for missing something so obvious.<br />
+<br />
+Thank you anyway.<br />
+<br />
+p.s. - as the support for conversion to mp3 is showing as being 'deprecated' and likely to be removed in a future release, will there be a replacement setting to achieve the same thing?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-02-2017, 09:22 PM</div>
+</div>
+<div class="message">Well-spotted. Have a slap from me as well :)<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>p.s. - as the support for conversion to mp3 is showing as being 'deprecated' and likely to be removed in a future release, will there be a replacement setting to achieve the same thing?</blockquote>
+No, but there are many ways to convert files. See the FAQ list for a link to some suggestions.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR search list is blank</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+get_iplayer v2.96, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/pi/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+INFO: Loaded PVR search 'creek'
+INFO: Loaded PVR search 'morecambe'
+INFO: Loaded PVR search 'walter'
+INFO: Loaded PVR search '101'
+INFO: Loaded PVR search 'cherry'
+INFO: Loaded PVR search 'whistletest'
+INFO: Loaded PVR search 'hamish'
+INFO: Loaded PVR search 'Hitchhiker'
+INFO: Loaded PVR search 'words'
+INFO: Loaded PVR search 'Lucy'
+INFO: Loaded PVR search 'men'
+INFO: Loaded PVR search 'Mcintyre'
+INFO: Loaded PVR search 'controller'
+INFO: Loaded PVR search 'edge'
+INFO: Loaded PVR search 'human_planet'
+INFO: Loaded PVR search 'cousins'
+INFO: Loaded PVR search 'marple'
+INFO: Loaded PVR search 'genius'
+INFO: Loaded PVR search '_In_the_Night_Garden_Series_1_name_tv'
+INFO: Loaded PVR search 'dead'
+INFO: Loaded PVR search '_Gorilla_Family_Me_name_tv'
+INFO: Loaded PVR search 'ottman'
+INFO: Loaded PVR search 'theroux'
+INFO: Loaded PVR search 'welcome'
+INFO: Loaded PVR search 'deluca'
+INFO: Loaded PVR search 'exodus'
+INFO: Loaded PVR search 'Sorry'
+INFO: Loaded PVR search 'borgen'
+INFO: Loaded PVR search 'strange'
+INFO: Loaded PVR search 'Arne_Dahl'
+INFO: Loaded PVR search 'bishop'
+INFO: Loaded PVR search '_Inside_Obama_s_White_House_name_tv'
+INFO: Loaded PVR search 'rev'
+INFO: Loaded PVR search 'sherlock'
+INFO: Loaded PVR search 'perkins'
+INFO: Loaded PVR search 'escape'
+INFO: Loaded PVR search 'clare'
+INFO: Loaded PVR search 'kew'
+INFO: Loaded PVR search 'baded'
+INFO: Loaded PVR search '_True_North_Series_5_name_tv'
+INFO: Loaded PVR search 'brute_forcePVR'
+INFO: Loaded PVR search 'wallander'
+INFO: Loaded PVR search 'spiral'
+INFO: Loaded PVR search 'Hollow_crown'
+INFO: Loaded PVR search 'jokes'
+INFO: Loaded PVR search 'news'
+INFO: Loaded PVR search 'craddle'
+INFO: Loaded PVR search '_The_Game_name_tv'
+INFO: Loaded PVR search 'Orphan'
+INFO: Loaded PVR search '_The_Hitchhiker_s_Guide_to_the_Galaxy_Primary_Phase_name_tv_radio'
+INFO: Loaded PVR search 'dangermouse'
+INFO: Loaded PVR search 'Musket'
+INFO: Loaded PVR search 'hislop'
+INFO: Loaded PVR search '_TOTP2_name_tv'
+INFO: Loaded PVR search 'tyger'
+INFO: Loaded PVR search 'montalbano'
+INFO: Loaded PVR search 'Legacy'
+INFO: Loaded PVR search 'codes'
+INFO: Loaded PVR search 'hostages'
+INFO: Loaded PVR search 'Pointless'
+INFO: Loaded PVR search 'blues'
+INFO: Loaded PVR search 'Bake_off'
+INFO: Loaded PVR search 'secret_agent'
+INFO: Loaded PVR search 'Only_Connect'
+INFO: Loaded PVR search 'Terror'
+INFO: Loaded PVR search 'Attenborough'
+INFO: Loaded PVR search 'pretty'
+INFO: Loaded PVR search 'dahl'
+INFO: Loaded PVR search 'areana'
+INFO: Loaded PVR search 'Fry'
+INFO: Loaded PVR search 'Fern_Britton_Meets_'
+INFO: Loaded PVR search '_The_Polar_Bear_Family_Me_name_tv'
+INFO: Loaded PVR search 'fall'
+INFO: Loaded PVR search 'super'
+INFO: Loaded PVR search 'wild'
+INFO: Loaded PVR search 'talking'
+INFO: Loaded PVR search 'beck'
+INFO: Loaded PVR search 'Rugby'
+INFO: Loaded PVR search 'quirke'
+INFO: Loaded PVR search '_Great_Barrier_Reef_with_David_Attenborough_name_tv'
+INFO: Loaded PVR search 'asylum'
+INFO: Loaded PVR search '_The_Secret_Agent_name_tv'
+INFO: Loaded PVR search '_Six_Nations_Rugby_2016_name_tv'
+INFO: Loaded PVR search 'Love_Nina'
+INFO: Loaded PVR search '_Love_Nina_name_tv'
+INFO: Loaded PVR search 'Star'
+INFO: Loaded PVR search 'finnemore'
+INFO: Loaded PVR search 'story'
+INFO: Loaded PVR search '_The_Hunt_name_tv'
+INFO: Loaded PVR search 'Drwho'
+INFO: Loaded PVR search 'Trapped_name_tv'
+INFO: Loaded PVR search 'life'
+INFO: Loaded PVR search 'vacancy'
+INFO: Loaded PVR search 'first'
+INFO: Loaded PVR search 'Drwho_tv'
+INFO: Loaded PVR search 'HAIGNFY'
+INFO: Loaded PVR search '_Classic_Albums_name_tv'
+INFO: Loaded PVR search 'hinterland'
+INFO: Loaded PVR search '_The_Great_Pottery_Throw_Down_name_tv'
+INFO: Loaded PVR search 'bridge'
+INFO: Loaded PVR search '_Japan_Earth_s_Enchanted_Islands_name_tv'
+INFO: Loaded PVR search 'crimes'
+INFO: Loaded PVR search 'episode'
+INFO: Loaded PVR search '_Immortal_Egypt_with_Joann_Fletcher_name_tv'
+INFO: Loaded PVR search 'radcliffe'
+INFO: Loaded PVR search 'Kay'
+INFO: Loaded PVR search 'Natural_World'
+INFO: Loaded PVR search 'SILK'
+INFO: Loaded PVR search 'top_coppers'
+INFO: Loaded PVR search 'funk'
+INFO: Loaded PVR search 'May'
+INFO: Loaded PVR search 'Partner_in_crime'
+INFO: Loaded PVR search 'whitehall'
+INFO: Loaded PVR search '_Peter_Kay_s_Car_Share_name_tv'
+INFO: Loaded PVR search list
+Running PVR Searches:
+Pointless
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	ffmpeg = /usr/bin/ffmpeg
+	fields = name
+	fileprefix = <nameshort><-episodeshort><-senum>
+	get = 1
+	hide = 1
+	isodate = 1
+	metadata = xbmc
+	modes = worse
+	nopurge = 1
+	output = /external/Videos/pointless
+	pvr = 1
+	search = (modes=tvworst,radiobetter)
+	tvmode = worse
+	type = tv
+	verbose = 1
+	versionlist = default
+
+INFO: Search args: '^Pointless'
+INFO: Got 5451 file cache entries for tv
+INFO: Search term '^Pointless' is a substring
+DEBUG: Search download_regex = ^Pointless
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+Matches:
+3643:	Pointless Celebrities: Series 8 - Test Match Special, BBC One, b0698pgv
+3654:	Pointless: Series 15 - Episode 39, BBC One, b07thvyh
+
+INFO: 2 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b0698pgv.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b0698pgv.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b07tmnx8/transferformat/hls?cb=63622
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595443070,1500kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448412,3200kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448937,.mp4.csmil/master.m3u8?hdnea=st=1472499598~exp=1472521198~acl=/*800kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595443070,1500kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448412,3200kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448937*~hmac=d37b7836193dfecdf419e2cde7090b7a3d3e1253a82c6ad2e3be7d2e154bea93
+INFO: Getting page http://vod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism.hlsv2.ism/iptv_hd_abr_v1_hls_master.m3u8?__gda__=1472521198_3b842306c152dc9853b2a4e5342c35d7
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism.hlsv2.ism/iptv_hd_abr_v1_hls_master.m3u8?s=1472477998&e=1472521198&h=e059771dbd377c1b64a255dc2eee0e3b
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b07tmnx8/transferformat/hls?cb=67390
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595444066,480kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595449626,800kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595443070,1500kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448412,.mp4.csmil/master.m3u8?hdnea=st=1472499601~exp=1472521201~acl=/*400kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595444066,480kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595449626,800kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595443070,1500kbps/modav/bUnknown-d7dd000e-d267-4aa5-8232-04b8bbd6986f_b07tmnx8_1471595448412*~hmac=d89ccb5e1518569809ceaf490ec454153678edc3711cf2f3a8fd9b6d97e99f11
+INFO: Getting page http://vod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1472521201_59a2e967245e3cee3ea8989d9b514857
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1472478001&e=1472521201&h=7c08eeb44cfc2b9abb0a1946d69e6a3d
+INFO: Found mode hlshd1: (gip_hls_iplayer_2348) hls h264 1280x720 2348kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_777) hls h264 640x360 777kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlslow1: (gip_hls_iplayer_386) hls h264 512x288 386kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_496) hls h264 640x360 496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1460) hls h264 832x468 1460kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfhd1: (gip_hvf_iplayer_5380) hls h264 1280x720 5380kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhd2: (gip_hvf_iplayer_5380) hls h264 1280x720 5380kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_956) hls h264 704x396 956kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_956) hls h264 704x396 956kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_340) hls h264 384x216 340kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_340) hls h264 384x216 340kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfsd1: (gip_hvf_iplayer_3043) hls h264 960x540 3043kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfsd2: (gip_hvf_iplayer_3043) hls h264 960x540 3043kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfstd1: (gip_hvf_iplayer_551) hls h264 512x288 551kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfstd2: (gip_hvf_iplayer_551) hls h264 512x288 551kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfvhigh1: (gip_hvf_iplayer_1759) hls h264 960x540 1759kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfvhigh2: (gip_hvf_iplayer_1759) hls h264 960x540 1759kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b07tmnx8.rdf
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0698pgr/transferformat/hls?cb=38665
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0698pgr/transferformat/hls?cb=39132
+INFO: No streams available for 'original' version (b0698pgr) - skipping RDF
+INFO: No streams available for 'original' version (b0698pgr) - deleting
+INFO: Programme not in history
+INFO: Will search for versions: editorial
+INFO: Mode list: hvfstd,hlsstd,hvflow,hlslow
+INFO: Checking existence of editorial version
+INFO: Version = editorial
+INFO: hvfstd1,hvfstd2,hlsstd1,hvflow1,hvflow2,hlslow1 modes will be tried for version editorial
+INFO: Trying hvfstd1 mode to record tv: Pointless Celebrities: Series 8 - 1. Test Match Special
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Pointless_Celebrities-Test_Match_Special-s08e01                 
+INFO: Begin recording file: /external/Videos/pointless/Pointless_Celebrities-Test_Match_Special-s08e01.partial.mp4.ts
+DEBUG: HLS playlist = http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad-audio_1=96000-video=437000.m3u8?s=1472478001&e=1472521201&h=7c08eeb44cfc2b9abb0a1946d69e6a3d
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/cc6b9c-b07tmnx8/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad.ism/vf_b07tmnx8_b2fc2c3e-1879-4d5b-9ecf-640b07f2a7ad-audio_1=96000-video=437000.m3u8?s=1472478001&e=1472521201&h=7c08eeb44cfc2b9abb0a1946d69e6a3d
+Recording:     0.18MB / 176.37MB   367kbps   0.1% 01:05:28 remainingRecording:     0.36MB / 176.37MB   588kbps   0.2% 00:40:50 remainingRecording:     0.54MB / 176.37MB   883kbps   0.3% 00:27:11 remainingRecording:     0.72MB / 176.37MB   840kbps   0.4% 00:28:32 remainingRecording:     0.90MB / 176.37MB   920kbps   0.5% 00:26:03 remainingRecording:     1.08MB / 176.37MB  1102kbps   0.6% 00:21:42 remainingRecording:     1.26MB / 176.37MB  1029kbps   0.7% 00:23:14 remainingRecording:     1.43MB / 176.37MB  1068kbps   0.8% 00:22:21 remainingRecording:     1.61MB / 176.37MB  1017kbps   0.9% 00:23:27 remainingRecording:     1.79MB / 176.37MB  1131kbps   1.0% 00:21:04 remainingRecording:     1.97MB / 176.37MB  1077kbps   1.1% 00:22:06 remainingRecording:     2.15MB / 176.37MB  1175kbps   1.2% 00:20:14 remainingRecording:     2.33MB / 176.37MB  1194kbps   1.3% 00:19:54 remainingRecording:     2.51MB / 176.37MB  1210kbps   1.4% 00:19:37 remainingRecording:     2.69MB / 176.37MB  1101kbps   1.5% 00:21:32 remainingRecording:     2.87MB / 176.37MB  1118kbps   1.6% 00:21:11 remainingRecording:     3.04MB / 176.37MB  1084kbps   1.7% 00:21:50 remainingRecording:     3.22MB / 176.37MB  1099kbps   1.8% 00:21:30 remainingRecording:     3.40MB / 176.37MB  1114kbps   1.9% 00:21:12 remaining
+INFO: Cleaning up /usr/bin/get-iplayer (got signal INT)

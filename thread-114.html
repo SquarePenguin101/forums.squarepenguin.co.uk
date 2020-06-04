@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer 2.85 - Error recording using PVR Manager</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer 2.85 - Error recording using PVR Manager</div>
+<div id="pagetitle"><h2>get_iplayer 2.85 - Error recording using PVR Manager</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-364</h2></div><div class="dateline">12-02-2014, 03:50 AM</div>
+</div>
+<div class="message">Ever since I upgraded to get_iplayer 2.85 a few days ago, I've been having difficulty recording programs.<br />
+<br />
+The primary error appears to be <br />
+<span style="font-weight: bold;" class="mycode_b">ERROR: Failed to get version pid metadata from iplayer site</span><br />
+<br />
+This is happening both using the PVR function<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Running PVR Searches:<br />
+_Atlantis_name_tv<br />
+_Call_the_Midwife_Series_3_name_tv<br />
+Matches:<br />
+192: Call the Midwife: Series 3 - Episode 4, BBC One, Audio Described,Drama,Highlights,Medical,Popular,TV, default,audiodescribed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+ERROR: Failed to get version pid metadata from iplayer site<br />
+<br />
+_Click_name_tv<br />
+Matches:<br />
+213: Click - 08/02/2014, BBC News, Factual,News,Science &amp; Nature,Science &amp; Technology,TV, default,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+&lt;strong&gt;ERROR: Failed to get version pid metadata from iplayer site&lt;/strong&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+and the CLI <br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --verbose --get 192<br />
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty<br />
+  This is free software, and you are welcome to redistribute it under certai<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: User prefs dir: C:&#92;Users&#92;Brian/.get_iplayer<br />
+INFO: System options dir: C:&#92;ProgramData/get_iplayer/options<br />
+Current options:<br />
+        atomicparsley = .&#92;AtomicParsley&#92;AtomicParsley&#92;AtomicParsley.exe<br />
+        ffmpeg = .&#92;FFmpeg&#92;ffmpeg-1.2-win32-static&#92;bin&#92;ffmpeg.exe<br />
+        lame = .&#92;LAME&#92;lame.exe<br />
+        mmsnothread = 1<br />
+        mplayer = .&#92;MPlayer&#92;mplayer-svn-36348&#92;mplayer.exe<br />
+        nopurge = 1<br />
+        output = C:&#92;Users&#92;Brian&#92;Desktop&#92;iPlayer Recordings<br />
+        rtmpdump = .&#92;RTMPDump&#92;rtmpdump.exe<br />
+        verbose = 1<br />
+        vlc = .&#92;VLC&#92;vlc-2.0.6&#92;vlc.exe<br />
+<br />
+INFO: Search args: '192'<br />
+INFO: Additionally getting cached programme data for tv<br />
+INFO: Got 1285 file cache entries for tv<br />
+Matches:<br />
+192:    Call the Midwife: Series 3 - Episode 4, BBC One, Audio Described,Dra<br />
+ighlights,Medical,Popular,TV, default,audiodescribed,<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+INFO: Programme not in history<br />
+INFO: Getting page http://feeds.bbc.co.uk/iplayer/episode/b03vmfsm<br />
+INFO: Getting page http://www.bbc.co.uk/programmes/b03vmfsm.rdf<br />
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b03vmfsm<br />
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b03vmfsm<br />
+ERROR: Failed to get version pid metadata from iplayer site<br />
+<br />
+ERROR: Could not get version pid metadata<br />
+ERROR: Could not get programme metadata<br />
+<br />
+C:&#92;Program Files&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+I understand from other sites including that for the get-iplayer-automator program that this is probably due to the 'proxy being down'. <br />
+<br />
+Can anyone advise me as to what I can do to resolve this problem? Maybe I need a way to change the proxy setting so get_iplayer works again?<br />
+<br />
+If it is of any help, I am outside the UK and use Hotspot Shield/Expat Shield in order to use get_iplayer.<br />
+<br />
+Any help would be appreciated.<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-02-2014, 12:40 PM</div>
+</div>
+<div class="message">Sorry, but we can't help you with VPNs or access from outside UK.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer 2.85 - Error recording using PVR Manager</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

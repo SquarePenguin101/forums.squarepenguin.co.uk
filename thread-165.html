@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - '.\get_iplayer.cgi.cmd' is not recognized</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; '.\get_iplayer.cgi.cmd' is not recognized</div>
+<div id="pagetitle"><h2>'.\get_iplayer.cgi.cmd' is not recognized</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-530</h2></div><div class="dateline">24-06-2014, 02:44 AM</div>
+</div>
+<div class="message">I've had get_iplayer installed on a Windows 7 machine for a couple of years and love it.<br />
+Recently I got a Windows 8.1 64bit machine and installed get-iplayer. But when launching Web PVR Manager I get "'.\get_iplayer.cgi.cmd' is not recognized as an internal or external command,<br />
+operable program or batch file."<br />
+<br />
+It's the same on another Windows 8.1 64bit machine.<br />
+<br />
+I think it's something to do with paths/associations?<br />
+<br />
+I've tried installing to alternate locations and editing various cmd files to try and resolve, but I don't get anywhere.<br />
+If I call get_iplayer.cgi.cmd from an Admin cmd prompt already in C:\Program Files (x86)\get_iplayer and then browse to 127.0.0.1:1935 there's a page there, but refreshing cache on running PVR generates "bad pipe" errors in the command window.<br />
+I'm a little out of my depth in the workings of get_iplayer now.<br />
+<br />
+Can anyone help me get it running on Windows 8.1 64bit?<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-06-2014, 07:56 PM</div>
+</div>
+<div class="message">Check the properties on the start menu shortcut for the Web PVR Manager.  What's the value in the "Start in" field?  Does that directory exist and does it contain all the necessary get_iplayer files?<br />
+<br />
+Make sure you haven't been bitten by Windows filesystem virtualisation.  Check if this directory exists:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"%LOCALAPPDATA%&#92;VirtualStore&#92;Program Files&#92;get_iplayer"</code></div></div><br />
+<br />
+<br />
+If it does, delete it, do a complete uninstall of get_iplayer and re-install, then check for the presence of that directory again.  If it reappears, there is something going wrong with privilege elevation when the installer is run.<br />
+<br />
+If you launch get_iplayer itself from the start menu, does it run?  If not, what about if you launch it from console prompt?  Also check its start menu shortcut properties as above.<br />
+<br />
+When you launch web pvr from a console prompt, what are the first three lines of output?  They should be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>DEBUG: Command: ".&#92;get_iplayer.cmd" --nopurge --nocopyright --show-options<br />
+DEBUG: Command: ".&#92;get_iplayer.cmd" --nopurge --nocopyright --listplugins<br />
+INFO: Listening on 127.0.0.1:1935</code></div></div><br />
+<br />
+<br />
+I presume "bad pipe" is because the web pvr can't launch get_iplayer itself.  If that is true, then there should be some errors as soon as the web pvr is launched since it invokes get_iplayer to read settings.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; '.\get_iplayer.cgi.cmd' is not recognized</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - WARNING: Failed to download programme schedule</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; WARNING: Failed to download programme schedule</div>
+<div id="pagetitle"><h2>WARNING: Failed to download programme schedule</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-623-1.html">1</a> <strong>2</strong> <a href="thread-623-3.html">3</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">13-01-2016, 10:21 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+Okay, I am beginning to understand. <br />
+<br />
+I am able to update the TV / Radio cache files using the alternative code.<br />
+<br />
+<a href="thread-250.html">/threa...ml#pid1509</a><br />
+<br />
+But, then as you say the download of the program using get_iPlayer fails when trying to download the programme metadata XML files:<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/p03cgkp2.xml">http://www.bbc.co.uk/programmes/p03cgkp2.xml</a><br />
+<br />
+ERROR: Failed to get version pid metadata from iplayer site</code></div>
+</div>
+<br />
+<br />
+So, I can attach the updated tv.cache file. But, I guess that this will not help anyone else here.<br />
+<br />
+Thank you for the help.<br />
+<br />
+Tiiveni.<br/><br/>
+<a href="static/thread-623-tv.zip">tv.zip</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1141</h2></div><div class="dateline">13-01-2016, 10:24 PM</div>
+</div>
+<div class="message">Same problem here. Was OK around 7am (UK) Wed 13 Jan 2016, but not working tonight.  Good luck with finding a fix DP.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">13-01-2016, 10:40 PM</div>
+</div>
+<div class="message">Is there a simple change that would use the .JSON playlists for now?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-888</h2></div><div class="dateline">13-01-2016, 10:56 PM</div>
+</div>
+<div class="message">May i ask is there auy way we can force a download as i need to get a few shows that expire at the weekend i know your working on a patch but would be able to temporary release a new version just so we get it working and so we have a temp fixed version until the next version is fully patched <br />
+<br />
+thank you user-2</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1143</h2></div><div class="dateline">13-01-2016, 11:13 PM</div>
+</div>
+<div class="message">You're a frickin' star Dinky.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">14-01-2016, 12:24 AM</div>
+</div>
+<div class="message">It seems that GiP isn't even trying to use the JSON playlists. Any idea why?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-965</h2></div><div class="dateline">14-01-2016, 12:39 AM</div>
+</div>
+<div class="message">While browsing a pid via google's cache, I happened upon this little bit of JS.<br />
+<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>{ var idCookieInstance = idCookie.getInstance(); /* Timestamp in milliseconds for the 6am on 27th of October 2015 */ var timestamp27thOct = 1445925600000; /* Only select users who signed in before the dooms day and were not downgraded yet */ if (idCookieInstance.hasCookie() &amp;&amp; idCookieInstance.timestamp != '' &amp;&amp; parseInt(idCookieInstance.timestamp) &gt; 0 &amp;&amp; parseInt(idCookieInstance.timestamp) &lt; timestamp27thOct &amp;&amp; !idCookieInstance.isDowngraded()) { /* iPlayer uplift is session cookie, so downgrade based on this cookie missed 20% users. To cover all the users with our fix, ut is nor uncoditional: all users that have not been downgraded before will now be downgraded */ idCookieInstance.downgrade(); } } }); &lt;/script&gt;</code></div></div><br />
+Is there something special about 27Oct2015? And who are the 20% of users they couldn't cull...?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1148</h2></div><div class="dateline">14-01-2016, 12:46 AM</div>
+</div>
+<div class="message">I am glad to see it's not just me getting the error messages. How soon could there be a fix to this issue ? I have enjoyed get iplayer for about 2 months but I understand why the BBC would want to stop it. I mainly wanted it for Season 3 of The Bridge and I have the blu ray and dvd of Season 3 of The Bridge. I knew it was too good to be true.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-01-2016, 03:56 AM</div>
+</div>
+<div class="message">Partially-patched version posted:<br />
+<br />
+EDIT: URL removed</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-965</h2></div><div class="dateline">14-01-2016, 04:07 AM</div>
+</div>
+<div class="message">Hi Dinky, <br />
+<br />
+Quick work,  and verified working ;-)<br />
+<br />
+For the schedules, this seems to collect the right data from a former thread, by scraping the website. This would be ripe for some optimisation, by checking existing entries!<br />
+<br />
+<a href="thread-250.html">update tv and radio pids</a><br />
+<br />
+If you are using linux, make sure you change "Env{HOME}" to "ENV{HOME}" in the perl script.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1042</h2></div><div class="dateline">14-01-2016, 05:05 AM</div>
+</div>
+<div class="message">I can confirm that the patched version works for radio.<br />
+<br />
+A radio programme downloaded via PVR produced the following output.<br />
+<br />
+<a href="http://pastebin.com/u2hvFH3J">http://pastebin.com/u2hvFH3J</a><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">Many thanks</span> Dinky!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">14-01-2016, 06:19 AM</div>
+</div>
+<div class="message">Thanks for your reply on Wednesday tvfan.<br />
+<br />
+Thanks for all your work Dinky but I'm afraid your patch or what I need to do to install it is a bit beyond me although it's probably kids stuff to the people I've seen commenting on here lol<br />
+I installed get_iplayer after coming across it by accident in March 2015 &amp; from memory I downloaded the zipped file &amp; did it that way on my Windows 7 Laptop. At a later point I kept on getting download problems with regular error messages regarding rtmpdump. So this time I installed it on a different Laptop that has Win 8.1 but using the Windows installer &amp; consequently I now have get_iplayer 2.94. I was brought up using DOS from about Ver 3 upwards &amp; so I use the CLI when using get_iplayer &amp; I copy the URL from the BBC iPlayer site. Now I've had some batch file experience in the past &amp; I know how to insert commands into existing files using a text editor. So after all that introduction I'm at a bit of a loss on the instructions for the temporary patch that Rinky Dinky has created. So if anybody has any instructions in a bit more laymans terms I would be gratreful.<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">14-01-2016, 06:37 AM</div>
+</div>
+<div class="message">And here is something if it means anything to anybody. I tried recording BBC 1 live on Wednesday evening &amp; it started off with some errors (as seen below) &amp; it seemed to record &amp; then froze. So when I exited the DOS window I had a recording 3min 17secs long but when I played it the recording was OK for the first 7secs &amp; then the picture froze for 50secs before it played normal again for 7-8secs &amp; then the picture froze for the remaining of the recording.<br />
+Anyway, here is the copy of the errors at the CLI of the recording.<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;get_iplayer --type=livetv --get "BBC One"<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+80006:  BBC One - live<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: Could not parse f4m chunklist: <a href="http://vs-hds-uk-live.edgesuite.net/pool">http://vs-hds-uk-live.edgesuite.net/pool</a><br />
+_4/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-audio_1%3D128000-video%3D2000000.f<br />
+4m: File does not exist:  at get_iplayer.pl line 7077.<br />
+.<br />
+WARNING: Could not parse f4m chunklist: <a href="http://vs-hds-uk-live.edgesuite.net/pool">http://vs-hds-uk-live.edgesuite.net/pool</a><br />
+_4/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-audio_1%3D128000-video%3D3500000.f<br />
+4m: File does not exist:  at get_iplayer.pl line 7077.<br />
+.<br />
+WARNING: Could not parse f4m chunklist: <a href="http://vs-hds-uk-live.bbcfmt.vo.llnwd.ne">http://vs-hds-uk-live.bbcfmt.vo.llnwd.ne</a><br />
+t/pool_4/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-audio_1%3D128000-video%3D200<br />
+0000.f4m: File does not exist:  at get_iplayer.pl line 7077.<br />
+.<br />
+WARNING: Could not parse f4m chunklist: <a href="http://vs-hds-uk-live.bbcfmt.vo.llnwd.ne">http://vs-hds-uk-live.bbcfmt.vo.llnwd.ne</a><br />
+t/pool_4/live/bbc_one_hd/bbc_one_hd.isml/bbc_one_hd-audio_1%3D128000-video%3D350<br />
+0000.f4m: File does not exist:  at get_iplayer.pl line 7077.<br />
+.<br />
+INFO: Checking existence of default version<br />
+INFO: hlsvhigh1,hlsvhigh2,hlshigh1,hlshigh2,hlsstd1,hlsstd2,hlslow1,hlslow2 mode<br />
+s will be tried for version default<br />
+INFO: Trying hlsvhigh1 mode to record livetv: BBC One - live<br />
+INFO: File name prefix = BBC_One_live_2016-01-13_20_11_27<br />
+frame=   13 fps=0.0 q=0.0 size=       0kB time=00:00:00.44 bitrate=   0.0kbits/s<br />
+frame=   24 fps= 24 q=0.0 size=       0kB time=00:00:01.00 bitrate=   0.0kbits/s<br />
+frame=   42 fps= 28 q=0.0 size=       0kB time=00:00:01.62 bitrate=   0.0kbits/s<br />
+frame=   42 fps= 15 q=0.0 size=       0kB time=00:00:01.64 bitrate=   0.0kbits/s<br />
+<br />
+etc, etc until it froze with the following lines on screen before I exited.<br />
+<br />
+frame=  156 fps=2.4 q=21.0 size=     950kB time=00:00:06.29 bitrate=1237.0kbits/<br />
+frame=  159 fps=2.4 q=20.0 size=     975kB time=00:00:06.29 bitrate=1269.7kbits/<br />
+frame=  160 fps=2.4 q=21.0 size=     984kB time=00:00:06.31 bitrate=1276.6kbits/<br />
+frame=  163 fps=2.4 q=20.0 size=    1008kB time=00:00:06.48 bitrate=1273.4kbits/<br />
+frame=  165 fps=2.4 q=20.0 size=    1030kB time=00:00:06.48 bitrate=1301.5kbits/<br />
+s dup=1 drop=0</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1153</h2></div><div class="dateline">14-01-2016, 08:27 AM</div>
+</div>
+<div class="message">For Windows users, you need to replace 2 files in your "C:\Program Files\get_iplayer" directory (assuming you did not change the default installation directory).  The 2 files are:<br />
+<br />
+1. get_iplayer.cgi<br />
+2. get_iplayer.pl<br />
+<br />
+Find these 2 files in the directory, and rename them to whatever you wish, for example "get_iplayer.cgi-OLD" and "get_iplayer.pl-OLD"; in case things go wrong, you can always restore the original files.<br />
+<br />
+Then, download the attachment below, and unzip it.  You will have 2 files:<br />
+1. get_iplayer.cgi<br />
+2. get_iplayer.pl<br />
+<br />
+Copy these 2 new files into the get_iplayer installation directory at "C:\Program Files\get_iplayer", open up the DOS command line and you're good to go.  For what it's worth, I'm using a command such as:<br />
+<br />
+get_iplayer --pid=&lt;program PID number&gt; --tvmode=&lt;your preferred resolution&gt;<br />
+<br />
+This works as of the time of this post.  To get a program's PID, look at your browser's address bar once you have navigated to the program you wish to download.  It will look something like this - "http://www.bbc.co.uk/iplayer/episode/b06vjblv/bbc-london-news-13012016"<br />
+<br />
+The PID for this program is b06vjblv, so you substitute this for &lt;program PID number&gt; in the command above.<br />
+<br />
+Hope this helps.
+<br />
+<br />
+<a href="static/thread-623-get_iplayer-temp-fix.zip">get_iplayer-temp-fix.zip</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">14-01-2016, 09:19 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-01-2016, 09:43 PM)</span></cite>It appears that the BBC has killed get_iplayer (again). They have removed all the data sources used by get_iplayer, not just the XML schedule data.  As you have seen, you can neither download directly via <kbd>--pid</kbd> nor refresh your TV programme cache to perform searches. The radio cache will refresh, but downloads fail. There is no workaround for these problems - changes to get_iplayer will be necessary to restore functionality. I will wait a day or two to see what else the BBC destroys, and then make some kind of patched release over the weekend.</blockquote></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">14-01-2016, 09:26 AM</div>
+</div>
+<div class="message">Just ran dev version on Ubuntu using the --pid option and it successfully downloaded a radio programme which failed yesterday. Thanks Dinky!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1152</h2></div><div class="dateline">14-01-2016, 09:56 AM</div>
+</div>
+<div class="message">I've also managed to get the Windows version of get_iplayer working again for PID's and have downloaded TV &amp; Radio programmes a few minutes ago <br />
+Many Thanks to user-2 for creating this development version, described here:    <br />
+    <a href="https://squarepenguin.co.uk/wiki/gipdev/">https://squarepenguin.co.uk/wiki/gipdev/</a><br />
+- The instructions there seemed to be for Linux (especially the linked manual installation instructions). <br />
+<br />
+But I pasted the CLI version webaddress:<br />
+    <a href="https://raw.github.com/get-iplayer/get_iplayer/develop/get_iplayer">https://raw.github.com/get-iplayer/get_i...et_iplayer</a><br />
+into a browser tab and saved the perl script. <br />
+I then renamed this saved file (get_iplayer) to add a '.pl' file extension to the name and copied it to my C:\Program Files\get_iplayer folder (after first renaming the existing version there, by adding .OLD to its name, as above).<br />
+<br />
+So now have it working using PID's<br />
+<hr class="mycode_hr" />
+I had previously tried following the instructions here:<br />
+   <a href="/threa...ml#pid1509">/threa...ml#pid1509</a><br />
+to download and rename the two perl/command files and after removing the .txt suffix, launched the command one to try and rebuild the tv.cache file under the current user profile.<br />
+This webscraper did appear to work, finding lots of PID's and Index descriptions and resulted in a much larger (&gt;1MByte) tv.cache file. But when I launched get_iplayer again, it gave an error about not being able to find ' ' in the cache and it didn't try to look for the index feeds at the BBC website anymore. Also, it didn't find anything in the cache when typing a programme name after get_iplayer, as I normally do. e.g. 'get_iplayer one' which I had expected to work even though get_iplayer itself couldn't find current index lists.<br />
+<br />
+I also tried replacing the cache files with those from the above tv.zip attachment from Tiiveni.<br />
+get_iplayer would now search for the Index feeds again, giving the errors as before. But again <br />
+it didn't find anything in the cache when typing a programme name after get_iplayer, as before.<br />
+<br />
+It looks like get_iplayer is deleting the contents of these tv.cache files - presumably when looking for the index feeds at the bbc website, as I have noticed their size is now back down to 1kB<br />
+<br />
+Any ideas to make get_iplayer work again using Index searching from updated webscraped  cache files? (Including with the updated get_iplayer.pl interim-fixed dev version perl script)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-01-2016, 10:47 AM</div>
+</div>
+<div class="message">It appears that the BBC have restored the data sources used by get_iplayer, at least for now. If you are thinking of using the development version referenced earlier, check your installation of 2.94 first.  If it is working normally, do not update to the development version. If you have already updated, you should be able to revert back to 2.94.<br />
+<br />
+EDIT: patches have been removed from development version, so if 2.94 breaks again, await further instructions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">14-01-2016, 11:12 AM</div>
+</div>
+<div class="message">Thank you very much for your efforts.  I updated my installed version of 2.94 with the new get_iplayer.pl and cgi files and I did not revert back to the old versions yet, and my downloads appear to be working just fine.  Is it ok to leave the newer pl and cgi files in place or should I revert back to the old?  Many thanks, A</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">14-01-2016, 11:32 AM</div>
+</div>
+<div class="message">lol lol<br />
+Thank you very much wr8112 for your time &amp; help &amp; ultimately Dinky. I did what you said above by copying the files. After that &amp; then trying to download a programme using the CLI it was slow &amp; wouldn't work properly. So I had to reboot my Laptop because maybe with my messing with my Laptop earlier after this problem, I may have done something for this to happen as I updated Perl to 64bit version on my PC &amp; also ffmpeg to 64bit as well. So after the reboot I do what I normally do with the CLI using the URL copied from the BBC iPlayer website &amp; all was working as before, Yipee! lol lol<br />
+And then I came on here not long ago to say my thanks &amp; then I saw Dinky's comment saying that the BBC site is back to normal lol<br />
+So we are all happy now lol<br />
+<br />
+And wr8112, this is what I use at the command prompt,<br />
+<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b06vj6h0/bbc-news-at-ten-13012016">http://www.bbc.co.uk/iplayer/episode/b06...n-13012016</a></div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-623-1.html">1</a> <strong>2</strong> <a href="thread-623-3.html">3</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; WARNING: Failed to download programme schedule</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

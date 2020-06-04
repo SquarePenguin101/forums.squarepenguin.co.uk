@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - More than one commandtv to run?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; More than one commandtv to run?</div>
+<div id="pagetitle"><h2>More than one commandtv to run?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">18-07-2018, 10:21 AM</div>
+</div>
+<div class="message">Following on from my attempts at writing something to shorten a variable - in this instance it was firstbcastdate - I made it into a preset. Except it didn't run. I got an error :- <br />
+INFO: Running user command<br />
+sh: 1: Bad substitution<br />
+INFO: Command exit code 2 (raw code = 512)<br />
+ERROR: Command Exit Code: 2<br />
+<br />
+GiP is running on an Ubuntu box but not as me. Instead it runs as a user called xbox. I had problems persuading anything to run under that user so added these lines to my gip script for cron :-<br />
+<br />
+# ensure environment variables are set: cron jobs do not have these set<br />
+if [ -z "&#36;HOME" ]; then<br />
+       export HOME=/home/xbox<br />
+<br />
+So, in an effort to make my preset work, I turned it into a fully-fledged bash script and used the preset to call it. But .... it stops the commandtv line in my options from working.<br />
+<br />
+The question is, should it? Running GiP in verbose mode, I can see this in the logs (removed the stuff that didn't relate to this) :-<br />
+INFO: PVR Run: 'ONCE_b0bbc6q5'<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+Current options:<br />
+commandtv = /home/xbox/GiP_Scripts/click_folder_rename.sh<br />
+fileprefix = &lt;nameshort&gt;_&lt;firstbcastdate&gt;<br />
+outputtv = /mnt/raid2/Media_Share/GiP_Downloads/tv/<br />
+pid = b0bbc6q5<br />
+preset = click_folder_rename<br />
+INFO: Running user command<br />
+INFO: Running command '/home/xbox/GiP_Scripts/click_folder_rename.sh'<br />
+INFO: Command: /home/xbox/GiP_Scripts/click_folder_rename.sh<br />
+++ ls /mnt/raid2/Media_Share/GiP_Downloads/tv/Click/<br />
++ subdir=2018-07-14<br />
++ short=2018<br />
++ mv /mnt/raid2/Media_Share/GiP_Downloads/tv/Click/2018-07-14 /mnt/raid2/Media_Share/GiP_Downloads/tv/Click/2018<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+INFO: Command succeeded<br />
+New tv programme: 'Click - Grand Tech Auto', 'Click goes behind the scenes at the Austrian Grand Prix.'<br />
+INFO: Deleted PVR search 'ONCE_b0bbc6q5'<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+<br />
+Is it because I've asked the preset to call a bash script that this happens and I can only run one bash script command, or do I have to queue them in the commandtv option instead. Or can I not do that either?<br />
+<br />
+This is the relevant line from the options :-<br />
+get_iplayer --prefs-show<br />
+Options in '/home/xbox/.get_iplayer/options'<br />
+       commandtv = /home/xbox/Old_Scripts/find_mp4.sh</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-07-2018, 11:03 AM</div>
+</div>
+<div class="message">You can string together multiple commands in <kbd>--command-tv</kbd>, so long as your shell understands whatever you put in there. Your preset no doubt had a syntax error, but did you read the output you posted? Your script ran without reporting an error. That's what exit code 0 means (ask Google if you don't know why that is). The "Command succeeded" should also give you a clue. Whether the script does what you want is up to you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">18-07-2018, 11:28 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>You can string together multiple commands in --command-tv</blockquote>
+<br />
+But obviously I don't want the 'click_folder_rename' to run on every tv file so I can't string them together or am I misunderstanding what you mean?<br />
+<br />
+Also you said <br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Your preset no doubt had a syntax error</blockquote>
+I didn't think it did as I could run it quite happily as a command in a shell - without the commandtv prefix of course - by simply cutting and pasting the line from what was a simple text file in the preset. I could also run it on this machine (running a different distro to the machine running the GiP pvr stuff and running as me and not as the xbox user) and it runs to completion.<br />
+<br />
+It's only when running on the Ubuntu box as the xbox user that it all goes nipple north.<br />
+<br />
+Thinking some more about this and the 'sh: 1' error leads me to this :-<br />
+a quick google tells me -<br />
+<a href="https://stackoverflow.com/questions/20615217/bash-bad-substitution/20616103">https://stackoverflow.com/questions/2061...n/20616103</a><br />
+-  that Ubuntu is one of those annoying distros, as sh is dash.<br />
+<br />
+So is the real problem Ubuntu and not the coding of the preset? If so, I'll have to rethink how I go about this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-07-2018, 11:49 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-07-2018, 11:28 AM)</span></cite>But obviously I don't want the 'click_folder_rename' to run on every tv file so I can't string them together or am I misunderstanding what you mean?</blockquote>If you don't want to use the preset for a particular programme, then don't specify it as part of the command.<br />
+<blockquote class="mycode_quote"><cite><span> (18-07-2018, 11:28 AM)</span></cite>So is the real problem Ubuntu and not the coding of the preset? If so, I'll have to rethink how I go about this.</blockquote>If you're using bash syntax that sh doesn't understand, what else would you expect? If you need to use bash, use bash.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">18-07-2018, 12:44 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>If you don't want to use the preset for a particular programme, then don't specify it as part of the command.</blockquote>
+<br />
+But my point is that one of the commands isn't a preset. It's the standard command for *all* of the tv programmes. It's simply that the standard command won't run if I also specify a preset.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-07-2018, 01:14 PM</div>
+</div>
+<div class="message">Presets override saved preferences. That is how they are supposed to work. You can see it in the output you posted.  As the documentation tells you, you can only specify one <kbd>--command{-tv,-radio}</kbd> option at a time. It also tells you that you can use it to run multiple commands, as I already told you earlier. If you have a global script and a preset-only script, either invoke the former from the latter, or include them both in the preset <kbd>--command-tv</kbd> option.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">18-07-2018, 06:04 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Presets override saved preferences. That is how they are supposed to work. You can see it in the output you posted.</blockquote>
+<br />
+While I might be able to see it, I'm afraid it wasn't clear to this bear of little brain that they worked that way. No matter, I know now and with the knowledge I've gained from the various questions and responses I've had in this and other threads, I am making much more use of GiP.<br />
+<br />
+Thanks for the help. As I said, I've gained knowledge and that surely must be of benefit ;-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; More than one commandtv to run?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

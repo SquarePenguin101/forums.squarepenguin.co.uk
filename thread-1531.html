@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - I want a different format for firstbcastdate field in output file name</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; I want a different format for firstbcastdate field in output file name</div>
+<div id="pagetitle"><h2>I want a different format for firstbcastdate field in output file name</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1936</h2></div><div class="dateline">11-10-2017, 10:39 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I am trying to get BBC Click Episodes.<br />
+<br />
+I want to add EPS to saved like so (UTC date):<br />
+<br />
+07/10/2017 - Japan: Seeing Things You Wouldn't Believe<br />
+<br />
+<a href="https://i.imgur.com/ULLiebw.png">https://i.imgur.com/ULLiebw.png</a><br />
+<br />
+However first broadcast date is wrong.<br />
+<br />
+Currently adding it to my PVR like so:<br />
+<br />
+get_iplayer --pvr-add="Click" Click --exclude="Short Edition" --tvmode=best --file-prefix="&lt;name&gt; - &lt;episode&gt;" --output "/var/data/Downloads/TV/"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1651</h2></div><div class="dateline">11-10-2017, 10:54 AM</div>
+</div>
+<div class="message">The image you uploaded shows details for a different episode , about school shootings , not the Japanese one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1936</h2></div><div class="dateline">11-10-2017, 11:30 AM</div>
+</div>
+<div class="message">Different eps same show.<br />
+<br />
+<a href="https://i.imgur.com/d4N6Evc.png">https://i.imgur.com/d4N6Evc.png</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1651</h2></div><div class="dateline">11-10-2017, 11:38 AM</div>
+</div>
+<div class="message">Firstbroadcast date is 2017-10-07 , which is the day it was broadcast on. ( 7th October )<br />
+I am confused where you are seeing the incorrect info , it looks like it is correct to me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1936</h2></div><div class="dateline">11-10-2017, 11:46 AM</div>
+</div>
+<div class="message">I added it with: <br />
+<br />
+get_iplayer --pvr-add="Click" Click --exclude="Short Edition" --tvmode=best --file-prefix="&lt;nameshort&gt;-&lt;firstbcastdate&gt;-&lt;episodeshort&gt;" --output "/var/data/Downloads/TV/"<br />
+<br />
+Which gives me:<br />
+<br />
+Click-2017-09-16-School_Shootings<br />
+<br />
+However, I want date format to be UTC:<br />
+<br />
+Click-16-09-2017 - School Shootings..<br />
+<br />
+Ideally I want it saved like so:<br />
+<br />
+Click - 2017x35 - 16-09-2017 - School Shootings.mp4</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-10-2017, 12:17 PM</div>
+</div>
+<div class="message">That is not what "UTC" means (Google is your friend here). As to the format for <kbd>&lt;firstbcastdate&gt;</kbd> you want in the file name, that is not available. get_iplayer just uses the format provided in BBC metadata.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1936</h2></div><div class="dateline">29-10-2017, 09:49 PM</div>
+</div>
+<div class="message">This is true, sorry didn't mean UTC.<br />
+<br />
+I got it fixed with  get_iplayer --pvr-add="Click" Click --exclude="Short Edition" --tvmode=best --file-prefix="&lt;nameshort&gt;-&lt;firstbcastdate&gt;-&lt;episodeshort&gt;" --output "/var/data/Downloads/TV/" and was able to use imdb to sort it.<br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2155</h2></div><div class="dateline">15-11-2018, 04:34 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-10-2017, 09:49 PM)</span></cite>This is true, sorry didn't mean UTC.<br />
+<br />
+I got it fixed with  get_iplayer --pvr-add="Click" Click --exclude="Short Edition" --tvmode=best --file-prefix="&lt;nameshort&gt;-&lt;firstbcastdate&gt;-&lt;episodeshort&gt;" --output "/var/data/Downloads/TV/" and was able to use imdb to sort it.<br />
+<br />
+Thanks!</blockquote><br />
+As detailed in the substitution parameters page in the documentation, to get first broadcast in DD-MM-YYYY you could use:<br />
+<br />
+&lt;firstbcastday&gt;-&lt;firstbcastmonth&gt;-&lt;firstbcastyear&gt;<br />
+<br />
+Not sure that using '/' is wise for filenames as it's the Unix directory delimiter.<br />
+<br />
+Also, if you can't be sure that there will be a short episode description, and to avoid a floating '-', you can put the '-' inside the tag's &lt;&gt; to not print it if the tag is empty: &lt;-episodeshort&gt;</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; I want a different format for firstbcastdate field in output file name</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

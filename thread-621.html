@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PHP Script For get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; PHP Script For get_iplayer</div>
+<div id="pagetitle"><h2>PHP Script For get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1130</h2></div><div class="dateline">09-01-2016, 06:17 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+What's the possiblity of someone creating a PHP script for get_iplayer?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">09-01-2016, 08:51 PM</div>
+</div>
+<div class="message">What do you mean? re-write it in PHP. Your question is quite vague. <br />
+There are some (old)  perl to PHP converters on perlmongers, perlmonks and CPAN.<br />
+If you want something written try Fiverr.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1144</h2></div><div class="dateline">13-01-2016, 11:33 PM</div>
+</div>
+<div class="message">I've been working on a semi-basic PHP iPlayer interface thingymabob which grabs the HLS stream URLs like get_iplayer does (or did until the BBC screwed everything up today) and pipes them to the browser through a HTML5 video element propped up by HLS.js.<br />
+<br />
+My code was designed to allow New Nintendo 3DS users to watch iPlayer.<br />
+<br />
+I might share the source code at some point, but may I ask what you want to do this for?<br />
+<br />
+In any case, however, it will need 75% rewriting at least since the BBC took down the old /programmes API. (To be honest they've been saying they'll do that for ages so fair enough, but it's still annoying...)<br />
+<br />
+Sincerely,<br />
+Joshua Kelly</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">14-01-2016, 12:52 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I wrote a simple php code that grabs the HLS streams and saves the iPlayer programmes as .ts files. It is not very good, but it works well enough for me. It also works now that the BBC have made their changes today. If you like writing code then it may be helpful. I think that it will only work on Windoze though, it is not very clever!<br />
+<br />
+I usually run this php script using the get_iplayer web pvr manager. I have this line of code in the get_iplayer options file which starts a batch file which in turn runs the php script:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>command BBC_iPlayer_DL.bat &lt;pid&gt;</code></div></div><br />
+or perhaps this would work too:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>command php BBC_iPlayer_DL_no_proxy.php http://www.bbc.co.uk/iplayer/episode/&lt;pid&gt;</code></div></div><br />
+Tonight I cannot run this php script directly from get_iplayer though because of the changes made by the BBC today.<br />
+<br />
+The quality of video / audio can be selected by editing the (settings.ini) file. Right now I download with very high quality by setting the contents of settings.ini to: <br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>-audio_1=96000-video=5070000</code></div></div><br />
+<br />
+This setting gives me VIDEO RESOLUTION=1280x720  and AUDIO="audio-96" and 50 fps.<br />
+<br />
+The php script needs you to copy and paste the URL of the program that you wish to copy from the BBC iplayer website. The first argument of the command line is the url of the BBC iplayer video that you wish to save as a .ts file. <br />
+<br />
+For example, command line: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>php BBC_iPlayer_DL_no_proxy.php http://www.bbc.co.uk/iplayer/episode/b06wj608/dickensian-episode-8</code></div></div><br />
+Most likely this php code is not working without editing and adapting or developing it for your own use. If there are others out there that like to play with the code then this could be useful.<br />
+<br />
+Thanks,<br />
+<br />
+Tiiveni.<br />
+<br />
+more information:<br />
+<br />
+Settings for the quality of audio and video are made using the text file "./files/Settings.ini" the contents of which can be any text which must be found in the m3U8 file that is to be downloaded. The "-audio_1=" and "-video=" currently identifies the audio and video quality, this can be used to select the video / audio of the desirable quality versus filesize. <br />
+<br />
+Example:<br />
+-audio_1=96000-video=5070000<br />
+<br />
+<br />
+Full list of audio / video options (as of January 2016):<br />
+BANDWIDTH=169000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-128"-audio=128000-video=31000.m3u8<br />
+<br />
+BANDWIDTH=373000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-320"-audio=320000-video=31000.m3u8<br />
+BANDWIDTH=59000  ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-24" -audio_1=24000-video=31000.m3u8<br />
+BANDWIDTH=84000  ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-48" -audio_1=48000-video=31000.m3u8<br />
+BANDWIDTH=135000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-96" -audio_1=96000-video=31000.m3u8<br />
+<br />
+BANDWIDTH=227000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-128"-audio=128000-video=86000.m3u8<br />
+<br />
+BANDWIDTH=431000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-320"-audio=320000-video=86000.m3u8<br />
+<br />
+BANDWIDTH=117000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-24" -audio_1=24000-video=86000.m3u8<br />
+<br />
+BANDWIDTH=143000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-48" -audio_1=48000-video=86000.m3u8<br />
+BANDWIDTH=193000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=192x108  ,AUDIO="audio-96" -audio_1=96000-video=86000.m3u8<br />
+<br />
+BANDWIDTH=302000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=256x144  ,AUDIO="audio-128"-audio=128000-video=156000.m3u8<br />
+<br />
+BANDWIDTH=505000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=256x144  ,AUDIO="audio-320"-audio=320000-video=156000.m3u8<br />
+BANDWIDTH=191000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=256x144  ,AUDIO="audio-24" -audio_1=24000-video=156000.m3u8<br />
+<br />
+BANDWIDTH=217000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=256x144  ,AUDIO="audio-48" -audio_1=48000-video=156000.m3u8<br />
+<br />
+BANDWIDTH=268000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=256x144  ,AUDIO="audio-96" -audio_1=96000-video=156000.m3u8<br />
+<br />
+BANDWIDTH=434000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=384x216  ,AUDIO="audio-128"-audio=128000-video=281000.m3u8<br />
+BANDWIDTH=638000 ,CODECS="mp4a.40.2,avc1.42C015",RESOLUTION=384x216  ,AUDIO="audio-320"-audio=320000-video=281000.m3u8<br />
+BANDWIDTH=324000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=384x216  ,AUDIO="audio-24" -audio_1=24000-video=281000.m3u8<br />
+BANDWIDTH=349000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=384x216  ,AUDIO="audio-48" -audio_1=48000-video=281000.m3u8<br />
+<br />
+BANDWIDTH=400000 ,CODECS="mp4a.40.5,avc1.42C015",RESOLUTION=384x216  ,AUDIO="audio-96" -audio_1=96000-video=281000.m3u8<br />
+<br />
+BANDWIDTH=598000 ,CODECS="mp4a.40.2,avc1.42C01E",RESOLUTION=448x252  ,AUDIO="audio-128"-audio=128000-video=436000.m3u8<br />
+BANDWIDTH=802000 ,CODECS="mp4a.40.2,avc1.42C01E",RESOLUTION=448x252  ,AUDIO="audio-320"-audio=320000-video=436000.m3u8<br />
+BANDWIDTH=488000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=448x252  ,AUDIO="audio-24" -audio_1=24000-video=436000.m3u8<br />
+BANDWIDTH=514000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=448x252  ,AUDIO="audio-48" -audio_1=48000-video=436000.m3u8<br />
+<br />
+BANDWIDTH=564000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=448x252  ,AUDIO="audio-96" -audio_1=96000-video=436000.m3u8<br />
+BANDWIDTH=599000 ,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=512x288  ,AUDIO="audio-128"-audio=128000-video=437000.m3u8<br />
+BANDWIDTH=803000 ,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=512x288  ,AUDIO="audio-320"-audio=320000-video=437000.m3u8<br />
+<br />
+BANDWIDTH=489000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=512x288  ,AUDIO="audio-24" -audio_1=24000-video=437000.m3u8<br />
+<br />
+BANDWIDTH=515000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=512x288  ,AUDIO="audio-48" -audio_1=48000-video=437000.m3u8<br />
+BANDWIDTH=565000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=512x288  ,AUDIO="audio-96" -audio_1=96000-video=437000.m3u8<br />
+BANDWIDTH=865000 ,CODECS="mp4a.40.2,avc1.42C01E",RESOLUTION=640x360  ,AUDIO="audio-128"-audio=128000-video=688000.m3u8<br />
+<br />
+BANDWIDTH=1069000,CODECS="mp4a.40.2,avc1.42C01E",RESOLUTION=640x360  ,AUDIO="audio-320"-audio=320000-video=688000.m3u8<br />
+BANDWIDTH=755000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=640x360  ,AUDIO="audio-24" -audio_1=24000-video=688000.m3u8<br />
+BANDWIDTH=781000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=640x360  ,AUDIO="audio-48" -audio_1=48000-video=688000.m3u8<br />
+BANDWIDTH=832000 ,CODECS="mp4a.40.5,avc1.42C01E",RESOLUTION=640x360  ,AUDIO="audio-96" -audio_1=96000-video=688000.m3u8<br />
+BANDWIDTH=1013000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=704x396  ,AUDIO="audio-128"-audio=128000-video=827000.m3u8<br />
+BANDWIDTH=1216000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=704x396  ,AUDIO="audio-320"-audio=320000-video=827000.m3u8<br />
+BANDWIDTH=903000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=704x396  ,AUDIO="audio-24" -audio_1=24000-video=827000.m3u8<br />
+<br />
+BANDWIDTH=928000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=704x396  ,AUDIO="audio-48" -audio_1=48000-video=827000.m3u8<br />
+BANDWIDTH=979000 ,CODECS="mp4a.40.5,avc1.4D401E",RESOLUTION=704x396  ,AUDIO="audio-96" -audio_1=96000-video=827000.m3u8<br />
+BANDWIDTH=1800000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=704x396  ,AUDIO="audio-128"-audio=128000-video=1570000.m3u8<br />
+BANDWIDTH=2004000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=704x396  ,AUDIO="audio-320"-audio=320000-video=1570000.m3u8<br />
+<br />
+BANDWIDTH=1690000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=704x396  ,AUDIO="audio-24" -audio_1=24000-video=1570000.m3u8<br />
+BANDWIDTH=1716000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=704x396  ,AUDIO="audio-48" -audio_1=48000-video=1570000.m3u8<br />
+BANDWIDTH=1766000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=704x396  ,AUDIO="audio-96" -audio_1=96000-video=1570000.m3u8<br />
+<br />
+BANDWIDTH=1836000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=960x540  ,AUDIO="audio-128"-audio=128000-video=1604000.m3u8<br />
+BANDWIDTH=2040000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=960x540  ,AUDIO="audio-320"-audio=320000-video=1604000.m3u8<br />
+<br />
+BANDWIDTH=1726000,CODECS="mp4a.40.5,avc1.4D401F",RESOLUTION=960x540  ,AUDIO="audio-24" -audio_1=24000-video=1604000.m3u8<br />
+BANDWIDTH=1752000,CODECS="mp4a.40.5,avc1.4D401F",RESOLUTION=960x540  ,AUDIO="audio-48" -audio_1=48000-video=1604000.m3u8<br />
+<br />
+BANDWIDTH=1802000,CODECS="mp4a.40.5,avc1.4D401F",RESOLUTION=960x540  ,AUDIO="audio-96" -audio_1=96000-video=1604000.m3u8<br />
+BANDWIDTH=3117000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=960x540  ,AUDIO="audio-128"-audio=128000-video=2812000.m3u8<br />
+BANDWIDTH=3320000,CODECS="mp4a.40.2,avc1.64001F",RESOLUTION=960x540  ,AUDIO="audio-320"-audio=320000-video=2812000.m3u8<br />
+<br />
+BANDWIDTH=3007000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=960x540  ,AUDIO="audio-24" -audio_1=24000-video=2812000.m3u8<br />
+<br />
+BANDWIDTH=3032000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=960x540  ,AUDIO="audio-48" -audio_1=48000-video=2812000.m3u8<br />
+<br />
+BANDWIDTH=3083000,CODECS="mp4a.40.5,avc1.64001F",RESOLUTION=960x540  ,AUDIO="audio-96" -audio_1=96000-video=2812000.m3u8<br />
+BANDWIDTH=5510000,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720 ,AUDIO="audio-128"-audio=128000-video=5070000.m3u8<br />
+<br />
+BANDWIDTH=5714000,CODECS="mp4a.40.2,avc1.640020",RESOLUTION=1280x720 ,AUDIO="audio-320"-audio=320000-video=5070000.m3u8<br />
+BANDWIDTH=5400000,CODECS="mp4a.40.5,avc1.640020",RESOLUTION=1280x720 ,AUDIO="audio-24" -audio_1=24000-video=5070000.m3u8<br />
+BANDWIDTH=5426000,CODECS="mp4a.40.5,avc1.640020",RESOLUTION=1280x720 ,AUDIO="audio-48" -audio_1=48000-video=5070000.m3u8<br />
+BANDWIDTH=5476000,CODECS="mp4a.40.5,avc1.640020",RESOLUTION=1280x720 ,AUDIO="audio-96" -audio_1=96000-video=5070000.m3u8<br />
+BANDWIDTH=8616000,CODECS="mp4a.40.2,avc1.640028",RESOLUTION=1920x1080,AUDIO="audio-128"-audio=128000-video=8000000.m3u8<br />
+<br />
+BANDWIDTH=8820000,CODECS="mp4a.40.2,avc1.640028",RESOLUTION=1920x1080,AUDIO="audio-320"-audio=320000-video=8000000.m3u8<br />
+<br />
+BANDWIDTH=8506000,CODECS="mp4a.40.5,avc1.640028",RESOLUTION=1920x1080,AUDIO="audio-24" -audio_1=24000-video=8000000.m3u8<br />
+BANDWIDTH=8531000,CODECS="mp4a.40.5,avc1.640028",RESOLUTION=1920x1080,AUDIO="audio-48" -audio_1=48000-video=8000000.m3u8<br />
+BANDWIDTH=8582000,CODECS="mp4a.40.5,avc1.640028",RESOLUTION=1920x1080,AUDIO="audio-96" -audio_1=96000-video=8000000.m3u8<br/><br/>
+<a href="static/thread-621-BBC_iPlayer_DL.zip">BBC_iPlayer_DL.zip</a>
+</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; PHP Script For get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

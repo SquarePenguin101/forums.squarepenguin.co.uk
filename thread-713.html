@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Problems accessing  the latest episode of &quot;follow the money&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems accessing  the latest episode of &quot;follow the money&quot;</div>
+<div id="pagetitle"><h2>Problems accessing  the latest episode of &quot;follow the money&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1267</h2></div><div class="dateline">30-04-2016, 05:28 PM</div>
+</div>
+<div class="message">I am having problems accessing  the latest episode of the bbc series "follow the money". I am able to watch it via a webbrowser, but trying to access it via get_iplayer on my raspi running debian wheezy always lead to  the following output:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --subtitles --type=tv --pid=b075nr7g<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+unclosed token at line 1, column 22, byte 22 at /usr/lib/perl5/XML/Parser.pm line 187</blockquote>
+<br />
+<br />
+using the latest dev branch gives the following output:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>./get_iplayer_dev --subtitles --type=tv --pid=b075nr7g<br />
+WARNING: Ignored option in /var/lib/get_iplayer/options: 'packagemanager = apt'<br />
+WARNING: Option 'packagemanager' is no longer used and is scheduled for removal<br />
+WARNING: Please delete option 'packagemanager' from /var/lib/get_iplayer/options<br />
+INFO: Use --dump-opts to display all valid options<br />
+WARNING: Ignored option in /etc/get_iplayer/options: 'packagemanager = apt'<br />
+WARNING: Option 'packagemanager' is no longer used and is scheduled for removal<br />
+WARNING: Please delete option 'packagemanager' from /etc/get_iplayer/options<br />
+INFO: Use --dump-opts to display all valid options<br />
+get_iplayer 2.95-dev, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b075nr7g using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/b075nr7g.xml">http://www.bbc.co.uk/programmes/b075nr7g.xml</a><br />
+ERROR: Failed to get version pid metadata from iplayer site (JSON)<br />
+<br />
+WARNING: No programmes are available for this pid with version(s): default</blockquote>
+<br />
+<br />
+I would be rather glad if somebody were able able to help me out. :)<br />
+<br />
+thanks a lot :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-04-2016, 06:04 PM</div>
+</div>
+<div class="message">You appear to be using get_iplayer outside the UK, so we can't help - see forum rules. Thread closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Problems accessing  the latest episode of &quot;follow the money&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

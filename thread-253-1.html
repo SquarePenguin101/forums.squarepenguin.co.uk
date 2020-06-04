@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Need help please after recent iPlayer changes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need help please after recent iPlayer changes</div>
+<div id="pagetitle"><h2>Need help please after recent iPlayer changes</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-253-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">02-11-2014, 08:23 PM</div>
+</div>
+<div class="message">I have read through the PID method and obtained the PID for the relevant tv programme.  I entered '--pid= etc' in the search box, and selected 'pid' in the drop-down box.<br />
+<br />
+I got many results.  It included the programme I was looking for. However, this was for a previous series and with a different pid.  All the programme results appeared to be over a year old.<br />
+<br />
+I did something similar for a radio programme.  I got no results for that.<br />
+<br />
+What am I doing wrong please?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">02-11-2014, 08:44 PM</div>
+</div>
+<div class="message">Hi Wendylou,<br />
+You don't need to put the PID into any search boxes.<br />
+<br />
+If you are getting a number of results for a PID you are probably using a brand PID which is not really what you are looking for.<br />
+<br />
+You need to search for the programme you are after on the iPlayer site and then go to that episode like you are about to watch it.<br />
+<br />
+The address of that page will be something like <a href="http://www.bbc.co.uk/iplayer/episode/b04nv6kr/doctor-who-series-8-11-dark-water">http://www.bbc.co.uk/iplayer/episode/b04...dark-water</a><br />
+<br />
+In this case <span style="font-weight: bold;" class="mycode_b">b04nv6kr</span> is the PID you would need to download that episode.<br />
+<br />
+You then use this in get_iplayer with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid b04nv6kr</code></div></div> to download that programme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-11-2014, 08:52 PM</div>
+</div>
+<div class="message">My guess is you are using the webPVR version of get_iplayer. You need to open the command line version and type your command there.<br />
+<br />
+Don't be put off by the command line - you managed to type register here and type this forum post and that significantly more difficult!<br />
+<br />
+The tutorials in the guides section up on the top nav bar will walk you through the commands to use and how to structure them.<br />
+<br />
+Are you using Windows?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">02-11-2014, 10:49 PM</div>
+</div>
+<div class="message">Thanks.<br />
+<br />
+Yes, I'm using Windows.<br />
+<br />
+I didn't even know where was a command line version.  How do I get to that?  (That would be a start, I suppose). I just used to put the URL in for tv programmes (although that stopped working for radio programmes, and the name was sufficient.)<br />
+<br />
+In answer to the first reply, I'm pretty sure I was finding the right pid, but clearly I'm doing the whole thing wrong anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">02-11-2014, 11:02 PM</div>
+</div>
+<div class="message">OK, first you need to make sure you have the most recent version installed: <a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe">http://www.infradead.org/get_iplayer_win...latest.exe</a><br />
+<br />
+Once you are up-to-date, go to Start Menu &gt;&gt; All Programs &gt;&gt; find the get_iplayer folder and then from the options in there you need to choose <span style="font-weight: bold;" class="mycode_b">Get_iPlayer</span>. This should open the command window.<br />
+<br />
+From there the command you want is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid b04nv6kr</code></div></div> Press Enter and the download should start.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">08-11-2014, 07:59 PM</div>
+</div>
+<div class="message">Thanks.<br />
+<br />
+I downloaded the latest version.  In program files (Windows 8, so no start menu) I chose the Get_iPlayer file. The type was Windows Command Script.<br />
+<br />
+The command window opened only briefly and then disappeared.<br />
+<br />
+It may be worth mentioning that when I was downloading the latest version I got a number of errors and couldn't download all the files.  None of these appeared to be the file in question.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2014, 08:19 PM</div>
+</div>
+<div class="message">That is not going to work.  Use the get_iplayer tile on the start screen.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2014, 08:22 PM</div>
+</div>
+<div class="message">Or the Web PVR Manager tile</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">09-11-2014, 12:39 AM</div>
+</div>
+<div class="message">What I got was:-<br />
+'--modes'is not recognized as an internal or external command, operable program or batch file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-11-2014, 12:44 AM</div>
+</div>
+<div class="message">Like user-2 said above, make sure you launch get_iplayer from the tile on the start screen.<br />
+<br />
+The command you use once the command window opens will always start with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer</code></div></div> before you use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes</code></div></div> or anything else</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">09-11-2014, 12:50 AM</div>
+</div>
+<div class="message">Yes, I opened the command window via the get_iplayer tile on the start screen.<br />
+<br />
+Also, I entered '--modes' after 'get_iplayer' which was already in the command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 12:57 AM</div>
+</div>
+<div class="message">There was no command.  The "get_iplayer" is in the prompt string, which tells you which directory you're in.  As tvfan wrote, you must begin every command string with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer</code></div></div>, followed by the various arguments.  Please read the guides in this site.  There are many examples of get_iplayer commands.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-11-2014, 12:58 AM</div>
+</div>
+<div class="message">Anything before the <span style="font-weight: bold;" class="mycode_b">&gt;</span> in the command window is the path to the get_iplayer file that the command window is using but it is not part of the command itself.<br />
+<br />
+eg: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --modes=best --pid b04nv6kr</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-11-2014, 12:58 AM</div>
+</div>
+<div class="message">Please post the exact command that you are using in its entirety to a reply to this thread. Without seeing it we can't know if you are doing something wrong.<br />
+<br />
+Remember to select/highlight the command after you have pasted it into the reply box here and click the 'code' button just above the input box which will mark the text as code and ensure it's formatted correctly, otherwise Wordpress (the system that runs this site) can screw up what you enter.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">09-11-2014, 01:46 AM</div>
+</div>
+<div class="message">I think I need to start from the basics here.<br />
+<br />
+I fully intended to paste a copy of the command/prompt that I had entered but, never having done anything like this before, couldn't work out how to copy and paste from the command window.<br />
+<br />
+Prior to the prompt I have already mentioned, I entered one exactly as per tvfan's last post. It makes reference to version 5.16.2 and a number of line references.  I realise that it has to be exactly right for it to work, but I'm pretty sure I have entered it as per the instructions above.  At the moment though, I haven't worked out to get a copy here.<br />
+<br />
+I'm wondering whether I need to uninstall and install afresh</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 01:53 AM</div>
+</div>
+<div class="message">I don't think you have the most recent version of get_iplayer, so that needs to be sorted first.  See the installation guides in the wiki for information on downloading the latest Windows installer.<br />
+<br />
+Also, I've moved this topic to Windows forum.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-715</h2></div><div class="dateline">09-11-2014, 01:55 AM</div>
+</div>
+<div class="message">Wendylou .. Right-click inside the command prompt window. Select Mark.<br />
+<br />
+Then, drag the mouse inside the command prompt. The bits you drag come up in reversed colours. If you foul up and don't select what you want, left click and drag again. Then, when you have all the bits you want, hit the ENTER key.<br />
+<br />
+You can then paste it into here (right-click, select 'Paste').<br />
+<br />
+It's not immediately obvious, I must admit. There are complicated reasons for that ...<br />
+<br />
+edit to add: As well as pasting the command you used, you can of course use the same method to copy and paste the error messages you get here.<br />
+<br />
+This video shows how to do it as well (I didn't know that clicking somewhere else copied it. You learn something new every day :) )<br />
+<br />
+<a href="https://www.youtube.com/watch?v=lkrUsFwMkMg">https://www.youtube.com/watch?v=lkrUsFwMkMg</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-673</h2></div><div class="dateline">09-11-2014, 02:17 AM</div>
+</div>
+<div class="message">Thanks for that.<br />
+<br />
+Below is what I entered and the messages:- <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --modes=best --pid p0276pxp<br />
+Perl lib version (5.18.2) doesn't match executable 'get_iplayer.pl' version (v5.<br />
+16.2) at Config.pm line 62.<br />
+Compilation failed in require at Env.pm line 122.<br />
+BEGIN failed--compilation aborted at Env.pm line 122.<br />
+Compilation failed in require at get_iplayer.pl line 54.<br />
+BEGIN failed--compilation aborted at get_iplayer.pl line 54.</code></div></div><br />
+<br />
+<br />
+[I highlighted and selected 'code' but it doesn't look much different to me.]<br />
+<br />
+I suspected that there may be a problem with the version I have.  I haven't yet gone to the wiki.  To download the latest version, I used the link posted by tvfan on 2 Nov.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-715</h2></div><div class="dateline">09-11-2014, 02:23 AM</div>
+</div>
+<div class="message">Yeah, based on that I think Dinky_Pumpkin was right :)<br />
+<br />
+Uninstall whatever get_iplayer you have, then install the latest one, using the guides in the wiki. Of course, if you already tried that, it's back to asking here ...<br />
+<br />
+Edit to add: as far as I am aware, all the get_iplayer stuff is designed to be self contained as much as possible so that other applications and their versions of the stuff get_iplayer uses have minimal effect. Because it's so self-contained, that's why the advice to reinstall usually works.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 02:24 AM</div>
+</div>
+<div class="message">Something went wrong with the installation - some files weren't updated.  There might be some strange permissions problem. Run the installer again and make sure you select get_iplayer as one of the installation components.  If the problem persists: Uninstall get_iplayer completely, delete the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer</code></div></div> folder and then run the installer again.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-253-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need help please after recent iPlayer changes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - the TV/radio options dont seem to work in 2.99</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; the TV/radio options dont seem to work in 2.99</div>
+<div id="pagetitle"><h2>the TV/radio options dont seem to work in 2.99</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">18-04-2017, 10:18 AM</div>
+</div>
+<div class="message">I have just noticed that programs now download from radio and TV even though I have type set to TV in the pvr scheduler<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four,<br />
+fields name, episode<br />
+modes good,<br />
+output F:&#92;Media&#92;Television&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 Doctor Who<br />
+fileprefix &lt;nameshort&gt;&lt;.episodeshort&gt;&lt;.senum&gt;&lt;.pid&gt;&lt;.channel&gt;</code></div></div><br />
+now if dr who appears on radio it downloads that as well. <br />
+another instance is the classic albums series which I want from the TV but not from the radio.<br />
+this did not happen before version 2.99<br />
+Is there a way to stop this from happening now</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-04-2017, 02:08 PM</div>
+</div>
+<div class="message">I don't see any Doctor Who radio episodes available, so there is no way to test your claim. Post your pvr search definition for Classic Albums instead. Also post the output from <kbd>get_iplayer --show-prefs</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">19-04-2017, 06:54 PM</div>
+</div>
+<div class="message">thats odd as 3 programs downloaded yesterday where doctor who was mentioned in the description<br />
+<br />
+you can find the first one with the search<br />
+get_iplayer --type=radio sasha<br />
+Sasha_Twining.Hot_cross_buns_Gypsy_Moth_IV_and_Doctor_Who.s01e513.p04xk6fp.BBC_Radio_Solent.audio.m4a<br />
+<br />
+get_iplayer --type=radio butterworth<br />
+Alison_Butterworth_and_Phil_Trow.Doctor_Who.s01e540.p04ycj8y.BBC_Radio_Manchester.mp3<br />
+<br />
+get_iplayer --type=radio ace<br />
+Ace.Doctor_Who_actress_Pearl_Mackie_aka_Bill_Potts.b08kvmpq.BBC_Radio_1Xtra.mp3<br />
+<br />
+I definitely did not request those programs<br />
+the point I am trying to get across is that I only have doctor who set to record from TV not radio. <br />
+<br />
+I use that as an example as it happened yesterday but there have been several other instances.<br />
+today the programs<br />
+<br />
+The_Odyssey_Project_My_Name_Is_Nobody.Tamrat_in_the_Cyclops_Cave.s01e01.b08mq68c.BBC_Radio_4.MP3<br />
+The_Odyssey_Project_My_Name_Is_Nobody.Scylla_and_Charybdis.s01e01.b08m9h2h.BBC_Radio_4.mp3<br />
+<br />
+which come from the radio broadcast<br />
+<a href="http://www.bbc.co.uk/programmes/b08nfgpc">http://www.bbc.co.uk/programmes/b08nfgpc</a><br />
+the odyssey project<br />
+<br />
+I have a PVR schedule set up to record the TV series Odyssey<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel BBC One,BBC Two,BBC Three,BBC Four<br />
+fields name<br />
+modes better,good,<br />
+output F:&#92;Media&#92;Television&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+versionlist default<br />
+search0 odyssey<br />
+fileprefix &lt;nameshort&gt;&lt;.episodeshort&gt;&lt;.senum&gt;&lt;.pid&gt;&lt;.channel&gt;</code></div></div><br />
+now I thought that it should only record from TV or those particular channels<br />
+<br />
+<br />
+<br />
+show pref options are<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Options in 'C:&#92;Users&#92;DRB/.get_iplayer/options'<br />
+        nopurge = 1<br />
+        radiomode = better<br />
+        commandradio = ffmpeg -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; del "&lt;filename&gt;"<br />
+        tvmode = good<br />
+        refreshfuture = 1<br />
+        output = F:&#92;Media&#92;Television<br />
+        nocopyright = 1</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-04-2017, 08:12 PM</div>
+</div>
+<div class="message">Sorry - what I meant to say was that I found no Dr Who radio episodes using your pvr search, i.e., I couldn't test your error. I also find no Odyssey radio episodes using your second pvr search. There appears to be no TV series with "odyssey" in the name available from iPlayer, so I'm not sure what you're trying to accomplish there.<br />
+<br />
+Your preferences don't show anything amiss. You appear to have entered your pvr search by editing the file, which you should never do, but I don't see any mistakes that would cause this particular problem. And like I said, your pvr searches work for me.  Whatever is wrong only affects you. You'll have to <a href="thread-706.html">follow our instructions</a> to provide a proper report so we can see what is happening on your system. Only use one pvr search for reporting.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-04-2017, 08:19 PM</div>
+</div>
+<div class="message">Also, remove <kbd>nocopyright</kbd> from your preferences temporarily so the get_iplayer version number isn't hidden.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">21-04-2017, 10:33 AM</div>
+</div>
+<div class="message">perhaps I havent explained myself properly. <br />
+The doctor who issue I use as an example as it downloaded 3 radio programs that have doctor who in the description, not the title  or the series. Each of those programs were daytime talk radio where they were interviewing someone from doctor who<br />
+Other programs have done the same thing in the past <br />
+My issue is should a program that is only set to record on TV be downloading programs on radio, or a program that is set to download on specific channels be downloading other channels. <br />
+<br />
+<br />
+I have removed the no copyright option and it is definitely running ver2.99</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-04-2017, 10:38 AM</div>
+</div>
+<div class="message">Please provide a proper report as requested in order to allow us to help further:<br />
+<br />
+<a href="thread-706.html#what-information-should-you-provide">/threa...ou-provide</a><br />
+<br />
+Make sure to adhere to point 7 please.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-04-2017, 10:40 AM</div>
+</div>
+<div class="message">Those radio programmes do not have Doctor Who in the description, but in the episode title. That is irrelevant, however. I understand perfectly well what you're saying, and what you're claiming is broken. You don't seem to understand me, however. I cannot duplicate your errors, and apparently nobody else can, either. You'll have to demonstrate what is happening as I've instructed. If you don't want to do that, that's fine, but you're on your own to figure out what is wrong on your machine.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; the TV/radio options dont seem to work in 2.99</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

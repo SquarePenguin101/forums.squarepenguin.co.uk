@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I specify the cache directory for get_iplayer spawned by PHP shell_exec()?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I specify the cache directory for get_iplayer spawned by PHP shell_exec()?</div>
+<div id="pagetitle"><h2>How do I specify the cache directory for get_iplayer spawned by PHP shell_exec()?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2411</h2></div><div class="dateline">08-08-2019, 03:09 PM</div>
+</div>
+<div class="message">I am trying to run get_iplayer from a button on my local, private, php web server on linux using shell_exec. The program runs but cannot save to cache, which it thinks is in the filesystem root - /radio.cache and /tv.cache. I have confirmed this is where the program is trying to update the caches but it cannot copy them to .old as the permissions are wrong (http instead of root). They shouldn't be there anyway.<br />
+<br />
+I cannot find a way of writing/updating the caches in the default ~/.get_iplayer folder from the web page, although my code can read them there. There does not seem to be a way of specifying the caches folder.<br />
+<br />
+I would have expected get_iplayer to place the caches in the folder from which it is run if it's not using the default one (in this case, /srv/xxx/) or at least in a sub-folder; or better, to specify the path in the options file. The options file used is in /etc/.get_iplayer/ so it would be useful if the caches were there.<br />
+<br />
+Is there any way to specify the path used for caches?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2019, 03:37 PM</div>
+</div>
+<div class="message">The documentation gives you two ways to do it. See "Setting Preferences" page and "CGI Deployment" section in Web PVR help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2411</h2></div><div class="dateline">08-08-2019, 04:19 PM</div>
+</div>
+<div class="message">In wiki/prefs I can find only GETIPLAYER_PROFILE and GETIPLAYER_DEFAULTS, neither of which has any usage information. I can find no mention of CGI anywhere. Obviously, I must be looking in the wrong place. Sorry.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2411</h2></div><div class="dateline">09-08-2019, 03:17 PM</div>
+</div>
+<div class="message">Can anyone help me with GETIPLAYER_PROFILE and GETIPLAYER_DEFAULTS, please, or is there something else I've missed? I would like the get_iplayer action to be under my control but it's looking like a cron is the only answer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-08-2019, 03:30 PM</div>
+</div>
+<div class="message">It sounds like you don't understand how environment variables work or else don't know how to configure them for your web application. That is unrelated to get_iplayer, and there is plenty of information on that subject elsewhere on the internet. As noted in docs, web server deployment of get_iplayer is not supported, so I'm closing this thread.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How do I specify the cache directory for get_iplayer spawned by PHP shell_exec()?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

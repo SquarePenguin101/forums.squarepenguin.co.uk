@@ -1,0 +1,171 @@
+C:\Program Files (x86)\get_iplayer>get_iplayer --modes=best --pid b04pvhmr --inf
+o --verbose
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\User1/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+        encodingconsolein = cp850
+        encodingconsoleout = cp850
+        encodinglocale = cp1252
+        encodinglocalefs = cp1252
+        expiry = 604800
+        info = 1
+        mmsnothread = 1
+        modes = best
+        nopurge = 1
+        output = C:\Users/User1\Desktop\iPlayer Recordings
+        pid = b04pvhmr
+        rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.e
+xe
+        verbose = 1
+        vlc = .\VLC\vlc-2.1.5\vlc.exe
+
+INFO: Search args: ''
+INFO: Will try prog types: tv
+INFO: Got 2260 file cache entries for tv
+INFO Trying to stream pid using type tv
+INFO: pid found in cache
+Matches:
+2079:   Top of the Pops - 15/11/1979, BBC One, Classic Pop & Rock,Music, default
+
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b04pvhmr
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b04pvhmr
+INFO: Using Not Live standard TV and Radio: b04q02dn
+INFO: Version: default, VersionPid: b04q02dn, Duration: 2400
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/b04pvhmr/pla
+ylist.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b04pvhmr/playlist.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b04pvhmr.rdf
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn?cb=
+89101
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv/akamai?cb=27585
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv/limelight?cb=21133
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_high/akamai?cb=89229
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_high/limelight?cb=61498
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_vlo/akamai?cb=96609
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_vlo/limelight?cb=40768
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_lo/akamai?cb=94131
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b04q02dn/ipl
+ayer_streaming_h264_flv_lo/limelight?cb=23535
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 3
+96kbps stream (CDN: akamai/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 3
+96kbps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: akamai/10)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsplow1: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x2
+24 396kbps stream (CDN: akamai/10)
+INFO: Found mode rtsplow2: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x2
+24 396kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode subtitles1: (captions) http stream (CDN: http/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b04q02dn.rdf
+INFO: Will search for versions: default
+INFO: File name prefix = Top_of_the_Pops - 15_11_1979 b04pvhmr default
+
+
+available:      Unknown
+categories:     Music,Classic Pop & Rock
+category:       Music
+channel:        BBC One
+desc:           David Jensen presents another edition of the weekly pop chart wi
+th performances by the Jam, Cliff Richard, the Moody Blues, Kool and the Gang, S
+ecret Affair, Ramblers, Showaddywaddy and Dr Hook and dance sequences by Legs &
+Co.
+descmedium:     David Jensen presents another edition of the weekly pop chart wi
+th performances by the Jam, Cliff Richard, the Moody Blues, Kool and the Gang, S
+ecret Affair, Ramblers, Showaddywaddy and Dr Hook and dance sequences by Legs &
+Co.
+descshort:      David Jensen presents performances by the Jam, Cliff Richard, th
+e Moody Blues, Kool &amp; the Gang, Secret Affair, Ramblers, Showaddywaddy and D
+r Hook and dance sequences by Legs &amp; Co.
+dir:            C:\Users\User1\Desktop\iPlayer Recordings
+dldate:         2014-11-28
+dltime:         19:45:44
+duration:       2400
+durations:      default: 2400
+episode:        15/11/1979
+episodenum:     1
+episodeshort:   15/11/1979
+expiry:         2014-12-23T01:30:00Z
+expiryrel:      in 24 days 5 hours
+ext:            EXT
+filename:       C:\Users\User1\Desktop\iPlayer Recordings\Top_of_the_Pops - 15_11
+_1979 b04pvhmr default.EXT
+filepart:       C:\Users\User1\Desktop\iPlayer Recordings\Top_of_the_Pops - 15_11
+_1979 b04pvhmr default.partial.EXT
+fileprefix:     Top_of_the_Pops - 15_11_1979 b04pvhmr default
+firstbcast:     default: 2014-11-21T01:00:00Z
+firstbcastdate: default: 2014-11-21
+firstbcastrel:  default: 7 days 18 hours ago
+index:          2079
+lastbcast:      default: 2014-11-23T00:45:00Z
+lastbcastdate:  default: 2014-11-23
+lastbcastrel:   default: 5 days 19 hours ago
+longname:       Top of the Pops
+modes:          default: flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,fla
+shstd2,flashvhigh1,flashvhigh2,rtsphigh1,rtsphigh2,rtsplow1,rtsplow2,rtspstd1,rt
+spstd2,rtspvhigh1,rtspvhigh2,subtitles1
+modesizes:      default: flashhigh1=233MB,flashhigh2=233MB,flashlow1=116MB,flash
+low2=116MB,flashstd1=141MB,flashstd2=141MB,flashvhigh1=439MB,flashvhigh2=439MB,r
+tsphigh1=233MB,rtsphigh2=233MB,rtsplow1=116MB,rtsplow2=116MB,rtspstd1=141MB,rtsp
+std2=141MB,rtspvhigh1=439MB,rtspvhigh2=439MB
+name:           Top of the Pops
+nameshort:      Top of the Pops
+pid:            b04pvhmr
+player:         http://www.bbc.co.uk/iplayer/episode/b04pvhmr/
+senum:          s01e01
+seriesnum:      1
+thumbfile:      C:\Users\User1\Desktop\iPlayer Recordings\Top_of_the_Pops - 15_11
+_1979 b04pvhmr default.jpg
+thumbnail:      http://ichef.bbci.co.uk/programmeimages/p02bkzzk/b04pvhmr_640_36
+0.jpg
+timeadded:      7 days 1 hours ago (1416595085)
+title:          Top of the Pops: 15/11/1979
+type:           tv
+verpids:        default: b04q02dn
+version:        default
+versions:       default
+web:            http://www.bbc.co.uk/programmes/b04pvhmr
+
+
+INFO: 1 Matching Programmes
+
+C:\Program Files (x86)\get_iplayer>

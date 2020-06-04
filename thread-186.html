@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - &quot;flvstreamer does not support SWF Verification&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; &quot;flvstreamer does not support SWF Verification&quot;</div>
+<div id="pagetitle"><h2>&quot;flvstreamer does not support SWF Verification&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 08:37 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+I cleared my old Windows 7 machine for fresh use and after installing the usual stuff - all updates and SP1 plus VLC and SPlayer, I downloaded and installed Get_Iplayer. I tried to download a simple test program and got this message :<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification<br />
+WARNING: You may see this warning if rtmpdump has malfunctioned<br />
+WARNING: Use --verbose to print the output from rtmpdump<br />
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade<br />
+WARNING: You may see this warning if rtmpdump has malfunctioned<br />
+WARNING: Use --verbose to print the output from rtmpdump</code></div></div><br />
+<br />
+<br />
+I tried verbose and got the attached output.<br />
+<br />
+How can I make this work please ?<br/><br/>
+<a href="static/thread-186-Verbose-output.txt">Verbose-output.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 08:39 PM</div>
+</div>
+<div class="message">PS - Apologies thats a little "sharp" - I have tried a few things but nothing works, so I uninstalled, deleted the program files folder and the folder in my user profile area so it should have been blank and, er, pure.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2014, 08:43 PM</div>
+</div>
+<div class="message">You broke rtmpdump.  Most likely cause is that you messed up your system path.  Open the get_iplayer console window and run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>echo %PATH%</code></div></div> and post the output.  Replace your username with a placeholder if it appears anywhere in the output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 08:48 PM</div>
+</div>
+<div class="message">Hmm interesting, %path% only shows the path of an SDK I installed (which is for some work I'm doing so I'm not going to post it) but nothing else. <br />
+<br />
+Should it include paths to r...dump  and other stuff ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 09:02 PM</div>
+</div>
+<div class="message">I tried setting the path to rtmpdump to my %path% and also adding the --flvstreamer setting to the same place but same result.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2014, 09:56 PM</div>
+</div>
+<div class="message">The path to rtmpdump does NOT belong in your system path - remove it.  rtmpdump is installed correctly with get_iplayer.  <br />
+<br />
+The problem is that your SDK would seem to have a fatally flawed installer that stomped your system path.  The default system path is:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%SystemRoot%&#92;system32;%SystemRoot%;%SystemRoot%&#92;System32&#92;Wbem;</code></div></div><br />
+<br />
+<br />
+Any other entries should generally be appended to the default, so insert the above before your SDK path.  It's possible that there may be some reason for the SDK path to come first, but you'll have to figure that out for yourself.<br />
+<br />
+Bottom line:  If <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%SystemRoot%&#92;system32</code></div></div> is not in your system path, rtmpdump will not work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-07-2014, 10:10 PM</div>
+</div>
+<div class="message">Morph - don't paste hundreds of lines of text from outputs into the forum here, it destroys readability. Paste your output into a .txt file and upload it as an attachment.<br />
+<br />
+Also, use the 'code' button to mark short output, not blockquote. This will retain the exact output as you saw it and improve you chances of getting assistance. <br />
+<br />
+Your opportunity to edit the post has passed but I have edited it for you this time. <br />
+<br />
+(Admin)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 10:15 PM</div>
+</div>
+<div class="message">I think there is more to it than just System32. <br />
+<br />
+I tried adding the above and that didn't work after a restart. <br />
+<br />
+However the joy of dev work on Windows is Virtualbox and VB machines.<br />
+<br />
+So I took a basic install of Windows 7 in a VB machine, and installed get_iplayer, and it worked. <br />
+<br />
+And then I copied the path from that and added it to the path in the machine that didn't work and now it does.<br />
+<br />
+I'll do some more analysis and try and work out what broke it, but for now I'm happy. I just need to add the prefs for encoding into Mp3 for radio and I will be very happy (hint - if anyone knows the spell to use because I forgot)<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 10:15 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/flvstreamer-does-not-support-swf-verification/#post-5400">Quote:</a>&lt;/div&gt;Morph â donât paste hundreds of lines of text from outputs into the forum here, it destroys readability. Paste your output into a .txt file and upload it as an attachment.<br />
+<br />
+Also, use the âcodeâ button to mark short output, not blockquote. This will retain the exact output as you saw it and improve you chances of getting assistance. <br />
+<br />
+Your opportunity to edit the post has passed but I have edited it for you this time. <br />
+<br />
+(Admin)</blockquote>
+<br />
+Apologies, I did read that elsewhere too. My fault completely.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2014, 10:25 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I think there is more to it than just System32</blockquote>
+<br />
+Not as far as rtmpdump is concerned.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>And then I copied the path from that and added it to the path in the machine that didnât work and now it does.</blockquote>
+<br />
+So what was the path that worked and how was it different from what I posted?  Don't leave us hanging.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">24-07-2014, 10:31 PM</div>
+</div>
+<div class="message">Apologies, it's late now ;) <br />
+<br />
+I'll do more checking tomorrow or over the weekend - I'll strip the path down and add each bit until it works. I just added it all which was probably the wrong approach - should have done it bit by bit.<br />
+<br />
+Interestingly the SDK installed was going to be part of an installer I was working on for something else, guess I just discovered a rather serious bug in it :-)<br />
+<br />
+I'll update after some testing in a couple of days.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2014, 11:57 PM</div>
+</div>
+<div class="message">Just noticed I cut off PowerShell.  Should have been:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%SystemRoot%&#92;system32;%SystemRoot%;%SystemRoot%&#92;System32&#92;Wbem;%SystemRoot%&#92;System32&#92;WindowsPowerShell&#92;v1.0;</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; &quot;flvstreamer does not support SWF Verification&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

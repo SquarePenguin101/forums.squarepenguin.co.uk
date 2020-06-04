@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - how to record live streams using pid only?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; how to record live streams using pid only?</div>
+<div id="pagetitle"><h2>how to record live streams using pid only?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-531</h2></div><div class="dateline">24-06-2014, 05:47 PM</div>
+</div>
+<div class="message">i am trying to record live streams using pid but  get_iplayer can't find the streams! so i used page url but the problem is that if i use page url to record i can record one streams in that page! (the second streams also have same page url and i got only its pid.diffrenten live streams have same page url but diffrent pid  )<br />
+<br />
+could any one tell me how to overcome this problem and record both live streams that have same page url but diffrent pid ? looking forward for replies.Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2014, 07:15 PM</div>
+</div>
+<div class="message">I'll respond to your query with one of my own.  Why didn't you - at the very least - provide: a) the live stream you're trying to record; b) the page url you referred to; c) the get_iplayer commands you used; d) the output and/or error messages from get_iplayer.  We can't guess at what you're doing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-531</h2></div><div class="dateline">24-06-2014, 07:26 PM</div>
+</div>
+<div class="message">thanks for reply. i couldnt edit my first post so here i will post some details:i want live streams in the following page under liver coverage page :<br />
+<a href="http://www.bbc.co.uk/sport/live/football/27459555">http://www.bbc.co.uk/sport/live/football/27459555</a><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get "http://www.bbc.co.uk/sport/live/football/27459555" --modes best&nbsp;&nbsp;--force --start 0 --stop 3000</code></div></div><br />
+as you see there are more then one live streams that didnt start yet(coming up) but if i use the above command it only records one of them! i can get pid of those streams but dont know how to use those pid to record instead of using url.(since all got same urls and get_iplayer only record one of them if i supply it url of page). hope some one help me with it.thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2014, 10:12 PM</div>
+</div>
+<div class="message">That URL just points to a landing page.  If you want to record the live streams, click through until you have the live game playing in your browser and use that URL.  Example for Greece v. Ivory Coast (on now, ~2100 GMT 24 June)<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get http://www.bbc.co.uk/sport/live/football/27990601 --type livetv --force --stop 3000</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-531</h2></div><div class="dateline">24-06-2014, 11:02 PM</div>
+</div>
+<div class="message">thanks for reply.For actual  games each game got seperate url if you move your mouse over the live coverage tabs but for build up (pre match) live streams most of the time they have same url . For example if you now move your mouse over live coverage you notice there some live radio coverage of games which got same urls .This the same problem i have when trying to record built up live streams before the actual game ! dont know how i can record the second build up live streams for other games! :-(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2014, 11:53 PM</div>
+</div>
+<div class="message">Those aren't live streams.  Only 1 or 2 World Cup video streams will ever be live at any given moment, and those will have separate URLs.  Everything else is catch-up programmes, even if they are accessed via the "Live Coverage" tab.  And no, you can't download those with get_iplayer directly.  If you really want one of those programmes, you can view the the source of the page and dig out the URLs you want (they typically end in "playlist.sxml") and do some editing.  For example, the Italy-Uruguay highlights URL appears in the page source as:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>http:&#92;/&#92;/playlists.bbc.co.uk&#92;/sport&#92;/0&#92;/football&#92;/28005043A&#92;/playlist.sxml</code></div></div><br />
+<br />
+<br />
+<br />
+so you have to take out the backslashes before feeding that URL to get_iplayer</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-531</h2></div><div class="dateline">25-06-2014, 01:59 PM</div>
+</div>
+<div class="message">could you tell me how to  record the catch up games ? if you look at this page <a href="http://www.bbc.co.uk/sport/live/football/27580618">http://www.bbc.co.uk/sport/live/football/27580618</a> . under live coverage you will see 3 catch up games with same urls . how i should tell get_iplayer which one i want since all got same urls!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-06-2014, 07:39 PM</div>
+</div>
+<div class="message">Don't bother with that.  Find the games in the main iPlayer site.  Search for "Match of the Day Live".</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; how to record live streams using pid only?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

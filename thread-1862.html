@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Videos no longer downloaded after using &quot;--subtitles-only --prefs-add --subs-mono&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Videos no longer downloaded after using &quot;--subtitles-only --prefs-add --subs-mono&quot;</div>
+<div id="pagetitle"><h2>Videos no longer downloaded after using &quot;--subtitles-only --prefs-add --subs-mono&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2214</h2></div><div class="dateline">11-08-2018, 01:19 PM</div>
+</div>
+<div class="message">Have used the command “--subtitles-only --get 123 --prefs-add --subs-mono” <br />
+to download single color subtitles of a program.  <br />
+<br />
+Afterwards, videos are no longer downloaded even with the usual command of <br />
+“--subtitles --get 123”.  All I get was subtitles only.  <br />
+<br />
+Previously I have downloaded subtitles without specifying mono color. get_iplayer still works to download videos afterwards.  The problem occurs only when single color subtitles are requested.<br />
+<br />
+I have uninstalled and then reinstalled get_iplayer again. But still only subtitles are downloaded and videos are excluded.  Can anyone advise how to fix this problem?<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2018, 02:06 PM</div>
+</div>
+<div class="message">Remove <kbd>--subtitles-only</kbd> from your preferences. <kbd>--prefs-add</kbd> applies to all options on the command line, except for some that are specifically excluded, e.g., <kbd>--get</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2214</h2></div><div class="dateline">11-08-2018, 04:33 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Thanks for the quick response, but unfortunately still no videos.<br />
+<br />
+Tried not to input subtitles in the command line and just type "get_iplayer --pid=123" What I get is still subtitles only, no videos.  Is it because the program is previous command for subtitles only is stored in the program, or the download has been blocked by BBC? <br />
+<br />
+Thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2214</h2></div><div class="dateline">11-08-2018, 05:24 PM</div>
+</div>
+<div class="message">The --pref-add command  what to input for 'subtitles only' or 'mono subtitles'. It  also shows location of the get_iplayer history files in my computer, which is the important part.  I deleted all the history files in the directory and then re-install the program again. It is working now.<br />
+<br />
+Thanks again for the advice. Really helpful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2018, 07:31 PM</div>
+</div>
+<div class="message">For everyone else: This user apparently deleted the contents of their profile directory, including the options file where user preferences are stored. That solved the problem, but in a manner akin to how a sledgehammer solves the problem of swatting a fly.  You never need to delete anything in your profile directory (generally a bad idea), nor do you need to reinstall, in order to manage preferences. When you accidentally add an option to your preferences, you only need to remove the unwanted option with get_iplayer. If you don't know how, it is in the docs.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Videos no longer downloaded after using &quot;--subtitles-only --prefs-add --subs-mono&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

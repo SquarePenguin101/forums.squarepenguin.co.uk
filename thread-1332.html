@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Windows Media Player cannot play downloads from DASH streams</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Windows Media Player cannot play downloads from DASH streams</div>
+<div id="pagetitle"><h2>Windows Media Player cannot play downloads from DASH streams</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1746</h2></div><div class="dateline">02-05-2017, 01:04 PM</div>
+</div>
+<div class="message">I'm using GIP v3.00-windows.0 on Windows 7 x86<br />
+<br />
+When I download a Horizon programme using the command:<br />
+<br />
+get_iplayer --fps50 --force --pid b05n8jqs --verbose &gt; gip.txt 2&gt;&amp;1<br />
+<br />
+the programme downloads, but the finished MP4 does not play in Windows Media player, and does not have an image embedded in it. Every other programme I download plays fine (and has an image), so it looks like it's related to that programme, and that the resultant MP4 is corrupt. The programme plays fine from the iPlayer web site. I have tried the download several times over the last couple of days with the same result every time, so I don't think it's a network glitch my end.<br />
+<br />
+I can live without one Horizon programme, but thought the developers may be interested, since it might be related to the v3 scraping changes. The log file is attached.<br/><br/>
+<a href="static/thread-1332-gip.txt">gip.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2017, 01:23 PM</div>
+</div>
+<div class="message">Nothing whatsoever to do with any web scraping. Blame WMP - it wouldn't be the first time. Plays fine in VLC. Save yourself some time and at least try another media player before posting.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1746</h2></div><div class="dateline">02-05-2017, 05:26 PM</div>
+</div>
+<div class="message">Well, the fact that it works in one media player and not in another doesn't mean there's no corruption there - it just means that either WMP is being more picky and detecting an error that VLC isn't, or that there is an error that VLC can correct or ignore and that WMP can't correct.<br />
+<br />
+The fact that the Windows shell icon handler can't extract the image either, when it can for every other file leads me to think that there's something up with the individual file. Now, it might be that the original feed from the BBC is borked, or it might be that the processing that GIP and its associated programs do to the downloaded data is introducing the problem.<br />
+<br />
+As I said, it's only one programme and I can live without it, or even watch it via the web site, but in my experience, most developers want to know about potential problems with their software, so I thought I'd let you know about this one. However, it sounds like your view is a case of "it works for me, so that's OK", which is entirely your prerogative, but I'll certainly think twice before bothering to report any other problems. That's a shame, since I like the software a lot, and use it on most days - all I was trying to do was help make it a bit better.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-05-2017, 05:51 PM</div>
+</div>
+<div class="message">Chin up, not every error you encounter and find important will be found so by the developer/maintainer. <br />
+<br />
+The fact that there is a workaround as easy as 'try one of the most popular free media players instead' doesn't put the problem very high up the list of things to sort out or even investigate. <br />
+<br />
+The likely cause is a problem with the file the BBC is providing, especially as all the others are working fine (and so why would the same commands issues by gip/ffmpeg/atomicparsley create an error for one specific case?) but with such a simple workaround there doesn't seem to be any reason to investigate further right now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1746</h2></div><div class="dateline">04-05-2017, 03:42 PM</div>
+</div>
+<div class="message">Well, just because an application works with one source file, and not with another isn't necessarily an indication that the problem lies with the source file and not with the application. However, I don't think this is limited to an individual programme, but is related to the nature of the sources downloaded.<br />
+<br />
+I've done some more playing about with this, and I can see a pattern. For files which, once downloaded, have valid tags and a thumbnail and which play in WMP, the audio source seems to be HLS, and for those that don't have tags or a thumbnail and which don't play in WMP, the audio source seems to be DASH.<br />
+<br />
+For programmes that get the tags and so on, GIP downloads two files, with extensions .video.ts and .video.txt, and then combines them into the .mp4 file.<br />
+<br />
+For programmes that don't get tagged, GIP downloads more files. First, there are two files, with extensions audio.m4a and audio.txt. These are then processed into a file with extension .dash.m4a, and GIP starts downloading two more files with extensions .video.m4v and .video.txt. These two are then processed into a file with extension .dash.m4v. It looks like the .m4a and the .m4v are combined into the .mp4 file.<br />
+<br />
+I don't think it's an AtomicParsley issue, since I get the same results (i.e. playable / not playable in WMP) if I run GIP with --no-tag --no-artwork, and I'm assuming it's AP that's adding tags and thumbnails.<br />
+<br />
+It's a guess, but it looks to me like the different processing used for DASH audio-based programmes is ultimately producing mp4 files that can't be played by WMP, whereas the (presumably different) processing for HLS audio-based programmes is producing subtly different mp4 files that can be played.<br />
+<br />
+Does that sound possible?<br />
+<br />
+I'm also wondering if this is related in any way to <a href="/thread-1335.html">/thread-1335.html</a>, since it I use AP to manually add a title tag to both .mp4 files that were downloaded with --no-tags, the one that plays in WMP now displays the title in the relevant Windows property page, but the one that doesn't play doesn't display the tag in the property page. However, AP lists the title correctly for both files when asked to display all tags using the -t option.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Windows Media Player cannot play downloads from DASH streams</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

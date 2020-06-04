@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Blurry download when using tvmode=best</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Blurry download when using tvmode=best</div>
+<div id="pagetitle"><h2>Blurry download when using tvmode=best</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1071</h2></div><div class="dateline">20-10-2015, 10:36 PM</div>
+</div>
+<div class="message">OS:  Windows 7<br />
+Browser:  IE and Firefox<br />
+<br />
+I always use --tvmode=best when downloading.  Worked fine until yesterday.  No matter what TV program I choose, the file is not in HD.  When viewing on the BBC website, the program plays fine in HD.  Even when viewing in SD, it is clearer than the downloaded file.  I even re-downloaded a file from a few days ago to compare - old file is clear as can be, file from today looks like a bad copy off a VHS tape. <br />
+<br />
+Any thoughts?<br />
+<br />
+Thank you in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">20-10-2015, 11:06 PM</div>
+</div>
+<div class="message">Have you tried with <kbd>--modes=hlsbest</kbd>?<br />
+<br />
+Does the same thing happen if you use that in place of <kbd>--tvmode=best</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1071</h2></div><div class="dateline">20-10-2015, 11:52 PM</div>
+</div>
+<div class="message">Thanks for your prompt response.  Here's what I tried (in the order I tried it):<br />
+<span style="font-weight: bold;" class="mycode_b">1) Before getting your response,  I tried this:  get_iplayer --prefs-add --modes=best </span>and then tried to download<br />
+Still blurry - at times pixelated<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">2) I tried your suggestion of --modes=hlbest.  It did not record. Message was:</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_inlayer&gt;get_iplayer --pid=b00hvgzp --modes=hlbest<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b00hvgzp using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (hlbest) available for this programme with version 'def<br />
+ault'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,subtitles<br />
+<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes (hlbest) available for this programme with version 'ori<br />
+ginal'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,subtitles<br />
+<br />
+INFO: Checking existence of audiodescribed version<br />
+INFO: No specified modes (hlbest) available for this programme with version 'aud<br />
+iodescribed'<br />
+INFO: Try using --modes=flashhigh<br />
+ERROR: Failed to record 'Being Human: Series 1 - 5. Episode 5 (b00hvgzp)'</code></div></div><br />
+<span style="font-weight: bold;" class="mycode_b">3) I tried --modes=flashhigh.  It did not record.  Message was:</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --pid=b00hvgzp --modes=flashhigh<br />
+--force<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b00hvgzp using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhigh1,flashhigh2 modes will be tried for version default<br />
+INFO: Trying flashhigh1 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_default<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: rtmp server sent error<br />
+ERROR: rtmp server requested close<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_default.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh1 mode<br />
+INFO: Trying flashhigh2 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_default<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: Closing connection: NetStream.Failed<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_default.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh2 mode<br />
+INFO: Checking existence of original version<br />
+INFO: flashhigh1,flashhigh2 modes will be tried for version original<br />
+INFO: Trying flashhigh1 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_original<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: rtmp server sent error<br />
+ERROR: rtmp server requested close<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_original.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh1 mode<br />
+INFO: Trying flashhigh2 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_original<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: Closing connection: NetStream.Failed<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_original.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh2 mode<br />
+INFO: Checking existence of audiodescribed version<br />
+INFO: flashhigh1,flashhigh2 modes will be tried for version audiodescribed<br />
+INFO: Trying flashhigh1 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_audiodescr<br />
+ibed<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: rtmp server sent error<br />
+ERROR: rtmp server requested close<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_audiodescribed.partial.mp4.flv via RTMP<br />
+<br />
+INFO: skipping flashhigh1 mode<br />
+INFO: Trying flashhigh2 mode to record tv: Being Human: Series 1 - 5. Episode 5<br />
+INFO: File name prefix = Being_Human_Series_1_-_5._Episode_5_b00hvgzp_audiodescr<br />
+ibed<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: Closing connection: NetStream.Failed<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:&#92;Users&#92;Michelle&#92;Desktop&#92;iPlayer Recordings&#92;Bein<br />
+g_Human_Series_1_-_5._Episode_5_b00hvgzp_audiodescribed.partial.mp4.flv via RTMP<br />
+<br />
+INFO: skipping flashhigh2 mode<br />
+ERROR: Failed to record 'Being Human: Series 1 - 5. Episode 5 (b00hvgzp)'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-10-2015, 02:13 AM</div>
+</div>
+<div class="message">Next time, have the courtesy not to dump a gigantic log spew into your post.  We give you the formatting tools - use them. Even better - put the log in a .txt file attachment.  Also take the time to check your typing: it's "hlsbest" not "hlbest". And as for your downloads, we can't help you with that.  You're not in the UK, so you're only going to get low quality video, if even that. If you have been using a VPN to get around those restrictions, it has been rumbled.  We can't help you with that, either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1071</h2></div><div class="dateline">21-10-2015, 06:35 AM</div>
+</div>
+<div class="message">As you can see, I'm new to posting here.  I wasn't aware of "formatting tools."  There's no need to get snippy.  I didn't see any rules about what can be included in the post.  I've seen other posts with logs in them - I was only trying to provide enough info so that the question can be answered rather than having a bunch of posts asking for follow-up information.  Also, some people don't want the bother of opening an attachment.<br />
+<br />
+Thank you for catching the typo, but --modes=hlsbest didn't work either.<br />
+<br />
+Downloads were fine the day before - less than 12 hours later, they are poor quality.<br />
+<br />
+And please do not make assumptions about where you think I live.  You are incorrect.<br />
+<br />
+I appreciate the site admin's speedy and <span style="font-style: italic;" class="mycode_i"><span style="font-weight: bold;" class="mycode_b">polite</span></span> reply - do you have any other suggestions?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-10-2015, 10:58 AM</div>
+</div>
+<div class="message">If you take a look in the forum rules you'll see some pointers with regards to formatting:<br />
+<br />
+<a href="/announcement-1.html">/announcement-1.html</a><br />
+<br />
+Whilst we can't know your exact location, what's not incorrect is that you are using a VPN, LiquidVPN and one of their London servers to be precise. The IP you are using to register, connect and comment here on this site belongs to LiquidVPN and it's trivial for me to look it up.<br />
+<br />
+If it's trivial for me, it's trivial for the BBC too and they've begun blocking known VPN's:<br />
+<br />
+<a href="http://arstechnica.co.uk/business/2015/10/bbc-begins-blocking-vpn-access-to-iplayer/">http://arstechnica.co.uk/business/2015/1...o-iplayer/</a><br />
+<br />
+As Dinky said, we can't help you with this issue as you're using a VPN.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1071</h2></div><div class="dateline">21-10-2015, 06:57 PM</div>
+</div>
+<div class="message">Thank you for those links.   I use a VPN for privacy when posting to message boards such as these because, as you demonstrated so aptly in your post, it is easy to discern private information.  Again, please refrain from making assumptions.<br />
+<br />
+If I had been using the VPN when downloading, I would not have been able to download at all.  I would have received an error message about not being in the UK.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-10-2015, 10:23 PM</div>
+</div>
+<div class="message">If you tried without a VPN and you are UK based then I don't know why you'd get low quality downloads. <br />
+<br />
+I downloaded the file without problem using <kbd>--modes=best</kbd>. It appears to me to be a bit 'soft' and not exactly the highest quality but not worse than the SD version.<br />
+<br />
+If you are receiving an unwatchable file I'm not sure why in particular that might be. Perhaps you are getting the file from a different CDN? You can 'exclude suppliers' (<kbd>--exclude-supplier</kbd> with options akamai, limelight, level3 or bidi) to rule out one troublesome CDN but that's a long shot and I wouldn't expect that to work. <br />
+<br />
+I suppose you could post the output of <kbd>--prefs-show</kbd> here to just to see if you have something in your preferences that is set incorrectly. <br />
+<br />
+NOTE - If you are attempting to download the same file again, you'll need to add the <kbd>--force</kbd> flag to the command to do so and make sure no .partial.flv files are hanging around in the download folder as that can interfere too.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Blurry download when using tvmode=best</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

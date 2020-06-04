@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Need help with pvr  Scheduler batch file.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need help with pvr  Scheduler batch file.</div>
+<div id="pagetitle"><h2>Need help with pvr  Scheduler batch file.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1214</h2></div><div class="dateline">03-05-2017, 04:11 PM</div>
+</div>
+<div class="message">i did have pvr Scheduler working for a few years, on Windows 8, following these intructions <a href="https://www.beebotron.org/helper_get_iplayer_help.php">https://www.beebotron.org/helper_get_iplayer_help.php</a><br />
+<br />
+but the batch file isn't there anymore to download, the link is broken <a href="http://beebotron.org/get_iplayer--pvr.bat%5Dhttp://beebotron.org/get_iplayer--pvr.bat">http://beebotron.org/get_iplayer--pvr.ba...r--pvr.bat</a><br />
+<br />
+ive tried creating my own batch file but whatever combination i do, from within Task Scheduler i cant get it to run anymore.<br />
+<br />
+if i double click the file within C:\Program Files (x86)\get_iplayer it starts the PVR fine BOTH a batch file and a Windows Command Script file.<br />
+<br />
+with this inside...<br />
+@echo off<br />
+<br />
+setlocal<br />
+set GIP_INST=%~dp0<br />
+if #%GIP_INST:~-1%# == #\# set GIP_INST=%GIP_INST:~0,-1%<br />
+"%GIP_INST%\get_iplayer.cmd" --pvrschedule 14400 %*<br />
+<br />
+its saved as "get_iplayer--pvr"but wont run in Task Scheduler.<br />
+<br />
+Do you have the batch file for windows i can download from somewhere please? so i can automate the PVR again please.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 04:24 PM</div>
+</div>
+<div class="message">Re-read the beebotron page. It tells you what to put in your batch file, and that is not it. You've just copied a batch file already provided with get_iplayer. That file cannot be used with Task Scheduler.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1214</h2></div><div class="dateline">03-05-2017, 04:32 PM</div>
+</div>
+<div class="message">i also copied verbatum from the website such...<br />
+<br />
+cd "C:\Program Files\get_iplayer"<br />
+<br />
+perl.exe get_iplayer.pl --pvr<br />
+<br />
+but still no dice, then i thought because get_iplayer is here C:\Program Files (x86)\get_iplayer<br />
+<br />
+i modified the above to cd "C:\Program Files (x86)\get_iplayer"<br />
+<br />
+perl.exe get_iplayer.pl --pvr<br />
+<br />
+but whatever i do, its not running in task scheduler, like it should, i've been 3 days now without the pvr starting at 1am like it did before.<br />
+<br />
+oh and i named the batch file above get_iplayer--pvr.bat but something is messed up, thats why ive been trying different combinations for the last 4 hours, and turning back to the website instructions again and again</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 04:36 PM</div>
+</div>
+<div class="message">Did you correct the path in the Task Scheduler as well?<br />
+<br />
+And if you don't clean up your next post, this thread will be closed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1214</h2></div><div class="dateline">03-05-2017, 04:55 PM</div>
+</div>
+<div class="message">Yes the path in the Task Scheduler has been corrected for the new batch file, as per the instructions of the above website.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 01:49 PM</div>
+</div>
+<div class="message">Now that I look at it again, that old batch file will never work. The Windows version of get_iplayer is installed a bit differently these days. You can just use the main get_iplayer wrapper script I provide. In the Action part of task definition select "Start a program", then use "C:\Program Files (x86)\get_iplayer\get_iplayer.cmd" for "Program/script" and <kbd>--pvr</kbd> for "Add arguments"</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Need help with pvr  Scheduler batch file.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

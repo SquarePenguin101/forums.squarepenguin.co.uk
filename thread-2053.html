@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --tracklist gives erroneous offsets</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --tracklist gives erroneous offsets</div>
+<div id="pagetitle"><h2>--tracklist gives erroneous offsets</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1277</h2></div><div class="dateline">03-07-2019, 12:15 PM</div>
+</div>
+<div class="message">Downloading Stormzy's Glastonbury set from BBC 1Xtra, and adding the tracklist using --tracklist. Some of the times are incorrect in the tracklist file. Here's a snippet:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Glastonbury: 2019<br />
+Stormzy Live!<br />
+2019-06-28<br />
+https://www.bbc.co.uk/programmes/m0006gcr<br />
+--------<br />
+00:11:06<br />
+Stormzy<br />
+Intro (Glastonbury 2019)<br />
+Duration: 00:04:01<br />
+--------<br />
+00:12:24<br />
+Stormzy<br />
+Know Me From (Glastonbury 2019)<br />
+Duration: 00:04:01<br />
+--------<br />
+00:46:11<br />
+Stormzy<br />
+Cold (Glastonbury 2019)<br />
+Duration: 00:04:01<br />
+--------<br />
+00:18:40<br />
+Stormzy<br />
+First Things First (Glastonbury 2019)<br />
+Duration: 00:04:01</code></div></div><br />
+It's clear that the start time for 'Cold' can't be at 46:11, since the next track is at 18:40. The <a href="https://www.bbc.co.uk/programmes/m0006gcq/segments.json">json file</a> has the track starting at 15:34 (version_offset: 934 seconds).<br />
+<br />
+There are two track time errors like this. The rest seem to match up with the JSON file. Any thoughts?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2019, 01:03 PM</div>
+</div>
+<div class="message">GIGO - look carefully at the entries for "Cold" and "Crown". Track data is often bad.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1277</h2></div><div class="dateline">03-07-2019, 01:20 PM</div>
+</div>
+<div class="message">Yeah, I understand that get_iplayer has to work with what it gets. But it gets the track data from the JSON file, right? And the version_offset numbers in that file look OK for those two tracks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2019, 01:36 PM</div>
+</div>
+<div class="message">But how does it identify which offset to use? Keep looking - you'll find the problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1277</h2></div><div class="dateline">03-07-2019, 01:51 PM</div>
+</div>
+<div class="message">I'm not getting it. "Cold" and "Crown" look to have the same data as all the other tracks. I'm sorry, I'm obviously stupider than you're giving me credit for!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2019, 01:27 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (03-07-2019, 01:51 PM)</span></cite>I'm not getting it. "Cold" and "Crown" look to have the same data as all the other tracks</blockquote>I don't know what JSON you're looking at - that is completely false, and it wouldn't even make sense. Still, you've accidentally stumbled on the heart of the matter. It's what those entries have in common that causes the problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1277</h2></div><div class="dateline">04-07-2019, 02:04 PM</div>
+</div>
+<div class="message">Yes, I'd worded that badly - sorry. I meant that neither of those entries seemed to have anything missing.<br />
+<br />
+<a href="https://www.bbc.co.uk/programmes/m0006gcq/segments.json">This</a> is the JSON I'm looking at.<br />
+<br />
+I think I see what you mean now - the record_id is the same for both tracks, and get_iplayer is using it as a key. So couldn't you just ignore it, and use the JSON data as an array instead?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2019, 02:43 PM</div>
+</div>
+<div class="message">With the BBC threatening to junk the JSON data, it didn't seem a good idea at the time. And it hardly matters, anyway. You can't produce accurate track timings from that data even when it isn't broken. But a track list isn't much use without some approximation of where the tracks are in the programme.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1277</h2></div><div class="dateline">04-07-2019, 03:11 PM</div>
+</div>
+<div class="message">Yes - I realised the timings were crap when I listened back to it last night. But in principle it would work quite nicely - it seems to work well with other radio programmes that I've tried. For instance, <a href="https://www.bbc.co.uk/sounds/play/m0006f2t">Steve Lamacq's show from Tuesday</a> gives the track timings, which I turn into a cue sheet with <a href="thread-2052.html">1by1</a>, and all the timings seem to match up nicely.<br />
+<br />
+I started downloading some of the Glastonbury sets, and Stormzy's was the first one I got. I noticed the tracklist thing, which I hadn't known about before, and I thought "that'll be handy for knowing which track is playing". Unfortunately of the sets I was interested in, it was only Stormzy and The Killers that had track lists.<br />
+<br />
+Thanks for your help.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --tracklist gives erroneous offsets</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

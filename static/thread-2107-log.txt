@@ -1,0 +1,310 @@
+get_iplayer 3.22-ppa33a, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: Start: 2019-10-03T21:07:18 (1570129638)
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /home/pbienst/.get_iplayer
+INFO: User options file: /home/pbienst/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	nowrite = 1
+	output = /mnt/NAS/dvds/recordings/BBC
+	pid = https://www.bbc.co.uk/iplayer/episode/b0074dlv/doctor-who-series-1-1-rose
+	subsonly = 1
+	subtitles = 1
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Cleaning PID - old: 'https://www.bbc.co.uk/iplayer/episode/b0074dlv/doctor-who-series-1-1-rose' new: 'b0074dlv'
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0074dlv.json
+INFO: tv episode PID detected (b0074dlv)
+Episodes:
+Doctor Who: Series 1 - Rose, BBC One, b0074dlv
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0074dlv.json
+INFO: Getting stream data for version: 'editorial'
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/p068jv85/format/xml?cb=90798
+
+INFO: Downloading URL (1/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+
+WARNING: Failed to download URL (1/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+
+WARNING: Failed to download URL (2/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+
+ERROR: Failed to download URL (3/3): https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+WARNING: No HLS playlist returned (https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?__gda__=1570151186_96705e17af43beb3bdb8c26acc2c8c14)
+
+INFO: Downloading URL (1/3): https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1570151186_e46034268aeadccb5358b2a69c9aba34
+
+INFO: Downloading URL (1/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+
+WARNING: Failed to download URL (1/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+
+WARNING: Failed to download URL (2/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+
+ERROR: Failed to download URL (3/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+WARNING: No HLS playlist returned (https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?s=1570107986&e=1570151186&h=2b0311a122be2764c58693e4e5f198d1)
+
+INFO: Downloading URL (1/3): https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1570107986&e=1570151186&h=363269bc112907b1f1a9fcb67826f5e6
+
+INFO: Downloading URL (1/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+
+WARNING: Failed to download URL (1/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+
+WARNING: Failed to download URL (2/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+
+ERROR: Failed to download URL (3/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+WARNING: No HLS playlist returned (https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.m3u8?at=o_C11nRL4aa88c54a32e84dce371ffdb2b662402f0da448d5940648399080)
+
+INFO: Downloading URL (1/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+
+WARNING: Failed to download URL (1/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+
+WARNING: Failed to download URL (2/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+
+ERROR: Failed to download URL (3/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+WARNING: No DASH manifest returned (https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?at=JujeHE0q334a96166fa329ffb7f0d42e1bd93f75eefb18455940648399080)
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/p068jv85/format/xml?cb=70712
+
+INFO: Downloading URL (1/3): https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1570151243_a65760ccfde09ba3aa1d8118a1509dd9
+
+INFO: Downloading URL (1/3): https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism/pc_hd_abr_v2_dash_master.mpd?s=1570108043&e=1570151243&h=f4e0020d7c0a3ff9f8d20d24fe7884ec
+
+INFO: Downloading URL (1/3): https://mm.bidi.bbc.co.uk/vod-dash-uk/usp/auth/vod/piff_abr_full_sd/1aa257-p068jv85/vf_p068jv85_5996f246-dd6d-41a8-bc0c-1fc311aaf74e.ism/pc_hd_abr_v2_dash_master.mpd?at=Ygxy6Vbp3f24de5b48a8427a2d74e9346563e5bf1a572ceb594064b9f50c0
+INFO: Found mode    dvfxsd1: gip_dvf_1604 dash h264   960x540 25fps 1604kbps  96kbps mf_bidi/30
+INFO: Found mode    dvfxsd2: gip_dvf_1604 dash h264   960x540 25fps 1604kbps  96kbps mf_limelight/20
+INFO: Found mode    dvfxsd3: gip_dvf_1604 dash h264   960x540 25fps 1604kbps  96kbps mf_akamai/10
+INFO: Found mode  dvfxhigh1:  gip_dvf_827 dash h264   704x396 25fps  827kbps  96kbps mf_bidi/30
+INFO: Found mode    dvflow1:  gip_dvf_437 dash h264   512x288 25fps  437kbps  96kbps mf_bidi/30
+INFO: Found mode    dvflow2:  gip_dvf_437 dash h264   512x288 25fps  437kbps  96kbps mf_limelight/20
+INFO: Found mode    dvflow3:  gip_dvf_437 dash h264   512x288 25fps  437kbps  96kbps mf_akamai/10
+INFO: Found mode subtitles1:     captions http  N/A       N/A   N/A      N/A     N/A mf_limelight/20
+INFO: Found mode subtitles2:     captions http  N/A       N/A   N/A      N/A     N/A mf_akamai/10
+INFO: Getting stream data for version: 'original'
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=52510
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=81596
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b005sq8b/format/xml?cb=77823
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b005sq8b/format/xml?cb=30729
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+INFO: No streams available for 'original' version (b005sq8b) - skipping
+INFO: Getting stream data for version: 'other'
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=96920
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/6/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=10607
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b00lyzvt/format/xml?cb=36383
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+
+WARNING: Failed to download URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+
+WARNING: Failed to download URL (2/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+WARNING: Response: 404 Not Found
+
+INFO: Downloading URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+
+ERROR: Failed to download URL (3/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b00lyzvt/format/xml?cb=69514
+ERROR: Response: 404 Not Found
+ERROR: Ignore this error if programme download is successful
+INFO: No streams available for 'other' version (b00lyzvt) - skipping
+INFO: No streams available for 'store' version (p02xd1vk) - skipping
+INFO: No media streams found for 'original' version (b005sq8b) - deleting
+INFO: No media streams found for 'other' version (b00lyzvt) - deleting
+INFO: No media streams found for 'store' version (p02xd1vk) - deleting
+INFO: Processing tv: 'Doctor Who: Series 1 - 01. Rose (b0074dlv)'
+INFO: Searching for versions: editorial
+INFO: Downloading subtitles [editorial]
+
+INFO: Downloading URL (1/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+
+WARNING: Failed to download URL (1/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+
+WARNING: Failed to download URL (2/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+
+ERROR: Failed to download URL (3/3): https://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?s=1570107986&e=1570151186&h=f0c42a611cc36420dd3a0f0abd81ae1d
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+INFO: Downloading subtitles [editorial]
+
+INFO: Downloading URL (1/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+
+WARNING: Failed to download URL (1/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (2/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+
+WARNING: Failed to download URL (2/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+WARNING: Response: 403 Forbidden
+
+INFO: Downloading URL (3/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+
+ERROR: Failed to download URL (3/3): https://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-00b91678-ffa5-462d-8768-45e2f8468b4e_p068jv85_cUnknown_1543406220917.xml?__gda__=1570151186_3bb8a8b682f876707ed2ab8636d19bcc
+ERROR: Response: 403 Forbidden
+ERROR: Access to this resource was blocked by the BBC
+ERROR: Ignore this error if programme download is successful
+ERROR: Subtitles download failed
+ERROR: Use --subtitles-only to re-download

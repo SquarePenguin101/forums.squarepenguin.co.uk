@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Change location of download_history file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Change location of download_history file</div>
+<div id="pagetitle"><h2>Change location of download_history file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1163</h2></div><div class="dateline">17-01-2016, 09:45 PM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+I was hoping to be able to use a couple of different machines to download from (not at the same time) and wanted the same download_history file to be referenced by both machines (again, not at the same time) on a local NAS.<br />
+<br />
+Is it possible to change the default location of the download_history file from "c:\users\username\.get_iplayer\download_history" to something like "n:\.get_iplayer\download_history"? This is a windows environment.<br />
+<br />
+I can't locate a switch to set this within the docs and am not to sure about changing the code within the .pl files<br />
+<br />
+Many thanks in advance<br />
+<br />
+Paul</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-01-2016, 11:34 PM</div>
+</div>
+<div class="message">Not exactly. You can use <kbd>--profile-dir</kbd> (command line only), but keep in mind that defines the location for everything: cache files, pvr jobs, pvr lock files, presets, and plugins, as well as download history.  In theory you could use a shared profile directory, but you would have to be careful never to use it simultaneously from multiple machines, especially for PVR runs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1051</h2></div><div class="dateline">18-01-2016, 07:35 AM</div>
+</div>
+<div class="message">I have done this so that GIP uses my Dropbox folder, which means that download history, options, and PVR files are all synchronised across all of my Dropbox enabled PCs. This is how I did it:<br />
+On each PC, create a user environment variable GIP_DROPBOX = c:\&lt;path to Dropbox folder&gt;<br />
+In get_iplayer.pl, replace USERPROFILE and ALLUSERSPROFILE on lines 415, 416, 426, and 427 with GIP_DROPBOX.<br />
+<br />
+I have only done this with version 2.94, and I am by no means knowledgeable about these this things but it works for me. YMMV.<br />
+<br />
+kind regards<br />
+Kate</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1163</h2></div><div class="dateline">18-01-2016, 08:40 AM</div>
+</div>
+<div class="message">Perfect solutions - many thanks both ;-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-01-2016, 10:16 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-01-2016, 07:35 AM)</span></cite>In get_iplayer.pl, replace USERPROFILE and ALLUSERSPROFILE on lines 415, 416, 426, and 427</blockquote>Definitely not recommended. Replacing <kbd>ALLUSERSPROFILE</kbd> would hide the system options file on Windows, which could break get_iplayer depending on how you installed and configured it (though I should say that the system options file will be removed in the next release).  If - as it appears - you know how to set environment variables in Windows, then just set <kbd>GETIPLAYERUSERPREFS</kbd> to point to your shared directory.  It is the equivalent of <kbd>--profile-dir</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1163</h2></div><div class="dateline">18-01-2016, 10:33 AM</div>
+</div>
+<div class="message">Thanks user-2, will follow your advice - much appreciated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1051</h2></div><div class="dateline">18-01-2016, 06:42 PM</div>
+</div>
+<div class="message">perfect, thanks user-2! A much simpler solution than my workaround.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Change location of download_history file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

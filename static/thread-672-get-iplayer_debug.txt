@@ -1,0 +1,171 @@
+Recording The Following Programmes
+
+Coast: Shorts - Dublin to Belfast (b008ydpx)
+
+INFO Trying to stream pid using type tv
+INFO: pid found in cache
+Matches:
+336:	Coast: Shorts - Dublin to Belfast, BBC Two Scotland, , default
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mpI4.NfFlOv:
+ Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashstd2 mode
+INFO: Trying flashlow1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_default.partial.mp4.flv via RTMP
+INFO: skipping flashlow2 mode
+INFO: Checking existence of original version
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version original
+INFO: Trying flashvhigh1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flINvF
+O: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_origiINFOn: aClo.mpmaand rextiita lc.omdpe4 .1f l(vr
+aw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partialI.mNpF4O.:f lCvo
+mmand exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+INFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flasFhsatidl2e dm otdoe 
+oIpNeFnO :f iTlrey!i n/gm efdlia/ashlow1 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_origINFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partial.mp4.flv via RTMP
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Coast: Shorts - 49. Dublin to Belfast
+inal.partial.mp4.flv
+
+INFO: File name prefix = Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original                 
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Failed to open file! /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_original.partINFO: Command exit code 1 (raw code = 256)
+WARNING: Failed to stream file /media/iplayer/Coast_Shorts_-_49._Dublin_to_Belfast_b008ydpx_oriial.mp4.flv
+ginal.partial.mp4.flv via RTMP
+INFO: skipping flashlow2 mode
+ERROR: Failed to record 'Coast: Shorts - 49. Dublin to Belfast (b008ydpx)'
+Recording complete
+
+get_iplayer Web PVR Manager 2.94-ppa23, ©2009-2010 Phil Lewis - Licensed under GPLv3
+
+The above text is the output of record option in web_pvr.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+ 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The lines below are the output of the terminal from where I launched "get_iplayer_web_pvr"

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to clean up get_(-)iplayer installation in Mint</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to clean up get_(-)iplayer installation in Mint</div>
+<div id="pagetitle"><h2>How to clean up get_(-)iplayer installation in Mint</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">01-10-2019, 11:55 AM</div>
+</div>
+<div class="message">I've just had my gluteus maximus kicked in this forum because I screwed up the installation of the 'get*iplayer' software. I would like to plead ignorance/incompetence as well as being guilty., but I didn't think there were minimum standards of technical competence required before one could use either get*iplayer.<br />
+<br />
+Now I need to remove multiple versions of get*iplayer - possibly get_iplayer 3.20 and certainly the snap version of get-iplayer 3.22, but I'm quite sure I don't know how to do this - to get a completely "get*iplayer-free" system before attempting to install the non-snap version of get_iplayer 3.22 (assuming that I can find a binary version somewhere). I don't want to get into the position of  having traces of get*iplayer left on my system before trying this re-install, coming back to the forum for help and getting kicked in the rear again for incompetence (or perhaps I have already done that  in this post ....).<br />
+<br />
+Any advice on how to do the clean-up? I'm running Mint 19.2 Cinnamon.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">02-10-2019, 08:50 AM</div>
+</div>
+<div class="message">I don't use snaps, but generically, you can find out what snap packages are installed using<br />
+&#36; snap list<br />
+and to remove a snap you do<br />
+&#36; sudo snap remove &lt;package&gt;<br />
+if you get stuck with snaps you'll probably have to seek help elsewhere.<br />
+<br />
+similarly, to find and remove more conventional packages, do something like this:<br />
+&#36; apt list --installed | grep iplayer<br />
+and if you find get-iplayer, you can remove it using<br />
+&#36; sudo apt purge get-iplayer<br />
+<br />
+(purge rather than remove cleans out any configuration files as well)<br />
+<br />
+I'd then suggest you do<br />
+&#36; which get_iplayer<br />
+and see if get-iplayer is still in your path somewhere, and if it is, start removing those.  Search for<br />
+get-iplayer, get_iplayer, get_iplayer_web_pvr and get-iplayer-web-pvr.  If you do find these, you might want to have a poke around for any related files you installed.<br />
+<br />
+in your home directory have a look for the directory .get_iplayer - this contains your configuration - delete what you don't want.  If you're not sure and want a clean install, you can either delete the whole directory or just rename it.<br />
+<br />
+You should now be in a place where you have cleaned out all the old versions of get-iplayer.  You now need to decide whether to use the snap version (I can't help with this, sorry), or the conventional repository in launchpad.  Or do something on your own, which I can't recommend but some people have great success with.<br />
+<br />
+See <a href="https://github.com/get-iplayer/get_iplayer/wiki/unixpkg">https://github.com/get-iplayer/get_iplayer/wiki/unixpkg</a> for pointers to packages.<br />
+<br />
+If you kept any of your previous configuration, I'd suggest you do<br />
+&#36; get-iplayer --cache-rebuild<br />
+to ensure that the programme cache is up to date.  It'll take a while.<br />
+<br />
+Hope this helps<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2448</h2></div><div class="dateline">02-10-2019, 04:27 PM</div>
+</div>
+<div class="message">Hello,<br />
+Thank you very much for this advice. It is not only consistent with the previous telling-off I got - especially on the subject of using snaps -  but also set at a technical level which correlates well with my own (limited) knowledge, intellectual capability and confidence. <br />
+<br />
+I'll give it all a try.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to clean up get_(-)iplayer installation in Mint</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

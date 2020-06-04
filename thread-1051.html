@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unknown File Type warning dialog when launching Web PVR Manager</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unknown File Type warning dialog when launching Web PVR Manager</div>
+<div id="pagetitle"><h2>Unknown File Type warning dialog when launching Web PVR Manager</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">22-09-2016, 11:55 AM</div>
+</div>
+<div class="message">I realise that this is probably due to an update in windows, but when I try to run pvr_manager.cmd I now get a warning:<br />
+<a href="static/thread-1051-aid195.gif"><img src="static/thread-1051-aid195.gif"/></a><br />
+<br />
+"Do you want to open this file... pvr_manager_url .... unknown file type"<br />
+<br />
+I have just updated to the most recent version of get_iplayer (296.1) and am using windows 7 64 bit.<br />
+<br />
+Any ideas on how to tame windows on this message so that the url opens without a warning?<br />
+<br />
+regards<br />
+<br />
+Roga</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 12:11 PM</div>
+</div>
+<div class="message">There is no file named pvr_manager_url distributed as part of get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">22-09-2016, 12:23 PM</div>
+</div>
+<div class="message">It is trying to open "pvr_manager.url" but the pop up is parsing it in the rather strange way that windows has.<br />
+<br />
+If I click directly on "pvr_manager.url" I get the same message.<br />
+<br />
+As I said this is probably due to a change in windows from windows updates, I just wondered if anyone else had seen the same problem and found a solution for it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 01:52 PM</div>
+</div>
+<div class="message">My mistake - got my warning dialogs mixed up. Will investigate further.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 03:54 PM</div>
+</div>
+<div class="message">KB3185319 appears to be the update that causes the problem. It breaks IE favourites as well, so there are complaints about it around the web. KB3185319 is a cumulative security update for IE 11, so probably not a good idea to uninstall it, though if you do uninstall it this problem disappears. Favourites can be fixed by amending ACLs on the corresponding .url files, but that doesn't seem to work for pvr_manager.url, perhaps because it is in %PROGRAMFILES% - not sure. For now, when the warning dialog appears just click "Open" to launch web pvr manager as normal.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">22-09-2016, 05:41 PM</div>
+</div>
+<div class="message">Thanks for the reply user-2, helpful reference re KB3185319.<br />
+<br />
+Given that it is now a known problem, with a bit of luck MS will sort out a patch.<br />
+<br />
+As you say, currently there doesn't appear to be a permanent solution, and in the short term no biggie for the extra click needed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 06:16 PM</div>
+</div>
+<div class="message">The problem appears to be limited to .url files in special folders, so there is a hinky workaround for people who resent the extra mouse click. You can copy pvr_manager.url to a normal folder (e.g., %USERPROFILE%) and amend pvr_manager.cmd to launch the copy rather than the .url file in the installation directory.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unknown File Type warning dialog when launching Web PVR Manager</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Search puzzlement</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Search puzzlement</div>
+<div id="pagetitle"><h2>Search puzzlement</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-287</h2></div><div class="dateline">10-02-2014, 11:44 AM</div>
+</div>
+<div class="message">New to using get_iplayer Iâm afraid. This is using the windows web interface.<br />
+<br />
+I donât understand why the 2nd search below works while the first doesnât?  This is a cut and paste from the run.  I'm trying to generalise the search more so that I can save it and it will work regardless of series etc.<br />
+<br />
+"_Clare_in_the_Community_name_radio_podcast<br />
+_Clare_in_the_Community_Series_5_name_radio_podcast<br />
+Matches:<br />
+10802:  radio, Clare in the Community: Series 5 - 1. Name Calling, BBC Radio 4, Comedy,Radio,Sitcoms<br />
+10803:  radio, Clare in the Community: Series 5 - 2. Too Cool for School, BBC Radio 4, Comedy,Radio,Sitcoms"<br />
+<br />
+Thanks<br />
+<br />
+Gareth</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2014, 12:05 PM</div>
+</div>
+<div class="message">You've posted the names of the saved PVR searches, not the search terms contained therein.  There is no way to answer your question unless you show the search terms you're using.  Post the value of the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0</code></div></div> field in each saved search.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2014, 12:11 PM</div>
+</div>
+<div class="message">A couple of other things: It looks like you're searching across radio and podcast listings.  It's not necessary to search the podcast cache for that programme.  Also, you appear to have put a leading space in the search strings, indicated by the leading underscore in the saved search names.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-287</h2></div><div class="dateline">10-02-2014, 12:29 PM</div>
+</div>
+<div class="message">Thanks.  The leading space is inserted in the search name by the app.<br />
+<br />
+The Search0 strings for the same search are:<br />
+<br />
+^Clare in the Community&#36;<br />
+^Clare in the Community\: Series 5&#36;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2014, 03:33 PM</div>
+</div>
+<div class="message">Not a leading space then - the underscore replaced the circumflex.<br />
+<br />
+The reason ^Clare in the Community&#36; doesn't work is because it searches for a programme whose entire name is "Clare in the Community", which doesn't exist.  All episodes of "Clare in the Community" have ": Series ..." in the name.  The &#36; matches at the end of a string, ^ at the beginning.  If you're new to regular expressions, Google for tutorials.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2014, 03:36 PM</div>
+</div>
+<div class="message">Also, searches use substring matching unless instructed otherwise.  In your case, just use "Clare in the Community"   as your search string.  It's unlikely to get any false positives.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-287</h2></div><div class="dateline">10-02-2014, 03:53 PM</div>
+</div>
+<div class="message">TVM, I hadn't realised they were 'regular' regular expressions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2014, 04:44 PM</div>
+</div>
+<div class="message">It's Perl all the way down, so you can use pretty much any regular expressions in your search.  It's pretty rare you'll need them though.  As you've seen, one place they are used is when you click "Add Series".  The Web PVR concocts a simple regular expression to ensure an exact match to the chosen series name in order to disambiguate it from another series of the same programme.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Search puzzlement</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

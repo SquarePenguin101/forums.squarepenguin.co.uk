@@ -1,0 +1,432 @@
+get_iplayer 3.00-windows.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\Generic.User/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	force = 1
+	fps50 = 1
+	pid = b05n8jqs
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: ''
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Will try prog types: tv
+INFO: Got 8593 file cache entries for tv
+INFO Trying to download PID using type tv
+INFO: pid found in cache
+Matches:
+3328:	Horizon: 2014-2015 - Dancing in the Dark - The End of Physics?, BBC Four, b05n8jqs
+
+INFO: 1 Matching Programmes
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b05n8jqs.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b05n8jqs.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02m743k/transferformat/dash?cb=57690
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746421_8b893d37959188edc38986cc4220d9ce
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703221&e=1493746421&h=981db2b2395127da63ddabf20995d4ed
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746421_8b893d37959188edc38986cc4220d9ce
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703221&e=1493746421&h=17ab5b36acf59869659a8a3607061573
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02m743k/transferformat/dash?cb=99656
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746432_adaf966e474dfb18bd0b656d3e85ee8a
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703232&e=1493746432&h=08da6277a7f1686d714d6222b221baab
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746432_adaf966e474dfb18bd0b656d3e85ee8a
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703232&e=1493746432&h=26816220d9ac4e76bb617d37ca9d1273
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02m743k/transferformat/hls?cb=43913
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?__gda__=1493746432_5e5845f643d76858606e0784beafa7d5
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?s=1493703232&e=1493746432&h=1aa680c64dac3060dd035ed9e0c9178a
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?at=Br3jNNMh81d207e0ea3fad934317fee2d90deb4d34ea494054e88ea00e800
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?__gda__=1493746432_5e5845f643d76858606e0784beafa7d5
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?s=1493703232&e=1493746432&h=73049ca450d1f6f907c69ff2e5812555
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.ism/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism.hlsv2.m3u8?at=KTIvYaqq15c05302c30fc831400e1f3b20388cf3c88237f354e88ea00e800
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02m743k/transferformat/hls?cb=18290
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1493746433_65e59a5edf5bdeb4c5d193fd67587093
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1493703233&e=1493746433&h=f1f14ca25c885320f884d515554b63b5
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/aa8c65-b05n8jnn/vf_b05n8jnn_df10084a-f739-45cc-91a7-90a9858884c7.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=ItUzp3WD2527831f2f8447b9963f30767c95b0481be0940f54e88ea102a40
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02tzy3k/transferformat/dash?cb=03681
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746434_997c00da60a9f80a2b91fc098535917c
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703234&e=1493746434&h=3fb78dd83451b18e1dc4a72dc28d9b6c
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746434_997c00da60a9f80a2b91fc098535917c
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703234&e=1493746434&h=6757467ef932264e9aabfb2a70beba42
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tzy3k/transferformat/dash?cb=08664
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746434_21fc48fb88be6839a7829f822e80c491
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703234&e=1493746434&h=07ac6f4196cb81addfa1ff680eb9a615
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746434_21fc48fb88be6839a7829f822e80c491
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703234&e=1493746434&h=ca2200fe4ea93a2f71a2f2435ba2b0c3
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tzy3k/transferformat/hls?cb=94322
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?__gda__=1493746209_a4eef2bf5af243f7c263a87b3aafe8d7
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?s=1493703009&e=1493746209&h=3b86020d96247b5e758bc414bd36af2a
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?at=p_DW7uTi32e738ff3312731a98639a3cdcee4423131c406254e88dcb63240
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?__gda__=1493746209_a4eef2bf5af243f7c263a87b3aafe8d7
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?s=1493703009&e=1493746209&h=515300af01fd65f16dd6204ab4e6e9a7
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?at=uzPGNFP_b423b650f5f559aed41518115b4f8b3c5a0dc07a54e88dcb63240
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02tzy3k/transferformat/hls?cb=88477
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1493746369_f6c120cc09d3bd2ee079bc733e90300d
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1493703169&e=1493746369&h=e028edaa88fec83e5c1fa8f647e41b76
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=wCa1wACxc300690c6549b5d402912410f315d1dd8a74d16854e88e63f9a40
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b05n8jnn/transferformat/dash?cb=92430
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746435_24fcea878cfa7e36c3cb8b46e32116c4
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703235&e=1493746435&h=daf6fc9763b0ec880cb0ea9db18d8030
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746435_24fcea878cfa7e36c3cb8b46e32116c4
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703235&e=1493746435&h=a4611101b1bcb7fa1d7cd14a1253c49e
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b05n8jnn/transferformat/dash?cb=96314
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b05n8jnn/transferformat/hls?cb=18014
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270,.mp4.csmil/master.m3u8?hdnea=st=1493724610~exp=1493746210~acl=/*800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270*~hmac=d0378e36483293b10786f86578ae6f9fa22e7beec4282e5c8ac92f1c3b63d8d5
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270,.mp4.csmil/master.m3u8?hdnea=st=1493724610~exp=1493746210~acl=/*800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270*~hmac=d0378e36483293b10786f86578ae6f9fa22e7beec4282e5c8ac92f1c3b63d8d5
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b05n8jnn/transferformat/hls?cb=78079
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,480kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007771313,800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270,.mp4.csmil/master.m3u8?hdnea=st=1493724836~exp=1493746436~acl=/*480kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007771313,800kbps/modav/bUnknown-e07e9ec8-e6d4-40e0-a1e5-61b6672e9414_b05n8jnn_1443007774093,1500kbps/modav/bUnknown-d895ae48-6eab-45a6-8423-d6353dc18ee2_b05n8jnn_1492770205270*~hmac=5bd5e35abd8762d5c041a7302f2cb9fdc5a1fd2dd4047e29d6609afde3fc2897
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1493746436_2a219a0a9a0ad3928bb3f0b633015d23
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1493703236&e=1493746436&h=aec4f13f37e132a57ede8d442d9f6b4e
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/aa8c65-b05n8jnn/vf_b05n8jnn_aa775228-23c9-4dd7-ab32-b276e5af1c2d.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=VNooc7ei32a0159aa3dad984a7a1e28c10045f0dfbcab39054e88ea3df100
+INFO: Found mode dvfhd1: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfhd2: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhd3: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhd4: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfsd1: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfsd2: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfsd3: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfsd4: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_796) hls h264 640x360 25fps 796kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsstd2: (gip_hls_iplayer_796) hls h264 640x360 25fps 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsxstd1: (gip_hls_iplayer_509) hls h264 640x360 25fps 509kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: mf_limelight_uk_plain_https/40)
+INFO: Found mode subtitles2: (captions) http stream (CDN: mf_akamai_uk_plain_https/30)
+INFO: Found mode subtitles3: (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode subtitles4: (captions) http stream (CDN: sis/10)
+INFO: Found mode subtitles5: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b05zr61j/transferformat/dash?cb=29714
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746436_30061d8ceb054f57ee816496524cf847
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703236&e=1493746436&h=378044c767dfeebc9db25254e8c0cbe9
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746436_30061d8ceb054f57ee816496524cf847
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703236&e=1493746436&h=e09ff31790ee22f0a4837037bb494eee
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b05zr61j/transferformat/dash?cb=32762
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746437_a185a602e64cf702a7d83763ddf52f2b
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703237&e=1493746437&h=b4dde09692768e0330f3bd89f59e03cf
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746437_a185a602e64cf702a7d83763ddf52f2b
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703237&e=1493746437&h=1091ffc41c18663afbfbd6579c3d9532
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b05zr61j/transferformat/hls?cb=48920
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?__gda__=1493746371_8fb4a4947e02b1697e31066e7bd9e394
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?s=1493703171&e=1493746371&h=05c5b9d68b311a7745386e49455dcb51
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?at=uD_Zkst3de19218af4199563e86e6688982d13b15ea982f254e88e65e1ec0
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?__gda__=1493746371_8fb4a4947e02b1697e31066e7bd9e394
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?s=1493703171&e=1493746371&h=c30f289498b93bc5dbd724d7de8e116b
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.ism/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism.hlsv2.m3u8?at=iQQozk4lf64315288f011c7bddb70fea700e239adb40c6e854e88e65e1ec0
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565,.mp4.csmil/master.m3u8?hdnea=st=1493724771~exp=1493746371~acl=/*800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565*~hmac=30e32e9e23f46e22c3222ba5c98df65e2d2d71eaccf2061eee41a251a2b2fe0e
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565,.mp4.csmil/master.m3u8?hdnea=st=1493724771~exp=1493746371~acl=/*800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565*~hmac=30e32e9e23f46e22c3222ba5c98df65e2d2d71eaccf2061eee41a251a2b2fe0e
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b05zr61j/transferformat/hls?cb=68102
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,480kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233895484,800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565,.mp4.csmil/master.m3u8?hdnea=st=1493724613~exp=1493746213~acl=/*480kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233895484,800kbps/modav/bUnknown-2a96f37f-52d3-4e8b-bc1b-015e1add5b7e_b05zr61j_1443233892325,1500kbps/modav/bUnknown-718fe604-7da8-447d-b6b6-ade4b1959957_b05zr61j_1492760763565*~hmac=817bbfae73bb8ff04a19ebafd19b75f23c4e3b2633eab6b8b27a7d04e37f1a33
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1493746213_c34b61715162e6f2d80d0ae5c9312d42
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1493703013&e=1493746213&h=44eed0a76eedd78cf91c78baf8d350cd
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd/bdd369-b05zr61j/vf_b05zr61j_eb268966-8be3-440a-981d-5429269499ad.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=I0vtmuQ4d116ce90d2e1c3ad5717a37b36c28c971ffe787b54e88dcf33b40
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_796) hls h264 640x360 25fps 796kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsstd2: (gip_hls_iplayer_796) hls h264 640x360 25fps 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsxstd1: (gip_hls_iplayer_509) hls h264 640x360 25fps 509kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: mf_limelight_uk_plain_https/40)
+INFO: Found mode subtitles2: (captions) http stream (CDN: mf_akamai_uk_plain_https/30)
+INFO: Found mode subtitles3: (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode subtitles4: (captions) http stream (CDN: sis/10)
+INFO: Found mode subtitles5: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02tzy3k/transferformat/dash?cb=04921
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746434_997c00da60a9f80a2b91fc098535917c
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703234&e=1493746434&h=3fb78dd83451b18e1dc4a72dc28d9b6c
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1493746434_997c00da60a9f80a2b91fc098535917c
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/pc_hd_abr_v2_dash_master.mpd?s=1493703234&e=1493746434&h=6757467ef932264e9aabfb2a70beba42
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tzy3k/transferformat/dash?cb=24295
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746438_703f06521d94d8ac9c436026d9d71363
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703238&e=1493746438&h=1addfbf2f387829c7b2eb075bb696e2f
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1493746438_703f06521d94d8ac9c436026d9d71363
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1493703238&e=1493746438&h=ffa9a233ae990a8d81a9eb8bcced6fb4
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p02tzy3k/transferformat/hls?cb=42213
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?__gda__=1493746369_e45cbd8f421db3712d8b0e28d6e89076
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?s=1493703169&e=1493746369&h=3db824865adf314fc24196361036dc36
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?at=6jRJg4_u95464fdedc35331dd83b09e9680a457fe4a0d60e54e88e63f9a40
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?__gda__=1493746369_e45cbd8f421db3712d8b0e28d6e89076
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?s=1493703169&e=1493746369&h=a56eda60c4717325ae2a07e11c8b593b
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.ism/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism.hlsv2.m3u8?at=al4aM_Ia5d1d944f59e6620d57fb30aef4de0a615b3b5fa554e88e63f9a40
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02tzy3k/transferformat/hls?cb=10867
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1493746439_8138e9420d8062b42f9ba7f5935a0018
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1493703239&e=1493746439&h=63e5b5079ec103ec1f3e78d21b73e5d2
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/bdd369-b05zr61j/vf_b05zr61j_b4554a41-d9c8-4b58-bb2c-b20040d86140.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=40HV72nYafcfebc05c493997fbd93344d4f7bf071a8884a354e88ea6bb7c0
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Will search for versions: original
+INFO: Mode list: hvfhd,dvfhd,hlshd,hvfsd,dvfsd,hvfxsd,dvfxsd,hlsvhigh,hvfhigh,dvfhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow
+INFO: Checking existence of original version
+INFO: Version = original
+INFO: dvfhd1,dvfhd2,dvfhd3,dvfhd4,dvfsd1,dvfsd2,dvfsd3,dvfsd4,hvfxsd1,hvfxsd2,hvfxsd3,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,hlsvhigh1,hlsvhigh2,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hlsstd1,hlsstd2,hlsxstd1,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2,dvflow3,dvflow4 modes will be tried for version original
+INFO: Trying dvfhd1 mode to record tv: Horizon: 2014-2015 - 10. Dancing in the Dark - The End of Physics?
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original                 
+INFO: Begin recording file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.audio.m4a
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]
+
+INFO: Recorded: 40.55 MiB (00:59:15) [926] in 00:00:20 at 16.22 Mibit/s
+INFO: Saved DASH audio file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4a
+INFO: Begin recording file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.video.m4v
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]
+
+INFO: Recorded: 2029.89 MiB (00:59:15) [926] in 00:03:36 at 75.18 Mibit/s
+INFO: Saved DASH video file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4v
+INFO: Begin converting files:
+INFO: Audio file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4a
+INFO: Video file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4v
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-nostats" "-y" "-i" "C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4a" "-i" "C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4v" "-c:v" "copy" "-c:a" "copy" "C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.partial.mp4"
+
+ffmpeg version 3.2.4 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 6.3.0 (GCC)
+  configuration: --enable-gpl --enable-version3 --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-nvenc --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-libzimg --enable-lzma --enable-zlib
+  libavutil      55. 34.101 / 55. 34.101
+  libavcodec     57. 64.101 / 57. 64.101
+  libavformat    57. 56.101 / 57. 56.101
+  libavdevice    57.  1.100 / 57.  1.100
+  libavfilter     6. 65.100 /  6. 65.100
+  libswscale      4.  2.100 /  4.  2.100
+  libswresample   2.  3.100 /  2.  3.100
+  libpostproc    54.  1.100 / 54.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4a':
+  Metadata:
+    major_brand     : iso6
+    minor_version   : 0
+    compatible_brands: iso6dash
+  Duration: 00:59:14.01, start: 0.000000, bitrate: 95 kb/s
+    Stream #0:0(eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 94 kb/s (default)
+    Metadata:
+      handler_name    : USP Sound Handler
+[h264 @ 043e2960] Reinit context to 1280x720, pix_fmt: yuv420p
+Input #1, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4v':
+  Metadata:
+    major_brand     : iso6
+    minor_version   : 0
+    compatible_brands: iso6dash
+  Duration: 00:59:14.04, start: 0.020000, bitrate: 4791 kb/s
+    Stream #1:0(und): Video: h264 (High), 1 reference frame (avc3 / 0x33637661), yuv420p(tv, bt709, left), 1280x720 [SAR 1:1 DAR 16:9], 4786 kb/s, 50 fps, 50 tbr, 50k tbn, 100 tbc (default)
+    Metadata:
+      handler_name    : USP Video Handler
+      encoder         : AVC Coding
+Output #0, mp4, to 'C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.partial.mp4':
+  Metadata:
+    major_brand     : iso6
+    minor_version   : 0
+    compatible_brands: iso6dash
+    encoder         : Lavf57.56.101
+    Stream #0:0(und): Video: h264 (High), 1 reference frame ([33][0][0][0] / 0x0021), yuv420p(tv, bt709, left), 1280x720 (0x0) [SAR 1:1 DAR 16:9], q=2-31, 4786 kb/s, 50 fps, 50 tbr, 50k tbn, 50k tbc (default)
+    Metadata:
+      handler_name    : USP Video Handler
+      encoder         : AVC Coding
+    Stream #0:1(eng): Audio: aac (HE-AAC) ([64][0][0][0] / 0x0040), 48000 Hz, stereo, 94 kb/s (default)
+    Metadata:
+      handler_name    : USP Sound Handler
+Stream mapping:
+  Stream #1:0 -> #0:0 (copy)
+  Stream #0:0 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+No more output streams to write to, finishing.
+frame=177702 fps=761 q=-1.0 Lsize= 2119834kB time=00:59:14.00 bitrate=4886.2kbits/s speed=15.2x    
+video:2076435kB audio:41098kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.108647%
+Input file #0 (C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4a):
+  Input stream #0:0 (audio): 83297 packets read (42084789 bytes); 
+  Total: 83297 packets (42084789 bytes) demuxed
+Input file #1 (C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.dash.m4v):
+  Input stream #1:0 (video): 177702 packets read (2126269211 bytes); 
+  Total: 177702 packets (2126269211 bytes) demuxed
+Output file #0 (C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.partial.mp4):
+  Output stream #0:0 (video): 177702 packets muxed (2126269211 bytes); 
+  Output stream #0:1 (audio): 83297 packets muxed (42084789 bytes); 
+  Total: 260999 packets (2168354000 bytes) muxed
+INFO: Command exit code 0 (raw code = 0)
+INFO: Converted to file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.partial.mp4
+INFO: Recorded file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.mp4
+DEBUG: Record using dvfhd1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p02l7w4t.jpg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p02l7w4t.jpg
+INFO: Downloaded Thumbnail to 'C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.jpg'
+INFO: Begin tagging file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.mp4
+
+
+INFO: Command: "AtomicParsley" "C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.mp4" "--freefree" "--overWrite" "--stik" "TV Show" "--advisory" "remove" "--copyright" "2017 British Broadcasting Corporation, all rights reserved" "--title" "Dancing in the Dark - The End of Physics?" "--artist" "BBC Two" "--albumArtist" "BBC TV" "--album" "Horizon: 2014-2015" "--grouping" "Factual,Science & Nature,Science & Technology,Documentaries" "--composer" "BBC iPlayer" "--genre" "Factual" "--comment" "A look at dark matter ahead of the LHC being switched on, having been upgraded." "--year" "2015-03-17T21:00:00Z" "--tracknum" "10" "--disk" "1" "--lyrics" "Scientists genuinely don't know what most of our universe is made of. The atoms we're made from only make up four per cent. The rest is dark matter and dark energy (for 'dark', read 'don't know'). The Large Hadron Collider at CERN has been upgraded. When it's switched on in March 2015, its collisions will have twice the energy they did before. The hope is that scientists will discover the identity of dark matter in the debris.
+
+The stakes are high - because if dark matter fails to show itself, it might mean that physics itself needs a rethink.
+
+EPISODE
+http://www.bbc.co.uk/iplayer/episode/b05n8jqs
+
+SERIES
+http://www.bbc.co.uk/programmes/b04fhr2g" "--description" "A look at dark matter ahead of the LHC being switched on, having been upgraded." "--longdesc" "Scientists genuinely don't know what most of our universe is made of. The atoms we're made from only make up four per cent. The rest is dark matter and dark energy (for 'dark', read 'don't know'). The Large Hadron Collider at CERN has been upgraded. When it's switched on in March 2015, its collisions will have twice the energy they did before. The hope is that scientists will discover the identity of dark matter in the debris.
+
+The stakes are high - because if dark matter fails to show itself, it might mean that physics itself needs a rethink." "--hdvideo" "true" "--TVShowName" "Horizon: 2014-2015" "--TVEpisode" "s01e10" "--TVSeasonNum" "1" "--TVEpisodeNum" "10" "--TVNetwork" "BBC Two" "--artwork" "C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.jpg"
+
+INFO: Command exit code 0 (raw code = 0)
+INFO: Tagged file: C:\Users\Generic.User\Desktop\iPlayer Recordings\Horizon_2014-2015_-_10._Dancing_in_the_Dark_-_The_End_of_Physics_b05n8jqs_original.mp4

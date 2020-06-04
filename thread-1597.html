@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - XML::LibXML not loaded when get_iplayer invoked from custom batch file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; XML::LibXML not loaded when get_iplayer invoked from custom batch file</div>
+<div id="pagetitle"><h2>XML::LibXML not loaded when get_iplayer invoked from custom batch file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1082</h2></div><div class="dateline">19-11-2017, 10:58 PM</div>
+</div>
+<div class="message">Hiya,<br />
+<br />
+Installed v3.06 under Windows 10 and started getting this msg<br />
+<br />
+   get_iplayer 3.06.0, Copyright (C) 2008-2010 Phil Lewis<br />
+    This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+    This is free software, and you are welcome to redistribute it under certain<br />
+    conditions; use --conditions for details.<br />
+   Matches:<br />
+   INFO: 0 matching programmes<br />
+   WARNING: Please download and run latest installer or install the XML::LibXML Perl module 1.91 or higher<br />
+   to use MPEG-DASH streams.<br />
+<br />
+Still seems to work just fine and does what I want it to, but how do I get the requisite Perl module updated?<br />
+<br />
+TIA<br />
+<br />
+MEA</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-11-2017, 12:00 PM</div>
+</div>
+<div class="message">Smells like anti-virus interference, but there is no way for me to know. Uninstall get_iplayer, disable anti-virus completely, re-install, test download, re-enable anti-virus, test another download. Naturally, you should only do this if you are comfortable disabling your anti-virus temporarily.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1082</h2></div><div class="dateline">27-11-2017, 08:59 PM</div>
+</div>
+<div class="message">Thanks for the reply Dinky.  Did what you suggested and still get the same message.  As I said, it still seems to work for me despite the msg so I'll just soldier on and ignore it!!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-11-2017, 02:07 AM</div>
+</div>
+<div class="message">Upgrade to 3.07.0 and run with <kbd>--verbose</kbd>. It should print some additional error information that might help, though there is no guarantee.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1082</h2></div><div class="dateline">03-12-2017, 09:24 PM</div>
+</div>
+<div class="message">Hi Dinky,<br />
+<br />
+Installed 3.07 and ran as you suggested.  Output is as follows below [as I said before _get-ipayer still works fine despite the message so I omitted all the output after it started]<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Program Files (x86)\get_iplayer&gt;_gip-pid b09hlyx9 --verbose --force<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;echo off<br />
+get_iplayer 3.07.0, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = cp1252<br />
+INFO: encodinglocalefs = cp1252<br />
+INFO: encodingconsoleout = cp850<br />
+INFO: encodingconsolein = cp850<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: Profile dir: C:\Users\someone\.get_iplayer<br />
+INFO: User options file: C:\Users\someone\.get_iplayer\options<br />
+INFO: System options file: C:\ProgramData\get_iplayer\options<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+Current options:<br />
+       encodingconsolein = cp850<br />
+       encodingconsoleout = cp850<br />
+       encodinglocale = cp1252<br />
+       encodinglocalefs = cp1252<br />
+       force = 1<br />
+       get = 1<br />
+       output = C:\Users\someone\Downloads\_vid<br />
+       pid = b09hlyx9<br />
+       verbose = 1<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Got 2463 file cache entries for tv<br />
+INFO: Got 0 file cache entries for radio<br />
+INFO: Cleaning PID - old: 'b09hlyx9' new: 'b09hlyx9'<br />
+INFO: Getting URL: <a href="http://www.bbc.co.uk/programmes/b09hlyx9.json">http://www.bbc.co.uk/programmes/b09hlyx9.json</a><br />
+INFO: tv episode PID detected (b09hlyx9)<br />
+Matches:<br />
+INFO: 0 matching programmes<br />
+INFO: Getting URL: <a href="http://www.bbc.co.uk/programmes/b09hlyx9.json">http://www.bbc.co.uk/programmes/b09hlyx9.json</a><br />
+INFO: Getting URL: <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b09hly05/transferformat/dash?cb=58962">http://open.live.bbc.co.uk/mediaselector...h?cb=58962</a><br />
+WARNING: Please download and run latest installer or install the XML::LibXML Perl module 1.91 or higher to use MPEG-DASH streams.<br />
+ERROR: Failed to load XML::LibXML:<br />
+Can't load 'C:/Program Files (x86)/get_iplayer/perl/lib/auto/XML/LibXML/LibXML.xs.dll' for module XML::LibXML: load_file:The specified module could not be found at DynaLoader.pm line 193.<br />
+ at XML/LibXML.pm line 156.<br />
+BEGIN failed--compilation aborted at XML/LibXML.pm line 156.<br />
+Compilation failed in require at (eval 76) line 1.<br />
+BEGIN failed--compilation aborted at (eval 76) line 1.<br />
+INFO: Getting URL: <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b09hly05/transferformat/dash?cb=08135">http://open.live.bbc.co.uk/mediaselector...h?cb=08135</a></code></div>
+</div>
+<br />
+<br />
+HTH<br />
+<br />
+Mel</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2017, 12:02 AM</div>
+</div>
+<div class="message">Previous reply deleted. I just noticed you are not using the get_iplayer batch file provided with the installer. As the docs make clear, no other method of invoking get_iplayer is supported. Re-run your test using the provided batch file.<br />
+<br />
+EDIT: Also see <a href="thread-1504.html">https://forums.squarepenguin.co.uk/thread-1504.html</a> and <a href="thread-647.html">https://forums.squarepenguin.co.uk/thread-647.html</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; XML::LibXML not loaded when get_iplayer invoked from custom batch file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

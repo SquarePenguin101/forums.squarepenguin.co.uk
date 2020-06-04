@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Diffficulty recording live TV</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Diffficulty recording live TV</div>
+<div id="pagetitle"><h2>Diffficulty recording live TV</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">18-06-2014, 01:17 PM</div>
+</div>
+<div class="message">I have been using Get_iplayer since September last and much appreciated the product.  I have no problems saving past programmes and I am now getting used to setting my own preferences.<br />
+<br />
+My problem relates to recording live TV<br />
+<br />
+My problem is that, while I can start a recording and save the .flv for a time but it stops after a short time.  For example I have just started a recording with:-<br />
+<br />
+get_iplayer&gt;get_iplayer --G --type=livetv "BBC One"<br />
+<br />
+It stopped after a split second and converted to MP4 with multiple messages like:-<br />
+<br />
+[mp4 @ 026dcc20] st:0 PTS: 1280 DTS: -640 &lt; -639 invalid, clipping<br />
+<br />
+Any help thoughts welcome.  <br />
+<br />
+What I would like to be able to do ideally is to watch a programme on media player classic while recording.<br />
+<br />
+Many thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-06-2014, 07:45 PM</div>
+</div>
+<div class="message">Since you say it dies quickly, add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to your command and post the log from that attempt.  There may additional information on the problem, but also there may not.  If it appears to be hung or begins churning out repetitive error messages from rtmpdump, use Task Manager to kill the perl.exe and rtmpdump.exe processes, in that order.  Also try using the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes</code></div></div> option to specify lower-quality streams to see if they work any better.<br />
+<br />
+Live streaming doesn't work very well in general.  This is where I advise you to watch live in your browser or on your telly and download later.  If you are trying to capture World Cup matches or other live sport that isn't made available for catch-up viewing, start where I suggested above.  Just be prepared for the fact that it might never work reliably.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-06-2014, 08:02 PM</div>
+</div>
+<div class="message">I should also add that you can't stream to a media player and to a file at the same time, which defeats what you're trying to do.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">24-06-2014, 10:38 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/diffficulty-recording-live-tv/#post-2211">Quote:</a>&lt;/div&gt;I should also add that you canât stream to a media player and to a file at the same time, which defeats what youâre trying to do.</blockquote>
+<br />
+Ah, that is my problem.<br />
+<br />
+I CAN view the FLV in a media player while downloading catchup progs simply by opening the .flv file in media player Classic.  Naive of me perhaps, but I assumed I could do the same thing with live TV<br />
+<br />
+Is there any workrownd that makes this possible?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-06-2014, 11:05 AM</div>
+</div>
+<div class="message">You can do the same thing with live TV, though I have no idea if it works with MPC.  Of course, that is moot if the stream never starts downloading.  Sometimes if you wait several minutes it will kick in, but from your original report it sounds like it never gets that far.  Just to see if it works, try testing MPC with BBC Parliament, where you may be more likely to get a stream started.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">26-06-2014, 11:21 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/diffficulty-recording-live-tv/#post-2220">Quote:</a>&lt;/div&gt;You can do the same thing with live TV, though I have no idea if it works with MPC.  Of course, that is moot if the stream never starts downloading.  Sometimes if you wait several minutes it will kick in, but from your original report it sounds like it never gets that far.  Just to see if it works, try testing MPC with BBC Parliament, where you may be more likely to get a stream started.</blockquote>
+<br />
+Based on one attempt, if I let it record for several minutes before trying to play the file, it works.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Diffficulty recording live TV</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

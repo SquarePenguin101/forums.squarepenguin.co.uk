@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 3.00 running fine here</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 3.00 running fine here</div>
+<div id="pagetitle"><h2>3.00 running fine here</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">30-04-2017, 10:30 PM</div>
+</div>
+<div class="message">Thanks for version 3.00 - currently running here on Ubuntu 16.04 and catching up on the last week's programmes.<br />
+<br />
+lastbcastdate doesn't work any more, as indicated in release notes<br />
+<br />
+Don't think running<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --cache-init --type="tv,radio"</code></div></div><br />
+took an enormous amount of time but I didn't sit watching it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1570</h2></div><div class="dateline">30-04-2017, 10:36 PM</div>
+</div>
+<div class="message">After the warnings about cache_init taking 5-10 minutes, I was very pleasantly surprised that it took about a minute on my PC, with a 20 Mbps internet connection. The first time I did it from with the web front end (Refresh Cache) and this took about the same length of time as the command-line cache_init (rather than the previous refresh), even though the first downloaded far fewer programmes.<br />
+<br />
+Let's hope everything works for a while and that the BBC don't throw spanners in the works quicker than the guys at Get-iPlayer can find workarounds.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">01-05-2017, 09:59 AM</div>
+</div>
+<div class="message">I found I didn't have Mojolicious installed, I thought I'd checked it was - I got "INFO: Using sequential indexing".<br />
+<br />
+So installed libmojolicious-perl 6.15 and refreshing the cache gave "INFO: Using concurrent indexing".<br />
+<br />
+One other slight problem: I couldn't find Sunday evening's snooker (b08pms43) in the TV cache, even after I'd refreshed it.<br />
+<br />
+Sunday afternoon's session (b08pms41) and both of Monday's (today's) sessions - b08pmslg and b08pmslj - are there.<br />
+<br />
+Got it OK using the pid but I don't know why it's not in the cache.<br />
+<br />
+NB I ran <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --cache-init --type="tv,radio"</code></div></div>before doing anything else.<br />
+<br />
+Edit: update, solved my own problem. <br />
+<br />
+Having noticed that yesterday evening's Line of Duty was also missing from the cache, I ran --cache-init again just now and both missing programmes are now in the cache. Presumably something to do with my running --cache-init before the programmes were available?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">01-05-2017, 10:59 AM</div>
+</div>
+<div class="message">Perfect!  What else can I say?  Thanks EVER so much for 3.00.  Works perfectly on Windows.  Installation painless.  Cache refresh painless.  Just resumes downloading as if get_iplayer had never broken.  We can guess how much pain behind the scenes was necessary to make up for the lack of XML.   Thanks for keeping it alive.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1202</h2></div><div class="dateline">01-05-2017, 11:52 AM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+I posted this also but for people reading this thread -- on Linux if you don't have mojolicious installed (or perl-mojolicious)  or not available in your repos  then it's an easy 1 line install from here <a href="http://mojolicious.org/">[color=#aa0066]http://mojolicious.org/[/color]</a>  in addition to other the other perl modules required if they don't install by default.<br />
+<br />
+<br />
+You also don't need to uninstall previous version.<br />
+<br />
+I think we're all pleased that this excellent program is working again<br />
+<br />
+Thanks from appreciative users for all the effort and time put into this project.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1263</h2></div><div class="dateline">01-05-2017, 12:37 PM</div>
+</div>
+<div class="message">Thanks Dinky for all your hard work fixing this and keeping get_iplayer alive! Works great here.<br />
+<br />
+I've noticed that the AOD xml listings are still alive if that helps radio listings:<br />
+<a href="http://www.bbc.co.uk/radio/aod/availability/radio4.xml">http://www.bbc.co.uk/radio/aod/availability/radio4.xml</a> - EDIT oops! noticed this is still in the source code already.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 3.00 running fine here</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

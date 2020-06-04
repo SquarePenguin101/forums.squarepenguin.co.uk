@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Powershell Script to Download Series</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Powershell Script to Download Series</div>
+<div id="pagetitle"><h2>Powershell Script to Download Series</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-822</h2></div><div class="dateline">10-01-2015, 11:16 PM</div>
+</div>
+<div class="message">After the recent fails created by the BB's changes, I started to look at what I could to get getiplayer working in the way I wanted again. I am quite pleased with how it is going, so thought id share here in case anyone else could find it useful..<br />
+<br />
+Situation;<br />
+I wanted to download radio programs for a few programs regularly - most of these programmes are on going, so at present, I focus on about 5 each time. The PVR seems to have fallen apart for me (and I don't understand the makings of the app to be able to fix), but I have found that it still lets me download by PID - although the file is not named correctly - it just has the PID and some other characters. The metadata does come down though - that shows in the console window when it is processing.<br />
+<br />
+I have come up with this script that does the following...<br />
+Runs a download for each series PID to pull down the files, saves the output from that to a text file<br />
+Reads the text file in to a variable as one string.<br />
+Goes through each file in my download directory that has a PID name and searches the metadata that saved in step one for a match.<br />
+When a match is found it renames the files and moves on to the next.<br />
+<br />
+I have been quite surprised at how well this is working, so if you find yourself with similar requirements, you may be able to make use of it. Obviously the usual caution should be exercised when running this - please ensure you understand it before running it to avoid unexpected outcomes!<br />
+<br />
+Apologies that this is not the best written script - if  I get a chance I will tidy it up one day, just thought worth sharing<br />
+<br />
+#set working dir to be location of get_iplayer.cmd<br />
+ Set-Location 'C:\Program Files\get_iplayer'<br />
+#delete old metadata files (this empties all of temp)<br />
+Get-ChildItem c:\temp\ |Remove-Item<br />
+<br />
+#run the getiplayer app against each series I want and dump output to a file<br />
+    .\get_iplayer.cmd --pid b04830x1 --type radio --pid-recursive --modes=flashaacstd1,flashhigh,flashvhigh,rtsphigh,rtspvhigh | Out-File c:\temp\justso.log -append<br />
+ .\get_iplayer.cmd --pid b006qy2s --type radio --pid-recursive --modes=flashaacstd1,flashhigh,flashvhigh,rtsphigh,rtspvhigh | Out-File c:\temp\15mindrama.log -append<br />
+ .\get_iplayer.cmd --pid b006qtlx --type radio --pid-recursive --modes=flashaacstd1,flashhigh,flashvhigh,rtsphigh,rtspvhigh  |Out-File c:\temp\batb.log -append<br />
+ <br />
+ .\get_iplayer.cmd --pid b006qrzz --type radio --pid-recursive --modes=flashaacstd1,flashhigh,flashvhigh,rtsphigh,rtspvhigh  |Out-File c:\temp\afternoon.log -append<br />
+ .\get_iplayer.cmd --pid b01lyb82 --type radio --pid-recursive --modes=flashaacstd1,flashhigh,flashvhigh,rtsphigh,rtspvhigh  |Out-File c:\temp\philoarms.log -append<br />
+ <br />
+#pull the output back from the file and in to a variable - minimise size by filtering on just the relevant lines <br />
+<br />
+ &#36;15mindrama = (Get-Content C:\temp\15mindrama.log| ?{&#36;_ -like  '*   episode *' -or &#36;_ -like '*  series:*'}| Out-String)<br />
+ &#36;afterNoon = (Get-Content C:\temp\afternoon.log| ?{&#36;_ -like  '*   episode *' -or &#36;_ -like '*  series:*'}| Out-String)<br />
+ &#36;bedtime= (Get-Content C:\temp\batb.log| ?{&#36;_ -like  '*   episode *' -or &#36;_ -like '*  series:*'}| Out-String)<br />
+ &#36;JustSo=(Get-Content C:\temp\JustSo.log| ?{&#36;_ -like  '*   episode *' -or &#36;_ -like '*  series:*'}| Out-String)<br />
+ &#36;philoarms=(Get-Content C:\temp\philoarms.log| ?{&#36;_ -like  '*   episode *' -or &#36;_ -like '*  series:*'}| Out-String)<br />
+<br />
+#define the series to process that have been downloaded above <br />
+ &#36;progs = ("AfterNoon","15MinDrama","JustSo","PhiloArms","BedTime")<br />
+<br />
+  foreach(&#36;txt in &#36;progs){<br />
+#go through each variable of series metadata<br />
+     &#36;metadata = Get-Variable -Name &#36;txt -ValueOnly -ea Continue<br />
+     if(&#36;metadata){<br />
+#if something is there....<br />
+          get-childitem c:\iplayer -filter BBC_Ip* |foreach{<br />
+#iterate though each file in my holding area for downloads<br />
+            &#36;_.name -match "(?:BBC_iPlayer_Feeds_-_)(?&lt;pid&gt;[^_]+)" |Out-Null<br />
+#get any that have just the pid type of name<br />
+            &#36;pidf =&#36;matches.pid<br />
+            if(&#36;metadata -like "*&#36;pidf*"){<br />
+                "&#36;pidf found in metadata: &#36;txt"<br />
+#search for real name in metadata<br />
+                &#36;reg = "(?:.+Series:\s*?['&lt;](?&lt;ser&gt;(?-s).*)['&gt;])(?=.+Episode '(?&lt;ep&gt;.*)'\s\(&#36;pidf)"<br />
+                &#36;result = ([regex]::Match(&#36;metadata,&#36;reg,@('SingleLine')))<br />
+                &#36;ser = &#36;result.groups['ser'].value<br />
+                &#36;ep = &#36;result.groups['ep'].value<br />
+                #"&#36;ser &#36;ep"<br />
+                if(&#36;result.groups['ser'].value){<br />
+#if found, rename the file<br />
+                    &#36;newname = "&#36;txt`_&#36;((&#36;ser).replace('?',''))_&#36;((&#36;ep).replace('?',''))&#36;(&#36;_.Extension)" #changed  added ext<br />
+                  &#36;_ |Rename-Item -NewName &#36;newname<br />
+                    &#36;newname<br />
+                }else{<br />
+                    write-error "&#36;pidf  found in metadata, but no series or episode identifid"<br />
+                }<br />
+            }else{<br />
+                write-warning "&#36;pidf not found in metadata: &#36;txt"<br />
+            }#end pid check<br />
+        }#end file iteration<br />
+    }#end metadata check (to see if it exists)<br />
+}#for loop.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-01-2015, 12:01 AM</div>
+</div>
+<div class="message">Naturally, you should use whatever version of get_player you like, and use it however you wish.  However, for the benefit of other users who may come across this post I feel obliged to point out that the problem addressed by the above script was fixed in get_iplayer 2 months ago. You only need to upgrade to the latest version of get_iplayer (currently 2.91).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-822</h2></div><div class="dateline">11-01-2015, 05:54 PM</div>
+</div>
+<div class="message">Thank you user-2. I should have checked that more carefully... <br />
+<br />
+I should have also added that 'gip' is a really nifty creation for which I am very greatfull...it opens up so much more as I can choose when I listen! A big thank you to all its creators and anyone who suppprts it!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Powershell Script to Download Series</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable To Download TV</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable To Download TV</div>
+<div id="pagetitle"><h2>Unable To Download TV</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">20-10-2015, 10:36 PM</div>
+</div>
+<div class="message"><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: 1 Matching Programmes<br />
+WARNING: The 'default' programme version could not be determined<br />
+WARNING: No programme versions found<br />
+WARNING: You may receive this message if you are using get_iplayer outside the UK</code></div>
+</div>
+<br />
+Getting the above error message when trying to download TV.  Used to work fine, haven't used it in a while (two months?).  Radio still downloads fine.<br />
+<br />
+Using v2.94 on WIN 10.<br />
+<br />
+Any thoughts?<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">20-10-2015, 11:09 PM</div>
+</div>
+<div class="message">All TV? Specific show? Exact command you are using?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">20-10-2015, 11:45 PM</div>
+</div>
+<div class="message"><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Program Files (x86)\get_iplayer&gt;get_iplayer 1497 --get --tvmode=flashhd<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1497:   University Challenge: Series 15 - Episode 15, BBC Two England, , default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: The 'default' programme version could not be determined<br />
+WARNING: No programme versions found<br />
+WARNING: You may receive this message if you are using get_iplayer outside the UK</code></div>
+</div>
+<br />
+Tried a couple of other shows just to see.  Get the same message for everything.<br />
+<br />
+Thanks,<br />
+thwartme<br />
+<hr class="mycode_hr" />
+Sorry, should have said... I have also tried without the "--tvmode=flashhd" as well.  No difference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-10-2015, 02:18 AM</div>
+</div>
+<div class="message">get_iplayer works fine for that programme.  Run the same command with <kbd>--verbose</kbd> and post the output as a .txt file attachment.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">21-10-2015, 09:58 PM</div>
+</div>
+<div class="message">File attached.<br />
+<br />
+It actually did something different this time.  Instead of the error I got above, it only downloaded a part of the video file, the first 20 or so seconds of the show.<br />
+<br />
+Thanks very much for your time on this.<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-10-2015, 10:50 PM</div>
+</div>
+<div class="message">Thanks for the log, but next time don't cut off the beginning. We'll decide what is relevant.  The log shows that the connection to the media server was dropped somewhere upstream.  No way to know where, and there is nothing get_iplayer can do about it.  Try <kbd>--modes=hls</kbd> for default video quality as in your example or <kbd>--modes=hlsbest</kbd> for HD.<br />
+<br />
+EDIT: <kbd>--modes=hlsbest</kbd> for HD</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">22-10-2015, 12:42 AM</div>
+</div>
+<div class="message">Thanks for your help.  Not sure what the problem was yesterday, but yes today seems to be a connection issue.  I have now successfully downloaded the show, although it was very slow.<br />
+<br />
+As for the log.  I did CTRL A for select all, CTRL C to copy, and pasted into Notepad.  I didn't cut anything off, that's all I got.<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-10-2015, 02:45 PM</div>
+</div>
+<div class="message">For logs, google for instructions on how to capture program standard output and standard error streams to file on Windows. Otherwise, you may find the the size of the history buffer (or whatever it's called) in command window properties is too small.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">28-10-2015, 12:32 AM</div>
+</div>
+<div class="message">I'm having the same problem again, getting the error message that I got in the first post.  'verbose' log attached.<br />
+<br />
+Do you have any suggestions, please?<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-10-2015, 01:15 AM</div>
+</div>
+<div class="message">The error message says it all.  It would seem the BBC have rumbled whatever mechanism you're using to get around their geo-blocking.  We can't help you with that.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">28-10-2015, 12:29 PM</div>
+</div>
+<div class="message">Well darn.  Okay, thanks.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable To Download TV</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

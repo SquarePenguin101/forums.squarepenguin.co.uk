@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cache rebuild restored missing programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cache rebuild restored missing programmes</div>
+<div id="pagetitle"><h2>Cache rebuild restored missing programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1817</h2></div><div class="dateline">20-08-2019, 09:45 AM</div>
+</div>
+<div class="message">Cannot download Radio 4 Archers or Radio 3 Late Junction for example. <br />
+Note, this is not user error. I have been using get_iplayer on my Linux servers since it came out.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">20-08-2019, 10:39 AM</div>
+</div>
+<div class="message">You will be treated more seriously if you post a log file. The archers works for me<br />
+e.g. yesterday 2019-08-19<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+Episodes:<br />
+The Archers - 19/08/2019, BBC Radio 4, m0007qc1<br />
+INFO: 1 total programmes<br />
+<br />
+INFO: Downloading radio: 'The Archers - 19/08/2019 (m0007qc1) [original]'<br />
+INFO: Downloaded: 32.60 MB (00:12:58) @ 37.25 Mb/s (hafhigh1/ll) [audio]<br />
+INFO: Converting to M4A<br />
+INFO: Tagging M4A<br />
+INFO: Running user command<br />
+</code></div>
+</div>
+<br />
+What version of GIP? - Use a current version<br />
+Are you in the UK? if not then it won't work<br />
+Are you using a VPN? if yes then not supported<br />
+<br />
+Is this a PVR problem?<br />
+<br />
+More info required.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">20-08-2019, 12:22 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Are you in the UK? if not then it won't work<br />
+Are you using a VPN? if yes then not supported</blockquote>
+Actually a radio programme like the Archers can be downloaded outside of the UK without a VPN.<br />
+Those are not the OP's problem,<br />
+<br />
+More likely the <a href="https://github.com/get-iplayer/get_iplayer/releases/v3.22">latest update</a> will do the job since the <a href="https://github.com/get-iplayer/get_iplayer/wiki/release320to329#release322">release notes</a><br />
+say this:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Fixed schedule page parsing used for cache updates. This was broken by BBC changes and manifested as a series of “WARNING: Got 0 programmes...” messages during cache updates. Your cache will not update without this fix. If you find that some programmes are still missing from your cache, use --cache-rebuild to perform a full rebuild.</blockquote>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1817</h2></div><div class="dateline">20-08-2019, 12:39 PM</div>
+</div>
+<div class="message">Ok, I'm on V3.22 in the UK. I deleted all the cache files. Now working ok.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">20-08-2019, 03:53 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-08-2019, 12:22 PM)</span></cite>Are you in the UK? if not then it won't work<br />
+Are you using a VPN? if yes then not supported</blockquote>
+Actually a radio programme like the Archers can be downloaded outside of the UK without a VPN.<br />
+Those are not the OP's problem,</blockquote><br />
+I was merely quoting the FAQ<br />
+<a href="https://www.squarepenguin.co.uk/faqs/getting-started/">https://www.squarepenguin.co.uk/faqs/getting-started/</a><br />
+<br />
+I'm not in the UK, can I use get_iplayer?<br />
+You need a UK IP address to use get_iplayer, just like you would if you used the BBC iPlayer service.<br />
+<br />
+I was demonstrating that I could download the archers using a version prior to 3.21<br />
+<hr class="mycode_hr" />
+<blockquote class="mycode_quote"><cite><span> (20-08-2019, 12:22 PM)</span></cite>Are you in the UK? if not then it won't work<br />
+Are you using a VPN? if yes then not supported</blockquote>
+Actually a radio programme like the Archers can be downloaded outside of the UK without a VPN.<br />
+Those are not the OP's problem,</blockquote><br />
+My first helpful suggestion was use the current version<br />
+<br />
+&gt;What version of GIP? - Use a current version<br />
+<br />
+I was merely quoting the FAQ<br />
+<a href="https://www.squarepenguin.co.uk/faqs/getting-started/">https://www.squarepenguin.co.uk/faqs/getting-started/</a><br />
+<br />
+I'm not in the UK, can I use get_iplayer?<br />
+You need a UK IP address to use get_iplayer, just like you would if you used the BBC iPlayer service.<br />
+<br />
+I was demonstrating that I could download the archers using a version prior to 3.21</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-08-2019, 10:41 AM</div>
+</div>
+<div class="message">FAQ text updated. Thread closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cache rebuild restored missing programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

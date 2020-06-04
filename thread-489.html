@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - add show name to on screen logging</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; add show name to on screen logging</div>
+<div id="pagetitle"><h2>add show name to on screen logging</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">29-07-2015, 05:54 AM</div>
+</div>
+<div class="message">hi there,<br />
+<br />
+I'm wondering if the code can developed to show what episode is being searched for?<br />
+<br />
+looking at the output of my recent per search; it could be something before the WARNING/INFO combination<br />
+<br />
+e.g. INFO: Searching for [size=small][font=Monaco, Consolas, Courier, monospace]Charlie and Lola: Series 2 - 4. This Is Actually My Party[/font][/size]<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+51:	Charlie and Lola: Series 2 - This Is Actually My Party, CBeebies, default<br />
+168:	Justin's House: Series 1 - Housewarming, CBeebies, default<br />
+169:	Justin's House: Series 1 - The Tidy Prize, CBeebies, default<br />
+290:	Something Special: We're All Friends - Cookery, CBeebies, default<br />
+291:	Something Special: We're All Friends - Wetlands Centre, CBeebies, default<br />
+354:	Tree Fu Tom: Series 2 - Tiny Tom, CBeebies, default<br />
+<br />
+INFO: 6 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashvhigh1,flashvhigh2,hlsvhigh1,hlsvhigh2,hlsvhigh3,hlsvhigh4 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Charlie and Lola: Series 2 - 4. This Is Actually My Party<br />
+INFO: File name prefix = Charlie and Lola.s02e04.WEBRip.x264-iPlayer                 <br />
+WARNING: File /Volumes/MoMedia/Kid's TV Shows/Charlie and Lola/Charlie and Lola.s02e04.WEBRip.x264-iPlayer.mp4 already exists<br />
+<br />
+INFO: skipping this programme<br />
+ERROR: Failed to record 'Charlie and Lola: Series 2 - 4. This Is Actually My Party (b007938k)'<br />
+WARNING: The 'default' programme version could not be determined<br />
+INFO: No versions of this programme were selected (available versions: signed)<br />
+WARNING: The 'default' programme version could not be determined<br />
+INFO: No versionof this programme were selected (available versions: signed)<br />
+WARNING: The 'default' programme version could not be determined<br />
+INFO: No versions of this programme were selected (available versions: signed)<br />
+WARNING: The 'default' programme version could not be determined<br />
+INFO: No versions of this programme were selected (available versions: signed)<br />
+WARNING: The 'default' programme version could not be determined<br />
+INFO: No versions of this programme were selected (available versions: signed)<br />
+WARNING: PVR Run: CBeebies: 6 download failure(s)</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-07-2015, 10:30 AM</div>
+</div>
+<div class="message">get_iplayer doesn't search for individual episodes.  Your search criteria are checked against every entry in the cache and all matches are returned.  If you're trying to match a single episode from a single series, you need very specific criteria, but it still may not be possible.  You shouldn't be attempting such a specific search in the PVR anyway.  It will only ever match once, and the PVR is really for repeated searching to pick up entire series.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">07-09-2015, 10:36 AM</div>
+</div>
+<div class="message">hi Dinky, looking back on my original post. I think I may not have explained myself very well.<br />
+<br />
+trying again :)<br />
+<br />
+When the PVR search takes place and it logs to screen what is happening, is it possible to display what tv show/episode is about to be tried for downloading? That way, we can tell which tv show/episode is not successful. very handy when --quiet is on<br />
+<br />
+Would this information be available from the index?<br />
+<br />
+53:	Charlie and Lola: Series 3 - I Really Absolutely Must Have Glasses, CBeebies, , default<br />
+<br />
+INFO: 14 Matching Programmes<br />
+WARNING: The 'default' programme version could not be determined<br />
+WARNING: No programme versions found<br />
+WARNING: You may receive this message if you are using get_iplayer outside the UK<br />
+<br />
+Regards,<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2015, 03:19 PM</div>
+</div>
+<div class="message">Will add to next release</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">07-09-2015, 10:25 PM</div>
+</div>
+<div class="message">Thanks mate!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; add show name to on screen logging</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

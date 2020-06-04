@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Programmes not available for download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Programmes not available for download</div>
+<div id="pagetitle"><h2>Programmes not available for download</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-781</h2></div><div class="dateline">16-12-2014, 09:31 AM</div>
+</div>
+<div class="message">I don't have the ability to record TV programmes but I really would have liked to keep a copy of this years BBC Sports Personality of the Year so could anyone kindly tell me if there any way to download something using GIP, which is on iPlayer via streaming but isn't available for download?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">16-12-2014, 03:21 PM</div>
+</div>
+<div class="message">Yes you can download anything that's on iPlayer with GIP. Have a look at the guides to see how to use it <a href="https://squarepenguin.co.uk/guides/tv-download-guide/">https://squarepenguin.co.uk/guides/tv-download-guide/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-781</h2></div><div class="dateline">17-12-2014, 02:03 AM</div>
+</div>
+<div class="message">Unfortunately, even though the programme is still available on the website I'm having no luck so far with GIP.<br />
+<br />
+Ideally, I would like to get the HD version but as that didn't work I have tried a few combinations of commands without success.<br />
+<br />
+Initially the command line I used was<br />
+get_iplayer --modes=flashhd --subtitles --pid=b04v4ly7   (this is the correct PID)<br />
+<br />
+This was the error returned by GIP<br />
+C:\Program Files (x86)\get_iplayer&gt;get_iplayer --modes=flashhd --subtitles --pid<br />
+=b04v4ly7<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+167:    BBC Sports Personality of the Year - 2014, BBC One, Sport, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashhd) available for this programme with version 'de<br />
+fault' (try using --modes=flashaacstd,rtspaacstd)<br />
+ERROR: Failed to record 'BBC Sports Personality of the Year - 2014 (b04v4ly7)'<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;<br />
+<br />
+As that didn't work I tried --tvmode=best and I have also tried both the PID and index methods but no luck with any of them.   Strangely, on one of my efforts it did download the subtitles but not the programme.<br />
+<br />
+I'm only guessing but I suspected it wouldn't work because the website says the programme is not available for download, hence my question.   Unfortunately, I cannot see anything in the instructions on here for getting around that so if anyone could suggest how to do it I'd be very grateful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">17-12-2014, 02:11 AM</div>
+</div>
+<div class="message">You need to update to the latest version of 2.90. This includes a lot of fixes for problems that have developed since the original 2.90 was released.<br />
+<br />
+Have a look at <a href="https://squarepenguin.co.uk/wiki/installation/githeadgit/">https://squarepenguin.co.uk/wiki/install...itheadgit/</a> and if you are on Windows <a href="https://squarepenguin.co.uk/wiki/installation/githeadwin/">https://squarepenguin.co.uk/wiki/install...itheadwin/</a><br />
+<br />
+Once you have updated, the programme should download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-789</h2></div><div class="dateline">19-12-2014, 09:58 AM</div>
+</div>
+<div class="message">Hi there.<br />
+<br />
+First post in this forum so be gentle!<br />
+<br />
+Just wanted to say that I was having the exact same issue with Sports Personality of the Year and a couple of radio programmes that all of a sudden had issues around no default available and becoming a right pain to download.  I followed the above discussion and then went through adding in the GITHead adaption.  Worked like a charm!!!<br />
+<br />
+Thanks guys for a really helpful bit of kit - I love get_iplayer!!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Programmes not available for download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

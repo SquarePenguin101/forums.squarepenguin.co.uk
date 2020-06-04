@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Bookmark a search?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Bookmark a search?</div>
+<div id="pagetitle"><h2>Bookmark a search?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">16-09-2013, 07:37 PM</div>
+</div>
+<div class="message">I would like to build a complex search in the get_iplayer CGI that matches the kind of stuff I want to watch and then bookmark it so with a single click I can see if anything I want to watch is available.<br />
+<br />
+Just to be clear, I don't actually want to record everything that matches this search so "Add search to" is not the solution.  Maybe there is a way to do this that I just haven't found, google or otherwise.<br />
+<br />
+Thanks,<br />
+<br />
+Jeff</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-09-2013, 12:08 PM</div>
+</div>
+<div class="message">That is what presets are for:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/#option-presets-and-shortcuts">https://squarepenguin.co.uk/wiki/documen...-shortcuts</a><br />
+<br />
+As you've seen, there is no support for presets in the Web PVR.  Presets are just bundles of preferences, and the Web PVR Manager wasn't designed to integrate with the CLI preferences (the clue is in the name).  It's something of a mishmash - see the Web PVR Help for info.  What you're asking for seems possible, but it would  first require a general integration of CLI preferences, with preset support added on top of that.  <br />
+<br />
+To be honest, this would be at the very bottom of my to-do list, so it's not something I'll implement in the foreseeable future.  If you or someone else implements this feature, I'll be happy to review and merge it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-70</h2></div><div class="dateline">17-09-2013, 06:20 PM</div>
+</div>
+<div class="message">No problem.  Actually, a little digging allowed me to find the solution.  I looked at the post data used by the search form and just converted it to a get request.  Ex:<br />
+<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/iplayer?ACTION=search&amp;SEARCHFIELDS=name,episode,desc&amp;SEARCH=Whatever</code></div></div><br />
+Solved!<br />
+<br />
+The <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Whatever</code></div></div> parameter above can contain similar syntax to the search box.  For example to search for <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Whatever</code></div></div> or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Show 1</code></div></div> simply change the URL to:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/iplayer?ACTION=search&amp;SEARCHFIELDS=name,episode,desc&amp;SEARCH=Whatever|Show%201</code></div></div><br />
+...where <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>%20</code></div></div> is the encoded space character.<br />
+<br />
+Pretty easy to build (and bookmark) a favorite search URL.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-09-2013, 07:06 PM</div>
+</div>
+<div class="message">Good one, and very simple.  I completely forgot that the post data is dumped in the server log.  I think I missed the forest for the trees there.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Bookmark a search?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

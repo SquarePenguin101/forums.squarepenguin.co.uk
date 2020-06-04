@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Tidying up a couple of years of audio downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; Tidying up a couple of years of audio downloads</div>
+<div id="pagetitle"><h2>Tidying up a couple of years of audio downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">21-03-2017, 05:45 PM</div>
+</div>
+<div class="message">Thanks very much for the documented examples which let me construct:<br />
+ffmpeg -i h:\mp3t\bab-320k.m4a -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y h:/mp3t/bab-320k.mp3<br />
+(excuse my hard-coded file names).  This should get me part of the way towards my 'tidy up' by enabling me to save all files (mostly now at 320k bps) at a standard and more realistic (for me) 128k bps compression. <br />
+One tiny problem though which much searching has not helped ... the resultant file (above) does indeed contain metadata, but one important field the "comment" seems to get truncated to about 30 chars.  Can anyone point me at some method of relaxing this limitation? Ta.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-03-2017, 07:53 PM</div>
+</div>
+<div class="message">The command writes both ID3v2 and ID3v1 tags. if you don't know what that is about, Google is your friend The truncated comment is the ID3v1 version, which has a length limit. Which one you see, if any, depends on the application or player you use. Remove and/or experiment with the -id3v2_version and -write_id3v1 options to see if you can get tags you like better.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">21-03-2017, 10:05 PM</div>
+</div>
+<div class="message">Thanks.  I've spent a while on further tests, so just to complete this post ..... <br />
+ I think this is an ffmpeg bug because:<br />
+<ul class="mycode_list"><li>I can find multiple online advice saying that "-id3v2_version 3 -write_id3v1 1" is what is needed for Windows metedata.<br />
+</li>
+<li>Experimenting with various other values of both did not improve things. <br />
+</li>
+<li>The console output from my ffmpeg command (see original post) shows the "comment" read correctly from the source file and the same "comment" apparently written to the .mp3 output file.  But only the first 30 chars do get written.<br />
+</li>
+</ul>
+In doing this (and in practice) I'm relying on Windows explorer to see the metadata.   It shows (whether correct or not) the results that I describe above.<br />
+I looked at using exiftool to copy the metadata after the conversion, but unfortunately exiftool can't (yet) write metadata to .mp3 files.  Shame!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">21-03-2017, 11:40 PM</div>
+</div>
+<div class="message">it would be easier to do the transcoding of m4a files to mp3s using <a href="https://foobar2000.org/">foobar2000</a>. that way you can set the ID3 tags how you like and also perform easier to control settings such as replaygain. you'll need to download the LAME encoder but that's easy to find at <a href="http://www.rarewares.org/mp3-lame-bundle.php">rarewares.org</a>.<br />
+<br />
+Also take a look at the UNSYNCEDLYRICS tag. It seems to be better supported now in modern players than the COMMENT tag (I actually write the same info to both).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-03-2017, 12:18 AM</div>
+</div>
+<div class="message">You can also try mapping tags individually with ffmpeg (rather than just copying). It's using LAME underneath, but I think it would defeat the purpose of the exercise. Windows Explorer is another limitation. I pretty sure it still doesn't grok ID3v2.4 or all of ID3v2.3, among other things. I suggest you get Mp3Tag or similar so you can properly explore what's in your files. You will see that both ID3v2 and ID3v1 comments are written. The problem is getting the desired value to display in your particular application.<br />
+<br />
+I've washed my hands of all this as far as get_iplayer is concerned. The examples I provide are a least common denominator approach you can implement with ffmpeg, which comes with get_iplayer for Windows, and execute via get_iplayer. There are much better methods, to say the least.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">22-03-2017, 11:33 AM</div>
+</div>
+<div class="message">Thanks both.  Don't get me wrong, I'm grateful for the starting point (ffmpeg and all that) and for this forum .... and for the pointer to foobar2000.  My computing is normally in other directions so am not up to speed with everything audio, tags etc.  FYI, foobar2000 can indeed see the complete "comment" metadata on my converted mp3 file.  Strange that Windows Explorer can't. Even though it can see all the "comment" on the m4a precursor file.<br />
+I'll look at using foobar2000 a bit more, and mp3tag.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">22-03-2017, 04:20 PM</div>
+</div>
+<div class="message">You'll not go wrong with both foobar and Mp3tag if you're happy to spend a little bit of time getting used to them. I've used both for over 12 years and imo nothing compares on Windows. Mp3tag is the ultimate tagging program; hugely powerful. <br />
+Good luck.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; Tidying up a couple of years of audio downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

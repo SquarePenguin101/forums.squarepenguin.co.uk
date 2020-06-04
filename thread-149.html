@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - v2.86: &quot;Couldn't open cache file&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; v2.86: &quot;Couldn't open cache file&quot;</div>
+<div id="pagetitle"><h2>v2.86: &quot;Couldn't open cache file&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-513</h2></div><div class="dateline">13-05-2014, 01:00 PM</div>
+</div>
+<div class="message">Morning all,<br />
+<br />
+[get_iplayer v2.86 over the border on Windows 8.1. Recently updated from v2.85]<br />
+<br />
+When tring to download radio, either in get_iplayer command line or by PVR, I'm getting the error message:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Warning: Couldn't open cache file 'C:\folder location/.get_iplayer/radio.cache' for writing</blockquote>
+<br />
+Deleting and re-installing get_iplayer fixes it not. Get_iplayer can access and change the options file in the same folder. None of the files in that folder show hidden/read only/etc in windows file options.<br />
+<br />
+Please, please help me get this fixed before I miss the next installement of THHGTTG.<br />
+<br />
+Thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-05-2014, 07:33 PM</div>
+</div>
+<div class="message">The file does presumably exist though?<br />
+<br />
+It is created by the refreshing of the index, so you could try deleting the file (if it exists) and using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --refresh</code></div></div> to force an update/recreation of the file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-513</h2></div><div class="dateline">13-05-2014, 08:26 PM</div>
+</div>
+<div class="message">File does exist. Deleting it and --refresh creates new radio.cache file. Get same error message.<br />
+<br />
+Ah... Sorry just noticed, I've given you an incomplete story. I get the <blockquote class="mycode_quote"><cite>Quote:</cite>Warning: Couldnât open cache file âC:\folder location/.get_iplayer/radio.cacheâ for writing</blockquote>
+ message when I search by name using: <blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --type=radio "Programme Name"</blockquote>
+ but I then get search results.<br />
+<br />
+However, when I try to download a file from the results using: <blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --type=radio --get 12345</blockquote>
+ I get another error message <blockquote class="mycode_quote"><cite>Quote:</cite>Error: Could not create dir 'C:\Users\Username\folder location\Downloaded Radio': mkdir C:\Users\Username: Permission denied; Access is denied at get_player.pl line 4106.</blockquote>
+<br />
+If I try <blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --type=radio --get "Programme Name"</blockquote>
+ then I get a combination: the first error message, list of matching programmes, second error message.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2014, 12:33 AM</div>
+</div>
+<div class="message">To point out the obvious: check the permissions on your home folder.  File/folder attributes are irrelevant here.  Look at the Security tab in the Properties dialog for your home folder.  If the permissions for your account don't show everything except "Special permissions" ticked in the "Allow" column, then you or something you installed has messed up the permissions.  Specifically, from your description it sounds like the "Create Folders/Append Data" permission has been removed.  If that is the case you would probably see a tick next to "Special permissions" in the Security tab permissions list for your account.  If so, click "Advanced" to view the advanced permissions for your account.  You can fix up the permissions in the advanced view, or you can also just tick "Allow" for "Full Control" for your account in the Security tab and apply the change.  Either way, you'll probably get warnings that permissions can't be propagated to subfolders in the hidden AppData folder, which should be OK.  If you're not familiar with manipulating folder permissions in Windows, Google is your friend.  It's a bad thing if your home folder permissions were messed up, so you might want to first do a bit of research to see if something you installed was the culprit.  get_iplayer <span style="font-weight: bold;" class="mycode_b">never</span> changes any permissions, so the problem lies elsewhere.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-513</h2></div><div class="dateline">15-05-2014, 09:34 PM</div>
+</div>
+<div class="message">Folder permissions are on full control. No antivirus/sandbox software blocking access.<br />
+<br />
+Tried something else. As I don't use the video, uninstalled all and reinstalled only get_iplayer, MPlayer and LAME.<br />
+<br />
+Now both get_iplayer and PVR give me another error message:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: No specified modes () available for this programme with version 'default'<br />
+(try using --modes=flashaaclow,rtspaaclow,wma)<br />
+ERROR: Failed to record 'Programe name (b007jm4s</code></div></div><br />
+)'<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--prefs-add --modes=flashaaclow</code></div></div> =&gt; need rtmpdump<br />
+<br />
+install rtmpdump...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: Required ffmpeg/avconv does not exist - not converting flv file<br />
+ERROR: Could not create dir 'C:&#92;Users&#92;Username&#92;Documents&#92;Downloaded Radio': mkdir<br />
+C:&#92;Users&#92;Username: Permission denied; Access is denied at get_iplayer.pl line 4106.</code></div></div><br />
+<br />
+<br />
+install ffmpeg...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;Users&#92;Username&#92;Documents&#92;Downloaded Radio': mkdir<br />
+C:&#92;Users&#92;Username: Permission denied; Access is denied at get_iplayer.pl line 4106.</code></div></div><br />
+<br />
+<br />
+remove rtmpdump...<br />
+can't access flashacclow - only available version<br />
+<br />
+reinstall rtmpdump...<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;Users&#92;Username&#92;Documents&#92;Downloaded Radio': mkdir C:&#92;Users&#92;Username: Permission denied; Access is denied at get_iplayer.pl line 4106.</code></div></div><br />
+Hmmm... rtmpdump causing problems?<br />
+<br />
+THanks for your patience with this btw. Good to know there's help just a keyboard away!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-05-2014, 01:37 AM</div>
+</div>
+<div class="message">Don't waste any more time with piecemeal installations.  You need rtmpdump and ffmpeg no matter what. rtmpdump is not the problem.  The errors won't be generated without rtmpdump because get_iplayer can't download anything without it.  Permissions are the problem.  Check permissions on C:\Users\Username\Documents and C:\Users\Username\Documents\Downloaded Radio.  They should be inherited from your home folder, but there is no way for us to know what you have done to your machine.  Try another output directory somewhere outside your home folder.  If you selected the output directory in the installer, make sure you are logged in with the account used to install get_iplayer.  Better yet, uninstall get_iplayer, back up and delete your profile directory (%USERPROFILE%\.get_iplayer), then reinstall get_iplayer and accept the defaults, include output folder (DESKTOP\iPlayer Recordings).  If that works, then start rebuilding your settings from the backup.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-513</h2></div><div class="dateline">16-05-2014, 05:49 AM</div>
+</div>
+<div class="message">Thank you! Got it. Moved output folder to c:\ (avoiding Users altogether) and download works.<br />
+<br />
+In the end though, it wasn't the permissions, it was that 'Username' was in cyrillic (long story) which I didn't think to say - sorry. Didn't cause a problem in previous version though. I still get <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Warning: Couldnât open cache file âC:&#92;folder location/.get_iplayer/radio.cacheâ for writing</code></div></div> when using the PVR.<br />
+<br />
+What functions am I losing? I could change the user name (google is indeed my friend) but if I don't have too...<br />
+<br />
+Sorry for being a pain, thanks again for your time and help!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-05-2014, 12:46 PM</div>
+</div>
+<div class="message">Some details wouldn't go amiss.  What is your system locale?  What is the active code page (run <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>chcp</code></div></div> in get_iplayer console window)?  Is the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output</code></div></div> setting in your options file encoded properly according to those settings?  Does it work if you enter the cyrillic output directory on the command line with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> instead of reading it from the options file?<br />
+<br />
+Try the HEAD version of get_iplayer:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadwin/">https://squarepenguin.co.uk/wiki/install...itheadwin/</a><br />
+<br />
+Test it with your original configuration (output directory under cyrillic home folder, etc).  I reverted some encoding-related changes from 2.86 that might have had some effect in this case.<br />
+<br />
+If that doesn't work, try rolling back to the previous version.  Follow the above instructions, but use this download URL instead:<br />
+<br />
+<a href="https://raw.github.com/get-iplayer/get_iplayer/v2.85/get_iplayer">https://raw.github.com/get-iplayer/get_i...et_iplayer</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-513</h2></div><div class="dateline">17-05-2014, 09:43 PM</div>
+</div>
+<div class="message">I changed the User folder from Username(cyrillic) to Username(latin) and now all works fine, command line and pvr.<br />
+<br />
+So, thank you for the help! In answer to your questions anyway:<br />
+<br />
+OS: Win8.1 64bit<br />
+What is your system locale? Russia<br />
+What is the active code page? 866<br />
+Is the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output</code></div></div> setting in your options file encoded properly according to those settings? Don't know how to check this. If I open 'options' in notepad/notepad++ the CyUsername is ... cryptic, not cyrillic. Changing the encoding UTF-8/ANSI (notepad++) Western/Cyrillic (notepad) changes the lettering, but none are readable.<br />
+<br />
+Does it work if you enter the cyrillic output directory on the command line with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output</code></div></div> instead of reading it from the options file? No. Neither changing the destination in the 'output' file via "--output" nor editing via notepad worked.<br />
+<br />
+&gt; Try the HEAD version of get_iplayer. Test it with your original configuration (output directory under cyrillic home folder, etc).<br />
+As I have changed Username, I created new account in cyrillic [CyUsername] and changed --output to C:\Users\CyUsername.<br />
+Trying HEAD version get:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;Users&#92;âÐ¢âÐµâââââÐ¸âÐ½âÐ³&#92;Documents&#92;Downloaded Radio': mkdir C:&#92;Users&#92;âÐ¢âÐµâââââÐ¸âÐ½âÐ³: Permission denied; Access is denied at get_iplayer.pl line 4103.</code></div></div><br />
+&gt;If that doesnât work, try rolling back to the previous version.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;Users&#92;â¥ÑÑÐÑÑÑ&#92;Documents&#92;Downloaded': mkdir C:&#92;Users&#92;â¥ÑÑÐÑÑÑ&#92;Documents&#92;Downloaded: Permission denied; Access is denied at get_iplayer.pl line 4033.</code></div></div><br />
+Tried 2.84:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;Users&#92;â¥ÑÑÐÑÑÑ&#92;Documents&#92;Downloaded': mkdir C:&#92;Users&#92;â¥ÑÑÐÑÑÑ&#92;Documents&#92;Downloaded: Permission denied; Access is denied at get_iplayer.pl line 4033.</code></div></div><br />
+All above versions worked fine when output points to Username (latin). I'm happy to try something else if it helps you, but as I said, changing the Account folder name to something less foreign has solved it for me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-05-2014, 10:45 PM</div>
+</div>
+<div class="message">Both HEAD and v2.85, as well as 2.86 with proper modification, worked for me with those system settings and an output directory containing cyrillic characters, both on command line and in options file.  I also noticed Notepad++ didn't display cyrillic characters correctly for some reason, but checking the character values showed they had been saved correctly.  I don't know where our methods differed, but it's not worth wasting any more time on it.  <br />
+<br />
+get_iplayer doesn't take account of Windows code pages, but in prior versions any values from the options file were passed through without any decoding. I think the root of the problem was a change in 2.86 that implicitly assumed the "output" value in options file would contain only Latin characters (to oversimplify a bit).  The cyrillic output directory placed in your options file with a previous version was being decoded into garbage by 2.86, so Perl choked.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; v2.86: &quot;Couldn't open cache file&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

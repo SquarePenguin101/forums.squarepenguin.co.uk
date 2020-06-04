@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Missing Tags in Radio Downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Missing Tags in Radio Downloads</div>
+<div id="pagetitle"><h2>Missing Tags in Radio Downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-664</h2></div><div class="dateline">06-05-2017, 03:53 PM</div>
+</div>
+<div class="message">Hi, <br />
+<br />
+Since updating to v3.0, most – but not all – of the radio programmes I download are missing their tags, so iTunes either won't import them at all or won't rename and/or group them as appropriate. Both iTunes' 'Get Info' and AudioShell's tag editor show all but the file-name fields to be empty.<br />
+<br />
+I've read the Metadata wiki and tried various settings from that but nothing works. I only ever download radio dramas using the PID. I never had any problems with the older version, until it stopped working of course.<br />
+<br />
+An example of a PID that downloads with missing tags is b0076jwx (A sting in the Tale, ep5, Ghosting). I can download the textual tags into a separate XML file using <samp>--metadata=generic</samp> so I feel sure all of the metadata must be available, but for some reason it's failing to insert into the actual audio file. Here's the output when I try to get it to add the metadata to an existing file with <samp>get_iplayer --pid=b0076jwx --tag-only --tag-only-filename="C:\IPR\_New\PID\A_Sting_in_the_Tale_-_5._Ghosting_b0076jwx_original.m4a"</samp>:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Tagging file C:\IPR\_New\PID\A_Sting_in_the_Tale_-_<br />
+5._Ghosting_b0076jwx_original.m4a<br />
+INFO: Begin tagging file: C:\IPR\_New\PID\A_Sting_in_the_<br />
+Tale_-_5._Ghosting_b0076jwx_original.m4a<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =======================================================&gt;100% |<br />
+ Finished writing to temp file.<br />
+INFO: Tagged file: C:\IPR\_New\PID\A_Sting_in_the_Tale_-_<br />
+5._Ghosting_b0076jwx_original.m4a</code></div>
+</div>
+<br />
+But it's still missing its tags as far as I can tell.<br />
+<br />
+Any help would be greatly appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-05-2017, 06:02 PM</div>
+</div>
+<div class="message">Cannot reproduce. For your example, iTunes, Mp3tag, MediaInfo, Windows Explorer, Windows Media Player, and VLC all showed the tag values just fine. No clue about AudioShell. get_iplayer relies on AtomicParsley for tagging. It hasn't changed in quite a while, so if your applications now find its output indigestible, there isn't anything get_iplayer can do about it. My only suggestion is to try some different streams to see if this affects them as well. For example, try a download with <kbd>--radiomode=haf</kbd>. Also try a lower bitrate (<kbd>--radiomode=good</kbd>).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-664</h2></div><div class="dateline">06-05-2017, 06:30 PM</div>
+</div>
+<div class="message">Thanks Dinky, <br />
+<br />
+Her indoors just got home with her laptop so I've installed it on that and it works perfectly well. I guess something's been screwed up on mine – I have replaced the main HDD recently – so I'll try to purge GIP completely with Revo then reinstall it. Fingers crossed that will sort it out, as she won't take kindly to me commandeering her laptop every time I need to download some programmes. :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-664</h2></div><div class="dateline">06-05-2017, 06:54 PM</div>
+</div>
+<div class="message">Yay, a complete purge and re-install has fixed it! I would have tried that sooner but as other things had clearly changed with the new version, such as the default download quality, I figured there may be another setting I was missing or misunderstanding. <br />
+<br />
+Thanks again for looking into it and sorry for wasting your time.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-664</h2></div><div class="dateline">06-05-2017, 10:01 PM</div>
+</div>
+<div class="message">Ok, so it turned out there was <span style="font-style: italic;" class="mycode_i">probably</span> nothing wrong with my GIP installation after all! Shortly after I declared it fixed it started doing the exact same thing again, along with some new weird behaviour: declaring a file already existed in an empty folder. <br />
+<br />
+To cut a long story short it turned out to be my antivirus program (Comodo) which unbeknownst to me had installed a 'premium' trial that included some internet interception jiggery-pokery and <span style="font-style: italic;" class="mycode_i">that</span> was causing the problem. The reason GIP worked initially after first reinstalling it was I had to suspend automatic containment (sandboxing) to run the installer and it hadn't re-enabled itself when I first tried it. Needless to say I've now uninstalled that crap and I'm now rocking Avast with no apparent problem.<br />
+<br />
+Anyway I thought I'd update the thread in case anyone else ends up here after suffering the same problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">07-05-2017, 10:46 AM</div>
+</div>
+<div class="message">I've had a few radio downloads that result in two audio files being saved. One has "temp" appended to the end of the filename. This "temp" one is tagged fine, but the "normal" one is not.<br />
+<br />
+It's not an issue for me, but thought I'd mention it.<br />
+<br />
+I'll keep an eye on it and if it continues to happen will post more info including any logs and options used (although options used are simply <kbd>get_iplayer --pid=qwe123</kbd>).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Missing Tags in Radio Downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

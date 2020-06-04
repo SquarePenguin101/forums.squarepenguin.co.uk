@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - &quot;Not found&quot; error trying to run post download command</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; &quot;Not found&quot; error trying to run post download command</div>
+<div id="pagetitle"><h2>&quot;Not found&quot; error trying to run post download command</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1105</h2></div><div class="dateline">07-12-2015, 08:07 AM</div>
+</div>
+<div class="message">Hi - running on Ubuntu 14.10, and need to tell Myth to scan new videos after download. Runs fine if I include it as an option on the command line:<br />
+<br />
+get_iplayer ... --command '/usr/bin/mythutil --scanvideos'<br />
+<br />
+but trying to put the same command in the options file (so it will happen automatically on each download) gives:<br />
+<br />
+sh: 1: /usr/bin/mythutil --scanvideos: not found<br />
+INFO: Command exit code 127 (raw code = 32512)<br />
+ERROR: Command Exit Code: 127<br />
+<br />
+Can anyone cast any light on this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-12-2015, 10:37 AM</div>
+</div>
+<div class="message">If you have a problem with your options file, then post the contents of the file, or at least the relevant entry. Don't make us guess what you've done.  In this case, the most likely problem is that you edited the file yourself instead of using get_iplayer to add preferences, and you put quotes around your command string. If so, remove them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1105</h2></div><div class="dateline">07-12-2015, 12:05 PM</div>
+</div>
+<div class="message">That did it, thank you.<br />
+<br />
+And for the benefit of anyone else who comes here seeking help to resolve this unintuitive conundrum, the solution is to use --addprefs on the command line to add the correctly parsed line (including quotes) to the options file (without quotes), eg:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --addprefs ---command '/usr/bin/mythutil --scanvideos'</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; &quot;Not found&quot; error trying to run post download command</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

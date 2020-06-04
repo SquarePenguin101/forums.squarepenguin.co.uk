@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - TV programme with version=legal not detected when &quot;default&quot; in --versionlist</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TV programme with version=legal not detected when &quot;default&quot; in --versionlist</div>
+<div id="pagetitle"><h2>TV programme with version=legal not detected when &quot;default&quot; in --versionlist</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">13-08-2019, 10:56 AM</div>
+</div>
+<div class="message">Programme "Animal Park Summer Special Eps 3" has failed to download for me over the past 5 days (it appeared in the cache on 8-August).  Today I decided to investigate further.  A quick manual GiP specifying --versions default,signed,audiodescribed reported in the output:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Getting stream data for version: 'legal'<br />
+.<br />
+INFO: No versions of this programme were selected (available versions: legal)</code></div></div><br />
+So I duly added legal to the version option:<br />
+<br />
+--versions legal,default,signed,audiodescribed  --pid m0007f91<br />
+<br />
+and it worked ok.  I've never seen a "legal" before...<br />
+<br />
+pf</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-08-2019, 11:13 AM</div>
+</div>
+<div class="message">Version names can change at the BBC's whim. You don't need to specify "legal" unless your settings are messed up [<span style="font-weight: bold;" class="mycode_b">Correction: You do need to specify "legal" if you have specified  <kbd>--versions</kbd> explicitly</span>]. You should never use <kbd>--versions</kbd> unless you need to indicate a preference for signed or audiodescribed versions of programmes.<br />
+<br />
+EDIT: Not a bug, but get_iplayer probably needs to be more flexible dealing with unknown version names.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">13-08-2019, 12:01 PM</div>
+</div>
+<div class="message">Dinky<br />
+<br />
+Thanks for the hint about not using --versions.  My wrapper script started life in Oct 13 and I suspect that I discovered that it worked ok with --versions default.  Later on I added signed and AD because sometimes I came too late to the party and the "normal" version had expired, so to avoid missing an episode/programme, I was prepared to have a signed (or AD) version.  In fact, now that expiration times have extended, I don't think I've needed to watch a signed or AD programme for quite some time, so I can just safely (and quietly) follow your recommendation and delete the option.<br />
+<br />
+Thanks again for your sterling work in keeping this program on the road. I appreciate it very much.<br />
+<br />
+pf</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-08-2019, 12:17 PM</div>
+</div>
+<div class="message">For such cases, the workaround for now would be to make two download passes: first without <kbd>--versions</kbd>, then with <kbd>--versions=signed,audiodescribed</kbd>. The second pass will display warnings that programmes downloaded in first pass already exist, but won't overwrite them by default.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">19-08-2019, 07:51 PM</div>
+</div>
+<div class="message">BTW, "legal" seems to mean that the programme has been edited in some way because of legal issues - e.g. where the BBC doesn't have the rights to broadcast music anymore (so no Neil Young in the Singer/Songwriters programme).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-08-2019, 09:09 PM</div>
+</div>
+<div class="message">Fixed in v3.22</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TV programme with version=legal not detected when &quot;default&quot; in --versionlist</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

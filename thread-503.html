@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: Continuity check failed for pid 4095 expected 1 got 0</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; ERROR: Continuity check failed for pid 4095 expected 1 got 0</div>
+<div id="pagetitle"><h2>ERROR: Continuity check failed for pid 4095 expected 1 got 0</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">12-08-2015, 10:52 PM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+This is most likely an error with avconv, but as I'm using it it as part of get_player - I thought that someone here might know what is going on.<br />
+<br />
+I'm getting a lot of errors of the type "Continuity check failed for pid 4095 expected 1 got 0 bitrate=1673.8kbits/s" after avconv is launched to encode the downloaded file. The outputted video plays fine.<br />
+<br />
+This in turn is slowing down the time it takes to run my downloads.<br />
+<br />
+It doesn't happen with all shows, just some. Still trying to work out what is the difference which triggers it.<br />
+<br />
+Has anyone seen this before? Got any tips on speeding up the process?<br />
+<br />
+Log file attached.<br />
+<br />
+Thanks,<br />
+<br />
+Dave
+<br/><br/>
+<a href="static/thread-503-log.txt">log.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-08-2015, 11:45 PM</div>
+</div>
+<div class="message">You should expect those messages for some HLS streams with avconv, though you probably won't see those warnings with latest ffmpeg.  Unless there is a problem with playback, you can ignore them.  They do not slow down anything.  If your downloads seem slower than before (and this example is typical of your other downloads) it's most likely because your RTMP downloads are failing and you have configured get_iplayer to fall back to HLS, which can be slower (more network/DNS overhead for chunked downloads).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">12-08-2015, 11:51 PM</div>
+</div>
+<div class="message">The do seem to be HLS downloads rather than RTMP, so that might explain it.<br />
+<br />
+Maybe I should turn off verbose? That way I may not see the error messages, and as they say "out of sight, out of mind" :)<br />
+<br />
+Thanks user-2!<br />
+<br />
+Regards,<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-08-2015, 11:58 PM</div>
+</div>
+<div class="message">The warnings will still appear without <kbd>--verbose</kbd>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">13-08-2015, 04:38 AM</div>
+</div>
+<div class="message">From this page: <a href="https://libav.org/avconv.html">https://libav.org/avconv.html</a><br />
+<br />
+I see that avconv has different levels of logging<br />
+<br />
+‘-loglevel loglevel | -v loglevel’<br />
+<br />
+    Set the logging level used by the library. loglevel is a number or a string containing one of the following values:<br />
+<br />
+    ‘quiet’<br />
+    ‘panic’<br />
+    ‘fatal’<br />
+    ‘error’<br />
+    ‘warning’<br />
+    ‘info’<br />
+    ‘verbose’<br />
+    ‘debug’<br />
+    ‘trace’<br />
+<br />
+Just a thought, but could the "quiet" option be set when launching avconv unless get_iplayer is run with --verbose, in which case it could be amped up to verbose or higher.<br />
+<br />
+not a high priority of course, but something for the back log :)<br />
+<br />
+cheers<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-08-2015, 07:17 AM</div>
+</div>
+<div class="message">No. It is a bad idea to suppress error messages. Plus, avconv won't print a progress display at loglevel warning or above.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; ERROR: Continuity check failed for pid 4095 expected 1 got 0</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

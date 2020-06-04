@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to find console</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to find console</div>
+<div id="pagetitle"><h2>Unable to find console</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1047</h2></div><div class="dateline">03-12-2015, 03:15 AM</div>
+</div>
+<div class="message">A stupid question from a stupid (in IT terms) person.......<br />
+<br />
+I've had to reinstall GIP after a system meltdown. I have gone into my backed-up desktop short-cut which leads to: <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">c:\windows\system32\cmd</span>, <br />
+<br />
+but when inputting <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer type=radio</span> <br />
+<br />
+(pasted direct from the user guide to avoid syntax errors), I get the response that the command is not recognised. I'm clearly making a basic error, but can somebody tell me what command I should input where please? The otherwise very comprehensive instructions are silent on this fundamental point.<br />
+<br />
+<br />
+[color=#f9f9f9][size=medium][font=Courier, monospace]get_getiplayer --type=radio[/font][/size][/color]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1074</h2></div><div class="dateline">03-12-2015, 10:04 AM</div>
+</div>
+<div class="message">A look at the properties on my get_iplayer desktop shortcut shows this in the target:<br />
+<br />
+C:\Windows\System32\cmd.exe /k get_iplayer.cmd --search dontshowanymatches &amp;&amp; get_iplayer.cmd --help<br />
+<br />
+with the 'start in:' field pointing at my get_iplayer directory in "c:\program files (x86)\get_iplayer" (I'm on a 64 bit system, otherwise it would just be program files). So maybe your 'start in:' in properties no longer points to the directory where get_iplayer is, so the console doesn't know where to look when you type in your command.<br />
+<br />
+Hope that's of some help to you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-12-2015, 11:22 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (03-12-2015, 03:15 AM)</span></cite>but when inputting <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer type=radio</span> <br />
+<br />
+(pasted direct from the user guide to avoid syntax errors), I get the response that the command is not recognised.</blockquote><br />
+That is not pasted direct from the user guide - look again - and would never work. It isn't entirely clear whether you have created an incorrect shortcut (see post from @dsaltmer) or whether you are just entering an incorrect command option. Post complete verbatim error messages so we see what is going on.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1047</h2></div><div class="dateline">03-12-2015, 12:06 PM</div>
+</div>
+<div class="message">Okay, point taken that I omitted the two dashes when I typed this in, however this was what I input to the console. However, after uninstalling and reinstalling, I am still no further forward. I attach screen shots and error messagees - I am unable to upload as a Word file or pdf?<br />
+<br />
+<a href="static/thread-592-aid148.jpg"><img src="static/thread-592-aid152.jpg"/></a><br />
+<a href="static/thread-592-aid148.jpg"><img src="static/thread-592-aid153.jpg"/></a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">03-12-2015, 12:46 PM</div>
+</div>
+<div class="message">I'm curious as to why you aren't opening get_iplayer from the Start menu? You're the second Windows user I've seen opening form other shortcuts or trying to launch from the on disk program folder. Do you access other programmes like this? Do you ever access programmes from the start menu?<br />
+<br />
+If you open the start menu and type 'get_iplayer' (without the quotes), do get_iplayer's start menu entries appear? If you open get_iplayer using those start menu links do the commands work?<br />
+<br />
+If they do, simply right click on the start menu icon and you can select 'pin to taskbar' (if memory serves me correctly) and then you have a working shortcut. You can then delete the old one.<br />
+<br />
+Presumably Windows start menu also has a 'list all programmes' function, in which case get_iplayer would be in there without even typing anything to search for it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1047</h2></div><div class="dateline">03-12-2015, 01:03 PM</div>
+</div>
+<div class="message">Okay, thanks. Before uninstalling then reinstalling, this option was not there, thus I assumed I was doing something wrong. It is now there and I'm back on track.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1124</h2></div><div class="dateline">06-01-2016, 12:13 AM</div>
+</div>
+<div class="message">Sorry for necroposting here, but the following issue seems relevant to the topic raised by the OP here.<br />
+<br />
+When installing get_iplayer via the installer provided and under a «standard user account» you run into the following problem:<br />
+<br />
+Even while using the «run as administrator» option from the context menu to escalate permissions, the standard start menu entries do not get created for the current user. I had to upgrade my account temporarily to a full admin account, then install get_iplayer and then return my account to standard user.<br />
+<br />
+Come to think of it, I had not checked, if the installer creates a startmenu entry in the other administrator account, therefore allowing the startmenu links to be copied over. However, IMHO shortcuts should be created for all users per default or at least on an optional basis during the install.<br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-01-2016, 12:29 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-01-2016, 12:13 AM)</span></cite>Even while using the «run as administrator» option from the context menu to escalate permissions, the standard start menu entries do not get created for the current user. I had to upgrade my account temporarily to a full admin account, then install get_iplayer and then return my account to standard user.</blockquote>That is what the instructions tell you to do, for the reason you've discovered<br />
+<blockquote class="mycode_quote"><cite><span> (06-01-2016, 12:13 AM)</span></cite>Come to think of it, I had not checked, if the installer creates a startmenu entry in the other administrator account, therefore allowing the startmenu links to be copied over.</blockquote>That is the case when using a separate adminstrator account.<br />
+<blockquote class="mycode_quote"><cite><span> (06-01-2016, 12:13 AM)</span></cite>However, IMHO shortcuts should be created for all users per default or at least on an optional basis during the install.</blockquote>This has already been fixed for next release. Future installers will perform an explicit "All Users" installation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1124</h2></div><div class="dateline">06-01-2016, 02:38 PM</div>
+</div>
+<div class="message">Well, regard my post then as a request for improvement of the installer, please!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to find console</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

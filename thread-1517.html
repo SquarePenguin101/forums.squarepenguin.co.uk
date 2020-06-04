@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Mojolicious dependencies not installed with cpan utility on Debian wheezy</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Mojolicious dependencies not installed with cpan utility on Debian wheezy</div>
+<div id="pagetitle"><h2>Mojolicious dependencies not installed with cpan utility on Debian wheezy</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1912</h2></div><div class="dateline">02-10-2017, 04:07 AM</div>
+</div>
+<div class="message">Hi, I have installed Mojolicious with command <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cpan Mojolicious</code></div></div>, and it's up to date (7.46)but it still warned me to install Mojolicious and reverted to sequential indexing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-10-2017, 02:40 PM</div>
+</div>
+<div class="message">Identify your OS and version, and post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -V</code></div></div>Also post the output (if any) from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MMojo::UserAgent -e 'print &#36;INC{"Mojo/UserAgent.pm"},"&#92;n"'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1912</h2></div><div class="dateline">02-10-2017, 04:25 PM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@Debian7:~# cpan Mojolicious<br />
+Going to read '/root/.cpan/Metadata'<br />
+  Database was generated on Sun, 01 Oct 2017 22:17:02 GMT<br />
+Mojolicious is up to date (7.46).</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@Debian7:~# perl -V<br />
+Summary of my perl5 (revision 5 version 14 subversion 2) configuration:<br />
+   <br />
+  Platform:<br />
+    osname=linux, osvers=4.9.0-2-amd64, archname=x86_64-linux-gnu-thread-multi<br />
+    uname='linux tatooine 4.9.0-2-amd64 #1 smp debian 4.9.13-1 (2017-02-27) x86_64 gnulinux '<br />
+    config_args='-Dusethreads -Duselargefiles -Dccflags=-DDEBIAN -D_FORTIFY_SOURCE=2 -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Dldflags= -Wl,-z,relro -Dlddlflags=-shared -Wl,-z,relro -Dcccdlflags=-fPIC -Darchname=x86_64-linux-gnu -Dprefix=/usr -Dprivlib=/usr/share/perl/5.14 -Darchlib=/usr/lib/perl/5.14 -Dvendorprefix=/usr -Dvendorlib=/usr/share/perl5 -Dvendorarch=/usr/lib/perl5 -Dsiteprefix=/usr/local -Dsitelib=/usr/local/share/perl/5.14.2 -Dsitearch=/usr/local/lib/perl/5.14.2 -Dman1dir=/usr/share/man/man1 -Dman3dir=/usr/share/man/man3 -Dsiteman1dir=/usr/local/man/man1 -Dsiteman3dir=/usr/local/man/man3 -Dusesitecustomize -Duse64bitint -Dman1ext=1 -Dman3ext=3perl -Dpager=/usr/bin/sensible-pager -Uafs -Ud_csh -Ud_ualarm -Uusesfio -Uusenm -Ui_libutil -DDEBUGGING=-g -Doptimize=-O2 -Duseshrplib -Dlibperl=libperl.so.5.14.2 -des'<br />
+    hint=recommended, useposix=true, d_sigaction=define<br />
+    useithreads=define, usemultiplicity=define<br />
+    useperlio=define, d_sfio=undef, uselargefiles=define, usesocks=undef<br />
+    use64bitint=define, use64bitall=define, uselongdouble=undef<br />
+    usemymalloc=n, bincompat5005=undef</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>root@Debian7:~# perl -MMojo::UserAgent -e 'print &#36;INC{"Mojo/UserAgent.pm"},"&#92;n"'<br />
+Can't locate IO/Socket/IP.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.14.2 /usr/local/share/perl/5.14.2 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.14 /usr/share/perl/5.14 /usr/local/lib/site_perl .) at /usr/local/share/perl/5.14.2/Mojo/IOLoop/Client.pm line 5.<br />
+BEGIN failed--compilation aborted at /usr/local/share/perl/5.14.2/Mojo/IOLoop/Client.pm line 5.<br />
+Compilation failed in require at /usr/local/share/perl/5.14.2/Mojo/IOLoop.pm line 7.<br />
+BEGIN failed--compilation aborted at /usr/local/share/perl/5.14.2/Mojo/IOLoop.pm line 7.<br />
+Compilation failed in require at /usr/local/share/perl/5.14.2/Mojo/UserAgent.pm line 6.<br />
+BEGIN failed--compilation aborted at /usr/local/share/perl/5.14.2/Mojo/UserAgent.pm line 6.<br />
+Compilation failed in require.<br />
+BEGIN failed--compilation aborted.</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-10-2017, 04:45 PM</div>
+</div>
+<div class="message">Thanks. The error message tells you what is wrong. You are missing the IO::Socket::IP module, required by Mojolicious.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1912</h2></div><div class="dateline">02-10-2017, 05:11 PM</div>
+</div>
+<div class="message">Thanks, it's fine now! I googled a lot and installed IO::Socket::IP. And Socket module is also required. Now everything works good. Concordance indexing is quite faster!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Mojolicious dependencies not installed with cpan utility on Debian wheezy</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

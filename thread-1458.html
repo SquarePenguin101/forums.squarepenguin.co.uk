@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - iTunes won't import radio downloads from 96k/48k DASH streams</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; iTunes won't import radio downloads from 96k/48k DASH streams</div>
+<div id="pagetitle"><h2>iTunes won't import radio downloads from 96k/48k DASH streams</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1878</h2></div><div class="dateline">12-07-2017, 01:32 AM</div>
+</div>
+<div class="message">Please forgive me if I'm being thick, which is entirely possible.<br />
+<br />
+I'm running get_iplayer version 3.01 on a Mac.  I use it exclusively for radio downloads, and I'm still able to download easily.  However, recently I've been having a problem with missing audio channel information for downloaded programmes.  Is there a way I can force get_iplayer downloads to be tagged/recognized as stereo? <br />
+<br />
+The issue:<br />
+In the past, all of my m4a downloads from get_iplayer were automatically 2-channel stereo audio and would import into iTunes without a hitch.  Lately, though, new downloads have no audio channel information.  It's not that they're listed as mono, but no audio channel information is listed when I go to "get info."  The files still play in Finder and VLC, but iTunes ignores the files when I try to import them - and it seems to be because of this lack of audio channel info.  <br />
+<br />
+My current solution is using xACT to transcode each file to wav and then transcode each wav file back to m4a - magically, the files are then recognized as being stereo and all is right with the world.  It's pretty fussy though and I'd love to have things back the way they were.<br />
+<br />
+Other notes:<br />
+ffmpeg version is 3.3.2<br />
+No external drives involved<br />
+OSX 10.11.6<br />
+Problem only occurs with get_iplayer files<br />
+<br />
+If anyone has any ideas, I'd be very grateful.  Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-07-2017, 03:27 PM</div>
+</div>
+<div class="message">Try <kbd>--radiomode=haf</kbd>. It appears that iTunes doesn't like output from 96k (and 48k) DASH streams, which are the default from outside the UK. No idea of the ultimate cause, but the Finder info panel content shouldn't be considered as diagnostic. Other files for which number of audio channels doesn't show in the info panel will import into iTunes and play just fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1878</h2></div><div class="dateline">13-07-2017, 03:23 PM</div>
+</div>
+<div class="message">Thanks Dinky!  This solution worked excellently.<br />
+<br />
+I wouldn't regard the Finder panel info as diagnostic normally, but it this case it was the one consistent difference across the problematic files.  Delighted to no longer have to worry about it!  Thanks again!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; iTunes won't import radio downloads from 96k/48k DASH streams</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

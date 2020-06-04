@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I remove v3.00 manual install after upgrading from PPA on Linux Mint?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; How do I remove v3.00 manual install after upgrading from PPA on Linux Mint?</div>
+<div id="pagetitle"><h2>How do I remove v3.00 manual install after upgrading from PPA on Linux Mint?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1927</h2></div><div class="dateline">12-07-2018, 07:27 PM</div>
+</div>
+<div class="message">Hello,<br />
+I cannot get my upgraded version to work, try though I did to apply what was said here to resolve the problem.<br />
+PPA added, version 3.16 installed over 3.0 and still it is 3.0 which is running when I try to use get_iplayer:<br />
+<br />
+&#36; uname -r<br />
+4.4.0-53-generic<br />
+Linux Mint running<br />
+upgraded/updated recently<br />
+<br />
+<br />
+<br />
+<br />
+Executing: /tmp/tmp.1T2azzZRow/gpg.1.sh --keyserver<br />
+hkp://keyserver.ubuntu.com:80<br />
+--recv-keys<br />
+02E04F78<br />
+gpg: requesting key 02E04F78 from hkp server keyserver.ubuntu.com<br />
+gpg: key 02E04F78: "Launchpad xbmc" not changed<br />
+gpg: Total number processed: 1<br />
+gpg:              unchanged: 1<br />
+                ~ &#36; sudo apt-get install get-iplayer<br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+get-iplayer is already the newest version (3.16-ppa32~xenial).<br />
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.<br />
+                  ~ &#36; get_iplayer garden<br />
+get_iplayer v3.00, Copyright (C) 2008-2010 Phil Lewis<br />
+<br />
+<br />
+Looked at the repositories lists, it's present in there.<br />
+Any ideas, please?<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">16-07-2018, 12:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>PPA added, version 3.16 installed over 3.0 and still it is 3.0 which is running when I try to use get_iplayer:</blockquote>
+<br />
+Surely 'whereis' is your friend.<br />
+<br />
+Try 'whereis get_iplayer' and see what that tells you. You can then remove the offending version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">17-07-2018, 01:58 PM</div>
+</div>
+<div class="message">the manual installation instructions tell you to put get_iplayer in /usr/local/bin<br />
+<br />
+the repositories place get-iplayer in /usr/bin<br />
+<br />
+(these are both appropriate, and the correct, locations)<br />
+<br />
+so if you install by hand, <span style="font-style: italic;" class="mycode_i">and</span> install from a repository, then which version you get is entirely dependent on how you've set your PATH variable.<br />
+<br />
+In general, if you're using a respository, then you probably don't want a manually installed version. So delete get_iplayer and get_iplayer.cgi from /usr/local/bin.<br />
+<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; How do I remove v3.00 manual install after upgrading from PPA on Linux Mint?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

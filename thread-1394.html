@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Series not downloading, or programs not in HD</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Series not downloading, or programs not in HD</div>
+<div id="pagetitle"><h2>Series not downloading, or programs not in HD</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-570</h2></div><div class="dateline">11-05-2017, 11:03 PM</div>
+</div>
+<div class="message">OK - I'm struggling to keep up / catch up with all the changes.<br />
+Used PVR Manager for several years without any problems. now episodes are being missed and/or not in HD.<br />
+(I find the command mode just too difficult ... being 72 years old doesn't help. :/ )<br />
+Also, specifying program URL fails to work for the missing episodes.<br />
+Not helped by desperately trying to get this all working OK before going away for 2+ months.<br />
+<br />
+OK - current problem - trying to get the "The World According to Kids" series to download.<br />
+<br />
+Ep1 downloads, Ep5 downloaded. Both in HD.<br />
+<br />
+If I try in command mode using the PID for Eps it downloads Ep2 and Ep4, but not in HD, and wont't download Ep3 at all.<br />
+<br />
+Anyone got any ideas as to why series are no longer downloading in their entirety? Or why I can't get HD versions of some episodes? Or why some episodes are just not downloading at all?<br />
+<br />
+Never used to have any of these issues. <br />
+<br />
+I'm obviously not getting how to get this new version ... and it's really stressing me ... after several years without any issues.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">12-05-2017, 12:15 AM</div>
+</div>
+<div class="message">Ok. 1st the problem with the episodes that aren't downloading in HD. This is very probably linked to the segment not available error in the <a href="https://github.com/get-iplayer/get_iplayer/wiki/issues">Known Issues</a>. Because of these errors GiP is falling back to the next best quality stream when it finds a broken one.<br />
+<br />
+For the 2nd problem with episode 3 not downloading, please can you post some output so we can see what GiP is trying to do?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">12-05-2017, 06:39 AM</div>
+</div>
+<div class="message">Hi OzoneVibe,<br />
+I'm behind with downloading &amp; The World According to Kids was one of the ones that I haven't done yet but I had started the download of the first episode last night, 11-05-2017.<br />
+I use the CLI &amp; the URL from the iPlayer site &amp; my command line thus looks like this,<br />
+<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b08mn6yt/the-world-according-to-kids-series-1-1-love-hate">http://www.bbc.co.uk/iplayer/episode/b08...-love-hate</a> --modes=flash<br />
+<br />
+Now let me say that I'm still only on GiP v2.97, which I know is not supported etc &amp; I've not upgraded yet for a few reasons &amp; I use --modes=flash because it supports resuming as I used to get a lot of connection timed out.<br />
+Now normally when I use --modes=flash I get the HD download which is, as you know, 1280x720 but after the download was finished I checked the resolution &amp; it was just 832x468.<br />
+So I checked what modes were available for that programme using --info &amp; it said for the flash modes that the highest quality available was flashvhigh1 which is the 832x468.<br />
+But what it also listed available was the mode hlshd1 which is the 1280x720.<br />
+So I tried downloading episode 3 using the following on the command line,<br />
+<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b08nz0xf/the-world-according-to-kids-series-1-3-right-wrong">http://www.bbc.co.uk/iplayer/episode/b08...ight-wrong</a> --tvmode=hlshd1<br />
+<br />
+After the normal long wait for it to start it eventually brought up the error as tvfan said,<br />
+'ERROR: Segment not available from server &lt;6&gt;'<br />
+So I would agree with tvfan that you are more than likely getting that same error &amp; your system is falling back to the next available mode.<br />
+If you don't mind the increase in bandwidth &amp; the doubling in filesize the programme will download in HD but 50fps &amp; not 25fps. <br />
+By the way, the filesize will be 2307.12MB instead of 1002.18MB as I've just checked it by downloading it &amp; then stopping the download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-570</h2></div><div class="dateline">12-05-2017, 08:28 AM</div>
+</div>
+<div class="message">Thanks, both.<br />
+<br />
+Thanks for the "Known Issues" link ... that might explain "some" of my problems.<br />
+<br />
+Firstly, I'm on v3.01.0 which I downloaded yesterday after installing the first version of 3.xx when it was initially available.<br />
+<br />
+Today, I'm getting different (more successful - still inconsistent) results  ... which only serves to confuse my impatient Aspergic brain even further.<br />
+<br />
+<br />
+My PVR listings still have the mode as flashhd (set as a default back in 2.something a long time ago) ... and, as the PVR tries to download the programs it says that it's substituting this with hlshd.<br />
+(This may be part of the problem, but it has been working fine on other series.)<br />
+<br />
+In PVR mode, Ep 1 and Ep 5 both downloaded last evening, via the Web PVR, in HD, just fine.<br />
+<br />
+Now (!) ... whilst the PVR wouldn't download Ep2 and Ep 4 last evening (despite ensuring the cache had been updated and force set to on (in case there was issues from previous attempts), today it did download them, albeit in 960x540. (These episodes are 2 and 4 weeks old ... can things still be changing on these?)<br />
+<br />
+So - in PVR mode, yesterday only Eps 1 &amp; 5, today Eps 1,2,4 &amp; 5.  Baffling! But still no Ep3 from in Web PVR<br />
+mode.<br />
+ <br />
+Eps 2 &amp; 4 are consistently only in 960x540 (either via PVR or Command Line using PID or URL), despite both having the following versions listed in info:<br />
+<br />
+INFO: hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,hlsvhigh1,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hvflow1,hvflow2,hvflow3<br />
+<br />
+AND ... to make things even less consistent ... today the command line, using URL, downloaded Ep3 (960x540) ... so I can't replicate the situation I had last evening to post the messages I was getting.<br />
+<br />
+The end result is that I have everything I want, other than not all in HD, and without knowing why/how it happened today differently to yesterday.<br />
+<br />
+May as well leave it there, and HOPE that the Beeb get things in a manner that GiP can provide me with what I want.<br />
+<br />
+Trying to bat questions/answers back and forward when things don't always happen the same won't really get anyone (least of all me!) anywhere.<br />
+<br />
+One final question ... what should I now be using in the PVR in place of "flashhd" to get everything in HD?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1200</h2></div><div class="dateline">12-05-2017, 08:52 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-05-2017, 08:28 AM)</span></cite>One final question ... what should I now be using in the PVR in place of "flashhd" to get everything in HD?</blockquote><br />
+Yes, I'd really like to know this too.  I'm getting everything as 'hvfhd', which is eating up the diskspace like crazy.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">12-05-2017, 01:06 PM</div>
+</div>
+<div class="message">I forgot to say OzoneVibe that I don't use the PVR, I only do the CLI.<br />
+What I've done, &amp; I've done it for myself anyway but if it helps anybody by sharing it then great.<br />
+I've used the episode that you have had problems with, which is episode 3, to firstly do the --info bit to find out what modes are available &amp; a guide to the mode sizes as well.<br />
+Don't forget I'm still using GiP version 2.97 at the mo &amp; I've noticed for the first time with the --info that you had put above for episode 2 that you have a different list of modes than I get which is a bit understandable.<br />
+Anyway, here is the mode list that I get with the estimate file size for each of those modes.<br />
+<br />
+MODE		SIZE	        FRAME		FRAME 	AUDIO<br />
+			SIZE		RATE	RATE<br />
+=====================================================<br />
+flashvhigh1	631MB	832x468		25fps	44kHz<br />
+flashvhigh2	631MB	832x468		25fps	44kHz<br />
+flashhigh1	        337MB	640x360		25pfs	44kHz<br />
+flashhigh2	       337MB	640x360		25pfs	44kHz<br />
+flashstd1		216MB	640x360		25pfs	44kHz<br />
+flashstd2		216MB	640x360		25pfs	44kHz	<br />
+hlsvhigh1		631MB	832x438		25fps		ERROR: SEGMENT NOT AVAILABLE<br />
+hlshigh1		336MB	640x360		25pfs	44kHz<br />
+hlsstd1		214MB	640x360		25pfs		ERROR: SEGMENT NOT AVAILABLE<br />
+hvfhd1		2325MB	1280x720		50fps	48kHz<br />
+hvfhd2		2325MB	1280x720		50fps	48kHz<br />
+hvfhd3		2325MB	1280x720		50fps	48kHz<br />
+hvfhd4		2325MB	1280x720		50fps	48kHz<br />
+hvfsd1		1315MB	960x540		50fps	48kHz<br />
+hvfsd2		1315MB	960x540		50fps	48kHz<br />
+hvfsd3		1315MB	960x540		50fps	48kHz<br />
+hvfsd4		1315MB	960x540		50fps	48kHz<br />
+hvfvhigh1		760MB	960x540		25fps	24kHz<br />
+hvfvhigh2		760MB	960x540		25fps	24kHz<br />
+hvfhigh1		413MB	704x396		25fps	24kHz<br />
+hvfhigh2		413MB	704x396		25fps	24kHz<br />
+hvfstd1		238MB	512x288		25fps	24kHz<br />
+hvfstd2		238MB	512x288		25fps	24kHz<br />
+hvflow1		147MB	384x216		25fps	24kHz<br />
+hvflow2		147MB	384x216		25fps	24kHz<br />
+<br />
+So what I did then with each mode showing in the --info was to start a download &amp; then stop it after a short while.<br />
+So then I went to my download directory &amp; clicked on properties for each partial download to get the other info like the frame size, frame rate &amp; audio rate so that I could complete the above table.<br />
+So now you can see the difference in the modes that are available, at least for GiP v2.97 but I don't know about GiPv3.01.<br />
+And as you can see OV that 2 of those modes had the SEGMENT error which luckily happened within 100 secs of the download.<br />
+Now with these SEGMENT errors, from my own personal experience I've had them right at the beginning of a download but I've also had them at a bit more than 50% through the download which obviously is a pig.<br />
+As I've said previously OV that again from my personal experience I've not had a SEGMENT error when I've resorted to doing a HD download but as a 50fps one wheras the 25fps equivalent fails.<br />
+I hope this is a little helpful even though it doesn't fully match up to your version of GiP &amp; I think now I will be joining the 3.01 gang sooner rather than later lol<br />
+BTW<br />
+Here are 2 links to articles on Modes on WiKi which could be useful.<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">https://github.com/get-iplayer/get_iplayer/wiki/modes</a><br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-570</h2></div><div class="dateline">12-05-2017, 01:30 PM</div>
+</div>
+<div class="message">Oh cripes, Mystic Merlin! My poor old brain ..... LOL!!<br />
+<br />
+But, genuinely, thanks for that. I shall try and read slowly and understand a little more than I do. :)<br />
+<br />
+I can remember before computers, when they promised these things would "make our lives easier" .... Haha!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">14-05-2017, 05:04 PM</div>
+</div>
+<div class="message">Episodes 2-5 inclusive are currently still available in HD 1280x720 but on v2.99 using --mode=flashhd</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1264</h2></div><div class="dateline">14-05-2017, 09:34 PM</div>
+</div>
+<div class="message">Re the 'not downloading" issue.<br />
+<br />
+First a big thank you to Dinky for fixing GIP, again.<br />
+<br />
+I updated to V 3.0 and then 3.01 and my PVR downloads were failing with "segment missing" errors. I run PVR as a cron job 12:01 to 08:00 (for free usage) as my broadband is too slow for real time viewing from iplayer.<br />
+<br />
+I tried to download the failed downloads with CLI using pid. My "options" file had tvmode = flashvhigh (that was my preference since a long time ago) and in the messages I was seeing "Input modelist remapped from flashvhigh to hlsvhigh" "update preferences". I changed the tvmode in "option" to hlsvhigh.<br />
+<br />
+I was still getting missing segments with hlsvhigh. I noted the dvf modes available and thought to try dvf.<br />
+<br />
+My next change in my "options" was to change tvmode=dvf (just dvf; to see if a/any dvf mode would be selected on download). The next downloads were selecting a dvf option and everything now works as before the BBC changes with V2.99. Movies are about 1GB and 1 hour programmes are approx 600MB. I confess to not understanding why I am getting the files sizes I want with tvmode=dvf as by rights I should be using the preferences described in <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">https://github.com/get-iplayer/get_iplayer/wiki/modes</a> but for the time being if my system/setup isn't broken anymore I am not going to make more changes.<br />
+<br />
+I appreciate there is a post under this subject that details the various modes and the use of --info (good tip) but what solved my issue may help others and someone who understands the modes better than me might be able to explain what is going on. For the moment though I am happy.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">14-05-2017, 10:36 PM</div>
+</div>
+<div class="message">lol @OzoneVibe<br />
+The world before computers.<br />
+Well we wouldn't have GiP &amp; hence there wouldn't be a DinkyPumpkin either lol<br />
+But going back to what HarryVaderci has not long said about availability of HD downloads for the series of THE WORLD ACCORDING TO KIDS that you want OV.<br />
+Well, Episode 3 that you have had the most problems with I decided to try it out. Don't forget I'm using an unsupported version of GiP, 2.97. But the recent problems highlighted have nothing to do with a specific GiP version as the problems are at the BBC end.<br />
+Firstly, doing a --info on the programme in question, I got a list of various modes that would seem to be available.<br />
+So, as I only use the CLI, I used the mode --tvmode=hlshd1 which would give a 1280x720 at 25fps &amp; a file size of about 1010MB download.<br />
+The download eventually started &amp; then stopped with the segment not available error &amp; with this 'Download aborted at 50 secs in programme' as well.<br />
+So then I tried the mode --tvmode=hvfhd1 &amp; this didn't have the errors as I expected from my experience so far.<br />
+From my experience any hls modes don't work but the hvf ones do.<br />
+So, the hvfhd1 mode works &amp; it would be a HD download at 1280x720 but at 50fps which means the file size would be about twice the size at about 2325MB.<br />
+I would say that the closest mode option, if you don't want to use the hvfhd1 mode, would be --hvfsd1 which would give you a 960x540 at 50fps &amp; a file size of about 1315MB which is not much more than the file size of the hlshd1 mode if that would've worked.<br />
+As I haven't used the PVR I don't know what option you would choose to get the above mentioned modes if available.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">14-05-2017, 11:40 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I tried to download the failed downloads with CLI using pid. My "options" file had tvmode = flashvhigh (that was my preference since a long time ago) and in the messages I was seeing "Input modelist remapped from flashvhigh to hlsvhigh" "update preferences". I changed the tvmode in "option" to hlsvhigh.<br />
+<br />
+I was still getting missing segments with hlsvhigh.</blockquote>This is because since version 3.00, Flash modes have been removed from get_iplayer. The modelist remapped message was telling you that in place of flashvhigh, it would use hlsvhigh. As you noticed, you got the missing segments message when GiP did try hlsvhigh. When you changed your options file to hlsvhigh, you still got the missing segments because you were still attempting to download the same faulty stream as GiP had automatically remapped you to before.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I noted the dvf modes available and thought to try dvf.<br />
+<br />
+My next change in my "options" was to change tvmode=dvf (just dvf; to see if a/any dvf mode would be selected on download). The next downloads were selecting a dvf option and everything now works as before the BBC changes with V2.99. Movies are about 1GB and 1 hour programmes are approx 600MB. I confess to not understanding why I am getting the files sizes I want with tvmode=dvf as by rights I should be using the preferences described in <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">https://github.com/get-iplayer/get_iplayer/wiki/modes</a> but for the time being if my system/setup isn't broken anymore I am not going to make more changes.</blockquote>
+What you have done here by specifying dvf rather than specifying a particular dvf mode, is you have told GiP to use its default settings for that type of stream. In this case that tells GiP to use the DASH streams and only use 25fps streams. As it happens, the highest quality 25fps stream available using DASH is dvfxsd which is pretty much the same as the old flashvhigh mode (and the hlsvhigh mode which failed).<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>by rights I should be using the preferences described in <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">https://github.com/get-iplayer/get_iplayer/wiki/modes</a></blockquote>
+You don't have to use them if you don't want to. They are an option to tell GiP what quality you want, but specifying a mode type or even a specific mode like you had done before can work just as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1264</h2></div><div class="dateline">16-05-2017, 04:38 PM</div>
+</div>
+<div class="message">Many thanks to tvfan to providing a detailed explanation to the questions I raised in my post. Extremely informative. Thankyou.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">16-05-2017, 10:52 PM</div>
+</div>
+<div class="message">I'm only posting to say the same as you Dangermouse, I mean field lol<br />
+And that is that tvfan has been very good in answering posts from my limited experience with him &amp; he is clear &amp; informative in what he types. I've found him to probably be the best poster that I've come across on the Forum here.<br />
+So I will end my post in saying @Thanks tvfan for your help when you can. I hope to be like you one day &amp; I shall rename myself as "widetvfan" lol</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1794</h2></div><div class="dateline">18-05-2017, 04:23 PM</div>
+</div>
+<div class="message">Just a heads up, folks.<br />
+<br />
+I had a list of 6 failed downloads (first broadcast pre-May 6). These were part-downloaded 25fps TS (hlshd) files with the "File segment not available from server" warnings.<br />
+<br />
+Today, five resumed and completed successfully using the CLI and one resumed and completed successfully using the new Automator.<br />
+<br />
+Hope this helps folks.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Series not downloading, or programs not in HD</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

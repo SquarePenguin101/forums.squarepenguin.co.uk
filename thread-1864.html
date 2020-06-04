@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer 3.17.0 re-indexes programmes before every download with —refresh-future</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer 3.17.0 re-indexes programmes before every download with —refresh-future</div>
+<div id="pagetitle"><h2>get_iplayer 3.17.0 re-indexes programmes before every download with —refresh-future</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1864-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">17-08-2018, 11:37 PM</div>
+</div>
+<div class="message">I have just installed the newest release.<br />
+<br />
+I ran a search using get_iplayer Gardeners World<br />
+<br />
+get_iplayer indexed the tv programmes, then gave me the expected list<br />
+<br />
+I then input get_iplayer 2507 to download the latest Gardener's World<br />
+<br />
+get_iplayer indexed the tv programmes again, then downloaded the programme.<br />
+<br />
+<br />
+I tried running my web pvr and it indexed the tv again<br />
+<br />
+When the web pvr completed I immediately ran it again, and again it indexed the tv.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-08-2018, 01:22 AM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a proper report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">18-08-2018, 06:55 PM</div>
+</div>
+<div class="message">OK,<br />
+<br />
+I am running the latest Windows 10 as updated on Tuesday.  3.16 worked fine after that update.<br />
+<br />
+get_iplayer 3.17.0-MSWin32<br />
+<br />
+Commands:<br />
+1. get_iplayer gardeners world --verbose &gt;e:\getiplayersearch.txt  (file attached)<br />
+2. get_iplayer 2489 --force --verbose &gt;e:\getiplayerdownload.txt (also attached)<br />
+<br />
+The pid is b0bg73ct and I have now downloaded it successfully twice - hence the --force in the command above<br />
+<br />
+No errors received.<br />
+<br />
+When I sat down to generate the verbose files, I noted that my tv.cache file was timed at 17:39, and the tv.cache.old was 13:29.  I checked and the pvr had just run successfully and had updated the cache and downloaded a programme.<br />
+<br />
+I ran the first command above, and my tv.cache was updated at 17:47.<br />
+<br />
+I ran the second command and the tv.cache updated to 17:50<br />
+<br />
+You can see from the verbose files that both commands updated the cache.<br />
+<br />
+I hope that's sufficient info.<br />
+<br />
+Oh - the P: drive which I download to is a network linked drive in my server PC, but apart from the odd .temp version of a download this has never caused a problem and didn't this evening when I generated the verbose files.<br />
+<br />
+I started the thread with a query to see if anyone else had the problem, it would appear not.<br />
+<br />
+Along with many others I just want to say thank you for maintaining this excellent tool.<br/><br/>
+<a href="static/thread-1864-getiplayersearch.txt">getiplayersearch.txt</a><br/>
+<a href="static/thread-1864-getiplayerdownload.txt">getiplayerdownload.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-08-2018, 07:50 PM</div>
+</div>
+<div class="message">Thanks for the logs. I suspect you have corrupted your cache. Delete all your cache files and rebuild them, then try again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">18-08-2018, 09:01 PM</div>
+</div>
+<div class="message">Initial tests seem OK - Thanks.<br />
+<br />
+I'll keep an eye on it for a day or so.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">19-08-2018, 01:13 PM</div>
+</div>
+<div class="message">It is happening again today.<br />
+<br />
+get_iplayer gardeners world --verbose &gt;files_attached<br />
+<br />
+I'm not still trying to get Gardener' World - just using it as the example<br />
+<br />
+Two consecutive searches - files attached.  They are timed 1 minute apart.<br />
+<br />
+The line <br />
+<br />
+INFO: Cache refresh limit (tv): 2018-08-18T15:46:11+00:00<br />
+<br />
+is interesting<br/><br/>
+<a href="static/thread-1864-getiplayersearch1.txt">getiplayersearch1.txt</a><br/>
+<a href="static/thread-1864-getiplayersearch2.txt">getiplayersearch2.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">19-08-2018, 01:25 PM</div>
+</div>
+<div class="message">Do you have refresh future enabled?<br />
+<br />
+I was seeing this behaviour with 3.16, rebuilding the cache would fix for a while and then it would come back.<br />
+<br />
+I stopped using refresh future and the problem disappeared completely.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">19-08-2018, 02:21 PM</div>
+</div>
+<div class="message">I do, I'll give your suggestion a try.  Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">19-08-2018, 11:43 PM</div>
+</div>
+<div class="message">I turned off refresh future but it looks like it is still updating tv cache before it should.<br />
+<br />
+My last run of pvr updated the cache at 23:14.  I tried a search using get_iplayer gardeners' at 23:37 and it again refreshed the tv cache, with no additions to the cache.  The pvr run added nothing too.<br />
+<br />
+I can live with it - it doesn't cause any downloads to fail.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">20-08-2018, 12:39 AM</div>
+</div>
+<div class="message">I should have added I turned off refresh future and deleted and rebuilt the cache file. <br />
+Having refresh future on seems to cause intermittent cache problems, with refresh future on there are more occasions when no programmes are added to the cache and that seems to trigger the problem.<br />
+<br />
+<br />
+A tricky one for Dinky to find as it is intermittent.......</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">20-08-2018, 08:54 AM</div>
+</div>
+<div class="message">I did do the delete and rebuild.  Thanks.<br />
+<br />
+My decades of programming for a living makes me agree with you about finding the problem.  Seems not many people have it anyway.<br />
+<br />
+At least if people come here looking they have some suggestions to try.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-08-2018, 01:23 PM</div>
+</div>
+<div class="message">--refresh-future won't affect refresh trigger unless a future programme listing happens to contain garbage data that breaks the structure of the cache file and thus screws up subsequent commands. You'll have to inspect the cache file to see if something looks amiss. If you can't tell, stick it on a postbin site and I'll take a look.<br />
+<br />
+If the cache file looks OK, you may want to perform a better test. Both times you submitted logs, your cache had just been updated before you ran tests, so you wouldn't expect to see any cache additions. Therefore it isn't possible to tell if the cache isn't being updated at all or is corrupted on disk.  Turn off any automated runs of the PVR so nothing else is touching the cache file. Then run 3 searches (with --verbose) with at least four hours between runs (allow a few extra minutes to be sure), and note the time of each run on the clock of the system where you ran it. Post all 3 logs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">20-08-2018, 09:22 PM</div>
+</div>
+<div class="message">OK, <br />
+<br />
+I've had a look at the TV cache file and nothing untoward in it as far as I can see.  Each entry on a single line.<br />
+<br />
+<br />
+I'll give your other suggestion a try tomorrow, but I'm confused as to what it will show.<br />
+<br />
+Waiting more than four hours, I would expect the cache to be updated, whereas running a search and then a download within a couple of minutes I would not expect the second (download) command to re-update the cache, which is what is happening.  Similarly running two searches in quick succession, with both updating the cache.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-08-2018, 10:26 PM</div>
+</div>
+<div class="message">Just because the refresh runs doesn't necessarily mean anything is added to the cache. That appears to be the root of the problem. I thought I'd found a bug related to --refresh-future, but you said removing it doesn't change anything on your machine. It would help to have the output from a proper test on your machine for comparison with my tests.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-08-2018, 10:37 PM</div>
+</div>
+<div class="message">Also: Perform your tests with --refresh-future.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">21-08-2018, 08:53 AM</div>
+</div>
+<div class="message">OK,<br />
+<br />
+I rebuilt without refresh-future at 22:40 yesterday and left everything overnight.  Starting the first test now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">21-08-2018, 08:05 PM</div>
+</div>
+<div class="message">Here are the requested files, the name includes the time the commands were started.<br />
+<br />
+I'll restart my PVR now.<br/><br/>
+<a href="static/thread-1864-getiplayersearch0855.txt">getiplayersearch0855.txt</a><br/>
+<a href="static/thread-1864-getiplayersearch1525.txt">getiplayersearch1525.txt</a><br/>
+<a href="static/thread-1864-getiplayersearch2000.txt">getiplayersearch2000.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-08-2018, 10:58 PM</div>
+</div>
+<div class="message">Thanks for the logs. They square with my results, so this is down to a bug. Until it is fixed, you'll continue see a lot of unnecessary cache updates with <kbd>--refresh-future</kbd> in preferences. <kbd>--refresh-future</kbd>  is of little real use, but if you don't mind all the extra updates, it's harmless (albeit wasteful) to keep it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">21-08-2018, 11:13 PM</div>
+</div>
+<div class="message">Thanks for that Dinky.<br />
+<br />
+I'm glad I could help.<br />
+<br />
+I had 30+ years of tracking down my own and other people's bugs - it can be a thankless and soul-destroying task.  :)<br />
+<br />
+Perl is somewhat different to the FORTRAN and Assembler I used to do.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">02-09-2018, 10:13 PM</div>
+</div>
+<div class="message">To maybe ask a dumb question - how do you turn off refreshfuture?<br />
+<br />
+I have refreshfuture 1 in my options (which I don't recall putting there), but deleting it (--pref-del) doesn't touch it and trying to add a zero value via --pref-add fails.<br />
+<br />
+I'm also seeing exactly the same recurring cache corruption issue - I reported it before (<a href="thread-1795.html">here</a>) and we ended up with the rebuild solution. As reported above, that works, but the issue recurs after a while.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1864-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; get_iplayer 3.17.0 re-indexes programmes before every download with —refresh-future</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

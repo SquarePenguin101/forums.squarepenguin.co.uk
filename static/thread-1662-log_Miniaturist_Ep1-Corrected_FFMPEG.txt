@@ -1,0 +1,255 @@
+get_iplayer 3.12.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\TheHoose\.get_iplayer
+INFO: User options file: C:\Users\TheHoose\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	force = 1
+	logprogress = 1
+	pid = b09ld4xr
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 3017 file cache entries for tv
+INFO: Got 17579 file cache entries for radio
+INFO: Cleaning PID - old: 'b09ld4xr' new: 'b09ld4xr'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b09ld4xr.json
+INFO: tv episode PID detected (b09ld4xr)
+Matches:
+INFO: 0 matching programmes
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b09ld4xr.json
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05s2ckj/transferformat/dash?cb=16222
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1516398549_536e065df0b9591de299376cc62f30d7
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1516355349&e=1516398549&h=402f77510c78859b6b5174bb092acc28
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p05s2ckj/transferformat/dash?cb=66068
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1516398550_22d2de0b9d25765434833843a0cd2bca
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism/pc_hd_abr_v2_dash_master.mpd?s=1516355350&e=1516398550&h=5b5f48c2f0e288687f1f85280f9f7a42
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05s2ckj/transferformat/hls?cb=83953
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.m3u8?__gda__=1516398550_ce9bbfac60c7a38777ce58f4e61cab35
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.m3u8?s=1516355350&e=1516398550&h=8e54d90c53aea81edd460d8ef95c3cca
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism.hlsv2.m3u8?at=4s0Gjtxs07d6f8856fa9cd622109e5e3e8455b5451f49c885632305734980
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p05s2ckj/transferformat/hls?cb=92544
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.m3u8?__gda__=1516398550_b045c3e1256143d8692cbd19f2337b9c
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.m3u8?s=1516355350&e=1516398550&h=bc0727a8e084d9acb569c774ae4dafe6
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/79b740-b09ld4fg/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.ism/vf_b09ld4fg_fe216847-cce9-46cc-95c0-b77c69a5f4ba.m3u8?at=fEtH_p_ff4baada7932d50a5095594b6f4b3044626cf54a05632305734980
+INFO: Found mode 'dvfxsd1': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfxsd2': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvflow1': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvflow2': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'hvfxsd1': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxsd2': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode 'hvfxsd3': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfhigh1': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh2': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode 'hvfhigh3': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfxhigh1': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh2': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfxhigh3': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfstd1': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfstd2': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfstd3': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvflow1': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvflow2': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvflow3': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b09ld4fg/transferformat/dash?cb=73243
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1516398551_4a3e4842a9f13b6727f008c147a14de6
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1516355351&e=1516398551&h=fa2dda0810fcc43ffcbd84f7f9f67b83
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b09ld4fg/transferformat/dash?cb=87679
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1516398551_6c66acabacd1e0bb905a94c73f42de53
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism/pc_hd_abr_v2_dash_master.mpd?s=1516355351&e=1516398551&h=2153b47131ec02c261b7df5826c7f1d7
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b09ld4fg/transferformat/hls?cb=76704
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.m3u8?__gda__=1516398551_82403e7173c055910f22bd8feb01f578
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.m3u8?s=1516355351&e=1516398551&h=ded71e240117ae2b2a30906cd5c31c11
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism.hlsv2.m3u8?at=qV2jFrtfd849befd41125f73ca4a3c4dcb86a7c373d6647d5632305828bc0
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874,.mp4.csmil/master.m3u8?hdnea=st=1516376951~exp=1516398551~acl=/*1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874*~hmac=75c4872c5b80525e50eeb59cf5009cbaf2339051be981d0df1cc52a6b5d43219
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b09ld4fg/transferformat/hls?cb=94453
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454.mp4/master.m3u8?hdnea=st=1516376952~exp=1516398552~acl=/*bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454.mp4*~hmac=53ff6fa1777ea1c98455bc168df3d7b9b6a3482f41ebd13704ef0d4ad690e41d
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.m3u8?__gda__=1516398552_962a9eb710b2b288aaccf6a304e41365
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.m3u8?s=1516355352&e=1516398552&h=ecc385f9205d136023a34003c7a70d5b
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/79b740-b09ld4fg/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.ism/vf_b09ld4fg_161f0883-cbf5-4e3a-b981-d0496e73b7d2.m3u8?at=8kLu358Nc2a87e564d8780cb7d647e95fd937bc6eb4c036a563230591ce00
+INFO: Found mode 'dvfhd1': (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfhd2': (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvfsd1': (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfsd2': (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvfxsd1': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfxsd2': (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvfhigh1': (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfhigh2': (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvfxhigh1': (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvfxhigh2': (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'dvflow1': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode 'dvflow2': (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode 'hlshd1': (gip_hls_iplayer_2424) hls h264 1280x720 25fps 2424kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode 'hlsvhigh1': (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode 'hvfhd1': (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhd2': (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfhd3': (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfsd1': (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfsd2': (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfsd3': (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfxsd1': (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxsd2': (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfxsd3': (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfhigh1': (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh2': (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfhigh3': (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfxhigh1': (gip_hvf_iplayer_1216) hls h264 704x396 25fps 1216kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh2': (gip_hvf_iplayer_1216) hls h264 704x396 25fps 1216kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfxhigh3': (gip_hvf_iplayer_1216) hls h264 704x396 25fps 1216kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvfstd1': (gip_hvf_iplayer_1069) hls h264 640x360 25fps 1069kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfstd2': (gip_hvf_iplayer_1069) hls h264 640x360 25fps 1069kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvfstd3': (gip_hvf_iplayer_1069) hls h264 640x360 25fps 1069kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'hvflow1': (gip_hvf_iplayer_803) hls h264 512x288 25fps 803kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvflow2': (gip_hvf_iplayer_803) hls h264 512x288 25fps 803kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode 'hvflow3': (gip_hvf_iplayer_803) hls h264 512x288 25fps 803kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode 'subtitles1': (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode 'subtitles2': (captions) http stream (CDN: mf_akamai_uk_plain/10)
+INFO: Found mode 'subtitles3': (captions) http stream (CDN: sis/10)
+INFO: Searching for versions: original
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally
+INFO: Mode list: hlshd,hvfxsd,dvfxsd,hlsvhigh,hvfxhigh,dvfxhigh,hvfstd,hlsstd,hlsxstd,hvflow,dvflow
+INFO: Searching for version: 'original'
+INFO: Found version: 'original'
+INFO: Modes to try for 'original' version: hlshd1,hvfxsd1,hvfxsd2,hvfxsd3,dvfxsd1,dvfxsd2,hlsvhigh1,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,hvfstd1,hvfstd2,hvfstd3,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2
+INFO: Downloading tv: 'The Miniaturist: Series 1 - 1. Episode 1 (b09ld4xr) [original]'
+INFO: Trying 'hlshd1' mode: attempt 1 / 3
+INFO: ffmpeg version string = 3.4
+INFO: ffmpeg version number = 3.4
+INFO: File name prefix = The_Miniaturist_Series_1_-_1._Episode_1_b09ld4xr_original
+DEBUG: HLS playlist URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874,.mp4.csmil/index_1_av.m3u8?hdnea=st=1516376951~exp=1516398551~acl=/*1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874*~hmac=75c4872c5b80525e50eeb59cf5009cbaf2339051be981d0df1cc52a6b5d43219
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874,.mp4.csmil/index_1_av.m3u8?hdnea=st=1516376951~exp=1516398551~acl=/*1500kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898454,3200kbps/modav/bUnknown-fe1c0c8e-2816-4d2d-a6c4-680bafffae2d_b09ld4fg_1512791898874*~hmac=75c4872c5b80525e50eeb59cf5009cbaf2339051be981d0df1cc52a6b5d43219
+INFO: Begin downloading at: 0.00 MB (00:00:00) [1]
+  1.0%    16.35 MB / ~1635.08 MB (00:01:00 / 01:29:56) [    6 / 540] @  65.4 Mb/s ETA: 00:03:17 (hlshd1) [audio+video]
+  2.0%    32.70 MB / ~1635.08 MB (00:01:50 / 01:29:56) [   11 / 540] @  87.2 Mb/s ETA: 00:02:26 (hlshd1) [audio+video]
+  3.0%    49.06 MB / ~1635.08 MB (00:02:40 / 01:29:56) [   16 / 540] @  78.5 Mb/s ETA: 00:02:41 (hlshd1) [audio+video]
+  4.0%    65.41 MB / ~1635.08 MB (00:03:30 / 01:29:56) [   21 / 540] @  74.8 Mb/s ETA: 00:02:47 (hlshd1) [audio+video]
+  5.0%    81.76 MB / ~1635.08 MB (00:04:20 / 01:29:56) [   26 / 540] @  72.7 Mb/s ETA: 00:02:50 (hlshd1) [audio+video]
+  6.0%    98.11 MB / ~1635.08 MB (00:05:10 / 01:29:56) [   31 / 540] @  71.4 Mb/s ETA: 00:02:52 (hlshd1) [audio+video]
+  7.0%   114.46 MB / ~1635.08 MB (00:06:10 / 01:29:56) [   37 / 540] @  76.3 Mb/s ETA: 00:02:39 (hlshd1) [audio+video]
+  8.0%   130.82 MB / ~1635.08 MB (00:07:10 / 01:29:56) [   43 / 540] @  74.8 Mb/s ETA: 00:02:40 (hlshd1) [audio+video]
+  9.0%   147.17 MB / ~1635.08 MB (00:08:10 / 01:29:56) [   49 / 540] @  73.6 Mb/s ETA: 00:02:41 (hlshd1) [audio+video]
+ 10.0%   163.52 MB / ~1635.08 MB (00:08:50 / 01:29:56) [   53 / 540] @  72.7 Mb/s ETA: 00:02:41 (hlshd1) [audio+video]
+ 11.0%   179.87 MB / ~1635.08 MB (00:09:40 / 01:29:56) [   58 / 540] @  71.9 Mb/s ETA: 00:02:41 (hlshd1) [audio+video]
+ 12.0%   196.23 MB / ~1635.08 MB (00:10:20 / 01:29:56) [   62 / 540] @  71.4 Mb/s ETA: 00:02:41 (hlshd1) [audio+video]
+ 13.0%   212.58 MB / ~1635.08 MB (00:11:00 / 01:29:56) [   66 / 540] @  70.9 Mb/s ETA: 00:02:40 (hlshd1) [audio+video]
+ 14.0%   228.93 MB / ~1635.08 MB (00:12:00 / 01:29:56) [   72 / 540] @  70.4 Mb/s ETA: 00:02:39 (hlshd1) [audio+video]
+ 15.0%   245.28 MB / ~1635.08 MB (00:12:50 / 01:29:56) [   77 / 540] @  72.7 Mb/s ETA: 00:02:32 (hlshd1) [audio+video]
+ 16.0%   261.63 MB / ~1635.08 MB (00:13:40 / 01:29:56) [   82 / 540] @  72.2 Mb/s ETA: 00:02:32 (hlshd1) [audio+video]
+ 17.0%   277.98 MB / ~1635.08 MB (00:14:20 / 01:29:56) [   86 / 540] @  71.7 Mb/s ETA: 00:02:31 (hlshd1) [audio+video]
+ 18.0%   294.33 MB / ~1635.08 MB (00:15:10 / 01:29:56) [   91 / 540] @  71.4 Mb/s ETA: 00:02:30 (hlshd1) [audio+video]
+ 19.0%   310.69 MB / ~1635.08 MB (00:16:10 / 01:29:56) [   97 / 540] @  71.0 Mb/s ETA: 00:02:29 (hlshd1) [audio+video]
+ 20.0%   327.04 MB / ~1635.08 MB (00:17:00 / 01:29:56) [  102 / 540] @  70.7 Mb/s ETA: 00:02:27 (hlshd1) [audio+video]
+ 21.0%   343.39 MB / ~1635.08 MB (00:17:40 / 01:29:56) [  106 / 540] @  70.4 Mb/s ETA: 00:02:26 (hlshd1) [audio+video]
+ 22.0%   359.74 MB / ~1635.08 MB (00:18:20 / 01:29:56) [  110 / 540] @  71.9 Mb/s ETA: 00:02:21 (hlshd1) [audio+video]
+ 23.0%   376.09 MB / ~1635.08 MB (00:19:00 / 01:29:56) [  114 / 540] @  71.6 Mb/s ETA: 00:02:20 (hlshd1) [audio+video]
+ 24.0%   392.45 MB / ~1635.08 MB (00:19:50 / 01:29:56) [  119 / 540] @  71.4 Mb/s ETA: 00:02:19 (hlshd1) [audio+video]
+ 25.0%   408.80 MB / ~1635.08 MB (00:20:30 / 01:29:56) [  123 / 540] @  72.7 Mb/s ETA: 00:02:14 (hlshd1) [audio+video]
+ 26.0%   425.15 MB / ~1635.08 MB (00:21:20 / 01:29:56) [  128 / 540] @  72.4 Mb/s ETA: 00:02:13 (hlshd1) [audio+video]
+ 27.0%   441.50 MB / ~1635.08 MB (00:22:10 / 01:29:56) [  133 / 540] @  72.1 Mb/s ETA: 00:02:12 (hlshd1) [audio+video]
+ 28.0%   457.86 MB / ~1635.08 MB (00:22:50 / 01:29:56) [  137 / 540] @  71.8 Mb/s ETA: 00:02:11 (hlshd1) [audio+video]
+ 29.0%   474.21 MB / ~1635.08 MB (00:23:50 / 01:29:56) [  143 / 540] @  71.6 Mb/s ETA: 00:02:09 (hlshd1) [audio+video]
+ 30.0%   490.56 MB / ~1635.08 MB (00:24:40 / 01:29:56) [  148 / 540] @  71.4 Mb/s ETA: 00:02:08 (hlshd1) [audio+video]
+ 31.0%   506.91 MB / ~1635.08 MB (00:25:50 / 01:29:56) [  155 / 540] @  71.1 Mb/s ETA: 00:02:06 (hlshd1) [audio+video]
+ 32.0%   523.27 MB / ~1635.08 MB (00:26:40 / 01:29:56) [  160 / 540] @  71.0 Mb/s ETA: 00:02:05 (hlshd1) [audio+video]
+ 33.0%   539.62 MB / ~1635.08 MB (00:27:20 / 01:29:56) [  164 / 540] @  70.8 Mb/s ETA: 00:02:03 (hlshd1) [audio+video]
+ 34.0%   555.97 MB / ~1635.08 MB (00:28:10 / 01:29:56) [  169 / 540] @  70.6 Mb/s ETA: 00:02:02 (hlshd1) [audio+video]
+ 35.0%   572.32 MB / ~1635.08 MB (00:29:10 / 01:29:56) [  175 / 540] @  70.4 Mb/s ETA: 00:02:00 (hlshd1) [audio+video]
+ 36.0%   588.67 MB / ~1635.08 MB (00:29:50 / 01:29:56) [  179 / 540] @  71.4 Mb/s ETA: 00:01:57 (hlshd1) [audio+video]
+ 37.0%   605.02 MB / ~1635.08 MB (00:30:40 / 01:29:56) [  184 / 540] @  71.2 Mb/s ETA: 00:01:55 (hlshd1) [audio+video]
+ 38.0%   621.38 MB / ~1635.08 MB (00:31:40 / 01:29:56) [  190 / 540] @  71.0 Mb/s ETA: 00:01:54 (hlshd1) [audio+video]
+ 39.0%   637.73 MB / ~1635.08 MB (00:32:40 / 01:29:56) [  196 / 540] @  70.9 Mb/s ETA: 00:01:52 (hlshd1) [audio+video]
+ 40.0%   654.08 MB / ~1635.08 MB (00:33:40 / 01:29:56) [  202 / 540] @  70.7 Mb/s ETA: 00:01:50 (hlshd1) [audio+video]
+ 41.0%   670.43 MB / ~1635.08 MB (00:34:30 / 01:29:56) [  207 / 540] @  70.6 Mb/s ETA: 00:01:49 (hlshd1) [audio+video]
+ 42.0%   686.78 MB / ~1635.08 MB (00:35:20 / 01:29:56) [  212 / 540] @  70.4 Mb/s ETA: 00:01:47 (hlshd1) [audio+video]
+ 43.0%   703.13 MB / ~1635.08 MB (00:36:10 / 01:29:56) [  217 / 540] @  70.3 Mb/s ETA: 00:01:46 (hlshd1) [audio+video]
+ 44.0%   719.49 MB / ~1635.08 MB (00:37:00 / 01:29:56) [  222 / 540] @  71.1 Mb/s ETA: 00:01:43 (hlshd1) [audio+video]
+ 45.0%   735.84 MB / ~1635.08 MB (00:37:40 / 01:29:56) [  226 / 540] @  70.9 Mb/s ETA: 00:01:41 (hlshd1) [audio+video]
+ 46.0%   752.19 MB / ~1635.08 MB (00:38:20 / 01:29:56) [  230 / 540] @  70.8 Mb/s ETA: 00:01:39 (hlshd1) [audio+video]
+ 47.0%   768.54 MB / ~1635.08 MB (00:39:20 / 01:29:56) [  236 / 540] @  70.7 Mb/s ETA: 00:01:38 (hlshd1) [audio+video]
+ 48.0%   784.90 MB / ~1635.08 MB (00:40:00 / 01:29:56) [  240 / 540] @  70.6 Mb/s ETA: 00:01:36 (hlshd1) [audio+video]
+ 49.0%   801.25 MB / ~1635.08 MB (00:40:40 / 01:29:56) [  244 / 540] @  70.4 Mb/s ETA: 00:01:34 (hlshd1) [audio+video]
+ 50.0%   817.60 MB / ~1635.08 MB (00:41:40 / 01:29:56) [  250 / 540] @  70.3 Mb/s ETA: 00:01:32 (hlshd1) [audio+video]
+ 51.0%   833.95 MB / ~1635.08 MB (00:42:40 / 01:29:56) [  256 / 540] @  71.0 Mb/s ETA: 00:01:30 (hlshd1) [audio+video]
+ 52.0%   850.30 MB / ~1635.08 MB (00:43:50 / 01:29:56) [  263 / 540] @  70.9 Mb/s ETA: 00:01:28 (hlshd1) [audio+video]
+ 53.0%   866.65 MB / ~1635.08 MB (00:44:50 / 01:29:56) [  269 / 540] @  70.7 Mb/s ETA: 00:01:26 (hlshd1) [audio+video]
+ 54.0%   883.01 MB / ~1635.08 MB (00:45:50 / 01:29:56) [  275 / 540] @  70.6 Mb/s ETA: 00:01:25 (hlshd1) [audio+video]
+ 55.0%   899.36 MB / ~1635.08 MB (00:46:40 / 01:29:56) [  280 / 540] @  70.5 Mb/s ETA: 00:01:23 (hlshd1) [audio+video]
+ 56.0%   915.71 MB / ~1635.08 MB (00:47:30 / 01:29:56) [  285 / 540] @  70.4 Mb/s ETA: 00:01:21 (hlshd1) [audio+video]
+ 57.0%   932.06 MB / ~1635.08 MB (00:48:30 / 01:29:56) [  291 / 540] @  70.3 Mb/s ETA: 00:01:19 (hlshd1) [audio+video]
+ 58.0%   948.42 MB / ~1635.08 MB (00:49:20 / 01:29:56) [  296 / 540] @  70.3 Mb/s ETA: 00:01:18 (hlshd1) [audio+video]
+ 59.0%   964.77 MB / ~1635.08 MB (00:50:10 / 01:29:56) [  301 / 540] @  70.2 Mb/s ETA: 00:01:16 (hlshd1) [audio+video]
+ 60.0%   981.12 MB / ~1635.08 MB (00:51:00 / 01:29:56) [  306 / 540] @  70.1 Mb/s ETA: 00:01:14 (hlshd1) [audio+video]
+ 61.0%   997.48 MB / ~1635.08 MB (00:52:00 / 01:29:56) [  312 / 540] @  70.0 Mb/s ETA: 00:01:12 (hlshd1) [audio+video]
+ 62.0%  1013.83 MB / ~1635.08 MB (00:53:00 / 01:29:56) [  318 / 540] @  69.9 Mb/s ETA: 00:01:11 (hlshd1) [audio+video]
+ 63.0%  1030.18 MB / ~1635.08 MB (00:54:00 / 01:29:56) [  324 / 540] @  69.8 Mb/s ETA: 00:01:09 (hlshd1) [audio+video]
+ 64.0%  1046.53 MB / ~1635.08 MB (00:54:30 / 01:29:56) [  327 / 540] @  69.8 Mb/s ETA: 00:01:07 (hlshd1) [audio+video]
+ 65.0%  1062.89 MB / ~1635.08 MB (00:55:10 / 01:29:56) [  331 / 540] @  70.3 Mb/s ETA: 00:01:05 (hlshd1) [audio+video]
+ 66.0%  1079.24 MB / ~1635.08 MB (00:56:10 / 01:29:56) [  337 / 540] @  70.2 Mb/s ETA: 00:01:03 (hlshd1) [audio+video]
+ 67.0%  1095.59 MB / ~1635.08 MB (00:57:10 / 01:29:56) [  343 / 540] @  70.1 Mb/s ETA: 00:01:01 (hlshd1) [audio+video]
+ 68.0%  1111.94 MB / ~1635.08 MB (00:58:20 / 01:29:56) [  350 / 540] @  70.0 Mb/s ETA: 00:00:59 (hlshd1) [audio+video]
+ 69.0%  1128.30 MB / ~1635.08 MB (00:59:10 / 01:29:56) [  355 / 540] @  70.0 Mb/s ETA: 00:00:57 (hlshd1) [audio+video]
+ 70.0%  1144.65 MB / ~1635.08 MB (01:00:10 / 01:29:56) [  361 / 540] @  69.9 Mb/s ETA: 00:00:56 (hlshd1) [audio+video]
+ 71.0%  1161.00 MB / ~1635.08 MB (01:01:00 / 01:29:56) [  366 / 540] @  69.3 Mb/s ETA: 00:00:54 (hlshd1) [audio+video]
+ 72.0%  1177.35 MB / ~1635.08 MB (01:01:50 / 01:29:56) [  371 / 540] @  69.8 Mb/s ETA: 00:00:52 (hlshd1) [audio+video]
+ 73.0%  1193.71 MB / ~1635.08 MB (01:02:40 / 01:29:56) [  376 / 540] @  69.7 Mb/s ETA: 00:00:50 (hlshd1) [audio+video]
+ 74.0%  1210.06 MB / ~1635.08 MB (01:03:40 / 01:29:56) [  382 / 540] @  69.6 Mb/s ETA: 00:00:48 (hlshd1) [audio+video]
+ 75.0%  1226.41 MB / ~1635.08 MB (01:04:30 / 01:29:56) [  387 / 540] @  69.6 Mb/s ETA: 00:00:46 (hlshd1) [audio+video]
+ 76.0%  1242.76 MB / ~1635.08 MB (01:05:10 / 01:29:56) [  391 / 540] @  69.5 Mb/s ETA: 00:00:45 (hlshd1) [audio+video]
+ 77.0%  1259.11 MB / ~1635.08 MB (01:06:00 / 01:29:56) [  396 / 540] @  69.5 Mb/s ETA: 00:00:43 (hlshd1) [audio+video]
+ 78.0%  1275.47 MB / ~1635.08 MB (01:06:50 / 01:29:56) [  401 / 540] @  69.4 Mb/s ETA: 00:00:41 (hlshd1) [audio+video]
+ 79.0%  1291.82 MB / ~1635.08 MB (01:07:50 / 01:29:56) [  407 / 540] @  69.4 Mb/s ETA: 00:00:39 (hlshd1) [audio+video]
+ 80.0%  1308.17 MB / ~1635.08 MB (01:08:40 / 01:29:56) [  412 / 540] @  69.3 Mb/s ETA: 00:00:37 (hlshd1) [audio+video]
+ 81.0%  1324.52 MB / ~1635.08 MB (01:09:40 / 01:29:56) [  418 / 540] @  69.3 Mb/s ETA: 00:00:35 (hlshd1) [audio+video]
+ 82.0%  1340.87 MB / ~1635.08 MB (01:10:30 / 01:29:56) [  423 / 540] @  69.7 Mb/s ETA: 00:00:33 (hlshd1) [audio+video]
+ 83.0%  1357.22 MB / ~1635.08 MB (01:11:30 / 01:29:56) [  429 / 540] @  69.6 Mb/s ETA: 00:00:31 (hlshd1) [audio+video]
+ 84.0%  1373.58 MB / ~1635.08 MB (01:12:20 / 01:29:56) [  434 / 540] @  69.5 Mb/s ETA: 00:00:30 (hlshd1) [audio+video]
+ 85.0%  1389.93 MB / ~1635.08 MB (01:13:00 / 01:29:56) [  438 / 540] @  69.5 Mb/s ETA: 00:00:28 (hlshd1) [audio+video]
+ 86.0%  1406.28 MB / ~1635.08 MB (01:13:50 / 01:29:56) [  443 / 540] @  69.4 Mb/s ETA: 00:00:26 (hlshd1) [audio+video]
+ 87.0%  1422.63 MB / ~1635.08 MB (01:14:40 / 01:29:56) [  448 / 540] @  69.4 Mb/s ETA: 00:00:24 (hlshd1) [audio+video]
+ 88.0%  1438.98 MB / ~1635.08 MB (01:15:40 / 01:29:56) [  454 / 540] @  69.3 Mb/s ETA: 00:00:22 (hlshd1) [audio+video]
+ 89.0%  1455.33 MB / ~1635.08 MB (01:16:30 / 01:29:56) [  459 / 540] @  68.1 Mb/s ETA: 00:00:21 (hlshd1) [audio+video]
+ 90.0%  1471.68 MB / ~1635.08 MB (01:17:20 / 01:29:56) [  464 / 540] @  68.1 Mb/s ETA: 00:00:19 (hlshd1) [audio+video]
+ 91.0%  1488.03 MB / ~1635.08 MB (01:18:10 / 01:29:56) [  469 / 540] @  68.0 Mb/s ETA: 00:00:17 (hlshd1) [audio+video]
+ 92.0%  1504.39 MB / ~1635.08 MB (01:18:50 / 01:29:56) [  473 / 540] @  68.0 Mb/s ETA: 00:00:15 (hlshd1) [audio+video]
+ 93.0%  1520.74 MB / ~1635.08 MB (01:19:30 / 01:29:56) [  477 / 540] @  68.0 Mb/s ETA: 00:00:13 (hlshd1) [audio+video]
+ 94.0%  1537.10 MB / ~1635.08 MB (01:20:20 / 01:29:56) [  482 / 540] @  68.3 Mb/s ETA: 00:00:11 (hlshd1) [audio+video]
+ 95.0%  1553.44 MB / ~1635.08 MB (01:21:10 / 01:29:56) [  487 / 540] @  68.3 Mb/s ETA: 00:00:09 (hlshd1) [audio+video]
+ 96.0%  1569.80 MB / ~1635.08 MB (01:21:50 / 01:29:56) [  491 / 540] @  68.3 Mb/s ETA: 00:00:07 (hlshd1) [audio+video]
+ 97.0%  1586.15 MB / ~1635.08 MB (01:22:50 / 01:29:56) [  497 / 540] @  68.2 Mb/s ETA: 00:00:05 (hlshd1) [audio+video]
+ 98.0%  1602.50 MB / ~1635.08 MB (01:24:00 / 01:29:56) [  504 / 540] @  68.2 Mb/s ETA: 00:00:03 (hlshd1) [audio+video]
+ 99.0%  1618.85 MB / ~1635.08 MB (01:25:00 / 01:29:56) [  510 / 540] @  68.2 Mb/s ETA: 00:00:01 (hlshd1) [audio+video]
+
+INFO: Downloaded: 1698.69 MB (01:29:56) [540] in 00:03:20 @ 67.95 Mb/s (hlshd1) [audio+video]
+INFO: Converting to MP4
+INFO: Command: "ffmpeg" "-loglevel" "fatal" "-stats" "-y" "-i" "C:\Users\TheHoose\Desktop\iPlayer Recordings\The_Miniaturist_Series_1_-_1._Episode_1_b09ld4xr_original.hls.ts" "-c:v" "copy" "-c:a" "copy" "-bsf:a" "aac_adtstoasc" "C:\Users\TheHoose\Desktop\iPlayer Recordings\The_Miniaturist_Series_1_-_1._Episode_1_b09ld4xr_original.partial.mp4"
+frame= 5465 fps=0.0 q=-1.0 size=   66304kB time=00:03:38.56 bitrate=2485.2kbits/s speed= 437x    frame= 9871 fps=9870 q=-1.0 size=  115968kB time=00:06:34.80 bitrate=2406.3kbits/s speed= 395x    frame=14581 fps=9611 q=-1.0 size=  172032kB time=00:09:43.23 bitrate=2416.3kbits/s speed= 384x    frame=19247 fps=9542 q=-1.0 size=  231168kB time=00:12:49.84 bitrate=2459.9kbits/s speed= 382x    frame=23891 fps=9491 q=-1.0 size=  290048kB time=00:15:55.60 bitrate=2486.5kbits/s speed= 380x    frame=25605 fps=8486 q=-1.0 size=  311296kB time=00:17:04.17 bitrate=2490.0kbits/s speed= 339x    frame=25701 fps=7303 q=-1.0 size=  313088kB time=00:17:08.00 bitrate=2495.0kbits/s speed= 292x    frame=25767 fps=6363 q=-1.0 size=  314112kB time=00:17:10.65 bitrate=2496.7kbits/s speed= 255x    frame=25825 fps=5635 q=-1.0 size=  315136kB time=00:17:12.96 bitrate=2499.2kbits/s speed= 225x    frame=25919 fps=5036 q=-1.0 size=  316928kB time=00:17:16.72 bitrate=2504.3kbits/s speed= 201x    frame=25997 fps=4589 q=-1.0 size=  318208kB time=00:17:19.84 bitrate=2506.9kbits/s speed= 184x    frame=26127 fps=4229 q=-1.0 size=  320000kB time=00:17:25.04 bitrate=2508.5kbits/s speed= 169x    frame=26145 fps=3676 q=-1.0 size=  320256kB time=00:17:25.76 bitrate=2508.7kbits/s speed= 147x    frame=26223 fps=3438 q=-1.0 size=  321280kB time=00:17:28.88 bitrate=2509.3kbits/s speed= 138x    frame=26253 fps=3199 q=-1.0 size=  321792kB time=00:17:30.08 bitrate=2510.4kbits/s speed= 128x    frame=26345 fps=2982 q=-1.0 size=  323072kB time=00:17:33.76 bitrate=2511.6kbits/s speed= 119x    frame=26425 fps=2830 q=-1.0 size=  324352kB time=00:17:36.96 bitrate=2513.9kbits/s speed= 113x    frame=26563 fps=2683 q=-1.0 size=  326400kB time=00:17:42.48 bitrate=2516.6kbits/s speed= 107x    frame=26721 fps=2559 q=-1.0 size=  328192kB time=00:17:48.80 bitrate=2515.5kbits/s speed= 102x    frame=26813 fps=2446 q=-1.0 size=  329728kB time=00:17:52.49 bitrate=2518.6kbits/s speed=97.8x    frame=26881 fps=2332 q=-1.0 size=  330752kB time=00:17:55.20 bitrate=2520.0kbits/s speed=93.3x    frame=26993 fps=2234 q=-1.0 size=  331776kB time=00:17:59.68 bitrate=2517.3kbits/s speed=89.4x    frame=27022 fps=798 q=-1.0 size=  332288kB time=00:18:00.84 bitrate=2518.5kbits/s speed=31.9x    frame=27022 fps=791 q=-1.0 Lsize=  333111kB time=00:18:00.84 bitrate=2524.7kbits/s speed=31.6x    
+INFO: Command exit code 0 (raw code = 0)
+INFO: Loading recordings history
+INFO: Downloading thumbnail
+INFO: Getting URL: http://ichef.bbci.co.uk/images/ic/192x108/p05rtgqy.jpg
+INFO: Tagging MP4
+INFO: Command: "AtomicParsley" "C:\Users\TheHoose\Desktop\iPlayer Recordings\The_Miniaturist_Series_1_-_1._Episode_1_b09ld4xr_original.mp4" "--freefree" "--overWrite" "--stik" "TV Show" "--advisory" "remove" "--copyright" "2018 British Broadcasting Corporation, all rights reserved" "--title" "Episode 1" "--artist" "BBC One" "--albumArtist" "BBC TV" "--album" "The Miniaturist: Series 1" "--grouping" "Drama,Classic & Period" "--composer" "BBC iPlayer" "--genre" "Drama" "--comment" "Amsterdam, 1686. Nella Oortman marries a rich merchant and enters a world of secrecy." "--year" "2017-12-26T21:00:00Z" "--tracknum" "1" "--disk" "1" "--lyrics" "Amsterdam, 1686. Nella Oortman marries a rich merchant, but life in her new home is unfulfilled. Even her cabinet house brings a mystery to the secretive world she has entered.
+
+EPISODE
+http://www.bbc.co.uk/iplayer/episode/b09ld4xr
+
+SERIES
+http://www.bbc.co.uk/programmes/b09lgqt5" "--description" "Amsterdam, 1686. Nella Oortman marries a rich merchant and enters a world of secrecy." "--longdesc" "Amsterdam, 1686. Nella Oortman marries a rich merchant, but life in her new home is unfulfilled. Even her cabinet house brings a mystery to the secretive world she has entered." "--hdvideo" "true" "--TVShowName" "The Miniaturist: Series 1" "--TVEpisode" "s01e01" "--TVSeasonNum" "1" "--TVEpisodeNum" "1" "--TVNetwork" "BBC One" "--artwork" "C:\Users\TheHoose\Desktop\iPlayer Recordings\The_Miniaturist_Series_1_-_1._Episode_1_b09ld4xr_original.jpg"
+
+ Started writing to temp file.
+ Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: >  0% -------------------------------------------------------| Progress: =========> 16% ----------------------------------------------| Progress: ===================> 34% ------------------------------------| Progress: =============================> 52% --------------------------| Progress: =======================================> 71% ----------------| Progress: =================================================> 89% ------|
+ Finished writing to temp file.
+INFO: Command exit code 0 (raw code = 0)

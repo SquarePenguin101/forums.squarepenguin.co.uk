@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - listen and ports options not working in 3.22</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; listen and ports options not working in 3.22</div>
+<div id="pagetitle"><h2>listen and ports options not working in 3.22</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2433</h2></div><div class="dateline">01-09-2019, 11:28 AM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+I've recently upgraded from 3.20 to 3.22 on Ubuntu. Went through the usual steps of swapping out get_iplayer and get_iplayer.cgi as I have done periodically when things break - I noticed that my cache hadn't updated in days, which prompted the upgrade.<br />
+<br />
+The problem is that it (the cgi/web) won't start. I eventually tracked it down to the fact that the --listen and --port options have been removed and there is no way to pass these variables in to my (server) start script. The error from the cgi:<br />
+<br />
+Unknown option: listen<br />
+Unknown option: port<br />
+<br />
+I've also tried the -l and -p options (and the  -g), but the -p fails at line 1834 as it thinks it is a proxy port.<br />
+<br />
+I've searched around and tried a number of things, but can't get it to start. I can't even get it to start with no parameters i.e. just running a local ./get_iplayer.cgi<br />
+<br />
+I'm running bionic LTS and my kernel is  4.15.0-58-generic<br />
+<br />
+Hope someone can help...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2433</h2></div><div class="dateline">01-09-2019, 11:36 AM</div>
+</div>
+<div class="message">I've since pulled down get_iplayer.cgi v3.21 and running it with get_iplayer v3.22 in the meantime, which appears to be working.<br />
+<br />
+Points to a bug in v3.22 of get_iplayer.cgi</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">01-09-2019, 08:12 PM</div>
+</div>
+<div class="message">I can't reproduce your problem.<br />
+<br />
+If you use the get_iplayer repository on launchpad (see <a href="https://launchpad.net/~jon-hedgerows/+archive/get-iplayer">https://launchpad.net/~jon-hedgerows/+ar...et-iplayer</a>) then it comes with get_iplayer_web_pvr which runs the (unsupported) cgi interface on the address and port specified in /etc/default/get_iplayer_web_pvr.  It's been that way since I borrowed the packaging from debian back at version 2.something.<br />
+<br />
+And I can't make the get_iplayer.cgi break in the way you describe either.<br />
+<br />
+Some exact command lines and the full actual output would help.<br />
+<br />
+Jon<br />
+<br />
+PS. incidentally, by way of example, I get this:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; /usr/share/get_iplayer/get_iplayer.cgi --port 8080 --listen 0.0.0.0<br />
+INFO: Listening on 0.0.0.0:8080<br />
+WARNING: Insecure Remote access is allowed, use --listen=127.0.0.1 to limit to this host only</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-09-2019, 11:32 AM</div>
+</div>
+<div class="message">This means you're not invoking the web pvr:<br />
+<blockquote class="mycode_quote"><cite><span> (01-09-2019, 11:28 AM)</span></cite>Unknown option: listen<br />
+Unknown option: port</blockquote>This means you're invoking get_iplayer CLI instead with invalid options:<br />
+<blockquote class="mycode_quote"><cite><span> (01-09-2019, 11:28 AM)</span></cite>I've also tried the -l and -p options (and the  -g), but the -p fails at line 1834 as it thinks it is a proxy port.</blockquote>Your problem is between you and your scripts. As @jonhedgerows has already said, get_iplayer is working fine on Ubuntu. No options have been removed - be sure of your facts before you make such assertions. If you can't get the PPA release to work, start another thread and  <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system. This thread is closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; listen and ports options not working in 3.22</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

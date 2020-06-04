@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Two Pints of Lager and a Packet of Crisps: only audiodescribed version available</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Two Pints of Lager and a Packet of Crisps: only audiodescribed version available</div>
+<div id="pagetitle"><h2>Two Pints of Lager and a Packet of Crisps: only audiodescribed version available</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">15-06-2018, 01:24 PM</div>
+</div>
+<div class="message">I'm trying to download a program. It plays OK in iPlayer, but the get_iplayer tells me:<br />
+<br />
+INFO: No versions of this programme were selected (available versions: audiodescribed)<br />
+<br />
+What do I need to change to make this work?<br />
+<br />
+<a href="https://www.bbc.co.uk/iplayer/episode/b00749hs/two-pints-of-lager-and-a-packet-of-crisps-series-2-3-dirty-girls">https://www.bbc.co.uk/iplayer/episode/b0...irty-girls</a><br />
+<br />
+Thanks for any help<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-06-2018, 03:34 PM</div>
+</div>
+<div class="message">This is a case where the programme data used by get_iplayer doesn't match the iPlayer site. It can happen when old programmes are resurrected. Just download the "audiodescribed" version as indicated. I'm fairly sure it won't actually have audio description on it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">15-06-2018, 04:30 PM</div>
+</div>
+<div class="message">Thanks - problem solved.<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-547</h2></div><div class="dateline">17-06-2018, 11:21 AM</div>
+</div>
+<div class="message">I searched Iplayer but there is no audiodescribed version of 2 pints of lager. Is there not another solution?<br />
+/iplayer/categories/audio-described/a-z?page=6</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">17-06-2018, 06:03 PM</div>
+</div>
+<div class="message">Yes there is - I managed to download the ones I wanted using the Windows PVR and putting "audiodescribed" into the Programme Version opion<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2184</h2></div><div class="dateline">18-06-2018, 09:14 PM</div>
+</div>
+<div class="message">The Version types used across all the Episodes are as follows:<br />
+<br />
+'audiodescribed'<br />
+'audiodescribed2'<br />
+'editorial'<br />
+'editorial2'<br />
+'iplayer'<br />
+'original'<br />
+'other'<br />
+<br />
+Run the following commands: [It is all one line, wrapping is forced by forum message width :)]<br />
+(Works with win7 &amp; win 10, Does NOT need Powershell. All the quotes means it will work in batch files)<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">"C:\Program Files (x86)\get_iplayer\get_iplayer.cmd" "--test" "--force" "--verbose" "--version=*" "--pid=b006m8nj" "--pid-recursive" "--tvmode=tvbest" | findstr "/B" "/C:INFO: Getting stream data for version:" &gt; VersionTypeList.txt</span><br />
+<br />
+Equivalent to grepping out all lines starting with "/C:INFO: Getting stream data for version:"<br />
+<br />
+If the output or 'VersionTypeList.txt' is sorted for unique term you get the list above. [pipe to 'sort -u' or 'uniq'] <br />
+You can change PID to the match any other Programme/Series etc<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Tip:</span><br />
+If you install Git from ---&gt; '<a href="https://git-scm.com/download/win">Git for Windows</a>' you get a whole raft of unix tools that are usable in the Windows command shell ....... and you get git, if you need it !!! ;)<br />
+[A lot easier than installing cygwin from scratch when your *nix skills are well out of date :) ]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-06-2018, 10:25 PM</div>
+</div>
+<div class="message">For everyone else: There is no need to go to such lengths. There are very few cases where you would need to know all the different versions on offer, and this isn't one. For cases like this where some programme versions are mislabelled, you just need to allow the "audiodescribed" version (which doesn't really have audio description) as a fallback with <kbd>--versions=default,audiodescribed</kbd>. If you don't know how that works, see the documentation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2184</h2></div><div class="dateline">19-06-2018, 01:06 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-06-2018, 10:25 PM)</span></cite>For everyone else: There is no need to go to such lengths. There are very few cases where you would need to know all the different versions on offer, and this isn't one. For cases like this where some programme versions are mislabelled, you just need to allow the "audiodescribed" version (which doesn't really have audio description) as a fallback with <kbd>--versions=default,audiodescribed</kbd>. If you don't know how that works, see the documentation.</blockquote><br />
+Sorry to say this was one !<br />
+<br />
+I needed to go through this 'pain' because episodes were missing and I had added 'audiodescribed' as you have stated.<br />
+Is there a wildcard you can use like '--versions=*' that downloads the best it can find ?<br />
+<br />
+I have downloaded for this series 'all' the versions apart from the ones ending in '2'.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-06-2018, 01:32 PM</div>
+</div>
+<div class="message">I don't know what you mean by "missing". get_iplayer can download every Two Pints episode available via iPlayer using <kbd>--versions</kbd> as I instructed. If you have trouble downloading a different episode than the OP, open your own thread and <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system. This thread is now closed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2105</h2></div><div class="dateline">24-02-2019, 03:15 PM</div>
+</div>
+<div class="message">I able unable to download The Two Pints of Lager and a Packet of Crisps Box Set off the iplayer to watch at a later date.<br />
+Any ideas please on how I can download this, or is this a problem with all their box sets?<br />
+<br />
+Many thanks<br />
+<br />
+Thememaster501<br />
+<br />
+This was the first one I tried to download.<br />
+<br />
+<a href="https://www.bbc.co.uk/iplayer/episode/b0074cc7/two-pints-of-lager-and-a-packet-of-crisps-when-janet-met-johnny">https://www.bbc.co.uk/iplayer/episode/b0...met-johnny</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Two Pints of Lager and a Packet of Crisps: only audiodescribed version available</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

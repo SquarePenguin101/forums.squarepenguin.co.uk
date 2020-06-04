@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Thumbnail URI not retrieved or parsed correctly for some programs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Thumbnail URI not retrieved or parsed correctly for some programs</div>
+<div id="pagetitle"><h2>Thumbnail URI not retrieved or parsed correctly for some programs</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1579</h2></div><div class="dateline">17-03-2017, 04:39 AM</div>
+</div>
+<div class="message">Hello!<br />
+<br />
+I've been finding some thumbnails are not coming up correctly for some programs, notably Radio 4's "15 Minute Drama" programs, "Afternoon Drama", and Radio 3's "Drama on 3."  This seems to have crept in during recent updates, though I'm still too much a newbie in GitHub to know how to isolate it reliably.<br />
+<br />
+For today, here's one example that comes up in get_iplayer 2.99-homebrew.0:<br />
+<kbd></kbd><br />
+<kbd>get_iplayer --type=radio --pid=b08h0c9f --thumbonly --info</kbd><br />
+<br />
+returns (among many other things)<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>thumbnail:      <a href="http://ichef.bbci.co.uk/images/ic/1920x1080/p01ynknj.jpg">http://ichef.bbci.co.uk/images/ic/1920x1...1ynknj.jpg</a></code></div>
+</div>
+<br />
+and this URI does get pulled and the file attached and such. The trouble is that the correct URI is:<br />
+<br />
+<a href="http://ichef.bbci.co.uk/images/ic/1920x1080/p04vkct4.jpg">http://ichef.bbci.co.uk/images/ic/1920x1...4vkct4.jpg</a><br />
+<br />
+That URI is the one in the logs that Get iPlayer Automator (1.8.7) is returning, so I'm using that to presume the metadata from BBC is not the (sole) issue.<br />
+<br />
+I'm very new at this, so if I err in my submissions or such, I'd welcome any corrections. Thanks very much!<br />
+<br />
+Edit:  Oh!  I should have said, as it might provide a clue.  That first URI returned is currently returned for all "15 Minute Drama" programs, whether on Radio 4, 4 Extra, and whether in the current or previous series. I'm sure you know that each run of this program has its own thumbnail, generally speaking.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-03-2017, 10:08 AM</div>
+</div>
+<div class="message">See 2.95 release notes. GiA uses an obsolete version of get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1579</h2></div><div class="dateline">17-03-2017, 02:42 PM</div>
+</div>
+<div class="message">Ah!  There it is.  :-)  <br />
+<br />
+Thank you very much for the pointer!  I will now go learn some more.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Thumbnail URI not retrieved or parsed correctly for some programs</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

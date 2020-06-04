@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Resuming broken?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Resuming broken?</div>
+<div id="pagetitle"><h2>Resuming broken?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-270</h2></div><div class="dateline">04-12-2013, 10:29 PM</div>
+</div>
+<div class="message">I've installed get_iplayer on my headless server, instead of being on Windows.<br />
+<br />
+It's been a day or so now, and what I've discovered is that if there is any interruption of the stream for any reason, when the download is resumed, it is always corrupt:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Resuming download at: 498988.494 kB / 1481.040 sec (54.6%)<br />
+INFO: Metadata:<br />
+INFO:&nbsp;&nbsp; duration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2711.08<br />
+INFO:&nbsp;&nbsp; moovPosition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36.00<br />
+INFO:&nbsp;&nbsp; width&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 832.00<br />
+INFO:&nbsp;&nbsp; height&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;468.00<br />
+INFO:&nbsp;&nbsp; videocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+INFO:&nbsp;&nbsp; audiocodecid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+INFO:&nbsp;&nbsp; avcprofile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77.00<br />
+INFO:&nbsp;&nbsp; avclevel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31.00<br />
+INFO:&nbsp;&nbsp; aacaot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.00<br />
+INFO:&nbsp;&nbsp; videoframerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.00<br />
+INFO:&nbsp;&nbsp; audiosamplerate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000.00<br />
+INFO:&nbsp;&nbsp; audiochannels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.00<br />
+INFO: trackinfo:<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;67777000.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;und<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;avc1<br />
+INFO:&nbsp;&nbsp; length&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;130131968.00<br />
+INFO:&nbsp;&nbsp; timescale&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48000.00<br />
+INFO:&nbsp;&nbsp; language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;und<br />
+INFO: sampledescription:<br />
+INFO:&nbsp;&nbsp; sampletype&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mp4a<br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested frame, ignoring data... <br />
+WARNING: Stream does not start with requested FLV frame, ignoring data... <br />
+WARNING: Stream does not start with requested FLV frame, ignoring data... <br />
+WARNING: Stream does not start with requested FLV frame, ignoring data... <br />
+WARNING: Stream does not start with requested FLV frame, ignoring data... <br />
+WARNING: Stream does not start with requested FLV frame, ignoring data...</code></div></div><br />
+<br />
+<br />
+It will constantly keep trying to resume, and constantly fail with that stream of warnings.<br />
+<br />
+Under Windows, there were very few occasions where there was a proper error that needed the partial file deleted, but the only way to solve this seems to be kill the process, delete the file, then restart the download.<br />
+<br />
+Anyone got any pointers?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2013, 11:27 PM</div>
+</div>
+<div class="message">You can try to limit the number of retries by running with, e.g., <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--attempts=3</code></div></div>.  The default is 50 per stream - read this:<br />
+<br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05032.html">http://www.mail-archive.com/get_iplayer@...05032.html</a><br />
+<br />
+If that doesn't help, there is nothing you can do except kill rtmpdump and delete the file.  Even if rtmpdump quits of its own accord, the file is useless if rtmpdump couldn't find a spot to cleanly resume.  The resume functionality can easily be thwarted if garbage comes over the wire or the connection is dropped - it's hit-and-miss.   You don't say what OS or rtmpdump version you are using, so make sure it's of recent vintage.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2013, 12:59 AM</div>
+</div>
+<div class="message">The OP of the mailing list thread I referenced implied he could make a partial file resumable with this:<br />
+<br />
+<a href="https://raw.github.com/K-S-V/Scripts/master/FlvFixer.php">https://raw.github.com/K-S-V/Scripts/mas...vFixer.php</a><br />
+<br />
+I've never tried it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">30-06-2014, 11:03 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/resuming-broken/#post-1638">Quote:</a>&lt;/div&gt;The OP of the mailing list thread I referenced implied he could make a partial file resumable with this:<br />
+<br />
+<a href="https://raw.github.com/K-S-V/Scripts/master/FlvFixer.php">https://raw.github.com/K-S-V/Scripts/mas...vFixer.php</a><br />
+<br />
+Iâve never tried it.</blockquote>
+<br />
+How would you use this script? Thx.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-07-2014, 11:08 AM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>php FlvFixer.php --help</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-699</h2></div><div class="dateline">04-11-2014, 10:24 PM</div>
+</div>
+<div class="message">rtmpdump does not resume properly.<br />
+<br />
+It attempts to find the last video keyframe by reading backwards from the end of the file without checking that its looking at a valid header.<br />
+<br />
+I have a small patch to find the last tag so that the original logic will work properly.<br />
+<br />
+rtmpdump now resumes after you kill it in mid download.<br />
+<br />
+congrats on finxing the get_iplayer awesome work!<br />
+<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&nbsp;&nbsp;&nbsp;&nbsp;fseek(file, 5, SEEK_SET);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if (fread(buffer, 1, 4, file) != 4) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RTMP_Log(RTMP_LOGERROR, "Couldn't read headerSize from file!");<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return RD_FAILED;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;headerSize = AMF_DecodeInt32(buffer);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;offset = headerSize;<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;while (offset &lt; size) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fseeko(file, offset + 5, SEEK_SET);<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fread(buffer, 1, 4, file) != 4) {<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RTMP_Log(RTMP_LOGERROR,<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Couldn't read tag header offset %d last good tag %d!",<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(int) offset, (int) lastGoodTag);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;payloadSize = AMF_DecodeInt24(buffer);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int lt, pt, ps, ts, sid;<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lt = AMF_DecodeInt32(buffer);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pt = buffer[4];<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ps = AMF_DecodeInt24(buffer + 5);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ts = AMF_DecodeInt24(buffer + 8);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ts |= (buffer[11] &lt;&lt; 24);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sid = AMF_DecodeInt24(buffer + 12);<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RTMP_Log(RTMP_LOGERROR, "Packet header @%d lt:%d pt:%d ps:%d ts:%d sid:%d!", offset,<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lt, pt, ps, ts, sid);<br />
+//<br />
+//<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (((bAudioOnly &amp;&amp; buffer[4] == 0x08) // audio frame<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|| (!bAudioOnly &amp;&amp; (buffer[4] == 0x09 &amp;&amp; (buffer[15] &amp; 0xf0) == 0x10)) // video keyframe in forst byte of data!<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) &amp;&amp; offset + payloadSize + 15 &lt; size) {<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastGoodTag = offset;<br />
+//<br />
+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastGoodTag = offset;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset += payloadSize + 15; // the back pointer the tag header and the payload<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;tsize = size - lastGoodTag - 4; // set tsize to point to offset from end of file of the header of last good tag</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-699</h2></div><div class="dateline">05-11-2014, 01:08 AM</div>
+</div>
+<div class="message">same patch as a git diff sent to the rtmpdump mailing list<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>diff --git a/rtmpdump.c b/rtmpdump.c<br />
+index 13741a7..5a69395 100644<br />
+--- a/rtmpdump.c<br />
++++ b/rtmpdump.c<br />
+@@ -303,8 +303,29 @@ GetLastKeyframe(FILE * file,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // output file [in]<br />
+&nbsp;&nbsp; // find the last seekable frame<br />
+&nbsp;&nbsp; off_t tsize = 0;<br />
+&nbsp;&nbsp; uint32_t prevTagSize = 0;<br />
++&nbsp;&nbsp;uint32_t headerSize = 0;<br />
++&nbsp;&nbsp;uint32_t payloadSize = 0;<br />
++&nbsp;&nbsp;off_t offset = 0;<br />
++&nbsp;&nbsp;off_t lastGoodTag = 0;<br />
+ <br />
+&nbsp;&nbsp; // go through the file and find the last video keyframe<br />
++&nbsp;&nbsp;fseek(file, 5, SEEK_SET);<br />
++&nbsp;&nbsp;if (fread(buffer, 1, 4, file) != 4) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RTMP_Log(RTMP_LOGERROR, "Couldn't read headerSize from file!");<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return RD_FAILED;<br />
++&nbsp;&nbsp;}<br />
++&nbsp;&nbsp;headerSize = AMF_DecodeInt32(buffer);<br />
++&nbsp;&nbsp;offset = headerSize;<br />
++&nbsp;&nbsp;while (offset &lt; size) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fseeko(file, offset + 5, SEEK_SET);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (fread(buffer, 1, 4, file) != 4) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; payloadSize = AMF_DecodeInt24(buffer);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lastGoodTag = offset;<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; offset += payloadSize + 15; // the back pointer the tag header and the payload<br />
++&nbsp;&nbsp;}<br />
++&nbsp;&nbsp;tsize = size - lastGoodTag - 4; // set tsize to point to offset from end of file of the header of last good tag<br />
+&nbsp;&nbsp; do<br />
+&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int xread;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-712</h2></div><div class="dateline">07-11-2014, 06:53 PM</div>
+</div>
+<div class="message">Just wanted to say thanks for the patch. I was quite frustrated with having a lot of failed downloads with failed resumes. And your patch does seem to have corrected this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-745</h2></div><div class="dateline">28-11-2014, 09:39 AM</div>
+</div>
+<div class="message">Improved resume patch<br />
+<br />
+Is seems that the flv file can have bad headers when downloads abort to the iplayer site. This validates each header prevTagSize against the payload size of the preceding tag and starts a couple of tags back just in case.<br />
+<br />
+Could also validate the flags I suppose anyone have any better ideas?<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>diff --git a/rtmpdump.c b/rtmpdump.c<br />
+index 13741a7..b9523bd 100644<br />
+--- a/rtmpdump.c<br />
++++ b/rtmpdump.c<br />
+@@ -303,8 +303,48 @@ GetLastKeyframe(FILE * file,&nbsp;&nbsp;&nbsp;&nbsp;// output file [in]<br />
+&nbsp;&nbsp; // find the last seekable frame<br />
+&nbsp;&nbsp; off_t tsize = 0;<br />
+&nbsp;&nbsp; uint32_t prevTagSize = 0;<br />
++&nbsp;&nbsp;uint32_t headerSize = 0;<br />
++&nbsp;&nbsp;uint32_t payloadSize = 0;<br />
++&nbsp;&nbsp;off_t offset = 0;<br />
++&nbsp;&nbsp;off_t oldoffset = 0;<br />
++&nbsp;&nbsp;off_t lastGoodTag = 0;<br />
+ <br />
+&nbsp;&nbsp; // go through the file and find the last video keyframe<br />
++&nbsp;&nbsp;fseek(file, 5, SEEK_SET);<br />
++&nbsp;&nbsp;if (fread(buffer, 1, 4, file) != 4) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RTMP_Log(RTMP_LOGERROR, "Couldn't read headerSize from file!");<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return RD_FAILED;<br />
++&nbsp;&nbsp;}<br />
++&nbsp;&nbsp;headerSize = AMF_DecodeInt32(buffer);<br />
++&nbsp;&nbsp;offset = headerSize;<br />
++&nbsp;&nbsp;while (offset &lt; size) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fseeko(file, offset , SEEK_SET);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fread(buffer, 1, 8, file) != 8) {<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prevTagSize = AMF_DecodeInt32(buffer);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;// if prevTagSize dosent match previous payloadSize this packet is fubar<br />
++&nbsp;&nbsp;&nbsp;&nbsp;if ( ( prevTagSize != 0 ) &amp;&amp; ( prevTagSize != ( payloadSize + 11 ) ) ) <br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
++/*<br />
++avoid this<br />
++<br />
++DEBUG: Packet: prevTagSize 5535d : lastGoodTag 997137924 oldoffset 997143463 offset 1003257860 payloadSize 6114382<br />
++DEBUG: Packet: prevTagSize 3067505264d : lastGoodTag 997143463 oldoffset 1003257860 offset 1006408882 payloadSize 3151007<br />
++DEBUG: Packet: prevTagSize 1520529135d : lastGoodTag 1003257860 oldoffset 1006408882 offset 1021507501 payloadSize 15098604<br />
++DEBUG: Packet: prevTagSize 1933000270d : lastGoodTag 1006408882 oldoffset 1021507501 offset 1037784596 payloadSize 16277080<br />
++DEBUG: Packet: prevTagSize 4182630141d : lastGoodTag 1021507501 oldoffset 1037784596 offset 1040989210 payloadSize 3204599<br />
++DEBUG: Packet: prevTagSize 2634447075d : lastGoodTag 1037784596 oldoffset 1040989210 offset 1052125896 payloadSize 11136671<br />
++DEBUG: Readback Packet: size 1045180416 tzize 7395816 offset 1037784596 prevTagSize -112337155<br />
++<br />
++*/<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;payloadSize = AMF_DecodeInt24(buffer+5);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastGoodTag = oldoffset;<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oldoffset = offset;<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offset += payloadSize + 15; // the back pointer (4)&nbsp;&nbsp;the tag header (11) and the payload<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// RTMP_Log(RTMP_LOGDEBUG, "Packet: prevTagSize %u : lastGoodTag %d oldoffset %d offset %d payloadSize %d", (uint32_t)prevTagSize, (int)lastGoodTag, (int)oldoffset, (int)offset, (int)payloadSize);<br />
++&nbsp;&nbsp;}<br />
++&nbsp;&nbsp;tsize = size - lastGoodTag - 4; // set tsize to point to offset from end of file of the header of last good tag<br />
+&nbsp;&nbsp; do<br />
+&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int xread;<br />
+@@ -324,6 +364,7 @@ GetLastKeyframe(FILE * file,&nbsp;&nbsp;&nbsp;&nbsp;// output file [in]<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+ <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prevTagSize = AMF_DecodeInt32(buffer);<br />
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// RTMP_Log(RTMP_LOGDEBUG, "Readback Packet: size %d tzize %d offset %d prevTagSize %d", (int)size, (int)tsize, (int)(size - tsize - 4), (int)prevTagSize);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //RTMP_Log(RTMP_LOGDEBUG, "Last packet: prevTagSize: %d", prevTagSize);<br />
+ <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (prevTagSize == 0)</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-745</h2></div><div class="dateline">28-11-2014, 09:40 AM</div>
+</div>
+<div class="message">Trying to upload the patch</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-745</h2></div><div class="dateline">28-11-2014, 09:42 AM</div>
+</div>
+<div class="message">Oh well patches are a security risk. Here is the patched c file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-779</h2></div><div class="dateline">16-12-2014, 01:50 AM</div>
+</div>
+<div class="message">Hello! wow thanks a lot for posting a patch to this issue. I have been experiencing similar issues regarding those same warning messages. I am just using rtmpdump without iplayer and I am getting those messages. I would like to patch my rtmpdump.exe with this patch, but I do not know how to do this. If someone could post the patched rtmpdump.exe, it would be very much apprecaited :D</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Resuming broken?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

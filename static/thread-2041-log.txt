@@ -1,0 +1,66 @@
+get_iplayer 3.12-homebrew, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /Users/<name>/.get_iplayer
+INFO: User options file: /Users/<name>/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	pid = m0005lz2
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Got 3029 file cache entries for tv
+INFO: Got 0 file cache entries for radio
+INFO: Cleaning PID - old: 'm0005lz2' new: 'm0005lz2'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/m0005lz2.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Failed to download JSON PID info: http://www.bbc.co.uk/programmes/m0005lz2.json
+WARNING: Could not determine PID type (m0005lz2). Trying to record PID directly.
+Matches:
+INFO: 0 matching programmes
+INFO: Programme not in history
+INFO: Getting URL: http://www.bbc.co.uk/programmes/m0005lz2.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Could not download programme metadata from http://www.bbc.co.uk/programmes/m0005lz2.json
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/m0005lz2/playlist.json
+INFO: Getting URL: http://www.bbc.co.uk/programmes/m0005lz2/playlist.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+ERROR: Failed to get version PID metadata from iPlayer site (JSON)
+INFO: iPlayer metadata URL (HTML) [default] = http://www.bbc.co.uk/iplayer/episode/m0005lz2/
+INFO: Getting URL: http://www.bbc.co.uk/iplayer/episode/m0005lz2/
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'default' version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [audiodescribed] = http://www.bbc.co.uk/iplayer/episode/m0005lz2/ad
+INFO: Getting URL: http://www.bbc.co.uk/iplayer/episode/m0005lz2/ad
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'audiodescribed' version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [signed] = http://www.bbc.co.uk/iplayer/episode/m0005lz2/sign
+INFO: Getting URL: http://www.bbc.co.uk/iplayer/episode/m0005lz2/sign
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'signed' version retrieved from iPlayer site (HTML)
+WARNING: No programmes are available for this PID with version(s): default
+ERROR: Could not get version PIDs and metadata
+ERROR: Could not get programme metadata
+WARNING: You have programmes over 30 days old that should be deleted.
+WARNING: Find them with 'get_iplayer --history --before=720'
+WARNING: or use the 'Recordings' tab in the Web PVR Manager.
+WARNING: Use 'get_iplayer --purge-files' to delete all programmes over 30 days old.
+WARNING: Use 'get_iplayer --prefs-add --no-purge' to suppress this warning.

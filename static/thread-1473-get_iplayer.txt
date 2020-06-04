@@ -1,0 +1,2600 @@
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/andy/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+INFO: Loaded PVR search 'nigella'
+INFO: Loaded PVR search 'barely_legal'
+INFO: Loaded PVR search 'heresy'
+INFO: Loaded PVR search 'dirkgently'
+INFO: Loaded PVR search 'howsafe'
+INFO: Loaded PVR search 'tooshort'
+INFO: Loaded PVR search 'hitchhiker'
+INFO: Loaded PVR search 'pink_floyd'
+INFO: Loaded PVR search 'silk'
+INFO: Loaded PVR search 'harly'
+INFO: Loaded PVR search 'ada'
+INFO: Loaded PVR search 'new_blood'
+INFO: Loaded PVR search 'bakeoff'
+INFO: Loaded PVR search 'rillington'
+INFO: Loaded PVR search 'apple_tree'
+INFO: Loaded PVR search 'saving_lives'
+INFO: Loaded PVR search 'comefly'
+INFO: Loaded PVR search 'radio2_live'
+INFO: Loaded PVR search 'railway'
+INFO: Loaded PVR search 'call-midwife'
+INFO: Loaded PVR search 'meet_lords'
+INFO: Loaded PVR search 'worlds'
+INFO: Loaded PVR search 'lifesavers'
+INFO: Loaded PVR search 'casualty'
+INFO: Loaded PVR search 'david_gilmour'
+INFO: Loaded PVR search 'castles'
+INFO: Loaded PVR search 'missing'
+INFO: Loaded PVR search 'sciencebritannica'
+INFO: Loaded PVR search 'crow'
+INFO: Loaded PVR search 'dangerous'
+INFO: Loaded PVR search 'hunted'
+INFO: Loaded PVR search 'game'
+INFO: Loaded PVR search 'skies'
+INFO: Loaded PVR search 'enfield_whitehouse'
+INFO: Loaded PVR search 'ss_gb'
+INFO: Loaded PVR search 'toughest_jobs'
+INFO: Loaded PVR search 'perrin'
+INFO: Loaded PVR search 'in_the_dark'
+INFO: Loaded PVR search 'click'
+INFO: Loaded PVR search 'silent_witness'
+INFO: Loaded PVR search 'londonspy'
+INFO: Loaded PVR search 'gruffalo'
+INFO: Loaded PVR search 'next_step'
+INFO: Loaded PVR search 'insert_name'
+INFO: Loaded PVR search 'bbc2_birthday'
+INFO: Loaded PVR search 'genius-of-invention'
+INFO: Loaded PVR search 'george_gently'
+INFO: Loaded PVR search 'replacement'
+INFO: Loaded PVR search 'gwyll'
+INFO: Loaded PVR search 'motorway'
+INFO: Loaded PVR search 'traffic_cops'
+INFO: Loaded PVR search 'commons'
+INFO: Loaded PVR search 'women_cars'
+INFO: Loaded PVR search 'building_cars'
+INFO: Loaded PVR search 'brain-doctors'
+INFO: Loaded PVR search 'hour'
+INFO: Loaded PVR search 'fifteen_billion'
+INFO: Loaded PVR search 'topgear'
+INFO: Loaded PVR search 'doctorwho'
+INFO: Loaded PVR search 'big_school'
+INFO: Loaded PVR search 'hislop'
+INFO: Loaded PVR search 'mock'
+INFO: Loaded PVR search 'divine_comedy'
+INFO: Loaded PVR search 'walliams'
+INFO: Loaded PVR search 'peter_kay'
+INFO: Loaded PVR search 'driver'
+INFO: Loaded PVR search 'stickman'
+INFO: Loaded PVR search 'jamesmay'
+INFO: Loaded PVR search 'dahl'
+INFO: Loaded PVR search 'jarre'
+INFO: Loaded PVR search 'cranes'
+INFO: Loaded PVR search 'f1'
+INFO: Loaded PVR search 'policing'
+INFO: Loaded PVR search 'cormoran'
+INFO: Loaded PVR search 'danny_zoo'
+INFO: Loaded PVR search 'apprentice'
+INFO: Loaded PVR search 'war_worlds'
+INFO: Loaded PVR search 'welcome_village'
+INFO: Loaded PVR search '6degrees'
+INFO: Loaded PVR search 'brian_pern'
+INFO: Loaded PVR search 'paramedics'
+INFO: Loaded PVR search 'gamechangers'
+INFO: Loaded PVR search 'qi'
+INFO: Loaded PVR search 'tubular_bells'
+INFO: Loaded PVR search 'who_do_you'
+INFO: Loaded PVR search 'gilmour'
+INFO: Loaded PVR search 'kate_bush'
+INFO: Loaded PVR search 'ashes'
+INFO: Loaded PVR search 'no_such_thing'
+INFO: Loaded PVR search 'all_about_two'
+INFO: Loaded PVR search 'ambulance'
+INFO: Loaded PVR search 'worst_witch'
+INFO: Loaded PVR search 'chicken'
+INFO: Loaded PVR search 'bangkok'
+INFO: Loaded PVR search 'our-kids'
+INFO: Loaded PVR search 'wouldilie'
+INFO: Loaded PVR search 'red_arrows'
+INFO: Loaded PVR search 'hour-to-save'
+INFO: Loaded PVR search 'the_voice'
+INFO: Loaded PVR search 'dara'
+INFO: Loaded PVR search 'byanymeans'
+INFO: Loaded PVR search 'hospital'
+INFO: Loaded PVR search 'horrible_histories'
+INFO: Loaded PVR search 'robot_wars'
+INFO: Loaded PVR search 'madmen'
+INFO: Loaded PVR search 'taboo'
+INFO: Loaded PVR search 'luther'
+INFO: Loaded PVR search 'prisoners_wives'
+INFO: Loaded PVR search 'helicopter'
+INFO: Loaded PVR search 'super_cars'
+INFO: Loaded PVR search 'intruders'
+INFO: Loaded PVR search 'unbelievable_truth'
+INFO: Loaded PVR search 'long_players'
+INFO: Loaded PVR search 'undercover'
+INFO: Loaded PVR search 'candycabs'
+INFO: Loaded PVR search 'hignfy'
+INFO: Loaded PVR search 'war_road'
+INFO: Loaded PVR search 'bohemian'
+INFO: Loaded PVR search 'wrong_mans'
+INFO: Loaded PVR search 'hammond'
+INFO: Loaded PVR search 'interceptor'
+INFO: Loaded PVR search 'splatalot'
+INFO: Loaded PVR search 'sherlock'
+INFO: Loaded PVR search 'orphanblack'
+INFO: Loaded PVR search 'accused'
+INFO: Loaded PVR search 'onlyconnect'
+INFO: Loaded PVR search 'odyssey'
+INFO: Loaded PVR search 'brit_airline'
+INFO: Loaded PVR search 'queen'
+INFO: Loaded PVR search 'grandprix'
+INFO: Loaded PVR search 'manonmars'
+INFO: Loaded PVR search 'trains_trouble'
+INFO: Loaded PVR search 'room101'
+INFO: Loaded PVR search 'frankie_boyle'
+INFO: Loaded PVR search 'chain_reaction'
+INFO: Loaded PVR search 'police_pressure'
+INFO: Loaded PVR search 'roomonthebroom'
+INFO: Loaded PVR search 'call_centre'
+INFO: Loaded PVR search 'josh'
+INFO: Loaded PVR search list
+Running PVR Searches:
+6degrees
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '6 degrees'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got 8142 file cache entries for radio
+INFO: Got 7289 file cache entries for tv
+INFO: Search term '6 degrees' is a substring
+DEBUG: Search download_regex = 6 degrees
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+accused
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'accused'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'accused' is a substring
+DEBUG: Search download_regex = accused
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+ada
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Calculating Ada'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Calculating Ada' is a substring
+DEBUG: Search download_regex = Calculating Ada
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+all_about_two
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'all about two'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'all about two' is a substring
+DEBUG: Search download_regex = all about two
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+ambulance
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Ambulance'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Ambulance' is a substring
+DEBUG: Search download_regex = Ambulance
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+apple_tree
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Apple Tree'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Apple Tree' is a substring
+DEBUG: Search download_regex = Apple Tree
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+apprentice
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'apprentice'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'apprentice' is a substring
+DEBUG: Search download_regex = apprentice
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+ashes
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Ashes to Ashes'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Ashes to Ashes' is a substring
+DEBUG: Search download_regex = Ashes to Ashes
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+bakeoff
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Bake Off'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Bake Off' is a substring
+DEBUG: Search download_regex = Bake Off
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+bangkok
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Bangkok Airport'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Bangkok Airport' is a substring
+DEBUG: Search download_regex = Bangkok Airport
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+barely_legal
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Barely Legal Drivers'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Barely Legal Drivers' is a substring
+DEBUG: Search download_regex = Barely Legal Drivers
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+bbc2_birthday
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Happy Birthday BBC Two'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Happy Birthday BBC Two' is a substring
+DEBUG: Search download_regex = Happy Birthday BBC Two
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+big_school
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Big School'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Big School' is a substring
+DEBUG: Search download_regex = Big School
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+bohemian
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'bohemian'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'bohemian' is a substring
+DEBUG: Search download_regex = bohemian
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+brain-doctors
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'brain doctors'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'brain doctors' is a substring
+DEBUG: Search download_regex = brain doctors
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+brian_pern
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Brian Pern'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Brian Pern' is a substring
+DEBUG: Search download_regex = Brian Pern
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+brit_airline
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'British Airline'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'British Airline' is a substring
+DEBUG: Search download_regex = British Airline
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+building_cars
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Building Cars'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Building Cars' is a substring
+DEBUG: Search download_regex = Building Cars
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+byanymeans
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'By Any Means'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'By Any Means' is a substring
+DEBUG: Search download_regex = By Any Means
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+call-midwife
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'call the midwife'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'call the midwife' is a substring
+DEBUG: Search download_regex = call the midwife
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+call_centre
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Call Centre'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Call Centre' is a substring
+DEBUG: Search download_regex = Call Centre
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+candycabs
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Candy Cabs'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Candy Cabs' is a substring
+DEBUG: Search download_regex = Candy Cabs
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+castles
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Castles in the sky'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Castles in the sky' is a substring
+DEBUG: Search download_regex = Castles in the sky
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+casualty
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Casualty'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Casualty' is a substring
+DEBUG: Search download_regex = Casualty
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+chain_reaction
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Chain Reaction'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Chain Reaction' is a substring
+DEBUG: Search download_regex = Chain Reaction
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+chicken
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Chicken Shop'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Chicken Shop' is a substring
+DEBUG: Search download_regex = Chicken Shop
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+click
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Click'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Click' is a substring
+DEBUG: Search download_regex = Click
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+comefly
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Come Fly With Me'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Come Fly With Me' is a substring
+DEBUG: Search download_regex = Come Fly With Me
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+commons
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Inside the Commons'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Inside the Commons' is a substring
+DEBUG: Search download_regex = Inside the Commons
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+cormoran
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Cormoran'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Cormoran' is a substring
+DEBUG: Search download_regex = Cormoran
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+cranes
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Crane Gang'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Crane Gang' is a substring
+DEBUG: Search download_regex = Crane Gang
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+crow
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Upstart Crow'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Upstart Crow' is a substring
+DEBUG: Search download_regex = Upstart Crow
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+dahl
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'dahl'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'dahl' is a substring
+DEBUG: Search download_regex = dahl
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+dangerous
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'most dangerous roads'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'most dangerous roads' is a substring
+DEBUG: Search download_regex = most dangerous roads
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+danny_zoo
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Danny and the Human Zoo'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Danny and the Human Zoo' is a substring
+DEBUG: Search download_regex = Danny and the Human Zoo
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+dara
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Dara'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Dara' is a substring
+DEBUG: Search download_regex = Dara
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+david_gilmour
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'David Gilmour'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'David Gilmour' is a substring
+DEBUG: Search download_regex = David Gilmour
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+dirkgently
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Dirk Gently'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Dirk Gently' is a substring
+DEBUG: Search download_regex = Dirk Gently
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+divine_comedy
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Divine Comedy'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Divine Comedy' is a substring
+DEBUG: Search download_regex = Divine Comedy
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+doctorwho
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Doctor Who'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Doctor Who' is a substring
+DEBUG: Search download_regex = Doctor Who
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+driver
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Driver'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Driver' is a substring
+DEBUG: Search download_regex = Driver
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+enfield_whitehouse
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'An Evening with Harry Enfield'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'An Evening with Harry Enfield' is a substring
+DEBUG: Search download_regex = An Evening with Harry Enfield
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+f1
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Formula 1'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Formula 1' is a substring
+DEBUG: Search download_regex = Formula 1
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+fifteen_billion
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Fifteen Billion'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Fifteen Billion' is a substring
+DEBUG: Search download_regex = Fifteen Billion
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+frankie_boyle
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Frankie Boyle'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Frankie Boyle' is a substring
+DEBUG: Search download_regex = Frankie Boyle
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+game
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'The Game'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'The Game' is a substring
+DEBUG: Search download_regex = The Game
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+gamechangers
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Gamechangers'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Gamechangers' is a substring
+DEBUG: Search download_regex = Gamechangers
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+genius-of-invention
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'genius of invention'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'genius of invention' is a substring
+DEBUG: Search download_regex = genius of invention
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+george_gently
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'George Gently'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'George Gently' is a substring
+DEBUG: Search download_regex = George Gently
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+gilmour
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'David Gilmour'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'David Gilmour' is a substring
+DEBUG: Search download_regex = David Gilmour
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+grandprix
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Grand Prix'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Grand Prix' is a substring
+DEBUG: Search download_regex = Grand Prix
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+gruffalo
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'gruffalo'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'gruffalo' is a substring
+DEBUG: Search download_regex = gruffalo
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+gwyll
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Y Gwyll'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Y Gwyll' is a substring
+DEBUG: Search download_regex = Y Gwyll
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+hammond
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'richard hammond'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'richard hammond' is a substring
+DEBUG: Search download_regex = richard hammond
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+harly
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Harley Street'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Harley Street' is a substring
+DEBUG: Search download_regex = Harley Street
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+helicopter
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Helicopter Rescue'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Helicopter Rescue' is a substring
+DEBUG: Search download_regex = Helicopter Rescue
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+heresy
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'heresy'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'heresy' is a substring
+DEBUG: Search download_regex = heresy
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+hignfy
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Have I Got'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Have I Got' is a substring
+DEBUG: Search download_regex = Have I Got
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+hislop
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Ian Hislop'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Search term 'Ian Hislop' is a substring
+DEBUG: Search download_regex = Ian Hislop
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+hitchhiker
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Hitchhiker'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Hitchhiker' is a substring
+DEBUG: Search download_regex = Hitchhiker
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+horrible_histories
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	output = /var/spool/media/videos/iPlayer-Download/
+	pvr = 1
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: 'Horrible Histories'
+INFO: ffmpeg version string = 3.2.5-1
+INFO: ffmpeg version number = 3.2
+INFO: Got (quick) 8142 memcache entries for radio
+INFO: Got (quick) 7289 memcache entries for tv
+INFO: Search term 'Horrible Histories' is a substring
+DEBUG: Search download_regex = Horrible Histories
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+Matches:
+2869:	tv, Horrible Histories: Series 7 - Ridiculous Romantics, CBBC, b0909jrk
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b0909jrk.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b0909jrk.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p05b69ky/transferformat/dash?cb=28656
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049855_64e44f3e6ceeb65b81b2ac69ab6cd1a7
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006655&e=1502049855&h=f687e3e4fd00b3d43c3dad911f77f9e5
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049855_64e44f3e6ceeb65b81b2ac69ab6cd1a7
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006655&e=1502049855&h=5cdfc15b7e993a34d15a496e239a0393
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05b69ky/transferformat/dash?cb=36366
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049856_f69ab8a0ccecac6afb72badd954b356b
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006656&e=1502049856&h=bf82dac9428098e2afe5ce7aa4127d16
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049856_f69ab8a0ccecac6afb72badd954b356b
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006656&e=1502049856&h=b55b21804bafa7bbff97c4ddb11a0dda
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05b69ky/transferformat/hls?cb=96467
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?__gda__=1502049857_aa9dafabf1a937614694419de155c30e
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?s=1502006657&e=1502049857&h=d3fd46b085166493f31327f2c5cd1d26
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?at=Hqj1Rtw2dba51dd08e555e7c7d0545d6bee6efc6fc28048b5561634b37a40
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?__gda__=1502049857_aa9dafabf1a937614694419de155c30e
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?s=1502006657&e=1502049857&h=8534c9227adf9f33cba9e63a04970ae5
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.ism/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism.hlsv2.m3u8?at=Kspbf0vAa5c9df44210330785745c724ec175d3f2b134e2c5561634b37a40
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p05b69ky/transferformat/hls?cb=13934
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1502049858_90defe921ff26fc2023915d0486052e4
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1502006658&e=1502049858&h=a3b99d4f8e1079bbdb8cb4363d640d94
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/8d9d56-b0909jq2/vf_b0909jq2_6ea100d5-7697-48e0-aef6-4bb26bafce30.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=jtdyWR9Vb0e1fd32c04d3cdd719b1a79fbb9d335c3dde23a5561634c2bc80
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p05b69l5/transferformat/dash?cb=05915
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05b69l5/transferformat/dash?cb=36906
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05b69l5/transferformat/hls?cb=54813
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p05b69l5/transferformat/hls?cb=61719
+INFO: No streams available for 'audiodescribed2' version (p05b69l5) - skipping
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p05blmq6/transferformat/dash?cb=29250
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049859_2b1de2d69088c87313081c8c9ac26126
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006659&e=1502049859&h=2366195b52113e87c93e81d47d9877a6
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049859_2b1de2d69088c87313081c8c9ac26126
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006659&e=1502049859&h=1e749f31cf9a589c5e81c747c118ea27
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05blmq6/transferformat/dash?cb=36888
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049860_0929afbb2db8c7fd5401d5624ee439dc
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006660&e=1502049860&h=b5ec05d96ed7f9957cb39fd88eb05092
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049860_0929afbb2db8c7fd5401d5624ee439dc
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006660&e=1502049860&h=0b17ef71756830675e57e6e7210380c1
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05blmq6/transferformat/hls?cb=26714
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?__gda__=1502049860_55987d08d203721c34a905146bb1b499
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?s=1502006660&e=1502049860&h=8865d67fc46a090b9916343864c5585e
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?at=GMVClImu93d1b74ee2a226f1c3b4e7a358db7b5b420427505561634e14100
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?__gda__=1502049860_55987d08d203721c34a905146bb1b499
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?s=1502006660&e=1502049860&h=1dc6345ca881d61bfe386ae0f655dfb9
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?at=Jcb8tSlx451c13e1413abf53dc16303bad5d4aeec9c976425561634e14100
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p05blmq6/transferformat/hls?cb=42576
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1502049861_9b5fc1d96daaff711a01115c693d61b9
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1502006661&e=1502049861&h=45e0847a222350c5b317a98d823c8c91
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=uA0l9tJ1ca2150e0beffbb2b49416f61f2cfe3e00d75161b5561634f08340
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0927h4y/transferformat/dash?cb=67067
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049862_022eb2d00d742c42712a23db40d7d085
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006662&e=1502049862&h=5b64d4928d023a8bb4cf13cec9f5694e
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049862_022eb2d00d742c42712a23db40d7d085
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006662&e=1502049862&h=62663641cb5125d985c013d90e6dd6a7
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0927h4y/transferformat/dash?cb=65331
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049862_832ae9ee1142376cffd0b7492f87a3bb
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006662&e=1502049862&h=38dd3b2b8eed55494b4b2e9caadc87ab
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049862_832ae9ee1142376cffd0b7492f87a3bb
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006662&e=1502049862&h=cad05988974117050c12aa9e43bd79ff
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0927h4y/transferformat/hls?cb=92758
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?__gda__=1502049863_ee079a1a332e844304badec6007ff223
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?s=1502006663&e=1502049863&h=59e2b43a7e63c0db61201efdd3ad231b
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?at=4wXa1s7J38c0a8129622e62782bae85c6df21aa37373b4db55616350f07c0
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?__gda__=1502049863_ee079a1a332e844304badec6007ff223
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?s=1502006663&e=1502049863&h=6076f0da022ea2ebbb4f018e4a5e52d6
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.ism/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism.hlsv2.m3u8?at=CrEn3kh63c38945bc5dd02e09888f5c43a75250b50c6f74f55616350f07c0
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075,3200kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520766,.mp4.csmil/master.m3u8?hdnea=st=1502028263~exp=1502049863~acl=/*1500kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075,3200kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520766*~hmac=3e344618e299799441fb51ddd317bb4b9106fc27ad33887b1f45badae81b98d7
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075,3200kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520766,.mp4.csmil/master.m3u8?hdnea=st=1502028263~exp=1502049863~acl=/*1500kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075,3200kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520766*~hmac=3e344618e299799441fb51ddd317bb4b9106fc27ad33887b1f45badae81b98d7
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0927h4y/transferformat/hls?cb=21055
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1502049864_19956ee3954cb58ab5063dee1d0aa6e7
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1502006664&e=1502049864&h=a37baf532e0266d7072ea290c3da951d
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/235229-b0927h4y/vf_b0927h4y_dd7d5da8-1b54-463e-8765-e0d8cdcf5e58.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=BeQ7ZrWp038d4ec2b444c5f715349f4b20e86c7fccd4025455616351e4a00
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/1500kbps/modav/bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075.mp4/master.m3u8?hdnea=st=1502028264~exp=1502049864~acl=/*bUnknown-d36a5ba8-7712-4a63-a15f-32f4055722b8_b0927h4y_1501863520075.mp4*~hmac=421c8954499e862369a812112f66365c54ff7c50ff3e32740ef4264f8a1bb176
+INFO: Found mode dvfhd1: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfhd2: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhd3: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhd4: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfsd1: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfsd2: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfsd3: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfsd4: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfhigh1: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfhigh2: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhigh3: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhigh4: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hlshd1: (gip_hls_iplayer_2359) hls h264 1280x720 25fps 2359kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlshd2: (gip_hls_iplayer_2359) hls h264 1280x720 25fps 2359kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfhd1: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhd2: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhd3: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhd4: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhd5: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhd6: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfsd1: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfsd2: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfsd3: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfsd4: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfsd5: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfsd6: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: mf_limelight_uk_plain_https/40)
+INFO: Found mode subtitles2: (captions) http stream (CDN: mf_akamai_uk_plain_https/30)
+INFO: Found mode subtitles3: (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode subtitles4: (captions) http stream (CDN: sis/10)
+INFO: Found mode subtitles5: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p05blmq6/transferformat/dash?cb=43278
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049865_3339371abfd525b8d314c871a646232d
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006665&e=1502049865&h=8705c3523d3bec1a8f7bfaf178be3149
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049865_3339371abfd525b8d314c871a646232d
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006665&e=1502049865&h=72da7675781a7fd67be7c0e394535659
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05blmq6/transferformat/dash?cb=77014
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049860_0929afbb2db8c7fd5401d5624ee439dc
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006660&e=1502049860&h=b5ec05d96ed7f9957cb39fd88eb05092
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049860_0929afbb2db8c7fd5401d5624ee439dc
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006660&e=1502049860&h=0b17ef71756830675e57e6e7210380c1
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p05blmq6/transferformat/hls?cb=16261
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?__gda__=1502049865_e675acd411431abfcc3bb7a21494e699
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?s=1502006665&e=1502049865&h=1fd167e927336ce532682565c7be8604
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?at=eyk5Osmvd4a1123620cfec00e06e69def02e4a1d7dcb8f0c55616352d8c40
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?__gda__=1502049865_e675acd411431abfcc3bb7a21494e699
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?s=1502006665&e=1502049865&h=896c68ff17b029143c16026114ee6794
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.ism/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism.hlsv2.m3u8?at=87U7YXGof57768add2dcb98cd16ed6687d005a72d37fc99155616352d8c40
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p05blmq6/transferformat/hls?cb=68843
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1502049861_9b5fc1d96daaff711a01115c693d61b9
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1502006661&e=1502049861&h=45e0847a222350c5b317a98d823c8c91
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/235229-b0927h4y/vf_b0927h4y_02eee08e-673e-45c1-b70d-a038be35cfb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=uA0l9tJ1ca2150e0beffbb2b49416f61f2cfe3e00d75161b5561634f08340
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls/1)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_limelight_uk_hls_https/10)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0909jq2/transferformat/dash?cb=64714
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049867_12d8d9165a8dfef6d4faaf506fb65e1d
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006667&e=1502049867&h=d11df38ed80b23ddc830089c10a67129
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1502049867_12d8d9165a8dfef6d4faaf506fb65e1d
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/pc_hd_abr_v2_dash_master.mpd?s=1502006667&e=1502049867&h=fdd1636f2e4ea9334d680969f65e8c68
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0909jq2/transferformat/dash?cb=25551
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049867_315777e4515e1e9db8f6c23427bc3b3a
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006667&e=1502049867&h=1119df4714b347a1d3efe15e6e1e7674
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1502049867_315777e4515e1e9db8f6c23427bc3b3a
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1502006667&e=1502049867&h=86a97334d1f298201a7291a4fa14bc07
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0909jq2/transferformat/hls?cb=79519
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426,3200kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720140112,.mp4.csmil/master.m3u8?hdnea=st=1502028268~exp=1502049868~acl=/*1500kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426,3200kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720140112*~hmac=6ecc823ff00c310b5ec17b2c46879edd2b2f982fe26a0b265fd522dac90a85a6
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426,3200kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720140112,.mp4.csmil/master.m3u8?hdnea=st=1502028268~exp=1502049868~acl=/*1500kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426,3200kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720140112*~hmac=6ecc823ff00c310b5ec17b2c46879edd2b2f982fe26a0b265fd522dac90a85a6
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?__gda__=1502049868_f284803fd5e7781d2f75448dbf6cfcd7
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?s=1502006668&e=1502049868&h=0ffeb6f45de649b0bd6650a43ea2618f
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?at=JxVX8Tlta319705126b66b86ccb7ad18d371fa27a1dfd11a55616355b5300
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?__gda__=1502049868_f284803fd5e7781d2f75448dbf6cfcd7
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?s=1502006668&e=1502049868&h=bbae68a6607ab842311ceb058da85e33
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.m3u8?at=ZBSpXCTI1245fbffc62bc91098ce211adccafb32aec8011a55616355b5300
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0909jq2/transferformat/hls?cb=80196
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1502049869_d2293ab2fa94a6ccfdfb02fd5ad0790d
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1502006669&e=1502049869&h=61ecc32854cb907c423e8d15c069ca3a
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=CtJ0HGET03bd11a88ec327fbde89c7f1af90cd65f9f6f53755616356a9540
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/1500kbps/modav/bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426.mp4/master.m3u8?hdnea=st=1502028269~exp=1502049869~acl=/*bUnknown-6c220318-821f-4bcf-9374-238921dda8a7_b0909jq2_1500720142426.mp4*~hmac=d06c8699d60e7ff6a15f0b6d578a0c5f5b6a2ab126f0fce45bc0d00375e74bc7
+INFO: Found mode dvfhd1: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfhd2: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhd3: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhd4: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfsd1: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfsd2: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfsd3: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfsd4: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxsd1: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxsd2: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxsd3: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxsd4: (gip_dvf_iplayer_1604) dash h264 960x540 25fps 1604kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfhigh1: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfhigh2: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhigh3: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhigh4: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh4: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvflow1: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash_https/20)
+INFO: Found mode dvflow2: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvflow3: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvflow4: (gip_dvf_iplayer_437) dash h264 512x288 25fps 437kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hlshd1: (gip_hls_iplayer_2359) hls h264 1280x720 25fps 2359kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlshd2: (gip_hls_iplayer_2359) hls h264 1280x720 25fps 2359kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfhd1: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhd2: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhd3: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhd4: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhd5: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhd6: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfsd1: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfsd2: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfsd3: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfsd4: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfsd5: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfsd6: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: mf_limelight_uk_plain_https/40)
+INFO: Found mode subtitles2: (captions) http stream (CDN: mf_akamai_uk_plain_https/30)
+INFO: Found mode subtitles3: (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode subtitles4: (captions) http stream (CDN: sis/10)
+INFO: Found mode subtitles5: (captions) http stream (CDN: sis/10)
+INFO: No streams available for 'audiodescribed2' version (p05b69l5) - deleting
+INFO: Programme not in history
+INFO: Will search for versions: original,editorial,editorial2
+INFO: Mode list: hvfhd,dvfhd,hlshd,hvfsd,dvfsd,hvfxsd,dvfxsd,hlsvhigh,hvfhigh,dvfhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow
+INFO: Checking existence of original version
+INFO: Version = original
+INFO: hvfhd1,hvfhd2,hvfhd3,hvfhd4,hvfhd5,hvfhd6,dvfhd1,dvfhd2,dvfhd3,dvfhd4,hlshd1,hlshd2,hvfsd1,hvfsd2,hvfsd3,hvfsd4,hvfsd5,hvfsd6,dvfsd1,dvfsd2,dvfsd3,dvfsd4,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,hlsvhigh1,hlsvhigh2,hvfhigh1,hvfhigh2,hvfhigh3,hvfhigh4,hvfhigh5,hvfhigh6,dvfhigh1,dvfhigh2,dvfhigh3,dvfhigh4,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,hvflow1,hvflow2,hvflow3,dvflow1,dvflow2,dvflow3,dvflow4 modes will be tried for version original
+INFO: Trying hvfhd1 mode to record tv: Horrible Histories: Series 7 - 3. Ridiculous Romantics
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original                 
+DEBUG: HLS playlist URL: https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2-audio_eng=320000-video=5070000.m3u8?at=ZBSpXCTI1245fbffc62bc91098ce211adccafb32aec8011a55616355b5300
+DEBUG: HLS playlist URL (actual): https://b3rbsov.bidi.live.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2-audio_eng=320000-video=5070000.m3u8?at=ZBSpXCTI1245fbffc62bc91098ce211adccafb32aec8011a55616355b5300
+INFO: Getting page https://b3rbsov.bidi.live.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/8d9d56-b0909jq2/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2.ism/vf_b0909jq2_da1ce411-6890-4d5a-b163-3e569189abb3.ism.hlsv2-audio_eng=320000-video=5070000.m3u8?at=ZBSpXCTI1245fbffc62bc91098ce211adccafb32aec8011a55616355b5300
+INFO: Begin recording file: /var/spool/media/videos/iPlayer-Download/Horrible_Histories_Series_7_-_3._Ridiculous_Romantics_b0909jrk_original.video.ts
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]

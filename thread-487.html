@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to get subdir to work</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to get subdir to work</div>
+<div id="pagetitle"><h2>Unable to get subdir to work</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-988</h2></div><div class="dateline">26-07-2015, 01:54 PM</div>
+</div>
+<div class="message">First of all, thanks to the authors for some great work on this code. It's great to find something like get_iplayer.<br />
+<br />
+I've been trying for a while to setup get_iplayer MPV to download programs into separate directories. I've read everything I can find here on the forums and tried many different variations of the command but so far have been unsuccessful.<br />
+<br />
+I'm running Windows 7 Pro, all media files are stored on a NAS which is mapped locally as S: and that's where I'd like get_iplayer to download directly to, into a folder named for the series or program. My most recent attempt has been to run the following from the command line<br />
+<br />
+get_iplayer --prefs-add --outputtv="S:\" --subdir --subdir-format="&lt;nameshort&gt;&lt;-seriesnum&gt;"<br />
+<br />
+And I've tried multiple variations on this, such as removing the "\", etc. but every time I run the PVR, it results in an error that the subdirectory cannot be created, or that the parameters are incorrect.<br />
+<br />
+The only thing that has been successful was on the initial setup, when I had all downloads going into an already exisitng folder called BBC. I could see that that was a result of the options file in C:\Program Data being set to 'output S:\BBC', so I've reverted back to that configuration, but it's not ideal.<br />
+What am I doing wrong?<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2015, 05:39 PM</div>
+</div>
+<div class="message">For the <kbd>--outputtv</kbd> option either remove the quotes ( <kbd>--outputtv=S:\</kbd> ) or escape the backslash ( <kbd>--outputtv="S:\\"</kbd> )</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-988</h2></div><div class="dateline">26-07-2015, 05:57 PM</div>
+</div>
+<div class="message">That got it. Thanks</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Unable to get subdir to work</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR list created in Web PVR launched by cron is not visible from command line</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; PVR list created in Web PVR launched by cron is not visible from command line</div>
+<div id="pagetitle"><h2>PVR list created in Web PVR launched by cron is not visible from command line</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-275</h2></div><div class="dateline">21-08-2016, 09:13 PM</div>
+</div>
+<div class="message">I'm running gip 2.96 on Ubuntu 16.04. After upgrading from 2.95, I got an error that get_iplayer_web_pvr was missing from /etc/default. I replaced that with:<br />
+<br />
+# use 0.0.0.0 to bind to all interfaces<br />
+# LISTEN=127.0.0.1<br />
+LISTEN=0.0.0.0<br />
+<br />
+# port must be more than 1024 for unprivileged users<br />
+PORT=1935<br />
+<br />
+<br />
+Web_PVR now launches correctly (using cron from reboot) but when I add new programs using the Web_PVR client, they don't show up in ./get_iplayer/pvr. They are on the Web_PVR list, but those choices are not picked up by my get_iplayer --pvr cron job. <br />
+<br />
+I'm sure there is something amazingly obvious that I am missing, but I seem to be unable to figure out what is wrong.<br />
+<br />
+Any help much appreciated.<br />
+<br />
+Chris</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-08-2016, 12:08 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (21-08-2016, 09:13 PM)</span></cite>After upgrading from 2.95, I got an error that get_iplayer_web_pvr was missing from /etc/default.</blockquote>That file isn't deleted unless you purge the package or delete it yourself. If you think there is an installation problem, take it upstream to the get_iplayer PPA. I don't provide the Ubuntu package, so it is not supported here.<br />
+<blockquote class="mycode_quote"><cite><span> (21-08-2016, 09:13 PM)</span></cite># LISTEN=127.0.0.1<br />
+LISTEN=0.0.0.0</blockquote>Obligatory warning: Don't do that if your machine is exposed to any public network.<br />
+<blockquote class="mycode_quote"><cite><span> (21-08-2016, 09:13 PM)</span></cite>Web_PVR now launches correctly (using cron from reboot) but when I add new programs using the Web_PVR client, they don't show up in ./get_iplayer/pvr. They are on the Web_PVR list, but those choices are not picked up by my get_iplayer --pvr cron job. </blockquote>You should never declare your profile directory as "." - you will spatter your settings across whatever directories you happen to be working in. I suspect you haven't actually done that, but a warning is necessary just in case. <br />
+<br />
+My guess is that your cron job is running with a different effective UID, e.g., you put it in the root crontab instead of your own. That means the profile directory containing pvr jobs is in the home directory of that other user, probably root.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-275</h2></div><div class="dateline">22-08-2016, 04:26 PM</div>
+</div>
+<div class="message">Thanks Dinky!<br />
+<br />
+You were exactly correct. <br />
+<br />
+A) Should have used purge rather than cleaning up by hand. Purge restored the status quo<br />
+B) I am using the full path rather than ./get_iplayer/pvr - just a lazy typist<br />
+C) I must have been sleep typing. I've no idea why or how I put my cron jobs under the root UID. <br />
+<br />
+Everything working beautifully now. Thanks for the help and the workaround for the current audio synch problems.<br />
+<br />
+Chris</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; PVR list created in Web PVR launched by cron is not visible from command line</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

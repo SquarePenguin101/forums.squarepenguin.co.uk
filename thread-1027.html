@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 2.96 speed issues</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 2.96 speed issues</div>
+<div id="pagetitle"><h2>2.96 speed issues</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1390</h2></div><div class="dateline">01-09-2016, 01:52 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I have been using 2.94 happily for a year or so and recently upgraded to 2.96 - but downloads that would previously take about 20-30 mins to come in are now taking 2-3 hours or more?<br />
+<br />
+I have Windows 7.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1392</h2></div><div class="dateline">01-09-2016, 06:38 PM</div>
+</div>
+<div class="message">I'm finding the speed poor - there are small bursts at a high transfer rate but then long periods at zero. <br />
+<br />
+I've changed my default setting from modes=best (where it's happily been across many versions) to modes=flash and the transfer rate is back where it was before - at around 11Mb/s - below the link capacity but satisfactory.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2016, 08:06 PM</div>
+</div>
+<div class="message">You're comparing apples and oranges to some extent. The default TV streams (--tvmode=best) have twice the bit rate of the pre-2.95 default streams (Flash/RTMP). This is documented in the release notes and elsewhere. The default stream format (HLS) has also changed. It is streamed in chunked segments via HTTP, so of course it will appear bursty, particularly if the media servers are heavily loaded or the connection is congested. This format change is also documented in the release notes and elsewhere. With the default HLS streams, get_iplayer can fill a 200Mb pipe if upstream supports it, but there are many things that can reduce download speed. In order to form an educated guess as to whether or not your upstream connection performs worse with HTTP downloads than it does with RTMP streaming, you need to test programmes in both formats with roughly the same bit rate and duration, at roughly the same time of day. Given sufficient bandwidth, I think most people find HTTP better, but your situation may be different. Stick with whatever works for you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1392</h2></div><div class="dateline">03-09-2016, 12:18 AM</div>
+</div>
+<div class="message">I know little of the technicalities of streaming techniques or the relative merits of fruit, I was backing up the observation of the O/P that our mean transfer rate is now lower (my duty ratio of active "burst" : silent period is quite low). <br />
+<br />
+My link is 60Mb/s down and 20Mb/s up. With FLASH I get the same 11Mb/s transfer rate I had with ADSL - before I'd always assumed it was link rate limited. It may well be just some problem at our end, but its worth keeping an eye on performance since the last two versions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-09-2016, 12:48 AM</div>
+</div>
+<div class="message">There is nothing to keep an eye on. get_iplayer can only give what it can get. You've not given any sense of the speed difference you see, nor have you demonstrated you are comparing streams like-for-like. get_iplayer prints a final rate estimate upon completion of an HLS download. Compare that number to 11 Mbps to see if you really have a problem with your connection.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 2.96 speed issues</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

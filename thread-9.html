@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - programs with a ? in title</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; programs with a ? in title</div>
+<div id="pagetitle"><h2>programs with a ? in title</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">22-07-2013, 01:06 PM</div>
+</div>
+<div class="message">I remember their being a problem with the program<br />
+<br />
+who were the greeks?<br />
+ and the solution was to add either a / or \ before the ? in the search0 field on the PVR record<br />
+<br />
+I cannot remember whether it is \? or /?<br />
+<br />
+would this solution work with other reserved characters such as<br />
+<br />
+:<br />
+/<br />
+\<br />
+*<br />
+"<br />
+&lt;<br />
+&gt;<br />
+|<br />
+?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">22-07-2013, 01:11 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>user-965 Wrote:</cite>I remember their being a problem with the program<br />
+<br />
+who were the greeks?&lt;br&gt;<br />
+ and the solution was to add either a / or \ before the ? in the search0 field on the PVR record<br />
+<br />
+I cannot remember whether it is \? or /?<br />
+<br />
+would this solution work with other reserved characters such as<br />
+<br />
+:&lt;br&gt;<br />
+/&lt;br&gt;<br />
+\&lt;br&gt;<br />
+*&lt;br&gt;<br />
+â&lt;br&gt;<br />
+&lt;&lt;br&gt;<br />
+&gt;&lt;br&gt;<br />
+|&lt;br&gt;<br />
+?</blockquote><br />
+for instance<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Golf: The Open: 2013</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-07-2013, 01:14 PM</div>
+</div>
+<div class="message">Use backslash as escape character.  This is already fixed in Git HEAD. For instructions, see:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>https://github.com/get-iplayer/get_iplayer/wiki/installation</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">22-07-2013, 09:00 PM</div>
+</div>
+<div class="message">it will not work with this program<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Golf: The Open: 2013</code></div></div><br />
+<br />
+I have downloaded the latest version of GIP and it still wont download or search for it. <br />
+<br />
+if I search just for Golf then it brings up all the recent golf programs <br />
+<br />
+but once the : is included or \: is included then it will not find them</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-07-2013, 09:42 PM</div>
+</div>
+<div class="message">Sorry - Since you asked about escaping a question mark I thought you were referring to a similar problem that appeared on the mailing list. In this case you just need to be aware of which fields you're searching in.  As you should have seen in the "Search in" dropdown list, get_iplayer searches the programme name by default.  If you search for "golf" in the name field you'll see in the results that all the programmes have just "Golf" in the name and "The Open: 2013" as part of the episode name.  If you just want to download programmes related to The Open, the logical thing to do to is change the search field to Episode and use "The Open: 2013" as the search string.  There should be no need to escape the colon in this case.  Of course, all the current programmes with "golf" in the name are about the Open, so none of this may be necessary.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">23-07-2013, 09:42 PM</div>
+</div>
+<div class="message">While I see that may well work<br />
+there will be other occasions when the program title contains a :<br />
+<br />
+for instance there is a spike milligan series<br />
+<br />
+Adolph Hitler: My part in his downfall<br />
+<br />
+that will be repeated at some point on bbc 4 xtra<br />
+<br />
+I have a pvr set to record it when it is on<br />
+but at present<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0 Adolph Hitler: My part in his downfall</code></div></div><br />
+ will not work<br />
+<br />
+which is why I was asking if there is a way to use an escape character in the same was as when there is a ? in the program title.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-07-2013, 11:35 PM</div>
+</div>
+<div class="message">As I said above, use backslash as escape character.  You can escape any character you wish even if it isn't necessary, as is the case for the colons in the examples you cited.   If you perform a search and it gives you the results you expect and then you click "Add Search to PVR", there should be no reason to edit the search string further - you already know it works.  The issue with Who Were the Greeks?  arose because the user employed the "Add Series" link, which saves the search string in a special format that required the ? to be escaped.<br />
+<br />
+There are only certain conditions that ever require you to escape any characters in a search string.  If you know what regular expressions are (search terms are processed as regular expressions), then you know what those conditions are.  If you don't, then feel free to escape any punctuation characters about which you are unsure.<br />
+<br />
+And I don't think you can definitively say "Adolph Hitler: My part in his downfall" doesn't work if the programme isn't even available via iPlayer - there is no way to test it.  Just looking at the title, I would guess it's the same issue as with your golf programmes.  "My Part in His Downfall" may get split into the episode field, so you may need to change the field you're searching.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">23-07-2013, 11:46 PM</div>
+</div>
+<div class="message">InAFlap: When marking code, select the text and use the 'code' button above the input box, this will add the correct markup around the text and display code properly upon publish. <br />
+<br />
+I have fixed the post above for you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">24-07-2013, 01:52 AM</div>
+</div>
+<div class="message">since you changed the server I do not have any of the formatting options available. this part of the forum appears as plain text. Although the  home page appears to display correctly.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-07-2013, 10:33 AM</div>
+</div>
+<div class="message">You may simply need to clear your browser cache. With the move it is possible that the some resources need refreshing so a complete clear of browser cache should have everything back the right way for you.<br />
+<br />
+Hopefully this inconvenience will be tempered by the fact the forum pages should be loading up to 100 times faster! The previous small shared host couldn't handle it and was giving, on average, 5 second page loads. But now on a fast connection pages have the potential to load in under 50ms.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-07-2013, 01:21 PM</div>
+</div>
+<div class="message">I should also say that if you experience problems after clearing your browser cache, drop me an email through the contact form (link in footer) and we can take a look at what's going on.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">24-07-2013, 05:37 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/programs-with-a-in-title/#post-984">Quote:</a>&lt;/div&gt;You may simply need to clear your browser cache. With the move it is possible that the some resources need refreshing so a complete clear of browser cache should have everything back the right way for you.<br />
+<br />
+Hopefully this inconvenience will be tempered by the fact the forum pages should be loading up to 100 times faster! The previous small shared host couldnât handle it and was giving, on average, 5 second page loads. But now on a fast connection pages have the potential to load in under 50ms.</blockquote>
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/programs-with-a-in-title/#post-984">Quote:</a>&lt;/div&gt;You may simply need to clear your browser cache. With the move it is possible that the some resources need refreshing so a complete clear of browser cache should have everything back the right way for you.<br />
+<br />
+Hopefully this inconvenience will be tempered by the fact the forum pages should be loading up to 100 times faster! The previous small shared host couldnât handle it and was giving, on average, 5 second page loads. But now on a fast connection pages have the potential to load in under 50ms.</blockquote>
+<br />
+its all sorted itself out now.  and displays correctly<br />
+<br />
+it does load nice and fast</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-07-2013, 06:58 PM</div>
+</div>
+<div class="message">That's good to know, thanks. If you see it go wrong again, just let me know.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; programs with a ? in title</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

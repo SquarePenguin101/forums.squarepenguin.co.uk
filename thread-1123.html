@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Jerky playback on TV (OK on laptop)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Jerky playback on TV (OK on laptop)</div>
+<div id="pagetitle"><h2>Jerky playback on TV (OK on laptop)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1498</h2></div><div class="dateline">26-12-2016, 02:07 PM</div>
+</div>
+<div class="message">Hello, I hope someone can advise me on this! I have read the FAQ, instructions etc, but am still a bit puzzled. <br />
+<br />
+Since I upgraded this excellent program to v2.97, the playback of recordings has become annoyingly juddery – every second or so a miniscule pause, then a jump forward. Programmes are still watchable, but they are really annoying to watch. I have downgraded the recording mode to “tvgood”, but the problem persists even though the file sizes are now smaller when using the tvgood setting. <br />
+<br />
+My TV is a reasonably up to date (2-3 year old) 40” Sony Bravia. I will copy below what I <span style="font-style: italic;" class="mycode_i">think </span>are the relevant details from an OLD recording, which was made from v2.95 (or older?) and a NEW recording from the latest version. <ul class="mycode_list"><li>NEW (juddery): Overall bit rate: 925 Kbps; Bit rate: 826 Kbps; Width: 704 pixels; Height: 396 pixels; Frame rate: 25.000 fps; Minimum frame rate: 12.500 fps; Maximum frame rate: 90 000.000 fps; Bits/(Pixel*Frame): 0.118; Stream size: 684 MiB (89%)<br />
+</li>
+<li>OLD (smooth playback): Overall bit rate mode: Constant; Overall bit rate: 1 503 Kbps; Width: 832 pixels; Height: 468 pixels; Frame rate mode: Constant Frame rate: 25.000 fps; Bits/(Pixel*Frame): 0.144; Stream size: 850 MiB (93%)<br />
+</li>
+</ul>
+Most of the rest of the details are reasonably similar. Any ideas? Thank you.<br />
+<br />
+Ps – one more relevant detail… they seem to play OK on a laptop; it is the TV-playback which is juddery, which seems odd to me as the tvgood quality seems to be less demanding than when I was on the older version of the get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-12-2016, 05:46 PM</div>
+</div>
+<div class="message">There is nothing we can do to help if your TV can't cope with the default video output. Try <kbd>--tvmode=hlsvhigh</kbd> and see if it produces the equivalent of your prior recording.<br />
+<br />
+EDIT: You can also try the default TV recording modes with <kbd>--raw</kbd>. Your TV may be better able to cope with the raw MPEG-TS files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-12-2016, 08:09 PM</div>
+</div>
+<div class="message">Video format - not size - is the issue. It's likely you wouldn't have been able to play those files on your laptop 3 years ago either, and there is no telling what the age or provenance of the decoder in your TV may be. Plus, iPlayer files have some peculiarities. As to why current release produces different format by default - those release notes aren't going to read themselves.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1498</h2></div><div class="dateline">26-12-2016, 08:12 PM</div>
+</div>
+<div class="message">Thanks. I don't think that the problem is solely with the TV, as it is more than capable of playing full-HD films via USB, and had no problems with the recordings made with the previous version of get_iplayer (with a higher [ie more demanding] resolution etc] - there must be some other change in the new version which is impacting playback. I'll try tomorrow both the suggestions you make and see what impact they have. Thanks.<br />
+<hr class="mycode_hr" />
+<blockquote class="mycode_quote"><cite><span> (26-12-2016, 08:09 PM)</span></cite>As to why current release produces different format by default - those release notes aren't going to read themselves.</blockquote><br />
+And I have spent plenty of time ploughing through "those release notes" before posting...</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Jerky playback on TV (OK on laptop)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Download fails - no modes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Download fails - no modes</div>
+<div id="pagetitle"><h2>Download fails - no modes</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-364-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 06:50 PM</div>
+</div>
+<div class="message">Please forget the two questions while I try to help myself.  DP was indeed correct I was in fact running version 2.90.  I am now attempting to update to the latest 2.91.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-865</h2></div><div class="dateline">23-02-2015, 07:11 PM</div>
+</div>
+<div class="message">Problem solved!!<br />
+<br />
+I just want to say a huge thank you to everyone who has responded to my ramblings this afternoon.  It turns out that I wasn't running the latest version and as soon as I updated it everything worked as I was told it would.  I can only apologise for wasting so much of your valuable time.  Sincerely though I really do appreciate everybody who tried to help me this afternoon and solved my problem.  Thank you so very much.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">23-02-2015, 08:47 PM</div>
+</div>
+<div class="message">My settings were out of date - I use a cron script to run the PVR and it has the old mode setting, but as you saw I tried with the new options.<br />
+<br />
+Drat - seems I'm on V2.90 and the nux-desktop repo has dependancy errors.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>[root@localhost ~]# get_iplayer -V<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+[root@localhost ~]# AtomicParsley --version<br />
+AtomicParsley version: 0.9.6 (utf8)<br />
+[root@localhost ~]# yum install&nbsp;&nbsp;get_iplayer --enablerepo=nux-dextop<br />
+Loaded plugins: fastestmirror, refresh-packagekit, security<br />
+Loading mirror speeds from cached hostfile<br />
+ * base: mirrors.ukfast.co.uk<br />
+ * extras: mirror.as29550.net<br />
+ * nux-dextop: mirror.li.nux.ro<br />
+ * rpmforge: mirrors.ircam.fr<br />
+ * updates: mirror.as29550.net<br />
+ * webtatic: uk.repo.webtatic.com<br />
+Setting up Install Process<br />
+Resolving Dependencies<br />
+--&gt; Running transaction check<br />
+---&gt; Package get_iplayer.noarch 0:2.85-1.el6.nux will be updated<br />
+---&gt; Package get_iplayer.noarch 0:2.91-1.el6.nux will be an update<br />
+--&gt; Processing Dependency: AtomicParsley for package: get_iplayer-2.91-1.el6.nux.noarch<br />
+--&gt; Finished Dependency Resolution<br />
+Error: Package: get_iplayer-2.91-1.el6.nux.noarch (nux-dextop)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Requires: AtomicParsley<br />
+ You could try using --skip-broken to work around the problem<br />
+ You could try running: rpm -Va --nofiles --nodigest<br />
+[root@localhost ~]#</code></div></div><br />
+<br />
+Guess it's build from source time again :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-697</h2></div><div class="dateline">23-02-2015, 08:50 PM</div>
+</div>
+<div class="message">I did have some old settings - I use a cron job to run a script that does the pvr call and it had the old mode settinngs. However I did update these first of all then tried the out of date settings in the wiki for luck.<br />
+<br />
+Seems the nux-desktop repo has dependency problems so looks like I have to build from source again. :( <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>[root@localhost ~]# get_iplayer -V<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+[root@localhost ~]# AtomicParsley --version<br />
+AtomicParsley version: 0.9.6 (utf8)<br />
+[root@localhost ~]# yum install&nbsp;&nbsp;get_iplayer --enablerepo=nux-dextop<br />
+Loaded plugins: fastestmirror, refresh-packagekit, security<br />
+Loading mirror speeds from cached hostfile<br />
+ * base: mirrors.ukfast.co.uk<br />
+ * extras: mirror.as29550.net<br />
+ * nux-dextop: mirror.li.nux.ro<br />
+ * rpmforge: mirrors.ircam.fr<br />
+ * updates: mirror.as29550.net<br />
+ * webtatic: uk.repo.webtatic.com<br />
+Setting up Install Process<br />
+Resolving Dependencies<br />
+--&gt; Running transaction check<br />
+---&gt; Package get_iplayer.noarch 0:2.85-1.el6.nux will be updated<br />
+---&gt; Package get_iplayer.noarch 0:2.91-1.el6.nux will be an update<br />
+--&gt; Processing Dependency: AtomicParsley for package: get_iplayer-2.91-1.el6.nux.noarch<br />
+--&gt; Finished Dependency Resolution<br />
+Error: Package: get_iplayer-2.91-1.el6.nux.noarch (nux-dextop)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Requires: AtomicParsley<br />
+ You could try using --skip-broken to work around the problem<br />
+ You could try running: rpm -Va --nofiles --nodigest<br />
+[root@localhost ~]#</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-02-2015, 09:18 PM</div>
+</div>
+<div class="message">If you had 2.90 on CentOS/RHEL, you must have installed it manually since it was never offered in nux-dextop.  No reason you can't do the same for 2.91.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-867</h2></div><div class="dateline">24-02-2015, 08:23 PM</div>
+</div>
+<div class="message">I'm on 2.90 and looking at Top Gear: Series 22 - Episode 5 I couldn't download anything except subtitles.<br />
+So I ran <kbd>get_iplayer -i "top gear"</kbd> and it told me:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+1709:   Top Gear: Series 22 - Episode 5, BBC Two, Cars &amp; Motors,Entertainment,Fa<br />
+ctual,Review Shows, default<br />
+INFO: File name prefix = Top_Gear_Series_22_-_Episode_5_b05469cm_default<br />
+&lt;snip&gt;<br />
+modes:          default: subtitles1<br />
+modes:          default2: flashhd1,flashhd2,flashhigh1,flashhigh2,flashlow1,flas<br />
+hlow2,flashstd1,flashstd2,flashvhigh1,flashvhigh2,rtsphd1,rtsphd2,rtsphigh1,rtsp<br />
+high2,rtsplow1,rtsplow2,rtspstd1,rtspstd2,rtspvhigh1,rtspvhigh2,subtitles1<br />
+modes:          default3: flashhd1,flashhd2,flashhigh1,flashhigh2,flashlow1,flas<br />
+hlow2,flashstd1,flashstd2,flashvhigh1,flashvhigh2,rtsphd1,rtsphd2,rtsphigh1,rtsp<br />
+high2,rtsplow1,rtsplow2,rtspstd1,rtspstd2,rtspvhigh1,rtspvhigh2,subtitles1</code></div>
+</div>
+<br />
+<br />
+So something is squiffy about version default<br />
+so <kbd>get_iplayer 1709 --version=default2 --modes=best -g</kbd> seems to be doing the trick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">24-02-2015, 10:26 PM</div>
+</div>
+<div class="message">Yes in 2.90 there was sometimes a default and default2 version of programmes and default2 was the only one that worked. This has been fixed in version 2.91 and the current problem which means that you sometimes have to use <kbd>--playlist-metadata</kbd> to download a programme should be fixed when 2.92 is released.<br />
+<br />
+You really do need to keep get_iplayer up to date at the moment as there are a lot of changes going on.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-869</h2></div><div class="dateline">27-02-2015, 05:45 PM</div>
+</div>
+<div class="message">Just a note, but this issue with Top Gear not downloading was a BBC issue, and not a get_iplayer issue.  :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-688</h2></div><div class="dateline">01-03-2015, 05:07 PM</div>
+</div>
+<div class="message">I had the same download failures starting just a few days ago. I thought that back over Xmas I had already updated to 2.91 but (on using the command line check as suggested above) found I was still on 2.90. Used the command line update command and all seems well again now. Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-648</h2></div><div class="dateline">17-04-2015, 08:03 AM</div>
+</div>
+<div class="message">Anything get on good only subtitles download failed in every title.<br />
+Is it normal?<br />
+Today, I just download " Treasures of Ancient Greece' in HD version. <br />
+<br />
+Treasures_of_Ancient_Greece_-_2._The_Classical_Revolution_b05qqgrr_default.mp4,<br />
+only missing the subtitles.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-364-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Download fails - no modes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

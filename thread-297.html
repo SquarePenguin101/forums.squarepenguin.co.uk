@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Not downloading into sub folders</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Not downloading into sub folders</div>
+<div id="pagetitle"><h2>Not downloading into sub folders</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">11-12-2014, 07:43 PM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+I recently had to rebuild my config file and since get_iplayer is no longer saving into subfolders.<br />
+<br />
+Could someone have a quick look at my config below and let me know what I am missing/got wrong?<br />
+<br />
+~/.get_iplayer/options<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code># modes best<br />
+proxy http://xxx.xxx.xxx.xxx:xxxx [x'ed for privacy reasons]<br />
+tvmode best<br />
+fileprefix &lt;nameshort&gt;.&lt;00senum&gt;.WEBRip.x264-iPlayer<br />
+output /Volumes/MoMedia/Kid's TV Shows<br />
+subdir<br />
+subdir-format "&lt;nameshort&gt;"<br />
+whitespace<br />
+nopurge<br />
+thumbsize 6</code></div></div><br />
+<br />
+<br />
+Thanks in advance,<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2014, 09:59 PM</div>
+</div>
+<div class="message">Everything after <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output</code></div></div> (except for <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>thumbsize</code></div></div>) is wrong, with either bad option name or missing value.  Delete those 4 options and re-add them with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add</code></div></div>.  That's what it's for.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">13-12-2014, 12:16 AM</div>
+</div>
+<div class="message">That worked a charm - thanks for your help</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Not downloading into sub folders</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

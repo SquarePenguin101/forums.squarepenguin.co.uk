@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Switch to select 25 or 50fps?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Switch to select 25 or 50fps?</div>
+<div id="pagetitle"><h2>Switch to select 25 or 50fps?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">08-01-2016, 10:35 AM</div>
+</div>
+<div class="message">I upgraded to the latest dev branch and am now getting the 50fps content with GiP in HLS mode, which is nice (older version with HLS only gave me 25fps).<br />
+<br />
+The thing is, not all shows benefit greatly (or at all) from the extra fps and getting them at 50 nearly doubles the size.<br />
+<br />
+My question is, is it possible to have either an --fps switch, or a better explanation of the --modes to enable selection via the CLI of whether for a given show you want 25 or 50?<br />
+<br />
+<br />
+(e.g. cbeebies, daytime tv &amp; chat shows, films...50fps really doesn't matter. Sports stuff, anything with fast moving action scenes clearly superior in the higher frame rate)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">08-01-2016, 10:56 AM</div>
+</div>
+<div class="message">I think I can at least derive this now by looking at --info for a program based on the mode sizes and duration attributes;<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>duration:   660<br />
+modesizes:      original: flashhd1=190MB,flashvhigh1=119MB,flashvhigh2=119MB,flashhigh1=64MB,flashhigh2=64MB,flashstd1=41MB,flashstd2=41MB,flashlow1=32MB,flashlow2=32MB,hlshd1=433MB,hlshd2=433MB,hlsxd1=188MB,hlssd1=245MB,hlssd2=245MB,hlsvhigh1=142MB,hlsvhigh2=142MB,hlshigh1=77MB,hlshigh2=77MB,hlsstd1=44MB,hlsstd2=44MB,hlslow1=31MB,hlslow2=31MB,subtitles1=23KB</code></div>
+</div>
+<br />
+<br />
+From this you can (roughly) derive that flashhd1 is 2.3 Mbps and probably 720p25 and hlshd1 is 5.24 Mbps and probably 720p50<br />
+<br />
+<br />
+..but there has to be an easier way? Or perhaps not...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">08-01-2016, 05:23 PM</div>
+</div>
+<div class="message">Hi PiP,<br />
+Have a read of <a href="thread-549.html">/threa...ml#pid2972</a> which might help to explain how the new HD modes will be different.<br />
+<br />
+Looking at the example you posted, my guess would be (judging on size) that hlsxd is roughly the same stream as the current flashhd and hlshd is the new Video Factory stream.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-01-2016, 06:59 PM</div>
+</div>
+<div class="message">If you use the dev version, read the commit log:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/commits/develop">https://github.com/get-iplayer/get_iplay...ts/develop</a><br />
+<br />
+hint: you will want to pull the latest changes</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">08-01-2016, 07:31 PM</div>
+</div>
+<div class="message">Wow, that was fast - nice work!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-01-2016, 09:05 PM</div>
+</div>
+<div class="message">Hi Dinky,<br />
+I've had a read through the commit log but I'm a bit confused by some of the options. I see that we now have 2 HLS options for HD. hlshd and hls50hd. Is hlshd the 540p 50fps stream that is supposed to be equivalent to the current flashhd streams because of the upped frame rate? That would possibly then make hls50hd the new monster HD stream that is 720p but is about 2GB an hour. But from what I've read, it sounds like hlshd would be a 25fps option which then wouldn't be as good as the current HD streams.<br />
+<br />
+Am I understanding this right?<br />
+<br />
+Also what is the hls50sd option for?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">09-01-2016, 11:26 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-01-2016, 09:05 PM)</span></cite>we now have 2 HLS options for HD. hlshd and hls50hd. Is hlshd the 540p 50fps stream</blockquote><br />
+My understanding is that;<br />
+<br />
+hls50hd = 720p50<br />
+hlshd = 720p25 (equiv to flashhd)<br />
+<br />
+Based on file size and duration for some I have checked, I can tell that;<br />
+<br />
+hls50hd is ~ 5.3Mbps   720p50<br />
+hls50sd is ~ 3.5 Mbps  540p50<br />
+hlshd is ~ 2.5 Mbps      720p25<br />
+hlsvhigh is ~ 2Mbps     540p25<br />
+hlshigh is ~1Mbps       396p25<br />
+hlsstd is ~ 0.6Mbps     288p25<br />
+hlslow is ~ 0.4Mbps    216p25<br />
+<br />
+I'm not sure what each of the SD resolutions (that is, anything less than 720p) are but they're the same as they were with the Flash modes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-01-2016, 11:28 PM</div>
+</div>
+<div class="message">hlshd = 1280x720@25fps, hls50hd = 1280x720@50fps. I was going to make 50fps the HD default, but changed my mind. I'm planning to minimise the number of streams supported in subsequent releases, but even when HLS becomes the default TV format, I'm not sure I'll get rid of 25fps as default for HD.  50fps is pretty wasteful for most programmes, so it seems like it should be up to the user whether or not to gobble the extra bandwidth.  If you want it, all you have to do is use <kbd>--tvmode=hls50 </kbd>and get_iplayer will skip HD 25fps. I'm assuming that the HD 25fps stream will be around as long as iOS doesn't do DASH, but there is no way to know for sure.<br />
+<br />
+hls50sd = 960x540@50fps. It's not really SD resolution as most people would understand it, but it is the closest thing available. The BBC confuse things by calling it "HD" on iPlayer, but I couldn't bring myself to do that. Not sure it was worth including this - we'll see.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">09-01-2016, 11:39 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-01-2016, 11:28 PM)</span></cite>I was going to make 50fps the HD default, but changed my mind.  50fps is pretty wasteful for most programmes, so it seems like it should be up to the user whether or not to gobble the extra bandwidth.</blockquote><br />
+I couldn't agree more. A few things do look better in 50fps but many things don't gain much advantage from it and it's a LOT of extra bandwidth bloat.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-01-2016, 12:40 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-01-2016, 11:26 PM)</span></cite>I'm not sure what each of the SD resolutions (that is, anything less than 720p) are but they're the same as they were with the Flash modes.</blockquote>They are slightly different, but not enough to care. At <kbd>vhigh</kbd> and <kbd>high</kbd>quality, HLS has a bit higher resolution and bitrate.  Run this with latest dev version and you'll find a representative list of recording modes for comparison buried in the output:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer sherlock --info --verbose</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">11-01-2016, 01:24 AM</div>
+</div>
+<div class="message">Can I just put a vote in for retaining the hls50sd setting, I have just started using the hls downloads and find hls50sd (540p) really good for sport without using too much bandwidth. I also use image doubling video rendering SW (madvr) and find that 540P is ideal for displaying on 1080p screen. It is a shame that there isn't a 540p 25fps stream for other material.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1129</h2></div><div class="dateline">11-01-2016, 02:07 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-01-2016, 01:24 AM)</span></cite>It is a shame that there isn't a 540p 25fps stream for other material.</blockquote><br />
+<blockquote class="mycode_quote"><cite><span> (09-01-2016, 11:26 PM)</span></cite>hls50sd is ~ 3.5 Mbps  540p50<br />
+hlsvhigh is ~ 2Mbps     540p25</blockquote><br />
+<br />
+I think I've lost you. What do you mean 'for other material' ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-01-2016, 02:11 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-01-2016, 01:24 AM)</span></cite>also use image doubling video rendering SW (madvr) and find that 540P is ideal for displaying on 1080p screen. It is a shame that there isn't a 540p 25fps stream for other material.</blockquote>I hadn't thought of that.  OK, it stays.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">11-01-2016, 03:33 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-01-2016, 02:11 AM)</span></cite>I hadn't thought of that.  OK, it stays.</blockquote>Many thanks<br />
+<br />
+@PiP I hadn't realised that hlsvhigh is 540p25, I thought it was the the old 832x468 resolution, thanks for pointing that out. <br />
+(As I said I'm just starting to use the hlsmodes and have been focussed on the HD and SD50 formats)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Switch to select 25 or 50fps?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

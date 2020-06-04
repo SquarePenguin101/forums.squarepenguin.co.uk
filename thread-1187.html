@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Episode naming</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Episode naming</div>
+<div id="pagetitle"><h2>Episode naming</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1487</h2></div><div class="dateline">04-03-2017, 11:45 AM</div>
+</div>
+<div class="message">Hello all, I have tried to find an answer from the guides but I'm struggling.<br />
+<br />
+If I am downloading the series 'Pobol y Cwm', the program gives the episodes names like "Pobol_y_Cwm_-_Wed_01_Mar_2017_p04t0mf1_original"<br />
+<br />
+The bit at the end is neither here nor there, but is there any way that get_iplayer can rename the episodes as, say,<br />
+"Pobol_y_Cwm_-_2017-03-01_blahblah"?  It would avoid the need to have to manually rename each episode (and subtitle file) so that they appear correctly when sorted into alphabetical order.<br />
+<br />
+Many thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-15</h2></div><div class="dateline">04-03-2017, 12:23 PM</div>
+</div>
+<div class="message">I had similar problem and Dinky sorted me out. Note I use the WebPVR interface almost all the time.<br />
+<br />
+The easiest way for me was to edit the "options" file directly and insert the following exactly as written below,<br />
+<br />
+tag_formattitle &lt;name&gt;: &lt;episode&gt;<br />
+<br />
+Or if you prefer you can use the Command Line Interface and use:<br />
+<br />
+get_iplayer --prefs-add --tag-format-title="&lt;name&gt;: &lt;episode&gt;"<br />
+<br />
+Note that the quote marks and angle brackets are important!<br />
+<br />
+The syntax is shown in <a href="https://github.com/get-iplayer/get_iplayer/wiki/release298">https://github.com/get-iplayer/get_iplay...release298</a> which I must confess I had overlooked until I was pointed in the right direction. <br />
+The full list of substitution parameters can be found here <br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation#substitution-parameters">https://github.com/get-iplayer/get_iplay...parameters</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1487</h2></div><div class="dateline">04-03-2017, 12:51 PM</div>
+</div>
+<div class="message">Many thanks for the suggestion skmorgan1944.<br />
+<br />
+I have tried it but it doesn't seem to be working, and I am at a loss as to why.<br />
+<br />
+I run mine on the command line, so firstly I typed:<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer --prefs-add --tag-format-title="&lt;name&gt;: &lt;episode&gt;"</span> (which was what you suggested), then<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer --get 5070 --subtitles --force</span><br />
+<br />
+However, once it had finished, the directory had files called<br />
+<span style="font-weight: bold;" class="mycode_b">Pobol_y_Cwm_-_Fri_03_Mar_2017_p04t97yx_original</span><br />
+(and the subtitles file).<br />
+<br />
+Any ideas?<br />
+<br />
+Many thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">04-03-2017, 01:07 PM</div>
+</div>
+<div class="message">This information is covered in the guides:<br />
+<br />
+<a href="https://squarepenguin.co.uk/guides/tv-download-guide/#how-do-i-make-get-iplayer-automatically-rename-downloaded-programmes">https://squarepenguin.co.uk/guides/tv-do...programmes</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-15</h2></div><div class="dateline">05-03-2017, 04:20 PM</div>
+</div>
+<div class="message">Square Penguin has suggested you follow the link he provides which is always sound advice.<br />
+Extracting a few lines does point to some things worth trying using the "file prefix" command:<br />
+<br />
+&lt;nameshort&gt; = the programme name with the series number stripped<br />
+&lt;senum&gt; = Series and Episode numbers in the s##e## format<br />
+&lt;episodeshort&gt; = programme episode name with episode number stripped<br />
+<br />
+<br />
+The only further suggestion I can make is to experiment with various substitution parameters and see if you can get the output you require as I haven't needed to use the File Prefix command myself. You can "build" a serious of parameters linked with a semi colon.<br />
+<br />
+Pob lwc<br />
+<br />
+Simon Morgan from sunny Pembrokeshire</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-03-2017, 12:09 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-03-2017, 04:20 PM)</span></cite>You can "build" a serious of parameters linked with a semi colon.</blockquote>Don't use semicolons with <kbd>--fileprefix</kbd>. They will only be removed when the file name is sanitised.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Episode naming</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

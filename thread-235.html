@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - UserScript to complement get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; UserScript to complement get_iplayer</div>
+<div id="pagetitle"><h2>UserScript to complement get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">30-10-2014, 10:25 AM</div>
+</div>
+<div class="message">Install the UserScript  below in your browser (e.g Firefox)<br />
+and when you navigate the <a href="http://www.bbc.co.uk">www.bbc.co.uk</a> site each programme link <br />
+of the kind <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/programmes&#92;/b04xxxxx</code></div></div> becomes instead command<br />
+to put that programme into the PVR queue.<br />
+<br />
+Of course you need to start up get_iplayer's WebPVR before<br />
+you click those new links<br />
+<br />
+<br />
+<br />
+Ref: <a href="http://userscripts-mirror.org/">http://userscripts-mirror.org/</a><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>// ==UserScript==<br />
+// @id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yourName<br />
+// @name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PVR Embedded<br />
+// @version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0<br />
+// @namespace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+// @author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yourName<br />
+// @description&nbsp;&nbsp;&nbsp;&nbsp;Embedded get_iplayer links into schedule<br />
+// @include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.bbc.co.uk/*<br />
+// @run-at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document-end<br />
+// ==/UserScript==<br />
+<br />
+&nbsp;&nbsp;for( var i=0; i&lt;document.links.length; i++ )<br />
+&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var myLink = document.links[i]<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if( myLink.pathname.match( /^&#92;/programmes&#92;/b04[a-z,0-9]{5}&#36;/) )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pid = myLink.pathname.split('/')[-1];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('pid:' + pid)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str=""<br />
+&nbsp;&nbsp;str +="http://localhost:1935/?SEARCH=&amp;SEARCHFIELDS=name&amp;PROGTYPES=radio&amp;URL=http%3A%2F%2Fwww%2Ebbc%2Eco%2Euk%2Fprogrammes%2F"<br />
+&nbsp;&nbsp;str += pid<br />
+&nbsp;&nbsp;str +="&amp;VERSIONLIST=default&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=0&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=thumbnail&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=categories&amp;COLS=timeadded&amp;OUTPUT=&amp;MODES=default&amp;PROXY=&amp;SUBTITLES=0&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr%5Fqueue&amp;ACTION=&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=FUTURE&amp;.cgifields=SUBTITLES&amp;.cgifields=HISTORY&amp;.cgifields=REVERSE&amp;.cgifields=PROGTYPES&amp;.cgifields=THUMB&amp;.cgifields=HIDE&amp;.cgifields=HIDEDELETED&amp;.cgifields=FORCE&amp;.cgifields=COLS"<br />
+&nbsp;&nbsp;document.links[i].href = str;<br />
+&nbsp;&nbsp;document.links[i].target = 'PVR'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;}</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">30-10-2014, 11:51 PM</div>
+</div>
+<div class="message">Thanks for this script, makes life a bit simpler now they have killed off the feed system.<br />
+<br />
+I found one small change to the script makes it work with more content, if you change the line<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>if( myLink.pathname.match( /^&#92;/programmes&#92;/b04[a-z,0-9]{5}&#36;/) )</code></div></div><br />
+to<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>if( myLink.pathname.match( /^&#92;/programmes&#92;/b0[a-z,0-9]{6}&#36;/) )</code></div></div><br />
+You should find all the content pages will now become a link as the content will not always start with b04 older stuff starts at b00. The only downside is that it will turn EVERY link match it finds into a PVR link. The site uses the same url format for series info and episode info links so the script assumes any match is a valid queueable item. I'm playing around some more and see if I can rig up the 'Watch Now' on the actual player page to queue in the PVR, this would prevent every link becoming a queue link, if I can suss that out then I shall try and make it a separate button.<br />
+<br />
+LATE NIGHT EDIT: I sussed out making the 'Watch Now' button perform the queue function, will test more tomorrow night and post the code up. Really should go to bed now :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">01-11-2014, 12:05 PM</div>
+</div>
+<div class="message">Forgive me if I'm being stupid... I installed this script in Firefox using Greasemonkey (have never tried userscripts before). When I go to BBC iplayer the browser says the script is enabled OK. I have the Web PVR open in a second tab.<br />
+<br />
+When I click on a show on the iplayer tab, what should I expect to happen? If I flip back to the Web PVR tab nothing has changed (I tried refreshing).<br />
+<br />
+Sorry for this noob question. If I could restore even <span style="font-weight: bold;" class="mycode_b">some</span> user-friendly functionality to the Web PVR it would be a great result.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">01-11-2014, 01:03 PM</div>
+</div>
+<div class="message">Hi There!<br />
+<br />
+I have been using get_iplayer for many years and love it!<br />
+<br />
+I have been making some code using Perl that may get the Web PVR "Refreshed" again. I have just started on it today by using some of the scripts posted here already. I hope that it will be possible soon to get some functionality back with the Web PVR.<br />
+<br />
+Early days, but it may help someone out there.<br />
+<br />
+Tiiveni.<br/>
+<a href="static/thread-235-Refresh_Cache_V0_1.pl_.txt">Refresh_Cache_V0_1.pl_.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">01-11-2014, 02:46 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/userscript-to-complement-get_iplayer/#post-10235">Quote:</a>&lt;/div&gt;Forgive me if Iâm being stupidâ¦ I installed this script in Firefox using Greasemonkey (have never tried userscripts before). When I go to BBC iplayer the browser says the script is enabled OK. I have the Web PVR open in a second tab.<br />
+<br />
+When I click on a show on the iplayer tab, what should I expect to happen? If I flip back to the Web PVR tab nothing has changed (I tried refreshing).<br />
+<br />
+Sorry for this noob question. If I could restore even <span style="font-weight: bold;" class="mycode_b">some</span> user-friendly functionality to the Web PVR it would be a great result.</blockquote>
+You don't need Web PVR open in a second tab. But it doens't hurt.<br />
+You clink on the program link.<br />
+First time a new tab opens with the PVR list containing that program<br />
+(not by name but by time/date pid etc)<br />
+Second time that tab gets updated with the 2nd program in the queue.<br />
+repeat ...<br />
+Until your ready.<br />
+Now enter the tab again and press Run PVR and wait until the downloads<br />
+complete.<br />
+<br />
+That's it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">01-11-2014, 02:56 PM</div>
+</div>
+<div class="message">Hi - thanks for the reply, but it doesn't work that way for me. I'm clicking links on the BBC iplayer page (<a href="http://www.bbc.co.uk/iplayer">www.bbc.co.uk/iplayer</a>).<br />
+<br />
+On closer inspection, the iplayer links aren't the same format as in your first post. You mentioned links that are like this: "/programmes\/b04xxxxx".<br />
+<br />
+For me, a typical programme link looks like this:<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b04n9p9c/the-missing-episode-1">http://www.bbc.co.uk/iplayer/episode/b04...-episode-1</a><br />
+<br />
+Maybe I'm trying to do this from the wrong sort of BBC page... Can I ask where you found links that include that backslash and the word "programmes"?<br />
+<br />
+thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">01-11-2014, 03:14 PM</div>
+</div>
+<div class="message">Here's my tweaked version of forget.it's excellent code, It works a little differently but does a similar job. I changed the search params so it will respond to pids that start with a b or p which is handy for web only links and older content.<br />
+<br />
+You need to use it on pages like these <a href="http://www.bbc.co.uk/programmes/b006q2x0/episodes/player">http://www.bbc.co.uk/programmes/b006q2x0...des/player</a> or these <a href="http://www.bbc.co.uk/programmes/b04n1wqmthen">http://www.bbc.co.uk/programmes/b04n1wqmthen</a> then click the iplayer triangle to queue, you will lose the ability to watch anything live when running when using these pages but it will download anything. Radio fans can use the script on the radio program pages that offers the 'pop out player' button clicking that will queue that program for download.<br />
+<br />
+Quality is set for best in all cases and will download subtitles for TV content. One thing you will need to change in the script is the destination. I use D:\Downloads\~~iplayer which in the script is the '&amp;OUTPUT=D\:\\Downloads\\~~iPlayer\\' line you can either remove everything ofter the = to let it go to it's default location or replace it with another path. Remember to escape your slashes and colons :)<br />
+<br />
+I hope this all makes sense it's my first userscript, add this whichever way you prefer to do so to get it into Firefox and enjoy. Future ideas are to make it present a choice to play content as normal, queue or stream to external player as the in browser player is awful even on my 80+MB Infinity connection.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>// ==UserScript==<br />
+// @id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nebular Nerd<br />
+// @name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get_iplayer queue linkificator<br />
+// @version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0<br />
+// @namespace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+// @author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nebular Nerd<br />
+// @description&nbsp;&nbsp;&nbsp;&nbsp;Converts the 'Watch Now' or 'Pop Out' player button on iPlayer pages to produce get_iplayer queue links, based on forget.ite's most excellent script.<br />
+// @include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.bbc.co.uk/*<br />
+// @run-at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document-end<br />
+// ==/UserScript==<br />
+for (var i = 0; i &lt; document.links.length; i++)<br />
+{<br />
+&nbsp;&nbsp;var myLink = document.links[i]<br />
+&nbsp;&nbsp;if (myLink.pathname.match(/^&#92;/radio&#92;/player&#92;/(b|p)[a-z,0-9]{7}&#36;/))<br />
+&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var pid = myLink.pathname.split('/') [ + 3];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('pid:' + pid)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var str = ''<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += 'http://localhost:1935/?SEARCH=&amp;SEARCHFIELDS=name&amp;PROGTYPES=radio&amp;URL=http%3A%2F%2Fwww%2Ebbc%2Eco%2Euk%2Fradio%2Fplayer%2F'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += pid<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += '&amp;OUTPUT=D&#92;:&#92;&#92;Downloads&#92;&#92;~~iPlayer&#92;&#92;'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += '&amp;VERSIONLIST=default&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=0&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=thumbnail&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=categories&amp;COLS=timeadded&amp;MODES=best&amp;PROXY=&amp;SUBTITLES=1&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr%5Fqueue&amp;ACTION=&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=FUTURE&amp;.cgifields=SUBTITLES&amp;.cgifields=HISTORY&amp;.cgifields=REVERSE&amp;.cgifields=PROGTYPES&amp;.cgifields=THUMB&amp;.cgifields=HIDE&amp;.cgifields=HIDEDELETED&amp;.cgifields=FORCE&amp;.cgifields=COLS'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;document.links[i].href = str;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;document.links[i].target = 'PVR'<br />
+&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;else if (myLink.pathname.match(/^&#92;/iplayer&#92;/episode&#92;/(b|p)[a-z,0-9]{7}&#36;/))<br />
+&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var pid = myLink.pathname.split('/') [ + 3];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('pid:' + pid)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var str = ''<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += 'http://localhost:1935/?SEARCH=&amp;SEARCHFIELDS=name&amp;PROGTYPES=tv&amp;URL=http%3A%2F%2Fwww%2Ebbc%2Eco%2Euk%2Fiplayer%2Fepisode%2F'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += pid<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += '&amp;OUTPUT=D&#92;:&#92;&#92;Downloads&#92;&#92;~~iPlayer&#92;&#92;'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;str += '&amp;VERSIONLIST=default&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=0&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=thumbnail&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=categories&amp;COLS=timeadded&amp;MODES=best&amp;PROXY=&amp;SUBTITLES=1&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr%5Fqueue&amp;ACTION=&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=FUTURE&amp;.cgifields=SUBTITLES&amp;.cgifields=HISTORY&amp;.cgifields=REVERSE&amp;.cgifields=PROGTYPES&amp;.cgifields=THUMB&amp;.cgifields=HIDE&amp;.cgifields=HIDEDELETED&amp;.cgifields=FORCE&amp;.cgifields=COLS'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;document.links[i].href = str;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;document.links[i].target = 'PVR'<br />
+&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;<br />
+}</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">01-11-2014, 04:03 PM</div>
+</div>
+<div class="message">Hmmm... this <span style="font-weight: bold;" class="mycode_b">does</span> work for me - it adds the show to the PVR. But when I run the PVR, nothing gets recorded. The PVR says:<br />
+<br />
+ONCE_http_www.bbc.co.uk_iplayer_episode_b04mmcmm<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b04mmcmm using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+(I'd like to point out I'm not a keen follower of DIY SOS... I was just experimenting...)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-627</h2></div><div class="dateline">01-11-2014, 04:28 PM</div>
+</div>
+<div class="message">Is this using my script or forget.it's one?<br />
+<br />
+Just tried with mine and worked ok for me, queue up another show and look in C:\Users\&lt;user&gt;\.get_iplayer\pvr\&lt;filename with pid you want&gt; you should get something looking like this.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>comment http:__www_bbc_co_uk_iplayer_episode_b04mmcmm - - (queued: Sat Nov&nbsp;&nbsp;1 15:20:03 2014)<br />
+force 0<br />
+modes best<br />
+output D:&#92;Downloads&#92;~~iPlayer&#92;<br />
+pid http://www.bbc.co.uk/iplayer/episode/b04mmcmm<br />
+subtitles 1<br />
+thumb 0<br />
+type tv</code></div></div><br />
+<br />
+<br />
+In which case it should work, if not post up your output and I shall take a look, might not be tonight though I'm off to the pub :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">01-11-2014, 08:08 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I have been trying to write some Perl code to get the get_iplayer functioning again as normal. Now, some things seem to be working again, but not as nicely as before the BBC made the changes. <br />
+<br />
+I guess that this only works with a Windows PC. I have two files that I copy into the get_iplayer directory which is "C:\Program Files (x86)\get_iplayer" (on this machine). I then remove the ".txt" from the end of both files so that they are simply named "Refresh_Cache_V0_2.pl" and "Refresh_Cache_V0_2.pl.cmd". I will try to upload the two files with this message.<br />
+<br />
+I then double click the "Refresh_Cache_V0_2.pl.cmd" file to open the command, which just starts running the Perl code ("Refresh_Cache_V0_2.pl.cmd"). My computer then sits there for a very long time scraping all the Data from the BBC iPlayer website and storing the results on the hard-disk, this refreshes the cache that get i-player uses to store all the data from the iPlayer system. You can watch the progress on the screen, but it needed 16 minutes to complete on my PC, as there are currently 3820 videos on BBC iPlayer! After this, I can then start the "PVR Manager" and use get_iplayer exactly as before.<br />
+<br />
+Sadly, the images and most of the fine details for the programs are still missing! But, at least it gets things back on the road for now. <br />
+<br />
+Thank you for all who have worked on this software!<br />
+<br />
+Tiiveni.<br/><br/>
+<a href="static/thread-235-Refresh_Cache_V0_2.pl_.cmd_.txt">Refresh_Cache_V0_2.pl_.cmd_.txt</a><br/>
+<a href="static/thread-235-Refresh_Cache_V0_1.pl_.txt">Refresh_Cache_V0_1.pl_.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-628</h2></div><div class="dateline">01-11-2014, 10:38 PM</div>
+</div>
+<div class="message">Just to update, just tried this on a Linux PC and it certainly updates the cache..<br />
+<br />
+<br />
+Thanks to everyone!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-645</h2></div><div class="dateline">01-11-2014, 10:48 PM</div>
+</div>
+<div class="message">Tiiveni's PERL code worked nicely for me, once I had copied the files to the program files\get_iPlayer directory (which needed admin permission) then renamed the files (again needed Admin permission). <br />
+<br />
+I also removed the trailing underscores on the file type extensions, giving file names ending .pl_.cmd and .pl as opposed to .pl_.cmd_ and .pl_<br />
+<br />
+I tried it and it fetched the TV cache data, which loaded in the Get_iPlayer web interface, just like old times, but with a couple of glitches. Specifically the "Episode" no longer has the episode title, but an apparently random number of 3 or 4 digits (i.e. between 100 and 9999), and the "Time Added" shows as "44y 304d 20h ago".<br />
+<br />
+Running PVR ran all my usual searches, one of which found a hit ( <a href="http://www.bbc.co.uk/iplayer/episode/p00nw1z9/daphne-du-maurier">http://www.bbc.co.uk/iplayer/episode/p00...du-maurier</a> ) and downloaded it, saving it with the file name "BBC_iPlayer_Feeds_-_743_p00nw1z9_default.mp4"<br />
+<br />
+It plays just fine in VLC player.<br />
+<br />
+Excellent work, thanks to all involved.<br />
+<br />
+I haven't coded anything since the TV I used with my Sinclair ZX81 died, so I have no PERL knowledge and am a bit out of pratice. Is there anything I can do to make this work with Radio programmes, which is mostly what I used Get_iPlayer for?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">02-11-2014, 12:10 AM</div>
+</div>
+<div class="message">To clarify my earlier ramblings: I can't get forget.it's script to work - I'm not knocking it, it's doubtless that I'm not implementing it quite right.<br />
+<br />
+I <span style="font-weight: bold;" class="mycode_b">have</span> managed to make Nebular Nerd's script work, despite being a coding dunce. The biggest challenge was defining the download path and 'escaping' the dashes and colons in it. For anyone reading this who's as inexperienced as me, it involves putting backslashes before the colons &amp; forward slashes of the download path, presumably so the coding language can understand it? So to have my files download to:<br />
+J:\My Videos/get_iplayer<br />
+...I amended the script in two places to:<br />
+str += '&amp;OUTPUT=J\:\\My Videos\/get_iplayer\\' (see the extra backslashes?)<br />
+<br />
+I was initially baffled by the subtitles on the videos until I realised they're a separate file that's downloaded alongside the MP4 with an '.srt' file extension. Once I deleted the subtitle file, they vanished from my videos.<br />
+<br />
+One of the biggest problems I had with both the Userscript solutions was finding BBC pages in the 'www.bbc.co.uk/programme' format. Most of the iplayer triangles I clicked on simply bounced me into the iplayer website without sending anything to the get_iplayer PVR.<br />
+<br />
+Finally Tiiveni's Perl code worked for me. Not sure how long it took to refresh the cache (I went away &amp; left the computer to it), but when it had finished, the get_iplayer PVR appeared to run as normal. This is probably the method I'll stick with for now, as it's my closest match to the pre-breakdown way of working.<br />
+<br />
+Everything I've downloaded since the breakdown has had a mangled filename, but that's a small price to pay - I'm glad to be getting anything at all.<br />
+<br />
+Forget.it, Nebular Nerd &amp; Tiiveni - you're keyboard maestros &amp; I take my hat off to all three of you!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">02-11-2014, 11:12 AM</div>
+</div>
+<div class="message">Many thanks to Tiveni for his perl script. It works brilliantly for TV feeds. Is there any way to get the same for Radio feeds?<br />
+<br />
+I did try forget-it's script and the variations, but either I was missing something or had cut and paseted missing something, but I could not get it to perform at all. Hence my admiration for Tiveni's work.<br />
+<br />
+Well done Tiveni!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">02-11-2014, 12:15 PM</div>
+</div>
+<div class="message">Once I've downloaded a cache with Tiiveni's perl script, my old series links don't work anymore - no big deal as I can just recreate them, or pick off the episodes individually.<br />
+<br />
+But now the search function works <span style="font-weight: bold;" class="mycode_b">much better</span> than it ever did before! I'm picking up shows' names with search terms that wouldn't have delivered any results in the past. A weird fringe benefit!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">02-11-2014, 12:41 PM</div>
+</div>
+<div class="message">Not sure about the search, but the web PVR is showing programs as having been added 44y 305d ago! More weird!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-628</h2></div><div class="dateline">02-11-2014, 01:57 PM</div>
+</div>
+<div class="message">Just a qualifier, the sript runs and creates a cache, it just needs some work on paths and that wrong way round windows \ ! ;)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; UserScript to complement get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

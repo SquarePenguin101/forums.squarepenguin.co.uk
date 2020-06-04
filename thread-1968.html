@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Introducing GreaseMonkey Script connecting BBC's iPlayer to Web PVR Manager</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Introducing GreaseMonkey Script connecting BBC's iPlayer to Web PVR Manager</div>
+<div id="pagetitle"><h2>Introducing GreaseMonkey Script connecting BBC's iPlayer to Web PVR Manager</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2321</h2></div><div class="dateline">21-01-2019, 08:36 PM</div>
+</div>
+<div class="message">Introducing <span style="font-weight: bold;" class="mycode_b">get_iplayer helper</span> beta.<br />
+<br />
+As a long term user of get_player I'd grown a little tired of browsing the BBC's iPlayer site, copying a interesting show's title or URL,  switching to the Web PVR page, pasting the name into the search box, and again into the recording directory box, then finally clicking on Queue button - too many clicks!<br />
+<br />
+So I wrote a greasemonkey script to do it for me. <br />
+<br />
+[Image: <a href="https://imgur.com/xQcGh04">https://imgur.com/xQcGh04</a>]<br />
+<br />
+For every show on iPlayer site the script injects 2 pink buttons - the one on the left adds that show's URL to the Quick URL list (you can then just close that new tab), the one on the right performs a get_iplayer name search (you can click to record series etc as normal). In both cases the show's name is appended to the recording directory.<br />
+Once you're done just start the 'Run PVR'<br />
+<br />
+I also added a more or less persistent 'sort' method to the BBC's category listings - that always annoyed me that I had to click down to 'most recent' each time I switched categories.<br />
+<br />
+I posted the script to Greasy Fork, but it's not publically available yet, so you'll need to follow the link below.<br />
+<br />
+First, if you don't already have a userscript manager installed on your browser you need to visit:<br />
+<a href="https://tampermonkey.net/">https://tampermonkey.net/</a> or other vendor.<br />
+<br />
+Once that's done, head over to <br />
+<br />
+<a href="https://greasyfork.org/en/scripts/376954-get-iplayer-helper">https://greasyfork.org/en/scripts/376954...yer-helper</a> and install the script.<br />
+<br />
+You'll likely then want to edit the script to tell it where to record the files ( click on the tampermonkey icon in the right of your browser bar, select Dashboard, then the edit icon on the right of the 'get_iplayer helper' line). Search the script for 'EDIT AND ENABLE THIS TO RECORD IN A CUSTOM DIRECTORY', remove the '//' from the beginning of the line and enter your recording directory. All shows will record into their own folders under this directory.   You may wish to enable the 'fps25' line further down too.  Click 'File' then  'Save'.<br />
+<br />
+<br />
+I wrote this on Windows 10 / Chrome / Tampermonkey and haven't tested it wildly on other setups, so there may be issues, which I will try and address in this forum.  Also, this is my very first Greasemonkey script so I may not have done everything in the most efficient manner.<br />
+<br />
+<br />
+There are a few quirks. One is that the  BBC page lays out, then performs some other loads, and only then does the script fire, so you may need to wait a few seconds for the pink boxes to appear.<br />
+<br />
+I hope this makes things easier.  I'm open to recommendations, bugs, whatevers.<br />
+<br />
+Enjoy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-01-2019, 09:20 PM</div>
+</div>
+<div class="message">Replies to: <a href="https://greasyfork.org/en/forum/">https://greasyfork.org/en/forum/</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Introducing GreaseMonkey Script connecting BBC's iPlayer to Web PVR Manager</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

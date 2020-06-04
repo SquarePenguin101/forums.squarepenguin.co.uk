@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PID will not download</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PID will not download</div>
+<div id="pagetitle"><h2>PID will not download</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-308</h2></div><div class="dateline">26-05-2015, 07:25 AM</div>
+</div>
+<div class="message">OK, so in the past I've had some PIDS not work for me --playlist-metadata solved that. No I've come across two PIDS that I can't get to work at all. When I hit this problem I upgraded to 2.92 and I'm still having the problem.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Program Files\get_iplayer&gt;get_iplayer --pid b05x31b6 --playlist-metadata<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+C:\Program Files\get_iplayer&gt;</code></div>
+</div>
+<br />
+Tried <kbd>--playlist-metadata</kbd>, didn't work. Tried the url and got:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Program Files\get_iplayer&gt;get_iplayer <a href="http://www.bbc.co.uk/iplayer/episode/b0">http://www.bbc.co.uk/iplayer/episode/b0</a><br />
+5x31b6/churchill-when-britain-said-no<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05x31b6 using type: tv</code></div>
+</div>
+<br />
+A possible related issue is - when I do <kbd>--refresh</kbd> a number of the download urls fail, however from what I can see this just affects shows from BBC Parliament, not BBC2 where this one was broadcast.<br />
+<br />
+Help please!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-05-2015, 11:56 AM</div>
+</div>
+<div class="message">Both of these bugs have been fixed for next release:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/issues/145">https://github.com/get-iplayer/get_iplayer/issues/145</a><br />
+<a href="https://github.com/get-iplayer/get_iplayer/issues/153">https://github.com/get-iplayer/get_iplayer/issues/153</a><br />
+<br />
+So the short answer is: stop using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div> until next release.  However, even using a cache created with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div> you can still download the Churchill programme with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div>.  You can also ignore the warnings about BBC Parliament - they only pertain to future listings, not downloads (except in the unlikely event you use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-feeds=schedule</code></div></div>).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-308</h2></div><div class="dateline">27-05-2015, 10:27 AM</div>
+</div>
+<div class="message">Managed to download the Churchill show by using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div>. Thanks for that<br />
+So does this mean for certain programmes, the PVR won't work until the next release? Is there no workaround? What if I put <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div> in my default settings? I tried adding <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div> to the pvr_scheduler batch file, this didn't work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-05-2015, 10:46 AM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div> is ignored in pvr.  Like I said, stop using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-future</code></div></div> until next release.  Remove it from preferences if necessary and rebuild your cache without it.  If you don't want to do that for some reason, your only choice for affected programmes is to do ad hoc downloads with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--future</code></div></div>.<br />
+<br />
+EDIT: no need to stop using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--refresh-feeds=schedule</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PID will not download</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

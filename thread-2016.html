@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Wide character in print warning on Windows</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Wide character in print warning on Windows</div>
+<div id="pagetitle"><h2>Wide character in print warning on Windows</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">09-04-2019, 08:54 AM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Wide character in print at C:&#92;Program Files (x86)&#92;get_iplayer&#92;get_iplayer.pl line 3749.</code></div></div><br />
+I have noticed a couple of times recently the above appearing as I have been downloading various programs, the line number is not always the same. It doesn't seem to affect the download. It happened on a couple of programs today but not all. <br />
+<br />
+I just wondered what it means<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>1866:   EastEnders - 08/04/2019, BBC One, m00041yj<br />
+INFO: 1 matching programmes<br />
+<br />
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally<br />
+INFO: Downloading tv: 'EastEnders - 5898. 08/04/2019 (m00041yj) [original]'<br />
+INFO: Downloaded: 177.08 MB (00:29:34) @ 4.56 Mb/s (hvflow1/bi) [audio+video]<br />
+INFO: Converting to MP4<br />
+INFO: Tagging MP4<br />
+Wide character in print at C:&#92;Program Files (x86)&#92;get_iplayer&#92;get_iplayer.pl line 3749.<br />
+New tv programme: 'EastEnders - 5898. 08/04/2019', 'Phil makes a confession to Ben, and Mel prepares for HunterÔÇÖs plea hearing.'</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>1973:   Fleabag: Series 2 - Episode 6, BBC One, p074qkfs<br />
+INFO: 1 matching programmes<br />
+<br />
+INFO: Downloading tv: 'Fleabag: Series 2 - 06. Episode 6 (p074qkfs) [original]'<br />
+INFO: Downloaded: 155.01 MB (00:27:15) @ 5.15 Mb/s (hvflow1/bi) [audio+video]<br />
+INFO: Converting to MP4<br />
+INFO: Tagging MP4<br />
+Wide character in print at C:&#92;Program Files (x86)&#92;get_iplayer&#92;get_iplayer.pl line 3749.<br />
+New tv programme: 'Fleabag: Series 2 - 06. Episode 6', 'As the wedding day arrives, will Fleabag find the ending sheÔÇÖs looking for?'</code></div></div><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>2257:   Have I Got a Bit More News for You: Series 57 - Episode 1, BBC One, m00041yz<br />
+INFO: 1 matching programmes<br />
+<br />
+INFO: Downloading tv: 'Have I Got a Bit More News for You: Series 57 - 01. Episode 1 (m00041yz) [original]'<br />
+INFO: Downloaded: 252.62 MB (00:42:06) @ 4.77 Mb/s (hvflow1/bi) [audio+video]<br />
+INFO: Converting to MP4<br />
+INFO: Tagging MP4<br />
+New tv programme: 'Have I Got a Bit More News for You: Series 57 - 01. Episode 1', 'Guest host David Dimbleby joins Ian Hislop and Paul Merton for the topical news quiz.'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">09-04-2019, 02:13 PM</div>
+</div>
+<div class="message">This sounds like a Unicode perl problem as discussed for example here: <a href="https://stackoverflow.com/questions/47940662/how-to-get-rid-of-wide-character-in-print-at">https://stackoverflow.com/questions/4794...n-print-at</a><br />
+<br />
+Probably the BBC threw in a Unicode weirdo into the title/tags somewhere.<br />
+Nothing much you as a user can do IMHO.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">10-04-2019, 08:11 AM</div>
+</div>
+<div class="message">it doesnt seem to affect the download itself, I was just curious as I dont think I saw it before the latest version</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-04-2019, 06:08 PM</div>
+</div>
+<div class="message">Someone at the BBC has been using Microsoft Word with smart quotes turned on again. The presence of a curly quote in the console output generates a warning thanks to a couple of problems/limitations in Perl on Windows, so users on other platforms won't see it. A solution would entail either some messy workaround code or suppressing the warning altogether. This problem will likely never go away, so I'll probably implement the latter for the next release, though it isn't a great idea. At any rate, the warning is harmless and can be ignored.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-04-2019, 07:46 PM</div>
+</div>
+<div class="message">There appears to be a proper workaround for this issue after all, so if it holds up it in testing should be in the next release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">12-04-2019, 08:18 AM</div>
+</div>
+<div class="message">cheers for the reply, I was just more curious why it happened as it didn't affect the download</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-07-2019, 02:02 PM</div>
+</div>
+<div class="message">Workaround implemented in v3.21</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Wide character in print warning on Windows</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

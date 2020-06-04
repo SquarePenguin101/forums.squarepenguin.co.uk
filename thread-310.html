@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No specified modes error</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; No specified modes error</div>
+<div id="pagetitle"><h2>No specified modes error</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-794</h2></div><div class="dateline">20-12-2014, 06:36 AM</div>
+</div>
+<div class="message">Hello: I've been using get_iplayer Windows for over a year now without issue mostly to download radio shows. I upgraded to 2.90 to get over the November 3rd BBC change - no problems.  In last 2 days I've been unable to download.  I've been getting an error "no specified modes".  Have you come across this before?  Any suggestions?  Here's a bit more info.<br />
+<br />
+EXAMPLE COMMAND<br />
+get_iplayer --pid b04v635x --type=radio<br />
+<br />
+FULL ERROR MESSAGE<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow&gt;available for this programme with version 'default' &lt;tray using --modes=wma&gt;<br />
+ERROR: Failed to record 'Radcliffe and Maconie - Live from Manchester Christmas Market &lt;b04v635x&gt;'<br />
+<br />
+I Tried doing the --modes=wma and got about 15 minutes of a 3 hour show. Not very successful.<br />
+<br />
+I am outside the UK (USA).  I have never had an issue downloading radio with USA IP address before.  Just to be sure I tried using my UK VPN and it didn't help - still got the same error.<br />
+<br />
+I confirmed that I can play the show direct from the Radio 6 website.<br />
+<br />
+I've rebooted computer and router per troubleshooting suggestions.<br />
+<br />
+I searched for other posts on this error - found a couple but seem to be related to trying to download TV from outside UK or unavailability of show on website - neither situation applies to me.<br />
+<br />
+Any ideas?<br />
+<br />
+UPDATE: I continued to mess around trying different things.  Oddly I just managed to download a tv show PID=b04vs60r using get_iplayer (with my UK VPN active).  I also managed to download a Radio 4 show fine.  However I tried a Radio 2 show and same "no specified modes" error as for the Radio 6 show.  Could this be an issue only with Radio 2, Radio 6 and ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">20-12-2014, 03:31 PM</div>
+</div>
+<div class="message">You probably need to update to the latest development version (git HEAD) as there have been changes by the BBC and the adjustments to account for these haven't quite filtered their way into the standard installer release.<br />
+<br />
+Have a read of this thread:<br />
+<br />
+<a href="/topic/some-radio-programmes-wont-record/">/topic...nt-record/</a><br />
+<br />
+Once you've read through all of that, take a look at the linked git HEAD installation guide. It's pretty simple and really boils down to copying a couple of files. The relevant guide is linked below, but read the whole thing first, then read it again. At first it can seem a bit daunting if you're a newbie, but read through the whole thing and note the key points, then give it a go.<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadwin/">https://squarepenguin.co.uk/wiki/install...itheadwin/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-794</h2></div><div class="dateline">21-12-2014, 06:58 AM</div>
+</div>
+<div class="message">Thank you for the response.  I gave the links a quick read and agree that this sounds like the fix I need.  I'll give it a try and let you know how it goes!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-794</h2></div><div class="dateline">22-12-2014, 08:27 AM</div>
+</div>
+<div class="message">All working again now.  Thank you so much!!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; No specified modes error</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

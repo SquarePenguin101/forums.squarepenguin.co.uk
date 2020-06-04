@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Thumbnail failure?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Thumbnail failure?</div>
+<div id="pagetitle"><h2>Thumbnail failure?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-147</h2></div><div class="dateline">21-10-2014, 11:30 PM</div>
+</div>
+<div class="message">At the end of a download, I get this message:<br />
+<br />
+ERROR: Thumbnail Download failed<br />
+<br />
+The mp4 gets written to /root but my command line points elsewhere. eg:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/usr/bin/get_iplayer --get 757 --force "/home/Videos"</code></div></div><br />
+<br />
+<br />
+Does this make sense?<br />
+<br />
+TIA</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-10-2014, 11:53 PM</div>
+</div>
+<div class="message">You need to use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--output=/home/Videos</code></div></div>, otherwise that path is just ignored.  I don't know why it would not write to /root - I'm presuming you are logged in as root and that is your home directory.  The thumbnail could just be broken.  You don't say what programme you're downloading, so I can't check.  If it still fails, try again with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose --thumbnail-only</code></div></div> added.  The output will include the thumbnail URL, which you can check for yourself.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-147</h2></div><div class="dateline">22-10-2014, 09:32 AM</div>
+</div>
+<div class="message">Thank you. Much appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-147</h2></div><div class="dateline">23-10-2014, 03:01 PM</div>
+</div>
+<div class="message">I tried the following command line:<br />
+<br />
+&#36; /usr/bin/get_iplayer --get 779 --force --output=/home/Videos --verbose --thumbnail-only<br />
+<br />
+The result was a download of 'New Tricks'and the same thumbnail error message as before.<br />
+<br />
+Although I could not get any sound previously despite installing every codec file I could identify, uninstalling vlc and reinstalling it solved tha problem. <br />
+<br />
+The tumbnail issue isn't life threatening, just an irritant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-10-2014, 03:10 PM</div>
+</div>
+<div class="message">Your thumbnail problem stems from the fact that you're using an obsolete version of get_iplayer.  For that, and several other reasons, you should update to latest release 2.87.  See the release notes in the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-147</h2></div><div class="dateline">23-10-2014, 11:26 PM</div>
+</div>
+<div class="message">I'm running Mageia and had used the repo version (2.8.5)<br />
+. <br />
+I uninstalled that and followed the excellent instructions on your Installation Guide and all is well (except the website spells it Mangeia(?). A spoonerism perhaps.<br />
+<br />
+Thanks for an enjoyable piece of software.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-10-2014, 11:48 PM</div>
+</div>
+<div class="message">It would seem the Mageia package has been abandoned.  When I have a chance I'll add a health warning to the installation docs.<br />
+<br />
+I don't see that misspelling, so please post the URL so that I can fix it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-10-2014, 12:07 AM</div>
+</div>
+<div class="message">Spelling corrected! It was on the 'downloads' page and I had spelt it incorrectly when I made some layout changes today.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-147</h2></div><div class="dateline">24-10-2014, 03:12 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/thumbnail-failure/#post-9992">Quote:</a>&lt;/div&gt;It would seem the Mageia package has been abandoned.  When I have a chance Iâll add a health warning to the installation docs.</blockquote>
+<br />
+Why? I found the instructions for Mageia 4 worked like a well-oiled machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-10-2014, 03:58 PM</div>
+</div>
+<div class="message">Except that you get a partially-broken version of get_iplayer.  The instructions need a warning to check the latest version against whatever is in repos.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-638</h2></div><div class="dateline">31-10-2014, 10:25 PM</div>
+</div>
+<div class="message">Thumbnail not working in get_iplayer 2.87 (latest version)wrong thumbnail)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Thumbnail failure?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

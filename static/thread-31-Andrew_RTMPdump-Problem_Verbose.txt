@@ -1,0 +1,271 @@
+atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+ffmpeg = .\FFmpeg\ffmpeg-1.2-win32-static\bin\ffmpeg.exe
+lame = .\LAME\lame.exe
+mmsnothread = 1
+mplayer = .\MPlayer\mplayer-svn-36348\mplayer.exe
+nopurge = 1
+output = C:\Users\hammersteen\Desktop\iPlayer Recordings
+rtmpdump = .\RTMPDump\rtmpdump.exe
+verbose = 1
+vlc = .\VLC\vlc-2.0.6\vlc.exe
+
+INFO: Search args: '614'
+INFO: Additionally getting cached programme data for tv
+INFO: Got 1032 file cache entries for tv
+Matches:
+614:    Perfection: Series 4 - Episode 10, BBC Two, Entertainment,Games &amp; Quizze
+s,TV, default
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Getting page http://feeds.bbc.co.uk/iplayer/episode/b039rq39
+INFO: Getting page http://www.bbc.co.uk/programmes/b039rq39.rdf
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b039rq39
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b039rq39
+INFO: Using Not Live standard TV and Radio: b039rq37
+INFO: Version: default, VersionPid: b039rq37, Duration: 2700
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37?cb=34124
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_high/limelight?cb=71041
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_high/akamai?cb=18695
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_vlo/limelight?cb=72146
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_vlo/akamai?cb=57675
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv/limelight?cb=08105
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv/akamai?cb=51742
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_lo/limelight?cb=38159
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b039rq37/iplayer_streaming_h264_flv_lo/akamai?cb=70632
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360796kbps stream (CDN: akamai/10)
+INFO: Found mode rtsplow1: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/5)
+INFO: Found mode rtsplow2: (iplayer_streaming_rtsp_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode subtitles1: (captions) http stream (CDN: http/10)INFO: Getting page http://www.bbc.co.uk/programmes/b039rq37.rdf
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Will search for versions: default
+INFO: Mode list: flashvhigh,flashhigh,flashstd,flashnormal,flashlow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEcTdFbVbRaocCdfdzbrbHaBclbLcOctdx-bskiop-bWG-GqmEHoznJD
+vHszH&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-b039rq37_b039rq37_137802114
+6784.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgef
+cs.net&amp;undefined&amp;auth=daEcTdFbVbRaocCdfdzbrbHaBclbLcOctdx-bskiop-bWG-GqmEHoznJDv
+HszH&amp;aifp=v001&amp;slist=secure/1500kbps/modav/bUnknown-b039rq37_b039rq37_1378021146
+784.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daE
+cTdFbVbRaocCdfdzbrbHaBclbLcOctdx-bskiop-bWG-GqmEHoznJDvHszH&amp;aifp=v001&amp;slist=secu
+re/1500kbps/modav/bUnknown-b039rq37_b039rq37_1378021146784.mp4, authString: auth
+=daEcTdFbVbRaocCdfdzbrbHaBclbLcOctdx-bskiop-bWG-GqmEHoznJDvHszH&amp;aifp=v001&amp;slist=
+secure/1500kbps/modav/bUnknown-b039rq37_b039rq37_1378021146784.mp4, swfUrl: http
+://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_
+emp.swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfection_Series
+_4_-_Episode_10_b039rq39_default.partial.mp4, file_done: C:\Users\hammersteen\De
+sktop\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashvhigh1 mode return code: 'next'
+INFO: skipping flashvhigh1 mode
+INFO: Trying flashvhigh2 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/1500kbps/modav/bUnknown-b039rq37_b039rq37_1378021146784.mp4&amp;et=1378394031
+&amp;fmta-token=b94f61fa54b26b15211edf6b62e6f23a8608bc057bc6a24364dc53d8a5c85b1a&amp;aif
+p=v001&amp;slist=mp4:iplayerstream/secure_auth/1500kbps/modav/bUnknown-b039rq37_b039
+rq37_1378021146784.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=a
+dobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUn
+known-b039rq37_b039rq37_1378021146784.mp4&amp;et=1378394031&amp;fmta-token=b94f61fa54b26
+b15211edf6b62e6f23a8608bc057bc6a24364dc53d8a5c85b1a, application: a1414/e3?as=ad
+obe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnk
+nown-b039rq37_b039rq37_1378021146784.mp4&amp;et=1378394031&amp;fmta-token=b94f61fa54b26b
+15211edf6b62e6f23a8608bc057bc6a24364dc53d8a5c85b1a, authString: as=adobe-hmac-sh
+a256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/1500kbps/modav/bUnknown-b039rq
+37_b039rq37_1378021146784.mp4&amp;et=1378394031&amp;fmta-token=b94f61fa54b26b15211edf6b6
+2e6f23a8608bc057bc6a24364dc53d8a5c85b1a, swfUrl: http://www.bbc.co.uk/emp/releas
+es/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\ham
+mersteen\Desktop\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_de
+fault.partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Pe
+rfection_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashvhigh2 mode return code: 'next'
+INFO: skipping flashvhigh2 mode
+INFO: Trying flashhigh1 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEdXcta4bMctaGcLbRbLbua3aTbZaUdNd.-bskior-bWG-KpuDGoEpOB
+pGuxF&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-b039rq37_b039rq37_1378021146
+050.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEdXcta4bMctaGcLbRbLbua3aTbZaUdNd.-bskior-bWG-KpuDGoEpOBpG
+uxF&amp;aifp=v001&amp;slist=secure/800kbps/modav/bUnknown-b039rq37_b039rq37_137802114605
+0.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEdX
+cta4bMctaGcLbRbLbua3aTbZaUdNd.-bskior-bWG-KpuDGoEpOBpGuxF&amp;aifp=v001&amp;slist=secure
+/800kbps/modav/bUnknown-b039rq37_b039rq37_1378021146050.mp4, authString: auth=da
+EdXcta4bMctaGcLbRbLbua3aTbZaUdNd.-bskior-bWG-KpuDGoEpOBpGuxF&amp;aifp=v001&amp;slist=sec
+ure/800kbps/modav/bUnknown-b039rq37_b039rq37_1378021146050.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfection_Series_4_-
+_Episode_10_b039rq39_default.partial.mp4, file_done: C:\Users\hammersteen\Deskto
+p\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashhigh1 mode return code: 'next'
+INFO: skipping flashhigh1 mode
+INFO: Trying flashhigh2 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/800kbps/modav/bUnknown-b039rq37_b039rq37_1378021146050.mp4&amp;et=1378394032&amp;
+fmta-token=8f2281429b183c2fefda7874a7963ca208027dc073b290266eb8c10e9a5a0494&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/800kbps/modav/bUnknown-b039rq37_b039rq
+37_1378021146050.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnkno
+wn-b039rq37_b039rq37_1378021146050.mp4&amp;et=1378394032&amp;fmta-token=8f2281429b183c2f
+efda7874a7963ca208027dc073b290266eb8c10e9a5a0494, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown
+-b039rq37_b039rq37_1378021146050.mp4&amp;et=1378394032&amp;fmta-token=8f2281429b183c2fef
+da7874a7963ca208027dc073b290266eb8c10e9a5a0494, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/800kbps/modav/bUnknown-b039rq37_b0
+39rq37_1378021146050.mp4&amp;et=1378394032&amp;fmta-token=8f2281429b183c2fefda7874a7963c
+a208027dc073b290266eb8c10e9a5a0494, swfUrl: http://www.bbc.co.uk/emp/releases/ip
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default
+.partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfect
+ion_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashhigh2 mode return code: 'next'
+INFO: skipping flashhigh2 mode
+INFO: Trying flashstd1 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEadcxc_aHaDdjdFb3a5dXcdcia8cAdjbr-bskios-bWG-EpoFDnznOE
+wHoxH&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-b039rq37_b039rq37_1378021148
+046.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEadcxc_aHaDdjdFb3a5dXcdcia8cAdjbr-bskios-bWG-EpoFDnznOEwH
+oxH&amp;aifp=v001&amp;slist=secure/480kbps/modav/bUnknown-b039rq37_b039rq37_137802114804
+6.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEad
+cxc_aHaDdjdFb3a5dXcdcia8cAdjbr-bskios-bWG-EpoFDnznOEwHoxH&amp;aifp=v001&amp;slist=secure
+/480kbps/modav/bUnknown-b039rq37_b039rq37_1378021148046.mp4, authString: auth=da
+Eadcxc_aHaDdjdFb3a5dXcdcia8cAdjbr-bskios-bWG-EpoFDnznOEwHoxH&amp;aifp=v001&amp;slist=sec
+ure/480kbps/modav/bUnknown-b039rq37_b039rq37_1378021148046.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfection_Series_4_-
+_Episode_10_b039rq39_default.partial.mp4, file_done: C:\Users\hammersteen\Deskto
+p\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashstd1 mode return code: 'next'
+INFO: skipping flashstd1 mode
+INFO: Trying flashstd2 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/480kbps/modav/bUnknown-b039rq37_b039rq37_1378021148046.mp4&amp;et=1378394033&amp;
+fmta-token=e5f794020164fd2f95452c2a4757699fa7e6b46d94c7361840abb4e6359cb45c&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/480kbps/modav/bUnknown-b039rq37_b039rq
+37_1378021148046.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnkno
+wn-b039rq37_b039rq37_1378021148046.mp4&amp;et=1378394033&amp;fmta-token=e5f794020164fd2f
+95452c2a4757699fa7e6b46d94c7361840abb4e6359cb45c, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown
+-b039rq37_b039rq37_1378021148046.mp4&amp;et=1378394033&amp;fmta-token=e5f794020164fd2f95
+452c2a4757699fa7e6b46d94c7361840abb4e6359cb45c, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/480kbps/modav/bUnknown-b039rq37_b0
+39rq37_1378021148046.mp4&amp;et=1378394033&amp;fmta-token=e5f794020164fd2f95452c2a475769
+9fa7e6b46d94c7361840abb4e6359cb45c, swfUrl: http://www.bbc.co.uk/emp/releases/ip
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default
+.partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfect
+ion_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashstd2 mode return code: 'next'
+INFO: skipping flashstd2 mode
+INFO: Trying flashlow1 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&amp;undefined&amp;auth=daEauc5dkaUcxaTahbeagcTcSd.aEasdeal-bskioq-bWG-BpsGAnCpIB
+sEuxG&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-b039rq37_b039rq37_1378021147
+465.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefc
+s.net&amp;undefined&amp;auth=daEauc5dkaUcxaTahbeagcTcSd.aEasdeal-bskioq-bWG-BpsGAnCpIBsE
+uxG&amp;aifp=v001&amp;slist=secure/400kbps/modav/bUnknown-b039rq37_b039rq37_137802114746
+5.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&amp;undefined&amp;auth=daEau
+c5dkaUcxaTahbeagcTcSd.aEasdeal-bskioq-bWG-BpsGAnCpIBsEuxG&amp;aifp=v001&amp;slist=secure
+/400kbps/modav/bUnknown-b039rq37_b039rq37_1378021147465.mp4, authString: auth=da
+Eauc5dkaUcxaTahbeagcTcSd.aEasdeal-bskioq-bWG-BpsGAnCpIBsEuxG&amp;aifp=v001&amp;slist=sec
+ure/400kbps/modav/bUnknown-b039rq37_b039rq37_1378021147465.mp4, swfUrl: http://w
+ww.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.
+swf, file: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfection_Series_4_-
+_Episode_10_b039rq39_default.partial.mp4, file_done: C:\Users\hammersteen\Deskto
+p\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashlow1 mode return code: 'next'
+INFO: skipping flashlow1 mode
+INFO: Trying flashlow2 mode to record tv: Perfection: Series 4 - Episode 10
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Perfection_Series_4_-_Episode_10_b039rq39_default
+
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification
+INFO: .\RTMPDump\rtmpdump.exe version
+INFO: RTMP_URL: rtmp://bbcmedia.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia
+.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secur
+e_auth/400kbps/modav/bUnknown-b039rq37_b039rq37_1378021147465.mp4&amp;et=1378394032&amp;
+fmta-token=b411c064161f834891f66df4fb798a2c88370dd90d7367ac069fe67b58d738d1&amp;aifp
+=v001&amp;slist=mp4:iplayerstream/secure_auth/400kbps/modav/bUnknown-b039rq37_b039rq
+37_1378021147465.mp4, tcUrl: rtmp://bbcmedia.fcod.llnwd.net:1935/a1414/e3?as=ado
+be-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnkno
+wn-b039rq37_b039rq37_1378021147465.mp4&amp;et=1378394032&amp;fmta-token=b411c064161f8348
+91f66df4fb798a2c88370dd90d7367ac069fe67b58d738d1, application: a1414/e3?as=adobe
+-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown
+-b039rq37_b039rq37_1378021147465.mp4&amp;et=1378394032&amp;fmta-token=b411c064161f834891
+f66df4fb798a2c88370dd90d7367ac069fe67b58d738d1, authString: as=adobe-hmac-sha256
+&amp;av=1&amp;te=connect&amp;mp=iplayerstream/secure_auth/400kbps/modav/bUnknown-b039rq37_b0
+39rq37_1378021147465.mp4&amp;et=1378394032&amp;fmta-token=b411c064161f834891f66df4fb798a
+2c88370dd90d7367ac069fe67b58d738d1, swfUrl: http://www.bbc.co.uk/emp/releases/ip
+layer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\Users\hammerst
+een\Desktop\iPlayer Recordings\Perfection_Series_4_-_Episode_10_b039rq39_default
+.partial.mp4, file_done: C:\Users\hammersteen\Desktop\iPlayer Recordings\Perfect
+ion_Series_4_-_Episode_10_b039rq39_default.mp4
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade
+DEBUG: Record using flashlow2 mode return code: 'next'
+INFO: skipping flashlow2 mode
+ERROR: Failed to record 'Perfection: Series 4 - Episode 10 (b039rq39)

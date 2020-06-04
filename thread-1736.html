@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can't find Stuart Maconie's Freak Zone 25/03/18 (b09wwvhk)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Can't find Stuart Maconie's Freak Zone 25/03/18 (b09wwvhk)</div>
+<div id="pagetitle"><h2>Can't find Stuart Maconie's Freak Zone 25/03/18 (b09wwvhk)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2114</h2></div><div class="dateline">29-03-2018, 08:50 AM</div>
+</div>
+<div class="message">I'm trying to download some BBC 6 Music radio programmes, but while they're still available on iPlayer, I can't find them with the Web PVR or CLI. <br />
+<br />
+For instance, <a href="https://www.bbc.co.uk/programmes/b09wwvhk">https://www.bbc.co.uk/programmes/b09wwvhk</a> isn't found with a PID search and nor does that programme appear in the full Web PVR programme list for 6 Music. I've refreshed and rebuilt the cache, with no success. <br />
+<br />
+I've recently resolved the <a href="https://www.squarepenguin.co.uk/blog/">XML issue</a>, but I wonder if something is still broken somewhere?<br />
+<br />
+v3.13, macOS 10.13.3, PERL v5.18.2<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer –pid b09vld09<br />
+get_iplayer v3.13, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: 0 matching programmes</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">29-03-2018, 10:52 AM</div>
+</div>
+<div class="message">First of all, what's pid b09vld09 got to do with the price of fish? The pid you originally quoted was b09wwvhk and if you replace your "-pid" with "--pid" you might have more success! ;-)<br />
+<br />
+get_iplayer --pid b09wwvhk <br />
+works beautifully here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-03-2018, 10:59 AM</div>
+</div>
+<div class="message">Even worse, the "-" in "-pid" is not a hyphen. Somehow you put an en-dash there, which is invalid as part of an option name, so two of them won't help, either. Read the documentation for examples, and be more careful with your typing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2114</h2></div><div class="dateline">29-03-2018, 11:03 AM</div>
+</div>
+<div class="message">Ah, good catch... That's my auto-correct app helpfully replacing "--" with an n-dash ("–") in Terminal... ?<br />
+<br />
+So this works from Terminal when I used the correct syntax, but there's still nothing found in Web PVR.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-03-2018, 11:05 AM</div>
+</div>
+<div class="message">Then you didn't fully rebuild your cache.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2114</h2></div><div class="dateline">29-03-2018, 11:26 AM</div>
+</div>
+<div class="message">Hm, seems that's the case. <br />
+<br />
+"get_iplayer --refresh --type=radio" followed by "get_iplayer --cache-rebuild --type=radio" has done the trick, but a rebuild alone (which I tried first) gave the error "WARNING: Failed to download programme schedule <a href="http://www.bbc.co.uk">http://www.bbc.co.uk</a>...".</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Can't find Stuart Maconie's Freak Zone 25/03/18 (b09wwvhk)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

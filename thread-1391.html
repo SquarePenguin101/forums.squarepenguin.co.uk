@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - URL to add pid to Queue ?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; URL to add pid to Queue ?</div>
+<div id="pagetitle"><h2>URL to add pid to Queue ?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">09-05-2017, 01:58 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I am looking for a bit of technical advice<br />
+<br />
+I plan to insert a button <br />
+(using Greasemonkey)<br />
+next to each pid link in web pages like this<br />
+<a href="http://radio-lists.org.uk/r4/">http://radio-lists.org.uk/r4/</a>  <br />
+so that pressing the button <br />
+will queue that pid for later recording<br />
+via an url to get_iplayer PVR <br />
+(running on localhost,<br />
+with queue already refreshed).<br />
+<br />
+Can anyone advise what the url would look like?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-05-2017, 10:15 AM</div>
+</div>
+<div class="message">Look in the web pvr server window. A query string equivalent to each action is printed. They contain a lot of extra fields you probably don't need. You'll have to experiment to find which ones can be omitted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">22-05-2017, 05:54 PM</div>
+</div>
+<div class="message">Just to share what I got working (version 2)<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>// ==UserScript==<br />
+// @name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;radio-lists<br />
+// @namespace&nbsp;&nbsp; http://userscripts.org/users/99999999999999<br />
+// @include&nbsp;&nbsp;&nbsp;&nbsp;*radio-lists.org.uk*<br />
+// @require&nbsp;&nbsp;&nbsp;&nbsp; http://code.jquery.com/jquery-latest.min.js<br />
+// @version&nbsp;&nbsp;&nbsp;&nbsp; 1<br />
+// @grant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; none<br />
+// ==/UserScript==<br />
+<br />
+&#36;( document ).ready( function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var long_str = "&amp;SEARCHFIELDS=pid&amp;PROGTYPES=radio&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=1&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=timeadded&amp;OUTPUT=&amp;VERSIONLIST=&amp;MODES=&amp;PROXY=&amp;SUBTITLES=0&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr_queue&amp;ACTION=&amp;.cgifields=FORCE&amp;.cgifields=REVERSE&amp;.cgifields=FUTURE&amp;.cgifields=HISTORY&amp;.cgifields=HIDE&amp;.cgifields=PROGTYPES&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=THUMB&amp;.cgifields=HIDEDELETED&amp;.cgifields=COLS&amp;.cgifields=SUBTITLES"<br />
+&nbsp;&nbsp; console.log("hello:"+long_str)<br />
+&nbsp;&nbsp;&#36;('a[href^="http://www.bbc.co.uk/programmes/"][target="_blank"]').each( function(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var href = &#36;(this).attr('href')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var myArr = href.split('/')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pid = myArr[myArr.length-1]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str = &#36;(this).parent('b').next('br').get(0).nextSibling.nodeValue.trim();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var comment = &#36;(this).get(0).previousSibling.nodeValue<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment = comment.substr(6) // remove the time prefix<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comment = comment + "- " + str<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var url = "http://localhost:1935/?SEARCH="<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ encodeURIComponent( "radio|" + pid + "|&lt;"+ comment +"&gt;")<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ long_str<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;(this).after(' &lt;a target="pvr" href="'+ url +'"&gt;PVR&lt;/a&gt;')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;(this).attr('href', href+'#credits')<br />
+&nbsp;&nbsp; })<br />
+})</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">19-09-2018, 02:35 PM</div>
+</div>
+<div class="message">Here is a GM script to add ⏺ symbol before each item on a BBC radio schedule page<br />
+e.g.<br />
+R3:   <a href="https://www.bbc.co.uk/schedules/p00fzl8t/this_week">https://www.bbc.co.uk/schedules/p00fzl8t/this_week</a><br />
+R4:   <a href="https://www.bbc.co.uk/schedules/p00fzl7j/this_week">https://www.bbc.co.uk/schedules/p00fzl7j/this_week</a><br />
+R4X: <a href="https://www.bbc.co.uk/schedules/p00fzl7l/this_week">https://www.bbc.co.uk/schedules/p00fzl7l/this_week</a><br />
+Click on the ⏺ symbol to add the item to the PVR list.<br />
+(of course you need to have started get_iplayer PVR beforehand)<br />
+<br />
+This has been tested using the Firefox AddOn called ViolentMonkey to insert the GM script<br />
+<a href="https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/">https://addons.mozilla.org/en-US/firefox...entmonkey/</a><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>// ==UserScript==<br />
+// @name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bbc.co.uk-schedules<br />
+// @namespace&nbsp;&nbsp; Violentmonkey Scripts<br />
+// @include&nbsp;&nbsp;&nbsp;&nbsp;*bbc.co.uk/schedules/*<br />
+// @require&nbsp;&nbsp;&nbsp;&nbsp; http://code.jquery.com/jquery-latest.min.js<br />
+// @version&nbsp;&nbsp;&nbsp;&nbsp; 1<br />
+// @grant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; none<br />
+// ==/UserScript==<br />
+<br />
+&#36;( document ).ready( function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var long_str = "&amp;SEARCHFIELDS=pid&amp;PROGTYPES=radio&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=1&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=timeadded&amp;OUTPUT=&amp;VERSIONLIST=&amp;MODES=&amp;PROXY=&amp;SUBTITLES=0&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr_queue&amp;ACTION=&amp;.cgifields=FORCE&amp;.cgifields=REVERSE&amp;.cgifields=FUTURE&amp;.cgifields=HISTORY&amp;.cgifields=HIDE&amp;.cgifields=PROGTYPES&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=THUMB&amp;.cgifields=HIDEDELETED&amp;.cgifields=COLS&amp;.cgifields=SUBTITLES"<br />
+&nbsp;&nbsp; console.log("hello:"+long_str)<br />
+&nbsp;&nbsp;&#36;('a[href^="https://www.bbc.co.uk/programmes/"]').each( function(){<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var href = &#36;(this).attr('href')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var myArr = href.split('/')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pid = myArr[myArr.length-1]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var comment =&#36;(this).attr('aria-label')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var url = "http://localhost:1935/?SEARCH="<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ encodeURIComponent( "radio|" + pid + "|&lt;"+ comment +"&gt;")<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ long_str<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("url:"+url)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;(this).before(' &lt;a target="pvr" href="'+ url +'"&gt;⏺&lt;/a&gt;')<br />
+&nbsp;&nbsp; })<br />
+})</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; URL to add pid to Queue ?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - file playing at double speed with no sound </title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; file playing at double speed with no sound </div>
+<div id="pagetitle"><h2>file playing at double speed with no sound </h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-44</h2></div><div class="dateline">05-08-2013, 11:53 PM</div>
+</div>
+<div class="message">Hi, found get_player last week and think it's brilliant, been using mostly to download radio shows, so thought I'd have a go at getting last night's top gear, which seemed very easy following the guide, I went for the HD quality and download without any trouble, however when played back on my ps3 the video seems to play like it's on fast forward for some reason and there's no sound. I've tried a few other videos I've got (not from get_player) and they seem to work ok, did I do something wrong when downloading? Cheers Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">06-08-2013, 10:00 AM</div>
+</div>
+<div class="message">Does the Top Gear file play correctly on your computer using VLC?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2013, 01:26 PM</div>
+</div>
+<div class="message">When ffmpeg re-muxes the downloaded programme to put it in a MP4 container, it apparently writes an incorrect header value for audio sample rate, and the PS3 is dumb enough to believe it.  Most software players will use the actual audio data to determine playback rate.  See these mailing list threads for a discussion of the problem and some possible solutions:<br />
+<br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg02221.html">http://www.mail-archive.com/get_iplayer@...02221.html</a><br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg00533.html">http://www.mail-archive.com/get_iplayer@...00533.html</a><br />
+<a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg02001.html">http://www.mail-archive.com/get_iplayer@...02001.html</a><br />
+<br />
+I don't have a PS3, so I can't personally vouch for any of the suggested solutions, so use whatever works best for you.  The easiest to implement is probably to replace your ffmpeg binary with an ancient version.  In practice, that means you back up and replace this file:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&#92;FFmpeg&#92;ffmpeg-1.2-win32-static&#92;bin&#92;ffmpeg.exe</code></div></div><br />
+with the version of ffmpeg.exe included in this bundle:<br />
+<br />
+<a href="http://sourceforge.net/projects/mplayer-win32/files/FFmpeg/old/revision%2022140/FFmpeg-svn-22140.7z/download">http://sourceforge.net/projects/mplayer-...z/download</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-44</h2></div><div class="dateline">07-08-2013, 07:25 AM</div>
+</div>
+<div class="message">Hi,cheers for the replies, checked the file on my pc and seems to all be ok. I'd also tried using my sum vision media box at the time and the file played fine but no sound. Gave this a go yesterday and it now also seems fine (it can be a bit temperamental). Will have a look at those links. Thanks</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; file playing at double speed with no sound </div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

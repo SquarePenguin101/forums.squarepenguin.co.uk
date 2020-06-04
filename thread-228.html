@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Missing Radio Thumbnails Since 2.87 Update</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Missing Radio Thumbnails Since 2.87 Update</div>
+<div id="pagetitle"><h2>Missing Radio Thumbnails Since 2.87 Update</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-611</h2></div><div class="dateline">27-10-2014, 02:27 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I have a Windows 7 machine with a complete fresh install of 2.87. Since the update radio downloads have only occasionally been downloading the thumbnail and there's been no corresponding error message either. They're downloading and encoding as they've always done in the MP4 format not FLV so they aren't partial downloads either.<br />
+<br />
+When I try to force a download of the thumbnail using one of your commands;<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --thumbnail --get PID<br />
+get_iplayer --thumbnail-only PID</code></div></div><br />
+<br />
+Nothing happens and I get a message saying '0 Matching Programmes'.<br />
+<br />
+At first I thought it was only effecting Radio 4, but it seems programmes from Radio 4+, Radio 1+, and Radio 3 aren't always downloading thumbnails either. It even seems to have got worse.<br />
+<br />
+Here's a sample.<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b04m7btv">http://www.bbc.co.uk/programmes/b04m7btv</a><br />
+<a href="http://www.bbc.co.uk/programmes/b012f9j0">http://www.bbc.co.uk/programmes/b012f9j0</a><br />
+<a href="http://www.bbc.co.uk/programmes/b04mcf8m">http://www.bbc.co.uk/programmes/b04mcf8m</a><br />
+<a href="http://www.bbc.co.uk/programmes/b04mb4n9">http://www.bbc.co.uk/programmes/b04mb4n9</a><br />
+<a href="http://www.bbc.co.uk/programmes/b04mc1xx">http://www.bbc.co.uk/programmes/b04mc1xx</a><br />
+<a href="http://www.bbc.co.uk/programmes/b04mb1pg">http://www.bbc.co.uk/programmes/b04mb1pg</a><br />
+<br />
+It's not effecting TV downloads only radio, and since it was a clean install and there aren't any error messages I don't know what's going on or how to fix it.<br />
+<br />
+Thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-10-2014, 08:46 PM</div>
+</div>
+<div class="message">Your commands are not properly formulated.  Read the Recording section in the examples page to see how to download via PID:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/documentation/">https://squarepenguin.co.uk/wiki/documentation/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-10-2014, 08:50 PM</div>
+</div>
+<div class="message">Also, add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to your commands.  If the thumbnail is not available in the programme metadata, get_iplayer will print a notice to that effect.  It could be that the BBC have monkeyed around with thumbnails again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-611</h2></div><div class="dateline">28-10-2014, 09:58 AM</div>
+</div>
+<div class="message">I'm not sure what's wrong about the command I've been using successfully to download radio programmes via PID which is; get_iplayer --type=radio --pid=PID, and I tried adding --verbose which doesn't return any thing either.<br />
+<br />
+I also tried get_iplayer --pid=PID --type=radio which also doesn't get the thumbnail either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">28-10-2014, 11:56 AM</div>
+</div>
+<div class="message">Note - highlight sections of of code and mark tham as code using the 'code' button just above the text input box, that's what it's there for!<br />
+<br />
+Well that command in your last reply is not the one that you gave above. Above you gave <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --thumbnail --get PID</code></div></div> which uses <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get</code></div></div> and is therefore 'malformed' because to download using PID you'd need to use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> instead.<br />
+<br />
+So if the actual command you are using is <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b04mb1pg --thumbnail-only --verbose</code></div></div> and you don't get a thumbnail then still copy and paste the output get_iplayer gives you into a text file (actual .txt not a .doc or word type file) and attach the file to your next reply so we can see it here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-611</h2></div><div class="dateline">28-10-2014, 02:37 PM</div>
+</div>
+<div class="message">OK I tried <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b012f9j0 --verbose</code></div></div> and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b012f9j0 --thumbnail-only --verbose</code></div></div> neither of which downloaded the thumbnail for the accompanying MP4.<br />
+<br />
+I also tried <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b04mb1pg --thumbnail-only --verbose</code></div></div> which didn't download anything.<br />
+<br />
+I've uploaded both txt files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-10-2014, 05:54 PM</div>
+</div>
+<div class="message">Some tips for the future: 1) Don't truncate command output as you did in GiP.txt; 2) Don't include 100+ lines of irrelevant junk as you did in GiP2.txt - surely you can spare the few seconds required to remove the dross.  If it wasn't obvious, we want: 1) the full command you ran with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div>; 2) the full output from that command; 3) absolutely nothing else.  If you're seeking assistance, it stands to reason you shouldn't make our job more difficult.<br />
+<br />
+You problems appears to stem from the fact that your cache is out of date. Thumbnail info for programmes less than 7 days old (and thus cacheable) is in a different location than programs more than 7 days old.  There might be a get_iplayer bug with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> + recent programmes, or something may have changed with the programme metadata.  I'll have to look into it.  For now, make sure your cache is current before using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> to download programmes less than 7 days old.  To refresh radio cache:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh --type=radio</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Missing Radio Thumbnails Since 2.87 Update</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

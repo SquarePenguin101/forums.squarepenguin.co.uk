@@ -1,0 +1,1183 @@
+WATCHDOG - SERIES 34 - EPISODE 7
+
+C:\Program Files (x86)\get_iplayer>get_iplayer --modes=flashhd --output=i:/video
+s 2108 --get --force --verbose
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\User1/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+        encodingconsolein = cp850
+        encodingconsoleout = cp850
+        encodinglocale = cp1252
+        encodinglocalefs = cp1252
+        expiry = 604800
+        force = 1
+        get = 1
+        mmsnothread = 1
+        modes = flashhd
+        nopurge = 1
+        output = i:/videos
+        rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.e
+xe
+        verbose = 1
+        vlc = .\VLC\vlc-2.1.5\vlc.exe
+
+INFO: Search args: '2108'
+INFO: Additionally getting cached programme data for tv
+INFO: Got 2243 file cache entries for tv
+Matches:
+2108:   Watchdog: Series 34 - Episode 7, BBC One, Consumer,Factual, default
+
+INFO: 1 Matching Programmes
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b04t6wd0
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b04t6wd0
+INFO: Using Not Live standard TV and Radio: b04t6w80
+INFO: Version: default, VersionPid: b04t6w80, Duration: 3600
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/b04t6wd0/pla
+ylist.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b04t6wd0/playlist.json
+INFO: Will search for versions: default
+INFO: Mode list: flashhd
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0
+/mediaset/pc/vpid/b04t6w80?cb=22076
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream
+(CDN: akamai/10)
+INFO: Found mode flashhd2: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream
+(CDN: level3/5)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphd1: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps str
+eam (CDN: level3/5)
+INFO: Found mode rtsphd2: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps str
+eam (CDN: akamai/10)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: flashhd1,flashhd2 modes will be tried for version default
+INFO: Trying flashhd1 mode to record tv: Watchdog: Series 34 - Episode 7
+INFO: Attempt number: 1 / 50
+
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file
+INFO: File name prefix = Watchdog_Series_34_-_Episode_7_b04t6wd0_default
+
+INFO: rtmpver:
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+
+INFO:
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This prog
+ram dumps the media content streamed over RTMP.
+INFO:
+INFO: --help|-h               Prints this help screen.
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]
+/path swfUrl=url tcUrl=url)
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP,
+2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]
+/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes
+)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SW
+FVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automati
+cally
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refre
+shing
+INFO: --auth|-u string        Authentication string to be appended to the connec
+t string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect s
+tring
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(
+0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name
+:number
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live
+streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to
+ playpath if live is specifed)
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/U
+npause BUFX hack
+INFO: --flv|-o string         FLV output file name, if the file name is - print
+stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when u
+sing --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte co
+unter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe
+to resume from. Useful if resume fails (default: 0)
+INFO:
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties
+ will not be included in the connect packet.
+INFO:
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.
+4
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&undefined&auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLB
+wFuzG&aifp=v001&slist=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;
+secure/800kbps/modav/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p0
+2c3l66_b04t6w80_1417127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_141713
+0909233.mp4, tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.ed
+gefcs.net&undefined&auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFo
+LBwFuzG&aifp=v001&slist=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp
+4;secure/800kbps/modav/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/
+p02c3l66_b04t6w80_1417127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417
+130909233.mp4, application: ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&au
+th=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&slis
+t=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;secure/800kbps/modav
+/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p02c3l66_b04t6w80_1417
+127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4, authStr
+ing: auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v0
+01&slist=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;secure/800kbp
+s/modav/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p02c3l66_b04t6w
+80_1417127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4,
+swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash
+.swf, file: I:\videos\Watchdog_Series_34_-_Episode_7_b04t6wd0_default.partial.fl
+v, file_done: I:\videos\Watchdog_Series_34_-_Episode_7_b04t6wd0_default.flv
+
+
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe"
+ "--port" "1935" "--protocol" "0" "--playpath" "mp4:secure/3200kbps/modav/p02c3l
+66_b04t6w80_1417130909233.mp4?auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bW
+G-CpqDAoFoLBwFuzG&aifp=v001&slist=secure/1500kbps/modav/p02c3l66_b04t6w80_141712
+7990838.mp4;secure/800kbps/modav/p02c3l66_b04t6w80_1417127991569.mp4;secure/480k
+bps/modav/p02c3l66_b04t6w80_1417127994137.mp4;secure/3200kbps/modav/p02c3l66_b04
+t6w80_1417130909233.mp4" "--host" "cp41752.edgefcs.net" "--swfVfy" "http://emp.b
+bci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtm
+p://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&aut
+h=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&slist
+=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;secure/800kbps/modav/
+p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p02c3l66_b04t6w80_14171
+27994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4" "--app"
+"ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&auth=daEcvczaYbDbgajb5dycmaKb
+baMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&slist=secure/1500kbps/modav/p02
+c3l66_b04t6w80_1417127990838.mp4;secure/800kbps/modav/p02c3l66_b04t6w80_14171279
+91569.mp4;secure/480kbps/modav/p02c3l66_b04t6w80_1417127994137.mp4;secure/3200kb
+ps/modav/p02c3l66_b04t6w80_1417130909233.mp4" "--pageUrl" "http://www.bbc.co.uk/
+iplayer/episode/b04t6wd0/" "--resume" "-o" "I:\videos\Watchdog_Series_34_-_Episo
+de_7_b04t6wd0_default.partial.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : cp41752.edgefcs.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4?
+auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&sl
+ist=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;secure/800kbps/mod
+av/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p02c3l66_b04t6w80_14
+17127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4
+DEBUG: tcUrl    : rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&undefined&auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLB
+wFuzG&aifp=v001&slist=secure/1500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;
+secure/800kbps/modav/p02c3l66_b04t6w80_1417127991569.mp4;secure/480kbps/modav/p0
+2c3l66_b04t6w80_1417127994137.mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_141713
+0909233.mp4
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChrom
+elessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/iplayer/episode/b04t6wd0/
+DEBUG: app      : ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&auth=daEcvcz
+aYbDbgajb5dycmaKbbaMada2a1aj-buGkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&slist=secure/1
+500kbps/modav/p02c3l66_b04t6w80_1417127990838.mp4;secure/800kbps/modav/p02c3l66_
+b04t6w80_1417127991569.mp4;secure/480kbps/modav/p02c3l66_b04t6w80_1417127994137.
+mp4;secure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: db fc 74 e9 51 dc f0 b6 7a 43 d5 31 73 9b b4 5e
+DEBUG: ef fd e9 03 2a 4d 78 7f fa fd 91 3a 6a c0 da d5
+DEBUG: SWFSize  : 974043
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 53
+DEBUG: HandShake: Initial client digest:
+DEBUG: a3 fa b0 4a b4 18 ca bc 58 2f 54 c0 03 5d ba 0d
+DEBUG: a0 be ec e0 a7 aa 82 36 44 81 c3 cf 80 f6 a0 35
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 1205641681
+DEBUG: HandShake: FMS Version   : 4.5.2.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest:
+DEBUG: 6a 81 27 9c bd 48 5f aa 5b 1b 1f b1 66 1e d8 d5
+DEBUG: 4e 9f 3b 4c 10 c9 06 13 de bc 8e 6b 8f 65 fd 18
+DEBUG: HandShake: Client signature calculated:
+DEBUG: a2 e4 ec c2 84 97 63 36 9d 19 8a 24 e3 cc 82 0f
+DEBUG: 41 28 7e 74 ad e8 5a a5 2d 63 e0 6b 54 0c a2 0c
+DEBUG: HandShake: Server sent signature:
+DEBUG: 9e da a8 2a 0e 2c be 73 2f ba 5e e1 3b cd ff e7
+DEBUG: 94 e9 0d 47 99 b4 7b ea c5 99 aa 3b 9f f6 f0 61
+DEBUG: HandShake: Digest key:
+DEBUG: 22 4a 4c 99 0a 3c 3d 22 60 ad 6c 97 64 59 32 a8
+DEBUG: 64 7d 34 a2 8f a6 7b 85 29 49 56 45 e0 74 b9 62
+DEBUG: HandShake: Signature calculated:
+DEBUG: 9e da a8 2a 0e 2c be 73 2f ba 5e e1 3b cd ff e7
+DEBUG: 94 e9 0d 47 99 b4 7b ea c5 99 aa 3b 9f f6 f0 61
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 1250000
+DEBUG: HandleClientBW: client BW = 1250000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 240 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:     FMS/4,5,2,524>
+DEBUG: Property: <Name:       capabilities, NUMBER:     127.00>
+DEBUG: Property: <Name:               mode, NUMBER:     1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetConnection.Connect.Su
+ccess>
+DEBUG: Property: <Name:        description, STRING:     Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:     0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:     4,5,2,524>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:secure/3200kbps/modav
+/p02c3l66_b04t6w80_1417130909233.mp4?auth=daEcvczaYbDbgajb5dycmaKbbaMada2a1aj-bu
+GkRT-bWG-CpqDAoFoLBwFuzG&aifp=v001&slist=secure/1500kbps/modav/p02c3l66_b04t6w80
+_1417127990838.mp4;secure/800kbps/modav/p02c3l66_b04t6w80_1417127991569.mp4;secu
+re/480kbps/modav/p02c3l66_b04t6w80_1417127994137.mp4;secure/3200kbps/modav/p02c3
+l66_b04t6w80_1417130909233.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 10275 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 20515 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 256 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:     Playing and resetting se
+cure/3200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/p0
+2c3l66_b04t6w80_1417130909233.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAAxQRBA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 250 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:     Started playing secure/3
+200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/p0
+2c3l66_b04t6w80_1417130909233.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAAxQRBA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 494 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:     3484.84>
+DEBUG: Property: <Name:       moovPosition, NUMBER:     36.00>
+DEBUG: Property: <Name:              width, NUMBER:     1280.00>
+DEBUG: Property: <Name:             height, NUMBER:     720.00>
+DEBUG: Property: <Name:       videocodecid, STRING:     avc1>
+DEBUG: Property: <Name:       audiocodecid, STRING:     mp4a>
+DEBUG: Property: <Name:         avcprofile, NUMBER:     100.00>
+DEBUG: Property: <Name:           avclevel, NUMBER:     41.00>
+DEBUG: Property: <Name:             aacaot, NUMBER:     2.00>
+DEBUG: Property: <Name:     videoframerate, NUMBER:     25.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:     48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:     2.00>
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     87121000.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     25000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     avc1>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     167272448.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     48000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              3484.84
+INFO:   moovPosition          36.00
+INFO:   width                 1280.00
+INFO:   height                720.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            100.00
+INFO:   avclevel              41.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                87121000.00
+INFO:   timescale             25000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                167272448.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+DEBUG: RTMP_ClientPacket, received: invoke 30755 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40995 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+64.000 kB / 0.00 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 51235 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 61475 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 71717 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+320.000 kB / 0.12 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 92197 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 102437 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 112677 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 122917 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+384.000 kB / 0.24 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+46414.816 kB / 148.72 sec (4.2%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 1205770512
+DEBUG: sending ctrl. type: 0x0007
+415520.447 kB / 1422.52 sec (40.8%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 1206070627
+DEBUG: sending ctrl. type: 0x0007
+770357.820 kB / 2606.00 sec (74.7%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 1206370777
+DEBUG: sending ctrl. type: 0x0007
+1021827.642 kB / 3483.52 sec (99.9%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Complete>
+
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:           duration, NUMBER:     933.00>
+DEBUG: Property: <Name:              bytes, NUMBER:     1046515409.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 260 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:     Stopped playing secure/3
+200kbps/modav/p02c3l66_b04t6w80_1417130909233.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/p0
+2c3l66_b04t6w80_1417130909233.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAAxQRBA>
+DEBUG: Property: <Name:             reason, STRING:     >
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+1021987.200 kB / 3484.82 sec (99.9%)
+DEBUG: RTMP_Read returned: 0
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+DEBUG: Record using flashhd1 mode return code: '0'
+
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p02cx30x.j
+pg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p02cx30x.jpg
+INFO: Downloaded Thumbnail to 'I:\videos\Watchdog_Series_34_-_Episode_7_b04t6wd0
+_default.jpg'
+WARNING: Don't know how to tag FLV file
+
+C:\Program Files (x86)\get_iplayer>
+
+
+
+NOT GOING OUT - SERIES 7 - EPISODE 6
+
+C:\Program Files (x86)\get_iplayer>get_iplayer --modes=flashhd --output=i:/video
+s 1149 --get --force --verbose
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\User1/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+        encodingconsolein = cp850
+        encodingconsoleout = cp850
+        encodinglocale = cp1252
+        encodinglocalefs = cp1252
+        expiry = 604800
+        force = 1
+        get = 1
+        mmsnothread = 1
+        modes = flashhd
+        nopurge = 1
+        output = i:/videos
+        rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.e
+xe
+        verbose = 1
+        vlc = .\VLC\vlc-2.1.5\vlc.exe
+
+INFO: Search args: '1149'
+INFO: Additionally getting cached programme data for tv
+INFO: Got 2243 file cache entries for tv
+Matches:
+1149:   Not Going Out: Series 7 - 6. Alcohol, BBC One, Comedy,Sitcoms, default
+
+INFO: 1 Matching Programmes
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b04t1s28
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b04t1s28
+INFO: Using Not Live standard TV and Radio: b04t1s1n
+INFO: Version: default, VersionPid: b04t1s1n, Duration: 1800
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/b04t1s28/pla
+ylist.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b04t1s28/playlist.json
+INFO: Will search for versions: default
+INFO: Mode list: flashhd
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0
+/mediaset/pc/vpid/b04t1s1n?cb=18933
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream
+(CDN: akamai/10)
+INFO: Found mode flashhd2: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream
+(CDN: level3/5)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796k
+bps stream (CDN: limelight/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 48
+0kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x46
+8 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphd1: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps str
+eam (CDN: level3/5)
+INFO: Found mode rtsphd2: (pc_streaming_rtsp_hd) rtmp h264 1280x720 2800kbps str
+eam (CDN: akamai/10)
+INFO: Found mode rtsphigh1: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: limelight/5)
+INFO: Found mode rtsphigh2: (iplayer_streaming_rtsp_h264_flv) rtmp h264 640x360
+796kbps stream (CDN: akamai/10)
+INFO: Found mode rtspstd1: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: limelight/5)
+INFO: Found mode rtspstd2: (iplayer_streaming_rtsp_h264_flv_lo) rtmp h264 640x36
+0 480kbps stream (CDN: akamai/10)
+INFO: Found mode rtspvhigh1: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode rtspvhigh2: (iplayer_streaming_rtsp_h264_flv_high) rtmp h264 83
+2x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: flashhd1,flashhd2 modes will be tried for version default
+INFO: Trying flashhd1 mode to record tv: Not Going Out: Series 7 - 6. Alcohol
+INFO: Attempt number: 1 / 50
+
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file
+INFO: File name prefix = Not_Going_Out_Series_7_-_6._Alcohol_b04t1s28_default
+
+INFO: rtmpver:
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+
+INFO:
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This prog
+ram dumps the media content streamed over RTMP.
+INFO:
+INFO: --help|-h               Prints this help screen.
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]
+/path swfUrl=url tcUrl=url)
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP,
+2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]
+/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes
+)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SW
+FVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automati
+cally
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refre
+shing
+INFO: --auth|-u string        Authentication string to be appended to the connec
+t string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect s
+tring
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(
+0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name
+:number
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live
+streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to
+ playpath if live is specifed)
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/U
+npause BUFX hack
+INFO: --flv|-o string         FLV output file name, if the file name is - print
+stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when u
+sing --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte co
+unter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe
+to resume from. Useful if resume fails (default: 0)
+INFO:
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties
+ will not be included in the connect packet.
+INFO:
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.
+4
+INFO: RTMP_URL: rtmp://cp41752.edgefcs.net:1935/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&undefined&auth=daEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMD
+qFszG&aifp=v001&slist=secure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c88
+0fa53a249_b04t1s1n_1417016888364.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76
+-4e64-895a-c880fa53a249_b04t1s1n_1417014071552.mp4;secure/800kbps/modav/bUnknown
+-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps
+/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4,
+ tcUrl: rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edgefcs.net&un
+defined&auth=daEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp
+=v001&slist=secure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_
+b04t1s1n_1417016888364.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a
+-c880fa53a249_b04t1s1n_1417014071552.mp4;secure/800kbps/modav/bUnknown-3d20c074-
+5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps/modav/bUn
+known-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4, applicati
+on: ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&auth=daEcdcYa7adcBcdbJdId.
+bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/3200kbps/modav/
+bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4;secure/
+480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170140715
+52.mp4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s
+1n_1417013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2b
+e5cc2533_b04t1s1n_1417013521598.mp4, authString: auth=daEcdcYa7adcBcdbJdId.bKdcc
+xdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/3200kbps/modav/bUnkn
+own-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4;secure/480kb
+ps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417014071552.mp
+4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_14
+17013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2
+533_b04t1s1n_1417013521598.mp4, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.10.2/St
+andardMediaPlayerChromelessFlash.swf, file: I:\videos\Not_Going_Out_Series_7_-_6
+._Alcohol_b04t1s28_default.partial.flv, file_done: I:\videos\Not_Going_Out_Serie
+s_7_-_6._Alcohol_b04t1s28_default.flv
+
+
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe"
+ "--port" "1935" "--protocol" "0" "--playpath" "mp4:secure/3200kbps/modav/bUnkno
+wn-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4?auth=daEcdcYa
+7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/32
+00kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_141701688836
+4.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1
+n_1417014071552.mp4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5
+cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-4
+735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4" "--host" "cp41752.edgefcs.net"
+ "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChromeless
+Flash.swf" "--tcUrl" "rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.
+edgefcs.net&undefined&auth=daEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJn
+zpMDqFszG&aifp=v001&slist=secure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a
+-c880fa53a249_b04t1s1n_1417016888364.mp4;secure/480kbps/modav/bUnknown-82f5fbde-
+4f76-4e64-895a-c880fa53a249_b04t1s1n_1417014071552.mp4;secure/800kbps/modav/bUnk
+nown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013523658.mp4;secure/1500
+kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.
+mp4" "--app" "ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&auth=daEcdcYa7ad
+cBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/3200k
+bps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.m
+p4;secure/480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1
+417014071552.mp4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2
+533_b04t1s1n_1417013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-4735
+-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4" "--pageUrl" "http://www.bbc.co.uk
+/iplayer/episode/b04t1s28/" "--resume" "-o" "I:\videos\Not_Going_Out_Series_7_-_
+6._Alcohol_b04t1s28_default.partial.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : cp41752.edgefcs.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:secure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c88
+0fa53a249_b04t1s1n_1417016888364.mp4?auth=daEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-bu
+Gk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/3200kbps/modav/bUnknown-82f5fbde
+-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4;secure/480kbps/modav/bUn
+known-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417014071552.mp4;secure/800
+kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013523658.
+mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n
+_1417013521598.mp4
+DEBUG: tcUrl    : rtmp://cp41752.edgefcs.net:80/ondemand?_fcs_vhost=cp41752.edge
+fcs.net&undefined&auth=daEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMD
+qFszG&aifp=v001&slist=secure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c88
+0fa53a249_b04t1s1n_1417016888364.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76
+-4e64-895a-c880fa53a249_b04t1s1n_1417014071552.mp4;secure/800kbps/modav/bUnknown
+-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps
+/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.10.2/StandardMediaPlayerChrom
+elessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/iplayer/episode/b04t1s28/
+DEBUG: app      : ondemand?_fcs_vhost=cp41752.edgefcs.net&undefined&auth=daEcdcY
+a7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=secure/3
+200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170168883
+64.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s
+1n_1417014071552.mp4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60-cb2be
+5cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074-5483-
+4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: db fc 74 e9 51 dc f0 b6 7a 43 d5 31 73 9b b4 5e
+DEBUG: ef fd e9 03 2a 4d 78 7f fa fd 91 3a 6a c0 da d5
+DEBUG: SWFSize  : 974043
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 53
+DEBUG: HandShake: Initial client digest:
+DEBUG: a1 b2 89 0f 00 12 90 0f 2f ef 59 b3 36 17 dc 06
+DEBUG: a0 f3 5c 58 26 8f 86 0b 8c d7 98 f3 28 33 c3 9b
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 256075664
+DEBUG: HandShake: FMS Version   : 4.5.2.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest:
+DEBUG: 5e 4d 52 dc ca 85 ef 19 9a 3a 97 1e 8a 93 71 50
+DEBUG: 04 3f 7d 99 a6 23 40 7c a3 c9 4c 80 31 dd d3 72
+DEBUG: HandShake: Client signature calculated:
+DEBUG: 93 40 0f 4b 6b 60 bf 81 50 14 25 20 af 2e a1 50
+DEBUG: 75 e5 8a 58 ce f1 f6 f5 9e 56 97 89 5c b3 d6 71
+DEBUG: HandShake: Server sent signature:
+DEBUG: c3 aa 97 e8 bf aa a3 33 9f 6f f0 4f 75 63 8e 0d
+DEBUG: 19 36 bf 88 24 1a c1 be 98 34 ab a6 62 0e 18 11
+DEBUG: HandShake: Digest key:
+DEBUG: bc c0 c3 ee d2 56 e6 32 01 1e 1e f9 29 9f b5 89
+DEBUG: 45 82 5a 34 26 e7 06 fe 64 e7 64 2c 30 a6 d5 04
+DEBUG: HandShake: Signature calculated:
+DEBUG: c3 aa 97 e8 bf aa a3 33 9f 6f f0 4f 75 63 8e 0d
+DEBUG: 19 36 bf 88 24 1a c1 be 98 34 ab a6 62 0e 18 11
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 1250000
+DEBUG: HandleClientBW: client BW = 1250000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 240 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:     FMS/4,5,2,524>
+DEBUG: Property: <Name:       capabilities, NUMBER:     127.00>
+DEBUG: Property: <Name:               mode, NUMBER:     1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetConnection.Connect.Su
+ccess>
+DEBUG: Property: <Name:        description, STRING:     Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:     0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:     4,5,2,524>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:secure/3200kbps/modav
+/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4?auth=d
+aEcdcYa7adcBcdbJdId.bKdccxdMdqbbar-buGk6M-bWG-EplDJnzpMDqFszG&aifp=v001&slist=se
+cure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170
+16888364.mp4;secure/480kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_
+b04t1s1n_1417014071552.mp4;secure/800kbps/modav/bUnknown-3d20c074-5483-4735-9f60
+-cb2be5cc2533_b04t1s1n_1417013523658.mp4;secure/1500kbps/modav/bUnknown-3d20c074
+-5483-4735-9f60-cb2be5cc2533_b04t1s1n_1417013521598.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 10275 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 20515 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 324 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:     Started playing secure/3
+200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170168883
+64.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/bU
+nknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAApgzFA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: invoke 330 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:     Playing and resetting se
+cure/3200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170
+16888364.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/bU
+nknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAApgzFA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 494 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:     1665.08>
+DEBUG: Property: <Name:       moovPosition, NUMBER:     36.00>
+DEBUG: Property: <Name:              width, NUMBER:     1280.00>
+DEBUG: Property: <Name:             height, NUMBER:     720.00>
+DEBUG: Property: <Name:       videocodecid, STRING:     avc1>
+DEBUG: Property: <Name:       audiocodecid, STRING:     mp4a>
+DEBUG: Property: <Name:         avcprofile, NUMBER:     100.00>
+DEBUG: Property: <Name:           avclevel, NUMBER:     41.00>
+DEBUG: Property: <Name:             aacaot, NUMBER:     2.00>
+DEBUG: Property: <Name:     videoframerate, NUMBER:     25.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:     48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:     2.00>
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     41627000.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     25000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     avc1>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     79923200.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     48000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              1665.08
+INFO:   moovPosition          36.00
+INFO:   width                 1280.00
+INFO:   height                720.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            100.00
+INFO:   avclevel              41.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                41627000.00
+INFO:   timescale             25000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                79923200.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+1.093 kB / 0.00 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 30755 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40995 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 51235 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 61475 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 71717 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+321.246 kB / 0.64 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 92197 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 102437 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 112677 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+385.246 kB / 0.76 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 122917 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 133157 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 143397 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+449.246 kB / 0.92 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 153637 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 163877 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+38930.387 kB / 124.72 sec (7.4%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 256145398
+DEBUG: sending ctrl. type: 0x0007
+409473.185 kB / 1390.52 sec (83.5%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 256445560
+DEBUG: sending ctrl. type: 0x0007
+489731.715 kB / 1664.68 sec (99.9%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Complete>
+
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:           duration, NUMBER:     434.00>
+DEBUG: Property: <Name:              bytes, NUMBER:     501595932.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 334 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:     Stopped playing secure/3
+200kbps/modav/bUnknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_14170168883
+64.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/3200kbps/modav/bU
+nknown-82f5fbde-4f76-4e64-895a-c880fa53a249_b04t1s1n_1417016888364.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     pAApgzFA>
+DEBUG: Property: <Name:             reason, STRING:     >
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+489839.275 kB / 1665.05 sec (99.9%)
+DEBUG: RTMP_Read returned: 44606
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+DEBUG: Record using flashhd1 mode return code: '0'
+
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p02c5285.j
+pg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p02c5285.jpg
+INFO: Downloaded Thumbnail to 'I:\videos\Not_Going_Out_Series_7_-_6._Alcohol_b04
+t1s28_default.jpg'
+WARNING: Don't know how to tag FLV file
+
+C:\Program Files (x86)\get_iplayer>

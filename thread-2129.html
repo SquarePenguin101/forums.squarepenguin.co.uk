@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Per 3.23 release notes, 320k/96k HLS streams no longer available for radio programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Per 3.23 release notes, 320k/96k HLS streams no longer available for radio programmes</div>
+<div id="pagetitle"><h2>Per 3.23 release notes, 320k/96k HLS streams no longer available for radio programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">01-12-2019, 04:54 AM</div>
+</div>
+<div class="message">I know some modes are still missing in the new release, does this also cover HAF modes for radio or are these gone for good?<br />
+<br />
+Also when using dvfxsd on the ones with no hvfxsd stream available, DASH only downloads the audio at 96kbps instead of 128kbps.<br />
+<br />
+As always thanks for your quick work fixing the current issue. Do you have any ideas when the next bug fix release will be coming?<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">EDIT: 320k HLS streams (<kbd>hafhigh</kbd> mode) have since returned, though they may only be available for the podcast versions of World Service programmes.</span></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">02-12-2019, 02:11 AM</div>
+</div>
+<div class="message">I've just downloaded hafstd radio<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v3.23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+32135: The Archers Omnibus - 01/12/2019, BBC Radio 4, m000bv2k<br />
+INFO: 1 matching programmes<br />
+<br />
+INFO: Downloading radio: 'The Archers Omnibus - 01/12/2019 (m000bv2k) [podcast]'<br />
+INFO: Downloaded: 77.70 MB (01:16:07) @ 17.76 Mb/s (hafstd1/ll) [audio]        <br />
+INFO: Converting to M4A<br />
+INFO: Tagging M4A</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">02-12-2019, 03:30 AM</div>
+</div>
+<div class="message">Thanks. I didn't properly read the release notes. So for radio, <kbd>dafhigh</kbd> is the only way to download the 320 kbps streams.<br />
+<br />
+As far as TV goes, I know there is a bug that is stopping <kbd>hvfxsd</kbd> streams showing for some programmes which will be fixed in the next release. However the <kbd>dvfxsd</kbd> streams are generally showing as using 96 kbps audio. I'm not sure if the <kbd>hvfxsd</kbd> stream will also be 96 kbps or whether that will continue to be 128 kbps as before. A look at the <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#details">Recording modes reference</a> page suggests that <kbd>hvfxsd</kbd> will also now only be 96 kbps.<br />
+<br />
+However hvfhigh does still offer 128 kbps audio though it is 704 x 396@50fps instead of 960 x 540@25fps. Not sure how much difference that visually makes.<br />
+<br />
+If <kbd>hvfxsd</kbd> with 128kbps audio is gone, I wonder if it would be possible to, for example, ask GiP to download the <kbd>dvfxsd</kbd> video file and the <kbd>dvfhigh</kbd> audio file then combine them using ffmpeg at the end automatically like it already does with the 2 <kbd>daf</kbd> streams. Currently both streams are from 1 mode though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">02-12-2019, 12:03 PM</div>
+</div>
+<div class="message">Oh yes, you're right, I hadn't properly read the release notes either.<br />
+<br />
+I downloaded a programme using hafhigh successfully (with the 403 forbidden error) using a laptop which still had 3.22. I then updated it to 3.23 and got hafhigh not available, though dafhigh was fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">02-12-2019, 09:55 PM</div>
+</div>
+<div class="message">Dinky, Are you able to confirm the audio bitrate of the <kbd>hvfxsd</kbd> streams that will be made available in the next release? Will they be 96 kbps like the <kbd>dvfxsd</kbd> modes? In the current version some programmes already do have <kbd>hvfxsd</kbd> available at 128kbps. Tonight's London News for example (m000c02w) though <kbd>dvfxsd</kbd> also shows as 128 kpbs for that. Others though show <kbd>dvfxsd</kbd> as 96 kbps. Would those programmes also only be 96 kbps using <kbd>hvfxsd</kbd>?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-12-2019, 05:15 PM</div>
+</div>
+<div class="message">Could be either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">04-12-2019, 01:11 AM</div>
+</div>
+<div class="message">Thanks user-2. I've noticed that since the most recent changes at the BBC, the audio bitrate for programmes where <kbd>hvfxsd</kbd> and <kbd>dvfxsd</kbd> are the highest available (London News as an example) seems to be quite inconsistent. In 3.23 <kbd>hvfxsd</kbd> often shows for the London News and when I check --info it shows both <kbd>hvfxsd</kbd> and <kbd>dvfxsd</kbd> have 128 kbps audio but sometimes just <kbd>dvfxsd</kbd> shows and there are other programmes where <kbd>dvfxsd</kbd> is the only option and those come back with 96 kbps audio. It doesn't make sense that some have a better audio stream than others.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Per 3.23 release notes, 320k/96k HLS streams no longer available for radio programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

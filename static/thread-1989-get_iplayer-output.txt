@@ -1,0 +1,161 @@
+get_iplayer v3.19, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: Start: 2019-02-25T13:14:27 (1551100467)
+INFO: encodinglocale = ANSI_X3.4-1968
+INFO: encodinglocalefs = ANSI_X3.4-1968
+INFO: encodingconsoleout = ANSI_X3.4-1968
+INFO: encodingconsolein = ANSI_X3.4-1968
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /home/slack/.get_iplayer
+INFO: User options file: /home/slack/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+INFO: Loaded PVR search 'w1a'
+INFO: Loaded PVR search 'collateral'
+INFO: Loaded PVR search 'qi_vg'
+INFO: Loaded PVR search 'question_time'
+INFO: Loaded PVR search 'ladhood'
+INFO: Loaded PVR search 'undercover'
+INFO: Loaded PVR search 'troy'
+INFO: Loaded PVR search 'the_mash_report'
+INFO: Loaded PVR search 'rob_newman'
+INFO: Loaded PVR search 'human_planet'
+INFO: Loaded PVR search 'peaky_blinders'
+INFO: Loaded PVR search 'on_the_hour'
+INFO: Loaded PVR search 'live_from_the_bbc'
+INFO: Loaded PVR search 'rufus_hound'
+INFO: Loaded PVR search 'blackadder'
+INFO: Loaded PVR search 'jimmy_carr'
+INFO: Loaded PVR search 'silk'
+INFO: Loaded PVR search 'reformation'
+INFO: Loaded PVR search 'taboo'
+INFO: Loaded PVR search 'rwanda'
+INFO: Loaded PVR search 'Derren_Brown'
+INFO: Loaded PVR search 'the_news_quiz'
+INFO: Loaded PVR search 'lost_ark'
+INFO: Loaded PVR search 'to_the_manor_born'
+INFO: Loaded PVR search 'witless'
+INFO: Loaded PVR search 'stewart_lee'
+INFO: Loaded PVR search 'tim_vine'
+INFO: Loaded PVR search 'comedy_vehicle'
+INFO: Loaded PVR search 'qi_xl'
+INFO: Loaded PVR search 'david_baddiel'
+INFO: Loaded PVR search 'wolf_hall'
+INFO: Loaded PVR search 'the_hunt'
+INFO: Loaded PVR search 'mcmafia'
+INFO: Loaded PVR search 'fleabag'
+INFO: Loaded PVR search 'planet_earth_pid'
+INFO: Loaded PVR search 'at_my_table'
+INFO: Loaded PVR search 'Mark_Watson'
+INFO: Loaded PVR search 'snowfall'
+INFO: Loaded PVR search 'cuckoo'
+INFO: Loaded PVR search 'thirteen'
+INFO: Loaded PVR search 'alexei_sayle'
+INFO: Loaded PVR search 'buzzcocks'
+INFO: Loaded PVR search 'Crossrail'
+INFO: Loaded PVR search 'the_night_manager'
+INFO: Loaded PVR search 'isy_suttie'
+INFO: Loaded PVR search 'a_very_english_scandal'
+INFO: Loaded PVR search 'isihac'
+INFO: Loaded PVR search 'saturday_drama'
+INFO: Loaded PVR search 'ben_goldacre'
+INFO: Loaded PVR search 'natural_curiosities'
+INFO: Loaded PVR search 'flying_the_flag'
+INFO: Loaded PVR search 'not_going_out'
+INFO: Loaded PVR search 'robert_reich'
+INFO: Loaded PVR search 'babylon'
+INFO: Loaded PVR search 'exodus'
+INFO: Loaded PVR search 'Jack_Dee'
+INFO: Loaded PVR search 'alex_edelman'
+INFO: Loaded PVR search 'royle_family'
+INFO: Loaded PVR search 'sherlock'
+INFO: Loaded PVR search 'strike'
+INFO: Loaded PVR search 'frys_english_delights'
+INFO: Loaded PVR search 'graham_norton'
+INFO: Loaded PVR search 'in_the_flesh'
+INFO: Loaded PVR search 'so_wrong'
+INFO: Loaded PVR search 'adam_curtis'
+INFO: Loaded PVR search 'requiem'
+INFO: Loaded PVR search 'gruffalo'
+INFO: Loaded PVR search 'mark_steel'
+INFO: Loaded PVR search 'frankie_boyle'
+INFO: Loaded PVR search 'bad_language'
+INFO: Loaded PVR search 'yes_pm'
+INFO: Loaded PVR search 'charlie_brooker'
+INFO: Loaded PVR search 'eddie_izzard'
+INFO: Loaded PVR search 'nmtb'
+INFO: Loaded PVR search 'the_last_post'
+INFO: Loaded PVR search 'ricky_gervais'
+INFO: Loaded PVR search 'black_earth_rising'
+INFO: Loaded PVR search 'planet_earth_2_pid'
+INFO: Loaded PVR search 'the_missing'
+INFO: Loaded PVR search 'gardeners_world'
+INFO: Loaded PVR search 'reg'
+INFO: Loaded PVR search 'storyville'
+INFO: Loaded PVR search 'sr_bake_off'
+INFO: Loaded PVR search 'happy_valley'
+INFO: Loaded PVR search 'Billy_Bragg'
+INFO: Loaded PVR search 'Planet_Earth'
+INFO: Loaded PVR search 'reith_lectures'
+INFO: Loaded PVR search 'yes_minister'
+INFO: Loaded PVR search 'the_left_hand_of_darkness'
+INFO: Loaded PVR search 'blocked'
+INFO: Loaded PVR search 'unbelievable_truth'
+INFO: Loaded PVR search 'museum_of_curiosity'
+INFO: Loaded PVR search 'line_of_duty_pid'
+INFO: Loaded PVR search 'owen_jones'
+INFO: Loaded PVR search 'line_of_duty'
+INFO: Loaded PVR search 'would_i_lie'
+INFO: Loaded PVR search 'museum_of_c_pid'
+INFO: Loaded PVR search 'new_world_order'
+INFO: Loaded PVR search 'house_of_saud'
+INFO: Loaded PVR search 'luther'
+INFO: Loaded PVR search 'my_teenage_diary'
+INFO: Loaded PVR search 'mark_thomas'
+INFO: Loaded PVR search 'bake_off'
+INFO: Loaded PVR search 'travel_man'
+INFO: Loaded PVR search 'jeeves_and_wooster'
+INFO: Loaded PVR search 'Wolf_Hall'
+INFO: Loaded PVR search 'gunpowder'
+INFO: Loaded PVR search 'mae_martin'
+INFO: Loaded PVR search 'john_moloney'
+INFO: Loaded PVR search 'robert_newman'
+INFO: Loaded PVR search 'louis_theroux'
+INFO: Loaded PVR search 'upstart_crow'
+INFO: Loaded PVR search 'weekly_wipe'
+INFO: Loaded PVR search 'nigella'
+INFO: Loaded PVR search 'dave_gorman'
+INFO: Loaded PVR search list
+Running PVR Searches:
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: PVR Run: 'a_very_english_scandal'
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = ANSI_X3.4-1968
+	encodingconsoleout = ANSI_X3.4-1968
+	encodinglocale = ANSI_X3.4-1968
+	encodinglocalefs = ANSI_X3.4-1968
+	fileprefix = <nameshort> <seriesnum><00episodenum> <episodeshort>
+	get = 1
+	hide = 1
+	nopurge = 1
+	output = /home/slack/iplayer/a very english scandal
+	pid = p065sk93
+	pidrecursive = 1
+	pvrsingle = a_very_english_scandal
+	verbose = 1
+	whitespace = 1
+
+INFO: Search args: ''
+INFO: Cleaning PID - old: 'p065sk93' new: 'p065sk93'
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/p065sk93.json
+INFO: tv series or brand PID detected (p065sk93)
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/p065sk93/episodes/player?page=1
+INFO: No episodes found, checking alternate location...
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/iplayer/episodes/p065sk93
+Can't use an undefined value as an ARRAY reference at /usr/local/bin/get_iplayer line 5237.

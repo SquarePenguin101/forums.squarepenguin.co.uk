@@ -1,0 +1,54 @@
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\Amro/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	aactomp3 = 1
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe
+	nopurge = 1
+	output = C:\Users\Amro\Downloads\BBC Radio Downloads
+	outputtv = C:\Users\Amro\Downloads\BBC TV Downloads
+	rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe
+	type = radio
+	verbose = 1
+
+INFO: Search args: '6 Music Classic','(TV|Downloads)'
+INFO: Got 3456 file cache entries for radio
+INFO: Search term '6 Music Classic' is a substring
+DEBUG: Search download_regex = 6 Music Classic
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+INFO: Search term '(TV|Downloads)' is a substring
+DEBUG: Search download_regex = (TV|Downloads)
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+Matches:
+10070:	6 Music Classic Concert - The Psychedelic Furs, BBC 6 Music, 
+12600:	Satvinder Rana - 19/06/2016, BBC Radio Derby, 
+
+INFO: 2 Matching Programmes

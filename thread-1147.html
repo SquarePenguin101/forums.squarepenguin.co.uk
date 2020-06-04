@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Which Is The Best?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Which Is The Best?</div>
+<div id="pagetitle"><h2>Which Is The Best?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">29-01-2017, 11:19 PM</div>
+</div>
+<div class="message">I downloaded the following programme &amp; I wanted the best quality etc &amp; I used the following in the CLI.<br />
+<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b00sl2g5/totp2-wham-special">http://www.bbc.co.uk/iplayer/episode/b00...am-special</a><br />
+<br />
+But about 3/4 of the way through when watching it, the video froze for about 2 secs. So I re-downloaded it but using the following,<br />
+<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b00sl2g5/totp2-wham-special">http://www.bbc.co.uk/iplayer/episode/b00...am-special</a> --modes=flash<br />
+<br />
+This time there it didn't freeze at that same point in the video.<br />
+Out of curiosity I clicked on each video file &amp; looked at the Properties for each &amp; this is what it said for each.<br />
+<br />
+1st Download<br />
+TOTP2_-_Wham_Special<br />
+Size                 355MB<br />
+Video<br />
+Length              00:29:22<br />
+Frame Width      960<br />
+Frame Height     540<br />
+Data rate           1592kbps<br />
+Total bitrate       1686kbps<br />
+Frame rate         24 frames/second<br />
+Audio<br />
+Bit rate               94kbps<br />
+Channels             2 (stereo)<br />
+Audio sample rate 24kHz<br />
+<br />
+2nd Download<br />
+TOTP2_-_Wham_Special<br />
+Size                   315MB<br />
+Video<br />
+Length               00:29:22<br />
+Frame Width       832<br />
+Frame Height      468<br />
+Data rate            1403kbps<br />
+Total bitrate        1497kbps<br />
+Frame rate          25 frames/second<br />
+Audio<br />
+Bit rate                93kbps<br />
+Channels              2 (stereo)<br />
+Audio sample rate 48kHz<br />
+<br />
+Obviously looking at the stats above one is a larger file size than the other which I'm assuming is because of the larger frame width &amp; height of the one. The one has more fps than the other plus the one has double the audio sample rate than the other.<br />
+What I don't know is which one is the better quality download?<br />
+Do I assume that the audio sample rate of 48kHz is better than the 24kHz?<br />
+Any feedback on this would be appreciated, thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-01-2017, 07:25 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-01-2017, 11:19 PM)</span></cite>Do I assume that the audio sample rate of 48kHz is better than the 24kHz?</blockquote><br />
+Yes, that is a higher sample rate. Higher sample rate or higher bit rate or generally higher frame size = better quality, or at least larger file size.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-01-2017, 08:37 PM</div>
+</div>
+<div class="message">There is a wrinkle in this case. The audio has been encoded differently in those two files, but you're not seeing it. Use Mediainfo to show the full picture. If your player can decode HE-AAC (used by the BBC for lower bit rates in non-Flash content - google it) the audio will be played at 48kHz (via some replication of higher frequencies). Otherwise, you only get the base 24kHz audio. Your ears will tell you which is better, if the difference is perceptible.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">31-01-2017, 12:21 AM</div>
+</div>
+<div class="message">Thanks Dinky, I will look into that.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Which Is The Best?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

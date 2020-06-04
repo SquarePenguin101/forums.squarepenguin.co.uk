@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - GiP differences between Windows and Linux</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; GiP differences between Windows and Linux</div>
+<div id="pagetitle"><h2>GiP differences between Windows and Linux</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1868</h2></div><div class="dateline">05-05-2020, 02:41 PM</div>
+</div>
+<div class="message">There's an obscure difference between the tagging on Windows and Linux.<br />
+<br />
+On Windows tagging can only contain characters that fall with the ISO8859-1 range as GiP filters the UTF-8 tagging information on Windows. So, mostly there is no effect at all. ISO8859-1 supports most common western european languages. My experience is that the most common use of non-ASCII characters is names in track listing for radio 3 output.<br />
+<br />
+An example is the track listing for Music Planet of 2020-05-02<br />
+<a href="https://www.bbc.co.uk/programmes/m000hvp5">https://www.bbc.co.uk/programmes/m000hvp5</a><br />
+<br />
+This contains some Arabic and Chinese. Cyrillic and Greek would also not be supported.<br />
+<br />
+You can see the missing characters in the tracks.txt file. Under Windows you need a text editor that supports UTF-8. Windows 10 notepad does, earlier windows versions don't.<br />
+<br />
+The windows version of AtomicParsley, which actually does the tagging, has wide characterer (UTF-16 - the traditional windows support for Unicode) command line input. So, if the command line could be constructed in UTF-16, which I assume Perl could do, and passed to AtomicParsley, whcih I don't know about, then that would work.<br />
+<br />
+I tried using the  --tag-utf8  option to send UTF-8 to AtomicParsley and copying AtomicParsley.exe to AtomicParsley-utf8.exe and pointing at that to make it accept raw UTF-8, but that doesn't work. Probably because of something going on in the conversion to UTF-16 which is implicit in sending any command line to AtomicParsley.<br />
+<br />
+Recently Microsoft have started improving UTF-8 support in Windows. Since windows 10 v1903, setting the code page to 65001 (UTF-8) mostly works for programs such as Atomic Parsley which output UTF-8. It's also possible to add a manifest to an application to show that it expects to work with UTF-8, so that it will not need the code page to be set.<br />
+<br />
+I tried rebuilding AtomicParsley with only UTF-8 support and an appropriate manifest, and that does seem to work. But that's with only one test!<br />
+<br />
+Obviously using the Linux version of GiP is the simplest thing to do. I assume that this will work under WSL (windows subsystem for Linux) on Windows 10.<br />
+<br />
+You could argue that this is a bug in the Windows version, but it has such a tiny affect on the functionality that I would be surprised if anyone other than me would notice, and I already have a fix.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">05-05-2020, 03:31 PM</div>
+</div>
+<div class="message">Ignoring non-Latin languages [Windows] is a bug.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">24-05-2020, 10:59 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-05-2020, 02:41 PM)</span></cite>Obviously using the Linux version of GiP is the simplest thing to do. I assume that this will work under WSL (windows subsystem for Linux) on Windows 10.</blockquote><br />
+Unfortunately AtomicParsley doesn't work on WSL.  So while gip itself does, one of the critical dependencies doesn't.<br />
+<br />
+jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; GiP differences between Windows and Linux</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

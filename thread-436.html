@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failed to record and no index feed.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Failed to record and no index feed.</div>
+<div id="pagetitle"><h2>Failed to record and no index feed.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-781</h2></div><div class="dateline">13-06-2015, 12:06 PM</div>
+</div>
+<div class="message">I am on the latest v2.94 version of GIP that I downloaded via the latest windows installer.   I've used the program for over a year now and always keep it up to date.<br />
+<br />
+v2.94 was working until early this morning but has now stopped loading the TV index or recording any programmes.   Usually when this happens I come here and have always been able to find a newer fixed update but there doesn't seem to be one so far this time.<br />
+<br />
+I used the command<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --force --modes=flashvhigh --subtitles --pid=b05zhypq</code></div></div><br />
+but when I ran it GIP returned the message<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05zhypq using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh) available for this programme with version<br />
+'default'<br />
+INFO: Try using --modes=flashhd,hlshigh,hlslow,hlsstd,hlsvhigh<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes (flashvhigh) available for this programme with version<br />
+'original'<br />
+INFO: Try using --modes=flashhd,hlshigh,hlslow,hlsstd,hlsvhigh<br />
+ERROR: Failed to record 'Women's World Cup: 2015 - Day 7 Catch-Up (b05zhypq)'<br />
+<br />
+C:&#92;Program Files&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+<br />
+I also tried using only the pid= command without the force or modes part but that also doesn't work.   Any ideas would be helpful please.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">13-06-2015, 12:25 PM</div>
+</div>
+<div class="message">You are trying to download it with a 'mode' that doesn't exist.<br />
+<br />
+It does actually tell you which modes to try in the output and having just tried them myself, they do work:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Try using --modes=flashhd,hlshigh,hlslow,hlsstd,hlsvhigh</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-781</h2></div><div class="dateline">13-06-2015, 05:55 PM</div>
+</div>
+<div class="message">I don't think this is to do with modes because I tried the programme again just using the simple command<br />
+<br />
+get_iplayer --pid=<br />
+<br />
+I think this could be to do with whether the programme is available to download from iPlayer.<br />
+<br />
+The pid in the example above now works because the programme was made available to download so I have since got it successfully.<br />
+<br />
+However, another programme, which is not available for download according to the iPlayer website, didn't work using GIP.   This is the command I used and the pid I was trying to get.<br />
+<br />
+get_iplayer --pid=b05y689r<br />
+<br />
+This is the message returned by GIP.<br />
+<br />
+<br />
+C:\Program Files\get_iplayer&gt;get_iplayer --pid=b05y689r<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b05y689r using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) av<br />
+ailable for this programme with version 'default'<br />
+INFO: Try using --modes=flashhd,hlshigh,hlslow,hlsstd,hlsvhigh<br />
+INFO: Checking existence of editorial version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) av<br />
+ailable for this programme with version 'editorial'<br />
+INFO: Try using --modes=flashhd,hlshigh,hlslow,hlsstd,hlsvhigh<br />
+ERROR: Failed to record 'Women's World Cup: 2015 - Australia v Nigeria (b05y689r<br />
+)'<br />
+<br />
+C:\Program Files\get_iplayer&gt;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">13-06-2015, 06:30 PM</div>
+</div>
+<div class="message">Hi Tilly,<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I think this could be to do with whether the programme is available to download from iPlayer.</blockquote>
+It's not do do with download availability.<br />
+<br />
+It's to do with which modes of the programme have been processed.<br />
+<br />
+From your output, it looks like at the time when you posted about "b05zhypq" only the flashhd stream had been processed and the flashvhigh stream you wanted hadn't. HLS streams had also been processed. flashvhigh has since processed and appeared on iPlayer so you can now download it.<br />
+<br />
+Again with "b05y689r" the flashhd stream has processed but the other flash streams haven't yet so the download fails.<br />
+<br />
+If you visit this programme on the iPlayer site <a href="http://www.bbc.co.uk/iplayer/episode/b05y689r/womens-world-cup-2015-australia-v-nigeria">http://www.bbc.co.uk/iplayer/episode/b05...-v-nigeria</a> and you try to play it in SD, you get the message "<span style="font-weight: bold;" class="mycode_b">This content doesn't seem to be working. Please try again later.</span>"<br />
+<br />
+If iPlayer can't play the stream your after, GiP won't be able to either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-781</h2></div><div class="dateline">13-06-2015, 06:50 PM</div>
+</div>
+<div class="message">That explains it.   Thank you so much for responding.<br />
+<br />
+I'm not familiar with HLS streams as I haven't used them before so I'll go off and look up more about that.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Failed to record and no index feed.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

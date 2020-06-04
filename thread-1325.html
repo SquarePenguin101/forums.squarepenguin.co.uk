@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - BBC data sources</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; BBC data sources</div>
+<div id="pagetitle"><h2>BBC data sources</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">02-05-2017, 08:04 AM</div>
+</div>
+<div class="message">I'm a little surprised to see get_iplayer resort to web-scraping at this point, isn't enough data to populate a radio cache available from the still-running aod feeds?<br />
+<br />
+Similarly, it looks as if enough data is available via the ibl API (which is accessible without an API key) to populate a tv cache.<br />
+<br />
+Both of these sources are efficient, populating caches in just a few seconds, even on my slow Windows system.<br />
+<br />
+For anyone interested, there is a proof-of-concept at <a href="https://github.com/mermade/bbcparse">https://github.com/mermade/bbcparse</a> (node.js &gt;=4.x is required). More work would be required to maintain a rolling 30-day cache.<br />
+<br />
+Usage:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>node gip_ibl &gt; /path/to/tv.cache<br />
+node gip_aod &gt; /path/to/radio.cache</blockquote>
+<br />
+Probably wise to backup your cache files first, especially if they take a long time to generate.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1687</h2></div><div class="dateline">02-05-2017, 09:13 AM</div>
+</div>
+<div class="message">Hi Meic, <br />
+<br />
+I think the approach first and foremost was to get it up and going. <br />
+Now there is some time to look at the ways to optimise it. <br />
+I just say it because I'm a software developer/systems analyst and know that is most important first and foremost when there is a massive outage. <br />
+Get it up and going and then you can look at ways to optimise it. <br />
+<br />
+I appriciate all developers work in this and your way sounds really good, but integrating it into a release so quickly I would not have personally done. HTML scraping was proven to work even as an interium until a proven more optimised method could be applied. <br />
+<br />
+I actually think HTML scraping (well for me) is working faster than the old XML way. Don't ask me why on that, same hardware, same connection, same VPN but it seems to work faster. <br />
+<br />
+Now there is the option of looking at optimisation, we as a community can do it.<br />
+<br />
+Cheers<br />
+Tel</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1286</h2></div><div class="dateline">02-05-2017, 03:07 PM</div>
+</div>
+<div class="message">I would also be interested in the idea of creating a community server, which makes available the information get_iplayer needs, in a format optimised for get_iplayer to use, and which can employ whatever mechanism is needed to keep it up to date.<br />
+<br />
+For example, if web-scraping is required, the site could do the scraping once, and then make the data available to the community without further impact on the BBC's servers. If eventually necessary, it could even be kept up to date using a completely manual process by community volunteers. This is how TiVo users in Australia keep their machines running, for example (see oztivo.net).<br />
+<br />
+If anyone has any estimates of how many active users of get_iplayer there are I would be interested. I would also be interested in co-operating on creating a suitable API format for get_iplayer to use. There is no need for it to be a copy of any BBC API, or even to use the same concepts (for example the PID hierarchy) as long as we could abstract the notion of "what PID does get_iplayer have to specify to download this programme". Things like pidrecursive could be replaced by a concept of programme grouping defined and implemented on the server any way we want.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; BBC data sources</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

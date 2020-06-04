@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Information about programs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Information about programs</div>
+<div id="pagetitle"><h2>Information about programs</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-987</h2></div><div class="dateline">25-07-2015, 09:04 PM</div>
+</div>
+<div class="message">Running get_iplayer with no options, I get programs listed like this:<br />
+<br />
+  b05zh5dp: 349 Clangers-The Lost Notes§<br />
+<br />
+(I recall setting the separator to § back when I had my wits about me)<br />
+<br />
+Is there any other information that I can get about this program? I've seen samples that contain the Channel, so presumably there are other fields available to display.<br />
+<br />
+I can probably manage by myself once I know what fields are (still) available. I'd been using &lt;categories&gt; until recently...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">26-07-2015, 01:00 PM</div>
+</div>
+<div class="message">If you run <kbd>--info</kbd> on a programme you will see more, but that extra data can't be used to help in searches.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2015, 05:22 PM</div>
+</div>
+<div class="message">Look at the first line of your TV cache file (<kbd>&#36;HOME/.get_iplayer/tv.cache</kbd> or <kbd>%USERPROFILE%\.get_iplayer\tv.cache</kbd> on Windows).  It shows the fields available for search results (used with <kbd>--listformat</kbd>).  Aside from the ones you already use, <kbd>&lt;channel&gt;</kbd> is probably the only useful one to add.  For full information on a programme, do as tvfan instructed.<br />
+<br />
+BTW, there is no need for a separator.  Only one programme per line is listed in search results.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-987</h2></div><div class="dateline">27-07-2015, 07:31 AM</div>
+</div>
+<div class="message">I looked at my tv.cache and found that it contained ...|categories|...<br />
+<br />
+If I run the command:<br />
+  get_iplayer --pid=b05zh5dp --info<br />
+... then I see:<br />
+  categories: Children's,Entertainment &amp; Comedy,Animation<br />
+<br />
+So then I run the command:<br />
+  get_iplayer --refresh --listformat="&lt;pid&gt;: &lt;name&gt;-&lt;episode&gt;§&lt;categories&gt;" &gt; tv.txt<br />
+... and tv.txt contains the line:<br />
+  b05zh5dp: Clangers-The Lost Notes§&lt;categories&gt;<br />
+<br />
+What am I doing wrong to get "&lt;categories&gt;" where previously I would have got "Children's,Entertainment &amp; Comedy,Animation" ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2015, 10:30 AM</div>
+</div>
+<div class="message">As tvfan said, information available with <kbd>--info</kbd> is not available for searches.  And as I said, <kbd>&lt;channel&gt;</kbd> is probably the only useful additional field to add to <kbd>--listformat</kbd>.  As for why you see no categories in search results, read the latest release notes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-987</h2></div><div class="dateline">27-07-2015, 10:49 PM</div>
+</div>
+<div class="message">Thanks for all the help understanding this.  I find the categories more useful than the channels as I prefer factual programs no matter what channel they are on. I'm using a program of my own to create a PVR-like experience, so I'll investigate using --info against all the PIDs, one at a time, to build an index that *does* contain categories.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Information about programs</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

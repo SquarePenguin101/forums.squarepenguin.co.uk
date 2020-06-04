@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Getting &quot;ERROR: Programe Type 'b095fqgy' does not exist&quot; for all downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Getting &quot;ERROR: Programe Type 'b095fqgy' does not exist&quot; for all downloads</div>
+<div id="pagetitle"><h2>Getting &quot;ERROR: Programe Type 'b095fqgy' does not exist&quot; for all downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">28-09-2017, 02:15 PM</div>
+</div>
+<div class="message">Since about 11am on Thursday 28 September, whenever I try to download a programme I get the following message:<br />
+ERROR: Programe (sic) Type 'b095fqgy' does not exist<br />
+I also get this message when opening a new get_iplayer window.<br />
+I have restarted my computer, and reinstalled get_iplayer (version 3.02). The error persists.<br />
+Is this a problem with my computer, or yet another attempt by the BBC to block usage of get_iplayer?<br />
+(For information, b095fqgy appears to be the PID for the BBC News programme on 18 September. I have never tried to download this programme, and indeed never been near it.)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">28-09-2017, 02:46 PM</div>
+</div>
+<div class="message">Only a limited number of news programmes are available, such as News at One, Six and Ten on BBC One. But even then they are only available for 24 hours. I haven't checked the PID but if it's from 18th September, that's why you can't download it.<br />
+<br />
+A good test if you're getting this result is to go to the BBC iPlayer and see if you can watch it there. If you can't, then you certainly won't be able to download it on get_iplayer.<br />
+<br />
+Hope that helps.<br />
+<br />
+HV</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">28-09-2017, 03:09 PM</div>
+</div>
+<div class="message">I'm afraid I didn't explain myself very well. The message:<br />
+ERROR: Programe Type 'b095fqgy' does not exist<br />
+is a message which intrudes itself all the time, no matter what PID I am trying to access. get_iplayer then won't access the PID which I do wish to download, but grinds to a halt.<br />
+My question doesn't really have anything to do with b095fqgy in itself, or with my trying to download it (I don't wish to), but with the fact that the message about b095fqgy, which appeared out of nowhere, stops get_iplayer from working.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2017, 03:14 PM</div>
+</div>
+<div class="message">Your preferences are likely mangled. Post the output from <kbd>get_iplayer --prefs-show</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">28-09-2017, 03:31 PM</div>
+</div>
+<div class="message">Output is:<br />
+Options in 'C:\Users\Roger/.get_iplayer/options'<br />
+output = C:\get_iplayer_recordings<br />
+<br />
+I can't access the file in C:\Users\Roger/.get_iplayer/options; however, the file is only 1KB large.<br />
+Hope this helps (though I can't quite see how it would).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2017, 03:45 PM</div>
+</div>
+<div class="message">Not in your options file then. Somehow you are specifying the equivalent of <kbd>--type=b095fqgy</kbd>, which is invalid. The other possibility is that you have somehow embedded it in PVR searches. Use <kbd>get_iplayer --pvr-list</kbd> to check. If that doesn't shed any light, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">28-09-2017, 05:46 PM</div>
+</div>
+<div class="message">Thanks. Here is my support request.<br />
+My problem is that I get a message:<br />
+ERROR: Programe Type 'b095fqgy' does not exist<br />
+every time I try to download something; get_iplayer then halts; the PID b095fqgy is the same every time.<br />
+<br />
+I am using get_iplayer version 3.02. My operating system is Windows 7, Home Premium, Service Pack 1.<br />
+An example of my download attempt would be:<br />
+get_iplayer --type=tv --modes=good --pid=b096slhz<br />
+The problem appears no matter what PID I use.<br />
+I am attaching the log.txt file.<br />
+<br />
+Hope you can help!<br />
+<a href="static/thread-1511-get-iplayer_debug.txt">Output log.txt</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2017, 06:45 PM</div>
+</div>
+<div class="message">Thanks. No answers there, unfortunately. It's a long shot, but take a look at the contents of <kbd>C:\Users\Roger\.get_iplayer\options</kbd> to see if something is in there that wasn't printed in the output. You said before that you couldn't access that file, but if that were true, get_iplayer couldn't read it either, so take another look. For good measure, look at <kbd>C:\ProgramData\get_iplayer\options</kbd> as well. That directory and file should not exist in recent releases of get_iplayer, but check to make sure.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">28-09-2017, 07:26 PM</div>
+</div>
+<div class="message">I have managed to have a look at my options file. It simply gives my output directory. I don't have any file in c:\ProgramData\get_iplayer\options.<br />
+I'm very happy to reinstall get_iplayer, but I have in fact already done this! Is there anything I should do to ensure that the new version COMPLETELY overwrites the old version?<br />
+Otherwise, does it look like I'm completely stuck? (If user-2 can't help, what hope is there for mere mortals?)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2017, 07:51 PM</div>
+</div>
+<div class="message">The "b095fqgy" is coming from somewhere, but it will be a mutual waste of time to engage in more remote debugging. Time to slash and burn:<br />
+<br />
+Uninstall get_iplayer, delete <kbd>C:\Program Files\get_iplayer</kbd> or <kbd>C:\Program Files (x86)\get_iplayer</kbd> as appropriate, delete <kbd>C:\Users\Roger\.get_iplayer</kbd> and <kbd>C:\ProgramData\get_iplayer</kbd> (if it exists), and perform step #2 here:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer_win32/wiki/cleanup">https://github.com/get-iplayer/get_iplay...ki/cleanup</a><br />
+<br />
+then delete any remaining Start Menu shortcuts for get_iplayer, including those you have pinned yourself.<br />
+<br />
+Reinstall get_iplayer and reset your output directory:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --output=C:&#92;get_iplayer_recordings</code></div></div>then rebuild your cache:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --cache-rebuild --type=tv,radio</code></div></div>Change <kbd>--type</kbd> as required.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-857</h2></div><div class="dateline">30-09-2017, 11:10 AM</div>
+</div>
+<div class="message">Hello. Sorry for the delay in replying. I received your message late, so decided to reinstall get_iplayer the following day. But the following morning I found that rebooting had completely solved my problem, and the rogue message about b095fqgy had disappeared. However, I had already closed down my PC and rebooted, as the first step when the problem arose. Is there any circumstance whereby you need to reboot twice, before a problem disappears? The question is intriguing me. But my problem has been resolved, so I don't need to worry further. Thanks again for your help in guiding me through a perplexing problem. I have copied out the reinstall instructions, in case I need them in the future.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Getting &quot;ERROR: Programe Type 'b095fqgy' does not exist&quot; for all downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

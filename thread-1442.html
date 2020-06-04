@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can I get &gt;96k audio with HD TV programme?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Can I get &gt;96k audio with HD TV programme?</div>
+<div id="pagetitle"><h2>Can I get &gt;96k audio with HD TV programme?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">25-06-2017, 12:21 PM</div>
+</div>
+<div class="message">Hi,<br />
+I was just getting a few Glastonbury streams, e.g.:<br />
+get_iplayer.cmd --tvmode best --pid b08w2cx7<br />
+<br />
+The BBC site states HD programs have 192kbps audio (<a href="https://www.bbc.co.uk/iplayer/help/how-to-guides/getting-started/hd_general">https://www.bbc.co.uk/iplayer/help/how-t...hd_general</a>) but this pid after conversion to .mp4 reports as 93kbps constant bitrate AAC?..  video is 720p and 2295kbps so looks like HD to me (hlshd1).. I was more interested in better audio than better video in this case, should I be using different settings to capture higher quality audio?<br />
+<br />
+Raw .ts says 48khz vbr.  Is there a param for the conversion to MP4 to set target audio bitrate?<br />
+<br />
+Thanks, apologies if this was answered elsewhere I couldn't find anything in earlier posts,<br />
+Mike</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">25-06-2017, 02:07 PM</div>
+</div>
+<div class="message">Ok so I tried again with --fps50 and the full hd 50fps version came down, and this one included audio at 317kbps vs the 96kbps on the 25 frame 720p version.<br />
+<br />
+Bit of a shame (iplayer i presume) this is clipped/low quality unless you get the --best --fps50 version - 2.2GB/hour or so vs just over 1GB/hour.  Good job I have plenty of space.  I guess i could download both and script up something to merge the HQ audio with the 25fps video...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">25-06-2017, 05:19 PM</div>
+</div>
+<div class="message">(Ref to all specific modes and bitrates.. <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a> )</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">28-06-2017, 10:04 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (25-06-2017, 02:07 PM)</span></cite> I guess i could download both and script up something to merge the HQ audio with the 25fps video...</blockquote>I did this a while back, so here you go:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg.exe -i 25fps.mp4 -i 50fps-audio.mp4 -c copy -map 0:v:0 -map 1:a:0 -shortest -movflags faststart out.mp4<br />
+<br />
+:: -map 0:v:0 can be translated as: from the first input (0), select video stream type (v), first video stream (0)<br />
+:: -map 1:a:0 can be translated as: from the second input (1), select audio stream type (a), first audio stream (0)<br />
+:: The -shortest option will cause the output duration to match the duration of the shortest input stream.<br />
+:: -movflags empty_moov -OR- -movflags faststart -can be used-</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1341</h2></div><div class="dateline">29-06-2017, 01:14 AM</div>
+</div>
+<div class="message">So are you saying that get_iplayer --pid etc. won't pull the best quality audio/video stream by default?<br />
+<br />
+The wiki does say:<br />
+"By default, get_iplayer will download the best quality available from the default mode list for the given programme type (TV or radio). "<br />
+<br />
+Urrgh, after I've spent ages pulling down lots of Glasto streams ... :-(<br />
+<br />
+However I did think after a quick glance at the Chic stream that it was nowhere near as good as the broadcast TV quality as viewed via WinMCE and a Freeview DVB-T2 adapter.<br />
+It's very frustrating that it seems that to get the best quality recordings you have to record the broadcast OTA.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">29-06-2017, 08:00 AM</div>
+</div>
+<div class="message">Thanks @jaybeee :)<br />
+<br />
+@Mr-B, seems that you have to include the --fps50 switch as well as "best" as this stream type includes the 320kbps audio.  As per the modes link I posted earlier there are a few other types that may include 320k audio (eg hvfxsd) with lower video quality/bandwidth.  If I was you I'd keep the standard 25fps files you already have and pull down any specific sets you really want the best audio for with the --fps50 switch and then use the cmdline jaybeee posted to merge the decent audio into the smaller vid file(s).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1341</h2></div><div class="dateline">29-06-2017, 12:59 PM</div>
+</div>
+<div class="message">Thanks. <br />
+I guess 50fps won't make that much of a difference for this type of video (not much knowledge of this area). I have a projector so normally better video makes a diff but if it's double the size for not much benefit then I can do without.<br />
+<br />
+So rather than pull down everything all over again (still  a bit miffed that get_iplayer doesn't do this by default), is there any way I can check if higher qual vid/audio is available?<br />
+<br />
+I tried the --info option but I can't see that it tells me this e.g.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&gt;get_iplayer.cmd --tvmode best --fps50 --pid b08w2cx7 -i<br />
+get_iplayer 3.01-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+INFO Trying to download PID using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+894:    Glastonbury: 2017 - Kris Kristofferson and Royal Blood, BBC Four, b08w2cx7<br />
+INFO: File name prefix = Glastonbury_2017_-_Kris_Kristofferson_and_Royal_Blood_b08w2cx7_original<br />
+<br />
+available:      2017-06-23T20:00:00+01:00<br />
+brand:          Glastonbury<br />
+categories:     Performances &amp; Events,Music<br />
+category:       Performances &amp; Events<br />
+channel:        BBC Four<br />
+desc:           Singer-songwriter Kris Kristofferson is followed by Brighton riff-tastic duo Royal Blood.<br />
+desclong:       Mark Radcliffe and Alice Levine introduce highlights from two contrasting artists performing on the Pyramid Stage on day one of the Glastonbury Festival. Starting off with Glastonbury debutant, legendary US singer-songwriter Kris Kristofferson, who performs some of his classic hits. Kris is followed by Brighton riff-tastic duo Royal Blood, who are fast becoming festival favourites following the success of their debut back in 2014, and no doubt more and bigger success is on the cards with the release of their much anticipated second album How Did We Get So Dark.<br />
+descmedium:     US singer-songwriter Kris Kristofferson performs some of his classic hits. Kris is followed by Brighton riff-tastic duo Royal Blood, who are fast becoming festival favourites.<br />
+descshort:      Singer-songwriter Kris Kristofferson is followed by Brighton riff-tastic duo Royal Blood.<br />
+dir:            E:&#92;iplayer recordings<br />
+dldate:         2017-06-29<br />
+dltime:         12:38:31<br />
+duration:       3600<br />
+durations:      original: 3600<br />
+episode:        Kris Kristofferson and Royal Blood<br />
+episodeshort:   Kris Kristofferson and Royal Blood<br />
+expires:        in 24 days 7 hours (2017-07-23T19:00:00+00:00)<br />
+ext:            EXT<br />
+filename:       E:&#92;iplayer recordings&#92;Glastonbury_2017_-_Kris_Kristofferson_and_Royal_Blood_b08w2cx7_original.EXT<br />
+filepart:       E:&#92;iplayer recordings&#92;Glastonbury_2017_-_Kris_Kristofferson_and_Royal_Blood_b08w2cx7_original.partial.EXT<br />
+fileprefix:     Glastonbury_2017_-_Kris_Kristofferson_and_Royal_Blood_b08w2cx7_original<br />
+firstbcast:     2017-06-23T20:00:00+01:00<br />
+firstbcastdate: 2017-06-23<br />
+firstbcastrel:  5 days 16 hours ago<br />
+index:          894<br />
+longname:       Glastonbury: 2017<br />
+modes:          original: dvfhd1,dvfhd2,dvfhd3,dvfhd4,dvfsd1,dvfsd2,dvfsd3,dvfsd4,dvfxsd1,dvfxsd2,dvfxsd3,dvfxsd4,dvfhigh1,dvfhigh2,dvfhigh3,dvfhigh4,dvfxhigh1,dvfxhigh2,dvfxhigh3,dvfxhigh4,dvflow1,dvflow2,dvflow3,dvflow4,hlshd1,hlshd2,hlsvhigh1,hlsvhigh2,hvfhd1,hvfhd2,hvfhd3,hvfhd4,hvfhd5,hvfhd6,hvfsd1,hvfsd2,hvfsd3,hvfsd4,hvfsd5,hvfsd6,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,hvfhigh1,hvfhigh2,hvfhigh3,hvfhigh4,hvfhigh5,hvfhigh6,hvfxhigh1,hvfxhigh2,hvfxhigh3,hvflow1,hvflow2,hvflow3,subtitles1,subtitles2,subtitles3,subtitles4,subtitles5<br />
+modesizes:      original: dvfhd1=2065MiB,dvfhd2=2065MiB,dvfhd3=2065MiB,dvfhd4=2065MiB,dvfsd1=1145MiB,dvfsd2=1145MiB,dvfsd3=1145MiB,dvfsd4=1145MiB,dvfxsd1=653MiB,dvfxsd2=653MiB,dvfxsd3=653MiB,dvfxsd4=653MiB,dvfhigh1=640MiB,dvfhigh2=640MiB,dvfhigh3=640MiB,dvfhigh4=640MiB,dvfxhigh1=337MiB,dvfxhigh2=337MiB,dvfxhigh3=337MiB,dvfxhigh4=337MiB,dvflow1=178MiB,dvflow2=178MiB,dvflow3=178MiB,dvflow4=178MiB,hlshd1=1026MiB,hlshd2=1026MiB,hlsvhigh1=642MiB,hlsvhigh2=642MiB,hvfhd1=2452MiB,hvfhd2=2452MiB,hvfhd3=2452MiB,hvfhd4=2452MiB,hvfhd5=2452MiB,hvfhd6=2452MiB,hvfsd1=1425MiB,hvfsd2=1425MiB,hvfsd3=1425MiB,hvfsd4=1425MiB,hvfsd5=1425MiB,hvfsd6=1425MiB,hvfxsd1=875MiB,hvfxsd2=875MiB,hvfxsd3=875MiB,hvfxsd4=773MiB,hvfxsd5=773MiB,hvfxsd6=773MiB,hvfxsd7=773MiB,hvfxsd8=773MiB,hvfxsd9=773MiB,hvfhigh1=860MiB,hvfhigh2=860MiB,hvfhigh3=860MiB,hvfhigh4=860MiB,hvfhigh5=860MiB,hvfhigh6=860MiB,hvfxhigh1=420MiB,hvfxhigh2=420MiB,hvfxhigh3=420MiB,hvflow1=242MiB,hvflow2=242MiB,hvflow3=242MiB,subtitles1=22KiB,subtitles2=22KiB,subtitles3=22KiB,subtitles4=22KiB,subtitles5=22KiB<br />
+name:           Glastonbury: 2017<br />
+nameshort:      Glastonbury<br />
+pid:            b08w2cx7<br />
+player:         http://www.bbc.co.uk/iplayer/episode/b08w2cx7<br />
+runtime:        60<br />
+senum:          s35e00<br />
+series:         2017<br />
+seriesnum:      35<br />
+thumbfile:      E:&#92;iplayer recordings&#92;Glastonbury_2017_-_Kris_Kristofferson_and_Royal_Blood_b08w2cx7_original.jpg<br />
+thumbnail:      http://ichef.bbci.co.uk/images/ic/150x84/p03y6m8w.jpg<br />
+timeadded:      2 days 12 hours ago (2017-06-26T23:06:09+00:00)<br />
+title:          Glastonbury: 2017: Kris Kristofferson and Royal Blood<br />
+type:           tv<br />
+verpids:        original: b08w2cl1<br />
+version:        original<br />
+versions:       original<br />
+web:            http://www.bbc.co.uk/programmes/b08k45xd<br />
+<br />
+<br />
+INFO: 1 Matching Programmes</code></div></div><br />
+Any ideas? I really don't want to download it all over again and then run scripts for every file ...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1341</h2></div><div class="dateline">29-06-2017, 02:24 PM</div>
+</div>
+<div class="message">I just tested the 50fps version and it is noticeably better even on a PC monitor, no more detail obvs but smoother action. I guess it improves with lots of moving images and flashing lights.<br />
+<br />
+Although <a href="https://forum.videohelp.com/threads/383540-BBC-iplayer-help?s=296f46dd28f0fdd24b4743993a50393e">https://forum.videohelp.com/threads/3835...993a50393e</a> says that 50fps is dupe frames!<br />
+Are my eyes deceiving me?<br />
+<br />
+Also I've no problem if get_iplayer by default downloads a more sensible stream version, but it really should at least flag the presence of higher quality versions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">29-06-2017, 02:55 PM</div>
+</div>
+<div class="message">Re "dupe frames" I'd take that with a pinch of salt.  E.g. <a href="thread-1220.html">/threa...ml#pid5498</a><br />
+<br />
+To be honest I have no bandwidth cap so can be bothered to play with the other quality settings so just downloading the particular sets I want in HQ audio with the best and fps50 switches</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1868</h2></div><div class="dateline">29-06-2017, 04:01 PM</div>
+</div>
+<div class="message">I had a look at this recently. get_iplayer can only work with the streams available. These vary with the program. The documentation explains that the video frame rate overrides other considerations and defaults to 25fps. If you look at <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a> then you can see how the interactions are likely to work. There's only one 25fps 1280x720 source available, and it has 96kb audio, it's called hlshd. All the other hls--- modes are also 96kb audio. The 50fps dvf modes are 128kb, and the 25fps are 96kb. The hvf modes may be 320kb, or 128kb (or maybe 96kb) for identical fps/resolution combinations.<br />
+<br />
+So, you're only going to get 320kb audio with an hvf mode. However, get_iplayer doesn't allow you to specify audio bitrate for TV downloads. If you run get_iplayer pointing at your program of interest with the -i option, it will show you the modes it thinks it can find, and the estimated file size. Looking at a Glastonbury 2017 program shows two different lengths for hvfxsd sources (25fps 860x540). All other modes show the same length for modes that only differ by final number. The larger hvfxsd downloads (usually) come first in the list.<br />
+<br />
+(looking at the mode information for more historical material suggests that this doesn't use the 320kb audio hvf modes)<br />
+<br />
+If you look further down in the modesref page, at the order in which streams are tried for different quality levels, you can see what best, or better will probably get you.<br />
+<br />
+I found that if I used 25fps and better rather than best mode, or specifically asked for hvfxsd, I got 320kb audio. As reported in posts above 50fps and best seems to get 320kb audio and 1280x720 video, which is consistent with the hvfhd mode using the 320kb audio.<br />
+<br />
+So, if you're interested in getting the highest audio data rate, but don't want the largest downloads (and (probably) best video, then you should use hvfxsd. <br />
+<br />
+To put this all in some kind of perspective, if I recall, Hydrogen Audio tests over recent years have shown that 128kb aac is pretty much transparent, and 96kb is close to that. So, for some people getting 320kb audio when they could have 128kb audio is using unnecessary bandwidth/disc space. (going for dvf modes would give 128kb audio)<br />
+<br />
+So, there is a conceivable feature request to specify the higher or lower audio bitrate where available</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1863</h2></div><div class="dateline">29-06-2017, 05:53 PM</div>
+</div>
+<div class="message">I know it's mostly overkill and audiophile flamebait re bitrates, codecs and compression.  But there are a few times I can really tell the difference (violin/orchestra hearing and working in music industry) so I posted this thread.  And happy to now understand the right settings to get the quality I was after - would be nice as a feature request to go "HQ" on audio regardless of video mode if others also wanted this rather than knowing the exact mode, if it was clear enough that the content was likely to be 320 not 96 am sure I can pick an exact mode..</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1341</h2></div><div class="dateline">29-06-2017, 06:11 PM</div>
+</div>
+<div class="message">I read the interesting modes page but I'm afraid that all those modes just made my head hurt!<br />
+I won't even mention whether it made a visible difference on a WQXGA vs WQHD monitor ...<br />
+<br />
+My preference would be for the default (as I know I'll forget all about this next time) to be the Oscar Wilde/Tina Turner option i.e. simply the best! ;-)<br />
+<br />
+But given that's unlikely then for the default to indicate something simple that "better" encodings were available would really help as I couldn't determine that from the data displayed normally.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">29-06-2017, 10:53 PM</div>
+</div>
+<div class="message">I've taken the <a href="http://www.bbc.co.uk/programmes/p056bkls">Liam Gallagher Glasto set</a> as an example, analysing 1 minute of audio from 8 mins to 9 mins:<br />
+<br />
+1. AAC 96kbps - downloaded with default settings: frequency cutoff = <a href="https://snag.gy/zAIjdt.jpg">~14050Hz</a><br />
+<br />
+2. AAC 125kbps - downloaded with another tool: frequency cutoff = <a href="https://snag.gy/V3eCMT.jpg">~15600Hz</a><br />
+<br />
+3. AAC 320kbps - downloaded with --fps50 option: frequency cutoff = <a href="https://snag.gy/x5oN6w.jpg">~16200Hz</a><br />
+<br />
+This is imo a good reason to get the very best media version if the best audio is your preference. <br />
+<br />
+To note: imo these frequency ranges are not representative of the usual audio content as they have come from a live/field recording and I would say the equipment used is not able to produce as good a audio quality as a studio setup. Here's a <a href="https://snag.gy/FWBpQ9.jpg">frequency spectrum of a Radio 1Xtra studio chat</a>, which shows the range going to nearly 22000Hz.<br />
+<br />
+EDIT: a high frequency spectrum doesn't necessarily result in better audio quality, but it is certainly indicative of a better audio experience (so long as our old ears can hear it!).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Can I get &gt;96k audio with HD TV programme?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

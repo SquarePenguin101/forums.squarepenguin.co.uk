@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR failing to find media streams but CLI ok - just me?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Web PVR failing to find media streams but CLI ok - just me?</div>
+<div id="pagetitle"><h2>Web PVR failing to find media streams but CLI ok - just me?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">05-03-2017, 01:13 PM</div>
+</div>
+<div class="message">Hi folks,<br />
+<br />
+I notice this morning that my web PVR manager is failing to locate any media streams.  <br />
+<br />
+"WARNING: No media streams found for requested programme versions and recording modes."<br />
+<br />
+I've tried re-loading the latest version (2.99) which I was already using. I've tried manually updating the cache but that didn't help and the tiny number of updated programmes suggests that it was already up to date.<br />
+<br />
+The only preference I have for recording is 'recording mode' set to 'best'.<br />
+<br />
+However, if I go into a command line interface and then run the code using the PID from any of the failed programmes (e.g. <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --type=radio --pid=p04tnnmy</code></div></div>) in there, everything works ok, though I have noticed that in every case it seems to be taking rather longer than usual to locate a stream after it goes off to search for it. (Sometimes 20-30 seconds.)  I'm wondering whether there's some sort of 'timeout' feature in the web pvr manager and if a stream hasn't been found before that time, it aborts and moves on to the next in the list?<br />
+<br />
+I'm running v2.99 on Windows 10 in Firefox 51.0.1 with output being stored on the local drive, before being manually swept across to my fileserver afterwards.<br />
+<br />
+Any suggestions?<br />
+Ta,<br />
+David.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-03-2017, 07:23 PM</div>
+</div>
+<div class="message">Works fine here. The "No media streams found" message indicates that multiple resource downloads have failed or timed out. There are timeouts in get_iplayer, but they are pretty generous.  BBC servers enforce timeouts as well, but they are also generous. Given your description, the culprit would seem to be poor upstream connectivity from your ISP or something wrong on the BBC side. There is no way for you to tell which. Either way, there is nothing you or get_iplayer can do about it, except to try again another day.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">05-03-2017, 07:33 PM</div>
+</div>
+<div class="message">OK.  I'll see how it gets on during the week (nothing needing recording at present).  I didn't notice any massive latency problems accessing anywhere else this morning but that might not be telling me anything useful anyway, as you say.<br />
+<br />
+Many thanks for your efforts on this fantastic product, btw!  (I wish there was an equivalent for other broadcasters' catch-up services, though given the effect on my storage media, perhaps it's just as well!)<br />
+<br />
+:-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">12-03-2017, 02:02 PM</div>
+</div>
+<div class="message">Just to update:<br />
+<br />
+It's usually the weekend when I do my big weekly trawl and I'm finding the same problem again. I can select programmes I want, then run the PVR but it fails to find any streams for download. However, once again, when going to a CLI and running get_iplayer for each programme manually - no problem.<br />
+<br />
+What I noticed this time is that the PVR doesn't seem to be delaying while looking for any streams to use - it just instantly moves on to the next. This was noticeable when it got to the list of 'once' recordings where it just catapulted straight through them in about a tenth of a second. I have noticed when using the CLI that there's the long latency I mentioned previously before it finds a stream to use.<br />
+<br />
+I'm wondering whether it's possible that I've somehow set the PVR to be looking in the wrong location or for the wrong types of files (though goodness knows how) and so when I manually go to a CMD window and do it there, it works ok because I'm not asking it to do the same thing?   (I can't see any file that contains settings that I can load in here to let you see.)<br />
+<br />
+Could it be anything to do with cookies? I notice there's a file called C:\Users\David\.get_iplayer\cookies.get_iplayer  <br />
+<br />
+Just in case it's anything to do with the way that the individual programmes are stored for the PVR , here's a record of one that just failed to find a stream during a PVR run but downloaded fine when done manually from CMD window.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fields name<br />
+modes Best<br />
+subtitles 0<br />
+thumb 0<br />
+type tv<br />
+search0 Britain in Focus</code></div></div><br />
+I doubt that it helps, though!<br />
+<br />
+Ta,<br />
+D.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-03-2017, 05:38 PM</div>
+</div>
+<div class="message">Look carefully at the command you're using with CLI and the pvr job definition you posted. See if you can spot the crucial difference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">12-03-2017, 05:44 PM</div>
+</div>
+<div class="message">Well the main difference is that I did it by PID in the CLI, thus:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid=b08h95jk</code></div></div><br />
+<br />
+However, the fact that I'm now getting this problem with TV and Radio series that I've had in the PVR list for ages just made me wonder whether I'd somehow accidentally set something incorrectly to default in get_iPlayer that I shouldn't have done but I can't find a definition file that lists the default settings.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-03-2017, 05:46 PM</div>
+</div>
+<div class="message">Post the equivalent pvr job for that command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">12-03-2017, 05:51 PM</div>
+</div>
+<div class="message">Ummm. Not quite sure what you mean. If you mean to try to do a search and queue operation using that pid rather than the series name so as to get the 'once' file (assuming that's stored in the same place as the other persistent pvr request files) then it won't let me unless I force it, as I've now already downloaded it using the CLI.<br />
+<br />
+Would you like me to try it with 'force' and report what is stored?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-03-2017, 05:59 PM</div>
+</div>
+<div class="message">Never mind. You should have mentioned that your CLI command was for "Britain in Focus", whose pvr job you posted earlier. Anyway, back to my original point: Look carefully at your CLI command and the pvr job definition and see if you can spot the crucial difference. Hint: the fact you used <kbd>--pid</kbd> is irrelevant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">12-03-2017, 06:01 PM</div>
+</div>
+<div class="message">Ah!  Capital B?<br />
+<br />
+I did accidentally let a load through with default so went through and manually edited the lot!  Arrghh!<br />
+<br />
+(Oh yes - and I've set it using a capital B in the recording settings too!)<br />
+<br />
+Is that it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-03-2017, 06:02 PM</div>
+</div>
+<div class="message">Bingo</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1538</h2></div><div class="dateline">12-03-2017, 06:03 PM</div>
+</div>
+<div class="message">Doh!<br />
+<br />
+Can't believe how daft I was not to think of that!<br />
+<br />
+Many thanks.  I'll go back and re-amend them to what they should have been in the first place!  :-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Web PVR failing to find media streams but CLI ok - just me?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

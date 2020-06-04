@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot download programmes with PIDs beginning with 'm' using obsolete get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download programmes with PIDs beginning with 'm' using obsolete get_iplayer</div>
+<div id="pagetitle"><h2>Cannot download programmes with PIDs beginning with 'm' using obsolete get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2223</h2></div><div class="dateline">23-08-2018, 12:12 PM</div>
+</div>
+<div class="message">Since July 21, there has been a change in the URL of Radio 3 programmes:<br />
+<br />
+Before, the URL ended with the PID : string of 8 characters, beginning with "b0"<br />
+e.g. <span style="font-style: italic;" class="mycode_i"><a href="https://www.bbc.co.uk/programmes/b0bfxw5z">https://www.bbc.co.uk/programmes/b0bfxw5z</a></span><br />
+<br />
+Since then, the last segment of the URL always begins with "m0"<br />
+e.g. <span style="font-style: italic;" class="mycode_i"><a href="https://www.bbc.co.uk/programmes/m00006p1">https://www.bbc.co.uk/programmes/m00006p1</a></span><br />
+<br />
+And the result is that I cannot download anymore.<br />
+I tried using the command lines :<br />
+1)   <span style="font-style: italic;" class="mycode_i">get_iplayer --pid=m00006p1 --type=radio</span> <br />
+2)   <span style="font-style: italic;" class="mycode_i">get_iplayer <a href="http://www.bbc.co.uk/programmes/m00006p1">http://www.bbc.co.uk/programmes/m00006p1</a></span><br />
+and all failed.<br />
+I also tried with other programmes whose identifier begins with "m0", and none of them worked.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">23-08-2018, 12:45 PM</div>
+</div>
+<div class="message">Are you running the latest get_iplayer?<br />
+<br />
+I have been successfully downloading the Proms and today's two downloads are m0 pids.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2224</h2></div><div class="dateline">23-08-2018, 12:47 PM</div>
+</div>
+<div class="message">get_iplayer --pid=m00006p1<br />
+works fine here (copied from a somewhat truncated screen width):<br />
+<br />
+C:\Program Files\get_iplayer&gt;get_iplayer --pid=m00006p1<br />
+get_iplayer 3.17.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Episodes:<br />
+Edinburgh International Festival - 2018 Queen's Hall Series, Dorothea Roschmann and Roger Vignoles, BBC iPlayer, m00006p<br />
+1<br />
+INFO: 1 total programmes<br />
+<br />
+INFO: Downloading radio: 'Edinburgh International Festival: 2018 Queen's Hall Series - Dorothea Roschmann and Roger Vign<br />
+oles (m00006p1) [original]'<br />
+<br />
+&lt;rest omitted&gt;</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2223</h2></div><div class="dateline">23-08-2018, 01:08 PM</div>
+</div>
+<div class="message">Upgrading to the latest version of get_iplayer fixed the problem, I should have started there !<br />
+Sorry for the trouble and thank your for your replies.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2251</h2></div><div class="dateline">20-09-2018, 07:50 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I have been using the following successfully to d/l radio<br />
+<br />
+get_iplayer --pid XXXXXXX --modes=hafhigh<br />
+<br />
+This was when the page urls were like TV programmes, for example - <a href="https://www.bbc.co.uk/iplayer/episode/p06kbg8t/killing-eve-series-1-1-nice-face">https://www.bbc.co.uk/iplayer/episode/p0...-nice-face</a><br />
+<br />
+But the urls on iplayer have changed to this - <a href="https://www.bbc.co.uk/radio/play/m0000bp7">https://www.bbc.co.uk/radio/play/m0000bp7</a><br />
+<br />
+I am getting this message: ERROR: Could not extract a valid PID from m0000bp7<br />
+<br />
+Any ideas anyone?<br />
+<br />
+Thanks in advance</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">21-09-2018, 10:17 PM</div>
+</div>
+<div class="message">Works ok for me using version 3.17. What version are you on, rubber_glover?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2265</h2></div><div class="dateline">06-10-2018, 08:37 PM</div>
+</div>
+<div class="message">Is aunty messing around again?...The PID`s for radio progs that always began with "b"..eg=b05pktvt<br />
+seem to have changed to "m"..eg=m0000n3g and im now getting this message from GI-PLYR     "error could not extract a valid PID from m0000n3g  <br />
+any one else getting this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2265</h2></div><div class="dateline">06-10-2018, 10:05 PM</div>
+</div>
+<div class="message">Ok...HUGE thanks to whoever spotted my schoolboy error in creating a new thread and merged it with this one...so a fresh download sorted the issues...thanks guys,much  appreciated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-599</h2></div><div class="dateline">28-12-2018, 12:35 PM</div>
+</div>
+<div class="message">Hi Everyone<br />
+<br />
+I am trying to download the latest Sky at Night using get_iplayer but it comes up with the following error:<br />
+<br />
+"Could not extract a valid PID from m0001jfq"<br />
+<br />
+I have tried both the PID and URL method but neither works.<br />
+<br />
+Does anyone know what the solution to this is?<br />
+<br />
+According to iPlayer, there is currently 11 days left for this program.<br />
+<br />
+Thank you very much.<br />
+<br />
+Kind regards<br />
+<br />
+Tim</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">12-02-2019, 07:29 PM</div>
+</div>
+<div class="message">I am currently running get_iplayer 3.01-windows.0.  <br />
+<br />
+I issue the following command:<br />
+<br />
+get_iplayer --url <a href="https://www.bbc.co.uk/iplayer/episode/m0002jn8/inside-europe-ten-years-of-turmoil-series-1-3-unstoppable">https://www.bbc.co.uk/iplayer/episode/m0...nstoppable</a> --modes=best  --force --type=tv --subtitles file-prefix="&lt;nameshort&gt;&lt;-senum&gt;&lt;-episodeshort&gt;" <br />
+<br />
+and the resonse from get_iplayer is:<br />
+<br />
+ERROR: Could not extract a valid PID from <a href="https://www.bbc.co.uk/iplayer/episode/m0002jn8/inside-europe-ten-years-of-turmoil-series-1-3-unstoppable">https://www.bbc.co.uk/iplayer/episode/m0...nstoppable</a><br />
+<br />
+I have added the verbose attachment as requested.<br />
+<br />
+Note that there are three episodes in this series and two of the episodes are giving me the same output error, this example being the most recent.<br />
+<br />
+Any help would be appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2348</h2></div><div class="dateline">06-03-2019, 12:12 PM</div>
+</div>
+<div class="message">Hi,<br />
+I'm attempting to download various programs. If the PID starts with A b0 then everything is fine, however the BBC have now started using m000 as the prefix and now I cannot download anything that starts with that.<br />
+<br />
+Any ideas?<br />
+<br />
+Best wishes<br />
+<br />
+Paul</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cannot download programmes with PIDs beginning with 'm' using obsolete get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 403 Errors in obsolete get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 403 Errors in obsolete get_iplayer</div>
+<div id="pagetitle"><h2>403 Errors in obsolete get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2479</h2></div><div class="dateline">02-12-2019, 05:07 PM</div>
+</div>
+<div class="message">Just had this set of errors<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Failed to download URL (3/3): https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/a68d1c-m000byxr/vf_m000byxr_844e6954-5e39-481a-8e46-0da55cc8a7c2.ism.hlsv2.ism/vf_m000byxr_844e6954-5e39-481a-8e46-0da55cc8a7c2.ism.hlsv2.m3u8?s=1575280581&amp;e=1575323781&amp;h=899ffd14894ef1b6494598eb8c6250c2<br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Access to this resource was blocked by the BBC<br />
+ERROR: Ignore this error if programme download is successful<br />
+<br />
+ERROR: Failed to download URL (3/3): https://mm.bidi.bbc.co.uk/vod-hls-uk/usp/auth/vod/piff_abr_full_hd/a68d1c-m000byxr/vf_m000byxr_844e6954-5e39-481a-8e46-0da55cc8a7c2.ism.hlsv2.ism/vf_m000byxr_844e6954-5e39-481a-8e46-0da55cc8a7c2.ism.hlsv2.m3u8?at=6LjsItk58d96430deeba0741c11d4711ba68654787596690598ba9ee99340<br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Access to this resource was blocked by the BBC</code></div></div><br />
+I saw that a similar issue was fixed in the last release but suddenly started getting this today and thought I should report it, the result still seems to have downloaded but it still reports the error sometimes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2416</h2></div><div class="dateline">04-12-2019, 12:42 AM</div>
+</div>
+<div class="message">Now running new version 3.23.0-MSWin32 with many many thanks. Looks like you've done a good job of supressing the 403 messages as well as dealing with messy new sound bitrates, but here's another example of a "Failed to download" that got through. This time accompanied by a 504 Bad Gateway message. No idea whether this is a real server fault, or brought about by the underlying '403' issue and therefore pointing at an URL which no longer works properly.<br />
+<br />
+In response to this saved search:<br />
+<br />
+'secret_france_name_tv_radio'<br />
+thumb 0<br />
+type tv,radio<br />
+fields name<br />
+pvrsearch secret_france_name_tv_radio<br />
+subtitles 0<br />
+fps25 0<br />
+search0 secret france<br />
+<br />
+(Copied from web RUN PVR)<br />
+<br />
+INFO: PVR Run: 'secret_france_name_tv_radio'<br />
+Matches:<br />
+5521:	tv, Rick Stein’s Secret France: Series 1 - Episode 5, BBC Two, m000by3f<br />
+INFO: 1 matching programmes<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/5d68ef-m000by3d/vf_m000by3d_bf44502b-e43b-452e-9a39-d9d17a04d451.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1575434558_15a4d13004a32f9cfde971db416dbaf6">https://vod-dash-uk-live.akamaized.net/u...db416dbaf6</a><br />
+ERROR: Response: 504 Gateway Time-out<br />
+ERROR: Ignore this error if programme download is successful<br />
+INFO: Downloading tv: 'Rick Stein’s Secret France: Series 1 - 05. Episode 5 (m000by3f) [original]'<br />
+###############################################################################################<br />
+INFO: Downloaded: 2332.21 MB (00:59:00) @ 8.31 Mb/s (hvfhd1/bi) [audio+video]<br />
+i.e. the programme downloaded successfully but on the second attempt. <br />
+<br />
+Reported, should you want to pursue it; but as the message suggests I'll ignore similar errors in future.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">04-12-2019, 01:15 AM</div>
+</div>
+<div class="message">That is most likely to be a network error somewhere along the line. It could even be that your internet connection had a bit of a blip. You could probably try to run that download again error free if you wanted. The playlist that it struggled with seems to be working fine when I just tried it :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2462</h2></div><div class="dateline">06-12-2019, 11:54 AM</div>
+</div>
+<div class="message">Hello<br />
+<br />
+2 things, firstly i get a lot of the 403 failed to download errors, and secondly, I keep trying to download Jo Swinson's Andrew Neil interview, but it keeps saying it is already in the history, but I've cleared the history, and tried to re download, but it won't let me. What is the code to overwrite a programme, so you can download it again?<br />
+<br />
+Thanks<br />
+<br />
+David</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">07-12-2019, 01:12 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-12-2019, 11:54 AM)</span></cite>Hello<br />
+<br />
+2 things, firstly i get a lot of the 403 failed to download errors, and secondly, I keep trying to download Jo Swinson's Andrew Neil interview, but it keeps saying it is already in the history, but I've cleared the history, and tried to re download, but it won't let me. What is the code to overwrite a programme, so you can download it again?<br />
+<br />
+Thanks<br />
+<br />
+David</blockquote><br />
+--force<br />
+<br />
+--help is your friend here - that and the wiki</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 403 Errors in obsolete get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

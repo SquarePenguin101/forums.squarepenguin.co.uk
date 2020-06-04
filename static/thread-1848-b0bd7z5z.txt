@@ -1,0 +1,94 @@
+get_iplayer v3.16, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /home/ukuser/.get_iplayer
+INFO: User options file: /home/ukuser/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	force = 1
+	get = 1
+	pid = b0bd7z5z
+	type = radio
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 7738 file cache entries for tv
+DEBUG: Cache expiry time for tv is 14400 secs - refresh in 13454 secs
+INFO: Got 16593 file cache entries for radio
+DEBUG: Cache expiry time for radio is 14400 secs - refresh in 13132 secs
+INFO: Cleaning PID - old: 'b0bd7z5z' new: 'b0bd7z5z'
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0bd7z5z.json
+INFO: radio episode PID detected (b0bd7z5z)
+Episodes:
+BBC Proms - 2018, Prom 31: Bernstein, Gershwin and Ives, BBC Radio 3, b0bd7z5z
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+
+INFO: Downloading URL (1/3): https://www.bbc.co.uk/programmes/b0bd7z5z.json
+INFO: Getting stream data for version: 'original'
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b0bd7ynr?cb=25838
+
+INFO: Downloading URL (1/3): https://aod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/iptv_hd_abr_v1_uk_dash_master.mpd?__gda__=1533612566_d5dfb88ed89e47e92312f1c9d3039b35
+
+INFO: Downloading URL (1/3): https://aod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.m3u8?__gda__=1533612566_53b2b1439fd50aed5edfbdd061903de7
+
+INFO: Downloading URL (1/3): https://aod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/iptv_hd_abr_v1_uk_dash_master.mpd?s=1533569366&e=1533612566&h=91749f9f17e431c106fff29e978d2444
+
+INFO: Downloading URL (1/3): https://aod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.m3u8?s=1533569366&e=1533612566&h=baf69a6b3db80d71205bfecb2d26d2ac
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b0bd7ynr?cb=87067
+
+INFO: Downloading URL (1/3): https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b0bd7ynr?cb=90051
+INFO: Found mode   hafhigh1:  gip_haf_340  hls  aac       N/A   N/A      N/A     N/A af_limelight_uk_hls_https/20
+INFO: Found mode   hafhigh2:  gip_haf_340  hls  aac       N/A   N/A      N/A     N/A af_akamai_uk_hls_https/10
+INFO: Found mode   dafhigh1:  gip_daf_320 dash  aac       N/A   N/A      N/A 320kbps af_limelight_uk_dash_https/20
+INFO: Found mode   dafhigh2:  gip_daf_320 dash  aac       N/A   N/A      N/A 320kbps af_akamai_uk_dash_https/10
+INFO: Found mode    hafstd1:  gip_haf_136  hls  aac       N/A   N/A      N/A     N/A af_limelight_uk_hls_https/20
+INFO: Found mode    hafstd2:  gip_haf_136  hls  aac       N/A   N/A      N/A     N/A af_akamai_uk_hls_https/10
+INFO: Found mode    dafstd1:  gip_daf_128 dash  aac       N/A   N/A      N/A 128kbps af_limelight_uk_dash_https/20
+INFO: Found mode    dafstd2:  gip_daf_128 dash  aac       N/A   N/A      N/A 128kbps af_akamai_uk_dash_https/10
+INFO: Found mode    hafmed1:  gip_haf_102  hls  aac       N/A   N/A      N/A     N/A af_limelight_uk_hls_https/20
+INFO: Found mode    hafmed2:  gip_haf_102  hls  aac       N/A   N/A      N/A     N/A af_akamai_uk_hls_https/10
+INFO: Found mode    dafmed1:   gip_daf_96 dash  aac       N/A   N/A      N/A  96kbps af_limelight_uk_dash_https/20
+INFO: Found mode    dafmed2:   gip_daf_96 dash  aac       N/A   N/A      N/A  96kbps af_akamai_uk_dash_https/10
+INFO: Found mode    haflow1:   gip_haf_51  hls  aac       N/A   N/A      N/A     N/A af_limelight_uk_hls_https/20
+INFO: Found mode    haflow2:   gip_haf_51  hls  aac       N/A   N/A      N/A     N/A af_akamai_uk_hls_https/10
+INFO: Found mode    daflow1:   gip_daf_48 dash  aac       N/A   N/A      N/A  48kbps af_limelight_uk_dash_https/20
+INFO: Found mode    daflow2:   gip_daf_48 dash  aac       N/A   N/A      N/A  48kbps af_akamai_uk_dash_https/10
+INFO: Searching for versions: original
+INFO: Mode list: hafhigh,dafhigh,hafstd,dafstd,hafmed,dafmed,haflow,daflow
+INFO: Searching for version: 'original'
+INFO: Found version: 'original'
+INFO: Modes to try for 'original' version: hafhigh1,hafhigh2,dafhigh1,dafhigh2,hafstd1,hafstd2,dafstd1,dafstd2,hafmed1,hafmed2,dafmed1,dafmed2,haflow1,haflow2,daflow1,daflow2
+INFO: Downloading radio: 'BBC Proms: 2018 - Prom 31: Bernstein, Gershwin and Ives (b0bd7z5z) [original]'
+INFO: Trying 'hafhigh1' mode: attempt 1 / 3
+INFO: ffmpeg version string = 2.8.14-0ubuntu0.16.04.1
+INFO: ffmpeg version number = 2.8
+INFO: File name prefix = BBC_Proms_2018_-_Prom_31_Bernstein_Gershwin_and_Ives_b0bd7z5z_original
+DEBUG: HLS playlist URL: https://aod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2-audio_eng=320000.m3u8?s=1533569366&e=1533612566&h=baf69a6b3db80d71205bfecb2d26d2ac
+DEBUG: HLS playlist URL (actual): https://bbcfmt-ic-338c2700-1269a3-aodhlsuklive.s.loris.llnwd.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2-audio_eng=320000.m3u8?s=1533569366&e=1533612566&h=baf69a6b3db80d71205bfecb2d26d2ac
+
+INFO: Downloading URL (1/3): https://bbcfmt-ic-338c2700-1269a3-aodhlsuklive.s.loris.llnwd.net/usp/auth/vod/piff_abr_full_audio/4d51f6-b0bd7ynr/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2.ism/vf_b0bd7ynr_a021a082-aa72-4ceb-a359-e4920cdef6b1.ism.hlsv2-audio_eng=320000.m3u8?s=1533569366&e=1533612566&h=baf69a6b3db80d71205bfecb2d26d2ac
+INFO: Begin downloading at: 0.00 MB (00:00:00) [1]
+
+INFO: Downloaded: 346.84 MB (02:18:00) [1294] in 00:00:36 @ 77.08 Mb/s (hafhigh1/ll) [audio]
+INFO: Converting to M4A
+INFO: Command: "ffmpeg" "-loglevel" "fatal" "-nostats" "-y" "-i" "/home/ukuser/BBC_Proms_2018_-_Prom_31_Bernstein_Gershwin_and_Ives_b0bd7z5z_original.hls.ts" "-c:v" "copy" "-c:a" "copy" "-bsf:a" "aac_adtstoasc" "/home/ukuser/BBC_Proms_2018_-_Prom_31_Bernstein_Gershwin_and_Ives_b0bd7z5z_original.partial.m4a"
+INFO: Command exit code 0 (raw code = 0)
+INFO: Downloading thumbnail
+
+INFO: Downloading URL (1/3): https://ichef.bbci.co.uk/images/ic/192x108/p06dr49p.jpg

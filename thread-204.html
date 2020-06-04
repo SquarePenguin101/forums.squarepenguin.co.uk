@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Setting up a PVR for BBC Parliament </title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Setting up a PVR for BBC Parliament </div>
+<div id="pagetitle"><h2>Setting up a PVR for BBC Parliament </h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-581</h2></div><div class="dateline">28-09-2014, 04:22 PM</div>
+</div>
+<div class="message">Hello all,<br />
+<br />
+First post, <br />
+<br />
+I have read the guidance but I am getting nowhere. I wish to set up a PVR to record all the live coverage of the Conservative Party Conference starting tomorrow. For ease of use I would like it saved to a Conservative Conference 2014 folder within the iplayer recordings folder.<br />
+<br />
+Could anybody give me advice of writing the correct string please?<br />
+<br />
+Regards</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2014, 05:28 PM</div>
+</div>
+<div class="message">The simplest thing is to wait until tomorrow when the first session is available on iPlayer and will thus appear in the get_iplayer search results.  You can then add the series to the PVR list.  When you run the PVR it will download the existing sessions as well.  To schedule in advance, you have to add future listings to the cache (Recording settings), refresh the cache, then search future listings (Advanced Search settings).  I strongly suspect the series name will include Conservative Party Conference.<br />
+<br />
+As for creating a subdirectory, you'll need to add the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir</code></div></div> option to your get_iplayer settings with the CLI.  See the Usage &amp; Examples page in the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2014, 05:35 PM</div>
+</div>
+<div class="message">I perhaps incorrectly assumed you were using the Web PVR Manager.  Even if not, the above also applies to using the CLI for future scheduling.  The related CLI options can be found in the Options page in the wiki.  If using the CLI, it may be sufficient to create a PVR job with "Conservative Party Conference" as the search criterion and <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir</code></div></div> included.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">28-09-2014, 06:47 PM</div>
+</div>
+<div class="message">I think what DP is saying is good advice - wait until the programmes are in the normal iPlayer cache and then you can use pretty much the exact commands as provided in the <a href="http:///guides/">guides</a> section to set up the PVR in the manner you want.<br />
+<br />
+Alternatively, you could 'guess' at the name of the programme now and just create a PVR record in anticipation of the programme becoming available.<br />
+<br />
+If, however, you are talking about actually recording the live streams then that's something different so please clarify your post if that is your requirement.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-581</h2></div><div class="dateline">28-09-2014, 07:52 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/setting-up-a-pvr-for-bbc-parliament/#post-9695">Quote:</a>&lt;/div&gt;I think what DP is saying is good advice â wait until the programmes are in the normal iPlayer cache and then you can use pretty much the exact commands as provided in the <a href="http:///guides/">guides</a> section to set up the PVR in the manner you want.<br />
+<br />
+Alternatively, you could âguessâ at the name of the programme now and just create a PVR record in anticipation of the programme becoming available.<br />
+<br />
+If, however, you are talking about actually recording the live streams then thatâs something different so please clarify your post if that is your requirement.</blockquote>
+<br />
+To clarify, I would to record the live streams. Thanks to all for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">28-09-2014, 08:06 PM</div>
+</div>
+<div class="message">Take a look <a href="http:///wiki/documentation/#live-recording">here</a>.<br />
+<br />
+That'll give you the commands you will need. I'm not sure that you can schedule that like a PVR as in 'at this time start this stream', unless you set it up in some other way to run the command at some particular time using some other tool. <br />
+<br />
+Be aware that recording a live stream is somewhat unreliable and might drop out or try to reconnect etc. Also, you may have trouble if the <a href="http:///forums/topic/unable-to-download-large-video-files-from-iplayer/">file ends up being over 4GB</a>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-09-2014, 08:37 PM</div>
+</div>
+<div class="message">cmr_iplayer: To amplify SP's advice - If live recording fails to start or drops out at some point during the programme, get_iplayer does not attempt to restart the recording as it does with catch-up programmes.  It just stops, so there is a very high likelihood you will have incomplete recordings.  And as SP told you, the PVR doesn't have a timer function.  You would have to schedule each run individually at the system level, and if sessions are more than about 3 hours, you would have stop recording and restart to avoid file size issues.  Live recording isn't available in HD, so you can record for longer, but you would still need to be careful. You would still have to specify the correct value for <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--stop</code></div></div> for each session to avoid going over time, and it could be different for different sessions.  Spare yourself a massive headache and just wait a little while after broadcast until the sessions are available for download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-581</h2></div><div class="dateline">28-09-2014, 08:48 PM</div>
+</div>
+<div class="message">Thanks all for the advice</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Setting up a PVR for BBC Parliament </div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

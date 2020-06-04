@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Live Radio Recording errors</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Live Radio Recording errors</div>
+<div id="pagetitle"><h2>Live Radio Recording errors</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">11-09-2015, 11:22 AM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I'm running Windows 7 Enterprise SP1 64-bit OS.<br />
+<br />
+I've been recording Radio Live Streams with the following example command:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=liveradio --get 80131 --start=00:01:00 --stop=03:05:00 --force --attempts=5</code></div></div><br />
+I've run this manually from the get_iplayer comand-line and also I've run it via the Windows task scheduler program. Most of the time all is ok. But sometimes it fails with it's 1st or even 2nd attempts. Here is an example of a failed one last night:<br />
+<br />
+First attempt error message:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>[mpegts @ 02758be0] PES packet size mismatch<br />
+[mpegts @ 02cff000] AAC bitstream not in ADTS format and extradata missing av_interleaved_write_frame(): Invalid data found when processing input<br />
+size=  171215kB time=01:03:51.54 bitrate= 366.1kbits/s<br />
+video:0kB audio:150896kB subtitle:0 data:0 global headers:0kB muxing overhead 13.465528%<br />
+Conversion failed!<br />
+INFO: Command exit code 1 (raw code = 256)</code></div></div><br />
+.ts file created and was fixed with: <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg -i input1.ts -c:a copy -c:a copy -bsf:a aac_adtstoasc output1.m4a</code></div></div><br />
+Second attempt error message:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>skipping 8 segments ahead, expired from playlistsits/s<br />
+[mpegts @ 04648be0] PES packet size mismatch<br />
+[mpegts @ 0033f000] AAC bitstream not in ADTS format and extradata missing av_interleaved_write_frame(): Invalid data found when processing input<br />
+size=  373393kB time=02:20:39.22 bitrate= 362.5kbits/s<br />
+video:0kB audio:330094kB subtitle:0 data:0 global headers:0kB muxing overhead 13.117126%<br />
+Conversion failed!<br />
+INFO: Command exit code 1 (raw code = 256)</code></div></div><br />
+.ts file created and was fixed with same ffmpeg commands as attempt 1 above.<br />
+<br />
+Third attempt error message:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>http://as-hls-uk-live.bbcfmt.vo.llnwd.net/pool_7/live/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d320000.m3u8?dvr_window_length=24: Input/output error</code></div></div><br />
+The above was in red and thus an error, but it did complete successfully in that a valid m4a file was created.<br />
+<br />
+--<br />
+<br />
+Now this would seem to be an error that ffmpeg is giving me. But does that mean the route of the problem is ffmpeg's handling of live streaming data and converting/muxing on the fly or is it caused by get_iplayer?<br />
+<br />
+If it's ffmpeg, then would simply adding the --raw option to the command to leave ffmpeg out of the process be sensible?<br />
+<br />
+I have just tried this with recording a minute duration and it leaves me with a .ts file (as expected) that requires the following ffmpeg command run on it to make it a valid m4a file:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg -i input.ts -c:a copy -c:a copy -bsf:a aac_adtstoasc output.m4a</code></div></div><br />
+I suppose the ultimate question is that since I want to record live radio (multiple recordings may need to be run targeting different radio stations at the same time) what is the best way? <br />
+Manually doing it and figuring out the --start --stop values is doable but not ideal. <br />
+Running via Windows Task Scheduler works, but still incurs problem as described here and is also not elegant.<br />
+  <br />
+I know there is the get_iplayer PVR and there are cron jobs, but I'm on Windows here so unsure if that is a easy solution for me. <br />
+<br />
+I see there's a also the beta web PVR; maybe that is the solution I need??<br />
+<br />
+<br />
+Thank you for your help.<br />
+<br />
+And thank you for making get_iplayer still available for us.  <br />
+<br />
+btw I put this in the General Topics forum as I thought the errors are more of a holistic issue rather than a specific OS one... but appreciate that my ultimate desire for a Windows OS live recording solution is likely to be OS specific. Feel free to move if more appropriate.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2015, 01:17 PM</div>
+</div>
+<div class="message">Are there Radio 1 programmes that you can't get via get_iplayer after broadcast?  If not, there is absolutely no point in faffing around with live recording.<br />
+<br />
+Don't use <kbd>--start</kbd>.  It doesn't really make sense for scheduled live recording. It works better with ffmpeg that it used to with rtmpdump, but it might still lead to the beginning of the file being garbaged and cause problems (though errors could still occur without <kbd>--start</kbd>) . As you saw, it's unpredictable.  If you really need to remove the first minute for some reason, do it on the finished file.<br />
+<br />
+You can use <kbd>--ffmpeg-liveradio-opts="-bsf:a aac_adtstoasc"</kbd> (or add it to preferences) to have that filter always applied. It usually isn't necessary, but should be harmless. Using <kbd>--raw</kbd> is also an option if you don't need M4A files, but ffmpeg is still required to produce the .ts file.<br />
+<br />
+Since you're on Windows, Task Scheduler iis your first port of call for automation.  There are third-party cron-like applications that might be easier to use. The web pvr is not an option.  It isn't really intended for live recording, and it can only run one download at a time (though you could run separate instances on different ports).  The CLI pvr isn't intended for live recording either. Although you could run multiple instances of the CLI pvr, there is no advantage over just running normal get_iplayer commands.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">11-09-2015, 01:38 PM</div>
+</div>
+<div class="message">Thank you for the quick response user-2.<br />
+<br />
+The reason for recording live radio streams is that they are transmitted at 320kbps rather than the 128kbps on the listen again player; so I'm going for the better quality version.<br />
+<br />
+I think that when the BBC finally fully rollout their Audio Factory project the listen again iplayer will also be 320kbps.<br />
+<br />
+For info, only Radio 3 &amp; 6 Music broadcast in 320kbps AND a full frequency spectrum (&gt;=20kHz), whereas they self-impose a 15-16kHz frequency cut-off for other stations including Radio 1 (as has been the case for FM broadcasts).<br />
+<br />
+I do 100% agree that getting content from the listen again iplayer is far easier and I've had zero failures, but as I say it's a desire to get the best quality available right now.<br />
+<br />
+The --start option is mainly used on the Windows Task Scheduler in an attempt to be "nice" to get_iplayer and let it do it's searches first and be ready to run the other commands... but I'm sure that is likely to be BS lol.<br />
+<br />
+That being said, I have used --start in the manual running of get_iplayer and leave the window open until the time comes to start recording (say I manually set it at 10pm for a live recording to start at 4am). <br />
+<br />
+I do want to end up with m4a files after I've losslessly edited them in their aac format (using mp3directcut). Can I leave them as aac files then?<br />
+<br />
+So, the errors are just down to the live recording not being 100% stable?<br />
+<br />
+many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2015, 02:29 PM</div>
+</div>
+<div class="message">320k - I get it.  However, I'm not betting on any more 320k AOD being available to get_iplayer in the future.  When Audio Factory arrived, they removed all the previous 320k AOD resources except for Radio 3 Flash streams. <br />
+<br />
+That isn't what <kbd>--start</kbd> does.  It just tells ffmpeg to discard X amount of the stream before writing to output.  It doesn't have anything to do with scheduled execution and it doesn't impact get_iplayer itself.<br />
+<br />
+Yes, keep AAC for editing if you can.  Converting to MP3 (or anything else) would defeat the purpose. I don't know if mp3directcut will rewrite the MP4 container and thus stomp the metadata tags. <br />
+<br />
+AFAICT, the errors are probably down to using <kbd>--start</kbd> and perhaps a hiccup at the CDN server, though you can't really call that an error if the output file was OK.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">11-09-2015, 02:57 PM</div>
+</div>
+<div class="message">aaaahhh I didn't realise that is what --start did. Ok, I get it now, thanks. I'll remove it's use from now on.<br />
+<br />
+Can I still use the --stop option? <br />
+It means that when the recording completes, get_iplayer ends correctly and a valid m4a file is produced, rather than ending "abruptly" leaving me with a .ts file that requires some bitstream fixing (although I see I can add that to the command options as you kindly suggested).<br />
+<br />
+No, I don't convert to mp3 as that as you say defeats the purpose. mp3directcut introduced aac lossless editing three years ago (it used to only work for mp3s). But it has to have the aac file and cannot work on the m4a/mp4 container formats. So currently I will extract the raw aac file from the m4a using mp4box, do the editing, and put it back into the m4a container with mp4box. The tags are removed when extracting the aac file from the m4a file.<br />
+<br />
+what options(s) would I need to add to the command to keep the output file as an .aac file? <br />
+or should I leave as is with it being output as an m4a? <br />
+or even reduce extra work by the program and leave as a raw .ts file? <br />
+<br />
+Fingers crossed they provide 320kbps on listen again, but you might well be right and they keep as 128kbps.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-09-2015, 03:41 PM</div>
+</div>
+<div class="message">As you say, you need <kbd>--stop</kbd> for get_iplayer to finish cleanly, so use it.<br />
+<br />
+I see - you need raw AAC.  You can use <kbd>--command</kbd> to automatically dump the AAC to a separate file after download with ffmpeg or mp4box.  If you use ffmpeg you might as well use <kbd>--raw</kbd> since the AAC stream can just as easily be extracted from the the TS file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">11-09-2015, 06:55 PM</div>
+</div>
+<div class="message">thanks Dinky, I shall get onto refining the live recording command options :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">13-10-2015, 12:01 PM</div>
+</div>
+<div class="message">Hi user-2<br />
+<br />
+A few of us are still using the live stream recording functionality. Over the past couple of weeks we have noticed more errors and thus unsuccessful recordings.<br />
+<br />
+Now, I'm fairly certain this is all at the BBC end, since one of the errors we've been getting recently is a "HTTP error 500 Internal Server Error". <br />
+<br />
+Am I right is assuming that as get_iplayer is a command-line program it's error handling (esp with these live streams) is minimal to non-existent? <br />
+<br />
+If so, is there any way for get_iplayer to ignore errors and simply push on recording for the set time?<br />
+<br />
+My guess is that improving stability of get_iplayer for live stream recording is a low priority for you, but I just wonder if a "quick fix" could be to relax/remove it's aborting when it encounters an error. Perhaps it's an option that can be set to say "ignore errors".<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-10-2015, 01:26 PM</div>
+</div>
+<div class="message">How do you imagine get_iplayer could "push on" through server errors over which it has no control?  If the servers won't play ball, there is nothing get_iplayer can do about it. In this context, get_iplayer can only do what ffmpeg can do, and ffmpeg can only do what the CDN servers and your connection will support at a given time. It's not a question of get_iplayer's stability.<br />
+<br />
+get_iplayer doesn't simply abort when an error occurs during live recording. Use <kbd>--attempts</kbd> if you want more than one try for each recording mode for live streams. Only you can know how poor your connection may be or how recalcitrant the servers are being at any point in time, so adjust to suit.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">13-10-2015, 02:19 PM</div>
+</div>
+<div class="message">Ok, understood.<br />
+<br />
+No offence was meant.<br />
+<br />
+Everything you have said I agree with and already knew... I had a taken a moment to think about it rather than blurt out my question. I simply made the incorrect assumption that why can't get_iplayer behave like how we capture DVB-S live streams. These DVB-S very rarely fail to record and indeed when a iplayer live stream fails the same show's DVB-S stream is ok.<br />
+<br />
+So whilst these come from the same original source, I'm guessing the architecture and system and servers are different for the DVB-S streams??<br />
+<br />
+I have used the <kbd>--attempt</kbd> option and with these 500 server errors it doesn't restart. With other errors like the "ADTS format and missing data" it does restart.<br />
+<br />
+Thanks, I appreciate your help and patience :-)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-10-2015, 03:24 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-10-2015, 02:19 PM)</span></cite>No offence was meant.</blockquote>None taken, but your expectations are unrealistic. <br />
+<blockquote class="mycode_quote"><cite><span> (13-10-2015, 02:19 PM)</span></cite>So whilst these come from the same original source, I'm guessing the architecture and system and servers are different for the DVB-S streams??</blockquote>And now I know why. People have paid a lot of money for a lot of infrastructure to ensure satellite broadcasts are reliable. The BBC has paid a lot of money for a lot of infrastructure for iPlayer and IPTV, but there is no guaranteed service level. There is no way they can anticipate all the vagaries of every user, computer, network link, etc., and servers are going to have problems. Only one stream needs to get to a satellite.<br />
+<blockquote class="mycode_quote"><cite><span> (13-10-2015, 02:19 PM)</span></cite>I have used the <kbd>--attempt</kbd> option and with these 500 server errors it doesn't restart. With other errors like the "ADTS format and missing data" it does restart.</blockquote>If ffmpeg is getting 500 errors when attempting to access a playlist, there will be nothing to record and thus nothing to restart. But I have no idea if that is what is happening.  You can't just cryptically allude to errors and expect me to have a clue what you're talking about. Put your output in a .txt file and attach it to a post.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">15-10-2015, 12:14 PM</div>
+</div>
+<div class="message">Two error logs attached.<br />
+<br />
+1. <a href="https://dl.dropboxusercontent.com/u/94841636/get_iplayer_http-error-500.txt">get_iplayer_http-error-500.txt</a><br />
+2. <a href="https://dl.dropboxusercontent.com/u/94841636/get_iplayer_aac-bitstream-error.txt">get_iplayer_aac-bitstream-error.txt</a><br />
+<br />
+The output above comes from the command window that get_iplayer runs in.<br />
+<br />
+The redirected output from get_iplayer simply gives<br />
+<kbd>INFO: Command exit code 1 (raw code = 256)</kbd><br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-10-2015, 03:20 PM</div>
+</div>
+<div class="message">Thanks. A few tips for the future:<br />
+<ul class="mycode_list"><li>Redirect both stdout and stderr to a file to capture all output<br />
+</li>
+<li>Use <kbd>--verbose</kbd>, but only for radio with HLS. HLS TV downloads will fill the log with ffmpeg warnings. <br />
+</li>
+<li>Don't do testing from Windows Scheduler (if that's what the text at the top of one of your files means).  Run from the command prompt.  Your scheduler job arguments look wrong to me as well, as if you pointed it to both the start menu shortcut and get_iplayer script somehow.<br />
+</li>
+</ul>
+In the first case, you're getting a 500 error from the server when ffmpeg attempts to download a stream segment.  There is nothing get_iplayer can do about that. ffmpeg may not signal an error condition when that happens, so get_iplayer is none the wiser and runs to finish. In the other case, ffmpeg received some junk data and gave up.  Again, there is nothing get_iplayer can do about it if ffmpeg doesn't signal an error condition. This problem could be a result of poor connectivity. The 500 errors point to server problems, though there is a small possibility that they could result from corrupted requests (poor connectivity again). Not surprisingly, I can't replicate either problem.  You might want to grab a newer version of ffmpeg and try it with <kbd>--ffmpeg.</kbd> The Apple HLS support may have improved in some way that might help you, though I can only speculate. If these gremlins plague you consistently, you probably need to create a wrapper script that will keep launching get_iplayer until the desired amount of time has expired.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">15-10-2015, 03:38 PM</div>
+</div>
+<div class="message">Great, thanks for the info.<br />
+<br />
+I cannot recreate these all the time. It only happens maybe 25% of the time.<br />
+<br />
+The number 2 log (bitstream error) was run at cmd line. The other one failed whilst being run from the scheduler. Most have to run by the scheduler due to being in the early hours of the morning. Most of the time there are no errors with them. Suffice to say I've had the same errors occur when they have been run via the scheduler and direct by me adding the commands into the cmd line.<br />
+<br />
+Thanks for the feedback. My next stop was to try a new version of ffmpeg, so thanks for the nudge.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">15-10-2015, 06:09 PM</div>
+</div>
+<div class="message">Full sdtout &amp; stderr with the verbose mode on with a recording that failed with the http 500 error a couple of hours ago: <a href="https://dl.dropboxusercontent.com/u/94841636/get_iplayer_http-error-500-2.txt">get_iplayer_http-error-500-2.txt</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-10-2015, 07:22 PM</div>
+</div>
+<div class="message">Thanks.  As  I suspected, ffmpeg doesn't signal an error. No idea why you would encounter this even 25% of the time. One possibility is that there is a caching proxy between you and the CDN that is overloaded or failing, but that is just a guess.  It looks like ffmpeg may collapse all 50x HTTP codes to 500, so a little information is getting lost as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">15-10-2015, 07:32 PM</div>
+</div>
+<div class="message">I have also been seeing a few error 500 internal server errors when visiting radio pages on iPlayer recently and this is on the site itself. Sometimes when I try and load a programme, it takes a while and then eventually returns the BBCs Internal Server Error (500) page or just a standard error 500 page.<br />
+<br />
+Haven't seen this with TV so far so it only seems to be affecting the radio side of things but it does seem like something is going on there.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">15-10-2015, 07:59 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:32 PM)</span></cite>I have also been seeing a few error 500 internal server errors when visiting radio pages on iPlayer recently and this is on the site itself. Sometimes when I try and load a programme, it takes a while and then eventually returns the BBCs Internal Server Error (500) page or just a standard error 500 page.<br />
+<br />
+Haven't seen this with TV so far so it only seems to be affecting the radio side of things but it does seem like something is going on there.</blockquote>now you mention it I have also had a few server errors whilst looking at BBC pages over the past couple of weeks. I hadn't made the connection to the live streaming recordings until now.<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:22 PM)</span></cite>Thanks.  As  I suspected, ffmpeg doesn't signal an error. No idea why you would encounter this even 25% of the time. One possibility is that there is proxy between you and the CDN that is overloaded or failing, but that is just a guess.  It looks like ffmpeg may collapse all 50x HTTP codes to 500, so a little information is getting lost as well.</blockquote>Does that mean ffmpeg should signal an error? <br />
+And if it did, I'm guessing get_iplayer would still cease recording??<br />
+Which would imply that until the connection at the BBC is more reliable, this will continue right?<br />
+<br />
+btw this is also happening with two of my friends, so that would lower the chances of this being an individual connection issue. In fact, a couple of weeks we were all recording the same radio show and it failed for us all at the same time with the 500 HTTP code.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-10-2015, 08:45 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:32 PM)</span></cite>I have also been seeing a few error 500 internal server errors when visiting radio pages on iPlayer recently and this is</blockquote>500 errors for programme pages on the iPlayer Radio site are a different story, and different servers. A programme page pulls in all sorts of stuff from other systems - metadata from Nitro, etc. - and the servers appear to return 500 if all that stuff can't be assembled within some time limit.  These errors come when accessing an actual piece of the media stream from a CDN server.  AFAIK, 320k HLS live streams aren't used for any public BBC services, so maybe they get fewer resources or lower priority - more wild guessing. I don't use them enough to know.<br />
+<blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:59 PM)</span></cite>Does that mean ffmpeg should signal an error? </blockquote>Seems like it, but hard to say. The upstream error could be anything, so if ffmpeg has recorded everything up to that point, has it really failed? One for the philosophers.<br />
+<blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:59 PM)</span></cite>And if it did, I'm guessing get_iplayer would still cease recording??</blockquote>No, it would retry as normal<br />
+<blockquote class="mycode_quote"><cite><span> (15-10-2015, 07:59 PM)</span></cite>Which would imply that until the connection at the BBC is more reliable, this will continue right?</blockquote>One would think.  Perhaps take a look at livestreamer and see if it is more resilient than get_iplayer+ffmpeg.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Live Radio Recording errors</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

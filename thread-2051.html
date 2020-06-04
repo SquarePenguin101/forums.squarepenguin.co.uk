@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Make --type work with --pid-recursive</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Make --type work with --pid-recursive</div>
+<div id="pagetitle"><h2>Make --type work with --pid-recursive</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1286</h2></div><div class="dateline">03-07-2019, 11:57 AM</div>
+</div>
+<div class="message">I use --pid-recursive to download various events/series (Glasto, Proms, etc). However, I only want the videos, not the audio programmes.<br />
+<br />
+My script has historically used "--exclude-category radio" - which used to work. But it relied on the BSS including "radio" in the category, which it seems to have stopped doing (I think it stopped working last year but I didn't notice at first).<br />
+<br />
+I would still like to exclude the radio programmes. I tried using "--type tv" but that does not seem have any effect (presumably because the --pid-recursive logic overrides it?).<br />
+<br />
+I am currently trying using a workround of "--radiomode none" but I am not sure if it is working or not yet.<br />
+<br />
+It would be nice if "--type tv" worked.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2019, 12:47 PM</div>
+</div>
+<div class="message"><kbd>--type</kbd> is a search option unrelated to direct downloading, recursive or otherwise. <kbd>--radiomode=none</kbd> will achieve the desired effect. <br />
+<br />
+If you want to implement new options to skip radio or tv programmes explicitly in a recursive download, I'll entertain a pull request. Just beware that there are several bad ways to do it, so be careful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1286</h2></div><div class="dateline">03-07-2019, 07:12 PM</div>
+</div>
+<div class="message">Hmm. My thought would be to do it as an --exclude-type, directly analogous to --exclude-category and the others. Even going as far as making it a regex (overkill but the consistency with the other --excludes might be helpful).<br />
+<br />
+Before I have a go, would that fall into your "bad ways to do it"?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-07-2019, 01:20 PM</div>
+</div>
+<div class="message">Sorry to reverse course, but on second thought, a pull request would be a mutual waste of time. This would be a virtually useless feature and I'm not willing to spend any time on it. The implementation would be trivial (though you can't be expected to know that), so my colleague may do it. If not, we'll just document the <kbd>--radiomode</kbd> hack. If any Glasto/Proms hoarders rock up, that will be more than sufficient.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-07-2019, 02:25 AM</div>
+</div>
+<div class="message"><kbd>--pid-recursive-type</kbd> option added in v3.21</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Make --type work with --pid-recursive</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

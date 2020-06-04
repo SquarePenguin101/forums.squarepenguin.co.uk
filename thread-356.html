@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - help using the BBC API</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; help using the BBC API</div>
+<div id="pagetitle"><h2>help using the BBC API</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-647</h2></div><div class="dateline">12-02-2015, 02:15 PM</div>
+</div>
+<div class="message">a, er, friend has reverse engineered the API calls made to the BBC servers by Android devices and written a web interface to get_iplayer which uses them*<br />
+<br />
+The problem is that there's a key API call which hasn't been discovered by packet sniffing, and/or proxy logging:<br />
+When searching, the text search API call returns a mixture of brands, series and episode pids. It's possible to also search by the pid of a brand or series, but the results don't include every episode available. What's needed is to know the API call which lists all the episodes for a specific brand or series without getting other random entries.<br />
+These calls are made to <a href="http://ibl.api.bbci.co.uk">http://ibl.api.bbci.co.uk</a> or <a href="http://data.bbc.co.uk">http://data.bbc.co.uk</a><br />
+<br />
+Can anyone help with the API calls? Or say where it's possible to get a copy of the API documentation?<br />
+<br />
+* the web interface has various features... as well as searching for programs, it lists highlights and popular items. It allows items to be queued for download with a back-end job that drives get_iplayer. It also has a page showing downloaded items, allowing items to be played (jw longtail player), downloaded or deleted. Quite a useful tool. I'm sure it could be made available to beta testers once it's been improved.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">30-03-2016, 02:21 PM</div>
+</div>
+<div class="message">If this is the iBL (iPlayer Business Layer) API, the call would be something like:<br />
+<br />
+<a href="http://ibl.api.bbci.co.uk/ibl/v1/programmes/%p?rights=%r&amp;availability=available&amp;initial_child_count=4">http://ibl.api.bbci.co.uk/ibl/v1/program...ld_count=4</a><br />
+<br />
+Where %p is the PID, %r is web, tv or online.<br />
+<br />
+The api_key parameter seems to be optional.<br />
+<br />
+If this is Nitro then the request would be something like:<br />
+<br />
+<a href="http://programmes.api.bbc.com/nitro/api/programmes?api_key=%k&amp;descendants_of=%p&amp;availability=available&amp;media_set=pc&amp;mixin=ancestor_titles&amp;mixin=availability&amp;mixin=available_versions&amp;entity_type=episode&amp;page_size=30&amp;media_type=%m">http://programmes.api.bbc.com/nitro/api/...ia_type=%m</a><br />
+<br />
+Where %p is the PID and %k is the api_key and %m is audio_video or audio.<br />
+<br />
+Nitro API documentation is available at <br />
+<a href="https://developer.bbc.co.uk/sites/default/files/Nitro%20for%20Clients.pdf">https://developer.bbc.co.uk/sites/defaul...lients.pdf</a> <br />
+<a href="https://developer.bbc.co.uk/content/programmes-api">https://developer.bbc.co.uk/content/programmes-api</a><br />
+and unofficially at <a href="http://mermade.github.io/swagger/index.html#/feeds">http://mermade.github.io/swagger/index.html#/feeds</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">09-04-2016, 03:20 PM</div>
+</div>
+<div class="message">Actually on further investigation, what you probably want is something like:<br />
+<br />
+<a href="http://ibl.api.bbci.co.uk/ibl/v1/groups/%p/episodes?rights=web&amp;page=1&amp;per_page=20&amp;initial_child_count=4&amp;sort=title&amp;sort_direction=asc&amp;availability=available">http://ibl.api.bbci.co.uk/ibl/v1/groups/...=available</a><br />
+<br />
+Where %p is the group (for curated collections), brand or series PID.<br />
+<br />
+Unofficial iBL API documentation now up at <a href="http://mermade.github.io/swagger/index.html?url=https://raw.githubusercontent.com/Mermade/bbcparse/master/iblApi/swagger.json">http://mermade.github.io/swagger/index.h...agger.json</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; help using the BBC API</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

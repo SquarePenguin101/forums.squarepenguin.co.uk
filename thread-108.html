@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Win pvr No listings at all?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Win pvr No listings at all?</div>
+<div id="pagetitle"><h2>Win pvr No listings at all?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">05-02-2014, 05:39 PM</div>
+</div>
+<div class="message">Using Windows 7, Chrome browser and have WinPVR open.<br />
+<br />
+Anything I type into the search box returns nothing?  I know Silent Witness is there and nothing?  Even if I type in news?<br />
+<br />
+I have Hola vpn activated and can use BBCiPlayer in UK for live stuff.<br />
+<br />
+Please help, before my wife gets bad ideas?????<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-02-2014, 08:24 PM</div>
+</div>
+<div class="message">The fact that you can use the iPlayer site is irrelevant.   Are there any programmes listed when the Web PVR first launches?  Did you refresh the cache and re-run the search?  If you enter the default search string (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>.*</code></div></div>) yourself, do you get any results?  Did you select BBC TV as a Programme Type?  Have you entered any other search criteria under Advanced Search that would affect the results?  Have you saved any options with get_iplayer at the command line that would affect the results?  Do you see any errors in the Web PVR server console window?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">05-02-2014, 08:37 PM</div>
+</div>
+<div class="message">Hi thanks for the reply.  I cleared cache, tried the default .*, nothing set in advanced and BBC TV is selected as Program Type.<br />
+<br />
+I have not changed any setting after installing.  Before clearing cache I got a load of rubbish stuff CBBTV and other junk), which is cleared, but I get nothing?<br />
+<br />
+I tried using the command line to just list jump, then just list anything, both of which gave no results?<br />
+<br />
+I am assuming it is PC related as I can get a list of Silent Witness on my wife's PC, but cannot download getting the no specified modes error although the same Hola vpn is active?<br />
+<br />
+I have a friend who is trying to set up a separate vpn in UK, so will hopefully test that this week in case it's Hola?<br />
+<br />
+Thanks,<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-02-2014, 09:28 PM</div>
+</div>
+<div class="message">Go to the get_iplayer console window on your machine and run the commands below:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --verbose --refresh &gt; %USERPROFILE%&#92;giplog1.txt 2&gt;&amp;1<br />
+<br />
+get_iplayer --debug "Silent Witness" &gt; %USERPROFILE%&#92;giplog2.txt 2&gt;&amp;1</code></div></div><br />
+<br />
+<br />
+Take the log files from your home directory and post them as attachments.  Be sure to scrub your username from the files before posting, if you wish.  If you wish to post them somewhere else, that's fine - just include the URLs in your reply.<br />
+<br />
+The "no specified modes" error means your VPN is faulty or blocked.  We can't help you with either.  Even so, you should normally be able to get search results, as on your wife's machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">06-02-2014, 08:16 AM</div>
+</div>
+<div class="message">Sorry, just read this as I had to go to bed last night.  I am at work but will try this when I get home and post back.<br />
+<br />
+I did also install onto a Linux laptop and still couldn't get any results which makes me lean towards the VPN as being the problem?<br />
+<br />
+I should find out today if my friend's VPN is working.  One way or another I shall report back for the sake of others on the forum.<br />
+<br />
+Thanks for now,<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2014, 12:41 PM</div>
+</div>
+<div class="message">Same problem on different machine and OS would point to VPN as the culprit.  Before you try the steps above, try to access the URL below in your browser over your VPN:<br />
+<br />
+<a href="http://feeds.bbc.co.uk/iplayer/bbcone/list/limit/400">http://feeds.bbc.co.uk/iplayer/bbcone/list/limit/400</a><br />
+<br />
+If that fails, the other tests are likely to fail as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">06-02-2014, 06:31 PM</div>
+</div>
+<div class="message">Update!!!<br />
+<br />
+As we suspected the VPN appears to have been the problem.  The BBC downloads program even works again with this other one.<br />
+<br />
+I still haven't installed get_iplayer on the computer connected to the TV (I can't get her off it)!  I plan to install though at the weekend as I would like the versatility to download a series or so in one go, rather than select and add one at a time with BBC downloads.<br />
+<br />
+I did try the commands above on the Linux laptop and get listings now without vpn???? I still can't download though, so I tried adding the new vpn to that but am getting connection errors for some reason?  The install instructions on youtube used a different version, (I have Linux 15), so I've missed something, however, nothing to do with get_iplayer, so will persevere.<br />
+<br />
+The BBC link supplied a listing in a browser on all computers before I started, just for information.<br />
+<br />
+Will keep this post updated.  Once again, many thanks!<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2014, 07:52 PM</div>
+</div>
+<div class="message">Normally, you should still get listings without a VPN.  While it's not inconceivable that listing feeds might be geo-blocked, I've never known it to happen.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">07-02-2014, 07:59 PM</div>
+</div>
+<div class="message">OK, tried this on the linux laptop and now getting a directory of search criteria.<br />
+<br />
+Use the get_iplayer command get_iplayer --get 930<br />
+<br />
+Get the following:-<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">vicky@Vicky ~ &#36; get_iplayer --get 930<br />
+get_iplayer 2.85-ppa16, Copyright (C) 2008-2010 Phil Lewis<br />
+   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+   This is free software, and you are welcome to redistribute it under certain<br />
+   conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+930:    Silent Witness: Series 17 - Fraternity: Part 1, BBC One, Audio <br />
+Described,Crime,Drama,Guidance,TV, default,audiodescribed<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: <br />
+flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2<br />
+modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Silent Witness: Series 17 -<br />
+Fraternity: Part 1<br />
+INFO: File name prefix =<br />
+Silent_Witness_Series_17_-_Fraternity_Part_1_b03t36gt_default<br />
+RTMPDump v2.4-n78-git3a1e20c-ppa8~raring<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL Connecting ...<br />
+ERROR: RTMP_Connect0, failed to connect socket. 110 (Connection timed out)<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file<br />
+/home/vicky/Silent_Witness_Series_17_-_Fraternity_Part_1_b03t36gt_default.partial.mp4.flv<br />
+via RTMP<br />
+INFO: skipping flashvhigh1 mode<br />
+INFO: Trying flashvhigh2 mode to record tv: Silent Witness: Series 17 -<br />
+Fraternity: Part 1<br />
+</span><br />
+<br />
+This happens with every mode?<br />
+<br />
+Does this help any?<br />
+<br />
+Malky<br />
+<br />
+EDIT - I notice that the directory attempted was /home/vicky/ the first time I tried this and the /vicky folder didn't exist, so I created it and tried again with the same results?  ON this Linux 15 OS the directory is Home with a capital 'H'?  Would this make any difference?  I am new to Linux.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-02-2014, 08:50 PM</div>
+</div>
+<div class="message">This is the problem:<br />
+<br />
+ERROR: RTMP_Connect0, failed to connect socket. 110 (Connection timed out)<br />
+<br />
+Apparently you have another dud VPN.  VPNs don't necessary support traffic on port 1935 (used by rtmpdump), or they may throttle if they do.  Or it could just be a temporary outage.  Use the link below to check your VPN:<br />
+<br />
+<a href="http://www.therealtimeweb.com/index.cfm/2004/10/2/fms-port-tester">http://www.therealtimeweb.com/index.cfm/...ort-tester</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">07-02-2014, 09:01 PM</div>
+</div>
+<div class="message">Cheers, yes indeed I am getting a Fail on that port.<br />
+<br />
+Strange how the BBC downloads program started working again though?<br />
+<br />
+Still waiting on my friend trying to get his personal VPN set up, but last I heard 20 minutes ago was he screwed his own router IP!  Such fun.  Obviously he's never done this before either.<br />
+<br />
+Many thanks and will keep this updated.<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-02-2014, 09:09 PM</div>
+</div>
+<div class="message">BBC download app works differently.  Neither it nor the iPlayer site is a gauge for whether or not get_iplayer will work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">10-02-2014, 07:53 PM</div>
+</div>
+<div class="message">Hi again, just to let you know it was the VPN that was the problem.<br />
+<br />
+My friend has his running now and everything is going fine.  I've tested on XP, Win7 and Linux Mint 15 based machines.<br />
+<br />
+One other question if I may, although it should maybe better posted as another thread?  What happens if I use the PVR download for a few files and the VPN is cut off for some reason? Would the file downloads resume when the VPN is back up even if it is next day?<br />
+<br />
+Once again, many thanks and this is just what I needed.<br />
+<br />
+Malky</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-02-2014, 08:18 PM</div>
+</div>
+<div class="message">The general idea would be for it to pick up where it left off, but that doesn't always happen. Most times you'd probably be left with the *.partial.flv file from the interrupted download which would need manually deleting before you'd need to kick of the download again.<br />
+<br />
+In some cases, get_iplayer can leave you with the partial download AND record in it's download history that the programme has been successfully downloaded. In that case even after you've deleted the partial file you won't get it to download again without using the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> option as explained <a href="http:///forums/topic/use-force-to-override/">here</a>.<br />
+<br />
+Now, it's my policy here that we don't condone the use of a VPN with get_iplayer to download content from outside of the UK, and such discussions I usually bring to a sharp halt. You've skirted the thin line between questions that needed answering and use of a VPN, but let's not continue down the VPN route with further questions about its use please, or I will close the thread.<br />
+<br />
+You are, of course, forgiven for not knowing the info in the paragraph above as I haven't taken the time to write the forum rules yet so that is not meant as some great chastisement.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-353</h2></div><div class="dateline">10-02-2014, 08:26 PM</div>
+</div>
+<div class="message">Sorry, yes, I wasn't aware of this and considering the 'sh*t' that's going on with internet content, I acknowledge what you are saying.<br />
+<br />
+Guys like you need preserving and once again, your work is greatly appreciated.  Love it.<br />
+<br />
+Once again many thanks for your great work.<br />
+<br />
+You've made one woman (and one man) very happy :)  Although I think pleasing one woman is an achievement nowadays :)<br />
+<br />
+Malky</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Win pvr No listings at all?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

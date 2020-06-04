@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to invoke get_iplayer with Workflow iOS App &quot;Run Script Over SSH&quot;?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to invoke get_iplayer with Workflow iOS App &quot;Run Script Over SSH&quot;?</div>
+<div id="pagetitle"><h2>How to invoke get_iplayer with Workflow iOS App &quot;Run Script Over SSH&quot;?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1915</h2></div><div class="dateline">29-08-2017, 08:22 PM</div>
+</div>
+<div class="message">Hi...I'm new to get_iplayer (great program, btw) and I'm not an expert when it comes to Terminal / the command line on my Mac (running MacOS 10.12.6).<br />
+<br />
+I have installed both get_iplayer and ffmpeg using Homebrew (only 3-4 days ago). <br />
+<br />
+When I'm sat in front of my Mac, using Terminal, everything works perfectly; I can record episodes by program code (following a search), PID or URL. I have set a default directory in which to save all recordings, and when an episode finishes downloading it always gets converted into a .mp4 file.<br />
+<br />
+So far, so good.<br />
+<br />
+I can also connect to my Mac using my iPhone via SSH, using an app called <a href="https://workflow.is">Workflow</a>. I can get back to my Mac no problem...but when I first tried to send a command to get_iplayer, such as <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer "news"</code></div></div><br />
+I would get an error along the lines that it was an invalid BASH command (?).<br />
+<br />
+I dug into this and figured out that in order to get a command to get_iplayer via the workflow app that I had to use the following instead:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/usr/local/Cellar/get_iplayer/3.02/bin/get_iplayer "news"</code></div></div><br />
+I can now use this technique to initiate searches and the recording of programs, by inserting a PID or URL etc. However, whenever I do this, the recording does happen but the resulting file is always left as a .ts file. I get the following in the output:<br />
+<br />
+"WARNING: Required ffmpeg utility not found - not converting .ts file"<br />
+<br />
+...suggesting that get_iplayer cannot locate ffmpeg when I do things from the app on my phone.<br />
+<br />
+I wondered if anyone had any idea how I could get things working so that I end up with a .mp4 file at the end, instead?<br />
+<br />
+Many thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2017, 10:59 PM</div>
+</div>
+<div class="message">You're not running get_iplayer in a login shell, so you only get a minimal PATH environment variable, not the one you see when you're logged in. It doesn't include /usr/local/bin, where Homebrew applications are installed. Preface your get_iplayer command with <kbd>PATH="/usr/local/bin:&#36;PATH"</kbd> to amend PATH for the remote command invocation, so there is no need for the long path to get_iplayer cellar. If that doesn't work, take up the issue in a Workflow forum to find out how it should be specified. Alternatively, you can specify full paths to ffmpeg and atomicparsley as get_iplayer options. See documentation in wiki.<br />
+<br />
+EDIT: Another option might be to use a login shell, something like <kbd>/bin/bash --login -c "get_iplayer news"</kbd>, but be careful with quotes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1915</h2></div><div class="dateline">30-08-2017, 08:16 PM</div>
+</div>
+<div class="message">Hi - Thanks for your prompt reply.<br />
+<br />
+I've sorted the issue by specifying the full paths for ffmpeg and atomicparsley in get_iplayer's options.<br />
+<br />
+I'm going to go on to look at the whole PATH subject as a learning point for myself, and see if I can get things working that way in due course.<br />
+<br />
+Many thanks.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; How to invoke get_iplayer with Workflow iOS App &quot;Run Script Over SSH&quot;?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

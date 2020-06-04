@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Struggling with saving presets (to replace options file)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Struggling with saving presets (to replace options file)</div>
+<div id="pagetitle"><h2>Struggling with saving presets (to replace options file)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-688</h2></div><div class="dateline">02-01-2019, 12:13 PM</div>
+</div>
+<div class="message">Hi, I normally use WebPVR Manager and am not used to the cli so am struggling with the recent removal of the options file from 3.18. I had a number of options set but now need to use presets. I can't work out if I set prefs in the cli if the prefs are remembered from one session to the next.<br />
+<br />
+I have read several threads and guide sections. At the bottom of this thread  <a href="thread-1319.html">https://forums.squarepenguin.co.uk/thread-1319.html</a> it says using --prefs-add will store it as a default.<br />
+<br />
+Yet this thread <a href="thread-1943.html?highlight=preset">https://forums.squarepenguin.co.uk/threa...ght=preset</a> refers to presets which should be stored in the profile directory.<br />
+<br />
+Another thread referred to the Setting preferences page in the wiki <a href="https://github.com/get-iplayer/get_iplayer/wiki/prefs">https://github.com/get-iplayer/get_iplayer/wiki/prefs</a> which also says presets aare stored in the profile directory. This page does give examples of various presets but at one stage says "see below for options file format" and later says "preset files have the same format as the user settings files (see above)" - there is no information in between as to what format the file should be in .txt or what?<br />
+<br />
+I'm sure this is my lack of understanding as a non-cli non-Linux non-techie so apologies for that. But I would appreciate some guidance as to how to move the things I have in the options file to a preset which will persist from one shutdown to the next start up. Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-01-2019, 04:05 PM</div>
+</div>
+<div class="message">You misunderstood the release notes. The options file in profile directory is still used as before. You do not have to make any changes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-688</h2></div><div class="dateline">03-01-2019, 10:42 AM</div>
+</div>
+<div class="message">OK Thanks. It does seem I misunderstood "get_iplayer no longer looks for a local options file under the current working directory (in ./.get_iplayer/options). "<br />
+<br />
+When I installed 3.18 (2 days ago) all the options I had set in WebPVR Manager reset themselves (eg from radio to tv). This was even though the --prefs-show in cli confirmed that type = radio. I re-read the WebPVR Guide in particular the Relationship to CLI section and tested a few things which confirmed that changes made in Options were correctly seen by cli - but not WebPVR Manager.<br />
+<br />
+My understanding is now that IF there is a setting in WebPVR manager, it will override the CLI and this includes the Options file.<br />
+<br />
+If that's correct, is there a way of saving the WebPVR settings when installing a new version of get_iplayer over an existing one?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-688</h2></div><div class="dateline">03-01-2019, 08:02 PM</div>
+</div>
+<div class="message">I note on this wiki page <a href="https://github.com/get-iplayer/get_iplayer/wiki/webpvr">https://github.com/get-iplayer/get_iplayer/wiki/webpvr</a> it says<ul class="mycode_list"><li>Save As Default saves the options in settings tabs and a few of the standard settings such as Programme Type. The settings are saved as browser cookies.<br />
+</li>
+</ul>
+I therefore assume that this is the only way of persisting these settings for WebPVR Manager and hence if the cookies are lost or glitch, the settings in WebPVR Manager must be reset manually because.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The WPM also was designed to maintain its own configuration settings separate from preferences set with the CLI using --prefs-add. It is strongly recommended that if you are a WPM user you do all your configuration in the WPM.</blockquote>
+<br />
+Is that correct?</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Struggling with saving presets (to replace options file)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

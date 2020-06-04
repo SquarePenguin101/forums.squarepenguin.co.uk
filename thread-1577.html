@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: Programme type '' does not exist</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; ERROR: Programme type '' does not exist</div>
+<div id="pagetitle"><h2>ERROR: Programme type '' does not exist</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">03-11-2017, 05:55 PM</div>
+</div>
+<div class="message">I keep getting this error message:<br />
+<span style="font-weight: bold;" class="mycode_b">ERROR: Programme type '' does not exist</span><br />
+<br />
+I have just updated to the newest Windows version of getIplayer in Firefox 56.0.2 in an attempt to solve the problem.<br />
+<br />
+I pasted the URLs into the Quick URL box - this always worked for me in the past.<br />
+<br />
+Radio show that didn't work = <a href="http://www.bbc.co.uk/programmes/b09by928">http://www.bbc.co.uk/programmes/b09by928</a><br />
+TV show that didn't work = <a href="https://www.bbc.co.uk/iplayer/episode/b09blgy5/radio-2-in-concert-tears-for-fears">https://www.bbc.co.uk/iplayer/episode/b0...-for-fears</a><br />
+<br />
+I am having real problems working out how to generate the verbose log file.<br />
+Do you have some simple instructions on where this can be found or how to generate it? <br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-11-2017, 08:02 PM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a full report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">05-11-2017, 02:08 PM</div>
+</div>
+<div class="message">I don't know how to generate a verbose log. That's what I was asking.<br />
+<br />
+This is the bit i am having problems with:<br />
+<br />
+7.Attach a copy of the output get_iplayer returns in the form of a verbose log text file. If you do not provide a verbose log, it is unlikely that your problem can be diagnosed and thus you are much less likely get a resolution for your issue. Generate verbose output and capture it in a plain text (.txt) file by appending --verbose &gt; /path/to/log.txt 2&gt;&amp;1 to the end of your get_iplayer command line, where /path/to/log.txt is the full path to the log file.<br />
+<br />
+Examples:<br />
+<br />
+Windows <br />
+get_iplayer --get 123 --verbose &gt; C:\Users\jbloggs\log.txt 2&gt;&amp;1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">05-11-2017, 02:41 PM</div>
+</div>
+<div class="message">To generate the log, you need to use the command line version of get_iplayer. You'll find this in the start menu just like the webpvr version (if that's what you normally use, otherwise sorry for teaching you to suck eggs). <br />
+<br />
+Lets break the command down:<br />
+<br />
+<kbd>get_iplayer</kbd> invokes get_iplayer (make it run).<br />
+<br />
+<kbd>--get 123</kbd> tells get_iplayer to obtain the index number 123. I'd recommend for your case using <kbd>--pid=b09blgy5</kbd> which is the pid of the TVprogramme you provided in your previous reply (it's the bit at the end of the URL). You can usually find the pid pretty easily from the URL. <br />
+<br />
+Remember - when downloading radio you need to add <kbd>--type=radio</kbd> to your command. So when you create the log for the radio programme, make sure to include that switch, and to change the pid over from the TV one. (Yes, run the command twice, once for each programme to produce a log. The first file will get overwritten by the second run, so either rename the first file or choose a new file name for the second (I'll show you how below). <br />
+<br />
+<kbd>--verbose</kbd> tells get_iplayer to produce verbose output so we can see what it's doing. <br />
+<br />
+<kbd>&gt; C:\Users\jbloggs\log.txt 2&gt;&amp;1</kbd> is where the magic happens. Sparing you <a href="https://stackoverflow.com/questions/818255/in-the-shell-what-does-21-mean">the details</a> it tells the shell/prompt to take the output get_iplayer produces and put it into the indicated file, in this case <kbd>C:\Users\jbloggs\log.txt</kbd>. <br />
+<br />
+If you had just one log to create I'd suggest using this exact command: <br />
+<br />
+<kbd>get_iplayer --pid=XXXXXXX --verbose&gt; C:%HOMEPATH%\get_iplayer_verbose_log.txt 2&gt;&amp;1</kbd> <br />
+<br />
+When you supply the pid in place of <kbd>XXXXXX</kbd> this will create a file in your user folder called <kbd>get_iplayer_verbose_log.txt</kbd> which will have the verbose output ready for you to attach here.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">BUT </span>- you need to produce two logs, and you don't want to overwrite the first one when you run the command the second time with the second programme, so I've actually created the commands you should use below:<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Create a uniquely named TV log</span><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b09blgy5 --verbose &gt; C:%HOMEPATH%&#92;get_iplayer_verbose_TV_log.txt 2&gt;&amp;1</code></div></div><br />
+<span style="font-weight: bold;" class="mycode_b">Create a uniquely named radio log</span><br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid=b09by928 --type=radio --verbose &gt; C:%HOMEPATH%&#92;get_iplayer_verbose_radio_log.txt 2&gt;&amp;1</code></div></div><br />
+@user-2 I'm not hugely familiar with windows - is there a reason to not use %HOMEPATH%? Would make the command a bit more generic for those unfamiliar with the command line (and bring into line with the Unix/Linux version).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-11-2017, 07:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-11-2017, 02:41 PM)</span></cite>@user-2 I'm not hugely familiar with windows - is there a reason to not use %HOMEPATH%? Would make the command a bit more generic for those unfamiliar with the command line (and bring into line with the Unix/Linux version).</blockquote>OK so long as you explain how to get the value of  %HOMEPATH%. I expect it will always be <kbd>\Users\whoever</kbd> for anyone who posts here, but it doesn't have to be. It also doesn't necessarily live in <kbd>C:</kbd> (there's %HOMEDRIVE% for that), but that also seems unlikely here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">09-11-2017, 03:52 PM</div>
+</div>
+<div class="message">TV log<br />
+<hr class="mycode_hr" />
+Radio log<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Many many thanks for your help.</span><br/><br/>
+<a href="static/thread-1577-get_iplayer_verbose_radio_log.txt">get_iplayer_verbose_radio_log.txt</a><br/>
+<a href="static/thread-1577-get_iplayer_verbose_TV_log.txt">get_iplayer_verbose_TV_log.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2017, 08:10 PM</div>
+</div>
+<div class="message">Thanks for the logs. I can't replicate that behaviour, and unfortunately, get_iplayer doesn't provide any more detail that might be helpful. Try the same two commands in slightly different form:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid="tv:b09blgy5"<br />
+get_iplayer --pid="radio:b09by928"</code></div></div><br />
+If those commands also fail, don't post logs unless they are different from the ones you posted earlier.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">10-11-2017, 01:21 PM</div>
+</div>
+<div class="message">Pasting those two bits of text into the run box in Windows start gives me the error message again.<br />
+<br />
+I am going to try complete uninstall then reinstall and see what happens.<br />
+<br />
+[ I get the same result]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">10-11-2017, 01:42 PM</div>
+</div>
+<div class="message">Here 'tis.<br/><br/>
+<a href="static/thread-1577-get_iplayer_verbose_TV_log2.txt">get_iplayer_verbose_TV_log2.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-11-2017, 01:46 PM</div>
+</div>
+<div class="message">Thanks for checking. After you re-install, do a full rebuild of your cache <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --cache-rebuild --type=tv,radio</code></div></div> I don't have any concrete suspicion that it will make a difference, but you might as well start from what should be a known good state.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1977</h2></div><div class="dateline">10-11-2017, 01:57 PM</div>
+</div>
+<div class="message">That appears to be working.<br />
+Thank you so very much.<br />
+<hr class="mycode_hr" />
+Yes, the programme came down.<br />
+Thank you again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; ERROR: Programme type '' does not exist</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

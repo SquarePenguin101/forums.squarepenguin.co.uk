@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Some Downloads Have Audio Out Of Sync With Image</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Some Downloads Have Audio Out Of Sync With Image</div>
+<div id="pagetitle"><h2>Some Downloads Have Audio Out Of Sync With Image</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1119-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">11-12-2016, 03:52 PM</div>
+</div>
+<div class="message">I've only recently noticed this &amp; that is playing back a download but not all downloads using VLC the playback is jerky as in the image plays for a few seconds &amp; then stops for a split second &amp; carries on like that. The audio does not do this but flows normally. So I tried playing the download using a different video media software, SMPlayer, &amp; this time the image runs smoothly but the audio is out of sync with the people talking etc. Now after checking several downloads I've come across a common denominator &amp; that is the problem occurs with HD downloads i.e. I use the CLI &amp; I copy the URL from the BBC iPlayer &amp; paste it into the CLI but with the added --tvmode=best at the end for the programmes that I do want downloading in the highest definition, but programmes I've downloaded in the default mode I have no problem with the playback.<br />
+So any ideas please? I hope so because I think I have a lot of programmes downloaded like this &amp; I don't know how far back it goes &amp; most of them I won't be able to re-download as they will be out of date. Plus as you can appreciate the time etc of re-downloading. My downloads are normally in FLV format which gets converted to MP4 as the donload finishes.<br />
+I have to say that I'm only using GiP 2.94 only &amp; my ffmpeg is v2.2.3 &amp; my RTMPDump is v2.4. I'm running Windows 8.1.<br />
+Can I also ask something else besides the above problem. Should I upgrade to GiP 2.97 &amp; if I do will it be best to use the installer &amp; if I use that should I protect the folder with my present downloads &amp; the download history file as obviously I don't want them overwritten if I use the windows auto installer?<br />
+Thanks in advance to any replies &amp; the great work done by people like Rinky Dinky.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2016, 04:58 PM</div>
+</div>
+<div class="message">Upgrade to v2.97. GiP 2.94 is no longer supported and will likely continue to cause problems. There is no need to protect downloaded files and download history during upgrade - the installer doesn't touch them - but make a backup if it makes you feel better.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">11-12-2016, 05:50 PM</div>
+</div>
+<div class="message">Thanks for that Dinky &amp; your quick reply. I shall go &amp; do that in a short as I'm just eating at the mo.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2016, 05:56 PM</div>
+</div>
+<div class="message">Before switching to v2.97, read this:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modes#config-quality">https://github.com/get-iplayer/get_iplay...ig-quality</a><br />
+<br />
+You will probably want to use <kbd>--tvmode=tv25fps</kbd>, or else HD downloads will be twice as big as those in v2.94.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">11-12-2016, 05:59 PM</div>
+</div>
+<div class="message">By the way Dinky, I've noticed here &amp; there over time when you have replied to some people with problems downloading that they are not in the UK as the message or similar, "You appear to be using get_iplayer outside the UK" comes up. Well I've never been out of the UK since the first day I ever used GiP but I do get that message when I am trying to download a programme that is out of date i.e. older than 30 days or 7 days if it is a film. I don't know if you were aware of this &amp; if you are then obviously ignore my message here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2016, 06:04 PM</div>
+</div>
+<div class="message">My responses in the forums do not necessarily correlate with GiP warning messages. Interpreting error conditions in GiP is not an exact science, and sometimes you can physically be in the UK while appearing outside it as far as the BBC is concerned. Again, v2.97 works a bit better in this area.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">11-12-2016, 09:02 PM</div>
+</div>
+<div class="message">Hi Dinky,<br />
+Thanks for the previous tips &amp; links etc.<br />
+Eventually I got to download GiP v2.97 &amp; installed it without any problem. Before doing a test download, actually a re-download of one of the programmes I've got problems with, I checked that I had got v2.97 installed. Then I re-downloaded a programme that I originally downloaded in HD which was a file size of 1,128,574KB &amp; this had the jerky picture but the audio was OK &amp; in sync using VLC player. But then playing this using SMPlayer the picture ran smoothly but the audio was out of sync. So now with the new downloaded programme which now had a file size of 2,445,551KB I first played it using the VLC Player &amp; the same problem occurs &amp; with the SMPlayer it is the same as above with the picture running smoothly but the audio lags quite a lot behind. So if the picture shows someone starting to talk the audio kicks in about 23secs later. So at the mo GiP v2.97 has not had any effect on my problem I'm afraid. As I've said I have no problems with the standard download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-12-2016, 09:32 PM</div>
+</div>
+<div class="message">You will need to <a href="thread-706.html">follow our instructions</a> to provide a full report. Without a proper report, we have no clue what you are really doing, and no way of diagnosing what is wrong.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">11-12-2016, 09:46 PM</div>
+</div>
+<div class="message">OK Dinky, I'll do that now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">12-12-2016, 09:27 PM</div>
+</div>
+<div class="message">Hi again Dinky,<br />
+Let me try &amp; explain quickly what I have done since yesterday after your last post.<br />
+Whilst I was looking at the guidelines on correctly posting a problem/question etc I was using the newly downloaded GiP v2.97 software to download a short BBC News programme but in several types of quality including using --tvmode=flashbetter. After each download I tried playing the programme, but any download that was in a resolution higher than the SD one that was in the GiP v2.94 which I had until yesterday would not play properly as stated earlier in this post. So what I did then was to copy each programme that was in the different resolutions to my Galaxy Note 3 phone &amp; tried playing each one on it. And the result was that all the programmes played whether is was the old SD version or the 50fps HD version. So the conclusion is that I have a problem with my laptop &amp; not the actual downloads whatever the resolution etc. So I need to find out what has changed on my Laptop as in recent past I had no problems viewing HD downloads like I do now. So I'm sorry that I've bothered you Dinky but in the end I've got the latest GiP, although it's different &amp; I'm trying to get used to it.<br />
+<br />
+But let me say Dinky that although I'm now familiar to the different modes that I can download programmes in, it does mean more work for me because of the way I download them using the URL method to download in the old SD mode using --tvmode=flashbetter. But I do have a problem with the new v2.97 GiP software. Not long ago I had several downloads on the go &amp; a couple of them timed out before they had finished. Loss of Internet signal or similar which I get a lot. So the message I get with v2.97 which is different to v2.94 which just basically said "timed out" I get the following.<br />
+<br />
+INFO: Begin recording file: C:\Users\Purple PC\Desktop\iPlayer Recordings\Tubular_Bells_The_Mike_Oldfield_Story_-__b03cw8g0_original.partial.mp4.ts<br />
+Recording:  1188.23MB / 2337.99MB  1439kbps  50.8% 01:49:06 remaining<br />
+ERROR: Failed to download segment (255)<br />
+ERROR: Segment URL: <a href="http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/ba5551-b03cw37g/vf_b03cw37g_d5fb4153-a94c-4bc1-ba26-7d27441fa296.ism.hlsv2.ism/vf_b03cw37g_d5fb4153-a94c-4bc1-ba26-7d27441fa296.ism.hlsv2-audio=128000-video=5070000-255.ts?s=1481539117&amp;e=1481582317&amp;h=f3b3fe9b970aa1f6c2deef3973bad432">http://vod-hls-uk-live.bbcfmt.vo.llnwd.n...3973bad432</a><br />
+INFO: Recorded: 1189.55MB in 01:53:49 at  1427kbps to C:\Users\Purple PC\Desktop<br />
+\iPlayer Recordings\Tubular_Bells_The_Mike_Oldfield_Story_-__b03cw8g0_original.partial.mp4.ts<br />
+WARNING: Retry recording for 'Tubular Bells: The Mike Oldfield Story - - (b03cw8g0)'<br />
+INFO: File name prefix = Tubular_Bells_The_Mike_Oldfield_Story_-__b03cw8g0_original<br />
+ERROR: Cannot instantiate streamer for class=Streamer:: version=original mode=hvfhd1<br />
+INFO: skipping this programme<br />
+ERROR: Failed to record 'Tubular Bells: The Mike Oldfield Story - - (b03cw8g0)'<br />
+<br />
+<br />
+So I did what I did with v2.94 &amp; that is to restart the download &amp; with v2.94 in most cases it carries on downloading from roughly where it stopped when it timed out. But with v2.97 it looks like it starts the download again from scratch &amp; overwrites the partial download that got created when the original download stopped due to timing out. As you can see from the above Copy &amp; Paste from the CLI that the download was 50.8% done when it timed out &amp; stopped. To get to this point it took a long time even though the download speed was about 15Mbps so to start from scratch again each time this happens &amp; I do get timed out a lot maybe because I'm connected to WiFi HotSpots most of the time, would be a right pain. In v2.94 like I said the download would resume although it does say that some timings or something doesn't match.<br />
+So is there a problem with resuming downloads that have stopped due to timing out with v2.97?<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2016, 09:57 PM</div>
+</div>
+<div class="message">It seems that your laptop and/or upstream connection cannot sustain get_iplayer downloads, especially if they are run simultaneously. All I can suggest is downloading one programme at a time, but if the latency is that bad it might not help much.<br />
+<br />
+Only <kbd>flash</kbd> modes will resume downloading across sessions, for reasons not worth going into here. Resume functionality should be implemented for <kbd>hvf/hls</kbd> modes in the next release. The <kbd>flash</kbd> modes will be available for at least one more release, so you should keep using them for the present in order to benefit from the resume functionality.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">12-12-2016, 10:18 PM</div>
+</div>
+<div class="message">Thanks Dinky &amp; like everyone else we appreciate the work &amp; help you do.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">12-12-2016, 10:32 PM</div>
+</div>
+<div class="message">Sorry, but this is something I've noticed with v2.97 after a programme has finished downloading &amp; before it starts converting. This is what is showing in the CLI.<br />
+<br />
+INFO: Begin converting file (etc)<br />
+[h264 @ 04ae1a20] non-existing SPS 0 referenced in buffering period<br />
+Last message repeated 1 times<br />
+[h264 @ 04ae1a20] non-existing SPS 0 referenced in buffering period<br />
+frame= 501 fps=0.0 q=-1.0 size= 3807kb time=00:00:20.01 bitrate=1558.3kbits/ etc<br />
+etc, etc<br />
+<br />
+I've noticed this at least twice now. Some of the text i.e. non-existing SPS 0 referenced in buffering period is in red &amp; the other bit of text is in blue. I don't know whether this is normal or not.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2016, 10:36 PM</div>
+</div>
+<div class="message">See Recording section in FAQ list</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">20-12-2016, 02:19 PM</div>
+</div>
+<div class="message">Thanks for all your help &amp; advice so far Dinky.<br />
+As previously said that my problem with viewing a HD programme download using VLC media player or similar is related to a problem I have elsewhere &amp; not with the download itself. SD downloads play fine &amp; the HD ones play fine on my Note 3 phone. So before I found out that my problem on my Laptop is nothing to do with the actual HD download I did what you had suggested &amp; upgraded my GiP to v2.97 from v2.94. So since your last post here I've been using GiP v2.97 &amp; getting used to how it works differently to my previous version. I know how to download the various quality options etc but I've not had a good time this week &amp; I'm so far behind. I have a few problems/issues.<br />
+One possible issue which you are aware of already Dinky &amp; you have advised. That problem is if I'm downloading a programme &amp; let's say I lose internet connection for a couple of minutes, when I start the download again instead of continuing the download it starts again &amp; overwrites what has been downloaded so far. I think this might only be with the HD downloads. I will have to check this problem again to see if I'm still getting it. Also, when I cannot finish the download &amp; I want to continue it the next day, for instance, with v2.94 that I was using I could continue the download at another time &amp; it would continue from where it was stopped. This was a useful thing for me but I don't think that works with v2.97.<br />
+Now why I am so far behind with downloads this week is for 2 reasons. The first one is that although wherever I am connected to a Wi-Fi Hotspot &amp; the connection speed is say 15Mbps, it seems with Gip v2.97 it takes longer to download the programmes compared to when I was using Gip v2.94. I'm almost certain there is a difference in the timed it takes to download a programme whether it is a SD or HD 25fps programme.<br />
+Now other than the possible time it takes to download a programme now compared to before, I also have an issue once the download has finished &amp; the .ts file gets converted to the MP4 file. Now afterv I upgraded to Gip v2.97 the conversion at the end of a download can go as fast as 100x &amp; this speed is shown at the bottom of the CLI screen. But then there are many, too many, times that the speed of conversion has gone as low as 0.0012x. In this situation a 350Mb download has taken something like nearly 2-3hrs to finish converting to a MP4 file. Now with Gip v2.94 that I was using prior to last week I never had an issue with the converting side of things. The speed was always quite fast.<br />
+So I'd like to ask some questions please &amp; I'm sorry I'm asking more than one.<br />
+<br />
+For now, how best can I revert back to GiP v2.94?<br />
+<br />
+What program, ffmpeg??? does the converting after a programme has been downloaded?<br />
+And where does this program live?<br />
+I'm using Windows 8.1 on a 64bit machine. So is it best for me to always use 64bit software rather than 32bit? For instance, there are 32bit &amp; 64bit versions of ffmpeg. So should I be using the 64bit version?<br />
+<br />
+Am I right in thinking that GiP is only available in 32bit versions?<br />
+<br />
+In advance again I'd just like to say Thanks for any advice etc that anybody may have as well as Dinky.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-12-2016, 02:54 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-12-2016, 02:19 PM)</span></cite>Also, when I cannot finish the download &amp; I want to continue it the next day, for instance, with v2.94 that I was using I could continue the download at another time &amp; it would continue from where it was stopped. This was a useful thing for me but I don't think that works with v2.97.</blockquote>As I already told you, use <kbd>--modes=flash</kbd> if you want the same resume behavour in 2.97 as 2.94<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The first one is that although wherever I am connected to a Wi-Fi Hotspot &amp; the connection speed is say 15Mbps, it seems with Gip v2.97 it takes longer to download the programmes compared to when I was using Gip v2.94. I'm almost certain there is a difference in the timed it takes to download a programme whether it is a SD or HD 25fps programme.</blockquote>
+Wi-fi connection speed is no predictor of download speed. Unless you can demonstrate you are performing a controlled test with exactly the same media streams under exactly the same conditions, such comparisons are essentially meaningless.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>In this situation a 350Mb download has taken something like nearly 2-3hrs to finish converting to a MP4 file. Now with Gip v2.94 that I was using prior to last week I never had an issue with the converting side of things. The speed was always quite fast.</blockquote>
+That would usually indicate your machine is overloaded, but there is no way for me to know. It could also be a slow external disk being used for output directory (especially over wifi). If that isn't the case, you can try swapping in another version of ffmpeg, though the supplied version works well enough for everyone else.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>For now, how best can I revert back to GiP v2.94?</blockquote>
+You can't, at least not easily. Your issues have nothing to do with get_iplayer itself, so there would be no point.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>What program, ffmpeg??? does the converting after a programme has been downloaded?<br />
+And where does this program live?</blockquote>
+In <kbd>utils</kbd> subdirectory of installation directory<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>For instance, there are 32bit &amp; 64bit versions of ffmpeg. So should I be using the 64bit version?</blockquote>
+It doesn't matter as far as get_iplayer is concerned<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Am I right in thinking that GiP is only available in 32bit versions?</blockquote>
+Yes, and that will not change.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">20-12-2016, 03:07 PM</div>
+</div>
+<div class="message">Since my post before this not so long ago &amp; in addition to that.<br />
+<br />
+After reading a different post titled '2.97 failing to produce files' I've been slightly enlightened.<br />
+ffmpeg is the program that converts a .ts file to a MP4 file.<br />
+What I also understand is that the latest ffmpeg version is 3.2.2 &amp; can be got from here for Linux &amp; Windows,<br />
+<br />
+<a href="https://www.johnvansickle.com/ffmpeg/">https://www.johnvansickle.com/ffmpeg/</a><br />
+<br />
+And for those people like me (for now), these are the links for both the 32bit &amp; 64bit Windows static builds,<br />
+<br />
+<br />
+release: 3.2.2<br />
+x86 build: <a href="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-32bit-static.tar.xz.md5">https://johnvansickle.com/ffmpeg/release...tar.xz.md5</a><br />
+x86_64 build: <a href="https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz.md5">https://johnvansickle.com/ffmpeg/release...tar.xz.md5</a><br />
+<br />
+As regards the above, I still have the questions,as regards GiP.<br />
+Where does ffmpeg live? so that I can check the version I have &amp; to make sure if I need to download the latest that it goes in the right directory etc.<br />
+My Laptop is a 64bit machine running Widows 8.1 64bit so is it best for me to download the 64bit build of ffmpeg or does GiP need the 32bit build?<br />
+<br />
+Thanks.<br />
+<hr class="mycode_hr" />
+Thanks for your reply above Dinky &amp; I only saw it after I had sent another post. So sorry about that &amp; you have answered some or all the questions in my 2nd post now. So thanks again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-12-2016, 03:12 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-12-2016, 03:07 PM)</span></cite>What I also understand is that the latest ffmpeg version is 3.2.2 &amp; can be got from here for Linux &amp; Windows,<br />
+<br />
+<a href="https://www.johnvansickle.com/ffmpeg/">https://www.johnvansickle.com/ffmpeg/</a></blockquote>Those builds are for Linux only. For Windows:<br />
+<br />
+<a href="https://ffmpeg.zeranoe.com/builds/">https://ffmpeg.zeranoe.com/builds/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-991</h2></div><div class="dateline">20-12-2016, 04:02 PM</div>
+</div>
+<div class="message">Thanks for that last post with that info in it Dinky.<br />
+<br />
+And finally (hopefully lol) just confirm I'm using the right commands for what I want to do Dinky. By the way I'm not a beginner in computing terms but I'm not as knowledgeable or as experienced as yourself or others like Vangelis etc especially GiP.<br />
+Anyway, I use the CLI &amp; for the examples I'm about to give I use the URL &amp; not the PID of a programme. I download programmes in SD &amp; HD according to my preference.<br />
+<br />
+Assuming the programme is available in both SD &amp; HD versions to download, what I used in v2.94 to download a programme in SD is:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a><br />
+<br />
+Now if I wanted this programme in HD I used this:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a> --tvmode=best<br />
+<br />
+But now, using v2.97, when I want the download to be in SD &amp; with the benefit of the resume behaviour I use this:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a>  --tvmode=flashbetter<br />
+<br />
+And if I want the HD version but only at 25fps &amp; no resume behaviour I use this:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a> --tvmode=tv25fps<br />
+<br />
+But if I want the full blown HD version at 50fps &amp; no resume behaviour I would just do this:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a><br />
+<br />
+Now let me see if I've understood you Dinky in regards to v2.97 &amp; the download options.<br />
+If I want to download the above programme in SD, HD 25fps, HD 50fps &amp; with the resume behaviour I need to use --modes=flash in my CLI.<br />
+e.g.<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a> --modes=flash<br />
+<br />
+As I've used already to download this programme in SD I would use this:-<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a>  --tvmode=flashbetter<br />
+<br />
+But using --modes=flash to have the ressume behaviour with the HD 25fps &amp; HD 50fps, what options do I add on to the following so I get the HD downloads but with the resume behaviour?<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a> --modes=flash</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-12-2016, 04:11 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (20-12-2016, 04:02 PM)</span></cite>But using --modes=flash to have the ressume behaviour with the HD 25fps &amp; HD 50fps, what options do I add on to the following so I get the HD downloads but with the resume behaviour?<br />
+get_iplayer --url <a href="http://www.bbc.co.uk/iplayer/episode/b0830jyr/the-undiscovered-peter-cook">http://www.bbc.co.uk/iplayer/episode/b08...peter-cook</a> --modes=flash</blockquote>That is all you need. --modes=flash will automatically try best quality for both TV and radio. However, there are no 50fps flash streams available.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1119-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Some Downloads Have Audio Out Of Sync With Image</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

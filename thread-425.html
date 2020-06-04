@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - possibility to search based on time since a program was available</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; possibility to search based on time since a program was available</div>
+<div id="pagetitle"><h2>possibility to search based on time since a program was available</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-940</h2></div><div class="dateline">04-06-2015, 01:12 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+the "--since" now looks at time based on cache age. Why not make it based on the "actual program broadcast time". In the current situation, the problem is as follows.<br />
+<br />
+I usually use get_iplayer to download only today's (I mean here "day" like current day - monday, tuesday...friday) podcast of the program "Radio 4-Best of Today". Assume I did NOT refresh on thurday, friday, saturday and sunday. Now on Monday, when I refresh, it assumes all podcasts from Thu-Monday as NEW and downloads them.<br />
+<br />
+I would like the "--since" parameter, to use "available" (which is date) to look for what programs to download. For example  if you take the file podcast.cache:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>#index|type|name|pid|available|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web<br />
+24114|podcast|Best of Today|http://downloads.bbc.co.uk/podcasts/radio4/today/today_20150527-0753c.mp3|Wed, 27 May 2015 07:53:00 +0100|Wednesday's business news with Simon Jack|||default|10:58|Will there be anything in the Queen's speech to help small businesses?|BBC Radio 4|News &amp; Politics|http://www.bbc.co.uk/podcasts/assets/artwork/today.jpg|1433164317||http://www.bbc.co.uk/today|</code></div></div><br />
+<br />
+<br />
+The variable is then "available"=Wed, 27 May 2015 07:53:00 +0100<br />
+If this is possible, then one could search for programs between date ???? -&gt; ????, instead of cache age.<br />
+<br />
+Many thanks for your great work!<br />
+<br />
+PS: <br />
+<br />
+Ok, after a bit of trying I can do this for "radio" in a different way (but not for podcasts)<br />
+<br />
+--refresh-limit-radio  1 --refresh-feeds=schedule --type=radio  "today</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-06-2015, 02:53 PM</div>
+</div>
+<div class="message">The <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--since</code></div></div> option addresses a different issue, so its meaning is not going to change.  As to whether a new option is merited for your use case, I'm personally unconvinced.  The audience would be users who want to download the current day's episodes from a daily podcast but don't want to type a second command to do so.  That's too narrow for me to expend any effort, but someone else might be motivated enough.  An additional problem is that the format of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>available</code></div></div> values in the podcast cache doesn't lend itself to comparisons, though someone could change that.  However, that format allows you to employ regular expressions to do exactly what you want.  For example, to get only Monday's episodes:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get --type podcast --fields=name,available "best of today.*mon"</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; possibility to search based on time since a program was available</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

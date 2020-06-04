@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Slow down and file name change.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Slow down and file name change.</div>
+<div id="pagetitle"><h2>Slow down and file name change.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-511</h2></div><div class="dateline">23-04-2014, 09:07 AM</div>
+</div>
+<div class="message">I have been using get_iplayer on a daily basis since July 2013. My preference is for speech programs from R4 and R4 extra. This has worked really well until yesterday and today when the download speed was a 20th of the normal speed. (Web access was normal for browsing and other downloads.) Also the previous default file of .m4a was not used, instead it is now .wma<br />
+<br />
+Have I inadvertently changed something? Or perhaps the fact I am still using Windows XP has caught up with me?<br />
+<br />
+I have tried on both Chrome and Firefox with the same result on both. <br />
+<br />
+I would welcome suggestions as to what is happening.<br />
+<br />
+Tony</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">23-04-2014, 10:40 AM</div>
+</div>
+<div class="message">Your issue seems related to this thread:<br />
+<br />
+<a href="/topic/can-only-get-radio-in-wma-format/">/topic...ma-format/</a><br />
+<br />
+There do seem to be a larger than usual number of problems with radio downloads at the moment so have a read through and see if this is what you are experiencing.<br />
+<br />
+Time and perseverance  might be the best remedies for the moment though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-511</h2></div><div class="dateline">24-04-2014, 09:13 AM</div>
+</div>
+<div class="message">Thanks, comfortable to know I was not aloneâ¦â¦<br />
+Two full days of getting .wma files in âreal timeâ however back âas normalâ this morning.<br />
+<br />
+I would like get_iplayer to download the files that arrived as .wmaâs again but this time as .m4a. If I attempt this I get the message ârecording completeâ even though the already recorded file has been removed from the default download area.<br />
+<br />
+I assume get_iplayer keeps a log of what it has downloaded. Is it possible to get at and edit this file so that selected downloads can be done again? (I am well within the 7 days allowed for downloads.)<br />
+<br />
+Tony</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">24-04-2014, 09:49 AM</div>
+</div>
+<div class="message">This one is easy to fix. Just append the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> to whatever command you use to download the shows.<br />
+<br />
+You can stick it anywhere, front middle or end, as long as it go in somewhere it will tell get_iplayer to ignore the download history and allow you to re-download a show that you already have.<br />
+<br />
+I usually stick <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--force</code></div></div> at the end of whatever command I'm using at that particular time if I ever have an error and need to grab something twice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-04-2014, 10:48 AM</div>
+</div>
+<div class="message">I would also suggest that you remove wma from the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>modes</code></div></div> option in your preferences.  It was removed from the default setting in v2.84, but presumably you still have it explicitly configured in your preferences from an earlier installation.  You can always specify wma for one-off use, but as you've seen, it's not really suitable for normal downloading.  See "Recording Modes" doc in wiki for instructions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-511</h2></div><div class="dateline">24-04-2014, 07:13 PM</div>
+</div>
+<div class="message">Thanks for the prompt suggestions.<br />
+âThis one is easy to fix. Just append the command --force to whatever command you use to download the shows.â<br />
+<br />
+I have been using the Windows front end so I have been clicking choices rather than being in a position to âappend commandsâ, which I assume are done via the command prompt.<br />
+<br />
+I was about to start getting to grips with working this way when I noticed that information was being stored in:-<br />
+C:\Documents and Settings\user\.get_iplayer\download_history<br />
+This turned out to be a text file and when opened with Wordpad I was able to remove the line that listed the file I wanted downloaded again. This worked for meâ¦..<br />
+<br />
+Now getting to grips with âremoving wma from the modes optionâ.<br />
+<br />
+Thanks again<br />
+Tony</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Slow down and file name change.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

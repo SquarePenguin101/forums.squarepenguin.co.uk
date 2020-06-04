@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer --pvr downloads TV programmes when type is  set to 'radio'</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; get_iplayer --pvr downloads TV programmes when type is  set to 'radio'</div>
+<div id="pagetitle"><h2>get_iplayer --pvr downloads TV programmes when type is  set to 'radio'</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">12-05-2018, 11:24 AM</div>
+</div>
+<div class="message">Hi folks,<br />
+<br />
+I'm running get_iplayer v3.14 on Raspbian. Starting some time over the last few weeks I've started getting a handful of TV programmes being downloaded alongside radio programmes when using get_iplayer --pvr, even though the search list has 'type = radio' set, confirmed using get_iplayer --pvr-list. I believe this behaviour started with v3.13, but I'm not certain if it was coincident with the update.<br />
+<br />
+I have about 450 search terms defined, in case that's relevant. (This has accumulated over a long time, and I could easily perform some cleanup if that would help.)<br />
+<br />
+My intention is to download radio programmes exclusively, so I also have 'type = radio' set in my preferences, confirmed using get_iplayer --prefs-show.<br />
+<br />
+This is a very minor problem -- I just cron to delete any downloaded MP4 files -- it's just a bit of a waste of bandwidth.<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks,<br />
+Peter</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-05-2018, 12:25 PM</div>
+</div>
+<div class="message">Let's see the output of <kbd>--prefs-show</kbd> then please.<br />
+<br />
+You can copy the output to a reply here but remember to then select the text and click the little get_iplayer symbol in the panel above the text input area - this will format the text so it's easily readable when posted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">12-05-2018, 01:22 PM</div>
+</div>
+<div class="message">Here you go:<br />
+<br />
+<kbd>&#36; get_iplayer --prefs-show<br />
+Options in '/home/pwt/.get_iplayer/options'<br />
+ nopurge = 1<br />
+ refreshexcludegroupsradio = regional,local<br />
+ type = radio</kbd><br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-05-2018, 03:41 PM</div>
+</div>
+<div class="message">Thanks. <br />
+<br />
+And what are the PVR entries for the shows/PVR entries that are having the issue? <br />
+<br />
+So those PVR entries that are downloading TV shows - please post the contents of the pvr record here. I know you've said you've checked them for <kbd>type = radio</kbd>, but at least others could attempt the download to and see if the behaviour is limited to your machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">13-05-2018, 12:41 PM</div>
+</div>
+<div class="message">Thanks for the responses.<br />
+<br />
+The output of <kbd>get_iplayer --pvr-list</kbd> is captured in the following <br />
+<a href="https://gist.github.com/pwt/e81c0c405160a27d4d66c62167334c2d">gist</a>.<br />
+<br />
+Yesterday, three TV programmes were downloaded, with programme IDs of:<br />
+<br />
+- b07pn5ws<br />
+- p02d716w<br />
+- b0b22drn<br />
+<br />
+Cheers,<br />
+Peter</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-05-2018, 04:39 PM</div>
+</div>
+<div class="message">This is your problem: <kbd>search1 2525</kbd>. See Searching section of FAQ list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">13-05-2018, 05:53 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-05-2018, 04:39 PM)</span></cite>This is your problem: <kbd>search1 2525</kbd>. See Searching section of FAQ list.</blockquote><br />
+Got it. Thanks for the help!<br />
+<br />
+(My git log tells me I added that search entry on 6th April -- which is in line with when the problem started).<br />
+<br />
+Regards,<br />
+Peter.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; get_iplayer --pvr downloads TV programmes when type is  set to 'radio'</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

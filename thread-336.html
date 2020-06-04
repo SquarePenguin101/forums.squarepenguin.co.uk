@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio mode sample rates</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio mode sample rates</div>
+<div id="pagetitle"><h2>Radio mode sample rates</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-835</h2></div><div class="dateline">22-01-2015, 07:29 AM</div>
+</div>
+<div class="message">In the past I have used HiDownload to record FLV files from Radio 3. The AAC-LC files in the FLV files downloaded have a data rate c. 320kbps and sample rate of 44.1kHz. When I use get_iPlayer to download the the default highest stream, I again get a data rate c. 320kbps, but a sample rate of 48Hz. This appears to be flashaachigh1 mode. Am I right in assuming that flashaachigh2 mode will have the 44.1kHz sample rate, and if so, how do I specify flashaachigh2, as against flashaachigh1, for the mode I wish to record?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2015, 02:10 PM</div>
+</div>
+<div class="message">Both those Flash modes will give you 48kHz.  Use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes=hlsaachigh</code></div></div> for 320k 44.1kHz R3 downloads.  That will be the get_iplayer default in the near future as the Beeb get rid of RTMP streaming for radio.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-835</h2></div><div class="dateline">22-01-2015, 04:37 PM</div>
+</div>
+<div class="message">Thanks for that. However, I have just noticed that since last week the Flash 320kbps version grabbed by HiDownload (when it works) also uses a 48kHz sample rate. Previously (the last successful access I had before today was on the 13th) the sample rate had been 44.1kHz. Oh, and when I tried " --modes=hlsaachigh" get_ilayer reported that no hLs streams were available, and recommended using "--modes=flashaachigh", which did indeed work, though again with a samople rate of 48kHz. Looks like the Beeb has now switched to that sample rate for all the Radio 3 "HD Sound" streams.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2015, 04:51 PM</div>
+</div>
+<div class="message">I assumed you were downloading on-demand content rather than recording the live stream.  As you've seen, there is not yet a hlsaachigh mode for R3 live, so flashaachigh is your only 320k choice for the moment.  That may change, but the BBC are currently in the midst of changing their audio streaming, so not sure.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-835</h2></div><div class="dateline">22-01-2015, 06:35 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/radio-mode-sample-rates/#post-11108">Quote:</a>&lt;/div&gt;I assumed you were downloading on-demand content rather than recording the live stream.  As youâve seen, there is not yet a hlsaachigh mode for R3 live, so flashaachigh is your only 320k choice for the moment.  That may change, but the BBC are currently in the midst of changing their audio streaming, so not sure.</blockquote>
+<br />
+Sorry for any confusion but it is indeed the on demand (or "Listen Again" as the Beeb have it) files that I am accessing, and it is that which led to get_iplayer reporting no hls version. I have all too often had drop-outs and crashes when trying to record the live HD Sound stream, so avoid that route.<br />
+<br />
+Though HiDownload has some attractions in terms of convenience (I started using it when the Prom 320kbps experimental streams were initiated), get_iplayer does appear to be more reliable, and is thus likely to become my first resort in future, even if it does seem a little slower. Using Yamb to extract the .aac file for editing with mp3DirectCut is not that much more hassle than using FLVExtract.exe (which is the preferred option for extracting the .aac files from the FLVs downloaded by HiDownload).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2015, 08:21 PM</div>
+</div>
+<div class="message">I suppose that not every R3 on-demand programme is guaranteed to have a 320k version.  Unless you identify the programme in question, there is nothing more I can tell you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-835</h2></div><div class="dateline">23-01-2015, 05:03 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/radio-mode-sample-rates/#post-11110">Quote:</a>&lt;/div&gt;I suppose that not every R3 on-demand programme is guaranteed to have a 320k version.  Unless you identify the programme in question, there is nothing more I can tell you.</blockquote>
+<br />
+All Radio 3 programmes are reckoned to be available in 320kbps for 30 days, and get_iplayer seems to have no problems saving what now appears to have become the default sample rate of 48kHz at that data rate. It's HiDownload which seems to have problems with some programmes. Thanks for the advice you have been able to offer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Radio mode sample rates</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to 'get' an item under Linux; OK in Windows</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Unable to 'get' an item under Linux; OK in Windows</div>
+<div id="pagetitle"><h2>Unable to 'get' an item under Linux; OK in Windows</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">21-02-2014, 07:32 PM</div>
+</div>
+<div class="message">Last time I used get_iplayer (V2.79, August 2012) I could easily locate and download Radio 3 broadcasts (episodes of Late Junction to be precise) without any problem. I still have many *'flv or *.aac broadcasts in my on-line music library, under Linux. I say 'download' because they is what that seemed to be: the whole thing would be copied to my PC within a few minutes.<br />
+<br />
+This week I have returned to get_iplayer - now Version 2.85 - with the same version of Ubuntu (12.04) but, even though I can find the latest Late Junction recordings, get-iplayer fails to download them. It has 2 attempts, the second using the option --modes=wma. Both attempts fail.<br />
+<br />
+If I try the same action with latest windows version, under WinXP, then the first attempt fails, as under Ubuntu, but the second attempt succeeds: I end up with a large *.wma file on my PC.<br />
+<br />
+But there is one huge difference from what happened in 2012: download now takes as long as the original broadcast. It seems as if get_iplayer is running as a 'recorder' of the Late Junction episode, which is being broadcast again (but only to me, and, btw, not at the same quality as the original broadcast).<br />
+<br />
+Why is the Linux version failing to download the item?<br />
+<br />
+Why does the Windows version need 2 attempts?<br />
+<br />
+Why does it take so long?<br />
+<br />
+Any suggestion gratefully received<br />
+<br />
+Regards<br />
+<br />
+GreatbRidge<br />
+<br />
+(ps, contrary to appearances, honestly, I'm not a spammer; no, seriously, I'm not; trust me on this. btw would you like some cheap male-virility-enhancing pills? I can do you a good price....)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-02-2014, 08:09 PM</div>
+</div>
+<div class="message">Don't include wma in --modes.  If it was left in your settings from the old version of get_iplayer, remove it.  It is not longer included by default, so I presume it's a leftover.  WMA downloads are real-time only, as you've seen, so it is useless for anything except live radio.<br />
+<br />
+As for the more general issue of why it failed over to WMA, you've provided no information to work with.  Re-run the download for ONE programme only and add the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> option.  Post the output as an attachment.  Do not - repeat - do not paste the output into your reply.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 12:37 AM</div>
+</div>
+<div class="message">OK will do. A further update before I try this: ,y attempts to 'download' in Windows have all failed this evening with similar error messages to Linux.<br />
+<br />
+I have no run get-ip for a single download and look to copy the voluminous out put to an attachment</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 12:42 AM</div>
+</div>
+<div class="message">OK, this forum rejected my attachment; Ill try it with a different file-type</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2014, 02:25 AM</div>
+</div>
+<div class="message">Thanks.  The problem is clear from the log:<br />
+<br />
+ERROR: RTMP_Connect0, failed to connect socket. 110 (Connection timed out)<br />
+<br />
+No problems downloading that program here, so presumably there is a network connectivity problem upstream from you.  Another possibility is that you have blocked port 1935 (for rtmpdump) outbound on your router.  Not much help we can offer in that department, I'm afraid.<br />
+<br />
+One other thing: remove rtmptvopts from your settings as well.  That is obsolete.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 11:49 AM</div>
+</div>
+<div class="message">Thanks for the clear explanation: simply stated (but somewhat less simple for me to fix, I fear); this might also explain why the WinXP download failed too (the router being their only common point)<br />
+<br />
+Router blocked port 1935 OUTBOUND - hmm, don't understand that: why would a blocked outbound port prevent a download (inbound, surely ?) from working?<br />
+<br />
+"remove rtmptvopts from your settings" - I was not aware that there were any user-configurable settings for get-iplayer, nor do I have any idea where I might find them: any pointers?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 11:58 AM</div>
+</div>
+<div class="message">Ooops_ too quick to ask somebody else to do the work; sorry. I found the options file location by the simple process of "RTFM"</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 12:43 PM</div>
+</div>
+<div class="message">I have now found a work-around to the problem, which has side effects - I assume. I'm writing this up here for the benefit of other Virgin Media (VM) Super Hub users who may be having a the same problem.<br />
+<br />
+Enabling Port Forwarding on Port 1935 (Port number suggested by earlier post), using VN SuperHub Administration, is simple and well documented. Enabling forwarding on this port does NOT fix the problem.<br />
+<br />
+Accessing VM SuperHub settings via &lt;Administration&gt;&lt;Security Settings&gt;&lt;Firewall&gt; and thnw setting the Firewall 'strength' from its default (Medium) to Low DOES fix the problem, but there is no indication of what additional risks to LAN-side security are thereby introduced. I will access the VM community to get some opinions on this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2014, 12:50 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/unable-to-get-an-item-under-linux-ok-in-windows/#post-1854">Quote:</a>Thanks for the clear explanation: simply stated (but somewhat less simple for me to fix, I fear); this might also explain why the WinXP download failed too (the router being their only common point)</blockquote>
+<br />
+That was my thought.  It seems unlikely you would have done that, but I don't know your setup.  Anti-virus can cause the same problem but - given it's happening on Linux as well - that seems less likely.  If you're running anti-virus on Windows, you can temporarily switch it off to see it makes any difference.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Router blocked port 1935 OUTBOUND â hmm, donât understand that: why would a blocked outbound port prevent a download (inbound, surely ?) from working?</blockquote>
+<br />
+It's outbound because rtmpdump connects <span style="font-weight: bold;" class="mycode_b">from</span> your machine <span style="font-weight: bold;" class="mycode_b">to</span> the media servers.<br />
+<br />
+Another thing to do is to establish the consistency of the problem.  Try 5-10 downloads (radio and TV) with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div>, say, 12 hours apart to see if you get exactly the same error message.  <br />
+<br />
+You can also check your connectivity outside get_iplayer here (requires Flash):<br />
+<br />
+<a href="http://www.therealtimeweb.com/index.cfm/2004/10/2/fms-port-tester">http://www.therealtimeweb.com/index.cfm/...ort-tester</a><br />
+<br />
+If test on port 1935 fails, rtmpdump won't work.  That would at least confirm the problem is outside get_iplayer and rtmpdump.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2014, 12:57 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/unable-to-get-an-item-under-linux-ok-in-windows/#post-1856">Quote:</a><br />
+Enabling Port Forwarding on Port 1935 (Port number suggested by earlier post), using VN SuperHub Administration, is simple and well documented. Enabling forwarding on this port does NOT fix the problem.</blockquote>
+<br />
+Forwarding would apply to inbound connections, so not relevant here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 01:12 PM</div>
+</div>
+<div class="message">Apologies if this is looking like spam.<br />
+<br />
+Further investigation and test shows that I can set VM SuperHub Firewall 'strength' to 'Medium' and still download via get_iplayer  - if I set Port Blocking Rules on Port 1635 to 'delete' rather than 'enable'. I assume that the Firewall Medium setting has set the rule for this Port to 'block' but by adding a special rule for this port and setting that rule to 'delete', the port is then unblocked.<br />
+<br />
+But what do I know?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">22-02-2014, 01:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Another thing to do is to establish the consistency of the problem.  Try 5-10 downloads (radio and TV) with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div>, say, 12 hours apart to see if you get exactly the same error message.  <br />
+<br />
+You can also check your connectivity outside get_iplayer here (requires Flash):<br />
+<br />
+<a href="http://www.therealtimeweb.com/index.cfm/2004/10/2/fms-port-tester">http://www.therealtimeweb.com/index.cfm/...ort-tester</a><br />
+<br />
+If test on port 1935 fails, rtmpdump wonât work.  That would at least confirm the problem is outside get_iplayer and rtmpdump.</blockquote>
+<br />
+Thanks for this. I tried the port tester with my latest SuperHub settings (FFirewal strength Medium; Port Block deleted on 1935): success on all tests under Linux (WinXP hors de combat temporarily while I run Vista instead) and downloads work now.<br />
+<br />
+Thanks for guidance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2014, 01:44 PM</div>
+</div>
+<div class="message">Does the port tester fail if you revert back to original router settings?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-02-2014, 02:39 PM</div>
+</div>
+<div class="message">A bit of light googling seems to confirm your findings.  AFAICT, if you bump SuperHub firewall to Medium, it blocks all but a few ports outbound.  Firewall = Low opens all ports with stateful packet inspection enabled, which seems fine for most people.  That apparently is the default, which I guess is why nobody has reported this before.  It seems like the higher firewall settings only restrict what you can do with your connection.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-377</h2></div><div class="dateline">23-02-2014, 07:06 PM</div>
+</div>
+<div class="message">I'm afraid that I'm more paranoid than most people (hah! how do I know that, eh, tell me that....) and so I prefer to run with the Medium setting for the Router  firewall and I think that I may have found how to leave it that way and still let get_iplayer work (by luck, not by any exercise of skill or knowledge).<br />
+<br />
+However an article on BBC News that I browsed today (in my very securely locked down iPHone) says that routers are,in general, prone to been hacked and certainly have been, very widely, in Poland. So now I'm going back on line  to see what firmware updates there are for my device. Don't expect too much from VirginMedia, though...<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/unable-to-get-an-item-under-linux-ok-in-windows/#post-1861">Quote:</a>&lt;/div&gt;Does the port tester fail if you revert back to original router settings?</blockquote>
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/unable-to-get-an-item-under-linux-ok-in-windows/#post-1861">Quote:</a>&lt;/div&gt;Does the port tester fail if you revert back to original router settings?</blockquote>
+<br />
+I haven't explicitly tested it, but the port test failed until I changed the firewall 'aggression' from medium to low and continued to work with the medium setting but port blocking on 1935 deleted. This is not the same as the original settings, I know.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Unable to 'get' an item under Linux; OK in Windows</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

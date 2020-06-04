@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I stop get_iplayer indexing programmes?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I stop get_iplayer indexing programmes?</div>
+<div id="pagetitle"><h2>How do I stop get_iplayer indexing programmes?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2269</h2></div><div class="dateline">10-10-2018, 11:10 AM</div>
+</div>
+<div class="message">I don't think I need get_iplayer to maintain an index since I only ever download by PID. How can I disable this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-10-2018, 02:16 PM</div>
+</div>
+<div class="message">get_iplayer does not index programmes when downloading with <kbd>--pid</kbd>. If you see something different, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-10-2018, 03:23 PM</div>
+</div>
+<div class="message">It does index upon launch though, if the cache interval has been exceeded. Could be a minor irritant if you are intending to only use pids and don't want to wait for it to refresh. <br />
+<br />
+Perhaps changing the cache expiry interval would suffice?<br />
+<br />
+Something like this would set the cache expiry to 6 months so presumably would prevent refreshing on launch:<br />
+<br />
+<kbd>get_iplayer --prefs-add --expiry=16070400</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-10-2018, 04:17 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (10-10-2018, 03:23 PM)</span></cite>It does index upon launch though, if the cache interval has been exceeded. Could be a minor irritant if you are intending to only use pids and don't want to wait for it to refresh.</blockquote>Not exactly. The provided start menu shortcut contains a dummy search in order to trigger a cache update. If you don't like that, run get_iplayer from a normal command prompt.<br />
+<blockquote class="mycode_quote"><cite><span> (10-10-2018, 03:23 PM)</span></cite>Perhaps changing the cache expiry interval would suffice?<br />
+<br />
+Something like this would set the cache expiry to 6 months so presumably would prevent refreshing on launch:<br />
+<br />
+<kbd>get_iplayer --prefs-add --expiry=16070400</kbd></blockquote>Unnecessary if you only ever use <kbd>--pid</kbd>. Even so, <kbd>--expiry</kbd> can prevent updates but you have to create an initial cache before it is applied, i.e., don't just delete your cache files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2269</h2></div><div class="dateline">10-10-2018, 04:42 PM</div>
+</div>
+<div class="message">Thank you I removed the dummy search from the start menu shortcut. I didn't realise it didn't really do anything and get_iplayer was in my path. I like having a get_iplayer window with it's icon though so I will keep using the start menu shortcut.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; How do I stop get_iplayer indexing programmes?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

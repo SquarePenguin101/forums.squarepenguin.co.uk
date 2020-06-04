@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - TOP OF THE POPS</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TOP OF THE POPS</div>
+<div id="pagetitle"><h2>TOP OF THE POPS</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-744</h2></div><div class="dateline">28-11-2014, 08:45 AM</div>
+</div>
+<div class="message">Hi All<br />
+<br />
+Quite new to get_iplayer, which is great, but I'm a little mystified about the vagaries of Top Of The Pops.<br />
+<br />
+I know that the BBC regularly show two versions of the 1979 repeats, a 30 minute one for early evening scheduling purposes, and a full length one broadcast later at night.<br />
+<br />
+For the episode dated 15/11/1979, the one broadcast early evening was 28m 58s. The longer version ran for exactly 40 minutes. <br />
+<br />
+I have tried three times to download the file <a href="http://www.bbc.co.uk/iplayer/episode/b04pvhmr/top-of-the-pops-15111979">http://www.bbc.co.uk/iplayer/episode/b04...s-15111979</a> and each time it is the shorter one that has downloaded even though that same file on the iplayer website plays the full 40 minute version. <br />
+<br />
+And idea how that happens - and, more importantly, how to get the full version?<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-11-2014, 04:59 PM</div>
+</div>
+<div class="message">I'll fix that for next release.  For now, use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--versions=default2</code></div></div> to get alternate version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">28-11-2014, 06:43 PM</div>
+</div>
+<div class="message">Now that it's gone past 7 days, there is no default2 option available for it, but the full 40 minute version has now moved to the standard default option.<br />
+<br />
+So if you run the same command as you did before you should now get the full 40 min version downloaded.<br />
+<br />
+This would probably be a time when a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> switch would be useful. Then you can tell get_iplayer which version you want to download.<br />
+<br />
+As the 30 min version dosn't seem to show on iPlayer at all, is there an easy way to find its vpid? If someone wanted the 30 min version instead, the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> switch would then allow them to do this.<br />
+<br />
+The command would look something like this:<br />
+(This is for the 40 min version because I cant find the vpid for the 30 min one)<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid b04pvhmr --vpid b04q02dn</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-11-2014, 07:07 PM</div>
+</div>
+<div class="message">A default2 version still appears for me with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> in v2.90, so you've gone wrong somewhere.  I've already said elsewhere that I personally will never implement a <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--vpid</code></div></div> option.  There is no need for it, and it's a support headache I don't need.  If you can't wait, go get the latest code from GitHub.  See Git HEAD section in installation wiki page.  The shortened version can then be downloaded with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--versions=shortened</code></div></div>, if you really don't want that extra 10 minutes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">28-11-2014, 07:46 PM</div>
+</div>
+<div class="message">I am also on 2.90. I can't work out why the default2 option isn't showing for me though.<br />
+<br />
+Here's my output:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --modes=best --pid b04pvhmr --inf<br />
+o<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+2079:&nbsp;&nbsp; Top of the Pops - 15/11/1979, BBC One, Classic Pop &amp; Rock,Music, default<br />
+<br />
+INFO: File name prefix = Top_of_the_Pops - 15_11_1979 b04pvhmr default<br />
+<br />
+available:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unknown<br />
+categories:&nbsp;&nbsp;&nbsp;&nbsp; Music,Classic Pop &amp; Rock<br />
+category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Music<br />
+channel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BBC One<br />
+desc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; David Jensen presents another edition of the weekly pop chart wi<br />
+th performances by the Jam, Cliff Richard, the Moody Blues, Kool and the Gang, S<br />
+ecret Affair, Ramblers, Showaddywaddy and Dr Hook and dance sequences by Legs &amp;<br />
+Co.<br />
+descmedium:&nbsp;&nbsp;&nbsp;&nbsp; David Jensen presents another edition of the weekly pop chart wi<br />
+th performances by the Jam, Cliff Richard, the Moody Blues, Kool and the Gang, S<br />
+ecret Affair, Ramblers, Showaddywaddy and Dr Hook and dance sequences by Legs &amp;<br />
+Co.<br />
+descshort:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;David Jensen presents performances by the Jam, Cliff Richard, th<br />
+e Moody Blues, Kool &amp; the Gang, Secret Affair, Ramblers, Showaddywaddy and D<br />
+r Hook and dance sequences by Legs &amp; Co.<br />
+dir:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I:&#92;fri<br />
+dldate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2014-11-28<br />
+dltime:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18:33:09<br />
+duration:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2400<br />
+durations:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: 2400<br />
+episode:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15/11/1979<br />
+episodenum:&nbsp;&nbsp;&nbsp;&nbsp; 1<br />
+episodeshort:&nbsp;&nbsp; 15/11/1979<br />
+expiry:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2014-12-23T01:30:00Z<br />
+expiryrel:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in 24 days 6 hours<br />
+ext:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXT<br />
+filename:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I:&#92;fri&#92;Top_of_the_Pops - 15_11_1979 b04pvhmr default.EXT<br />
+filepart:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I:&#92;fri&#92;Top_of_the_Pops - 15_11_1979 b04pvhmr default.partial.EXT<br />
+<br />
+fileprefix:&nbsp;&nbsp;&nbsp;&nbsp; Top_of_the_Pops - 15_11_1979 b04pvhmr default<br />
+firstbcast:&nbsp;&nbsp;&nbsp;&nbsp; default: 2014-11-21T01:00:00Z<br />
+firstbcastdate: default: 2014-11-21<br />
+firstbcastrel:&nbsp;&nbsp;default: 7 days 17 hours ago<br />
+index:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2079<br />
+lastbcast:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: 2014-11-23T00:45:00Z<br />
+lastbcastdate:&nbsp;&nbsp;default: 2014-11-23<br />
+lastbcastrel:&nbsp;&nbsp; default: 5 days 17 hours ago<br />
+longname:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Top of the Pops<br />
+modes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,fla<br />
+shstd2,flashvhigh1,flashvhigh2,rtsphigh1,rtsphigh2,rtsplow1,rtsplow2,rtspstd1,rt<br />
+spstd2,rtspvhigh1,rtspvhigh2,subtitles1<br />
+modesizes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: flashhigh1=233MB,flashhigh2=233MB,flashlow1=116MB,flash<br />
+low2=116MB,flashstd1=141MB,flashstd2=141MB,flashvhigh1=439MB,flashvhigh2=439MB,r<br />
+tsphigh1=233MB,rtsphigh2=233MB,rtsplow1=116MB,rtsplow2=116MB,rtspstd1=141MB,rtsp<br />
+std2=141MB,rtspvhigh1=439MB,rtspvhigh2=439MB<br />
+name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Top of the Pops<br />
+nameshort:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top of the Pops<br />
+pid:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b04pvhmr<br />
+player:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://www.bbc.co.uk/iplayer/episode/b04pvhmr/<br />
+senum:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s01e01<br />
+seriesnum:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br />
+thumbfile:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I:&#92;fri&#92;Top_of_the_Pops - 15_11_1979 b04pvhmr default.jpg<br />
+thumbnail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://ichef.bbci.co.uk/programmeimages/p02bkzzk/b04pvhmr_640_36<br />
+0.jpg<br />
+timeadded:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 days 23 hours ago (1416595085)<br />
+title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Top of the Pops: 15/11/1979<br />
+type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tv<br />
+verpids:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: b04q02dn<br />
+version:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default<br />
+versions:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default<br />
+web:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.bbc.co.uk/programmes/b04pvhmr<br />
+<br />
+INFO: 1 Matching Programmes<br />
+<br />
+C:&#92;Program Files (x86)&#92;get_iplayer&gt;</code></div></div><br />
+<br />
+<br />
+Is the plan with the changes you have now made that get_iplayer will always download the longer version of a programme unless told otherwise?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-11-2014, 08:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/top-of-the-pops/#post-10605">Quote:</a>I am also on 2.90. I canât work out why the default2 option isnât showing for me though.</blockquote>
+<br />
+Sorry, no clue.  My only guess is that maybe one of the necessary files failed to download.  Try with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> and see if any further clues appear.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Is the plan with the changes you have now made that get_iplayer will always download the longer version of a programme unless told otherwise?</blockquote>
+<br />
+No. I just fixed a bug in discriminating between the default version and alternate versions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">28-11-2014, 09:14 PM</div>
+</div>
+<div class="message">Nothing obvious that I can see.<br />
+<br />
+Output attached.<br />
+<br />
+I can see both default and default2 in the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--info</code></div></div> for yesterday's one though <a href="http://www.bbc.co.uk/iplayer/episode/b04smtrr/top-of-the-pops-29111979">http://www.bbc.co.uk/iplayer/episode/b04...s-29111979</a> with default2 being the longer one.<br />
+<br />
+Is there an easy way to tell if get_iplayer is downloading the longer or shorter version of a programme or if there are more than 1 version available? I know Click has a 15 minute and a 30 minute version but that always seems to download the longer one.<br />
+<br />
+It's not always obvious that there are options for different programme lengths available. I hadn't noticed this with Top of the Pops until AlJoEdin pointed it out.
+<br/><br/>
+<a href="static/thread-285-gip-output.txt">gip-output.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-11-2014, 12:17 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/top-of-the-pops/#post-10607">Quote:</a>Nothing obvious that I can see.<br />
+<br />
+Output attached.</blockquote>
+<br />
+Sorry, still no clue, and still can't duplicate.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I can see both default and default2 in the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--info</code></div></div> for yesterdayâs one though <a href="http://www.bbc.co.uk/iplayer/episode/b04smtrr/top-of-the-pops-29111979">http://www.bbc.co.uk/iplayer/episode/b04...s-29111979</a> with default2 being the longer one.<br />
+<br />
+Is there an easy way to tell if get_iplayer is downloading the longer or shorter version of a programme or if there are more than 1 version available? I know Click has a 15 minute and a 30 minute version but that always seems to download the longer one.</blockquote>
+<br />
+You've answered your own question.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">29-11-2014, 01:05 AM</div>
+</div>
+<div class="message">I think it could be that although I am on 2.90, I haven't updated from the git HEAD for a while so there were probably changes that you had made there since I last updated which kept default2 showing but I hadn't got on my copy. I have now updated from the git HEAD again and I can see <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>versions: default,shortened</code></div></div> for both last weeks and this weeks Top of the Pops.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-11-2014, 02:31 AM</div>
+</div>
+<div class="message">No, even v2.90 as released still showed multiple versions.  But as you can see, that is dead code that has already been replaced.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-744</h2></div><div class="dateline">29-11-2014, 02:42 AM</div>
+</div>
+<div class="message">Thanks! - that was a perfect solution</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-747</h2></div><div class="dateline">29-11-2014, 02:52 AM</div>
+</div>
+<div class="message">oh wow, i usually watch Top of the pops and then download a copy to watch and have been doing this for a while without really watching what I have recorded.  I now realise i have been watching the 40 min version and downloading the 30 minute version for ages :-(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-747</h2></div><div class="dateline">29-11-2014, 03:27 AM</div>
+</div>
+<div class="message">sorry , how do i get the longer version?   what the text i need to enter?  thanks</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; TOP OF THE POPS</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

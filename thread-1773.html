@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Broken Homebrew package is now fixed (2018-05-11)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Broken Homebrew package is now fixed (2018-05-11)</div>
+<div id="pagetitle"><h2>Broken Homebrew package is now fixed (2018-05-11)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2155</h2></div><div class="dateline">08-05-2018, 01:22 PM</div>
+</div>
+<div class="message">I've been using get_iplayer for a while now, installed using Homebrew. After upgrading to v3.14 all requests are failing. An example would be the Peter Kay Car Share Unscripted episode from last night. This works with v3.13.<br />
+<br />
+I've tested on two Macs with different major MacOS versions, changed DNS settings from OpenDNS to local ISP, and switched off anti-malware web reputation filters. Plus I'm not using any VPN or obfuscation to access BBC.<br />
+<br />
+I attach two verbose output files capturing the same '-i --pid b0b2n9r3' info request using the v3.13 and v3.14 get_iplayer code in the respective 'libexec/bin' folders.<br />
+<br />
+Looking at the two files the first thing to see is that all the HTTP requests in v3.13 are not HTTPS in v3.14, as per the release notes. The section of verbose stream information and then the normal info about modes etc is there for v3.13 but completely missing for v3.14.<br />
+<br />
+For now my two HD/SD Automator services, to get URL from current tab in Safari, still work using when calling v3.13 code directly (instead of from /usr/local/bin) and just need to switch the --fps50 off and --fps25 on when v3.14 is working.<br />
+<br />
+<br />
+Thanks for supporting get_iplayer, really appreciate it.<br />
+<a href="static/thread-1773-gip_v313_info.txt">gip_v313_info.txt</a><br />
+<a href="static/thread-1773-gip_v314_info.txt">gip_v314_info.txt</a><br />
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-05-2018, 02:02 PM</div>
+</div>
+<div class="message">Thanks for the logs. However, this is a Homebrew problem, so you need to tell them. They apparently didn't read the release notes and released a broken v3.14 package. As you can see in the logs, their v3.13 package was partially broken as well. The fact it (mostly) worked was a happy accident. It is up to them to fix it. Thread closed - see forum rules.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1849</h2></div><div class="dateline">10-05-2018, 07:13 PM</div>
+</div>
+<div class="message">Hello all: i'm running Mac OSX High Sierra 10.13.4 for reference.<br />
+<br />
+I have recently upgraded from 3.13 to 3.14, however I've had the problem for a few weeks (prior to 3.14).<br />
+<br />
+I've not used GiP for a for a while, before I updated I was running 3.03 (I think it was). My original installation of GiP was using Homebrew and Atomic Parsley. I updated GiP which took me to 3.13, where I started noticing this error message prior to downloading anything:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>WARNING: Could not download programme metadata from http://www.bbc.co.uk/programmes/b09nygnj.json</code></div></div><br />
+I've never seen this before so not sure what to make of it. Hombrew is up-to-date as is GiP, and as far as I can see, Atomic Parsley hasn't been updated for some time (the last update was prior to me downloading it so I have the most up-to-date version).<br />
+<br />
+Could anybody shed any light on what this means?<br />
+<br />
+Also, I've only skim-read certain parts of the documentation about not using Homebrew to use GiP any longer. I use Homebrew, but wonder if there were any benefits to not using it anymore? Whilst I'm happy to have a go at uninstalling and figuring things out, I do have a 2 y/o and a new born so my time is limited-I don't want to break anything if theres no issues using the program as-is. <br />
+<br />
+Any advice appreciated.<br />
+Cheers,<br />
+Dan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-05-2018, 07:51 PM</div>
+</div>
+<div class="message">All problems with the Homebrew package, including yours, have the same root cause. Whether or not you stick with Homebrew is up to you. I would expect them to fix the package, but who knows? Thread closed - see forum rules.<br />
+<br />
+EDIT: In normal circumstances, there is no functional difference between the Homebrew package and a manual install. The latter just takes more keystrokes to complete.<br />
+<br />
+EDIT 2: The underlying problem is broken HTTPS support. A couple of users have already reported it in Homebrew issue tracker.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-05-2018, 10:11 AM</div>
+</div>
+<div class="message">Broken Homebrew package is now fixed. Thanks to @cathorn and others who reported the problem to Homebrew.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Broken Homebrew package is now fixed (2018-05-11)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

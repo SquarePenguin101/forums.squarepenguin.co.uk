@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No RECORDING mode settings seem to work</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; No RECORDING mode settings seem to work</div>
+<div id="pagetitle"><h2>No RECORDING mode settings seem to work</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1830</h2></div><div class="dateline">16-05-2017, 12:20 PM</div>
+</div>
+<div class="message">OK so the old flv settings are gone...  but now all the good ,worse, worst settings seem gone too.  Cant recll if managed to get some of the hls settings to work, I recall trying various permutations a couple of months ago.<br />
+<br />
+only want some local &amp; natnl news for scrap book, it is kinda freaky times to have some record... but none of the settings work.   Not after premium content, just the stuff Brits have always had access to, pay for.<br />
+<br />
+Used getiplayer for years,  tend to always be in PVR manager, so settings are saved, I haven't changed anything.   <br />
+<br />
+Looked at github wiki stuff but only all the modes I am already aware of are listed there, the ons which seem not to work.<br />
+<br />
+Being inundated with huge file sizes.   only want sd format,  so    288p, 360p or what seemed pretty standard upto last week  396p if that is now the minimum.<br />
+<br />
+<br />
+All these massive streams is so wasteful, of our HDD's and of BBC's streaming bill,  being frugal used to be a British "thing".<br />
+<br />
+<br />
+EDIT:<br />
+<br />
+here's an example PID<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b08ql415/south-east-today-evening-news-15052017">http://www.bbc.co.uk/iplayer/episode/b08...s-15052017</a><br />
+<br />
+other tries include permuttions of  hvfxsd2, hvflow2   etc<br />
+<br />
+<br />
+Maybe I could rephrasse this all and just ask  -     What is the lowest setting now available?<br />
+<br />
+BBC are mad if they are pumping this all out to mobile devices, talk about running up everyones' data charges, and bloat out the networks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">19-05-2017, 01:52 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Used getiplayer for years,  tend to always be in PVR manager, so settings are saved, I haven't changed anything.   </blockquote>
+<br />
+You might not have changed anything but get_iplayer <span style="font-weight: bold;" class="mycode_b">has</span> changed it's quality settings in recent versions, the release notes can be long but are very informative. <br />
+<br />
+1: The current quality modes / shortcuts are all documented here: <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes">Recording Quality</a><br />
+2: This page goes into more specific details: <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">Modes Reference</a><br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Maybe I could rephrasse this all and just ask  -     What is the lowest setting now available?</blockquote>
+<br />
+For PVR use only, short answer is probably --tvmode=worst<br />
+<br />
+The second page that I linked to, under Shortcut Expansions, will show you exactly which modes this will try: tvworst = hvflow,dvflow (both 512 x 288, which is found in another table on the same page). <br />
+<br />
+Alternatively, on CLI:<br />
+1: Use --info to view which stream types are available for any given pid, along with estimated file sizes. <br />
+2: Then use --tvmode to select the specific type you want for that pid.<br />
+<br />
+In reply to your other comments, they don't pump out HD streams to mobile devices - as I understand it the official iplayer clients use variable streams based on device type and network quality. If you don't want to download larger streams you don't have to - but at the same time lots of us don't want to stare at a tiny 4" phone screen for a couple hours at a time, or be subjected to grainy blurry pictures on larger screens. That's why the larger streams are available, to maintain picture quality as screen size goes up. Modern cabled telco networks are well capable of handling it (though mobile is a different story).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1830</h2></div><div class="dateline">19-05-2017, 11:35 AM</div>
+</div>
+<div class="message">Oh dear      RTFM!!!<br />
+<br />
+<br />
+DONE ALL OF THAT ALREADY....   pretty clear I tried all   including a large selection of tall the modes listed by the perl scipt     BUT ARE NOT IN ANY OF THE DOCUMENTTION...<br />
+<br />
+so many i cant recall them all here with out doing a run...   but   dvfxsd1,2 3..4   and on,   hls  something...   <br />
+hvfsd 1, 2, 3  etc    hls high   very high  etc   and o on .<br />
+<br />
+WORST WORSE  ETC      DO NOT WORK.......    THAT S THE POINT     flv is deprecated, i pointed that out in opening line.<br />
+<br />
+so thanks but no thanks.<br />
+<br />
+BOTTOM LINE    HAS BBC STOPPED SERVING   SD Content ALL TOGETHER??</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-05-2017, 11:46 AM</div>
+</div>
+<div class="message">There are no modes listed with <kbd>--info</kbd> that are not in the documentation. The BBC serves an assortment of video sizes, just as they always have done. The docs referenced by @brutus14 tell you exactly what video size you can expect to get for your choice of recording modes. Smash your caps lock key and sneer about "RTFM" all you like, but that is how everyone else determines what settings to use. If get_iplayer is not working as advertised, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system.  Otherwise, there is nothing more we can do for you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">19-05-2017, 11:53 AM</div>
+</div>
+<div class="message">Ooooh, capital letters, now we know you're serious. <br />
+<br />
+Of course, you failed to read the <a href="/thread-655.html">forum rules</a> (particularly I suspect Rule 1) or the "<a href="thread-706.html">How to Request Support</a>" thread. Otherwise you're report wouldn't have been such bad quality. But alas, you're not unique in that respect.<br />
+<br />
+The answers you seek are in this wiki page as was provided to you:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a><br />
+<br />
+Try to read all of it, notably <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#recording-mode-details">Recording Mode Details</a> and <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#shortcut-expansions">Shortcut Expansions</a>.<br />
+<br />
+That page details all available modes and how they map to a particular shortcut, including all those "NOT IN ANY OF THE DOCUMENTATION" that you absolutely definitely did read. <br />
+<br />
+If you still can't work it out and you want a further response, be sure to include all the information as required in the section linked below:<br />
+<br />
+<a href="thread-706.html#what-information-should-you-provide">/threa...ou-provide</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1830</h2></div><div class="dateline">23-05-2017, 10:17 AM</div>
+</div>
+<div class="message">Ah a different modes page<br />
+<br />
+Been to three of them already...    and seemingly now outdated...  can you not kill them  or put a bug note on them saying these modes are not relevant anymore..   i've clicked on so may links, done various searches inc inside this site &amp; google..   all of them took me to wrong places.<br />
+<br />
+<br />
+The overarching question was a simple one  HAS BBC KILLED OFF SD STREAMS?.....      or the fact that URL' often get displayed with  .......      so    a link with   modes.....   at end  looks suspiciously like somewhere one has already been.      <br />
+<br />
+<br />
+Have you guys worked out what's going to happen with this password  problem?<br />
+<br />
+EDIT -  now reviewing that modesref page -   and still little enlightenment...  because I have already tried those options.. so prob had seen it already.. as stated have been through many...   sods law will dictate that next time i try it will work of course...   ce'est la vie.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; No RECORDING mode settings seem to work</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

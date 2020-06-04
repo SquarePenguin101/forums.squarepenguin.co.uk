@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Very poor connection leads to multiple failed downloads for multiple programme versions</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Very poor connection leads to multiple failed downloads for multiple programme versions</div>
+<div id="pagetitle"><h2>Very poor connection leads to multiple failed downloads for multiple programme versions</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1600</h2></div><div class="dateline">04-04-2017, 11:47 PM</div>
+</div>
+<div class="message">I am on a dicey connection, tethering on my phone over 3G since this is unmonitored on my plan (unlike 4G).<br />
+<br />
+I see the same phenomenon which seems to be driven by connection resets, which I have seen a few times, most recently downloading the Taboo series.  Typically, I am left with one copy that is anything from just started to mostly downloaded and another completed copy.  Sometimes that completed copy is marked 'original', and sometimes 'default'.<br />
+<br />
+But a related problem drove me to the forums today that might give insight into this one.  I downloaded just over 1G of p01s4wy9 at 1280x720@50fps, having to restart the webPVR twice along the way, which successfully continued my download, but another copy started downloading instead of it continuing on the next reset.  This is just as it had occurred downloading films in the Taboo series, in particular.  What was new is that when the download reset again, the first copy was erased and overwritten, and now the download seems to be essentially 'stuck', since the files are alternately being restarted so that no downloading progress can be made.<br />
+<br />
+So my query is that is there anything in the code that is likely to lead to an arbitrary naming decision on reset, or even an occasional overwrite rather than a continuation?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1600</h2></div><div class="dateline">05-04-2017, 06:09 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-04-2017, 11:47 PM)</span></cite>Typically, I am left with one copy that is anything from just started to mostly downloaded and another completed copy.  Sometimes that completed copy is marked 'original', and sometimes 'default'.</blockquote><br />
+I have finally completed my download of p01s4wy9 with considerable waste of bandwidth through restarts.  The naming appears to be different in this case:  usually there's one 'original' and one 'default', where one of the two is cut short.  Here, one of them is nearly an hour long whilst the other is just over ten minutes in length.<br />
+<br />
+<br />
+total 1230702593<br />
+-rwxrwxrwx 1 root root 2079596704 Apr  5 03:56 Good_Swan_Bad_Swan_Dancing_Swan_Lake_-__p01s4wy9_editorial.mp4<br />
+-rwxrwxrwx 1 root root  381801103 Apr  5 01:30 Good_Swan_Bad_Swan_Dancing_Swan_Lake_-__p01s4wy9_editorial.video.ts</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-04-2017, 07:20 PM</div>
+</div>
+<div class="message">Each combination of programme version and recording quality represents a different stream with different properties, so download is restarted. Use <kbd>--attempts</kbd> to configure more download attempts for each stream. Use <kbd>--tvmode</kbd>, and possibly <kbd>--versions</kbd>, to constrain the combinations, which may at least save you some time.  In essence, you need to configure get_iplayer to target only a single stream, and keep hammering it ad nauseam until it gets all the pieces. The only problem is you'll never know what level of "ad nauseam" is required.  To be honest, get_iplayer is not for you. It is not meant to be used with such atrocious connectivity.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Very poor connection leads to multiple failed downloads for multiple programme versions</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

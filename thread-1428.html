@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Segmentation fault with Homebrew Perl 5.24.1 on macOS Sierra 10.12.5</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Segmentation fault with Homebrew Perl 5.24.1 on macOS Sierra 10.12.5</div>
+<div id="pagetitle"><h2>Segmentation fault with Homebrew Perl 5.24.1 on macOS Sierra 10.12.5</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">02-06-2017, 07:08 PM</div>
+</div>
+<div class="message">I get a lot from get_iplayer, so I'm very grateful to those responsible for a nice bit of programming.<br />
+<br />
+I just upgraded to get_iplayer 3.01.2 using homebrew (as usual). I now get Segmentation fault: 11 when I try to run get_iplayer. I uninstalled and then re-installed, according to the instructions at<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/osx#manual">https://github.com/get-iplayer/get_iplay...osx#manual</a><br />
+<br />
+but I still get the same problem. <br />
+<br />
+It's probably a coincidence, but I installed SnailSVN using homebrew yesterday, following an unsuccessful experiment with SCplugin for subversion.<br />
+<br />
+I'd be grateful for any help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-06-2017, 07:37 PM</div>
+</div>
+<div class="message">get_iplayer is just a script, so it won't segfault itself. You may have broken Perl or one of get_iplayer's dependencies. Post the output from <kbd>perl -V</kbd>. Also try to execute <kbd>ffmpeg</kbd> and <kbd>AtomicParsley</kbd> from the command prompt. If any of those segfaults, then get_iplayer won't work properly. If not, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a full report so we can see where the segfault occurs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">02-06-2017, 07:44 PM</div>
+</div>
+<div class="message">Thanks for the speedy reply.<br />
+<br />
+Here's the output from perl -V.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>MacBook-Pro:~ jimwoodcock&#36; perl -V<br />
+Summary of my perl5 (revision 5 version 24 subversion 1) configuration:<br />
+   <br />
+  Platform:<br />
+    osname=darwin, osvers=16.4.0, archname=darwin-thread-multi-2level<br />
+    uname='darwin sierra.local 16.4.0 darwin kernel version 16.4.0: thu dec 22 22:53:21 pst 2016; root:xnu-3789.41.3~3release_x86_64 x86_64 '<br />
+    config_args='-des -Dprefix=/usr/local/Cellar/perl/5.24.1 -Dprivlib=/usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1 -Dsitelib=/usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1 -Dotherlibdirs=/usr/local/lib/perl5/site_perl/5.24.1 -Dperlpath=/usr/local/opt/perl/bin/perl -Dstartperl=#!/usr/local/opt/perl/bin/perl -Dman1dir=/usr/local/Cellar/perl/5.24.1/share/man/man1 -Dman3dir=/usr/local/Cellar/perl/5.24.1/share/man/man3 -Duseshrplib -Duselargefiles -Dusethreads'<br />
+    hint=recommended, useposix=true, d_sigaction=define<br />
+    useithreads=define, usemultiplicity=define<br />
+    use64bitint=define, use64bitall=define, uselongdouble=undef<br />
+    usemymalloc=n, bincompat5005=undef<br />
+  Compiler:<br />
+    cc='cc', ccflags ='-fno-common -DPERL_DARWIN -mmacosx-version-min=10.12 -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include -DPERL_USE_SAFE_PUTENV',<br />
+    optimize='-O3',<br />
+    cppflags='-fno-common -DPERL_DARWIN -mmacosx-version-min=10.12 -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include'<br />
+    ccversion='', gccversion='4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)', gccosandvers=''<br />
+    intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678, doublekind=3<br />
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16, longdblkind=3<br />
+    ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8<br />
+    alignbytes=8, prototype=define<br />
+  Linker and Libraries:<br />
+    ld='cc', ldflags =' -mmacosx-version-min=10.12 -fstack-protector-strong -L/usr/local/lib'<br />
+    libpth=/usr/local/lib /usr/include/libxml2 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/lib /usr/lib<br />
+    libs=-lpthread -ldbm -ldl -lm -lutil -lc<br />
+    perllibs=-lpthread -ldl -lm -lutil -lc<br />
+    libc=, so=dylib, useshrplib=true, libperl=libperl.dylib<br />
+    gnulibc_version=''<br />
+  Dynamic Linking:<br />
+    dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '<br />
+    cccdlflags=' ', lddlflags=' -mmacosx-version-min=10.12 -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector-strong'<br />
+<br />
+<br />
+Characteristics of this binary (from libperl): <br />
+  Compile-time options: HAS_TIMES MULTIPLICITY PERLIO_LAYERS<br />
+                        PERL_COPY_ON_WRITE PERL_DONT_CREATE_GVSV<br />
+                        PERL_HASH_FUNC_ONE_AT_A_TIME_HARD<br />
+                        PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP<br />
+                        PERL_PRESERVE_IVUV PERL_USE_SAFE_PUTENV<br />
+                        USE_64_BIT_ALL USE_64_BIT_INT USE_ITHREADS<br />
+                        USE_LARGE_FILES USE_LOCALE USE_LOCALE_COLLATE<br />
+                        USE_LOCALE_CTYPE USE_LOCALE_NUMERIC USE_LOCALE_TIME<br />
+                        USE_PERLIO USE_PERL_ATOF USE_REENTRANT_API<br />
+  Built under darwin<br />
+  Compiled at Feb 26 2017 18:56:17<br />
+  %ENV:<br />
+    PERL5LIB="/Users/jimwoodcock/perl5/lib/perl5"<br />
+    PERL_LOCAL_LIB_ROOT="/Users/jimwoodcock/perl5"<br />
+    PERL_MB_OPT="--install_base "/Users/jimwoodcock/perl5""<br />
+    PERL_MM_OPT="INSTALL_BASE=/Users/jimwoodcock/perl5"<br />
+  @INC:<br />
+    /Users/jimwoodcock/perl5/lib/perl5/5.24.1/darwin-thread-multi-2level<br />
+    /Users/jimwoodcock/perl5/lib/perl5/5.24.1<br />
+    /Users/jimwoodcock/perl5/lib/perl5/darwin-thread-multi-2level<br />
+    /Users/jimwoodcock/perl5/lib/perl5<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1<br />
+    /usr/local/lib/perl5/site_perl/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/lib/perl5/site_perl/5.24.1<br />
+    .<br />
+MacBook-Pro:~ jimwoodcock&#36;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-06-2017, 07:47 PM</div>
+</div>
+<div class="message">And the rest?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">02-06-2017, 07:51 PM</div>
+</div>
+<div class="message">Atomicparsley and ffmpeg both work (i.e., don't give a segmentation fault) from the command line.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-06-2017, 07:55 PM</div>
+</div>
+<div class="message">So send a full report as I instructed. I can't see what is happening unless you show it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">02-06-2017, 08:00 PM</div>
+</div>
+<div class="message">1. Get_iplayer returns a segmentation fault.<br />
+<br />
+2. get_iplayer -V returns the segmentation fault, but I know that I just installed get_iplayer 3.01.2.<br />
+<br />
+3. I'm using macOS Sierra 10.12.5.<br />
+<br />
+4. I typed get_iplayer without any parameters.<br />
+<br />
+5. Not downloading a programme.<br />
+<br />
+6. Output: "Segmentation fault: 11".<br />
+<br />
+7. Of course, <br />
+<br />
+get_iplayer --get 123 --verbose &gt; "&#36;HOME/log.txt" 2&gt;&amp;1<br />
+<br />
+returns the same segmentation fault.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-06-2017, 08:26 PM</div>
+</div>
+<div class="message">Try <kbd>/usr/bin/env perl -V</kbd>. get_iplayer uses <kbd>env</kbd> to launch the perl defined in your shell environment. If using <kbd>env</kbd> is the source of the segfault, that would also be a more fundamental problem. <br />
+<br />
+As the documentation makes clear, only the system Perl is supported, and you're using Homebrew Perl. Run <kbd>/usr/bin/perl /path/to/get_iplayer</kbd> to see if it will launch with system Perl. If so, then I suggest you roll everything back. Get rid of the manual installation and re-install get_iplayer via Homebrew, then get rid of Homebrew Perl. If you need a newer Perl for other reasons, look into Perlbrew, which gives you more control over using multiple versions of Perl. If <kbd>/usr/bin/perl</kbd> segfaults, then something more fundamental is wrong with your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">03-06-2017, 12:20 PM</div>
+</div>
+<div class="message">I did as you suggested. Please see the result of <kbd>/usr/bin/env perl -V</kbd> listed below.<br />
+<br />
+I also tried running <kbd>/usr/bin/perl /usr/local/bin/get_iplayer</kbd> and got the same segfault.  :-(<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>MacBook-Pro:~ jimwoodcock&#36; /usr/bin/env perl -V<br />
+Summary of my perl5 (revision 5 version 24 subversion 1) configuration:<br />
+   <br />
+  Platform:<br />
+    osname=darwin, osvers=16.4.0, archname=darwin-thread-multi-2level<br />
+    uname='darwin sierra.local 16.4.0 darwin kernel version 16.4.0: thu dec 22 22:53:21 pst 2016; root:xnu-3789.41.3~3release_x86_64 x86_64 '<br />
+    config_args='-des -Dprefix=/usr/local/Cellar/perl/5.24.1 -Dprivlib=/usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1 -Dsitelib=/usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1 -Dotherlibdirs=/usr/local/lib/perl5/site_perl/5.24.1 -Dperlpath=/usr/local/opt/perl/bin/perl -Dstartperl=#!/usr/local/opt/perl/bin/perl -Dman1dir=/usr/local/Cellar/perl/5.24.1/share/man/man1 -Dman3dir=/usr/local/Cellar/perl/5.24.1/share/man/man3 -Duseshrplib -Duselargefiles -Dusethreads'<br />
+    hint=recommended, useposix=true, d_sigaction=define<br />
+    useithreads=define, usemultiplicity=define<br />
+    use64bitint=define, use64bitall=define, uselongdouble=undef<br />
+    usemymalloc=n, bincompat5005=undef<br />
+  Compiler:<br />
+    cc='cc', ccflags ='-fno-common -DPERL_DARWIN -mmacosx-version-min=10.12 -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include -DPERL_USE_SAFE_PUTENV',<br />
+    optimize='-O3',<br />
+    cppflags='-fno-common -DPERL_DARWIN -mmacosx-version-min=10.12 -fno-strict-aliasing -pipe -fstack-protector-strong -I/usr/local/include'<br />
+    ccversion='', gccversion='4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.42.1)', gccosandvers=''<br />
+    intsize=4, longsize=8, ptrsize=8, doublesize=8, byteorder=12345678, doublekind=3<br />
+    d_longlong=define, longlongsize=8, d_longdbl=define, longdblsize=16, longdblkind=3<br />
+    ivtype='long', ivsize=8, nvtype='double', nvsize=8, Off_t='off_t', lseeksize=8<br />
+    alignbytes=8, prototype=define<br />
+  Linker and Libraries:<br />
+    ld='cc', ldflags =' -mmacosx-version-min=10.12 -fstack-protector-strong -L/usr/local/lib'<br />
+    libpth=/usr/local/lib /usr/include/libxml2 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/lib /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/lib /usr/lib<br />
+    libs=-lpthread -ldbm -ldl -lm -lutil -lc<br />
+    perllibs=-lpthread -ldl -lm -lutil -lc<br />
+    libc=, so=dylib, useshrplib=true, libperl=libperl.dylib<br />
+    gnulibc_version=''<br />
+  Dynamic Linking:<br />
+    dlsrc=dl_dlopen.xs, dlext=bundle, d_dlsymun=undef, ccdlflags=' '<br />
+    cccdlflags=' ', lddlflags=' -mmacosx-version-min=10.12 -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector-strong'<br />
+<br />
+<br />
+Characteristics of this binary (from libperl): <br />
+  Compile-time options: HAS_TIMES MULTIPLICITY PERLIO_LAYERS<br />
+                        PERL_COPY_ON_WRITE PERL_DONT_CREATE_GVSV<br />
+                        PERL_HASH_FUNC_ONE_AT_A_TIME_HARD<br />
+                        PERL_IMPLICIT_CONTEXT PERL_MALLOC_WRAP<br />
+                        PERL_PRESERVE_IVUV PERL_USE_SAFE_PUTENV<br />
+                        USE_64_BIT_ALL USE_64_BIT_INT USE_ITHREADS<br />
+                        USE_LARGE_FILES USE_LOCALE USE_LOCALE_COLLATE<br />
+                        USE_LOCALE_CTYPE USE_LOCALE_NUMERIC USE_LOCALE_TIME<br />
+                        USE_PERLIO USE_PERL_ATOF USE_REENTRANT_API<br />
+  Built under darwin<br />
+  Compiled at Feb 26 2017 18:56:17<br />
+  %ENV:<br />
+    PERL5LIB="/Users/jimwoodcock/perl5/lib/perl5"<br />
+    PERL_LOCAL_LIB_ROOT="/Users/jimwoodcock/perl5"<br />
+    PERL_MB_OPT="--install_base "/Users/jimwoodcock/perl5""<br />
+    PERL_MM_OPT="INSTALL_BASE=/Users/jimwoodcock/perl5"<br />
+  @INC:<br />
+    /Users/jimwoodcock/perl5/lib/perl5/5.24.1/darwin-thread-multi-2level<br />
+    /Users/jimwoodcock/perl5/lib/perl5/5.24.1<br />
+    /Users/jimwoodcock/perl5/lib/perl5/darwin-thread-multi-2level<br />
+    /Users/jimwoodcock/perl5/lib/perl5<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/site_perl/5.24.1<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/Cellar/perl/5.24.1/lib/perl5/5.24.1<br />
+    /usr/local/lib/perl5/site_perl/5.24.1/darwin-thread-multi-2level<br />
+    /usr/local/lib/perl5/site_perl/5.24.1<br />
+    .<br />
+MacBook-Pro:~ jimwoodcock&#36; which get_iplayer<br />
+/usr/local/bin/get_iplayer<br />
+MacBook-Pro:~ jimwoodcock&#36; /usr/bin/perl /usr/local/bin/get_iplayer<br />
+Segmentation fault: 11<br />
+MacBook-Pro:~ jimwoodcock&#36;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">03-06-2017, 12:32 PM</div>
+</div>
+<div class="message">This seems relevant. I've been using get_iplayer from the command line to download BBC programmes, but Get iPlayer Automator for downloading ITV programmes. The latter works just fine — no Perl problems.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-06-2017, 07:19 PM</div>
+</div>
+<div class="message">GiA doesn't use perl for downloading ITV programmes, only for searching. But that begs the question: Why not use GiA for BBC programmes if it's working? GiA is hardwired to invoke system perl in a different environment. You can probably mimic it with <kbd>env -i bash --noprofile --norc</kbd>, which will open a shell without your normal configuration applied. Worth doing in case something in your configuration is messing with Perl.<br />
+<br />
+Have you tried running any Perl scripts except get_iplayer? If you can run a test script, but not get_iplayer, then it may be that some native code in a get_iplayer dependency you installed is throwing the segfault, though that is only a guess. I'm not willing to go that deep, but if you know how, you can load them individually to see if one is broken. <br />
+<br />
+You really need to get back to a minimal clean environment to test in, but it's impossible for me to know what you've done to your system, or how you did it, or when. Some generic advice:<ul class="mycode_list"><li>delete <kbd>~/perl5</kbd> (or whatever you used for local::lib)<br />
+</li>
+<li>delete <kbd>eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`</kbd> in .bash_profile (or wherever you put it)<br />
+</li>
+<li>open a fresh shell without local::lib configured<br />
+</li>
+<li><kbd>brew uninstall perl</kbd><br />
+</li>
+<li><kbd>brew uninstall get_iplayer</kbd> (if still installed)<br />
+</li>
+<li>If you only installed Homebrew for get_iplayer, then uninstall it completely and clean out /usr/local, including your manual install of get_iplayer.<br />
+</li>
+<li>run <kbd>/usr/bin/perl -V</kbd> to ensure that no paths under ~/perl or /usr/local are in @INC<br />
+</li>
+<li>download a fresh copy of get_iplayer into your working directory - don't install in /usr/local<br />
+</li>
+<li>try <kbd>/usr/bin/perl ./get_iplayer -V</kbd><br />
+</li>
+<li>if that fails, run <kbd>env -i bash --noprofile --norc</kbd> to start a new shell, then try <kbd>/usr/bin/perl ./get_iplayer -V</kbd> again<br />
+</li>
+</ul>
+<br />
+If that doesn't bear fruit, then that's where I throw in the towel because I don't see a get_iplayer problem here. I know for a fact it runs with system Perl on clean versions of 10.7+, and it would be a mutual waste of time for me to just start guessing what you broke on your system. I know nothing about SnailSVN, but if something like that somehow broke your system Perl or any of its modules, somebody should get a spanking. Maybe someone willing to invest more time will come along with better advice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1846</h2></div><div class="dateline">06-06-2017, 01:37 PM</div>
+</div>
+<div class="message">Dinky: As you suspected, it was a Perl problem caused by my installing an SVN client. Thanks for your time and trouble.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Segmentation fault with Homebrew Perl 5.24.1 on macOS Sierra 10.12.5</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

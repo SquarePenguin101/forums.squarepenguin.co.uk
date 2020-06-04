@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - View music played question</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; View music played question</div>
+<div id="pagetitle"><h2>View music played question</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">01-08-2016, 07:56 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+While watching some TV shows i get an option to view music played. Just wondered if Get_iPlayer has an option/command to download a list of music played in a TV show, i don't mean download the music just a list of the music played.<br />
+<br />
+Richard</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">01-08-2016, 09:13 AM</div>
+</div>
+<div class="message">I don't believe get_iplayer has this built-in, but (for now) you can get the raw data from:<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b07kwzgx/segments.json">http://www.bbc.co.uk/programmes/b07kwzgx/segments.json</a><br />
+<br />
+For radio programmes, and from<br />
+<br />
+<a href="http://open.live.bbc.co.uk/aps/programmes/b07m459k/segments.json">http://open.live.bbc.co.uk/aps/programme...ments.json</a><br />
+<br />
+For TV programmes.<br />
+<br />
+Just replace the PID above with that of the programme you're interested in.  The data is also available from the Nitro API if you have an API key.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">01-08-2016, 09:40 AM</div>
+</div>
+<div class="message">Thanks very much for this.<br />
+<br />
+Just a quick dumb question, should i be seeing all the code or just a list of music?<br />
+<br />
+Thanks again<br />
+<br />
+Richard</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-08-2016, 10:49 AM</div>
+</div>
+<div class="message">If you have python available, see: <br />
+<br />
+<a href="https://github.com/StevenMaude/bbc-radio-tracklisting-downloader">https://github.com/StevenMaude/bbc-radio...downloader</a><br />
+<br />
+EDIT: Track list retrieval works for TV programmes as well, but not tagging</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">01-08-2016, 11:01 AM</div>
+</div>
+<div class="message">Thank you<br />
+<br />
+Richard</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">02-08-2016, 11:11 AM</div>
+</div>
+<div class="message">If one is after the tracklistings of a radio show, then you can use the following:<br />
+<br />
+I'm using Chrome, so I installed <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a>, then installed aland's <a href="https://openuserjs.org/scripts/aland/bbc_tracklist_flattener">bbc_tracklist_flattener</a> and as if by magic it all works wonderfully.<br />
+<br />
+It creates the tracklist as a plain text file in your browser, so has no integration with get_iplayer, but it's very easy to install (unlike the python based prog above) and use. Copy &amp; paste into the file's tags is easy :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">04-08-2016, 07:03 PM</div>
+</div>
+<div class="message">Sorry for the slow reply.<br />
+<br />
+Although I'm looking for music played on TV programmes this looks very interesting, I will give it a try<br />
+<br />
+I know nothing about python so still trying to workout how to make use of bbc-radio-tracklisting-downloader. <br />
+<br />
+The suggestions Meic gave work so for the moment i can get the listings, although surrounded by lots of code still useful.<br />
+  <br />
+Thanks<br />
+<br />
+Richard</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-08-2016, 07:54 PM</div>
+</div>
+<div class="message">To view TV programme track listings with <kbd>bbc_tracklist_flattener</kbd>, you need to do a minor adjustment to the episode URL. To take the earlier example, you would play the Bowie Prom at this URL:<br />
+<br />
+<kbd><a href="http://www.bbc.co.uk/iplayer/episode/b07m4956/bbc-proms-2016-david-bowie">http://www.bbc.co.uk/iplayer/episode/b07...avid-bowie</a></kbd><br />
+<br />
+but you need its <kbd>/programmes</kbd> URL:<br />
+<br />
+<kbd><a href="http://www.bbc.co.uk/programmes/b07m4956">http://www.bbc.co.uk/programmes/b07m4956</a></kbd><br />
+<br />
+You can usually get to the right place by clicking "Programme website" underneath the media player and then selecting the episode of interest from there.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">04-08-2016, 07:59 PM</div>
+</div>
+<div class="message">Thanks again for all the help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">05-08-2016, 12:53 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-08-2016, 07:03 PM)</span></cite>The suggestions Meic gave work so for the moment i can get the listings, although surrounded by lots of code still useful.</blockquote><br />
+I've knocked together something to display the track / artist data in a simple table. <br />
+<br />
+<a href="http://bbc-rss.herokuapp.com/pid.html">http://bbc-rss.herokuapp.com/pid.html</a><br />
+<br />
+Maybe this will do?<br />
+<br />
+Any questions, probably better off at <a href="http://github.com/mermade/bbc-rss">http://github.com/mermade/bbc-rss</a> or via email: meic [at] gmx.com</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1324</h2></div><div class="dateline">07-08-2016, 10:11 AM</div>
+</div>
+<div class="message">Thank you very much, this is fantastic and works in a flash :) <br />
+<br />
+You say "I've knocked together something" you make it sound so easy, thanks for taking the time to make it available i'm sure it took time. <br />
+<br />
+i am sure many people like me will love it.<br />
+<br />
+thanks again for making this available</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">27-08-2016, 12:01 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (02-08-2016, 11:11 AM)</span></cite>If one is after the tracklistings of a radio show, then you can use the following:<br />
+<br />
+I'm using Chrome, so I installed <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag">Violentmonkey</a>, then installed aland's <a href="https://openuserjs.org/scripts/aland/bbc_tracklist_flattener">bbc_tracklist_flattener</a> and as if by magic it all works wonderfully.<br />
+<br />
+It creates the tracklist as a plain text file in your browser, so has no integration with get_iplayer, but it's very easy to install (unlike the python based prog above) and use. Copy &amp; paste into the file's tags is easy :)</blockquote><br />
+I asked aland to make a change to include the links to the three largest image files directly associated with programme, so you now get 3 links to these images. <br />
+<br />
+The format will be like this:<br />
+<kbd><a href="https://ichef.bbci.co.uk/images/ic/1920x1080/&lt;pid&gt;.jpg">https://ichef.bbci.co.uk/images/ic/1920x1080/&lt;pid&gt;.jpg</a></kbd><br />
+<kbd><a href="https://ichef.bbci.co.uk/images/ic/1200x675/&lt;pid&gt;.jpg">https://ichef.bbci.co.uk/images/ic/1200x675/&lt;pid&gt;.jpg</a></kbd><br />
+<kbd><a href="https://ichef.bbci.co.uk/images/ic/640x360/&lt;pid&gt;.jpg">https://ichef.bbci.co.uk/images/ic/640x360/&lt;pid&gt;.jpg</a></kbd><br />
+<br />
+Using the David Bowie example:<br />
+<a href="https://ichef.bbci.co.uk/images/ic/1920x1080/p043b9km.jpg">https://ichef.bbci.co.uk/images/ic/1920x...43b9km.jpg</a><br />
+<a href="https://ichef.bbci.co.uk/images/ic/1200x675/p043b9km.jpg">https://ichef.bbci.co.uk/images/ic/1200x...43b9km.jpg</a><br />
+<a href="https://ichef.bbci.co.uk/images/ic/640x360/p043b9km.jpg">https://ichef.bbci.co.uk/images/ic/640x360/p043b9km.jpg</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; View music played question</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - BBC Proms - 2013 Season: Prom 29</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; BBC Proms - 2013 Season: Prom 29</div>
+<div id="pagetitle"><h2>BBC Proms - 2013 Season: Prom 29</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">07-08-2013, 09:13 PM</div>
+</div>
+<div class="message">HI<br />
+<br />
+I am quite new here and I urgently would like to download the BBC Proms 2013 Season Prom 29 Wagner - Tannhauser.<br />
+It was on BBC Radio 3 in three parts.<br />
+<br />
+I have downloaded get_iplayer successfully and typed in <br />
+get_iplayer --get "prom" --type=radio<br />
+Than I get a list of bbc sessions and I am interested in item number 10574, 10576 and 10577.<br />
+Therefore I typed in <br />
+get_iplayer --get10574 --type=radio<br />
+it is searching a bit and than it tells me <br />
+INFO: no specified modes () available for this program.<br />
+<br />
+Could anyone be so kind to give me a helping hand? that would be fab.,<br />
+Cheers<br />
+<br />
+Tannhauser</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">07-08-2013, 09:17 PM</div>
+</div>
+<div class="message">I forgot to mention I live in the UK, got Windows XP.<br />
+For further info see attached screener.<br />
+I only got 4 day left to download it, so I am a bit concerned. Thank you so much for offering your help in advance.<br />
+<br />
+Tannhauser</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">07-08-2013, 09:36 PM</div>
+</div>
+<div class="message">even if I go directly to the BBC homepage<br />
+<a href="http://www.bbc.co.uk/radio/player/b037tvrs">http://www.bbc.co.uk/radio/player/b037tvrs</a><br />
+and type in <br />
+get_iplayer --type=radio --pid b037tvrs<br />
+I get an error message. There is 1 match, but no specified mode available</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-08-2013, 09:46 PM</div>
+</div>
+<div class="message">You might just need to specify a mode, which is what the error is saying to do. Try adding <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--radiomode=best</code></div></div> to the command. <br />
+<br />
+So the whole thing would be:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer â-get 10574 10576 10577 -âtype=radio --radiomode=best</code></div></div><br />
+That should download all three programs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">07-08-2013, 09:57 PM</div>
+</div>
+<div class="message">Thx Square Penguin, now it tells me <br />
+required mplayer does not exist :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-08-2013, 10:06 PM</div>
+</div>
+<div class="message">Another chap had this issue very recently. It was because somehow he didn't install get_iplayer's dependencies, of which mplayer is one.<br />
+<br />
+The best thing to do is uninstall get_iplayer entirely and they install it again using the installer from this 'official' link:<br />
+<br />
+<a href="http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe">http://www.infradead.org/get_iplayer_win...latest.exe</a><br />
+<br />
+Make sure that <span style="font-weight: bold;" class="mycode_b">ALL</span> the components are selected for installation as they are <span style="font-weight: bold;" class="mycode_b">ALL</span> needed. Then you should be able to use the command I gave you previously to get the download going.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-08-2013, 11:50 PM</div>
+</div>
+<div class="message">TannhÃ¤user: I'd like to know how you installed get_iplayer the first time around and where you got your instructions.  As SP said, we've seen another person install without dependencies, and it's a very unusual thing to happen on Windows.  I'm wondering if there is some bad information floating around out there that needs to be corrected.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">08-08-2013, 10:00 PM</div>
+</div>
+<div class="message">Hi both of you<br />
+<br />
+I installed it at the first time without the other add ones. Hence the problems.<br />
+Than I installed it from the source, Square Penguin was so kind to post above and I installed it with ALL add ons. I uninstalled the previous version before of course.<br />
+<br />
+Now I can find TannhÃ¤user 1,2 and 3 (new numbers 10565, 67 and 68) BUT I still cant download it successfully.<br />
+I type in<br />
+get_iplayer â-get 10565 -âtype=radio --radiomode=best<br />
+At the start, I do see some dots on the black display, then some more text runs though and suddenly a Microsoft Window pops up saying (16-bit-MS-DOS-Teilsystem) CS:0f.... and I can close it or Ignore it.<br />
+Both resulting in the same manor: nothing is happening. I have to click on it twice, it disappears but no download. (see attachment) In the folder there is nothing saved.<br />
+<br />
+It makes me crazy, I got three more days to go and am really worried I cant make it. Ah, I was live there and just would like to have a copy for me as a souvenir, it was a stunning concert.<br />
+<br />
+Thanks for your help again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2013, 10:38 PM</div>
+</div>
+<div class="message">Check the contents of the file C:\WINDOWS\System32\autoexec.nt. It's possible that some long-forgotten drivers are still listed there and they are not loading properly when get_iplayer creates a DOS session to run rtmpdump and begin downloading. A clean autoexec.nt will load mscdexnt.exe, redir and dosx. If you see anything else in that file, Google it to see if it's something you still need.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-45</h2></div><div class="dateline">08-08-2013, 10:48 PM</div>
+</div>
+<div class="message">thanks user-2. How can I open autoexec.nt to look into it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-08-2013, 10:56 PM</div>
+</div>
+<div class="message">It is a text file, so use whatever you normally employ to open text files.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; BBC Proms - 2013 Season: Prom 29</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

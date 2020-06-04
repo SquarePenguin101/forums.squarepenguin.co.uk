@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failed to record ' default version'</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Failed to record ' default version'</div>
+<div id="pagetitle"><h2>Failed to record ' default version'</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-517</h2></div><div class="dateline">23-05-2014, 04:16 PM</div>
+</div>
+<div class="message">Hi there, <br />
+<br />
+Great site and idea - thank you!<br />
+<br />
+I'm desperately trying to download a radio programme (about Bass!), which only has two days left on the BBC iPlayer. I've been through all the forum searches and the FAQ's, but couldn't find anything specific to the error message I'm getting. <br />
+<br />
+The get_iplayer finds the correct match, then I get:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes &lt;&gt; available for this programme with version 'default' ,try using --modes=flashaaclow,flashaacstd,rtspaaclow,rtspaacstd,wma&gt;<br />
+ERROR: Failed to record 'Charles Hazlewood's Musical Exploriums - 2. Bass &lt;b0441rsp&gt;'<br />
+<br />
+I am based in London, so should have UK permission. <br />
+<br />
+Can you help?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-05-2014, 04:30 PM</div>
+</div>
+<div class="message">First guess is that you may have messed up your preferences.  What is the output from <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --show-options</code></div></div>?  Scrub your username from the output if necessary.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-517</h2></div><div class="dateline">23-05-2014, 04:46 PM</div>
+</div>
+<div class="message">Hi user-2, <br />
+<br />
+I'm not sure how to scrub my username from the output. <br />
+<br />
+I get, when I type get_iplayer --show-options:<br />
+<br />
+Options from Files:<br />
+mmsnothread = 1<br />
+nopurge = 1<br />
+output = C:\users\shanec\desktop\iPlayer Recordings<br />
+vlc = .\VLV\vlc-2.0.6\vlc.exe<br />
+<br />
+Options from Command Line:<br />
+showoptions = 1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-05-2014, 05:38 PM</div>
+</div>
+<div class="message">Your installation is incomplete.  You didn't install rtmpdump, ffmpeg or mplayer, so get_iplayer can't handle any available file format.  Re-install get_iplayer and select all components in the installer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-517</h2></div><div class="dateline">23-05-2014, 05:59 PM</div>
+</div>
+<div class="message">Brilliant - it worked! Thanks so much, what a brilliant service to mankind you're offering!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Failed to record ' default version'</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

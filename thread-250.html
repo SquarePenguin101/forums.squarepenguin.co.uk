@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Webscraping TV/Radio Cache</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Webscraping TV/Radio Cache</div>
+<div id="pagetitle"><h2>Webscraping TV/Radio Cache</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-250-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-649</h2></div><div class="dateline">02-11-2014, 08:48 AM</div>
+</div>
+<div class="message">Hi people,<br />
+<br />
+It seems that lots of people are interested in generating these cache by webscraping (right term?) the caches and then using the beloved iplayer as before. I was wondering if we could concentrate the posts here and also share experience with how to do it <br />
+<br />
+I'm particular interested in radio feeds so would be will to write a python (then perl) scrapper. My only is issue is that I need the template for the radio.cache file. Can you help<br />
+<br />
+Another question results to changing the way the cache works. Instead of downloading the whole BBC iplayer listing, which worked really with the feeds and now is quite slow via other methods. Would it be easier to use the pvr search terms with the iplayer search page (<a href="http://www.bbc.co.uk/iplayer/search?q=Doctor%who">http://www.bbc.co.uk/iplayer/search?q=Doctor%who</a>) <br />
+<br />
+Thanks for all you work <br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">02-11-2014, 09:40 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I think that I can help a little here. Firstly, I have made improvements to the "Refresh Cache" software so now it looks almost the same as before the changes. There are still some limitations, for example only 20 episodes of each show are cached so Bargain Hunt fans will be unhappy! ;) The information is mostly complete for each episode including the jpg image. <span style="font-weight: bold;" class="mycode_b">There are still some occasional problems that need fixing, I am sorry to say.</span><br />
+<br />
+After recording with the PVR manager the name is almost the same as before, but the beginning of the name is always "BBC_iPlayer_Feeds" which is something I cannot change. Since a new updated is expected today it may soon be a thing of the past anyway.<br />
+<br />
+I guess that this only works with a Windows PC, but I did read that it can also work on other operating systems?? I have two files that I copy into the get_iplayer directory which is âC:\Program Files (x86)\get_iplayerâ (on this machine). I then remove the â.txtâ from the end of both files so that they are simply named âRefresh_Cache_V0_3.plâ and âRefresh_Cache_V0_3.pl.cmdâ. I will try to upload the two files with this message.<br />
+<br />
+I then double click the âRefresh_Cache_V0_3.pl.cmdâ file to open the command, which just starts running the Perl code (âRefresh_Cache_V0_3.pl.cmdâ). My computer then sits there for a very long time scraping all the Data from the BBC iPlayer website and storing the results on the hard-disk, this refreshes the cache that get i-player uses to store all the data from the iPlayer system. You can watch the progress on the screen, but it needed 16 minutes to complete on my PC, as there are currently 3820 videos on BBC iPlayer! After this, I can then start the âPVR Managerâ and use get_iplayer exactly as before.<br />
+<br />
+I worry about the huge amounts of data that is unnecessarily downloaded just to make a simple list of episodes on the BBC iPlayer. It would be much better to use one server to compile a list and allow users to download the very small text file, rather than all users downloading huge numbers of large html pages from the BBC!!!<br />
+<br />
+I will post the format of the Radio Cache soon...<br />
+<br />
+Thank you for all who have worked on this software!<br />
+<br />
+Tiiveni.<br/>
+<a href="static/thread-250-Refresh_Cache_V0_3.pl_.txt">Refresh_Cache_V0_3.pl_.txt</a><br/>
+<a href="static/thread-250-Refresh_Cache_V0_3.pl_.cmd_.txt">Refresh_Cache_V0_3.pl_.cmd_.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">02-11-2014, 09:49 AM</div>
+</div>
+<div class="message">Howdy,<br />
+<br />
+I have tried to upload the format of the "radio.cache" file for you to see.<br />
+<br />
+#index|<br />
+type|<br />
+name|<br />
+pid|<br />
+available|<br />
+episode|<br />
+seriesnum|<br />
+episodenum|<br />
+versions|<br />
+duration|<br />
+desc|<br />
+channel|<br />
+categories|<br />
+thumbnail|<br />
+timeadded|<br />
+guidance|<br />
+web<br />
+<br />
+<br />
+Many thanks.<br />
+<br />
+Tiiveni.<br/>
+<a href="static/thread-250-radio.cache_.txt">radio.cache_.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">02-11-2014, 10:06 AM</div>
+</div>
+<div class="message">Hi There!<br />
+<br />
+Since "Scraping" the whole of the BBC iPlayer website takes so long and uses so much bandwidth, I have tried to upload a "tv.cache" file made here on my own computer. The "Refresh_Cache_V0_3" code still has some bad bugs!! So, it makes more sense to just copy and paste this file for now until a fix is released later today.<br />
+<br />
+The file should be renamed as "tv.cache" and copied &amp; pasted into the correct location which is "C:\Users\"my USERNAME"\.get_iplayer\" on this Windows PC. If you are not sure of the location then you can open a DOS prompt (command prompt) and type "set" then hit enter, then look for "USERPROFILE" and next to this will be the correct location for the "tv.cache" file on your machine (if you add the "\.getiplayer\" part). <br />
+<br />
+I don't know if any of this is clear or explained properly, I am not a computer guy! LOL!!<br />
+<br />
+Thank you everyone!<br />
+<br />
+Tiiveni.<br/>
+<a href="static/thread-250-tv.cache_.2014_11_02-08.56.zip">tv.cache_.2014_11_02-08.56.zip</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-649</h2></div><div class="dateline">02-11-2014, 10:58 AM</div>
+</div>
+<div class="message">When I use this awesome cache file, I get a<br />
+<br />
+Can't call method "new" on an undefined value at /usr/bin/get_iplayer line 1772.<br />
+<br />
+<br />
+I'm running linux ...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-651</h2></div><div class="dateline">02-11-2014, 11:56 AM</div>
+</div>
+<div class="message">vancheese, if you delete the first line of the tv.cache it works ok for me, on linux.<br />
+<br />
+agreed, awesome cache file!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-649</h2></div><div class="dateline">02-11-2014, 12:48 PM</div>
+</div>
+<div class="message">Thanks for the first line help - It does the trick<br />
+<br />
+If you want to program that into a bash script, this works very nicely <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sed -i 1d tv.cache</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">02-11-2014, 08:07 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I have fixed some problems with the earlier "Refresh_Cache" software, now I have version V0_4.<br />
+<br />
+There are still some limitations, for example only (maximum) 20 episodes of each show are cached, sorry Bargain Hunt fans ;) , after recording with the PVR manager the file-name is almost the same as it should be, but the beginning of the file-name is always âBBC_iPlayer_Feedsâ which is something I cannot change!!! <br />
+<br />
+Since a new update is expected today it may soon be a thing of the past anyway. <br />
+<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INSTRUCTIONS:</span><br />
+<br />
+I guess that this only works with a Windows PC, but I did read that it can also work on other operating systems?? I have two files that I copy into the get_iplayer program files directory which is âC:\Program Files (x86)\get_iplayerâ (on this machine). I then remove the â.txtâ from the end of both files so that they are simply named âRefresh_Cache_V0_4.plâ and âRefresh_Cache_V0_4.pl.cmdâ. I will try to upload the two files with this message.<br />
+<br />
+I then double click the âRefresh_Cache_V0_4.pl.cmdâ file to open the command, which just starts running the Perl code (âRefresh_Cache_V0_4.plâ). My computer then sits there for a very long time (about 20 minutes) scraping all the Data from the BBC iPlayer website and storing the results on the hard-disk, this refreshes the cache that get i-player uses to store all the data from the BBC iPlayer system. You can watch the progress on the screen, but it needed just over 16 minutes to complete on my PC, as there are currently 3820 videos on BBC iPlayer! After this, I can then start the âPVR Managerâ and use get_iplayer exactly as before.<br />
+<br />
+<br />
+***********<br />
+<br />
+Big thanks to all those who helped to make get_iPlayer!!!!! :)<br />
+<br />
+Tiiveni.<br />
+<a href="static/thread-250-Refresh_Cache_V0_4.pl_.txt">Refresh_Cache_V0_4.pl_.txt</a><br />
+<a href="static/thread-250-Refresh_Cache_V0_4.pl_.cmd_.txt">Refresh_Cache_V0_4.pl_.cmd_.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-11-2014, 08:16 PM</div>
+</div>
+<div class="message">Great effort on this. It's great to see such input from the community.<br />
+<br />
+For reference - You can zip up files and upload the zip here, thereby retaining the original file names on the zipped content. For security reasons only a small set of file types are allowed here but zip will allow you to present exactly what you want to users.<br />
+<br />
+EDIT - Topic made sticky.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">02-11-2014, 10:05 PM</div>
+</div>
+<div class="message">Thanks Tiiveni. That is great.<br />
+<br />
+Is there a way this can also be used to update the radio cache too?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-649</h2></div><div class="dateline">02-11-2014, 10:22 PM</div>
+</div>
+<div class="message">Here is my quick and nasty Radio ripping program. It uses the search page of the bbc to get the listing.<br />
+Sorry but I used python instead of perl, and the only dependency outside a vanilla python install is beautifulsoup4<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>import bs4,os, re, urllib2<br />
+<br />
+#target={"localfolder":"searchterm"}<br />
+target={"Radcliffe":"The+Radcliffe+%26+Maconie+Show"}<br />
+for show in target:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pid_list = []<br />
+&nbsp;&nbsp;&nbsp;&nbsp;file_path = "/home/andy/Radio/" + show<br />
+&nbsp;&nbsp;&nbsp;&nbsp;url = "http://www.bbc.co.uk/search?q="+target[show]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print url<br />
+&nbsp;&nbsp;&nbsp;&nbsp;page = urllib2.urlopen(url)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;soup = bs4.BeautifulSoup(page.read())<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for link in soup.find_all("a"): <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if link.get("href").startswith("http://www.bbc.co.uk/programmes/"):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pid_list.append((os.path.split(link.get("href"))[-1]))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for thing in set(pid_list):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; os.system("""get_iplayer --type=radio --pid=%s --output="%s" """ % (thing,file_path))</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-626</h2></div><div class="dateline">02-11-2014, 11:21 PM</div>
+</div>
+<div class="message">Nice work you two - this is real Spirit Of The Blitz stuff!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">03-11-2014, 01:10 AM</div>
+</div>
+<div class="message">thanks Tiiveni<br />
+are you planning a similar thing for the radio cache?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-680</h2></div><div class="dateline">03-11-2014, 06:30 AM</div>
+</div>
+<div class="message">I'm getting close under Debian. I put new tv.cache file given above into /home/zippy/.get_iplayer<br />
+Then, I edited the first few  lines in Refresh file V4 as follows...<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite># Parameters<br />
+&#36;showPID     = 'b006q2x0';<br />
+&#36;episodePID  = 'b04n1wqm';<br />
+<br />
+#&#36;ProgramFiles = "/usr/bin";<br />
+print "Directory for Program Files: ".&#36;ProgramFiles."\n";<br />
+<br />
+&#36;Get_iPlayerPath = "/home/zippy/.get_iplayer";<br />
+print "Directory for Get_iPlayer files: ".&#36;Get_iPlayerPath."\n";<br />
+<br />
+&#36;PerlPath = "/usr/bin/perl";<br />
+print "Directory for Perl.exe: ".&#36;PerlPath."\n";<br />
+<br />
+&#36;UserProfile = "/home/zippy/.get_iplayer";<br />
+print "Directory for User Files: ".&#36;UserProfile."\n";<br />
+<br />
+&#36;Get_iPlayer_Cache_Path = "/home/zippy/.get_iplayer";<br />
+print "Directory for iPlayer Cache File: ".&#36;Get_iPlayer_Cache_Path."\n";<br />
+<br />
+&#36;Refreshed_Cache = "/home/zippy/.get_iplayer/tv.cache";<br />
+print "Directory for Refreshed Cache File: ".&#36;Refreshed_Cache."\n";</blockquote>
+<br />
+I then ran the perl script with <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>perl ./Refresh_Cache_V0_4.pl &gt; /home/zippy/data/list.txt</blockquote>
+<br />
+This give me a text file with all the updated pics in it.<br />
+Since I don't use the PVR, this works great for me<br />
+One warning though......its not quick :(<br />
+<br />
+Thanks guys for the fix :)<br />
+<br />
+Zippy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">03-11-2014, 08:04 AM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+This is really great all the work that you are all doing! I do not know if I have enough time, but I did take a look already at making the "Refresh Cache" Perl script to update both the "tv.cache" file and also the "radio.cache" file. The biggest problem is the huge number of episodes available on the iPlayer Radio system!!<br />
+<br />
+Thanks again to all here!<br />
+<br />
+Tiiveni.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">03-11-2014, 11:19 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/webscrapping-tvradio-cache/#post-10320">Quote:</a>&lt;/div&gt;Hello,<br />
+<br />
+This is really great all the work that you are all doing! I do not know if I have enough time, but I did take a look already at making the âRefresh Cacheâ Perl script to update both the âtv.cacheâ file and also the âradio.cacheâ file. The biggest problem is the huge number of episodes available on the iPlayer Radio system!!<br />
+<br />
+Thanks again to all here!<br />
+<br />
+Tiiveni.</blockquote>
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/webscrapping-tvradio-cache/#post-10320">Quote:</a>&lt;/div&gt;Hello,<br />
+<br />
+This is really great all the work that you are all doing! I do not know if I have enough time, but I did take a look already at making the âRefresh Cacheâ Perl script to update both the âtv.cacheâ file and also the âradio.cacheâ file. The biggest problem is the huge number of episodes available on the iPlayer Radio system!!<br />
+<br />
+Thanks again to all here!<br />
+<br />
+Tiiveni.</blockquote>
+If you can get a radio one working you will be my hero<br />
+would it be possible to limit the search to specific radio stations rather than all of them?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">03-11-2014, 11:51 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/webscrapping-tvradio-cache/#post-10320">Quote:</a>&lt;/div&gt;The biggest problem is the huge number of episodes available on the iPlayer Radio system!!</blockquote>
+<br />
+I can appreciate that Tiiveni, but that update only really needs to be run once a week to catch everything. Although some people might want it every 3 days to amke sure nothing they are collecting is missed!<br />
+<br />
+Sadly I am more of a hardware and network person than a coder otherwise I would have a crack, I can follow the logic but I wouldn't know how to start a new thread.<br />
+<br />
+Neil</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-637</h2></div><div class="dateline">03-11-2014, 01:44 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+Here is a "radio.cache" file that I have made here on my PC. It is incomplete as there are no "episodes" from Radio Series, only the radio programs that don't belong to a series. <br />
+<br />
+The new version of get iPlayer is out now, so I hope that this "radio.cache" file will not be needed. Fingers crossed!<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INSRUCTIONS</span><br />
+The file should be renamed as âradio.cacheâ and copied &amp; pasted into the correct location which is âC:\Users\âmy USERNAMEâ\.get_iplayer\â on this Windows PC. If you are not sure of the location then you can open a DOS prompt (command prompt) and type âsetâ then hit enter, then look for âUSERPROFILEâ and next to this will be the correct location for the âtv.cacheâ file on your machine (if you add the â\.getiplayer\â part).<br />
+<br />
+Thanks again to all who work on this project!<br />
+<br />
+Tiiveni.<br/>
+<a href="static/thread-250-radio.cache_.2014_11_03_12.30.zip">radio.cache_.2014_11_03_12.30.zip</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">03-11-2014, 03:26 PM</div>
+</div>
+<div class="message">Excellent !<br />
+In recent windows you can test for 32 or 64 bit architecture quite easily<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--cut<br />
+Set RegQry=HKLM&#92;Hardware&#92;Description&#92;System&#92;CentralProcessor<br />
+REG.exe Query %RegQry% &gt; checkOS.txt<br />
+Find /i "x86" &lt; CheckOS.txt &gt; StringCheck.txt<br />
+If %ERRORLEVEL% == 0 (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Echo "This is 32 Bit Operating system"<br />
+set arch=32<br />
+) ELSE (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Echo "This is 64 Bit Operating System"<br />
+set arch=64<br />
+)<br />
+echo %arch%<br />
+-- cut</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/webscrapping-tvradio-cache/#post-10264">Quote:</a>&lt;/div&gt;Hello,<br />
+<br />
+I think that I can help a little here. Firstly, I have made improvements to the âRefresh Cacheâ software so now it looks almost the same as before the changes. There are still some limitations, for example only 20 episodes of each show are cached so Bargain Hunt fans will be unhappy! ;) The information is mostly complete for each episode including the jpg image. <span style="font-weight: bold;" class="mycode_b">There are still some occasional problems that need fixing, I am sorry to say.</span><br />
+<br />
+After recording with the PVR manager the name is almost the same as before, but the beginning of the name is always âBBC_iPlayer_Feedsâ which is something I cannot change. Since a new updated is expected today it may soon be a thing of the past anyway.<br />
+<br />
+I guess that this only works with a Windows PC, but I did read that it can also work on other operating systems?? I have two files that I copy into the get_iplayer directory which is âC:\Program Files (x86)\get_iplayerâ (on this machine). I then remove the â.txtâ from the end of both files so that they are simply named âRefresh_Cache_V0_3.plâ and âRefresh_Cache_V0_3.pl.cmdâ. I will try to upload the two files with this message.<br />
+<br />
+I then double click the âRefresh_Cache_V0_3.pl.cmdâ file to open the command, which just starts running the Perl code (âRefresh_Cache_V0_3.pl.cmdâ). My computer then sits there for a very long time scraping all the Data from the BBC iPlayer website and storing the results on the hard-disk, this refreshes the cache that get i-player uses to store all the data from the iPlayer system. You can watch the progress on the screen, but it needed 16 minutes to complete on my PC, as there are currently 3820 videos on BBC iPlayer! After this, I can then start the âPVR Managerâ and use get_iplayer exactly as before.<br />
+<br />
+I worry about the huge amounts of data that is unnecessarily downloaded just to make a simple list of episodes on the BBC iPlayer. It would be much better to use one server to compile a list and allow users to download the very small text file, rather than all users downloading huge numbers of large html pages from the BBC!!!<br />
+<br />
+I will post the format of the Radio Cache soonâ¦<br />
+<br />
+Thank you for all who have worked on this software!<br />
+<br />
+Tiiveni.</blockquote>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">03-11-2014, 04:37 PM</div>
+</div>
+<div class="message">Thanks for the radio.cache, Tiiveni. It certainly beats manual searching, downloading and renaming!<br />
+<br />
+I wish I could save you the trouble of zipping and posting it.<br />
+<br />
+Neil</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-250-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Webscraping TV/Radio Cache</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

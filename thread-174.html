@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Stream fails to play. Any idea what could be happening?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Stream fails to play. Any idea what could be happening?</div>
+<div id="pagetitle"><h2>Stream fails to play. Any idea what could be happening?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-536</h2></div><div class="dateline">13-07-2014, 03:38 PM</div>
+</div>
+<div class="message">I can download using --get, but I'm unable to watch BBC live. Here is the log. Hope someone could tell me if something can be done or if BBC has changed something that made get-iplayer useless to watch streaming. Thanks.<br />
+<br />
+&#36; get_iplayer --stream --type=livetv "BBC Two"<br />
+get_iplayer 2.86-2-g969bd34-ppa17, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: User prefs dir: /home/ddd/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+INFO: Using Proxy <a href="http://xx.xx.xx.xx:80">http://xx.xx.xx.xx:80</a><br />
+Current options:<br />
+	atomicparsley = /usr/bin/AtomicParsley<br />
+	flvstreamer = /usr/bin/rtmpdump<br />
+	nowrite = 1<br />
+	packagemanager = apt<br />
+	proxy = <a href="http://xx.xx.xx.xx:80">http://xx.xx.xx.xx:80</a><br />
+	rtmpdump = /usr/bin/rtmpdump<br />
+	stdout = 1<br />
+	tag_hdvideo = 1<br />
+	tag_longdesc = 1<br />
+	tag_utf8 = 1<br />
+	thumbsize = 150<br />
+	type = livetv<br />
+	verbose = 1<br />
+<br />
+INFO: Search args: 'BBC Two','(verbose)'<br />
+INFO: Got 8 file cache entries for livetv<br />
+INFO: Will refresh channel BBC Three<br />
+INFO: Will refresh channel BBC Two<br />
+INFO: Will refresh channel CBeebies<br />
+INFO: Will refresh channel BBC One<br />
+INFO: Will refresh channel BBC News<br />
+INFO: Will refresh channel BBC Parliament<br />
+INFO: Will refresh channel BBC Alba<br />
+INFO: Will refresh channel CBBC<br />
+INFO: Will refresh channel BBC Four<br />
+<br />
+Added: 80000:	BBC Alba - live<br />
+INFO: Search term 'BBC Two' is a substring<br />
+DEBUG: Search download_regex = BBC Two<br />
+DEBUG: Search channel_regex = .*<br />
+DEBUG: Search category_regex = .*<br />
+DEBUG: Search versions_regex = .*<br />
+DEBUG: Search exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search channel_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search category_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search since = 999999<br />
+DEBUG: Search before = -999999<br />
+INFO: Search term '(verbose)' is a substring<br />
+DEBUG: Search download_regex = (verbose)<br />
+DEBUG: Search channel_regex = .*<br />
+DEBUG: Search category_regex = .*<br />
+DEBUG: Search versions_regex = .*<br />
+DEBUG: Search exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search channel_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search category_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search since = 999999<br />
+DEBUG: Search before = -999999<br />
+Matches:<br />
+80006:	BBC Two - live<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Getting page <a href="http://feeds.bbc.co.uk/iplayer/episode/bbc_two">http://feeds.bbc.co.uk/iplayer/episode/bbc_two</a><br />
+INFO: iPlayer metadata URL = <a href="http://www.bbc.co.uk/iplayer/playlist/bbc_two">http://www.bbc.co.uk/iplayer/playlist/bbc_two</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/iplayer/playlist/bbc_two">http://www.bbc.co.uk/iplayer/playlist/bbc_two</a><br />
+INFO: Using Live TV: <a href="http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml">http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml</a><br />
+INFO: Version: default, VersionPid: <a href="http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml">http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml</a>, Duration: <br />
+INFO: Getting page <a href="http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml">http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england">http://www.bbc.co.uk/mediaselector/4/mti...wo_england</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p003/limelight?cb=67703">http://www.bbc.co.uk/mediaselector/4/mti...t?cb=67703</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p003/akamai?cb=33432">http://www.bbc.co.uk/mediaselector/4/mti...i?cb=33432</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p004/limelight?cb=18671">http://www.bbc.co.uk/mediaselector/4/mti...t?cb=18671</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p004/akamai?cb=76419">http://www.bbc.co.uk/mediaselector/4/mti...i?cb=76419</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p006/limelight?cb=96107">http://www.bbc.co.uk/mediaselector/4/mti...t?cb=96107</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p006/akamai?cb=83913">http://www.bbc.co.uk/mediaselector/4/mti...i?cb=83913</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p005/limelight?cb=75005">http://www.bbc.co.uk/mediaselector/4/mti...t?cb=75005</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/mediaselector/4/mtis/stream/http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p005/akamai?cb=40095">http://www.bbc.co.uk/mediaselector/4/mti...i?cb=40095</a><br />
+INFO: Found mode flashhigh1: (pc_stream_audio_video_simulcast_uk_v_lm_p005) rtmp h264 640x360 796kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashhigh2: (pc_stream_audio_video_simulcast_uk_v_lm_p005) rtmp h264 640x360 796kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashlow1: (pc_stream_audio_video_simulcast_uk_v_lm_p003) rtmp h264 384x216 368kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashlow2: (pc_stream_audio_video_simulcast_uk_v_lm_p003) rtmp h264 384x216 368kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashstd1: (pc_stream_audio_video_simulcast_uk_v_lm_p004) rtmp h264 512x288 496kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashstd2: (pc_stream_audio_video_simulcast_uk_v_lm_p004) rtmp h264 512x288 496kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashvhigh1: (pc_stream_audio_video_simulcast_uk_v_lm_p006) rtmp h264 704x396 1500kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashvhigh2: (pc_stream_audio_video_simulcast_uk_v_lm_p006) rtmp h264 704x396 1500kbps stream (CDN: akamai/10)<br />
+INFO: Found mode rtsphigh1: (pc_stream_audio_video_simulcast_uk_v_lm_p005) rtmp h264 640x360 796kbps stream (CDN: limelight/20)<br />
+INFO: Found mode rtsplow1: (pc_stream_audio_video_simulcast_uk_v_lm_p003) rtmp h264 384x216 368kbps stream (CDN: limelight/20)<br />
+INFO: Found mode rtspstd1: (pc_stream_audio_video_simulcast_uk_v_lm_p004) rtmp h264 512x288 496kbps stream (CDN: limelight/20)<br />
+INFO: Found mode rtspvhigh1: (pc_stream_audio_video_simulcast_uk_v_lm_p006) rtmp h264 704x396 1500kbps stream (CDN: limelight/20)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/http://www.bbc.co.uk/emp/simulcast/bbc_two_england.xml.rdf">http://www.bbc.co.uk/programmes/http://w...nd.xml.rdf</a><br />
+INFO: Will search for versions: default<br />
+INFO: Mode list: flashvhigh,flashhigh,flashstd,flashnormal,flashlow<br />
+INFO: Checking existence of default version<br />
+INFO: Version = default<br />
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record livetv: BBC Two - live<br />
+INFO: Attempt number: 1 / 50<br />
+INFO: File name prefix = BBC_Two_live_2014-07-13_163443                 <br />
+INFO: rtmpver: <br />
+INFO: RTMPDump v2.4-n78-git3a1e20c-ppa8~precise<br />
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+INFO: <br />
+INFO: /usr/bin/rtmpdump: This program dumps the media content streamed over RTMP.<br />
+INFO: <br />
+INFO: --help|-h               Prints this help screen.<br />
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)<br />
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)<br />
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url<br />
+INFO: --port|-c port          Overrides the port in the rtmp url<br />
+INFO: --socks|-S host:port    Use the specified SOCKS proxy<br />
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)<br />
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url<br />
+INFO: --playlist|-Y           Set playlist before playing<br />
+INFO: --swfUrl|-s url         URL to player swf file<br />
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")<br />
+INFO: --pageUrl|-p url        Web URL of played programme<br />
+INFO: --app|-a app            Name of target app on server<br />
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)<br />
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification<br />
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically<br />
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing<br />
+INFO: --auth|-u string        Authentication string to be appended to the connect string<br />
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string<br />
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),<br />
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number<br />
+INFO: --flashVer|-f string    Flash version string (default: "LNX 10,0,32,18")<br />
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible<br />
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)<br />
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack<br />
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout<br />
+INFO: --resume|-e             Resume a partial RTMP download<br />
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)<br />
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)<br />
+INFO: --stop|-B num           Stop at num seconds into stream<br />
+INFO: --token|-T key          Key for SecureToken response<br />
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers<br />
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter<br />
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)<br />
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)<br />
+INFO: <br />
+INFO: --quiet|-q              Suppresses all command output.<br />
+INFO: --verbose|-V            Verbose command output.<br />
+INFO: --debug|-z              Debug level command output.<br />
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.<br />
+INFO: <br />
+INFO: /usr/bin/rtmpdump version 2.4<br />
+INFO: RTMP_URL: rtmp://bbcmedia.fc.llnwd.net:1935/ondemand?_fcs_vhost=bbcmedia.fc.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199&amp;aifp=v001&amp;slist=s_bbc2_inlet_1500, tcUrl: rtmp://bbcmedia.fc.llnwd.net:1935/bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199, application: bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199, swfUrl: <a href="http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf">http://www.bbc.co.uk/emp/releases/iplaye..._4_emp.swf</a>, file: /home/xxx/BBC/BBC_Two_live_2014-07-13_163443.partial.mp4, file_done: /home/xxx/BBC/BBC_Two_live_2014-07-13_163443.mp4<br />
+<br />
+<br />
+INFO: Command: "/usr/bin/rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "s_bbc2_inlet_1500" "--host" "bbcmedia.fc.llnwd.net" "--swfVfy" "http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" "--tcUrl" "rtmp://bbcmedia.fc.llnwd.net:1935/bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199" "--app" "bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199" "--pageUrl" "" "--timeout" "10" "--verbose"<br />
+<br />
+RTMPDump v2.4-n78-git3a1e20c-ppa8~precise<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+WARNING: You haven't specified an output file (-o filename), using stdout<br />
+DEBUG: Protocol : RTMP<br />
+DEBUG: Hostname : bbcmedia.fc.llnwd.net<br />
+DEBUG: Port     : 1935<br />
+DEBUG: Playpath : s_bbc2_inlet_1500<br />
+DEBUG: tcUrl    : rtmp://bbcmedia.fc.llnwd.net:1935/bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199<br />
+DEBUG: swfUrl   : <a href="http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf">http://www.bbc.co.uk/emp/releases/iplaye..._4_emp.swf</a><br />
+DEBUG: pageUrl  : <br />
+DEBUG: app      : bbcmedia?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=s_bbc2_inlet_1500&amp;et=1405269279&amp;fmta-token=0bd8c5d0ae5c6a8ceff5d439a8d9b94145c4bcd7ce8fd28ea1c1a2cc4355d199<br />
+DEBUG: live     : no<br />
+DEBUG: timeout  : 10 sec<br />
+DEBUG: SWFSHA256:<br />
+DEBUG: b6 74 7f 89 f9 ec 6a 60 c1 a4 b5 8b b1 18 b0 fa<br />
+DEBUG: 65 18 86 24 c2 8a 1a a3 2f 72 0f 0b 80 59 dd 7f<br />
+DEBUG: SWFSize  : 595316<br />
+DEBUG: Setting buffer time to: 36000000ms<br />
+Connecting ...<br />
+ERROR: RTMP_Connect0, failed to connect socket. 111 (Connection refused)<br />
+DEBUG: Closing connection.<br />
+<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+<br />
+INFO: Streaming failed with exit code 3<br />
+DEBUG: Record using flashvhigh1 mode return code: 'abort'<br />
+ERROR: aborting get_iplayer</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-07-2014, 05:12 PM</div>
+</div>
+<div class="message">Try the alternate CDN.  Read the "Modes and CDNs" section of the Recording Modes page in wiki.  It's possible that you're being rejected by that particular CDN because you're not in the UK, but there is no definitive indication of that in your log.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-536</h2></div><div class="dateline">13-07-2014, 08:31 PM</div>
+</div>
+<div class="message">I am accessing through a UK ip. As I was able to download (--get) content I discarded the possible fail due to that. I tried several modes, but non of them seem to work (toggle std1-2). Does currently work get-player in streaming mode inside the UK?<br />
+<br />
+DEBUG: Invoking play<br />
+DEBUG: sending ctrl. type: 0x0003<br />
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;_onbwcheck&gt;<br />
+DEBUG: Invoking _result<br />
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096<br />
+DEBUG: RTMP_ClientPacket, received: invoke 133 bytes<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: NULL<br />
+DEBUG: (object begin)<br />
+DEBUG: Property: &lt;Name:              level, STRING:	error&gt;<br />
+DEBUG: Property: &lt;Name:               code, STRING:	NetStream.Failed&gt;<br />
+DEBUG: Property: &lt;Name:        description, STRING:	Failed to play  (stream ID: 1).&gt;<br />
+DEBUG: Property: &lt;Name:           clientid, STRING:	qAAwAh3A&gt;<br />
+DEBUG: (object end)<br />
+DEBUG: (object end)<br />
+DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Failed<br />
+ERROR: Closing connection: NetStream.Failed<br />
+DEBUG: Closing connection.<br />
+<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+<br />
+INFO: Streaming failed with exit code 1<br />
+DEBUG: Record using flashvhigh1 mode return code: 'abort'<br />
+ERROR: aborting get_iplayer<br />
+[0x7fda10006698] main stream error: cannot pre fill buffer</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-536</h2></div><div class="dateline">13-07-2014, 08:57 PM</div>
+</div>
+<div class="message">I have already tried flashstd1, flashstd2, flashhigh1, flashhigh2, vlashvhigh1, flashvhigh2, flashlow1 and flashlow2.<br />
+<br />
+Sometimes I get:<br />
+With some modes I get <span style="font-weight: bold;" class="mycode_b">"NetStream.Play.StreamNotFound"</span> with other ones <span style="font-weight: bold;" class="mycode_b">"Netstream.Failed"</span> and with other ones <span style="font-weight: bold;" class="mycode_b">NetConnection.Connect.Rejected</span> (Access denied!) but with none of them work.<br />
+<br />
+I read in a previous post that rtsp modes will not work.<br />
+<br />
+Does the "NetConnection.Connect.Rejected" message means that my connection is getting refused because I am not in the Uk (despite I am able to download)?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-07-2014, 11:08 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>I am accessing through a UK ip.</blockquote>
+<br />
+If you have a UK IP address, why are you using a proxy?  Also, if you are in fact using some kind of DNS-based service, the connections to streaming servers very likely don't show a UK IP address as origin.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>As I was able to download (âget) content I discarded the possible fail due to that.</blockquote>
+<br />
+I presume you mean you can download catch-up content rather than live content - not quite the same thing.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Does currently work get-player in streaming mode inside the UK?</blockquote>
+<br />
+Of course, but keep in mind that live streaming works poorly in general.  Once a live stream starts, it generally keeps going, but it can be difficult to get started.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Does the âNetConnection.Connect.Rejectedâ message means that my connection is getting refused because I am not in the Uk (despite I am able to download)?</blockquote>
+<br />
+Yes</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">14-07-2014, 01:20 PM</div>
+</div>
+<div class="message">It's my policy here on the get_iplayer forums that we don't condone the use of get_iplayer to download content from outside of the UK. This policy is not yet clearly publicised so you weren't to know, and I intend to write this up shortly in the forums rules.<br />
+<br />
+As it is clear you are accessing iPlayer content from outside the UK, I am going to close this thread as we don't offer support for troubleshooting VPN or proxy use. <br />
+<br />
+(Admin)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Stream fails to play. Any idea what could be happening?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

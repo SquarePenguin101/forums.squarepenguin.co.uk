@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Per documentation, use --subs-mono for monochrome subtitles</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Per documentation, use --subs-mono for monochrome subtitles</div>
+<div id="pagetitle"><h2>Per documentation, use --subs-mono for monochrome subtitles</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">11-01-2020, 12:02 PM</div>
+</div>
+<div class="message">As my hearing has deteriorated over the years I've started to use subtitles more often. But now, GiP seems to be adding extra information which I don't recall seeing before.<br />
+<br />
+An example is this :-<br />
+1<br />
+00:00:03,280 --&gt; 00:00:05,640<br />
+&lt;font color="#ffffff"&gt;In this special edition&lt;/font&gt;<br />
+&lt;font color="#ffffff"&gt;of Front Row Late,&lt;/font&gt;<br />
+<br />
+Should the .srt file have these HTML commands in it and did it always do so?<br />
+<br />
+If it helps, I'm trying to watch the programmes on a Humax machine.<br />
+<br />
+Should I use a different command to add subtitles, embed them perhaps or will simply move the problems elsewhere?<br />
+<br />
+Any help appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">11-01-2020, 02:27 PM</div>
+</div>
+<div class="message">I don't know if it's always been so, but both vlc and kodi use those tags to show the subtitles in colour.<br />
+Edit: oh, and, AFAIK, it's not get_iplayer that adds the tags, they come straight from the bbc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">11-01-2020, 03:08 PM</div>
+</div>
+<div class="message">The Humax machine I referred to is a Humax Fox machine with custom firmware so just in case that was having an influence I fired up my Humax HDR100S satellite machine. That says there's no subtitle data for the Mary Beard programme!<br />
+<br />
+Ok, I'll try something else. I fired up my Raspberry Pi running OSMC and that displays subtitles just fine as I can't see a way to turn them off! Time to RTFM methinks. So as you suggested, things like VLC and Kodi do work 'as is' so I can close this now.<br />
+<br />
+I'll mark the thread as solved.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1743</h2></div><div class="dateline">11-01-2020, 03:37 PM</div>
+</div>
+<div class="message">Yes, the colours come from the BBC. If they are causing problems for your playback, you can ask get_iplayer to remove the colour tags using the <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subs-mono</code></div></div> option, see:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/subtitles#colours">https://github.com/get-iplayer/get_iplay...es#colours</a><br />
+<br />
+Note that if you embed the subtitles, they will automatically be converted to mono (both the embedded and external srt files).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1906</h2></div><div class="dateline">11-01-2020, 03:44 PM</div>
+</div>
+<div class="message">It wasn't the colours that were a problem, simply that the HTML tags were being displayed on the Humax Fox machine. As I mentioned though, OSMC on a Pi displays them fine.<br />
+<br />
+I had looked at the page to which you refer but hadn't really taken note of the colour disappearing when embedded. If have the time one day, I might have a go at experimenting with embedding subtitles and try to persuade them to be in colour. But that is for another day.<br />
+<br />
+Thanks for your reply.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Per documentation, use --subs-mono for monochrome subtitles</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

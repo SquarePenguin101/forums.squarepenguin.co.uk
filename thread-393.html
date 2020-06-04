@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Error</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Error</div>
+<div id="pagetitle"><h2>Error</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">14-05-2015, 12:26 PM</div>
+</div>
+<div class="message">Get iplayer was working Ok, but a recent download gave me this error...<br />
+<br />
+Download complete<br />
+avconv: relocation error: /usr/lib/i386-linux-gnu/i686/cmov/libavfilter.so.4: symbol sws_isSupportedEndiannessConversion, version LIBSWSCALE_2 not defined in file libswscale.so.2 with link time reference<br />
+INFO: Command exit code 127 (raw code = 32512)<br />
+WARNING: flv conversion failed - retaining flv file<br />
+<br />
+Nver had this before.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2015, 01:45 PM</div>
+</div>
+<div class="message">That has nothing to do with get_iplayer.  You've somehow managed to break avconv on your system.  Perhaps you installed incompatible libraries from a third-party repository?  It could also be that your distro's packages are broken. Google and Stack Overflow might be your friends here. All I can suggest is trying to uninstall libav and its dependencies and re-installing from your distro's standard repositories.  Sorry, but we can't really help with this since we can't know what happened to your system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">14-05-2015, 02:52 PM</div>
+</div>
+<div class="message">Thanks, I thought the error might be mine, I am currently trying this on my windows machine as an alternative.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">14-05-2015, 03:07 PM</div>
+</div>
+<div class="message">Well it worked on my windows machine....using synaptic there quite a few libav packages.... :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2015, 03:34 PM</div>
+</div>
+<div class="message">You might first try to reinstall the libswscale2 package - that seems to be where the problem lies. Moreover, libswscale2 might not have been installed with libav-tools.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">14-05-2015, 04:37 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/error-2/#post-11452">Quote:</a>You might first try to reinstall the libswscale2 package â that seems to be where the problem lies. Moreover, libswscale2 might not have been installed with libav-tools.<br />
+<br />
+<a href="http://#11452">Quote</a></blockquote>
+<br />
+Thanks tried that now getting a different error, avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers<br />
+  built on Mar 16 2015 13:20:58 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)<br />
+INFO: Command exit code 2 (raw code = 11)<br />
+WARNING: flv conversion failed - retaining flv file<br />
+<br />
+Looks as if might have to do a clean install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2015, 05:13 PM</div>
+</div>
+<div class="message">That most likely means another dependency is broken. The libav-tools package works fine if installed on a clean 14.04 system. If you can do so, save yourself some headaches and perform a clean install.  If not, you'll have to figure out how to fix your installation of libav.  If you can't do either, you can use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--raw</code></div></div> to skip the re-muxing phases of get_iplayer output, where avconv is used.  However, your system may not be able to play the resulting FLV files if it has broken multimedia packages.  You could also find a PPA build of the proper ffmpeg and use that instead of avconv via <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg=/path/to/ffmpeg</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">14-05-2015, 07:50 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/error-2/#post-11454">Quote:</a>That most likely means another dependency is broken. The libav-tools package works fine if installed on a clean 14.04 system. If you can do so, save yourself some headaches and perform a clean install.  If not, youâll have to figure out how to fix your installation of libav.  If you canât do either, you can use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--raw</code></div></div> to skip the re-muxing phases of get_iplayer output, where avconv is used.  However, your system may not be able to play the resulting FLV files if it has broken multimedia packages.  You could also find a PPA build of the proper ffmpeg and use that instead of avconv via <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg=/path/to/ffmpeg</code></div></div>.<br />
+<br />
+<a href="http://#11454">Quote</a></blockquote>
+<br />
+Well the clean install option would probably take the best part of a day, with all the extras :( anyway managed to find a PPA for ffmpeg and using your suggestion it worked :)) Many thanks for your help, even though it wasn't a get_iplayer issue, much appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2015, 10:16 PM</div>
+</div>
+<div class="message">Good news.  Now if you uninstall the libav-tools package (thus removing avconv), you should be able to use get_iplayer without specifying <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-05-2015, 10:24 PM</div>
+</div>
+<div class="message">But - beware that when you next update get_iplayer from the PPA, it would attempt to reinstall libav-tools as a dependency, at least as the PPA build is currently configured.  Proper ffmpeg has returned to Ubuntu, but no clue if it has been (or will be) back-ported to 14.04 repositories.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">15-05-2015, 08:40 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/error-2/#post-11456">Quote:</a>Good news.  Now if you uninstall the libav-tools package (thus removing avconv), you should be able to use get_iplayer without specifying <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--ffmpeg</code></div></div>.<br />
+<br />
+<a href="http://#11456">Quote</a></blockquote>
+<br />
+Well there is definitely something broke, removed libav-tools and tried again, no error messages but did not convert, so it will only convert if I specify the path to ffmpeg.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2015, 10:18 AM</div>
+</div>
+<div class="message">Sorry, bad advice - ignore.  It would depend on whether ffmpeg is installed in &#36;PATH.  That's not necessarily the case with PPA builds.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">15-05-2015, 10:29 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/error-2/#post-11459">Quote:</a>Sorry, bad advice â ignore.  It would depend on whether ffmpeg is installed in &#36;PATH.  Thatâs not necessarily the case with PPA builds.<br />
+<br />
+<a href="http://#11459">Quote</a></blockquote>
+<br />
+That's Ok, at least I have a solution which is better than a complete reinstall.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">15-05-2015, 01:46 PM</div>
+</div>
+<div class="message">Looks as if I may have to do a clean install anyway, libav-tools seems to linked to a number of packages when updates come through....gonna be an interesting weekend.....</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-05-2015, 03:54 PM</div>
+</div>
+<div class="message">If you can, try it in a VM first.  Your original post suggests you're not using a stock Ubuntu 14.04 system, so you might be installing a broken libav-tools package from wherever you got it.  It's also possible there is something peculiar to 32-bit builds.  If you can check those things in isolation, it might avoid a needless system re-install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">15-05-2015, 05:11 PM</div>
+</div>
+<div class="message">Well there was an update to an icon theme I use, and guess what, I had to reinstall the libav-tools otherwise it wouldn't update....so something is definitely screwed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-908</h2></div><div class="dateline">20-05-2015, 09:50 AM</div>
+</div>
+<div class="message">Well a clean install it was, not quite so painful as I thought it would be and now it's working again...happy days :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-05-2015, 10:25 AM</div>
+</div>
+<div class="message">Good news, though unfortunate it came to that.  I suggest making a list of libav-tools dependencies and versions from the Trusty repo and checking them when the system is completely rebuilt.  From your original report, it looks like some other package pulled in a version of libavfilter (and probably others) that was newer than the version compatible with avconv.  Although it's not necessary, get_iplayer should work with newer versions of libav, but all the dependencies need to match.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-901</h2></div><div class="dateline">20-05-2015, 04:23 PM</div>
+</div>
+<div class="message">I have an old box with Hardy Heron on it that I can't really upgrade.  Does anyone know the repository to use to get libav or libav-tools?  It is unknown to the repositories I've been using to maintain it.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Error</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

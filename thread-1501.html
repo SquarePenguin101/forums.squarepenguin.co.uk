@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer for Raspbian Stretch</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get_iplayer for Raspbian Stretch</div>
+<div id="pagetitle"><h2>get_iplayer for Raspbian Stretch</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">10-09-2017, 04:59 PM</div>
+</div>
+<div class="message">get_iplayer 3.02 for Raspbian Stretch is now available at <a href="http://packages.hedgerows.org.uk/">http://packages.hedgerows.org.uk/</a><br />
+<br />
+per the notes you'll find there, to install the updated repository, get-iplayer and its dependencies, paste this line into a terminal window:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>wget http://packages.hedgerows.org.uk/raspbian/install.sh -O - | sh</code></div></div><br />
+The repository signing key has changed, so it's not sufficient just to point at "stable" instead of "jessie".  If you don't want to run the install script just download a copy and pick the pieces you want from it.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">12-09-2017, 09:37 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (10-09-2017, 04:59 PM)</span></cite>get_iplayer 3.02 for Raspbian Stretch is now available at <a href="http://packages.hedgerows.org.uk/">http://packages.hedgerows.org.uk/</a><br />
+<br />
+per the notes you'll find there, to install the updated repository, get-iplayer and its dependencies, paste this line into a terminal window:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>wget http://packages.hedgerows.org.uk/raspbian/install.sh -O - | sh</code></div></div><br />
+The repository signing key has changed, so it's not sufficient just to point at "stable" instead of "jessie".  If you don't want to run the install script just download a copy and pick the pieces you want from it.<br />
+<br />
+Jon</blockquote><br />
+Just FYI, the script fails for me when adding both keys, on Raspbian Jessie, with error:<br />
+<kbd>gpg: can't open `': No such file or directory</kbd><br />
+<br />
+I manually downloaded and added the keys successfully.<br />
+<br />
+Thanks for all the work maintaining get-iplayer.<br />
+<br />
+P.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">12-09-2017, 10:09 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-09-2017, 09:37 AM)</span></cite>Just FYI, the script fails for me when adding both keys, on Raspbian Jessie, with error:<br />
+<kbd>gpg: can't open `': No such file or directory</kbd><br />
+<br />
+I manually downloaded and added the keys successfully.<br />
+<br />
+Thanks for all the work maintaining get-iplayer.<br />
+<br />
+P.</blockquote><br />
+That's odd.  (My testing was limited, but it worked ok on a fresh install of Stretch...)<br />
+<br />
+However, mainly for others who might read this thread, please note that the repository is aimed at Stretch, not Jessie, and attempting to use it with Jessie may have variable results.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">12-09-2017, 10:19 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>That's odd.  (My testing was limited, but it worked ok on a fresh install of Stretch...)<br />
+<br />
+However, mainly for others who might read this thread, please note that the repository is aimed at Stretch, not Jessie, and attempting to use it with Jessie may have variable results.<br />
+<br />
+Jon</blockquote>
+<br />
+Ah -- that's my misunderstanding, then. 3.02-1-ge2c5943-ppa30e appears to be working fine on Jessie for now, but I guess I better get myself upgraded to Stretch.<br />
+<br />
+Thanks for the followup.<br />
+<br />
+Peter.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">16-09-2017, 03:11 PM</div>
+</div>
+<div class="message">I've just tried installing get-iplayer on  fresh install of Raspberry Pi Stretch by pasting the above string in to the command prompt. There didn't appear to be any error messages during the install.<br />
+<br />
+On trying to start the WebPVR I get the following error;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspberrypi:~ &#36; get-iplayer-web-pvr<br />
+Can't locate CGI.pm in @INC (you may need to install the CGI module) (@INC contains: /etc/perl /usr/local/lib/arm-linux-gnueabihf/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/arm-linux-gnueabihf/perl5/5.24 /usr/share/perl5 /usr/lib/arm-linux-gnueabihf/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/arm-linux-gnueabihf/perl-base) at /usr/share/get_iplayer/get_iplayer.cgi line 32.<br />
+BEGIN failed--compilation aborted at /usr/share/get_iplayer/get_iplayer.cgi line 32.</code></div></div><br />
+I've done a find for the cgi.pm and files of that name appear in two places;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspberrypi:/ &#36; find -iname "cgi.pm" 2&gt;~/tmp.tmp<br />
+./usr/share/perl5/Mojolicious/Command/cgi.pm<br />
+./usr/share/perl5/Mojo/Server/CGI.pm</code></div></div><br />
+But I have no idea how to get them to a place where Perl can see them, and I haven't checked to see if they are the same - I'm rather a Linux novice.<br />
+<br />
+Thanks for all the work done to keep get-iplayer running<br />
+Ian<br />
+<br />
+UPDATE<br />
+<br />
+I've tried copying the required CGI.pm then CGI/Cookie.pm files to a place on the path, and the get_iplayer_web_pvr command now starts but when trying to browse to <a href="http://127.0.0.1:1935">http://127.0.0.1:1935</a> in Chromium there's this error produced in the terminal window;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspberrypi:~ &#36; get-iplayer-web-pvr<br />
+INFO: Listening on 127.0.0.1:1935<br />
+GET: /<br />
+Can't locate object method "new" via package "CGI" at /usr/share/get_iplayer/get_iplayer.cgi line 457, &lt;GEN1&gt; line 10.</code></div></div>so that trick clearly didn't work...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1349</h2></div><div class="dateline">16-09-2017, 04:00 PM</div>
+</div>
+<div class="message">Thanks John, all upgraded on stretch now.<br />
+I basically ran every command in your script apart from the last one to install iplayer.<br />
+I then ran sudo apt-get upgrade to upgrade the existing install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1922</h2></div><div class="dateline">16-09-2017, 04:32 PM</div>
+</div>
+<div class="message">I upgraded to Stretch without incident. Instructions here if anyone's interested:<br />
+ <a href="https://www.raspberrypi.org/blog/raspbian-stretch/">https://www.raspberrypi.org/blog/raspbian-stretch/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-09-2017, 05:48 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (16-09-2017, 03:11 PM)</span></cite>I've done a find for the cgi.pm and files of that name appear in two places;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspberrypi:/ &#36; find -iname "cgi.pm" 2&gt;~/tmp.tmp<br />
+./usr/share/perl5/Mojolicious/Command/cgi.pm<br />
+./usr/share/perl5/Mojo/Server/CGI.pm</code></div></div></blockquote>Similar names notwithstanding, those files are not what you need. They are part of the Mojolicious library. You need the standalone CGI Perl module, which should be packaged for Raspbian. See the Linux manual installation doc in wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">16-09-2017, 06:37 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (16-09-2017, 03:11 PM)</span></cite>I've just tried installing get-iplayer on  fresh install of Raspberry Pi Stretch by pasting the above string in to the command prompt. There didn't appear to be any error messages during the install.<br />
+<br />
+On trying to start the WebPVR I get the following error;<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspberrypi:~ &#36; get-iplayer-web-pvr<br />
+Can't locate CGI.pm in @INC (you may need to install the CGI module)</code></div></div></blockquote>There's a missing dependency in the packaging.  This is now fixed, just do an apt update and apt upgrade and you'll be fine.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; sudo apt update<br />
+&#36; sudo apt upgrade</code></div></div><br />
+<blockquote class="mycode_quote"><cite><span> (16-09-2017, 03:11 PM)</span></cite>UPDATE<br />
+I've tried copying the required CGI.pm then CGI/Cookie.pm files to a place on the path...<br />
+that trick clearly didn't work...</blockquote>You'll need to undo whatever it was that you tried... (the correct solution would have been to install the perl CGI module, which as it happens is packaged in libcgi-pm-perl).<br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1924</h2></div><div class="dateline">17-09-2017, 08:07 AM</div>
+</div>
+<div class="message">Brilliant, thanks Jon. That got it sorted :-)<br />
+I realised that copying those files was a long shot - but that't the fun of the Pi, experimentation.<br />
+<br />
+Now to carry on moving back in (and yes of course I forgot to not the PVR list I had...)<br />
+<br />
+Thanks<br />
+Ian</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get_iplayer for Raspbian Stretch</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

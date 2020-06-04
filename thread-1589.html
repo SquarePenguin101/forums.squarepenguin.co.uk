@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failed to download schedule page with get_iplayer v3.06</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Failed to download schedule page with get_iplayer v3.06</div>
+<div id="pagetitle"><h2>Failed to download schedule page with get_iplayer v3.06</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1990</h2></div><div class="dateline">12-11-2017, 07:47 AM</div>
+</div>
+<div class="message">Hi,<br />
+I cannot get iplayer (web PVR or terminal prompt) to refresh cache. I believe I have successfully erased and reinstalled - to ensure I have a correct version of latest.<br />
+Can you advise?<br />
+Some diagnostics below:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+get_iplayer -V  =  get_iplayer v3.06<br />
+perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION\n";' = 2.052<br />
+perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION\n";' = 7.55<br />
+PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5" perl -MIO::Socket::SSL -e 'print "&#36;IO::Socket::SSL::VERSION\n";' = 1.966<br />
+PERL5LIB="/usr/local/Cellar/get_iplayer/3.06_1/libexec/lib/perl5" perl -MMojolicious -e 'print "&#36;Mojolicious::VERSION\n";' =  Can't locate Mojolicious.pm in @INC<br />
+get_iplayer --refresh =<br />
+INFO: Indexing tv programmes (concurrent)<br />
+...............<br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week">http://www.bbc.co.uk/bbcfour/programmes/.../this_week</a><br />
+.<br />
+WARNING: Failed to download ..... ETC!<br />
+--<br />
+Testing on a specific:<br />
+get_iplayer --since 24 "daily politics" &gt;<br />
+<br />
+get_iplayer v3.06, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+WARNING: Ignoring future programme (b09g8c4p): '945: Daily Politics - 13/11/2017 - 2017-11-13T12:00:00+00:00'<br />
+WARNING: Ignoring future programme (b09g8c94): '946: Daily Politics - 14/11/2017 - 2017-11-14T12:00:00+00:00'<br />
+WARNING: Ignoring future programme (b09g8cdb): '947: Daily Politics - 15/11/2017 - 2017-11-15T11:30:00+00:00'<br />
+WARNING: Ignoring future programme (b09g8cgl): '948: Daily Politics - 16/11/2017 - 2017-11-16T12:00:00+00:00'<br />
+WARNING: Ignoring future programme (b09g8cs6): '949: Daily Politics - 17/11/2017 - 2017-11-17T12:00:00+00:00'<br />
+WARNING: Use --future to download future programmes that are already available from iPlayer<br />
+Matches:<br />
+943: Daily Politics - 06/11/2017, BBC Parliament, b09dlt21<br />
+944: Daily Politics - 07/11/2017, BBC Parliament, b09dlt8b<br />
+INFO: 2 matching programmes<br />
+WARNING: .../edited/... to suppress this warning.<br />
+</code></div>
+</div>
+--<br />
+Having deleted the cache completley I have nothing in it and cannot refresh. I do normally use get_iplayer_web_pvr (in Firefox 56.0.2), but all the above data pasted direct from Terminal (Mac OS 10.12.6)<br />
+<br />
+What have I missed?!<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-11-2017, 11:24 AM</div>
+</div>
+<div class="message">Probably the same as this issue:<br />
+<br />
+<a href="/thread-1548.html">/thread-1548.html</a><br />
+<br />
+Take a look at the URL you are failing to fetch, it's http. That suggests you're not being redirected to the https version (which iPlayer now forces) so the problem might be the same as linked.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1990</h2></div><div class="dateline">12-11-2017, 01:12 PM</div>
+</div>
+<div class="message">Thanks. I had read that prevoiusly but <span style="font-style: italic;" class="mycode_i">thought</span> everything possible was up to date. I'm up against the limits of my technical knowledge here! how can I test whether, for example, I have "set up a local library for Perl modules". On the specific of the IO::Socket::SSL, I believe I'm on the latest? Any clues?  I have read the install instructions - and thoguht I'd followed all steps clearly yesterday (after deleting and reinstalling all modules). It's possible I missed something, but can't diagnose what...or how to fix it.<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-11-2017, 03:01 PM</div>
+</div>
+<div class="message">The fact that you got matches from <kbd>get_iplayer --since 24 "daily politics"</kbd> shows that your cache had been successfully updated within the previous 24 hours. So, the place to start is with whatever you did to your system that could have broken get_iplayer. Only you would know. Failing that, post the output from:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -V<br />
+perl -MLWP::Protocol::https -e 'print "&#36;LWP::Protocol::https::VERSION&#92;n";'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-11-2017, 03:07 PM</div>
+</div>
+<div class="message">And also<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MNet::SSLeay -e 'print "&#36;Net::SSLeay::VERSION&#92;n";'</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Failed to download schedule page with get_iplayer v3.06</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

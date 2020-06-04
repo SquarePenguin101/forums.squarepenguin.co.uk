@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Why doesn't Doctor Who box set appear in search results?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Why doesn't Doctor Who box set appear in search results?</div>
+<div id="pagetitle"><h2>Why doesn't Doctor Who box set appear in search results?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2175</h2></div><div class="dateline">05-06-2018, 01:14 PM</div>
+</div>
+<div class="message">Hi there,<br />
+<br />
+I've just installed get_iplayer on my mac and it has indexed. When I type<br />
+<br />
+get_iplayer "Doctor Who"<br />
+<br />
+It returns 2 epsiodes with "The Doctor Who Gave Up on Drugs" but none of the currently available Doctor Who's<br />
+<br />
+If I type<br />
+<br />
+get_iplayer ".*"<br />
+<br />
+They also don't appear to be in the list.<br />
+<br />
+Thanks in advance,<br />
+<br />
+encore</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1840</h2></div><div class="dateline">05-06-2018, 04:36 PM</div>
+</div>
+<div class="message">I was wondering the same thing. But I usually find that the programs that are exclusive to iPlayer ie they've not been broadcast in the last 7 days are rarely available for download, so I wasn't surprised when I didn't see them on the list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2175</h2></div><div class="dateline">05-06-2018, 04:59 PM</div>
+</div>
+<div class="message">Ah, thanks, that's probably it. Maybe the the 'first shown' is the deciding thing.<br />
+<br />
+These were only added back yesterday I believe. Is there an option to search back further than first shown xx days ago?<br />
+<br />
+There are 10 series, would be a pain to download by url.<br />
+<br />
+Thanks again,<br />
+<br />
+encore</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>GeoffSmith</h2></div><div class="dateline">05-06-2018, 07:20 PM</div>
+</div>
+<div class="message">Try<br />
+get_iplayer --info --pid b006q2x0  --pid-recursive &gt; Desktop\list.csv<br />
+or whatever the equivalent is on a Mac.<br />
+(kill it after a few minutes as it goes on for an age).<br />
+<br />
+Delete all bar lines 8 to 153.<br />
+<br />
+Import list.csv into OpenOffice using comma as field separator.<br />
+Edit as required, and export as a .bat file to download by pid whichever episodes you want.<br />
+<br />
+Not tested.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-06-2018, 12:29 AM</div>
+</div>
+<div class="message">Anyone who wants to know why the Doctor Who box set doesn't show up in search results should read the docs. Anyone who wants to know how to get a list of the available episodes should also read the docs, though you will come across pretty much the same solution proffered by @GeoffSmith. I'm going to add an option in the next release to make that process a bit easier.<br />
+<br />
+To follow up from Geoff, if you're on macOS or Linux you have some better tools to work with if you want to generate commands to download individual episodes.  For example:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --test --pid=b006q2x0  --pid-recursive | awk -F ", " '/^Doctor Who/ { print "get_iplayer --pid="&#36;NF"  # "&#36;0; fflush(stdout) }' | tee drwho.sh</code></div></div>Once the list of commands has been printed to the screen, kill with Ctrl-C. The file <kbd>drwho.sh</kbd> will contain a list of basic get_iplayer commands to download each episode individually by PID, which you can pick and choose from to build a shell script. Adjust to suit.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2187</h2></div><div class="dateline">23-06-2018, 10:45 AM</div>
+</div>
+<div class="message">When I am searching for an episode using pid version in the command line it is working fine. <br />
+For example:<br />
+get_iplayer --pid=b0074dmp and it brings up "Doctor Who Series 1 The end of the world"<br />
+<br />
+However I am usually using the PVR manager and it does not show up there using various search strings.<br />
+PVR: <br />
+pid-search: b0074dmp <br />
+name+episode+description: The end of the world<br />
+<br />
+Currently there is the entire archive of Doctor Who available and it rather tideous to download them one at the time typing in the pids manually. <br />
+<br />
+I am using version 3.14.0 and also tried<br />
+get_iplayer --cache-rebuild --type=tv,radio<br />
+get_iplayer --refresh --type=tv,radio<br />
+<br />
+Any ideas please?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2188</h2></div><div class="dateline">23-06-2018, 11:28 PM</div>
+</div>
+<div class="message">You could use the command get_iplayer --pid=[programme pid] --pid-recursive<br />
+<br />
+This will download all available programmes, and will skip duplicates.<br />
+<br />
+You can also look this up in the excellent Guides section:<br />
+<a href="https://www.squarepenguin.co.uk/guides/">https://www.squarepenguin.co.uk/guides/</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Why doesn't Doctor Who box set appear in search results?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

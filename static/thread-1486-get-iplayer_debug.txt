@@ -1,0 +1,45 @@
+get_iplayer v3.02, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/phil/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	ffmpeg = /usr/local/bin/ffmpeg
+	pid = b08zd4m7
+	type = radio
+	verbose = 1
+
+INFO: Search args: ''
+INFO: ffmpeg version string = 3.3.3-static
+INFO: ffmpeg version number = 3.3
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Got 7996 file cache entries for tv
+INFO: Got 17668 file cache entries for radio
+INFO: Cleaning PID - old: 'b08zd4m7',  new: 'b08zd4m7'
+INFO: Getting page http://www.bbc.co.uk/programmes/b08zd4m7.json
+INFO: radio episode PID detected (b08zd4m7)
+INFO: Trying to download PID: b08zd4m7 using type: radio
+INFO: PID found in cache: b08zd4m7
+Matches:
+14153:	BBC Proms: 2017 - Prom 20: Stephen Hough plays Brahms, BBC Radio 3, b08zd4m7
+INFO: 1 matching programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b08zd4m7.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b08zd4m7.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b08zd49h/transferformat/dash?cb=24842
+INFO: Getting page http://aod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_audio/28fd41-b08zd49h/vf_b08zd49h_d79ad70b-62f6-403d-ae66-75d00a9facf5.ism/pc_hd_abr_v2_uk_dash_master.mpd?__gda__=1503621359_1ea919e40d71c9c39260bf47236f250f
+Not a HASH reference at /usr/local/bin/get_iplayer line 5354.

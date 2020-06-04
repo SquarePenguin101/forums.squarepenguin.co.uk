@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR: unable to set VLC for playback</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Web PVR: unable to set VLC for playback</div>
+<div id="pagetitle"><h2>Web PVR: unable to set VLC for playback</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-853</h2></div><div class="dateline">09-02-2015, 05:12 PM</div>
+</div>
+<div class="message">Ubuntu 12.04; GiP 2.91; Asrock ION330HT<br />
+<br />
+HD playback with the default Totem (either from within Web PVR or directly from Totem) is too jerky to watch, but VLC is perfect (from the terminal, from VLC, and from the file manager). The question is, how to get the Web PVR to use VLC for playback?<br />
+<br />
+I've tried<br />
+<br />
+get_iplayer --add-prefs --player='vlc -'<br />
+<br />
+and this changes .get_iplayer/options as expected, but to no avail: Web PVR 'Playfile' continues to use Totem.<br />
+<br />
+System has been restarted following the options update, and the Web PVR cookies have been cleared.<br />
+<br />
+Many thanks for whatever help can be offered!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2015, 12:12 AM</div>
+</div>
+<div class="message">For web pvr, configure media player in your browser, not via <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--player</code></div></div>.  The <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--player</code></div></div> option shouldn't be saved in preferences. get_player doesn't prevent it, but it will screw up web pvr playback.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-853</h2></div><div class="dateline">10-02-2015, 03:47 AM</div>
+</div>
+<div class="message">Many thanks for this. It never occurred to me that the playback application was a browser setting.<br />
+<br />
+I use Firefox, and perhaps it's because I'm dense it took me some time to discover how to set this. My solution was:<br />
+<br />
+- in FF, open the dialog at Edit/Preferences/Applications<br />
+- find the Content Type entry "MP3 audio (streamed)"<br />
+- for 'Action', select 'Use other...'<br />
+- in the 'Select Helper Application' dialog navigate to /usr/bin, select 'vlc', and click on 'Open'<br />
+<br />
+And there we are: the GiP web pvr uses VLC for playback. Champion!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Web PVR: unable to set VLC for playback</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

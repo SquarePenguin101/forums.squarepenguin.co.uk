@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Refresh Cache not refreshing - for me too</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Refresh Cache not refreshing - for me too</div>
+<div id="pagetitle"><h2>Refresh Cache not refreshing - for me too</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">03-05-2017, 08:26 PM</div>
+</div>
+<div class="message">i know you have already closed a thread by farmer but i think we both have the same problem.<br />
+<br />
+prior to version 3.00 my batch file used to identify at least 50 files a day for me to download now it gives me 2.<br />
+<br />
+this is the batch file i use - <br />
+<br />
+C:<br />
+<br />
+cd "\Program Files (x86)\get_iplayer\"<br />
+<br />
+get_iplayer --refresh --exclude-channel "BBC Alba","S4C","CBBC","CBeebies","BBC Parliament","BBC News" --exclude "BBC News","BBC Wales Today","BBC Weather","East Midlands Today","Channel Islands News","London News","Look East","Look North","Midlands Today","North West Today","North West Tonight","Points West","Reporting Scotland","South East Today","South Today","Spotlight:","This Is BBC One HD","Weather for the Week Ahead","World News Today","BBC Weekend News","Inside Out","BBC Parliament","Daily Politics","Politics Scotland","Sunday Politics","Stormont Today","The View","This Is BBC Two","This Week" --since=25 &gt; "C:\Documents and Settings\%username%\Desktop\BBC - 30 Hours.txt"<br />
+<br />
+let me know if you need to know specifically which files are missing.<br />
+<br />
+i ran get_iplayer --cache-init --type="tv,radio" immediately after install and twice since.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 08:32 PM</div>
+</div>
+<div class="message">Few new files will show up with each subsequent refresh after the main weekly update, so nothing strange about that given you have excluded the kiddie channels.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>let me know if you need to know specifically which files are missing.</blockquote>
+If you read the farmer thread you know the answer. No more than 3 examples.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">03-05-2017, 08:41 PM</div>
+</div>
+<div class="message">i ran the batch file again set to 30 hours - to check wether eastenders from the 2nd is listed, it isn't<br />
+<br />
+here is the output from the file <br />
+<br />
+INFO: Getting tv Index Feeds (this may take a few minutes)<br />
+INFO: Using concurrent indexing<br />
+............................<br />
+Added: 2925:	Grand Tours of the Scottish Islands: Series 4 - Off the Map: North Rona and the Monach Islands, BBC Two, b07xyvq4<br />
+Matches:<br />
+2040:	Coast: Series 7 Reversions - The Mysteries of the Isles 2, BBC Two, b074bnlk<br />
+<br />
+the program that was added - 2925 should also be a match.<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b08pj9pr/eastenders-02052017">http://www.bbc.co.uk/iplayer/episode/b08...s-02052017</a> <br />
+<br />
+this episode of eastenders from the 2nd of may should also be listed.<br />
+<br />
+is this a problem with get_iplayer or do i need to change my batch file for 3.00.<br />
+<br />
+thank you</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">03-05-2017, 08:49 PM</div>
+</div>
+<div class="message"><a href="http://www.bbc.co.uk/iplayer/episode/b08pnn6c/pointless-series-17-episode-11">http://www.bbc.co.uk/iplayer/episode/b08...episode-11</a> (bbc1)<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b007clxj/orangutan-diary-series-1-episode-5">http://www.bbc.co.uk/iplayer/episode/b00...-episode-5</a> (bbc4)<br />
+<br />
+don't work either.<br />
+<br />
+thank you. i use the batch file daily - the text file makes it easy for me to see everything in one place. obviously i am happy to help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 08:54 PM</div>
+</div>
+<div class="message">The <kbd>--since</kbd> option is basically useless now. As I said, not many additions are made after the first weekly update, so using <kbd>--since</kbd> to limit searches to programmes added to cache in the the last day won't work any more. That's why you don't see Coast or Eastenders. I didn't really give this much thought since I always found <kbd>--since</kbd> pretty useless, but it's likely due for the chop. You want to use <kbd>--available-since</kbd> instead. Unfortunately, that may be broken for some programmes until next release, which leads me to Grand Tours. There you have the same bug as everybody else. See the big green banner at the top of the forums home page.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">03-05-2017, 09:16 PM</div>
+</div>
+<div class="message">i tried the --available-since and it works - 78 matching programmes.<br />
+<br />
+i had been using --since for years with no problems and therefore didn't change the batch file. is the --available-since a new option or did i miss it when i initially researched the --since option ?<br />
+<br />
+thank you again</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 08:21 PM</div>
+</div>
+<div class="message">It looks like <kbd>--since</kbd> will return to its former function in the upcoming bug-fix release, so you'll be able to go back to your original formulation. The semantics are more different than I noted. For example, <kbd>--available-since</kbd> doesn't help in flagging future listings (if you cache them) when they get cached, which is what you would want to know. It only tells you that a programme has been broadcast. Anyway, it will all be back to normal soon.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1587</h2></div><div class="dateline">05-05-2017, 07:12 AM</div>
+</div>
+<div class="message">Okay. That's good to know. Thank you yet again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Refresh Cache not refreshing - for me too</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

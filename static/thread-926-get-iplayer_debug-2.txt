@@ -1,0 +1,1044 @@
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\Amro/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	aactomp3 = 1
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe
+	get = 1
+	nopurge = 1
+	output = C:\Users\Amro\Downloads\BBC Radio Downloads
+	outputtv = C:\Users\Amro\Downloads\BBC TV Downloads
+	rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe
+	type = radio
+	verbose = 1
+
+INFO: Search args: '11060','(TV|Downloads)'
+INFO: Got 3456 file cache entries for radio
+INFO: Search term '11060' is an Index value
+INFO: Search term '(TV|Downloads)' is a substring
+DEBUG: Search download_regex = (TV|Downloads)
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search versions_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+Matches:
+11060:	Dead Ringers: Series 16 - Episode 1, BBC Radio 4 Extra, 
+12600:	Satvinder Rana - 19/06/2016, BBC Radio Derby, 
+
+INFO: 2 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b07flhlm.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b07flhlm.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b07flfht/proto/rtmp?cb=92303
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b07flfht/proto/http?cb=03616
+INFO: Getting page http://aod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/f9e995-b07flfht/vf_b07flfht_eeaf4f14-af4c-4a58-8cc2-f8b73c7f6ec8.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?__gda__=1466551785_2e3e0182aac91ffc1f2602ab99604e5a
+INFO: Getting page http://aod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/f9e995-b07flfht/vf_b07flfht_eeaf4f14-af4c-4a58-8cc2-f8b73c7f6ec8.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?s=1466508585&amp;e=1466551785&amp;h=ff61e4c9d402bddf0156bcea3f3e1e4c
+WARNING: No HLS playlist returned (http://aod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/f9e995-b07flfht/vf_b07flfht_eeaf4f14-af4c-4a58-8cc2-f8b73c7f6ec8.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?s=1466508585&amp;e=1466551785&amp;h=ff61e4c9d402bddf0156bcea3f3e1e4c)
+INFO: Getting page http://cp401492-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4/master.m3u8?hdnea=st=1466530185~exp=1466551785~acl=/*bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4*~hmac=c6be3a52823ddbd49a6870f9539e73a4304a7044a03a74943fc4ad749ddae4cc
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b07flfht/proto/http?cb=03397
+INFO: Getting page http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4/master.m3u8?hdnea=st=1466530185~exp=1466551785~acl=/*bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4*~hmac=51c1dd517d39d8dc08726318e76244e3cc7f093101b6093fb766fc0baef2da67
+INFO: Found mode flashaaclow1: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)
+INFO: Found mode flashaaclow2: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)
+INFO: Found mode flashaacstd1: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: limelight/20)
+INFO: Found mode flashaacstd2: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: akamai/10)
+INFO: Found mode hlsaaclow1: (gip_hls_iplayer_48) hls aac 48kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsaacstd2: (gip_hls_iplayer_136) hls aac 136kbps stream (CDN: af_akamai_uk_hls/1)
+INFO: Getting page http://www.bbc.co.uk/programmes/b07flfht.rdf
+INFO: Using 'original' version (b07flfht) as 'default'
+INFO: Programme not in history
+INFO: Will search for versions: default,original
+INFO: Mode list: flashaachigh,flashaacstd,flashaaclow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Dead Ringers: Series 16 - 1. Episode 1
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default                 
+INFO: rtmpver: 
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+INFO: 
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This program dumps the media content streamed over RTMP.
+INFO: 
+INFO: --help|-h               Prints this help screen.
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing
+INFO: --auth|-u string        Authentication string to be appended to the connect string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)
+INFO: 
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.
+INFO: 
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.4
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcodspdns.fcod.llnwd.net&auth=as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04&aifp=v001&slist=mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04, application: a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04, authString: as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf, file: C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3, file_done: C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.mp3
+
+
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--playpath" "mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04" "--app" "a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04" "--pageUrl" "http://www.bbc.co.uk/programmes/b07flhlm" "--resume" "-o" "C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : bbcodspdns.fcod.llnwd.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4
+DEBUG: tcUrl    : rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/programmes/b07flhlm
+DEBUG: app      : a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507366047.mp4&et=1466537384&fmta-token=a333a545c9d43485993712469dbbec84b709bafbf653cb3161a2bfb4cf4fba04
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: a2 cb 88 90 ff 4a 91 a5 fc 2a fb 25 b4 6b 4b b5
+DEBUG: ef 0f 4b eb 8a e2 f2 1b dd 33 72 fe 64 b5 25 44
+DEBUG: SWFSize  : 979369
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 53
+DEBUG: HandShake: Initial client digest: 
+DEBUG: e8 a7 48 73 6b 64 e1 7e b1 95 c2 97 a0 c1 fe 3a
+DEBUG: c8 26 f6 2f 1b ea 6e b0 0b ed 33 20 57 e5 1f 61
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 679578308
+DEBUG: HandShake: FMS Version   : 4.0.3.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest: 
+DEBUG: 89 e4 c3 db c0 58 4c 24 c0 0f 36 0d 12 0b a3 fa
+DEBUG: 00 53 ca cf 1a 1e 9b dc 5a 35 0d 51 d9 ed 59 56
+DEBUG: HandShake: Client signature calculated:
+DEBUG: f7 a1 ac 8f 0f 19 95 93 6e b5 8b 8c 63 ea d4 ba
+DEBUG: b2 da 11 75 5e 08 df e0 99 41 f0 6c 7b bd a5 71
+DEBUG: HandShake: Server sent signature:
+DEBUG: 05 35 ed ce 31 ba 1a 2d 3d 19 ba 08 68 50 2d 37
+DEBUG: 2e 52 92 b0 ca c9 28 3b 0c 7b b2 9f 61 db 82 f1
+DEBUG: HandShake: Digest key: 
+DEBUG: 54 e0 d6 65 98 10 ce 4b ca b2 1c 6b 69 df ae e3
+DEBUG: 69 a5 7d 68 3d a4 ec 3d c2 04 56 d8 96 2e 32 eb
+DEBUG: HandShake: Signature calculated:
+DEBUG: 05 35 ed ce 31 ba 1a 2d 3d 19 ba 08 68 50 2d 37
+DEBUG: 2e 52 92 b0 ca c9 28 3b 0c 7b b2 9f 61 db 82 f1
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 2500000
+DEBUG: HandleClientBW: client BW = 2500000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 242 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:	FMS/4,0,3,4044>
+DEBUG: Property: <Name:       capabilities, NUMBER:	255.00>
+DEBUG: Property: <Name:               mode, NUMBER:	1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetConnection.Connect.Success>
+DEBUG: Property: <Name:        description, STRING:	Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:	0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:	4,0,3,4044>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 32803 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 358 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:	Playing and resetting prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	rAA9EhyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 352 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:	Started playing prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	rAA9EhyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 308 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:	1663.55>
+DEBUG: Property: <Name:       moovPosition, NUMBER:	36.00>
+DEBUG: Property: <Name:       audiocodecid, STRING:	mp4a>
+DEBUG: Property: <Name:             aacaot, NUMBER:	2.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:	48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:	2.00>
+DEBUG: Property: <Name:               tags, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:              ©too, STRING:	Lavf57.25.100>
+DEBUG: (object end)
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:	79850177.00>
+DEBUG: Property: <Name:          timescale, NUMBER:	48000.00>
+DEBUG: Property: <Name:           language, STRING:	und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:	mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              1663.55
+INFO:   moovPosition          36.00
+INFO:   audiocodecid          mp4a
+INFO:   aacaot                2.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: tags:
+INFO:   ©too                 Lavf57.25.100
+INFO: trackinfo:
+INFO:   length                79850177.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+1.491 kB / 0.04 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 49187 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 65573 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 98341 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+395.739 kB / 24.06 sec (1.4%)
+DEBUG: RTMP_ClientPacket, received: invoke 114725 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 131109 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+599.000 kB / 36.46 sec (2.1%)
+DEBUG: RTMP_ClientPacket, received: invoke 147493 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 163877 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1133.552 kB / 69.03 sec (4.1%)
+DEBUG: RTMP_ClientPacket, received: invoke 180261 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 196645 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1325.552 kB / 80.77 sec (4.8%)
+DEBUG: RTMP_ClientPacket, received: invoke 213029 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 229413 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1464.985 kB / 89.24 sec (5.3%)
+DEBUG: RTMP_ClientPacket, received: invoke 245797 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 262181 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 278565 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1935.951 kB / 117.97 sec (7.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 294949 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+2127.951 kB / 129.69 sec (7.7%)2737.977 kB / 166.85 sec (10.0%)3336.834 kB / 203.37 sec (12.2%)3807.536 kB / 232.06 sec (13.9%)4406.366 kB / 268.59 sec (16.1%)5005.071 kB / 305.09 sec (18.3%)5539.916 kB / 337.66 sec (20.2%)6278.222 kB / 382.68 sec (23.0%)6812.932 kB / 415.30 sec (24.9%)7411.834 kB / 451.82 sec (27.1%)7946.673 kB / 484.44 sec (29.1%)8481.117 kB / 517.01 sec (31.0%)8887.594 kB / 541.76 sec (32.5%)9614.338 kB / 586.07 sec (35.2%)9956.845 kB / 606.93 sec (36.4%)10555.749 kB / 643.48 sec (38.6%)11293.815 kB / 688.45 sec (41.3%)11828.533 kB / 721.04 sec (43.3%)12427.053 kB / 757.52 sec (45.5%)12961.783 kB / 790.14 sec (47.4%)13699.616 kB / 835.12 sec (50.2%)13967.032 kB / 851.41 sec (51.1%)14426.469 kB / 879.47 sec (52.8%)15100.311 kB / 920.51 sec (55.3%)15763.030 kB / 960.94 sec (57.7%)16169.926 kB / 985.73 sec (59.2%)16832.329 kB / 1026.16 sec (61.6%)17366.750 kB / 1058.71 sec (63.6%)18041.061 kB / 1099.82 sec (66.1%)18244.588 kB / 1112.21 sec (66.8%)18843.367 kB / 1148.69 sec (69.0%)19314.086 kB / 1177.39 sec (70.7%)19977.006 kB / 1217.84 sec (73.2%)20511.798 kB / 1250.43 sec (75.1%)21185.723 kB / 1291.50 sec (77.6%)21784.553 kB / 1328.02 sec (79.8%)22447.120 kB / 1368.43 sec (82.2%)22917.967 kB / 1397.12 sec (83.9%)23592.005 kB / 1438.19 sec (86.4%)23987.337 kB / 1462.32 sec (87.9%)24661.392 kB / 1503.38 sec (90.3%)25056.648 kB / 1527.49 sec (91.8%)25730.624 kB / 1568.58 sec (94.2%)26189.931 kB / 1596.61 sec (95.9%)26457.449 kB / 1612.93 sec (96.9%)26800.179 kB / 1633.77 sec (98.2%)27259.544 kB / 1661.85 sec (99.8%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Complete>
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:           duration, NUMBER:	13.00>
+DEBUG: Property: <Name:              bytes, NUMBER:	27940926.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 362 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:	Stopped playing prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/bUnknown-c3aea372-a164-4287-85be-926010238cf0_b07flfht_1466507362460.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	rAA9EhyA>
+DEBUG: Property: <Name:             reason, STRING:	>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+27288.009 kB / 1663.53 sec (99.9%)
+DEBUG: RTMP_Read returned: 0
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+
+
+INFO: Command: ".\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe" "-loglevel" "verbose" "-i" "C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3.flv" "-vn" "-acodec" "libmp3lame" "-ac" "2" "-ab" "128k" "-y" "C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3"
+
+ffmpeg version 2.2.3 Copyright (c) 2000-2014 the FFmpeg developers
+  built on Jun 19 2014 20:24:25 with gcc 4.8.3 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-decklink --enable-zlib
+  libavutil      52. 66.100 / 52. 66.100
+  libavcodec     55. 52.102 / 55. 52.102
+  libavformat    55. 33.100 / 55. 33.100
+  libavdevice    55. 10.100 / 55. 10.100
+  libavfilter     4.  2.100 /  4.  2.100
+  libswscale      2.  5.102 /  2.  5.102
+  libswresample   0. 18.100 /  0. 18.100
+  libpostproc    52.  3.100 / 52.  3.100
+[flv @ 040177a0] max_analyze_duration 5000000 reached at 5019000 microseconds
+Input #0, flv, from 'C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3.flv':
+  Metadata:
+    moovPosition    : 36
+    aacaot          : 2
+    audiochannels   : 2
+  Duration: 00:27:43.55, start: 0.000000, bitrate: 134 kb/s
+    Stream #0:0: Audio: aac, 48000 Hz, stereo, fltp
+[graph 0 input from stream 0:0 @ 050b0f40] tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:0x3
+Output #0, mp3, to 'C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.partial.mp3':
+  Metadata:
+    moovPosition    : 36
+    aacaot          : 2
+    audiochannels   : 2
+    TSSE            : Lavf55.33.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 48000 Hz, stereo, fltp, 128 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac -> libmp3lame)
+Press [q] to stop, [?] for help
+size=     362kB time=00:00:23.08 bitrate= 128.3kbits/s    size=     725kB time=00:00:46.36 bitrate= 128.2kbits/s    size=    1087kB time=00:01:09.50 bitrate= 128.1kbits/s    size=    1441kB time=00:01:32.18 bitrate= 128.1kbits/s    size=    1796kB time=00:01:54.91 bitrate= 128.1kbits/s    size=    2154kB time=00:02:17.80 bitrate= 128.1kbits/s    size=    2498kB time=00:02:39.81 bitrate= 128.0kbits/s    size=    2850kB time=00:03:02.37 bitrate= 128.0kbits/s    size=    3202kB time=00:03:24.86 bitrate= 128.0kbits/s    size=    3553kB time=00:03:47.32 bitrate= 128.0kbits/s    size=    3896kB time=00:04:09.31 bitrate= 128.0kbits/s    size=    4250kB time=00:04:31.94 bitrate= 128.0kbits/s    size=    4604kB time=00:04:54.62 bitrate= 128.0kbits/s    size=    4946kB time=00:05:16.51 bitrate= 128.0kbits/s    size=    5303kB time=00:05:39.31 bitrate= 128.0kbits/s    size=    5630kB time=00:06:00.26 bitrate= 128.0kbits/s    size=    5989kB time=00:06:23.25 bitrate= 128.0kbits/s    size=    6341kB time=00:06:45.79 bitrate= 128.0kbits/s    size=    6700kB time=00:07:08.73 bitrate= 128.0kbits/s    size=    7052kB time=00:07:31.24 bitrate= 128.0kbits/s    size=    7422kB time=00:07:54.98 bitrate= 128.0kbits/s    size=    7784kB time=00:08:18.09 bitrate= 128.0kbits/s    size=    8139kB time=00:08:40.84 bitrate= 128.0kbits/s    size=    8494kB time=00:09:03.57 bitrate= 128.0kbits/s    size=    8845kB time=00:09:26.04 bitrate= 128.0kbits/s    size=    9207kB time=00:09:49.20 bitrate= 128.0kbits/s    size=    9559kB time=00:10:11.71 bitrate= 128.0kbits/s    size=    9916kB time=00:10:34.58 bitrate= 128.0kbits/s    size=   10247kB time=00:10:55.75 bitrate= 128.0kbits/s    size=   10594kB time=00:11:17.97 bitrate= 128.0kbits/s    size=   10947kB time=00:11:40.58 bitrate= 128.0kbits/s    size=   11301kB time=00:12:03.24 bitrate= 128.0kbits/s    size=   11654kB time=00:12:25.82 bitrate= 128.0kbits/s    size=   12007kB time=00:12:48.40 bitrate= 128.0kbits/s    size=   12356kB time=00:13:10.70 bitrate= 128.0kbits/s    size=   12704kB time=00:13:33.02 bitrate= 128.0kbits/s    size=   13051kB time=00:13:55.20 bitrate= 128.0kbits/s    size=   13400kB time=00:14:17.56 bitrate= 128.0kbits/s    size=   13754kB time=00:14:40.17 bitrate= 128.0kbits/s    size=   14113kB time=00:15:03.16 bitrate= 128.0kbits/s    size=   14458kB time=00:15:25.24 bitrate= 128.0kbits/s    size=   14808kB time=00:15:47.68 bitrate= 128.0kbits/s    size=   15161kB time=00:16:10.27 bitrate= 128.0kbits/s    size=   15511kB time=00:16:32.66 bitrate= 128.0kbits/s    size=   15869kB time=00:16:55.58 bitrate= 128.0kbits/s    size=   16223kB time=00:17:18.19 bitrate= 128.0kbits/s    size=   16572kB time=00:17:40.56 bitrate= 128.0kbits/s    size=   16930kB time=00:18:03.48 bitrate= 128.0kbits/s    size=   17295kB time=00:18:26.85 bitrate= 128.0kbits/s    size=   17630kB time=00:18:48.24 bitrate= 128.0kbits/s    size=   17990kB time=00:19:11.28 bitrate= 128.0kbits/s    size=   18350kB time=00:19:34.32 bitrate= 128.0kbits/s    size=   18701kB time=00:19:56.83 bitrate= 128.0kbits/s    size=   19049kB time=00:20:19.10 bitrate= 128.0kbits/s    size=   19398kB time=00:20:41.42 bitrate= 128.0kbits/s    size=   19739kB time=00:21:03.26 bitrate= 128.0kbits/s    size=   20089kB time=00:21:25.65 bitrate= 128.0kbits/s    size=   20438kB time=00:21:48.00 bitrate= 128.0kbits/s    size=   20777kB time=00:22:09.67 bitrate= 128.0kbits/s    size=   21116kB time=00:22:31.36 bitrate= 128.0kbits/s    size=   21467kB time=00:22:53.85 bitrate= 128.0kbits/s    size=   21815kB time=00:23:16.12 bitrate= 128.0kbits/s    size=   22172kB time=00:23:38.97 bitrate= 128.0kbits/s    size=   22525kB time=00:24:01.53 bitrate= 128.0kbits/s    size=   22882kB time=00:24:24.40 bitrate= 128.0kbits/s    size=   23241kB time=00:24:47.37 bitrate= 128.0kbits/s    size=   23597kB time=00:25:10.12 bitrate= 128.0kbits/s    size=   23946kB time=00:25:32.52 bitrate= 128.0kbits/s    size=   24281kB time=00:25:53.90 bitrate= 128.0kbits/s    size=   24612kB time=00:26:15.12 bitrate= 128.0kbits/s    size=   24947kB time=00:26:36.52 bitrate= 128.0kbits/s    size=   25297kB time=00:26:58.94 bitrate= 128.0kbits/s    size=   25638kB time=00:27:20.80 bitrate= 128.0kbits/s    size=   25979kB time=00:27:42.57 bitrate= 128.0kbits/s    No more output streams to write to, finishing.
+size=   25994kB time=00:27:43.56 bitrate= 128.0kbits/s    
+video:0kB audio:25994kB subtitle:0 data:0 global headers:0kB muxing overhead 0.001890%
+INFO: Command exit code 0 (raw code = 0)
+INFO: Recorded C:\Users\Amro\Downloads\BBC Radio Downloads\Dead_Ringers_Series_16_-_1._Episode_1_b07flhlm_default.mp3
+DEBUG: Record using flashaacstd1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p024qjgd.jpg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p024qjgd.jpg
+ERROR: Thumbnail Download failed
+INFO: ID3 tagging MP3 file
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/p03xfhd5.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/p03xfhd5.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p03xfhdh/proto/rtmp?cb=05045
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03xfhdh/proto/http?cb=36132
+INFO: Getting page http://aod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/c67357-p03xfhdh/vf_p03xfhdh_632a0fab-c9fa-48d0-91ca-d51884af9670.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?__gda__=1466551837_905269a5b0071d6055a543d552370aba
+INFO: Getting page http://aod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c67357-p03xfhdh/vf_p03xfhdh_632a0fab-c9fa-48d0-91ca-d51884af9670.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?s=1466508637&amp;e=1466551837&amp;h=7134cc315afad6df517622dc040f675f
+WARNING: No HLS playlist returned (http://aod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c67357-p03xfhdh/vf_p03xfhdh_632a0fab-c9fa-48d0-91ca-d51884af9670.ism/mobile_wifi_main_sd_abr_v2_uk_hls_master.m3u8?s=1466508637&amp;e=1466551837&amp;h=7134cc315afad6df517622dc040f675f)
+INFO: Getting page http://cp401492-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4/master.m3u8?hdnea=st=1466530237~exp=1466551837~acl=/*p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4*~hmac=7d7233edba4fea4afc6994c99dd278a815d5176524c4c4fc92b4472f26a85f65
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/p03xfhdh/proto/http?cb=61779
+INFO: Getting page http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4/master.m3u8?hdnea=st=1466530238~exp=1466551838~acl=/*p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4*~hmac=206fc7f56b2a3041eab66f52fbe4ab9ffde88394ea564b61acf3e7fa95bee855
+INFO: Found mode flashaaclow1: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)
+INFO: Found mode flashaaclow2: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)
+INFO: Found mode flashaacstd1: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: limelight/20)
+INFO: Found mode flashaacstd2: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: akamai/10)
+INFO: Found mode hlsaaclow1: (gip_hls_iplayer_48) hls aac 48kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsaacstd2: (gip_hls_iplayer_136) hls aac 136kbps stream (CDN: af_akamai_uk_hls/1)
+INFO: Getting page http://www.bbc.co.uk/programmes/p03xfhdh.rdf
+INFO: Using 'original' version (p03xfhdh) as 'default'
+INFO: Programme not in history
+INFO: Will search for versions: default,original
+INFO: Mode list: flashaachigh,flashaacstd,flashaaclow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Satvinder Rana - 396. 19/06/2016
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default                 
+INFO: rtmpver: 
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+INFO: 
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This program dumps the media content streamed over RTMP.
+INFO: 
+INFO: --help|-h               Prints this help screen.
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing
+INFO: --auth|-u string        Authentication string to be appended to the connect string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)
+INFO: 
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.
+INFO: 
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.4
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcodspdns.fcod.llnwd.net&auth=as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f&aifp=v001&slist=mp4:/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f, application: a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f, authString: as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf, file: C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3, file_done: C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.mp3
+
+
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--playpath" "mp4:/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f" "--app" "a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f" "--pageUrl" "http://www.bbc.co.uk/programmes/p03xfhd5" "--resume" "-o" "C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : bbcodspdns.fcod.llnwd.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4
+DEBUG: tcUrl    : rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/programmes/p03xfhd5
+DEBUG: app      : a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/p03xfhdh_9a2c5519-b82e-44c7-b1aa-851f8af4b9dd.mp4,/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4&et=1466537437&fmta-token=ebb25915ead5903aa6f4adbb05d97ce8f564adac55d6bb63c9dd05dc2737519f
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: a2 cb 88 90 ff 4a 91 a5 fc 2a fb 25 b4 6b 4b b5
+DEBUG: ef 0f 4b eb 8a e2 f2 1b dd 33 72 fe 64 b5 25 44
+DEBUG: SWFSize  : 979369
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 53
+DEBUG: HandShake: Initial client digest: 
+DEBUG: 55 91 2b 48 be 62 f5 e2 79 53 74 24 e1 61 ab 22
+DEBUG: 55 15 9f e3 8a 0b b1 af bc 5e c3 22 c6 fa cd 51
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 679630880
+DEBUG: HandShake: FMS Version   : 4.0.3.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest: 
+DEBUG: 14 01 40 bc 37 61 6b ed 6a 65 2b 8a 27 7c 1a 77
+DEBUG: cb 5e 46 23 d8 38 df ef 4e 92 8b e4 12 58 f9 47
+DEBUG: HandShake: Client signature calculated:
+DEBUG: 7f e0 9e fd 7e 53 b4 50 c5 d3 0f 65 3d 0e 02 57
+DEBUG: 55 82 8e ee c4 41 f7 d9 40 95 a3 29 e3 f9 f7 d7
+DEBUG: HandShake: Server sent signature:
+DEBUG: 64 d6 2b ee 74 e2 24 dc 18 e1 cc 23 2b 6c 28 24
+DEBUG: 22 98 82 dc e1 02 0e 88 f5 59 f7 54 91 b7 42 b6
+DEBUG: HandShake: Digest key: 
+DEBUG: 4d 6a cc 71 f2 94 0a 02 1b 4a 6f 02 f2 78 8a 59
+DEBUG: 82 c6 91 b1 26 ea ef 70 0b 91 d0 41 a4 aa 21 86
+DEBUG: HandShake: Signature calculated:
+DEBUG: 64 d6 2b ee 74 e2 24 dc 18 e1 cc 23 2b 6c 28 24
+DEBUG: 22 98 82 dc e1 02 0e 88 f5 59 f7 54 91 b7 42 b6
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 2500000
+DEBUG: HandleClientBW: client BW = 2500000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 242 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:	FMS/4,0,3,4044>
+DEBUG: Property: <Name:       capabilities, NUMBER:	255.00>
+DEBUG: Property: <Name:               mode, NUMBER:	1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetConnection.Connect.Success>
+DEBUG: Property: <Name:        description, STRING:	Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:	0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:	4,0,3,4044>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:/prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 32803 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 320 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:	Playing and resetting prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 314 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:	Started playing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 271 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:	7392.00>
+DEBUG: Property: <Name:       moovPosition, NUMBER:	72.00>
+DEBUG: Property: <Name:       audiocodecid, STRING:	mp4a>
+DEBUG: Property: <Name:             aacaot, NUMBER:	2.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:	48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:	2.00>
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:	354816000.00>
+DEBUG: Property: <Name:          timescale, NUMBER:	48000.00>
+DEBUG: Property: <Name:           language, STRING:	und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:	mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              7392.00
+INFO:   moovPosition          72.00
+INFO:   audiocodecid          mp4a
+INFO:   aacaot                2.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                354816000.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+1.350 kB / 0.04 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 49187 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 65573 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+459.594 kB / 28.01 sec (0.3%)
+DEBUG: RTMP_ClientPacket, received: invoke 98341 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 114725 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 131109 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+802.136 kB / 48.88 sec (0.6%)
+DEBUG: RTMP_ClientPacket, received: invoke 147493 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 163877 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1058.136 kB / 64.51 sec (0.8%)
+DEBUG: RTMP_ClientPacket, received: invoke 180261 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 196645 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 213029 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 229413 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1261.433 kB / 76.89 sec (1.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 245797 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 262181 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 278565 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1464.876 kB / 89.30 sec (1.2%)
+DEBUG: RTMP_ClientPacket, received: invoke 294949 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+1528.876 kB / 93.23 sec (1.2%)
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+2267.441 kB / 138.22 sec (1.8%)2802.123 kB / 170.82 sec (2.3%)3400.708 kB / 207.32 sec (2.8%)3935.267 kB / 239.89 sec (3.2%)4534.109 kB / 276.39 sec (3.7%)5068.716 kB / 308.99 sec (4.1%)5603.420 kB / 341.59 sec (4.6%)6138.216 kB / 374.21 sec (5.0%)6672.709 kB / 406.81 sec (5.5%)7207.488 kB / 439.40 sec (5.9%)7742.293 kB / 472.00 sec (6.3%)8009.555 kB / 488.28 sec (6.6%)8747.651 kB / 533.25 sec (7.2%)9282.129 kB / 565.85 sec (7.6%)9880.799 kB / 602.35 sec (8.1%)10426.728 kB / 635.61 sec (8.5%)10822.245 kB / 659.76 sec (8.9%)11484.910 kB / 700.16 sec (9.4%)11955.506 kB / 728.81 sec (9.8%)12554.372 kB / 765.36 sec (10.3%)13164.627 kB / 802.54 sec (10.8%)13495.854 kB / 822.74 sec (11.1%)14233.772 kB / 867.69 sec (11.7%)14832.740 kB / 904.24 sec (12.2%)15431.113 kB / 940.72 sec (12.7%)15965.865 kB / 973.29 sec (13.1%)16436.695 kB / 1002.01 sec (13.5%)17174.843 kB / 1047.00 sec (14.1%)17709.782 kB / 1079.62 sec (14.6%)18244.442 kB / 1112.19 sec (15.0%)18779.300 kB / 1144.81 sec (15.4%)19314.095 kB / 1177.41 sec (15.9%)19773.420 kB / 1205.44 sec (16.3%)20180.098 kB / 1230.21 sec (16.6%)20586.883 kB / 1254.95 sec (16.9%)20918.278 kB / 1275.18 sec (17.2%)21720.019 kB / 1324.05 sec (17.9%)22318.701 kB / 1360.56 sec (18.4%)22789.313 kB / 1389.27 sec (18.7%)23324.068 kB / 1421.85 sec (19.2%)23858.789 kB / 1454.44 sec (19.6%)24457.570 kB / 1490.94 sec (20.1%)24992.387 kB / 1523.58 sec (20.6%)25526.875 kB / 1556.14 sec (21.0%)26125.269 kB / 1592.64 sec (21.5%)26659.979 kB / 1625.24 sec (21.9%)27258.878 kB / 1661.72 sec (22.4%)27793.687 kB / 1694.34 sec (22.9%)28264.218 kB / 1723.03 sec (23.3%)28874.119 kB / 1760.17 sec (23.8%)29472.879 kB / 1796.67 sec (24.3%)29932.303 kB / 1824.70 sec (24.6%)30466.995 kB / 1857.34 sec (25.1%)31076.946 kB / 1894.48 sec (25.6%)31611.609 kB / 1927.06 sec (26.0%)32210.126 kB / 1963.56 sec (26.5%)32808.788 kB / 2000.09 sec (27.0%)33279.348 kB / 2028.76 sec (27.4%)33877.902 kB / 2065.24 sec (27.9%)34348.474 kB / 2093.91 sec (28.3%)35011.170 kB / 2134.34 sec (28.8%)35353.793 kB / 2155.20 sec (29.1%)36080.661 kB / 2199.55 sec (29.7%)36615.438 kB / 2232.13 sec (30.1%)37086.033 kB / 2260.80 sec (30.5%)37760.223 kB / 2301.91 sec (31.1%)38358.944 kB / 2338.41 sec (31.6%)38690.346 kB / 2358.64 sec (31.9%)39428.210 kB / 2403.58 sec (32.5%)39823.556 kB / 2427.73 sec (32.8%)40497.802 kB / 2468.78 sec (33.3%)40893.200 kB / 2492.89 sec (33.7%)41567.188 kB / 2533.99 sec (34.2%)42101.888 kB / 2566.59 sec (34.7%)42636.390 kB / 2599.15 sec (35.1%)43171.174 kB / 2631.74 sec (35.6%)43705.903 kB / 2664.36 sec (36.0%)44176.807 kB / 2693.06 sec (36.4%)44775.269 kB / 2729.56 sec (36.9%)45373.971 kB / 2766.08 sec (37.4%)45908.868 kB / 2798.70 sec (37.8%)46315.635 kB / 2823.49 sec (38.1%)46710.877 kB / 2847.57 sec (38.5%)47181.884 kB / 2876.27 sec (38.9%)47920.063 kB / 2921.28 sec (39.5%)48251.272 kB / 2941.48 sec (39.7%)48786.258 kB / 2974.10 sec (40.2%)49320.680 kB / 3006.68 sec (40.6%)50058.693 kB / 3051.65 sec (41.2%)50593.355 kB / 3084.24 sec (41.7%)51128.142 kB / 3116.84 sec (42.1%)51726.926 kB / 3153.36 sec (42.6%)52058.365 kB / 3173.59 sec (42.9%)52796.662 kB / 3218.58 sec (43.5%)53191.959 kB / 3242.71 sec (43.8%)53994.060 kB / 3291.61 sec (44.5%)54400.954 kB / 3316.37 sec (44.8%)55063.752 kB / 3356.80 sec (45.4%)55470.352 kB / 3381.57 sec (45.7%)56208.548 kB / 3426.58 sec (46.3%)56743.086 kB / 3459.16 sec (46.7%)57074.486 kB / 3479.38 sec (47.0%)57812.446 kB / 3524.35 sec (47.6%)58347.386 kB / 3556.97 sec (48.1%)58945.916 kB / 3593.45 sec (48.6%)59544.410 kB / 3629.95 sec (49.1%)
+DEBUG: HandleCtrl, received ctrl. type: 31, len: 6
+DEBUG: HandleCtrl, Stream BufferEmpty 1
+DEBUG: RTMP_SendPause, 1, pauseTime=3626069
+DEBUG: Invoking pause
+DEBUG: HandleCtrl, received ctrl. type: 32, len: 6
+DEBUG: HandleCtrl, Stream BufferReady 1
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 308 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Pause.Notify>
+DEBUG: Property: <Name:        description, STRING:	Pausing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Pause.Notify
+DEBUG: RTMP_SendPause, 0, pauseTime=3626069
+DEBUG: Invoking pause
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleCtrl, received ctrl. type: 31, len: 6
+DEBUG: HandleCtrl, Stream BufferEmpty 1
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: HandleCtrl, received ctrl. type: 32, len: 6
+DEBUG: HandleCtrl, Stream BufferReady 1
+DEBUG: RTMP_ClientPacket, received: invoke 312 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Unpause.Notify>
+DEBUG: Property: <Name:        description, STRING:	Unpausing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Unpause.Notify
+59811.739 kB / 3646.25 sec (49.3%)60346.249 kB / 3678.83 sec (49.7%)60880.959 kB / 3711.45 sec (50.2%)61415.736 kB / 3744.04 sec (50.6%)61950.340 kB / 3776.62 sec (51.0%)62485.090 kB / 3809.22 sec (51.5%)63083.726 kB / 3845.72 sec (52.0%)63554.128 kB / 3874.39 sec (52.4%)64152.706 kB / 3910.91 sec (52.9%)64687.375 kB / 3943.47 sec (53.3%)65222.104 kB / 3976.09 sec (53.7%)65960.339 kB / 4021.10 sec (54.3%)66495.112 kB / 4053.68 sec (54.8%)66966.062 kB / 4082.37 sec (55.2%)67500.674 kB / 4114.97 sec (55.6%)68099.603 kB / 4151.49 sec (56.1%)68634.214 kB / 4184.09 sec (56.6%)69169.094 kB / 4216.70 sec (57.0%)69768.072 kB / 4253.20 sec (57.5%)70238.680 kB / 4281.90 sec (57.9%)70773.498 kB / 4314.52 sec (58.3%)71308.450 kB / 4347.14 sec (58.8%)71843.093 kB / 4379.73 sec (59.2%)72377.830 kB / 4412.33 sec (59.6%)72976.606 kB / 4448.83 sec (60.1%)73244.039 kB / 4465.15 sec (60.4%)73650.671 kB / 4489.92 sec (60.7%)73981.851 kB / 4510.10 sec (61.0%)74783.807 kB / 4558.98 sec (61.6%)75318.614 kB / 4591.60 sec (62.1%)75789.410 kB / 4620.29 sec (62.5%)76324.070 kB / 4652.89 sec (62.9%)76858.872 kB / 4685.50 sec (63.3%)77457.524 kB / 4722.01 sec (63.8%)77991.984 kB / 4754.58 sec (64.3%)78526.781 kB / 4787.20 sec (64.7%)79125.731 kB / 4823.72 sec (65.2%)79660.201 kB / 4856.32 sec (65.6%)80195.173 kB / 4888.92 sec (66.1%)80665.660 kB / 4917.57 sec (66.5%)81200.389 kB / 4950.19 sec (66.9%)81734.936 kB / 4982.78 sec (67.4%)82269.747 kB / 5015.38 sec (67.8%)82676.539 kB / 5040.17 sec (68.1%)83403.011 kB / 5084.48 sec (68.7%)83949.067 kB / 5117.72 sec (69.2%)84472.251 kB / 5149.65 sec (69.6%)85006.876 kB / 5182.23 sec (70.1%)85541.685 kB / 5214.85 sec (70.5%)86076.301 kB / 5247.44 sec (70.9%)86750.392 kB / 5288.51 sec (71.5%)87145.662 kB / 5312.64 sec (71.8%)87819.830 kB / 5353.71 sec (72.4%)88151.176 kB / 5373.93 sec (72.6%)88889.218 kB / 5418.90 sec (73.3%)89360.077 kB / 5447.60 sec (73.6%)89958.688 kB / 5484.12 sec (74.1%)90493.335 kB / 5516.72 sec (74.6%)90888.665 kB / 5540.84 sec (74.9%)91626.509 kB / 5585.81 sec (75.5%)92161.342 kB / 5618.41 sec (76.0%)92696.013 kB / 5651.01 sec (76.4%)93230.697 kB / 5683.60 sec (76.8%)93829.445 kB / 5720.11 sec (77.3%)94363.863 kB / 5752.66 sec (77.8%)94909.992 kB / 5785.90 sec (78.2%)95508.742 kB / 5822.44 sec (78.7%)95968.068 kB / 5850.45 sec (79.1%)96706.150 kB / 5895.44 sec (79.7%)97240.740 kB / 5928.04 sec (80.1%)97711.527 kB / 5956.72 sec (80.5%)98385.546 kB / 5997.80 sec (81.1%)98984.231 kB / 6034.32 sec (81.6%)99582.992 kB / 6070.83 sec (82.1%)100053.663 kB / 6099.50 sec (82.5%)100513.089 kB / 6127.53 sec (82.8%)101047.673 kB / 6160.15 sec (83.3%)101657.976 kB / 6197.33 sec (83.8%)101989.316 kB / 6217.52 sec (84.1%)102384.805 kB / 6241.69 sec (84.4%)103122.836 kB / 6286.61 sec (85.0%)103721.408 kB / 6323.14 sec (85.5%)104256.104 kB / 6355.71 sec (85.9%)104866.303 kB / 6392.92 sec (86.4%)105401.037 kB / 6425.52 sec (86.9%)105935.675 kB / 6458.09 sec (87.3%)106470.305 kB / 6490.69 sec (87.8%)107004.879 kB / 6523.28 sec (88.2%)107603.496 kB / 6559.77 sec (88.7%)108074.217 kB / 6588.46 sec (89.1%)108608.987 kB / 6621.06 sec (89.5%)109143.703 kB / 6653.68 sec (90.0%)109742.427 kB / 6690.20 sec (90.5%)110405.140 kB / 6730.62 sec (91.0%)110811.819 kB / 6755.41 sec (91.3%)111549.915 kB / 6800.38 sec (91.9%)112084.705 kB / 6832.96 sec (92.4%)112683.414 kB / 6869.48 sec (92.9%)113217.973 kB / 6902.06 sec (93.3%)113688.725 kB / 6930.73 sec (93.7%)114287.363 kB / 6967.25 sec (94.2%)114885.902 kB / 7003.78 sec (94.7%)115484.375 kB / 7040.21 sec (95.2%)116019.153 kB / 7072.85 sec (95.6%)116425.895 kB / 7097.62 sec (96.0%)117164.086 kB / 7142.61 sec (96.6%)117698.733 kB / 7175.21 sec (97.0%)118169.433 kB / 7203.90 sec (97.4%)118768.274 kB / 7240.43 sec (97.9%)
+DEBUG: HandleCtrl, received ctrl. type: 31, len: 6
+DEBUG: HandleCtrl, Stream BufferEmpty 1
+DEBUG: RTMP_SendPause, 1, pauseTime=7252181
+DEBUG: Invoking pause
+DEBUG: HandleCtrl, received ctrl. type: 32, len: 6
+DEBUG: HandleCtrl, Stream BufferReady 1
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 308 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Pause.Notify>
+DEBUG: Property: <Name:        description, STRING:	Pausing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Pause.Notify
+DEBUG: RTMP_SendPause, 0, pauseTime=7252181
+DEBUG: Invoking pause
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleCtrl, received ctrl. type: 31, len: 6
+DEBUG: HandleCtrl, Stream BufferEmpty 1
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: HandleCtrl, received ctrl. type: 32, len: 6
+DEBUG: HandleCtrl, Stream BufferReady 1
+DEBUG: RTMP_ClientPacket, received: invoke 312 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Unpause.Notify>
+DEBUG: Property: <Name:        description, STRING:	Unpausing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Unpause.Notify
+119163.739 kB / 7264.56 sec (98.2%)119762.714 kB / 7301.10 sec (98.7%)120297.346 kB / 7333.68 sec (99.2%)120831.822 kB / 7366.27 sec (99.6%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Complete>
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:           duration, NUMBER:	50.00>
+DEBUG: Property: <Name:              bytes, NUMBER:	124236614.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 324 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:	Stopped playing prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4.>
+DEBUG: Property: <Name:            details, STRING:	prod_af_mp4_aaclc_128/iplayerstream/l2o/p03xfhdh_965512e8-00e0-47bf-8fbc-140b50743230.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	oAA8EiyA>
+DEBUG: Property: <Name:             reason, STRING:	>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+121254.423 kB / 7391.98 sec (99.9%)
+DEBUG: RTMP_Read returned: 0
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+
+
+INFO: Command: ".\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe" "-loglevel" "verbose" "-i" "C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3.flv" "-vn" "-acodec" "libmp3lame" "-ac" "2" "-ab" "128k" "-y" "C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3"
+
+ffmpeg version 2.2.3 Copyright (c) 2000-2014 the FFmpeg developers
+  built on Jun 19 2014 20:24:25 with gcc 4.8.3 (GCC)
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs --enable-libxvid --enable-decklink --enable-zlib
+  libavutil      52. 66.100 / 52. 66.100
+  libavcodec     55. 52.102 / 55. 52.102
+  libavformat    55. 33.100 / 55. 33.100
+  libavdevice    55. 10.100 / 55. 10.100
+  libavfilter     4.  2.100 /  4.  2.100
+  libswscale      2.  5.102 /  2.  5.102
+  libswresample   0. 18.100 /  0. 18.100
+  libpostproc    52.  3.100 / 52.  3.100
+[flv @ 029af1a0] max_analyze_duration 5000000 reached at 5019000 microseconds
+Input #0, flv, from 'C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3.flv':
+  Metadata:
+    moovPosition    : 72
+    aacaot          : 2
+    audiochannels   : 2
+  Duration: 02:03:12.00, start: 0.000000, bitrate: 134 kb/s
+    Stream #0:0: Audio: aac, 48000 Hz, stereo, fltp
+[graph 0 input from stream 0:0 @ 029b76a0] tb:1/48000 samplefmt:fltp samplerate:48000 chlayout:0x3
+Output #0, mp3, to 'C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.partial.mp3':
+  Metadata:
+    moovPosition    : 72
+    aacaot          : 2
+    audiochannels   : 2
+    TSSE            : Lavf55.33.100
+    Stream #0:0: Audio: mp3 (libmp3lame), 48000 Hz, stereo, fltp, 128 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac -> libmp3lame)
+Press [q] to stop, [?] for help
+size=     377kB time=00:00:24.09 bitrate= 128.3kbits/s    size=     755kB time=00:00:48.28 bitrate= 128.1kbits/s    size=    1136kB time=00:01:12.67 bitrate= 128.1kbits/s    size=    1516kB time=00:01:36.96 bitrate= 128.1kbits/s    size=    1886kB time=00:02:00.64 bitrate= 128.1kbits/s    size=    2243kB time=00:02:23.49 bitrate= 128.0kbits/s    size=    2618kB time=00:02:47.52 bitrate= 128.0kbits/s    size=    2997kB time=00:03:11.76 bitrate= 128.0kbits/s    size=    3372kB time=00:03:35.76 bitrate= 128.0kbits/s    size=    3762kB time=00:04:00.74 bitrate= 128.0kbits/s    size=    4155kB time=00:04:25.87 bitrate= 128.0kbits/s    size=    4555kB time=00:04:51.45 bitrate= 128.0kbits/s    size=    4968kB time=00:05:17.90 bitrate= 128.0kbits/s    size=    5369kB time=00:05:43.58 bitrate= 128.0kbits/s    size=    5760kB time=00:06:08.59 bitrate= 128.0kbits/s    size=    6167kB time=00:06:34.60 bitrate= 128.0kbits/s    size=    6568kB time=00:07:00.28 bitrate= 128.0kbits/s    size=    6957kB time=00:07:25.20 bitrate= 128.0kbits/s    size=    7346kB time=00:07:50.08 bitrate= 128.0kbits/s    size=    7734kB time=00:08:14.92 bitrate= 128.0kbits/s    size=    8127kB time=00:08:40.10 bitrate= 128.0kbits/s    size=    8507kB time=00:09:04.41 bitrate= 128.0kbits/s    size=    8897kB time=00:09:29.32 bitrate= 128.0kbits/s    size=    9269kB time=00:09:53.18 bitrate= 128.0kbits/s    size=    9647kB time=00:10:17.37 bitrate= 128.0kbits/s    size=   10012kB time=00:10:40.70 bitrate= 128.0kbits/s    size=   10373kB time=00:11:03.81 bitrate= 128.0kbits/s    size=   10720kB time=00:11:26.04 bitrate= 128.0kbits/s    size=   11063kB time=00:11:47.95 bitrate= 128.0kbits/s    size=   11401kB time=00:12:09.60 bitrate= 128.0kbits/s    size=   11793kB time=00:12:34.72 bitrate= 128.0kbits/s    size=   12218kB time=00:13:01.89 bitrate= 128.0kbits/s    size=   12656kB time=00:13:29.95 bitrate= 128.0kbits/s    size=   13073kB time=00:13:56.61 bitrate= 128.0kbits/s    size=   13499kB time=00:14:23.88 bitrate= 128.0kbits/s    size=   13919kB time=00:14:50.76 bitrate= 128.0kbits/s    size=   14329kB time=00:15:16.99 bitrate= 128.0kbits/s    size=   14734kB time=00:15:42.93 bitrate= 128.0kbits/s    size=   15149kB time=00:16:09.45 bitrate= 128.0kbits/s    size=   15560kB time=00:16:35.76 bitrate= 128.0kbits/s    size=   15977kB time=00:17:02.49 bitrate= 128.0kbits/s    size=   16391kB time=00:17:28.96 bitrate= 128.0kbits/s    size=   16794kB time=00:17:54.76 bitrate= 128.0kbits/s    size=   17197kB time=00:18:20.56 bitrate= 128.0kbits/s    size=   17598kB time=00:18:46.22 bitrate= 128.0kbits/s    size=   18001kB time=00:19:12.00 bitrate= 128.0kbits/s    size=   18416kB time=00:19:38.56 bitrate= 128.0kbits/s    size=   18825kB time=00:20:04.75 bitrate= 128.0kbits/s    size=   19241kB time=00:20:31.34 bitrate= 128.0kbits/s    size=   19645kB time=00:20:57.24 bitrate= 128.0kbits/s    size=   20059kB time=00:21:23.71 bitrate= 128.0kbits/s    size=   20462kB time=00:21:49.53 bitrate= 128.0kbits/s    size=   20864kB time=00:22:15.21 bitrate= 128.0kbits/s    size=   21275kB time=00:22:41.52 bitrate= 128.0kbits/s    size=   21698kB time=00:23:08.64 bitrate= 128.0kbits/s    size=   22094kB time=00:23:33.98 bitrate= 128.0kbits/s    size=   22497kB time=00:23:59.76 bitrate= 128.0kbits/s    size=   22878kB time=00:24:24.16 bitrate= 128.0kbits/s    size=   23266kB time=00:24:48.96 bitrate= 128.0kbits/s    size=   23650kB time=00:25:13.56 bitrate= 128.0kbits/s    size=   24031kB time=00:25:37.92 bitrate= 128.0kbits/s    size=   24405kB time=00:26:01.87 bitrate= 128.0kbits/s    size=   24772kB time=00:26:25.36 bitrate= 128.0kbits/s    size=   25158kB time=00:26:50.08 bitrate= 128.0kbits/s    size=   25547kB time=00:27:14.92 bitrate= 128.0kbits/s    size=   25898kB time=00:27:37.44 bitrate= 128.0kbits/s    size=   26246kB time=00:27:59.66 bitrate= 128.0kbits/s    size=   26605kB time=00:28:22.68 bitrate= 128.0kbits/s    size=   26957kB time=00:28:45.21 bitrate= 128.0kbits/s    size=   27323kB time=00:29:08.59 bitrate= 128.0kbits/s    size=   27683kB time=00:29:31.63 bitrate= 128.0kbits/s    size=   28048kB time=00:29:55.03 bitrate= 128.0kbits/s    size=   28413kB time=00:30:18.40 bitrate= 128.0kbits/s    size=   28772kB time=00:30:41.37 bitrate= 128.0kbits/s    size=   29159kB time=00:31:06.14 bitrate= 128.0kbits/s    size=   29594kB time=00:31:33.96 bitrate= 128.0kbits/s    size=   30034kB time=00:32:02.13 bitrate= 128.0kbits/s    size=   30469kB time=00:32:29.95 bitrate= 128.0kbits/s    size=   30914kB time=00:32:58.46 bitrate= 128.0kbits/s    size=   31364kB time=00:33:27.24 bitrate= 128.0kbits/s    size=   31793kB time=00:33:54.72 bitrate= 128.0kbits/s    size=   32201kB time=00:34:20.78 bitrate= 128.0kbits/s    size=   32559kB time=00:34:43.75 bitrate= 128.0kbits/s    size=   32918kB time=00:35:06.67 bitrate= 128.0kbits/s    size=   33284kB time=00:35:30.09 bitrate= 128.0kbits/s    size=   33642kB time=00:35:53.04 bitrate= 128.0kbits/s    size=   34001kB time=00:36:16.03 bitrate= 128.0kbits/s    size=   34364kB time=00:36:39.24 bitrate= 128.0kbits/s    size=   34736kB time=00:37:03.07 bitrate= 128.0kbits/s    size=   35089kB time=00:37:25.65 bitrate= 128.0kbits/s    size=   35452kB time=00:37:48.86 bitrate= 128.0kbits/s    size=   35810kB time=00:38:11.80 bitrate= 128.0kbits/s    size=   36206kB time=00:38:37.15 bitrate= 128.0kbits/s    size=   36594kB time=00:39:01.96 bitrate= 128.0kbits/s    size=   36984kB time=00:39:26.92 bitrate= 128.0kbits/s    size=   37370kB time=00:39:51.64 bitrate= 128.0kbits/s    size=   37757kB time=00:40:16.36 bitrate= 128.0kbits/s    size=   38165kB time=00:40:42.48 bitrate= 128.0kbits/s    size=   38512kB time=00:41:04.70 bitrate= 128.0kbits/s    size=   38856kB time=00:41:26.73 bitrate= 128.0kbits/s    size=   39215kB time=00:41:49.68 bitrate= 128.0kbits/s    size=   39572kB time=00:42:12.57 bitrate= 128.0kbits/s    size=   39905kB time=00:42:33.88 bitrate= 128.0kbits/s    size=   40240kB time=00:42:55.29 bitrate= 128.0kbits/s    size=   40585kB time=00:43:17.40 bitrate= 128.0kbits/s    size=   40936kB time=00:43:39.86 bitrate= 128.0kbits/s    size=   41278kB time=00:44:01.75 bitrate= 128.0kbits/s    size=   41633kB time=00:44:24.48 bitrate= 128.0kbits/s    size=   41978kB time=00:44:46.56 bitrate= 128.0kbits/s    size=   42329kB time=00:45:09.02 bitrate= 128.0kbits/s    size=   42671kB time=00:45:30.88 bitrate= 128.0kbits/s    size=   43026kB time=00:45:53.64 bitrate= 128.0kbits/s    size=   43382kB time=00:46:16.41 bitrate= 128.0kbits/s    size=   43739kB time=00:46:39.26 bitrate= 128.0kbits/s    size=   44162kB time=00:47:06.33 bitrate= 128.0kbits/s    size=   44609kB time=00:47:34.92 bitrate= 128.0kbits/s    size=   45026kB time=00:48:01.58 bitrate= 128.0kbits/s    size=   45449kB time=00:48:28.65 bitrate= 128.0kbits/s    size=   45888kB time=00:48:56.78 bitrate= 128.0kbits/s    size=   46342kB time=00:49:25.82 bitrate= 128.0kbits/s    size=   46760kB time=00:49:52.56 bitrate= 128.0kbits/s    size=   47181kB time=00:50:19.53 bitrate= 128.0kbits/s    size=   47599kB time=00:50:46.29 bitrate= 128.0kbits/s    size=   48033kB time=00:51:14.06 bitrate= 128.0kbits/s    size=   48445kB time=00:51:40.44 bitrate= 128.0kbits/s    size=   48889kB time=00:52:08.83 bitrate= 128.0kbits/s    size=   49310kB time=00:52:35.80 bitrate= 128.0kbits/s    size=   49758kB time=00:53:04.48 bitrate= 128.0kbits/s    size=   50169kB time=00:53:30.76 bitrate= 128.0kbits/s    size=   50592kB time=00:53:57.84 bitrate= 128.0kbits/s    size=   51029kB time=00:54:25.80 bitrate= 128.0kbits/s    size=   51470kB time=00:54:54.04 bitrate= 128.0kbits/s    size=   51900kB time=00:55:21.55 bitrate= 128.0kbits/s    size=   52306kB time=00:55:47.54 bitrate= 128.0kbits/s    size=   52744kB time=00:56:15.57 bitrate= 128.0kbits/s    size=   53160kB time=00:56:42.19 bitrate= 128.0kbits/s    size=   53568kB time=00:57:08.28 bitrate= 128.0kbits/s    size=   53983kB time=00:57:34.84 bitrate= 128.0kbits/s    size=   54407kB time=00:58:02.01 bitrate= 128.0kbits/s    size=   54832kB time=00:58:29.20 bitrate= 128.0kbits/s    size=   55258kB time=00:58:56.47 bitrate= 128.0kbits/s    size=   55673kB time=00:59:23.04 bitrate= 128.0kbits/s    size=   56088kB time=00:59:49.60 bitrate= 128.0kbits/s    size=   56449kB time=01:00:12.69 bitrate= 128.0kbits/s    size=   56796kB time=01:00:34.89 bitrate= 128.0kbits/s    size=   57152kB time=01:00:57.69 bitrate= 128.0kbits/s    size=   57505kB time=01:01:20.25 bitrate= 128.0kbits/s    size=   57865kB time=01:01:43.32 bitrate= 128.0kbits/s    size=   58248kB time=01:02:07.80 bitrate= 128.0kbits/s    size=   58592kB time=01:02:29.85 bitrate= 128.0kbits/s    size=   58950kB time=01:02:52.75 bitrate= 128.0kbits/s    size=   59305kB time=01:03:15.48 bitrate= 128.0kbits/s    size=   59644kB time=01:03:37.15 bitrate= 128.0kbits/s    size=   59970kB time=01:03:58.03 bitrate= 128.0kbits/s    size=   60309kB time=01:04:19.72 bitrate= 128.0kbits/s    size=   60643kB time=01:04:41.11 bitrate= 128.0kbits/s    size=   60974kB time=01:05:02.25 bitrate= 128.0kbits/s    size=   61302kB time=01:05:23.30 bitrate= 128.0kbits/s    size=   61625kB time=01:05:43.96 bitrate= 128.0kbits/s    size=   61964kB time=01:06:05.64 bitrate= 128.0kbits/s    size=   62316kB time=01:06:28.20 bitrate= 128.0kbits/s    size=   62726kB time=01:06:54.43 bitrate= 128.0kbits/s    size=   63081kB time=01:07:17.16 bitrate= 128.0kbits/s    size=   63431kB time=01:07:39.52 bitrate= 128.0kbits/s    size=   63778kB time=01:08:01.75 bitrate= 128.0kbits/s    size=   64118kB time=01:08:23.52 bitrate= 128.0kbits/s    size=   64460kB time=01:08:45.40 bitrate= 128.0kbits/s    size=   64798kB time=01:09:07.00 bitrate= 128.0kbits/s    size=   65150kB time=01:09:29.56 bitrate= 128.0kbits/s    size=   65502kB time=01:09:52.10 bitrate= 128.0kbits/s    size=   65857kB time=01:10:14.78 bitrate= 128.0kbits/s    size=   66221kB time=01:10:38.11 bitrate= 128.0kbits/s    size=   66569kB time=01:11:00.33 bitrate= 128.0kbits/s    size=   66914kB time=01:11:22.41 bitrate= 128.0kbits/s    size=   67271kB time=01:11:45.26 bitrate= 128.0kbits/s    size=   67673kB time=01:12:11.04 bitrate= 128.0kbits/s    size=   68091kB time=01:12:37.80 bitrate= 128.0kbits/s    size=   68499kB time=01:13:03.88 bitrate= 128.0kbits/s    size=   68915kB time=01:13:30.48 bitrate= 128.0kbits/s    size=   69326kB time=01:13:56.83 bitrate= 128.0kbits/s    size=   69742kB time=01:14:23.42 bitrate= 128.0kbits/s    size=   70128kB time=01:14:48.14 bitrate= 128.0kbits/s    size=   70487kB time=01:15:11.11 bitrate= 128.0kbits/s    size=   70838kB time=01:15:33.60 bitrate= 128.0kbits/s    size=   71199kB time=01:15:56.68 bitrate= 128.0kbits/s    size=   71557kB time=01:16:19.60 bitrate= 128.0kbits/s    size=   71923kB time=01:16:43.03 bitrate= 128.0kbits/s    size=   72293kB time=01:17:06.72 bitrate= 128.0kbits/s    size=   72682kB time=01:17:31.60 bitrate= 128.0kbits/s    size=   73058kB time=01:17:55.63 bitrate= 128.0kbits/s    size=   73475kB time=01:18:22.32 bitrate= 128.0kbits/s    size=   73863kB time=01:18:47.20 bitrate= 128.0kbits/s    size=   74255kB time=01:19:12.24 bitrate= 128.0kbits/s    size=   74633kB time=01:19:36.48 bitrate= 128.0kbits/s    size=   75081kB time=01:20:05.16 bitrate= 128.0kbits/s    size=   75503kB time=01:20:32.16 bitrate= 128.0kbits/s    size=   75899kB time=01:20:57.50 bitrate= 128.0kbits/s    size=   76279kB time=01:21:21.79 bitrate= 128.0kbits/s    size=   76683kB time=01:21:47.64 bitrate= 128.0kbits/s    size=   77102kB time=01:22:14.49 bitrate= 128.0kbits/s    size=   77492kB time=01:22:39.40 bitrate= 128.0kbits/s    size=   77881kB time=01:23:04.32 bitrate= 128.0kbits/s    size=   78260kB time=01:23:28.56 bitrate= 128.0kbits/s    size=   78651kB time=01:23:53.61 bitrate= 128.0kbits/s    size=   79037kB time=01:24:18.31 bitrate= 128.0kbits/s    size=   79480kB time=01:24:46.65 bitrate= 128.0kbits/s    size=   79860kB time=01:25:10.99 bitrate= 128.0kbits/s    size=   80212kB time=01:25:33.50 bitrate= 128.0kbits/s    size=   80565kB time=01:25:56.11 bitrate= 128.0kbits/s    size=   80908kB time=01:26:18.04 bitrate= 128.0kbits/s    size=   81257kB time=01:26:40.41 bitrate= 128.0kbits/s    size=   81614kB time=01:27:03.26 bitrate= 128.0kbits/s    size=   81966kB time=01:27:25.75 bitrate= 128.0kbits/s    size=   82313kB time=01:27:48.00 bitrate= 128.0kbits/s    size=   82659kB time=01:28:10.12 bitrate= 128.0kbits/s    size=   83036kB time=01:28:34.27 bitrate= 128.0kbits/s    size=   83416kB time=01:28:58.58 bitrate= 128.0kbits/s    size=   83792kB time=01:29:22.63 bitrate= 128.0kbits/s    size=   84166kB time=01:29:46.58 bitrate= 128.0kbits/s    size=   84563kB time=01:30:12.00 bitrate= 128.0kbits/s    size=   84957kB time=01:30:37.20 bitrate= 128.0kbits/s    size=   85361kB time=01:31:03.02 bitrate= 128.0kbits/s    size=   85769kB time=01:31:29.18 bitrate= 128.0kbits/s    size=   86144kB time=01:31:53.18 bitrate= 128.0kbits/s    size=   86523kB time=01:32:17.44 bitrate= 128.0kbits/s    size=   86913kB time=01:32:42.38 bitrate= 128.0kbits/s    size=   87296kB time=01:33:06.88 bitrate= 128.0kbits/s    size=   87674kB time=01:33:31.10 bitrate= 128.0kbits/s    size=   88034kB time=01:33:54.14 bitrate= 128.0kbits/s    size=   88418kB time=01:34:18.67 bitrate= 128.0kbits/s    size=   88792kB time=01:34:42.62 bitrate= 128.0kbits/s    size=   89165kB time=01:35:06.48 bitrate= 128.0kbits/s    size=   89547kB time=01:35:30.98 bitrate= 128.0kbits/s    size=   89924kB time=01:35:55.10 bitrate= 128.0kbits/s    size=   90296kB time=01:36:18.86 bitrate= 128.0kbits/s    size=   90663kB time=01:36:42.40 bitrate= 128.0kbits/s    size=   91027kB time=01:37:05.68 bitrate= 128.0kbits/s    size=   91408kB time=01:37:30.07 bitrate= 128.0kbits/s    size=   91772kB time=01:37:53.32 bitrate= 128.0kbits/s    size=   92114kB time=01:38:15.26 bitrate= 128.0kbits/s    size=   92450kB time=01:38:36.76 bitrate= 128.0kbits/s    size=   92804kB time=01:38:59.42 bitrate= 128.0kbits/s    size=   93150kB time=01:39:21.55 bitrate= 128.0kbits/s    size=   93498kB time=01:39:43.84 bitrate= 128.0kbits/s    size=   93856kB time=01:40:06.74 bitrate= 128.0kbits/s    size=   94201kB time=01:40:28.80 bitrate= 128.0kbits/s    size=   94552kB time=01:40:51.28 bitrate= 128.0kbits/s    size=   94887kB time=01:41:12.74 bitrate= 128.0kbits/s    size=   95227kB time=01:41:34.46 bitrate= 128.0kbits/s    size=   95567kB time=01:41:56.25 bitrate= 128.0kbits/s    size=   95915kB time=01:42:18.50 bitrate= 128.0kbits/s    size=   96263kB time=01:42:40.75 bitrate= 128.0kbits/s    size=   96659kB time=01:43:06.14 bitrate= 128.0kbits/s    size=   97050kB time=01:43:31.15 bitrate= 128.0kbits/s    size=   97454kB time=01:43:57.02 bitrate= 128.0kbits/s    size=   97840kB time=01:44:21.72 bitrate= 128.0kbits/s    size=   98231kB time=01:44:46.70 bitrate= 128.0kbits/s    size=   98651kB time=01:45:13.63 bitrate= 128.0kbits/s    size=   99080kB time=01:45:41.04 bitrate= 128.0kbits/s    size=   99493kB time=01:46:07.51 bitrate= 128.0kbits/s    size=   99901kB time=01:46:33.62 bitrate= 128.0kbits/s    size=  100330kB time=01:47:01.05 bitrate= 128.0kbits/s    size=  100761kB time=01:47:28.68 bitrate= 128.0kbits/s    size=  101203kB time=01:47:56.92 bitrate= 128.0kbits/s    size=  101642kB time=01:48:25.05 bitrate= 128.0kbits/s    size=  102024kB time=01:48:49.48 bitrate= 128.0kbits/s    size=  102385kB time=01:49:12.57 bitrate= 128.0kbits/s    size=  102749kB time=01:49:35.90 bitrate= 128.0kbits/s    size=  103095kB time=01:49:58.03 bitrate= 128.0kbits/s    size=  103454kB time=01:50:21.00 bitrate= 128.0kbits/s    size=  103826kB time=01:50:44.83 bitrate= 128.0kbits/s    size=  104183kB time=01:51:07.68 bitrate= 128.0kbits/s    size=  104548kB time=01:51:31.03 bitrate= 128.0kbits/s    size=  105004kB time=01:52:00.21 bitrate= 128.0kbits/s    size=  105438kB time=01:52:28.00 bitrate= 128.0kbits/s    size=  105883kB time=01:52:56.44 bitrate= 128.0kbits/s    size=  106319kB time=01:53:24.38 bitrate= 128.0kbits/s    size=  106674kB time=01:53:47.11 bitrate= 128.0kbits/s    size=  107030kB time=01:54:09.88 bitrate= 128.0kbits/s    size=  107375kB time=01:54:31.96 bitrate= 128.0kbits/s    size=  107734kB time=01:54:54.93 bitrate= 128.0kbits/s    size=  108081kB time=01:55:17.13 bitrate= 128.0kbits/s    size=  108434kB time=01:55:39.69 bitrate= 128.0kbits/s    size=  108778kB time=01:56:01.72 bitrate= 128.0kbits/s    size=  109133kB time=01:56:24.48 bitrate= 128.0kbits/s    size=  109534kB time=01:56:50.11 bitrate= 128.0kbits/s    size=  109955kB time=01:57:17.08 bitrate= 128.0kbits/s    size=  110310kB time=01:57:39.79 bitrate= 128.0kbits/s    size=  110653kB time=01:58:01.72 bitrate= 128.0kbits/s    size=  111003kB time=01:58:24.14 bitrate= 128.0kbits/s    size=  111362kB time=01:58:47.11 bitrate= 128.0kbits/s    size=  111733kB time=01:59:10.87 bitrate= 128.0kbits/s    size=  112076kB time=01:59:32.80 bitrate= 128.0kbits/s    size=  112428kB time=01:59:55.36 bitrate= 128.0kbits/s    size=  112785kB time=02:00:18.19 bitrate= 128.0kbits/s    size=  113144kB time=02:00:41.16 bitrate= 128.0kbits/s    size=  113480kB time=02:01:02.68 bitrate= 128.0kbits/s    size=  113818kB time=02:01:24.31 bitrate= 128.0kbits/s    size=  114144kB time=02:01:45.16 bitrate= 128.0kbits/s    size=  114473kB time=02:02:06.19 bitrate= 128.0kbits/s    size=  114780kB time=02:02:25.87 bitrate= 128.0kbits/s    size=  115098kB time=02:02:46.22 bitrate= 128.0kbits/s    size=  115436kB time=02:03:07.84 bitrate= 128.0kbits/s    No more output streams to write to, finishing.
+size=  115501kB time=02:03:12.00 bitrate= 128.0kbits/s    
+video:0kB audio:115500kB subtitle:0 data:0 global headers:0kB muxing overhead 0.000425%
+INFO: Command exit code 0 (raw code = 0)
+INFO: Recorded C:\Users\Amro\Downloads\BBC Radio Downloads\Satvinder_Rana_-_396._19_06_2016_p03xfhd5_default.mp3
+DEBUG: Record using flashaacstd1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p02bn2s4.jpg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p02bn2s4.jpg
+ERROR: Thumbnail Download failed
+INFO: ID3 tagging MP3 file

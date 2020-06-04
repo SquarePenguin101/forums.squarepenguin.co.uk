@@ -1,0 +1,261 @@
+cask@cask-Dimension-4550 ~ $ get_iplayer --type=radio --get 12234 --verbose
+get_iplayer 2.84-2-g21e11de-ppa15, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: User prefs dir: /home/cask/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+Current options:
+	aactomp3 = 1
+	atomicparsley = /usr/bin/AtomicParsley
+	fileprefix = <name>-<episode>
+	flvstreamer = /usr/bin/rtmpdump
+	output = /home/cask/Radio Downloads/
+	packagemanager = apt
+	rtmpdump = /usr/bin/rtmpdump
+	tag_hdvideo = 1
+	tag_longdesc = 1
+	tag_utf8 = 1
+	type = radio
+	verbose = 1
+	whitespace = 1
+
+INFO: Search args: '12234'
+INFO: Additionally getting cached programme data for radio
+INFO: Got 3343 file cache entries for radio
+Matches:
+12234:	Radio 4 Appeal - Mines Advisory Group (MAG), BBC Radio 4, Factual,Radio
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Getting page http://feeds.bbc.co.uk/iplayer/episode/b03gtnnn
+INFO: Getting page http://www.bbc.co.uk/programmes/b03gtnnn.rdf
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b03gtnnn
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b03gtnnn
+INFO: Using Not Live standard TV and Radio: b03gtm54
+INFO: Version: default, VersionPid: b03gtm54, Duration: 120
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03gtm54?cb=57327
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03gtm54/iplayer_uk_stream_aac_rtmp_concrete/limelight?cb=43147
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03gtm54/iplayer_uk_stream_aac_rtmp_lo_concrete/limelight?cb=65859
+INFO: Found mode flashaaclow1: (iplayer_uk_stream_aac_rtmp_lo_concrete) rtmp aac 48kbps stream (CDN: limelight/9)
+INFO: Found mode flashaacstd1: (iplayer_uk_stream_aac_rtmp_concrete) rtmp aac 128kbps stream (CDN: limelight/10)
+INFO: Found mode rtspaaclow1: (iplayer_uk_stream_aac_rtmp_lo_concrete) rtmp aac 48kbps stream (CDN: limelight/9)
+INFO: Found mode rtspaacstd1: (iplayer_uk_stream_aac_rtmp_concrete) rtmp aac 128kbps stream (CDN: limelight/10)
+INFO: Found mode wma1: (iplayer_intl_stream_wma_uk_concrete) mms wma9 128kbps stream (CDN: asx/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b03gtm54.rdf
+INFO: Programme not in history
+INFO: Will search for versions: default
+INFO: Mode list: flashaachigh,flashaacstd,flashaudio,flashaaclow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashaacstd1,flashaaclow1 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Radio 4 Appeal - Mines Advisory Group (MAG)
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Radio 4 Appeal-Mines Advisory Group (MAG)                 
+INFO: /usr/bin/rtmpdump version 2.4
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcodspdns.fcod.llnwd.net&auth=as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc&aifp=v001&slist=mp4:radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc, application: a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc, authString: as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc, swfUrl: http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf, file: /home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3, file_done: /home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).mp3
+
+
+INFO: Command: "/usr/bin/rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "mp4:radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc" "--app" "a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b03gtnnn/Radio_4_Appeal_Mines_Advisory_Group_(MAG)/" "--resume" "-o" "/home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4-n78-git3a1e20c-ppa8~precise
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : bbcodspdns.fcod.llnwd.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4
+DEBUG: tcUrl    : rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc
+DEBUG: swfUrl   : http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/iplayer/episode/b03gtnnn/Radio_4_Appeal_Mines_Advisory_Group_(MAG)/
+DEBUG: app      : a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4&et=1384994771&fmta-token=545353d15ecf5cd6942a508f3a31c734cb84b3c6cec5c7e8480dfc511dc5b3fc
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: b6 74 7f 89 f9 ec 6a 60 c1 a4 b5 8b b1 18 b0 fa
+DEBUG: 65 18 86 24 c2 8a 1a a3 2f 72 0f 0b 80 59 dd 7f
+DEBUG: SWFSize  : 595316
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:	365.04>
+DEBUG: Property: <Name:       moovPosition, NUMBER:	36.00>
+DEBUG: Property: <Name:       audiocodecid, STRING:	mp4a>
+DEBUG: Property: <Name:             aacaot, NUMBER:	2.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:	44100.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:	2.00>
+DEBUG: Property: <Name:               tags, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:              ©alb, STRING:	Radio 4 Appeal>
+DEBUG: Property: <Name:               aART, STRING:	BBC Radio 4 FM>
+DEBUG: Property: <Name:              ©ART, STRING:	BBC Radio 4 FM>
+DEBUG: Property: <Name:              ©cmt, STRING:	Giles Duley presents an appeal on behalf of Mines Advisory Group (MAG).>
+DEBUG: Property: <Name:               cprt, STRING:	British Broadcasting Corporation © 2013, all rights reserved.>
+DEBUG: Property: <Name:              ©gen, STRING:	Podcast>
+DEBUG: Property: <Name:              ©nam, STRING:	Radio 4 Appeal 10 11 2013>
+DEBUG: Property: <Name:              ©day, STRING:	2013>
+DEBUG: (object end)
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:	16098304.00>
+DEBUG: Property: <Name:          timescale, NUMBER:	44100.00>
+DEBUG: Property: <Name:           language, STRING:	und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:	mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: File has duration: 365.041000
+DEBUG: bAudioOnly: 1, size: 6108566
+DEBUG: Last keyframe found at: 365018 ms, size: 0, type: 08
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 430
+DEBUG: HandShake: Initial client digest: 
+DEBUG: 8f 55 0e f8 9a 98 e7 c7 ec 1d dd 94 9a 3a dc 33
+DEBUG: e7 3b cf 67 50 81 f1 f7 7f de e3 f6 c1 8b 2c 3f
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 1524166444
+DEBUG: HandShake: FMS Version   : 4.0.3.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest: 
+DEBUG: 3d 74 0c 8e e2 f1 87 79 0c d0 6e bc 6c 97 0f 7e
+DEBUG: 37 15 c0 f0 e7 8e ba d3 27 6d 97 44 f5 22 35 35
+DEBUG: HandShake: Client signature calculated:
+DEBUG: ea ca c4 ae c5 55 61 cc 0a 2e fa fd e4 bc 1d c2
+DEBUG: 1e a4 3a 08 9c ea 61 37 35 53 01 81 7b e3 0b 88
+DEBUG: HandShake: Server sent signature:
+DEBUG: 88 5e e5 a4 84 02 91 14 c0 a6 c5 59 8a 4c c8 ec
+DEBUG: 4b ed ee ff 70 18 30 b9 11 fe 60 86 3a 05 8e 7a
+DEBUG: HandShake: Digest key: 
+DEBUG: a7 3c 86 12 53 1b be 93 d2 86 9f 1a 60 15 93 61
+DEBUG: f9 5e 13 75 27 5e ec d2 64 46 d2 2d f7 cc dc 2c
+DEBUG: HandShake: Signature calculated:
+DEBUG: 88 5e e5 a4 84 02 91 14 c0 a6 c5 59 8a 4c c8 ec
+DEBUG: 4b ed ee ff 70 18 30 b9 11 fe 60 86 3a 05 8e 7a
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 2500000
+DEBUG: HandleClientBW: client BW = 2500000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 242 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:	FMS/4,0,3,4044>
+DEBUG: Property: <Name:       capabilities, NUMBER:	255.00>
+DEBUG: Property: <Name:               mode, NUMBER:	1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetConnection.Connect.Success>
+DEBUG: Property: <Name:        description, STRING:	Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:	0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:	4,0,3,4044>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=365018, stopTime=0, sending play: mp4:radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 16419 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 304 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:	Playing and resetting radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4.>
+DEBUG: Property: <Name:            details, STRING:	radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	qAArgBiA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 298 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:	status>
+DEBUG: Property: <Name:               code, STRING:	NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:	Started playing radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4.>
+DEBUG: Property: <Name:            details, STRING:	radio4/secure_auth/RBN2_radio_4_fm_-_sunday_0755_b03gtm54_2013_11_10_08_22_57.mp4>
+DEBUG: Property: <Name:           clientid, STRING:	qAArgBiA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+DEBUG: Continuing at TS: 365018 ms
+
+Already Completed at: 365.018 sec Duration=0.365 sec
+Download complete
+DEBUG: Closing connection.
+
+DEBUG: Invoking deleteStream
+INFO: Command exit code 0 (raw code = 0)
+
+
+INFO: Command: "avconv" "-i" "/home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3.flv" "-vn" "-acodec" "libmp3lame" "-ac" "2" "-ab" "128k" "-y" "/home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3"
+
+avconv version 0.8.9-4:0.8.9-0ubuntu0.12.04.1, Copyright (c) 2000-2013 the Libav developers
+  built on Nov  9 2013 19:12:07 with gcc 4.6.3
+[flv @ 0x82c4aa0] max_analyze_duration reached
+[flv @ 0x82c4aa0] Estimating duration from bitrate, this may be inaccurate
+Input #0, flv, from '/home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3.flv':
+  Metadata:
+    moovPosition    : 36
+    aacaot          : 2
+    audiochannels   : 2
+  Duration: 00:06:05.04, start: 0.000000, bitrate: N/A
+    Stream #0.0: Audio: aac, 44100 Hz, stereo, s16
+Unknown encoder 'libmp3lame'
+INFO: Command exit code 1 (raw code = 256)
+WARNING: flv conversion failed - retaining flv file
+INFO: Recorded /home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).partial.mp3.flv
+DEBUG: Record using flashaacstd1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://www.bbc.co.uk/iplayer/images/episode/b03gtnnn_150_84.jpg
+INFO: Getting page http://www.bbc.co.uk/iplayer/images/episode/b03gtnnn_150_84.jpg
+INFO: Downloaded Thumbnail to '/home/cask/Radio Downloads/Radio 4 Appeal-Mines Advisory Group (MAG).jpg'
+WARNING: Don't know how to tag MP3 file
+cask@cask-Dimension-4550 ~ $ 
+

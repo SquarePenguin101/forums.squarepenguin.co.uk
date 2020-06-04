@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Replacement for Tag option &quot;--prefs-add --tag-fulltitle&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Replacement for Tag option &quot;--prefs-add --tag-fulltitle&quot;</div>
+<div id="pagetitle"><h2>Replacement for Tag option &quot;--prefs-add --tag-fulltitle&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-15</h2></div><div class="dateline">02-03-2017, 02:16 PM</div>
+</div>
+<div class="message">I am using the WebPVR in v2.99 on Windows 10<br />
+<br />
+The required tagging syntax seems to be "--prefs-add --tag-format-title=&lt;relevant substitution parameter&gt;" (note the equals sign). I have tried "title", "name", "longname" plus several others from the Substitution Parameter list.<br />
+ <br />
+Get_iplayer accepts these as valid options and updates the "options" file.<br />
+ <br />
+However when downloading a programme, the Title is simply shown as the word "title", "name" or "longname". <br />
+Looking at the Options file, I see a line, for example, "tag_formattitle name". If I edit this to show "tag_formattitle=name" then at least I get a tag in the recorded programme which usually is just the Episode name. <br />
+ <br />
+It could be that there is a bug which incorrectly adds the preference to the options file by omitting the "=" sign.<br />
+ <br />
+Secondly whatever substitution parameter I use, I can only get the Episode name. This begs the question, are the substitution parameters working correctly?<br />
+ <br />
+I am still desperately looking for a tagging option that replicates the old "fulltitle" option.<br />
+<br />
+PS I have previously posted this in the get_iplayer list but this hasn't elicited a reply so far.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-03-2017, 02:32 PM</div>
+</div>
+<div class="message">There is no bug. You omitted the angle brackets used to denote substitution parameters and possibly didn't quote the value of <kbd>--tag-format-title</kbd>. Read the release notes for get_iplayer 2.98 for examples of what I think you are trying to do.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">02-03-2017, 02:50 PM</div>
+</div>
+<div class="message">Here's the relevant passage<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Some obsolete tagging options (replaced by auto-configuration) - see --tag-* options in list below<br />
+<ul class="mycode_list"><li>Use the --tag-format-show and --tag-format-title options to customise programme/episode names in tags.<br />
+<br />
+</li>
+<li>Replace --tag-fulltitle with --tag-format-title="&lt;title&gt;" or --tag-format-title="&lt;name&gt;: &lt;episodeshort&gt;". Use --tag-format-title="&lt;name&gt;: &lt;episode&gt;" if you wish to include episode numbers.<br />
+</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-15</h2></div><div class="dateline">02-03-2017, 03:31 PM</div>
+</div>
+<div class="message">Many thanks for putting me straight (RTFM I hear you say!). I had totally misunderstood the syntax but now all is clear.<br />
+<br />
+My options file now contains   tag_formattitle &lt;name&gt;: &lt;episodeshort&gt; which is exactly what I wanted.<br />
+<br />
+Also thanks for maintaining get_iplayer which is a great program.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-03-2017, 04:58 PM</div>
+</div>
+<div class="message">Release notes aren't set in stone. Things get added in the days after release in order to deal with questions like this, so you should always check again before posting. That said, most deprecated features have now been removed, so such questions are less likely to arise in the future.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Replacement for Tag option &quot;--prefs-add --tag-fulltitle&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

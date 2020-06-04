@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --pid-recursive not working with broken obsolete version of get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --pid-recursive not working with broken obsolete version of get_iplayer</div>
+<div id="pagetitle"><h2>--pid-recursive not working with broken obsolete version of get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1470</h2></div><div class="dateline">30-10-2018, 11:35 PM</div>
+</div>
+<div class="message">Hi all.  Searching has revealed nothing to me specific to this fault, can anyone suggest some things that might be causing it?<br />
+<br />
+I've just recognized that the reason I have recently been missing the very few TV programmes I record is that the Series or Brand PId's I have in my list for recording don't seem to be recognized as having any programmes associated with them.<br />
+<br />
+(In addition to a few PVR entries, I have a couple batch files to automate grabbing those one-off PId's that take my interest in the iPlayer web pages...  Trouble is, because it is automated, I don't see when it says "0 total programmes" to me so I've missed a lot recently without realizing it :-[ )<br />
+<br />
+So, for example, I run get_iplayer (or "Perl get_iplayer.pl" in my batch file) with --Hide --Versions=original,default --pid-recursive --pid=... with the following PId's on separate commandlines:<br />
+<br />
+p06jy6bc (which is Killing Eve, that the BBC have decided to leave available as an entire series long-term, and to which I get the warning "INFO: 0 total programmes")<br />
+p0147qqb (Attenborough the Early Years, which is a single programme so --pid-recursive wouldn't be required even though it is specified, and which downloaded correctly)<br />
+p039wcdk (War and Peace, the recent series now available long-term, which gives the same warning)<br />
+<br />
+What possible settings or options pref's might be causing this unexpected behaviour?  These are new entries in my lists so --Hide should not be having any impact, but I removed it temporarily just to test, with no joy.  I am baffled.  Any ideas?<br />
+<br />
+Regards,<br />
+Dranok<br />
+<br />
+P.S.  Using Windows get_iplayer 3.14.0 (with ffmpeg n3.1.2 but that's irrelevant at this point!)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-10-2018, 11:42 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>Using Windows get_iplayer 3.14.0</blockquote>
+<br />
+Best to update the latest release to likely solve the issue - and read the 3.15 release notes for info:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/release310to319#release315">https://github.com/get-iplayer/get_iplay...release315</a><br />
+<br />
+(Not that 3.15 is the latest release, just likely relates to the issue you're having)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1470</h2></div><div class="dateline">31-10-2018, 11:49 PM</div>
+</div>
+<div class="message">Well howz-about that then!  A known 'fault' (bless Aunty Beeb for keep-changing-things-to-make-our-life-hard) fixed by the very next version from what I was using...<br />
+<br />
+Thank you very much for that quick simple solution :-)  I'm now the proud owner of a shiny new 3.17.0.<br />
+<br />
+As an aside/afterthought:  how do I purge from the cache/history a particular PId so that the package itself will download it again at the allocated time rather than me having to do it manually with --force?  I want to rid myself of a couple of weeks of downloads taking up way too much space in 50fps (that happened before I knew of the change, and came back here to find out what was happening, and added fps25 to my preferences) without doing every single one manually.  I wouldn't mind the work so much, except that some have now gone off iPlayer and I must wait for them to be repeated and grab them automatically when they appear (as they tend to every 3 or 6 months on BBC 4).<br />
+<br />
+Is there a command I can't find that purges a specific download, or do I really have to scour the download_history or tv.cache manually and delete each entry?  (And if so, do I have to do it in both files?)<br />
+<br />
+Thank you for your time either way...<br />
+<br />
+Dranok</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2018, 12:06 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (31-10-2018, 11:49 PM)</span></cite>do I really have to scour the download_history or tv.cache manually and delete each entry?</blockquote>Or use <kbd>--force</kbd>, which can be saved in pvr searches as well, though you would want to remove it once you have the desired programmes. Use <kbd>--overwrite</kbd> to replace files if you don't delete them directly.<br />
+<blockquote class="mycode_quote"><cite><span> (31-10-2018, 11:49 PM)</span></cite> (And if so, do I have to do it in both files?)</blockquote>Don't touch cache files. They have nothing to do with this.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; --pid-recursive not working with broken obsolete version of get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

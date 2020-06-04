@@ -1,0 +1,211 @@
+use LWP 5.64; # Loads all important LWP classes, and makes
+              #  sure your version is reasonably recent.
+
+$browser = LWP::UserAgent->new;
+
+print "\n\n\nIPlayer Refresh Cache v0.3\n";
+print "**************************\n\n";
+
+# Parameters
+$showPID     = 'b006q2x0';
+$episodePID  = 'b04n1wqm';
+
+$ProgramFiles = $ENV{'ProgramFiles(x86)'};
+print "Directory for Program Files(x86): ".$ProgramFiles."\n";
+
+$Get_iPlayerPath = $ProgramFiles.'\Get-iPlayer';
+print "Directory for Get_iPlayer files: ".$Get_iPlayerPath."\n";
+
+$PerlPath = $Get_iPlayerPath.'\Perl.exe';
+print "Directory for Perl.exe: ".$PerlPath."\n";
+
+$UserProfile = $ENV{'USERPROFILE'};
+print "Directory for User Files: ".$UserProfile."\n";
+
+$Get_iPlayer_Cache_Path = $UserProfile.'\\.get_iplayer';
+print "Directory for iPlayer Cache File: ".$Get_iPlayer_Cache_Path."\n";
+
+$Refreshed_Cache = $Get_iPlayer_Cache_Path."\\tv.cache";
+print "Directory for Refreshed Cache File: ".$Refreshed_Cache."\n";
+
+$index_number = 0;
+#Cache Format:  index|type|name|pid|available|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web
+@Cache_Entry = ("index","type","name","pid","available","episode","seriesnum","episodenum","versions","duration","desc","channel","categories","thumbnail","timeadded","guidance","web");
+$Cache[$index_number++] = "#index|type|name|pid|available|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web\n";
+
+open  REFRESHED_CACHE_FILE, ">", $Refreshed_Cache or die "Couldn't open ".$Refreshed_Cache;
+print REFRESHED_CACHE_FILE $Cache[0];
+
+#Main
+
+@all_shows = &search_all_shows;
+
+for $j (0 .. $#all_shows) {
+#for $j (0 .. 20) {
+    @all_episodes = &search_ePIDs_for_show($all_shows[$j]);
+
+    for $i (0 .. $#all_episodes) {
+        $name = $all_episodes[$i][2];
+        if (index($name, '.') != -1) {
+            substr ($name, index($name, '.')) = "";
+        }
+        if (index($name, ':') != -1) {
+            substr ($name, index($name, ':')) = "";
+        }
+
+        $episode = $all_episodes[$i][5];
+        if (index($episode, 'Series ') != -1) {
+            if (index($episode, ': ') != -1) {
+                substr ($episode, 0, index($episode, ': ')+2) = "";
+            }
+        }
+
+
+        $time_added = time();
+
+        print REFRESHED_CACHE_FILE $index_number++            .'|'; #index
+        print REFRESHED_CACHE_FILE "tv"                       .'|'; #type
+        print REFRESHED_CACHE_FILE $name                      .'|'; #name
+        print REFRESHED_CACHE_FILE $all_episodes[$i][0]       .'|'; #ePID
+        print REFRESHED_CACHE_FILE "Unknown"                  .'|'; #available
+        print REFRESHED_CACHE_FILE $episode                   .'|'; #episode
+        print REFRESHED_CACHE_FILE $index_number              .'|'; #seriesnum
+        print REFRESHED_CACHE_FILE $index_number              .'|'; #episodenum
+        print REFRESHED_CACHE_FILE "default,"                 .'|'; #versions
+        print REFRESHED_CACHE_FILE "Unknown"                  .'|'; #duration
+        print REFRESHED_CACHE_FILE $all_episodes[$i][3]       .'|'; #desc
+        print REFRESHED_CACHE_FILE $all_episodes[$i][6]       .'|'; #channel
+        print REFRESHED_CACHE_FILE                             '|'; #categories
+        print REFRESHED_CACHE_FILE $all_episodes[$i][4]       .'|'; #thumbnail
+        print REFRESHED_CACHE_FILE $time_added                .'|'; #timeadded
+        print REFRESHED_CACHE_FILE                             '|'; #guidance
+        print REFRESHED_CACHE_FILE "http://www.bbc.co.uk/programmes/".$cache_data_for_episode[2].'|'; #web
+        print REFRESHED_CACHE_FILE                            "\n"; #new line
+    }
+}
+
+close REFRESHED_CACHE_FILE;
+
+sub search_all_shows {
+    my (@ops) = @_;
+    my $i = 0;
+    my @all_shows;
+    my @AtoZIndex = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0-9');
+
+    print "\n\n\nSearching for list of all shows\n\n";
+    print "Search Results:\n";
+    for my $j (0 .. $#AtoZIndex) {
+        my $url = "http://www.bbc.co.uk/iplayer/a-z/".$AtoZIndex[$j];
+        print '"'.$AtoZIndex[$j].'" shows have been searched.'."\n";
+        my $result = $browser->get($url);
+        die "Can't GET $url" if (! defined $result);
+
+        my $html = $result->content;
+        while ($html =~ /\/iplayer\/brand\//) {
+            #print "Found Show - ", ;
+            my $sPID =  substr $html, index($html, '/iplayer/brand/') + 15, 8;
+            #print "$sPID\n";
+            $all_shows[$i++] = $sPID;
+            substr ($html, index($html, '/iplayer/brand/'), 13) = "";
+        }
+    }
+    print "\nFound ".$i." shows\n\n\n";
+    return @all_shows;
+}
+
+sub search_ePIDs_for_show {
+    my (@ops) = @_;
+    my $i = 0;
+    my $j = 0;
+    my @all_episodes;
+
+    #print "\n\n\nSearching for episodes (sPID: $ops[0])\n\n";
+    #print "Search Results:\n";
+    my $url = "http://www.bbc.co.uk/iplayer/episodes/$ops[0]";
+
+    my $result = $browser->get($url);
+    die "Can't GET $url" if (! defined $result);
+
+    my $html = $result->content;
+    my $html_1 = $html;
+    my $html_2 = $html;
+    my $html_3 = $html;
+    my $html_4 = $html;
+    my $html_5 = $html;
+    my $channel = "";
+
+    if (index($html_1, 'class="master-brand">') != -1) {
+        $channel = substr ($html_1, index($html_1, 'class="master-brand">')+22);
+        substr ($channel, index($channel, '</span>')) = "";
+    }
+
+    while ($html =~ /\/iplayer\/episode\//) {
+        print "Found PID - ", ;
+        my $ePID =  substr $html, index($html, '/iplayer/episode/') + 17, 8;
+
+        $all_episodes[$i][0] = $ePID;        #store ePID
+        print $all_episodes[$i][0]." - ";
+
+        $all_episodes[$i][1] = $ops[0];      #store sPID
+        print $all_episodes[$i][1]." - ";
+
+        substr ($html_2, 0, index($html_2, 'data-ip-id="') + 12) = "";
+        substr ($html_2, 0, index($html_2, 'title="') + 7) = "";
+        $all_episodes[$i][2] = substr ($html_2, 0, index($html_2, '"'));
+        print $all_episodes[$i][2]."\n";
+
+        substr ($html_3, 0, index($html_3, 'data-ip-id="') + 12) = "";
+        substr ($html_3, 0, index($html_3, 'class="synopsis">') + 18) = "";
+        $all_episodes[$i][3] = substr ($html_3, 0, index($html_3, '</p>'));
+        print $all_episodes[$i][3]."\n";
+
+        substr ($html_4, 0, index($html_4, 'data-ip-id="') + 12) = "";
+        substr ($html_4, 0, index($html_4, 'data-ip-src="') + 13) = "";
+        $all_episodes[$i][4] = substr ($html_4, 0, index($html_4, '"'));
+        print $all_episodes[$i][4]."\n";
+
+        substr ($html_5, 0, index($html_5, 'data-ip-id="') + 12) = "";
+        if (index($html_5, 'class="subtitle">') != -1) {
+            substr ($html_5, 0, index($html_5, 'class="subtitle">') + 18) = "";
+            $all_episodes[$i][5] = substr ($html_5, 0, index($html_5, '</div>')-1);
+        } else {
+            $all_episodes[$i][5] = "";
+        }
+        print $all_episodes[$i][5]."\n\n";
+        
+        $all_episodes[$i++][6] = $channel;
+
+        substr ($html, index($html, '/iplayer/episode/'), 15) = "";
+    }
+    print "Found ".(($#all_episodes)+1)." episode(s)\n\n";
+    return @all_episodes,;
+}
+
+sub get_cache_data_for_episode {
+    my (@ops) = @_;
+    my @cache_data_for_episode;
+
+    print "\nSearching for data on episode (ePID: $ops[0]):\n";
+    my $url = "http://www.bbc.co.uk/iplayer/episode/$ops[0]";
+
+    my $result = $browser->get($url);
+    die "Can't GET $url" if (! defined $result);
+
+    my $html = $result->content;
+    substr ($html, 0, index($html, 'name="keywords"')) = "";
+    $cache_data_for_episode[0] = substr ($html, 0, index($html, '>')-1);
+    substr ($cache_data_for_episode[0], 0, index($cache_data_for_episode[0], 'content="')+9) = "";
+    substr ($cache_data_for_episode[0], index($cache_data_for_episode[0], '"')) = "";
+    print $cache_data_for_episode[0]."\n";
+
+    $html = $result->content;
+    substr ($html, 0, index($html, 'name="description"')) = "";
+    $cache_data_for_episode[1] = substr ($html, 0, index($html, '>')-1);
+    substr ($cache_data_for_episode[1], 0, index($cache_data_for_episode[1], 'content="')+9) = "";
+    substr ($cache_data_for_episode[1], index($cache_data_for_episode[1], '"')) = "";
+    print $cache_data_for_episode[1]."\n\n";
+
+    $cache_data_for_episode[2] = $ops[0]; #store ePID
+
+    return @cache_data_for_episode;
+}

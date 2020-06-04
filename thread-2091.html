@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Errors downloading a dvfxhigh stream for PID m00084t3</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Errors downloading a dvfxhigh stream for PID m00084t3</div>
+<div id="pagetitle"><h2>Errors downloading a dvfxhigh stream for PID m00084t3</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2435</h2></div><div class="dateline">04-09-2019, 08:25 AM</div>
+</div>
+<div class="message">Problem started a few days ago, while I was still on version 3.19 (under Win 7). As part of troubleshooting, I updated to version 3.22 but still have same problem.<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer 3.22.0-MSWin32, Copyright (C) 2008-2010 Phil Lewis<br />
+This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+This is free software, and you are welcome to redistribute it under certain<br />
+conditions; use --conditions for details.<br />
+<br />
+<br />
+Episodes:<br />
+The Repair Shop - 60 Min Versions, Episode 21, BBC One, m00084t3<br />
+INFO: 1 total programmes<br />
+<br />
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally<br />
+INFO: Downloading tv: 'The Repair Shop: 60 Min Versions - 21. Episode 21 (m00084<br />
+t3) [original]'<br />
+<br />
+INFO: Downloaded: 0.00 MB (00:00:00) @ 0.00 Mb/s (dvfxhigh1/bi) [audio]<br />
+WARNING: Failed to download file segment [0]<br />
+WARNING: Response: 400 Bad Request<br />
+WARNING: Retrying tv: 'The Repair Shop: 60 Min Versions - 21. Episode 21 (m00084<br />
+t3) [original]'<br />
+<br />
+INFO: Downloaded: 0.00 MB (00:00:00) @ 0.00 Mb/s (dvfxhigh1/bi) [audio]<br />
+WARNING: Failed to download file segment [0]<br />
+WARNING: Response: 400 Bad Request<br />
+WARNING: Retrying tv: 'The Repair Shop: 60 Min Versions - 21. Episode 21 (m00084<br />
+t3) [original]'<br />
+<br />
+INFO: Downloaded: 0.00 MB (00:00:00) @ 0.00 Mb/s (dvfxhigh1/bi) [audio]<br />
+WARNING: Failed to download file segment [0]<br />
+WARNING: Response: 400 Bad Request</span><br />
+<br />
+Hoping that someone can help, thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1808</h2></div><div class="dateline">04-09-2019, 10:24 AM</div>
+</div>
+<div class="message">Seems to be working here:<br />
+get-iplayer --get 7283<br />
+get_iplayer 3.22-ppa33a, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+7283:   The Repair Shop: 60 Min Versions - Episode 21, BBC Two, m00084t3<br />
+INFO: 1 matching programmes<br />
+<br />
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally<br />
+INFO: Downloading tv: 'The Repair Shop: 60 Min Versions - 21. Episode 21 (m00084t3) [original]'<br />
+WARNING: Unable to determine ffmpeg version - MP4 conversion for hvf downloads may fail<br />
+WARNING: ffmpeg 2.5 or higher is required to convert hvf downloads to MP4<br />
+WARNING: Use --raw to bypass MP4 conversion and retain .ts file<br />
+WARNING: Use --ffmpeg-force to override checks and force MP4 conversion attempt<br />
+<hr class="mycode_hr" />
+Has the programme moved channels as I see you were looking at BBC1 whereas I was downloading from BBC2?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2435</h2></div><div class="dateline">04-09-2019, 10:38 AM</div>
+</div>
+<div class="message">Thanks for your reply. I'm absolutely not an expert on get_iplayer, but I was under the impression that the PID was the critical identifier of a programme, irrespective of the channel. I will be happy to be corrected.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2019, 11:08 AM</div>
+</div>
+<div class="message">This has nothing to do with PIDs. Using <kbd>--get</kbd> just turns your search criteria into PIDs. Errors like this for one stream out of 36 available, for one programme out of tens of thousands, mean nothing. This is the internet - downloads sometimes fail, upstream resources may not always be available. That's why get_iplayer tries all available streams, subject to your settings. If the stream shown is the only stream attempted, then your settings are very messed up. If that is the case, <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a proper report so we can see what is happening on your system.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Errors downloading a dvfxhigh stream for PID m00084t3</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,906 @@
+::(u): skip catagory as this no longer works.
+::(t): installation adds shortcut to 'GET-IPLAYER - x86+64.bat' on desktop with icon & maximised window. Adds the choice to add too.
+::(s): added %hide% to download string. Now only matches not in recording history will attempt to download by default.
+::(r): added --whitespace to download string. Underscores on downloaded files now replaced by spaces.
+::(q): history off by default
+::(p): remove empty Get-Iplayer folder on desktop.
+::(o): using forced downloading when a download fails saves your choices & skips questions. For example; what you wanna watch, download folder etc.
+::(P): history can be switched on & off.
+::(n): reverted (m). MOVE failed when destination folder exists.
+::(m): reverted mistake. Using MOVE to usb (R:\) as it failed. Only use MOVE to desktop.
+::(l): Resize window to 50 lines when downloading only (if NOT "!dip!"=="--fields=pid"). Leaves window large for matching PID downloads.
+::(k): set more lines when %Pap% not empty, as some programs have many results.
+::(j): use MOVE instead of Robocopy when downloading to desktop.
+::(i): trimmed some bits around deleting partial downloads before & after streaming.
+::(h): remove '&' when choosing catagory with if NOT "!tttt!"=="" set tttt=%tttt:&=%
+::(g): removed two echo commands left in by mistake.
+::(f): fixed blank entry at start not working using: if NOT "!Pap!"=="" set Pap=%Pap:"=%
+::(e): fixed download folder input not working at start using: set Pap=%Pap:"=%
+::(d): trim leading & trailing whitespace from all user input using CALL to subroutine.
+::(c): trim leading & trailing whitespace from user input at start (Pap) & download (earh).
+::(b): wrap quotes around earh if words only. Eg. No quotes for PID or NUMBERS. Avoids downloading all programs matching each word. Only the string of words is matched & downloaded.
+::(a): set lines to 9999 for full list search.
+::TO DO  : Fix failure [unexpected truth at this time] when forced re-downloading of multiple worded title after a failed download. PID's & codes work.
+::TO DO  : Add PVR commands. Unfinished/barely started. Ideally set pvr & create task in task scheduler. Perhaps ask user when task to be run & be able to change time run & delete task etc.
+::TO DO  : Forced downloading should set history on as you only need force a previously downloaded program.
+::TO DO  : if more than one instance of get-iplayer.bat running check rtmpdump process, if running wait to stream. therefore programs could be queued.
+::TO DO  : Maybe use config file to set default settings or use start of [GET-IPLAYER - x86+64.bat] so an extra file not needed.
+::TO DO  : Use of PID codes from the start.
+::TO DO  : Deal with ampersands inputted.
+::TO DO  : Add option to open text file of tv, radio or podcast cache when searching full list - Maybe use list to search results
+::TO DO  : Add question: if destination folder (R:/Video) not exist ask for path of folder then check answered folder if exist set the variable to answer. Else repeat.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::    This Batch File Is To Be Used With Get-IPlayer    ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::Get-IPlayer Downloads Streams From The IPlayer Website::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@echo off
+setlocal enabledelayedexpansion
+echo.&echo.&echo Please Wait..
+set type=TV
+set hide=--hide
+@IF EXIST "%userprofile%\desktop\iPlayer Recordings" for /F %%N in ('dir /S/B "%userprofile%\Desktop\iPlayer Recordings" ^| find /V /C "::"') do (if %%N EQU 0 rd "%userprofile%\Desktop\iPlayer Recordings")
+@IF EXIST "%userprofile%\desktop\Get-IPlayer" for /F %%N in ('dir /S/B "%userprofile%\Desktop\Get-IPlayer" ^| find /V /C "::"') do (if %%N EQU 0 rd "%userprofile%\Desktop\Get-IPlayer")
+COLOR 0e
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::Determine Whether 32bit or 64bit::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if exist "C:\Program Files (x86)" SET TBIT= (x86)
+:startA
+if not exist "C:\Program Files%TBIT%\get_iplayer\Uninst.exe" mode con cols=140&mode con lines=60&goto :DOWNLOADGET
+if exist "R:\GET-IPLAYER.txt" ATTRIB +H "R:\GET-IPLAYER.txt"
+:raddypodcst
+if not "%TBIT%"==" (x86)" goto :start
+echo.&echo.&echo.
+@Echo 		         	           %DATE%
+if "%TBIT%"==" (x86)" goto :skipp
+GOTO :DOWNLOADGET
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::START
+:START
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+title Get-iPlayer
+mode con cols=140
+mode con lines=60
+COLOR 0E 
+echo.|command /C date|find /i "current" >%temp%\dow.txt
+for /f "tokens=1-4 delims=/ " %%i in (%temp%\dow.txt) do set DOW=%%l
+echo.&echo.&echo.&echo                                            %TIME%&echo.
+IF "%DOW%" == "Sun" echo                                        %DATE% Sunday
+IF "%DOW%" == "Mon" echo                                         %DATE% Monday
+IF "%DOW%" == "Tue" echo                                        %DATE% Tuesday
+IF "%DOW%" == "Wed" echo                                       %DATE% Wednesday
+IF "%DOW%" == "Thu" echo                                       %DATE% Thursday
+IF "%DOW%" == "Fri" echo                                         %DATE% Friday
+IF "%DOW%" == "Sat" echo                                       %DATE% Saturday
+
+GOTO :skippy
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::skipp
+:skipp
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+COLOR 0e
+mode con cols=140
+mode con lines=999
+echo.
+echo.
+echo.
+                            @Echo 		         	           %DATE%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::skippy
+:skippy
+echo.&echo.&echo.
+                             echo  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    if "%forced%"=="--force" echo  :::::::::::::::::                     FORCED DOWNLOADING                     ::::::::::::::::::
+                             echo  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+                             echo  :::::::::::::::::                                                            ::::::::::::::::::
+        if /i "%type%"=="tv" echo  :::::::04Pu::::::                       - TELEVISION -                       ::::::::::::::::::
+     if /i "%type%"=="RADIO" echo  :::::::::::::::::                          - RADIO -                         ::::::::::::::::::
+   if /i "%type%"=="PODCAST" echo  :::::::::::::::::                         - PODCAST -                        ::::::::::::::::::
+                             ECHO  :::::::::::::::::                                                            ::::::::::::::::::
+                             echo  :::::::::::::::::   Leave blank, press enter to view the full program list   ::::::::::::::::::
+if not "%forced%"=="--force" echo  :::::::::::::::::                                                            ::::::::::::::::::
+                             echo  :::::::::::::::::     Maximise the window                                    ::::::::::::::::::
+                             echo  :::::::::::::::::     Use the scrollbar/mouse wheel to navigate the list     ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::                                                            ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::                                                            ::::::::::::::::::
+    if /i NOT "%type%"=="tv" echo  :::::::::::::::::                         - WARNING -                        ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::                                                            ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::                                                            ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::                 RADIO HAS OVER 3000 PROGRAMS               ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::                THERE ARE OVER 17,000 PODCASTS              ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::         LEAVING THE ANSWER BLANK WILL TAKE SOME TIME       ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::           LEAVING THE ANSWER BLANK WILL TAKE AN AGE        ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::           ALSO THE FULL LIST WILL NOT BE VIEWABLE          ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::            ALSO THE FULL LIST WILL NOT BE VIEWABLE         ::::::::::::::::::
+     if /i "%proggy%"=="rad" echo  :::::::::::::::::              SEARCH A CHANNEL IN THE NEXT STEP             ::::::::::::::::::
+     if /i "%proggy%"=="pod" echo  :::::::::::::::::               SEARCH A CHANNEL IN THE NEXT STEP            ::::::::::::::::::
+                             echo  :::::::::::::::::                                                            ::::::::::::::::::
+                            echo  :::::::::::::::::--- --- --- --- --- --- ---^> OR ^<--- --- --- --- --- --- ---::::::::::::::::::
+                             echo  :::::::::::::::::                                                            ::::::::::::::::::
+                             echo  :::::::::::::::::  1.Enter the title, part of the title or url               ::::::::::::::::::
+                           if "%Pap%"=="R" SET thistype=Enter P to search podcasts                              ::::::::::::::::::
+                           if "%Pap%"=="P" SET thistype=Enter R to search radio content                         ::::::::::::::::::
+    if /i NOT "%type%"=="tv" echo  :::::::::::::::::  2.%thistype%
+    if /i NOT "%type%"=="tv" echo  :::::::::::::::::  3.Enter T to search tv                                    ::::::::::::::::::
+        if /i "%type%"=="tv" echo  :::::::::::::::::  2.Enter R to search radio                                 ::::::::::::::::::
+        if /i "%type%"=="tv" echo  :::::::::::::::::  3.Enter P to search podcasts                              ::::::::::::::::::
+             if "%Pap%"=="A" ECHO  :::::::::::::::::  4.Enter PVR to search ^& set pvr recordings                ::::::::::::::::::
+             if "%Pap%"=="A" echo  :::::::::::::::::____________________________________________________________::::::::::::::::::
+             if "%Pap%"=="A" echo  :::::::::::::::::                                                            ::::::::::::::::::
+             if "%Pap%"=="A" ECHO  :::::::::::::::::  5.uSWF to update the SWF url                              ::::::::::::::::::
+             if "%Pap%"=="A" ECHO  :::::::::::::::::  6.GetD downloads ^& installs the latest version            ::::::::::::::::::
+             if "%Pap%"=="A" echo  :::::::::::::::::  7.GetU updates Get-Iplayer ^(needs admin^)                  ::::::::::::::::::
+             if "%Pap%"=="A" echo  :::::::::::::::::  8.Drag folder or enter its path to set download location  ::::::::::::::::::
+             if "%Pap%"=="A" echo  :::::::::::::::::  9.GetS Add 'GET-IPLAYER - x86+64.bat' shortcut to desktop ::::::::::::::::::
+                             echo  :::::::::::::::::                                                            ::::::::::::::::::
+                             echo  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+         if NOT "%Pap%"=="A" ECHO  :::::::::::::::::  4.Enter A for more options                                ::::::::::::::::::
+                             echo  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+         if NOT "%Pap%"=="A" echo  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.&echo.&echo.
+if "!NewPlace:~1,2!"==":\" ECHO      		     Download folder: !NewPlace!
+echo.&echo.
+if "%forced%"=="--force" set agi= again
+if NOT "%forced%"=="--force" set agi=
+if /i "%type%"=="tv" SET show=What you wanna watch%agi% on the bbc
+if /i "%type%"=="RADIO" SET wma=,wma&set show=Which radio program do you want to search%agi%
+if /i "%type%"=="PODCAST" SET show=Which podcast would you like to search%agi%
+set Pap=
+ECHO      		     %show% %USERNAME%? 
+ECHO.
+set /p Pap=:      		     
+if NOT "!Pap!"=="" set Pap=%Pap:"=%
+set whitespace=%Pap%
+setlocal enabledelayedexpansion
+call :whitespac
+set Pap=%whitespace%
+goto :whitespaceGONE
+:::::::::::::::Remove leading & trailing whitespace:::::::::::::dS
+:whitespac
+for /f "tokens=* delims= " %%a in ("%whitespace%") do set whitespace=%%a
+for /l %%a in (1,1,40) do if "!whitespace:~-1!"==" " set whitespace=!whitespace:~0,-1!
+goto :eof
+:::::::::::::::Remove leading & trailing whitespace:::::::::::::dE
+:whitespaceGONE
+if "!Pap!"=="" mode con lines=9999 cols=201&TITLE Full List Search&goto :hghg
+::if "!Pap!"=="piD" SET dip=--fields=pid&goto :raddypodcst
+if "!Pap:~0,4!"=="http" SET DPLACE=from url&SET http=!Pap!&GOTO :HTTPPn
+SET Pap=%Pap:"=%
+if "!Pap!"=="PVR" echo                      %Pap% IS UNFINISHED&timeout /T 9 >nul&goto :raddypodcst
+if "!Pap!"=="R" SET type=RADIO&SET proggy=rad&goto :raddypodcst
+if "!Pap!"=="P" SET type=PODCAST&SET proggy=pod&goto :raddypodcst
+if "!Pap!"=="T" SET type=TV&SET proggy=&goto :raddypodcst
+if "!Pap!"=="A" SET A=NIMDA&goto :raddypodcst
+if /i "!Pap!"=="UsWF" GOTO :UPDATEGETSWF
+if /i "!Pap!"=="GetU" GOTO :UPDATEGET
+if /i "!Pap!"=="GetD" GOTO :DOWNLOADGET
+if /i "!Pap!"=="GetS" GOTO :install
+if exist "!Pap!" (2>nul pushd "!Pap!" && (popd&SET "NewPlace=!Pap!"&SET "!Pap!= "&GOTO :raddypodcst) || SET "!Pap!= "&GOTO :raddypodcst) else TITLE Will search for "!Pap!"
+if /i "!NewPlace:~1,2!"==":\" goto :herelass
+goto :hghg
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::HTTPPn
+:HTTPPn
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::gatahtt
+:gatahtt
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@if not exist "R:\GET-IPLAYER.txt" GOTO :HTTPP
+@echo.&echo.
+set FPLACE=
+set /p FPLACE=:		            Do you want it on PC or USB? 
+set whitespace=%FPLACE%
+setlocal enabledelayedexpansion
+call :whitespac
+set FPLACE=%whitespace%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::Asks If You Want To Download To USB If R:/GET-IPLAYER.txt Exists::::::::::::::::::::
+::::::::::::::::                                                                ::::::::::::::::::::
+::::::::::::::::  Assign a USB drive the letter R and create a text file named  ::::::::::::::::::::
+::::::::::::::::         GET-IPLAYER in the ROOT Folder For This To Work        ::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
+cls
+echo.
+echo.
+if /i "%FPLACE%"=="" goto :gatahtt
+if /i "%FPLACE:~0,1%"=="p" SET FPLACE=pc&goto :HTTPP
+if /i "%FPLACE:~0,1%"=="u" SET FPLACE=usb&goto :HTTPP
+if /i not "%FPLACE:~0,1%"=="p" goto :gatahtt
+if /i not "%FPLACE:~0,1%"=="u" goto :gatahtt
+goto :HTTPP
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::herelass
+:herelass
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::hghg
+:hghg
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i NOT "!Pap!"=="" GOTO :excatB
+TITLE Full List Search - Search Channel?
+echo.&echo.&echo.
+set onlycha=
+set /p onlycha=:      		   Would You like to search a channel? Y/N 
+set whitespace=%onlycha%
+setlocal enabledelayedexpansion
+call :whitespac
+set onlycha=%whitespace%
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::Leave The Above "What You Wanna Search" Blank & This Question Occurs:::::::::::::::
+::::::::::::::::                                                                    :::::::::::::::
+::::::::::::::::  Asks You if You Want To Search Just One Channel Then Lists Them   :::::::::::::::
+::::::::::::::::                                                                    :::::::::::::::
+::::::::::::::::           Leave Blank & Press Enter To Skip This Step              :::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i NOT "%onlycha%"=="Y" goto :inCh
+C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --list=channel --type=%type%
+echo.&echo.&echo.
+set /p chch=:      		         Which Channel? 
+if /i "%chch%"=="" SET chch=
+set whitespace=%chch%
+setlocal enabledelayedexpansion
+call :whitespac
+set chch=%whitespace%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::inCh
+:inCh
+:::::::::::::::(u):::::::::::::::S
+goto :excatB
+:::::::::::::::(u):::::::::::::::E
+cls
+TITLE Full List Search - Include Catagory?
+echo.&echo.&echo.
+set onlycat=
+set /p onlycat=:      		   Would You like to search a catagory? Y/N 
+set whitespace=%onlycat%
+setlocal enabledelayedexpansion
+call :whitespac
+set onlycat=%whitespace%
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::Leave The Above "What You Wanna Search" Blank & This Question Occurs:::::::::::::::
+::::::::::::::::                                                                    :::::::::::::::
+::::::::::::::::  Asks You if You Want To Search Just One Catagory Then Lists Them  :::::::::::::::
+::::::::::::::::                                                                    :::::::::::::::
+::::::::::::::::           Leave Blank & Press Enter To Skip This Step              :::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i NOT "%onlycat%"=="Y" goto :excatC
+SET kkkk=--category
+C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --list=categories --type=%type%
+echo.&echo.&echo.
+set /p tttt=:      		         Which Catagory? 
+if NOT "!tttt!"=="" set tttt=%tttt:&=%
+set whitespace=%tttt%
+setlocal enabledelayedexpansion
+call :whitespac
+set tttt=%whitespace%
+if /i "%tttt%"=="" SET tttt=
+if /i "%tttt%"=="" SET nnnn=
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::excatC
+:excatC
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+cls
+TITLE Full List Search - Exclude Catagory?
+echo.&echo.&echo.
+if /i "!Pap!"=="" set /p excat=:      		         Exclude Catagory From Listing? Y/N 
+set whitespace=%excat%
+setlocal enabledelayedexpansion
+call :whitespac
+set excat=%whitespace%
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::Leave The Above "What You Wanna Search" Blank & This Question Occurs Too::::::::::::::
+:::::::::::::                                                                        ::::::::::::::
+:::::::::::::     Asks You if You Want To Exclude Just One Catagory From The List    ::::::::::::::
+:::::::::::::                                                                        ::::::::::::::
+:::::::::::::              Leave Blank & Press Enter To Skip This Step               ::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i NOT "%excat%"=="Y" goto :excatB
+SET nnnn=--exclude-category
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::excatBAB
+:excatBAB
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --list=categories --type=%type%
+echo.&echo.&echo.
+set /p excatchoice=:      		         Which Catagory? 
+if NOT "!excatchoice!"=="" set excatchoice=%excatchoice:&=%
+set whitespace=%excatchoice%
+setlocal enabledelayedexpansion
+call :whitespac
+set excatchoice=%whitespace%
+if /i "%excatchoice%"=="" SET excatchoice=
+if /i "%excatchoice%"=="" SET nnnn=
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::excatB
+:excatB
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+cls
+echo.
+echo.
+echo.
+TITLE Name Download Folder
+::if /i "!Pap!"=="" goto :flchoice
+echo                      What Do You Want To Name The Download Folder?
+echo.
+set DPLACE=
+set /p DPLACE=:		     
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--------------------
+if NOT "!DPLACE!"=="" set DPLACE=%DPLACE:&=%
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--------------------
+
+set whitespace=%DPLACE%
+setlocal enabledelayedexpansion
+call :whitespac
+set DPLACE=%whitespace%
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::Asks You What You Want To Name The Download Directory:::::::::::::::::::::::
+::::::::::::::::::::::                                                       ::::::::::::::::::::::
+::::::::::::::::::::::  LEAVE BLANK & PRESS ENTER. IT WILL USE 1 OF 3 NAMES  ::::::::::::::::::::::
+::::::::::::::::::::::                                                       ::::::::::::::::::::::
+::::::::::::::::::::::1.Program title searched                               ::::::::::::::::::::::
+::::::::::::::::::::::2.Program list number(s)                               ::::::::::::::::::::::
+::::::::::::::::::::::3.Program pid code(s)                                  ::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::flchoice
+:flchoice
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo.
+echo                                            ....
+echo                                        ____________
+echo                                    ____________________
+echo                                        ____________
+echo                                            ....
+echo.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::gataht
+:gataht
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@if not exist "R:\GET-IPLAYER.txt" GOTO :herelas
+set FPLACE=
+set /p FPLACE=:		            Do You Want It On PC or USB? 
+set whitespace=%FPLACE%
+setlocal enabledelayedexpansion
+call :whitespac
+set FPLACE=%whitespace%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::Asks If You Want To Download To USB If R:/GET-IPLAYER.txt Exists::::::::::::::::::::
+::::::::::::::::                                                                ::::::::::::::::::::
+::::::::::::::::  Assign a USB drive the letter R and create a text file named  ::::::::::::::::::::
+::::::::::::::::         GET-IPLAYER in the ROOT Folder For This To Work        ::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Secho.
+cls
+echo.
+echo.
+if /i "%FPLACE%"=="" goto :gataht
+if /i "%FPLACE:~0,1%"=="p" SET FPLACE=pc&goto :herelas
+if /i "%FPLACE:~0,1%"=="u" SET FPLACE=usb&goto :herelas
+if /i not "%FPLACE:~0,1%"=="p" goto :gataht
+if /i not "%FPLACE:~0,1%"=="u" goto :gataht
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::herelas
+:herelas
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo                                            ....
+echo                                        ____________
+echo                                    ____________________
+echo                                        ____________
+echo                                            ....
+echo.
+@if not exist "R:\GET-IPLAYER.txt" echo    "!Pap!" Will Be Downloaded To "C:\downloads\media\%DPLACE%" Then Moved To "%userprofile%\desktop\Get-IPlayer\%Type%\%DPLACE%"
+@if not exist "R:\GET-IPLAYER.txt" goto :gooo
+@if /i "%FPLACE%"=="pc" echo    "!Pap!" Will Be Downloaded To "C:\downloads\media\%DPLACE%" Then Moved To "%userprofile%\desktop\Get-IPlayer\%Type%\%DPLACE%"
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::gooo
+:gooo
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@if "%FPLACE%"=="usb" echo                "!Pap!" Will Be Downloaded To "C:\downloads\media\%DPLACE%" Then Moved To "R:\%Type%\%DPLACE%"
+timeout /T 1 >nul
+echo.
+echo                                            ....
+echo                                        ____________
+echo                                    ____________________
+echo                                        ____________
+echo                                            ....
+echo                                            ....
+echo                                        ____________
+echo                                    ____________________
+echo                                        ____________
+echo                                            ....
+echo.
+echo 				       Searching "!Pap!"
+echo.
+echo                                            ....
+echo                                        ____________
+echo                                    ____________________
+echo                                        ____________
+echo                                            ....
+echo.
+:inputrefresh
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i "!Pap!"=="" CLS
+title Searching "!Pap!"
+set wanted=
+if /i "%onlycat%"=="Y" set wanted=INCLUDING %tttt%
+set notwanted=
+if /i "%excat%"=="Y" set notwanted=EXCLUDING %excatchoice%
+set thischan=
+set onon=
+if /i "%onlycha%"=="Y" set onon=ON CHANNEL &set thischan=--CHANNEL="%chch%"
+if /i "!Pap!"=="" TITLE FULL LIST OF %type% PROGRAMS %wanted% %notwanted% %onon%%chch%
+if "%earh%"=="Rget" TITLE REFRESHING THE FULL LIST OF %type% PROGRAMS %wanted% %notwanted%%onon%%chch%
+if "!dip!"=="--fields=pid" TITLE REFRESHING %type% PROGRAMS %wanted% %notwanted%%onon%%chch% WITH PID, NAME, SERIES ^& EPISODE
+if /i "!Pap!"=="" color 06
+:::::::::::::::(k):::::::::::::::S
+if /i not "%Pap%"=="" mode con lines=260
+:::::::::::::::(k):::::::::::::::E
+if "%type%"=="TV" mode con lines=9999 cols=201
+if "%type%"=="RADIO" mode con lines=9999 cols=201
+if "%type%"=="PODCAST" mode con lines=9999 cols=201
+:inputrefreshB
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if "!dip!"=="--fields=pid" C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --listformat="<pid>: <name>-<episode>" %thischan% %kkkk%=%tttt% %nnnn%=%excatchoice% --refresh %hide% --type=%type% "!Pap!" &goto :nopiD
+C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer %thischan% %kkkk%=%tttt% %nnnn%=%excatchoice% --refresh %hide% --type=%type% "!Pap!" 
+:nopiD
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::Sets The Catagories You May Have Chosen To Include/Exclude:::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if "!Pap!"=="" TITLE Finished Updating %type% Index %onon%%chch%
+if not "!Pap!"=="" TITLE Finished Searching "!Pap!"
+echo.&echo.
+ECHO 		             TO RESTART LEAVE BLANK ^& PRESS "ENTER"
+::(P)S
+if "!hide!"=="--hide"    set adviceC= history is off enter Hget to switch on
+if "!hide!"==""    set adviceC= history is on enter Hgot to switch off
+::(P)E
+echo                             %adviceC%
+echo.
+@if "%FORCED%"=="--force" COLOR 4e
+@if "%FORCED%"=="--force" ECHO         _______________________________________________________________________________
+@if "%FORCED%"=="--force" ECHO 	   ************** REMEMBER YOU HAVE SET TO FORCE THE DOWNLOAD! **************
+@if "%FORCED%"=="--force" ECHO 	   USE THE PROGRAMS "CODE" UNLESS YOU WISH TO DOWNLOAD EVERY MATCHING RESULT!
+@if "%FORCED%"=="--force" ECHO         _______________________________________________________________________________
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::: When Forcing A Download The Above Message Will Appear To :::::::::::::::::::::
+:::::::::::::::::::: Remind You That Anything Matching What You Enter Will Be :::::::::::::::::::::
+::::::::::::::::::::Downloaded Regardless Of It Being In The Recording History:::::::::::::::::::::
+::::::::::::::::::::                                                          :::::::::::::::::::::
+::::::::::::::::::::         Using The Programs Code Is Recommended           :::::::::::::::::::::
+::::::::::::::::::::                                                          :::::::::::::::::::::
+::::::::::::::::::::    Get-IPlayers Recording History Stops Programs From    :::::::::::::::::::::
+::::::::::::::::::::           Being Accidentially Downloaded Again           :::::::::::::::::::::
+:::::::::::::::::::: Try To Download A Program Downloaded Before It Will Fail :::::::::::::::::::::
+::::::::::::::::::::      Then Ask You If You Want To Force The Download      :::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SET advice=Use spaces between codes&SET adviceB=465 768 969 12 7 970 989&echo.&if not "!dip!"=="--fields=pid" echo                                    DOWNLOADING MANY PROGRAMS^?&echo                                       Enter piD for codes&echo.
+if "!dip!"=="--fields=pid" SET advice= use space between PIDS&echo.&echo                                    ENTER nuM TO REVERT BACK&SET adviceB=^?^?^?^?bk6t ^?^?^?^?bhq3&SET !earh!="!earh!"
+echo.
+echo                                    %advice%
+echo                                    %adviceB%
+echo.
+echo.&echo.
+if not "!dip!"=="--fields=pid" echo                                     ENTER CODE(S) OR TITLE&echo.
+set earh=
+set /p earh=:                                
+:::::::::::::::Remove leading & trailing whitespace:::::::::::::dS
+set whitespace=%earh%
+setlocal enabledelayedexpansion
+call :whitespac
+set earh=%whitespace%
+:::::::::::::::Remove leading & trailing whitespace:::::::::::::dE
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::Asks You Which Program You Want To Download From The Results::::::::::::::::::::
+:::::::::::::::::::                                                            ::::::::::::::::::::
+:::::::::::::::::::1.Leave Blank To Go Back To Start                           ::::::::::::::::::::
+:::::::::::::::::::2.Enter Program Code To Download Just One Match             ::::::::::::::::::::
+:::::::::::::::::::3.Use A Space Between Each Programs code                    ::::::::::::::::::::
+:::::::::::::::::::4.Enter Program Title To Download All Matches               ::::::::::::::::::::
+:::::::::::::::::::5.Enter "Rget" to refresh the list                          ::::::::::::::::::::
+:::::::::::::::::::6.Enter "piD" to refresh the list with PID codes            ::::::::::::::::::::
+:::::::::::::::::::7.Enter "nuM" to revert from PID back to numbers list       ::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if /i "!earh!"=="" goto :beforestart
+if "!earh!"=="uSb"SET FPLACE=uSb&goto :inputrefresh
+if "!earh!"=="pC" SET FPLACE=pc&goto :inputrefresh
+::(P) S
+if "!earh!"=="Hget" CLS&SET hide=&goto :inputrefresh
+if "!earh!"=="Hgot" CLS&SET hide=--hide&goto :inputrefresh
+::(P) E
+if "!earh!"=="Rget" CLS&goto :inputrefresh
+if "!earh!"=="piD" CLS&SET dip=--fields=pid&goto :inputrefresh
+if "!earh!"=="nuM" CLS&SET dip=&SET "!earh!"=!earh!&goto :inputrefresh
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::Delete the character string ' ' from %earh% so can determine if only numbers::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+SET NOspaces=%earh: =%
+echo %NOspaces%|findstr /r "[^0-9]" > nul
+if errorlevel 1 set tttt=\%tttt%&goto :passnumcheck
+if "!dip!"=="--fields=pid" goto :passnumcheck
+if not errorlevel 1 SET earh="%earh%"&set tttt=
+:passnumcheck
+if /i "%tttt%"=="\" SET tttt=
+color 0e
+echo.&echo.
+echo.
+if /i NOT "!DPLACE!"=="" GOTO :afternotpap
+if "!DPLACE!"=="" SET DPLACE=%earh:"=%
+if /i NOT "!Pap!"=="" SET DPLACE=%Pap:"=%
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::afternotpap
+:afternotpap
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+title Downloading Program: %earh%
+echo.&echo.
+echo                                 Downloading Program %earh%
+echo                                   ......................
+echo                                      ................
+echo                                         ..........
+echo                                            ....
+echo                                             ..
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::HTTPP
+:HTTPP
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::(i):::::::::::::::S
+@if exist "C:\downloads\media\%type%%tttt%\%DPLACE%\*.partial.*" del "C:\downloads\media\%type%%tttt%\%DPLACE%\*.partial.*"
+:::::::::::::::(i):::::::::::::::E
+@if exist "C:\downloads\media\%type%%tttt%\%DPLACE%\*.flv*"      del "C:\downloads\media\%type%%tttt%\%DPLACE%\*.flv*"
+echo                                            ....
+echo.                                        _________
+echo                                      _______________
+echo                                         _________
+echo                                            ____
+echo                                             ..
+echo                                             ..
+:dodown
+:::::::::::::::(l):::::::::::::::S
+if NOT "!dip!"=="--fields=pid" mode con lines=50
+:::::::::::::::(l):::::::::::::::E
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO:::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer %http% %hide% --type=%type% %dip% %earh% %FORCED% --get --mode=best%wma% --whitespace --output="\downloads\media\%type%%tttt%\%DPLACE%"
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO:::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::                                    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:yeshitp
+::if /i not "%type%"=="tv" echo                                       A Little Time.. Some issue here
+if /i not "%type%"=="tv" timeout /T 2 >nul
+@IF EXIST "C:\downloads\media\%type%%tttt%\%DPLACE%" for /F %%N in ('dir /S/B "C:\downloads\media\%type%%tttt%\%DPLACE%" ^| find /V /C "::"') do (if %%N EQU 0 rd "C:\downloads\media\%type%%tttt%\%DPLACE%")
+@IF EXIST "C:\downloads\media\%type%%tttt%" for /F %%N in ('dir /S/B "C:\downloads\media\%type%%tttt%" ^| find /V /C "::"') do (if %%N EQU 0 rd "C:\downloads\media\%type%%tttt%")
+@IF EXIST "C:\downloads\media\%type%" for /F %%N in ('dir /S/B "C:\downloads\media\%type%" ^| find /V /C "::"') do (if %%N EQU 0 rd "C:\downloads\media\%type%")
+@if NOT exist "C:\downloads\media\%type%%tttt%\%DPLACE%" GOTO :PANTS
+echo                                             ..
+echo                                             ..
+@if NOT exist "C:\downloads\media\%type%%tttt%\%DPLACE%\*.partial.*" SET skipSD=
+:::::::::::::::(i):::::::::::::::S
+    @if exist "C:\downloads\media\%type%%tttt%\%DPLACE%\*.partial.*" SET skipSD=dontdown&del "C:\downloads\media\%type%%tttt%\%DPLACE%\*.partial.*"&goto :dodown
+:::::::::::::::(i):::::::::::::::E
+    @if exist "C:\downloads\media\%type%%tttt%\%DPLACE%\*.flv*"      SET skipSD=dontdown&del "C:\downloads\media\%type%%tttt%\%DPLACE%\*.flv*"     &goto :dodown
+echo                                             ..
+echo                                             ..
+echo                                             ..
+if /i "%FPLACE%"=="usb" goto :instood
+if not exist "!NewPlace!" goto :nonewplace
+if /i "!NewPlace:~1,2!"==":\" %SystemRoot%\System32\robocopy "C:\downloads\media\%type%%tttt%\%DPLACE%" "!NewPlace!\%type%%tttt%\%DPLACE%" /MOVE /V /R:5 /W:10 /ETA & GOTO :instaed
+:nonewplace
+@IF NOT EXIST "%userprofile%\desktop\Get-IPlayer" MD "%userprofile%\desktop\Get-IPlayer\%type%%tttt%\%DPLACE%"
+:::::::::::::::(j):::::::::::::::S
+if exist "C:\downloads\media\%type%%tttt%\%DPLACE%" %SystemRoot%\System32\robocopy "C:\downloads\media\%type%%tttt%\%DPLACE%" "%userprofile%\desktop\Get-IPlayer\%type%%tttt%\%DPLACE%" /MOVE /V /R:5 /W:10 /ETA
+:::::::::::::::(j):::::::::::::::E
+if /i NOT "%FPLACE%"=="usb" goto :instaed
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::instood
+:instood
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if exist "C:\downloads\media\%type%%tttt%\%DPLACE%" %SystemRoot%\System32\robocopy "C:\downloads\media\%type%%tttt%\%DPLACE%" "R:\%type%%tttt%\%DPLACE%" /MOVE /V /R:5 /W:10 /ETA
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::instaed
+:instaed
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+echo                                             ..
+if "%skipSD%"=="dontdown" goto :dodown
+@IF EXIST "C:\downloads\media\%type%%tttt%" for /F %%N in ('dir /S/B "C:\downloads\media\%type%%tttt%" ^| find /V /C "::"') do (if %%N EQU 0 rd "C:\downloads\media\%type%%tttt%")
+@IF EXIST "C:\downloads\media\%type%" for /F %%N in ('dir /S/B "C:\downloads\media\%type%" ^| find /V /C "::"') do (if %%N EQU 0 rd "C:\downloads\media\%type%")
+mode con cols=37
+mode con lines=8
+@color 0a
+echo.&echo.&echo.
+echo           "!Pap!" Downloaded
+echo.&echo.&echo.
+mode con cols=70
+mode con lines=8
+@color 0e
+goto :here9
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::again
+:again
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@color 0c
+cls
+echo.&echo.&echo.
+echo                         Invalid Choice!
+timeout /T 1 >nul
+cls
+@color 0e
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::here9
+:here9
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CLS
+TITLE Finished Downloading !pap!
+echo.&echo.&echo.
+set doyou=
+set /p doyou=%username% would you like to download something else? 
+set whitespace=%doyou%
+setlocal enabledelayedexpansion
+call :whitespac
+set doyou=%whitespace%
+if /i "%doyou%"=="" goto :beforestart
+if /i "%doyou:~0,1%"=="y" goto :beforestart
+if /i "%doyou:~0,1%"=="n" goto :noagain
+if /i not "%doyou:~0,1%"=="y" goto :again
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::noagain
+:noagain
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+cls
+echo.&echo.&echo.
+echo                               FIN!
+timeout /T 3 >nul
+DEL "%temp%\dow.txt" /q
+endlocal
+exit
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::PANTS
+:PANTS
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::           Asks If You Want To Force The Download           ::::::::::::::::::::::
+:::::::::::::::::                                                            ::::::::::::::::::::::
+:::::::::::::::::Type Quit, Exit or End To Close The Get-IPlayer Batch Window::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@color 0c
+:wrongentry
+mode con cols=140
+mode con lines=20
+title DOWNLOAD FAILED!
+echo.&echo.&echo.
+echo                                 Failed To Download "%earh:"=%"
+echo.&echo.
+echo      		                You Will Need To Force Download "%earh:"=%"
+echo.
+echo      		                n=continue
+echo      		                y=force download
+::(P): S
+if "%hide%"=="" echo      		                h=hide recording history
+if "%hide%"=="--hide" echo      		                s=show recording history
+::(P): E
+echo      		                e=exit
+set doyouneed=
+set /p doyouneed=:      		                
+set whitespace=%doyouneed%
+setlocal enabledelayedexpansion
+call :whitespac
+set doyouneed=%whitespace%
+if /i "%doyouneed%"=="" GOTO wrongentry
+if /i "%doyouneed:~0,1%"=="n" SET FORCED=
+if /i "%doyouneed:~0,1%"=="n" IF EXIST "%userprofile%\desktop\Get-IPlayer" for /F %%N in ('dir /S/B "%userprofile%\desktop\Get-IPlayer" ^| find /V /C "::"') do (if %%N EQU 0 rd "%userprofile%\desktop\Get-IPlayer")
+::(P): S
+if /i "%doyouneed:~0,1%"=="h" set hide=--hide&GOTO :wrongentry
+if /i "%doyouneed:~0,1%"=="s" set hide=&GOTO :wrongentry
+::(P): E
+if /i "%doyouneed:~0,1%"=="E" GOTO :CLEANUP
+if /i "%doyouneed:~0,1%"=="Y" SET FORCED=--force
+echo.&echo.
+GOTO NOcleanup
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::CLEANUP
+:CLEANUP
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@IF EXIST "%userprofile%\desktop\Get-IPlayer" for /F %%N in ('dir /S/B "%userprofile%\desktop\Get-IPlayer" ^| find /V /C "::"') do (if %%N EQU 0 rd "%userprofile%\desktop\Get-IPlayer")
+@IF EXIST "R:\%type%\%DPLACE%\" RD "R:\%type%\%DPLACE%\"
+@IF EXIST "R:\%type%\%DPLACE%\" RD "R:\%type%\%DPLACE%\"
+DEL "%temp%\dow.txt" /q
+EXIT
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::NOcleanup
+:NOcleanup
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::timeout /T 1 >nul
+@color 0e
+mode con cols=37
+mode con lines=8
+@if "%FORCED%"=="--force" mode con lines=10
+title RETRY 
+@if "%FORCED%"=="--force" TITLE FORCED RETRY
+echo.&echo.&echo.
+echo              RESTARTING
+@if "%FORCED%"=="--force" ECHO.
+::(o): S
+@if "%FORCED%"=="--force" ECHO            IN FORCED MODE&GOTO :inputrefresh
+::(o): E
+SET DPLACE=
+SET earh=
+SET nnnn=
+SET excatchoice=
+SET notwanted=
+SET onlycat=
+SET excat=
+SET tttt=
+SET kkkk=
+set chch=
+set onon=
+set thischan=
+set type=TV
+SET proggy=
+SET dip=
+echo.&echo.&echo.
+timeout /T 2 >nul
+if "%TBIT%"==" (x86)" goto :skipp
+GOTO :START
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::beforestart
+:beforestart
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@if not "%FORCED%"=="--force" goto :NOcleanup
+mode con cols=70
+mode con lines=8
+@color 0e
+echo.&echo.&echo.
+@if "%FORCED%"=="--force" TITLE TURN FORCED DOWNLOADING OFF?&set /p doyouneedAGAIN=TURN FORCED DOWNLOADING OFF Y/N? 
+set whitespace=%doyouneedAGAIN%
+setlocal enabledelayedexpansion
+call :whitespac
+set doyouneedAGAIN=%whitespace%
+    if /i "%doyouneedAGAIN%"=="" GOTO :beforestart
+    if /i "%doyouneedAGAIN:~0,1%"=="n" GOTO :NOcleanup
+    if /i "%doyouneedAGAIN:~0,1%"=="y" SET FORCED=
+    if /i "%doyouneedAGAIN:~0,1%"=="y" GOTO :NOcleanup
+if /i not "%doyouneedAGAIN:~0,1%"=="y" goto :beforestart
+if /i not "%doyouneedAGAIN:~0,1%"=="n" goto :beforestart
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::    This Batch File Is To Be Used With Get-IPlayer    ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::                  By Terence Hamill                   ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::Get-IPlayer Downloads Streams From The IPlayer Website::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::        Get-IPlayer Was Written By Phil Lewis         ::::::::::::::::::::::::::
+:::::::::::::::::::======================================================::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::       Get-IPlayer Has Much More Functionality        ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::   Select Get-IPlayer From Programs To Learn More     ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::         I Wrote This Batch File For A Friend         ::::::::::::::::::::::::::
+:::::::::::::::::::          Who Was Not Up For Editing Scripts          ::::::::::::::::::::::::::
+:::::::::::::::::::           Some Is Copy Pasted So Could Be            ::::::::::::::::::::::::::
+:::::::::::::::::::               Cleaned Up A Great Deal                ::::::::::::::::::::::::::
+:::::::::::::::::::                                                      ::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::   A nice ghetto batch file I've written for You to   ::::::::::::::::::::::::::
+:::::::::::::::::::       make use of and the first bit of Batch         ::::::::::::::::::::::::::
+:::::::::::::::::::      I have written besides Robocopy commands        ::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::DOWNLOADGET
+:DOWNLOADGET
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::Asks You if You Want To Download get-iplayer.exe From Infradead.org            :::::
+:::::::::::::::                                                                               :::::
+:::::::::::::::1.Download The exe                                                             :::::
+:::::::::::::::2.Install get-iplayer                                                          :::::
+:::::::::::::::3.Now This Batch File Can Be Used To Download Programs From The IPlayer Website:::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CLS
+echo.&echo.&echo.&echo.&echo.&echo.&echo.&echo.
+set IPlay=
+set /p IPlay=:      		   Would You Like To Download ^& Install Get-IPlayer %username% Y or N?
+set whitespace=%IPlay%
+setlocal enabledelayedexpansion
+call :whitespac
+set IPlay=%whitespace%
+if /i "%IPlay%"=="" GOTO :DOWNfailLOADGET
+if exist "C:\Users\terence\Desktop\GET-IPLAYER.txt" echo.&echo.&echo.&echo.&echo      		   Please read GET-IPLAYER.txt file in&echo.&echo      		   %CD%
+echo.&echo.&echo.&echo.
+if /i "%IPlay:~0,1%"=="Y" echo      		   Press any key to continue get-iplayer download
+if /i "%IPlay:~0,1%"=="Y" pause>nul&if not exist "C:\Program Files%TBIT%\get_iplayer\Uninst.exe" echo You can have files downloaded to a usb device when completed>GET-IPLAYER.txt&ECHO Put this file in the root folder of usb drive (R:)>>GET-IPLAYER.txt&echo Enables GET-IPLAYER.bat to check if the usb drive is plugged in.>>GET-IPLAYER.txt&ECHO.>>GET-IPLAYER.txt&echo.>>GET-IPLAYER.txt&ECHO You can go on ^& install get-iplayer now :)>>GET-IPLAYER.txt
+if /i "%IPlay:~0,1%"=="Y" TITLE DOWNLOADING GET-IPLAYER&bitsadmin.exe /transfer "Downloading" http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe %userprofile%\Desktop\get_iplayer_setup_latest.exe
+echo.&echo.&echo.
+if /i "%IPlay:~0,1%"=="Y" ECHO:      		   Installing get_iplayer_setup_latest.exe
+echo.&echo.&echo.
+if /i "%IPlay:~0,1%"=="N" if exist "%userprofile%\desktop\get_iplayer_setup_latest.exe" del "%userprofile%\desktop\get_iplayer_setup_latest.exe"&goto start
+if /i "%IPlay:~0,1%"=="N" if not exist "C:\Program Files%TBIT%\get_iplayer\Uninst.exe" EXIT
+if /i "%IPlay:~0,1%"=="N" if exist "C:\Program Files%TBIT%\get_iplayer\Uninst.exe" goto start                   pause
+if /i "%IPlay:~0,1%"=="Y" goto install
+:DOWNfailLOADGET
+cls
+echo.&echo.&echo.&echo.&echo.&echo.&echo.&echo.
+if /i not "%IPlay:~0,1%"=="N" echo                                                Invalid Choice!
+timeout /T 2 >nul
+@color 0c
+timeout /T 1 >nul
+cls
+@color 0e
+if /i "%IPlay%"=="" GOTO :DOWNLOADGET
+if /i not "%IPlay%"=="N" goto :DOWNLOADGET
+:install
+::(t): S
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::                      Add Shortcut To Desktop                        :::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+set   SCRIPT="%TEMP%\%RANDOM%-%RANDOM%.vbs"
+   echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
+echo sLinkFile = "%USERPROFILE%\Desktop\%~n0.lnk" >> %SCRIPT%
+::echo sLinkFile = "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\get_iplayer\%~n0.lnk" >> %SCRIPT%
+         echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
+        echo oLink.TargetPath = "%CD%\%~n0.bat" >> %SCRIPT%
+                             echo oLink.WindowStyle = 3 >> %SCRIPT%
+if exist "%CD%\getiplayer.ico"                                  echo oLink.IconLocation = "%CD%\getiplayer.ico"                                  >> %SCRIPT% &goto :iconDone
+if exist "C:\Program Files Portable\get_iplayer\getiplayer.ico" echo oLink.IconLocation = "C:\Program Files Portable\get_iplayer\getiplayer.ico" >> %SCRIPT% &goto :iconDone
+if exist "C:\Program Files Portable\icons\large01BBC.ico"       echo oLink.IconLocation = "C:\Program Files Portable\icons\large01BBC.ico"       >> %SCRIPT% &goto :iconDone
+if exist "C:\Program Files\get_iplayer\iplayer_logo.ico"        echo oLink.IconLocation = "C:\Program Files\get_iplayer\iplayer_logo.ico"        >> %SCRIPT%
+:iconDone
+echo oLink.Save >> %SCRIPT%
+cscript /nologo %SCRIPT%
+del %SCRIPT%
+if /i "!Pap!"=="GetS" GOTO :raddypodcst
+::(t): E
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+if exist "%userprofile%\desktop\get_iplayer_setup_latest.exe" mode con cols=37&mode con cols=50&mode con lines=12&color F0&TITLE INSTALLING GET-IPLAYER&ECHO.&ECHO.&ECHO.&ECHO                      WAITING&ECHO.&ECHO.&if exist "GET-IPLAYER.txt" ECHO        Please read GET-IPLAYER.txt file in&echo.&echo %CD%
+if exist "%userprofile%\desktop\get_iplayer_setup_latest.exe" start /WAIT %userprofile%\desktop\get_iplayer_setup_latest.exe& del get_iplayer_setup_latest.exe&goto start
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::UPDATEGET
+:UPDATEGET
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::               Asks You if You Want To Update get-iplayer.exe                  :::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CLS
+echo.&echo.&echo.
+set UPDATEGET=
+set /p UPDATEGET=:      		   Would You Like To Update Get-IPlayer %username% Y or N? 
+set whitespace=%UPDATEGET%
+setlocal enabledelayedexpansion
+call :whitespac
+set UPDATEGET=%whitespace%
+if /i "%UPDATEGET%"=="" GOTO :UPDATEGET
+echo.&echo.&echo.
+if /i "%UPDATEGET:~0,1%"=="Y" TITLE UPDATING GET-IPLAYER&ECHO:      		   Updating get-iplayer&C: & cd "\Program Files\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --update
+echo.&echo.&echo.
+pause
+if /i "%UPDATEGET:~0,1%"=="Y" GOTO START
+if /i "%UPDATEGET:~0,1%"=="N" GOTO START
+cls
+echo.&echo.&echo.&echo.&echo.&echo.&echo.&echo.
+if /i not "%UPDATEGET:~0,1%"=="N" GOTO START
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::UPDATEGETSWF
+:UPDATEGETSWF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::               Asks You if You Want To Update get-iplayer SWF URL              :::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CLS
+echo.&echo.&echo.
+set UPDATEGETSWF=
+set /p UPDATEGETSWF=:      		   Would You Like To Update The SWF URL %username% Y or N? 
+set whitespace=%UPDATEGETSWF%
+setlocal enabledelayedexpansion
+call :whitespac
+set UPDATEGETSWF=%whitespace%
+if /i "%UPDATEGETSWF%"=="" GOTO :UPDATEGETSWF
+if /i "%UPDATEGETSWF:~0,1%"=="N" GOTO START
+echo.&echo.&echo.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::UPDATEURLSWF
+:UPDATEURLSWF
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+CLS
+echo.&echo.&echo.
+if /i "%UPDATEGETSWF:~0,1%"=="Y" set /p UPDATEURLSWF=Enter The New SWF URL:  
+set whitespace=%UPDATEURLSWF%
+setlocal enabledelayedexpansion
+call :whitespac
+set UPDATEURLSWF=%whitespace%
+if /i "%UPDATEURLSWF%"=="" GOTO :UPDATEGETSWF
+if /i NOT "%UPDATEURLSWF:~0,4%"=="http" GOTO :UPDATEGETSWF
+if /i "%UPDATEURLSWF:~0,4%"=="http" SET httpSWF=UPDATEURLSWF
+echo.&echo.&echo.
+if /i "%UPDATEGETSWF:~0,1%"=="Y" TITLE DELETING GET-IPLAYER PREFERENCES&ECHO:      		   Deleting Prefernces&C: & cd "\Program Files%TBIT%\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --prefs-del --rtmp-tv-opts="X" --rtmp-radio-opts="X"  --rtmp-livetv-opts="X" --rtmp-liveradio-opts="X"
+echo.&echo.&echo.
+if /i "%UPDATEGETSWF:~0,1%"=="Y" TITLE UPDATING SWF File URL&ECHO:      		   Updating SWF File URL&C: & cd "\Program Files\get_iplayer\" & "%Windir%\system32\cmd.exe" /c get_iplayer --prefs-add --rtmp-tv-opts="--swfVfy %httpSWF%" 
+echo.&echo.&echo.
+pause
+GOTO START

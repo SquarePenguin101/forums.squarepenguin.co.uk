@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Metadata tags of DASH (dvf) downloads do not appear in Explorer file properties</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Metadata tags of DASH (dvf) downloads do not appear in Explorer file properties</div>
+<div id="pagetitle"><h2>Metadata tags of DASH (dvf) downloads do not appear in Explorer file properties</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">02-05-2018, 12:14 PM</div>
+</div>
+<div class="message">Using Windows 7 x64 Ultimate.<br />
+<br />
+I've just downloaded a programme but most of the file properties are missing, such as title, length, comments, frame width height and rate, etc. See attached jpgs of properties.<br />
+<br />
+The only time I've seen this type of issue has been when a file has got corrupted due to some hard drive problem and such files have refused to play, but on checking, this file plays perfectly well.<br />
+<br />
+I've repeated the download and the problem remains. Log attached.<br />
+<br />
+get_iplayer --pid b0555v7v --output=f:\iplayer-tv --tvmode=dvfhd2<br />
+<br />
+I've tried another mode dvfxhigh2 for this programme with the same results.
+<br /><br/>
+<a href="static/thread-1768-properties1.jpg"><img src="static/thread-1768-properties1.jpg"/></a>
+<br />
+<br />
+<a href="static/thread-1768-properties2.jpg"><img src="static/thread-1768-properties2.jpg"/></a>
+<br />
+<br />
+<a href="static/thread-1768-properties3.jpg"><img src="static/thread-1768-properties3.jpg"/></a>
+<br />
+<br />
+<a href="static/thread-1768-log.txt">log.txt</a>
+<br />
+
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2018, 01:15 PM</div>
+</div>
+<div class="message">This is because DASH (dvf) downloads don't agree with Windows built-in media handling. For whatever reason, that programme doesn't have the usual complement of HLS (hvf) streams. Look at the files with a more capable tool like Mp3Tag - the tags are there. The files can be played with VLC, SMPlayer, and some others. This should be remedied in the next release of get_iplayer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">02-05-2018, 02:31 PM</div>
+</div>
+<div class="message">Sorry, I don't know how to go about this. I think of get_iplayer in "black box" terms, in that I have a general appreciation, but not a detailed understanding on what's going on and certainly no understanding at all of the mechanics of the actual processes in the "black box" such as tagging.<br />
+<br />
+I've used MP3Tag in the past but only to change filenames and populate tags in MP3s to conform to my preferences. Looking at the completed file with MP3Tag (using the latest version 2.87a) it only seems to be able to read audio properties (for example, it sees the audio codec, bit rate and frequency). There doesn't appear to be a way to view video properties.<br />
+<br />
+You say "the tags are there" - looking at the log I can see various tags in quotes - but I don't know how to extract them into the completed MP4.<br />
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2018, 02:50 PM</div>
+</div>
+<div class="message">Just re-download with <kbd>--tvmode=hlsvhigh</kbd> and don't worry about the rest.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">02-05-2018, 03:54 PM</div>
+</div>
+<div class="message">Hmm, no can do.<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;get_iplayer --force --tvmode=hlsvhigh --output=f:\iplayer-tv --pid b00jf36j<br />
+get_iplayer 3.13.0, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+<br />
+Episodes:<br />
+Law and Order - A Detective's Tale, BBC Four, b00jf36j<br />
+INFO: 1 total programmes<br />
+<br />
+WARNING: A UK TV licence is required to access BBC iPlayer TV content legally<br />
+INFO: Downloading tv: 'Law and Order - 1. A Detective's Tale (b00jf36j) [original]'<br />
+INFO: No specified modes (hlsvhigh) available for this programme with version 'original'<br />
+INFO: Available modes: hvfxsd,hvfhigh,hvfxhigh,hvfstd,hvflow<br />
+<br />
+This is despite the fact that an --info request gives us:<br />
+<br />
+modes:          original: dvfhd1,dvfhd2,dvfsd1,dvfsd2,dvfxsd1,dvfxsd2,dvfxhigh1,dvfxhigh2,dvflow1,dvflow2,hlsvhigh1,hlsstd1,subtitles1,subtitles2,subtitles3<br />
+<br />
+Very strange!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-05-2018, 04:08 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (02-05-2018, 03:54 PM)</span></cite>This is despite the fact that an --info request gives us:<br />
+<br />
+modes:          original: dvfhd1,dvfhd2,dvfsd1,dvfsd2,dvfxsd1,dvfxsd2,dvfxhigh1,dvfxhigh2,dvflow1,dvflow2,hlsvhigh1,hlsstd1,subtitles1,subtitles2,subtitles3<br />
+<br />
+Very strange!</blockquote>What do you expect? You're showing the --info result from your original programme (b0555v7v), not this other programme (b00jf36j). When I said "re-download", you can be pretty sure I wasn't referring to some other programme not yet in evidence.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">02-05-2018, 04:39 PM</div>
+</div>
+<div class="message">Ooops, up arrowed from the wrong DOS box!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-05-2018, 09:04 PM</div>
+</div>
+<div class="message">This limitation no longer applies with get_iplayer v3.14+</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Metadata tags of DASH (dvf) downloads do not appear in Explorer file properties</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

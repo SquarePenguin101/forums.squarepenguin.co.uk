@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --start and --stop commands</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; --start and --stop commands</div>
+<div id="pagetitle"><h2>--start and --stop commands</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1166</h2></div><div class="dateline">17-01-2016, 08:46 PM</div>
+</div>
+<div class="message">I have used get_iplayer for about 3 years and am very appreciative of the efforts of the developers and wiki/forum maintainers.  I have searched the forum for advice on use of the start/stop commands for rtmpdump, but I'd like to test this a little further to understand the subject fully.<br />
+<br />
+I'm trying to download for offline listening Bach solo cello 4,5,6.  Unfortunately this has nearly 9 mins of continuity at the start which I'd like to remove.  While I'm at it, I might as well tidy up the end of the file too.  My instruction is:<br />
+<br />
+get_iplayer --type=radio --pid b06s9js7 --start 00:08:54 --stop 01:35:10<br />
+<br />
+I've observed that get_iplayer downloads about 70% of the file, stalls for a few seconds, then recommences at about 80% download.  Further, whereas with a Radio 3 recording I would expect a m4a file of approx. 320kbps (which is what I get if I download the programme without the start/stop commands), get_iplayer reports just 288kbps.  Still further, when I play the file in VLC, at about the 70% mark (about 60 mins into the recording), although the music doesn't appear to 'jump', the timing reported by VLC suddenly jumps from 60 mins to 69 mins or so.<br />
+<br />
+I have seen advice on the forums to add --attempts=1 and --raw to the start/stop command.  However, I would then have to extract the audio from the partial .flv file and I've found that my Ruark radio doesn't like the m4a files that ffmpeg produces.  m4as produced by rtmpdump/get_iplayer seem fine.<br />
+<br />
+Having said all the above, I do wonder if VLC isn't simply tricked into reporting a timing jump that isn't there.  As regards the kbps, although I haven't watched the stats on VLC all the way through the recording(!), having flicked through at intervals, it seems to report 320kbps throughout.<br />
+<br />
+So, given your knowledge of the start/stop command, do you believe I'm probably actually getting a continuous 320kbps recording?  Should I ignore the get_iplayer report of 288kbps and VLC's supposed 60-69 min 'jump' and just enjoy the music?  Many thanks indeed for your help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-01-2016, 11:30 PM</div>
+</div>
+<div class="message">get_iplayer itself doesn't report a bitrate when downloading. You're probably referring to the output from ffmpeg while re-muxing to M4A. Use of <kbd>--start</kbd> could confuse its calculation of bitrate for display. The file has 86 minutes' worth of audio but ffmpeg thinks it is the full 95 minutes. <br />
+<br />
+In general, I suggest you don't use <kbd>--start</kbd> with rtmpdump because it can cause problems like this (among others), though <kbd>--stop</kbd> is OK. It is always best to use a proper audio editor, but you should be able to do the same thing during re-muxing by letting ffmpeg do the cropping.  For example:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid b06s9js7 --stop 01:35:10 --ffmpeg-radio-opts="-ss 08:54"</code></div></div><br />
+The timestamp jump was most likely caused by rtmpdump resuming the download due to a streaming glitch.  When it starts appending to the file after resuming it may not account for the <kbd>--start</kbd> gap in the timestamps.  <br />
+<br />
+As I mentioned, get_iplayer uses ffmpeg to re-mux FLV-&gt;M4A, so if you're having problems with re-muxing files outside of get_iplayer, you may simply be using a version of ffmpeg that is too old.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1166</h2></div><div class="dateline">18-01-2016, 10:25 PM</div>
+</div>
+<div class="message">user-2 - many thanks indeed for your advice.  It works!  I can now trim Radio 3 downloads easily and maintain m4a 320kbps quality.  Thank you very much.  Suffolkman.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; --start and --stop commands</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

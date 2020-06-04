@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - V3.06 on PCLinuxOS: Failed to download schedule page</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; V3.06 on PCLinuxOS: Failed to download schedule page</div>
+<div id="pagetitle"><h2>V3.06 on PCLinuxOS: Failed to download schedule page</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1371</h2></div><div class="dateline">08-11-2017, 12:49 PM</div>
+</div>
+<div class="message">The PCLinuxOS repositories currently have version 3.02 and I have asked for this to be updated to V3.06. In order to help the packagers, I have put the new Perl script into my test installation of PCLinuxOS. I can successfully download using a PID but it will not index programs. It reports the following errors:<br />
+<br />
+INFO: Indexing tv programmes (concurrent) <br />
+.............. <br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week">http://www.bbc.co.uk/bbcalba/programmes/.../this_week</a> <br />
+. <br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week">http://www.bbc.co.uk/bbcfour/programmes/.../this_week</a> <br />
+. <br />
+WARNING: Failed to download schedule page: <a href="http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week">http://www.bbc.co.uk/bbcnews/programmes/.../this_week</a><br />
+<br />
+etc...<br />
+<br />
+I assume that this could be related to one of the dependencies rather than the main Perl script.<br />
+<br />
+Perhaps it is Mojolicious that needs an update. Version 7.36 here.<br />
+<br />
+Could some knowledgable person advise me where to look first?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2017, 02:17 PM</div>
+</div>
+<div class="message">Asked and answered: <a href="/thread-1548.html">/thread-1548.html</a><br />
+<br />
+Mojolicious update is probably not necessary. It might be tricky updating IO::Socket::SSL in a distro repository since it will have some dependent packages.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1371</h2></div><div class="dateline">08-11-2017, 02:35 PM</div>
+</div>
+<div class="message">Thanks for pointing me in the right direction.<br />
+<br />
+perl-IO-Socket-SSL in PCLinuxOS is version 2.27.0.<br />
+The only listed dependency for it is perl-base (&lt;=5.22.3)<br />
+<br />
+Hopefully this will mean it is not too difficult to update.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2017, 03:37 PM</div>
+</div>
+<div class="message">That was "dependent", not "dependency". Other modules, such as LWP::Protocol::https, will depend on IO::Socket::SSL. I know that the latest versions work together, but there may be other considerations in PCLinuxOS.<br />
+<br />
+Your problem might actually be simpler. Make sure that Net::SSLeay is installed. I just checked on a PCLinuxOS live CD, and it doesn't appear to be installed with IO::Socket::SSL. If it is, get_iplayer works. Actually, a couple of other things were required.  It also appears that HTML::Parser and Encode::Locale (dependencies of LWP) aren't being pulled in either.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2017, 03:41 PM</div>
+</div>
+<div class="message">And while you're at it, remove XML::Simple and id3v2 from the get_iplayer dependencies. They are not used.<br />
+<br />
+EDIT: There is also no need to install an empty system options file for get_iplayer. It is useless.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1371</h2></div><div class="dateline">08-11-2017, 04:51 PM</div>
+</div>
+<div class="message">Thanks yet again.<br />
+<br />
+I have referenced this thread in my request to the PCLinuxOS devs for the update so they will hopefully have all they need.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; V3.06 on PCLinuxOS: Failed to download schedule page</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

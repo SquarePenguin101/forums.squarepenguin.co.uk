@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Is it possible to have PVR record a series using a PID instead of a search string?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Is it possible to have PVR record a series using a PID instead of a search string?</div>
+<div id="pagetitle"><h2>Is it possible to have PVR record a series using a PID instead of a search string?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">04-09-2017, 03:36 PM</div>
+</div>
+<div class="message">Is it possible to have PVR record a series using a PID instead of a search string?<br />
+<br />
+since podcasts were removed from get_iplayer it hasn't been possible to download them under the name of the podcast<br />
+<br />
+ie comedy of the week<br />
+<br />
+which has different program names every week.<br />
+However I noticed to day that if you use the series pid for podcasts it will download all the available instances of said podcasts, or not if they already exist.<br />
+<br />
+Of course I dont know what you would use in the PVR file to search for the series pid<br />
+<br />
+comedy of the weeks series pid is p02pc9x6<br />
+<br />
+my current PVR for that podcast is<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel Radio 2,Radio 3,BBC radio 4,<br />
+fields name<br />
+modes good,<br />
+output F:&#92;Media&#92;radio&#92;comedy of the week&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type radio<br />
+versionlist default<br />
+search0 ^comedy of the week<br />
+fileprefix &lt;firstbcastdate&gt; &lt;nameshort&gt; &lt;.episodeshort&gt; &lt;.senum&gt; &lt;.pid&gt;</code></div></div>obviously this has not worked for some time<br />
+If it is not possible to look for a specific PID in GIP PVR now perhaps it could be included in a  future version as it would make podcasts available again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2017, 04:09 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (04-09-2017, 03:36 PM)</span></cite>However I noticed to day that if you use the series pid for podcasts it will download all the available instances of said podcasts, or not if they already exist.</blockquote>It works the same way with the PVR. Create a new PVR search with <kbd>--pid</kbd> and <kbd>--pid-recursive</kbd> instead of search string.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">04-09-2017, 08:18 PM</div>
+</div>
+<div class="message">I understand that about --pid and --pid-recursive<br />
+however I want, if possible, to do it from the scheduler which runs every day, rather than have to remember to run a specific search once a week or more. <br />
+<br />
+<br />
+whilst on the subject of pid recursive I have noticed that if I include an output folder it truncates the folder name to the first space<br />
+<br />
+for instance<br />
+<span style="font-weight: bold;" class="mycode_b">Navy Lark</span>, would create a new folder called <span style="font-weight: bold;" class="mycode_b">Navy</span><br />
+<br />
+where as if I just use the scheduler it would download into the <span style="font-weight: bold;" class="mycode_b">Navy Lark</span> folder. <br />
+sorry to drift a little off topic.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-09-2017, 10:30 PM</div>
+</div>
+<div class="message">Run it as often as you like, just like any other PVR search. As for your Navy Lark folder, you no doubt neglected to quote the path.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">05-09-2017, 03:54 PM</div>
+</div>
+<div class="message">the point you seem to have missed is that any multi word file path works fine with the scheduler but when running from cli with --pid-recusive truncates to the first word. <br />
+<br />
+my pvr schedule<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel Radio 2,Radio 3,BBC radio 4,<br />
+fields name<br />
+modes worse,good,vgood<br />
+output F:&#92;Media&#92;radio&#92;navy lark&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type radio<br />
+versionlist default<br />
+search0 ^The Navy Lark<br />
+fileprefix &lt;nameshort&gt; &lt;.episodeshort&gt; &lt;.senum&gt; &lt;.pid&gt; &lt;.channel&gt;</code></div></div><br />
+and this is the pid recursive<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get --pid=b00bfvkd --pid-recursive&nbsp;&nbsp;--modes=worse,good,vgood --type=radio --file-prefix="&lt;nameshort&gt; &lt;.episodeshort&gt; &lt;.senum&gt; &lt;.pid&gt; &lt;.channel&gt;" --output F:&#92;Media&#92;radio&#92;navy lark&#92;</code></div></div><br />
+I tried putting quotes round the output path and it stopped with an error<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Cannot open (write): F:&#92;Media&#92;radio&#92;navy lark"&#92;The Navy Lark .The Admirals Party .s01e07 .b00vdfdq .BBC Radio 4 Extra.audio.ts</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-09-2017, 04:13 PM</div>
+</div>
+<div class="message">The point YOU seem to have missed is that escaping one of the quotes with a backslash defeats the purpose. Just look at the error message: a file path with single quote in the middle doesn't look right, does it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">05-09-2017, 04:50 PM</div>
+</div>
+<div class="message">no it doesn't, but it was the result of this string<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get --pid=b00bfvkd --pid-recursive  --modes=worse,good,vgood --type=radio --file-prefix="&lt;nameshort&gt; &lt;.episodeshort&gt; &lt;.senum&gt; &lt;.pid&gt; &lt;.channel&gt;" --output "F:&#92;Media&#92;radio&#92;navy lark&#92;"</code></div></div><br />
+<br />
+But yes you are right if I remove the final <span style="font-weight: bold;" class="mycode_b">\</span> from the output path it works,<br />
+<br />
+but in the schedule pvr it works with the final \<br />
+<br />
+I will go through an edit my 300 or so schedules to remove the final \ then</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-09-2017, 07:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-09-2017, 04:50 PM)</span></cite>but in the schedule pvr it works with the final \</blockquote>You're not using the command prompt in that case, are you? You can't expect to work at the prompt if you don't follow the command shell's  rules for argument parsing. If you don't know how it works, there is plenty of information just a google away. If you want a backslash at the end of your output path (useless, but harmless), then escape it - not the surrounding quote you need for proper parsing - with another backslash. <br />
+<blockquote class="mycode_quote"><cite><span> (05-09-2017, 04:50 PM)</span></cite>I will go through an edit my 300 or so schedules to remove the final \ then</blockquote>You already know those have nothing to do with this, but it's your time to waste.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">07-09-2017, 08:29 AM</div>
+</div>
+<div class="message">sorry did I make the mistake of assuming that the run pvr scheduler was running on a command prompt.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2017, 10:37 AM</div>
+</div>
+<div class="message">Of course the "Run PVR Scheduler" shortcut launches a command prompt, but that's not how you enter PVR searches, is it? You can't enter anything in that command prompt because a program is running, so it is irrelevant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">07-09-2017, 03:35 PM</div>
+</div>
+<div class="message">yes but it operates differently from a command line command is my point. <br />
+<br />
+presumably somewhere within that run schedule file there is an equivalent of a CLI command running and looping?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2017, 03:58 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-09-2017, 03:35 PM)</span></cite>yes but it operates differently from a command line command is my point.</blockquote>Which is what I have already told you. Obey the rules of working at a command prompt and you will be able to enter the exact same PVR searches that you can enter in your web browser.<br />
+<blockquote class="mycode_quote"><cite><span> (07-09-2017, 03:35 PM)</span></cite>presumably somewhere within that run schedule file there is an equivalent of a CLI command running and looping?</blockquote>Not really. Once the script is running, command line argument processing is irrelevant. For some reason you keep conflating running a PVR search with creating a PVR search. Apples and oranges.<br />
+<br />
+I'm closing this thread now, with one final bit of advice: Just stop using a trailing backslash in your output paths, period, forever. It is unnecessary, and not using a trailing backslash will avoid this issue altogether. The PVR searches you have already created will continue to work as before.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Is it possible to have PVR record a series using a PID instead of a search string?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

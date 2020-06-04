@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Screen Scraper Example</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Screen Scraper Example</div>
+<div id="pagetitle"><h2>Screen Scraper Example</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">30-10-2014, 11:32 PM</div>
+</div>
+<div class="message">See attachment in post below:<br />
+<br />
+<a href="/topic/screen-scraper-example/#post-10225">/topic...post-10225</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2014, 11:51 PM</div>
+</div>
+<div class="message">@boisemick: Please replace the script.  I tried to wrap it in a code block but WordPress destroyed it instead.  Sorry about that.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2014, 11:52 PM</div>
+</div>
+<div class="message">Sorry again - you won't be able to edit it, so please repost in a new entry and I'll try to fix.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-10-2014, 12:08 AM</div>
+</div>
+<div class="message">Actually, please post it as a .txt attachment so I see what it is actually supposed to contain before I do any editing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">31-10-2014, 06:59 AM</div>
+</div>
+<div class="message">Sure thing, but have done a lot more work on it today, it now takes a show PID, scrapes the site, creates a multidimentional array containing Show, EpisodePID, Series number, Episode Number and a suggested filename in the format 'Doctor Who.s08e09'. It then takes that array, loops through it, runs get_iplayer against the pids and then renames the show. There is a few bugs right now. I will post the whole thing sometime tomorrow.<br />
+<br />
+Mick</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">31-10-2014, 07:51 PM</div>
+</div>
+<div class="message">Here you go (attached)<br />
+<br />
+Work remaining -<br />
+1 - Read a CSV that comntains two columns (Show PID and Show Name)<br />
+2 - I have the filename built in the array but I am not renaming yet. I did notice that if my get_iplayer installation cached the metadata for a show, then get_iplayer is still doing a great job of renaming the file, but I assume this data comes from the same feeds that are now dead? Perhaps you could comment.<br />
+<br />
+Other than that, this seems to work. Of course - let the madness begin on screen-scraping - I already have to check for various formats on the web pages. Example in the HTML for Doctor Who the word 'episode' is missing but for Russel Howards Good News Show it is there.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">31-10-2014, 07:52 PM</div>
+</div>
+<div class="message">Attached as TXT this time</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2014, 02:09 AM</div>
+</div>
+<div class="message">Thanks.  I replace original with directions to attached script.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-695</h2></div><div class="dateline">04-11-2014, 08:09 PM</div>
+</div>
+<div class="message">If anybody is interested, here is a bash script that has some of the same functionality. Just give it a series<br />
+pid as an argument and it will output some get_iplayer downloads. It attempts to find a usable name for the episode from the final epsiode url (after redirection), but I haven't tried to format it for tvdb or the like. So far it's only been tested on Doctor Who, QI XL, and Only Connect.<br />
+<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>#!/bin/bash<br />
+<br />
+queue_series() <br />
+{<br />
+series_page="&lt;code&gt;wget -qO - http://www.bbc.co.uk/iplayer/episodes/&#36;1&lt;/code&gt;"<br />
+episode_pids=&lt;code&gt;echo &#36;series_page&nbsp;&nbsp;|grep -oP &#039;/iplayer/episode/&#92;K([a-z,0-9]{8})&#039; - |sort -u&lt;/code&gt;<br />
+<br />
+while read -r pid; do<br />
+&nbsp;&nbsp;&nbsp;&nbsp;episode_url=&lt;code&gt;curl -Ls -o /dev/null -w %{url_effective} http://www.bbc.co.uk/iplayer/episode/&#36;pid&lt;/code&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title="&#36;{episode_url##*/}"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;command="get_iplayer --pid=&#36;pid --file-prefix=&#36;title"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;echo &#36;command <br />
+done &lt;&lt;&lt; "&#36;episode_pids"<br />
+<br />
+}<br />
+<br />
+series_pid=&#36;1<br />
+queue_series &#36;series_pid</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-695</h2></div><div class="dateline">04-11-2014, 09:30 PM</div>
+</div>
+<div class="message">I'll try that again. Here's an attachment.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-695</h2></div><div class="dateline">05-11-2014, 09:02 AM</div>
+</div>
+<div class="message">You can also use the iPlayer search function to scrape the series pid with something like:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>curl -s&nbsp;&nbsp;http://www.bbc.co.uk/iplayer/search? --data-urlencode q=QI XL --get | grep -oP '/episodes/&#92;K[0-9,a-z]{8}' -</code></div></div><br />
+(Using curl because it includes url encoding as standard functionality.) Pipe the output of that into the previous script and you have something close to the old pvr functionality.<br />
+<br />
+If I get the time I'll try to put it all together in a "nice" script with option-parsing and documentation, but don't all hold your breath :-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Screen Scraper Example</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 50fps SD programmes?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 50fps SD programmes?</div>
+<div id="pagetitle"><h2>50fps SD programmes?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1465</h2></div><div class="dateline">14-11-2016, 03:23 PM</div>
+</div>
+<div class="message">I'm trying to download a Top of the Pops episode (shown on BBC4) and I'm after the 50fps version. However, no matter what tvmode I use, I always get a 25fps version with different resolutions. I know for a fact that there is a 50fps version (with resolution 704 x 396) as I'm using the "Iplayer WWW" addon on my Kodi box which picks up this stream by default.<br />
+<br />
+Is there a mode that supports this resolution/framerate, or does get_iplayer not support it (I note it's not mentioned in the Wiki).<br />
+<br />
+I'm using the Windows version of get-Iplayer, BTW, v 2.97<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">14-11-2016, 04:21 PM</div>
+</div>
+<div class="message">It would be helpful if you gave us the name of the actual programme episode to identify it and the relevant PID.<br />
+<br />
+Having said that I think you're wrong - it is unlikely that any 50fps versions exist for any programmes of that age. <br />
+<br />
+Anyway, the recording modes for 50fps are hvfhd and hvfsd. If you interrogate the programme details on the command line, it will tell you what modes are available, for example:<br />
+<br />
+get_iplayer --info --pid b0824dd3<br />
+will give output which will include the following:<br />
+<br />
+modes:          original: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,hlsvhigh1,hlshigh1,hlsstd1,hvfvhigh1,hvfvhigh2,hvfhigh1,hvfhigh2,hvfstd1,hvfstd2,hvflow1,hvflow2,subtitles1<br />
+modes:          shortened: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,hlsvhigh1,hlshigh1,hlsstd1,hvfvhigh1,hvfvhigh2,hvfhigh1,hvfhigh2,hvfstd1,hvfstd2,hvflow1,hvflow2,subtitles1<br />
+<br />
+You will see that both hvfhd and hvfsd are absent! If you repeat the process using the appropriate PID for the programme you wish to download then pound to a penny you'll get the same result.<br />
+<br />
+So to get the best possible 50fps (if it is available), then you need to specify:<br />
+get_iplayer --tvmodes=hvfhd,hvfsd --pid xxxxxxxx (where xxxxxxxx is the programme PID)<br />
+and get_iplayer will try the HD mode first and if that isn't available it will then try SD. If those modes are unavailable then you'll get a message telling you which modes are available for that programme.<br />
+<br />
+The various rates available to get_iplayer are in the Wiki in the section "Recording modes" where 50fps is explained. <br />
+<br />
+Have fun<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-11-2016, 04:46 PM</div>
+</div>
+<div class="message">Where they exist, 704x396@50fps streams are ignored by get_iplayer.  Use youtube-dl if you want to download one of them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1465</h2></div><div class="dateline">14-11-2016, 05:20 PM</div>
+</div>
+<div class="message">Dinky, thanks for confirming it can't be done in get_iplayer.<br />
+<br />
+Alan, thanks for the info<br />
+<br />
+As Dinky suggested, I downloaded youtube-dl and a straight call of<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>youtube-dl http://www.bbc.co.uk/iplayer/episode/b0824dd3</code></div></div><br />
+downloaded the 704x396/50 version, without specifying any other parameters.<br />
+<br />
+Thanks for the quick answer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; 50fps SD programmes?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

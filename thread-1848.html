@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Proms 192x108 thumbnail download hangs with Ubuntu 16.04/libwww-perl 6.15</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Proms 192x108 thumbnail download hangs with Ubuntu 16.04/libwww-perl 6.15</div>
+<div id="pagetitle"><h2>Proms 192x108 thumbnail download hangs with Ubuntu 16.04/libwww-perl 6.15</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1626</h2></div><div class="dateline">25-07-2018, 08:52 PM</div>
+</div>
+<div class="message">I'm running 3.16 downloaded from github on Ubuntu 16.04.<br />
+<br />
+All goes well often but I find many radio downloads are hanging at the stage:<br />
+<br />
+INFO: Converting to M4A<br />
+INFO: Command: "ffmpeg" "-loglevel" "fatal" "-stats" "-y" "-i" "/home/ukuser/BBC_Proms_2018_-_Prom_14_Sibelius_Schubert_and_Zimmermann_b0bbssp7_original.hls.ts" "-c:v" "copy" "-c:a" "copy" "-bsf:a" "aac_adtstoasc" "/home/ukuser/BBC_Proms_2018_-_Prom_14_Sibelius_Schubert_and_Zimmermann_b0bbssp7_original.partial.m4a"<br />
+size=  360277kB time=02:32:59.98 bitrate= 321.5kbits/s<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+INFO: Downloading thumbnail<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393'<br />
+DEBUG: Using NoCookies user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393'<br />
+<br />
+INFO: Downloading URL (1/3): <a href="https://ichef.bbci.co.uk/images/ic/192x108/p06dr49p.jpg">https://ichef.bbci.co.uk/images/ic/192x108/p06dr49p.jpg</a><br />
+<br />
+This never completes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1626</h2></div><div class="dateline">25-07-2018, 09:08 PM</div>
+</div>
+<div class="message">After a little debugging I've determined that the it's hanging on line 1777 in request_url_retry.<br />
+<br />
+&#36;res = &#36;ua-&gt;request( HTTP::Request-&gt;new( GET =&gt; &#36;url ) );</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2018, 10:57 AM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a proper report so we can see what is happening on your system. Let the command hang for a minimum of 4 minutes before killing it. Before that, you may want to try downloading with <kbd>--no-artwork</kbd> to see if it makes a difference when thumbnail download is skipped.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">03-08-2018, 10:44 PM</div>
+</div>
+<div class="message">I've been getting similar problems with a Proms download that requires the same thumbnail as the original poster. Leave it for long enough and it eventually completes.<br />
+<br />
+In fact while I was writing a post for this thread and attaching a verbose log (all now deleted), my repeated attempt at a hung download completed successfully.<br />
+<br />
+However, I've no explanation as to why this particular thumbnail jpg (and possibly others) takes so long to download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">06-08-2018, 05:44 PM</div>
+</div>
+<div class="message">"BBC Proms 2018 2018-08-06 Proms at _ Cadogan Hall 4 Dame Sarah Connolly and Joseph Middleton.m4a" <br />
+just took about 9 minutes to complete tagging, so be prepared to wait at least that long if a download hangs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-08-2018, 06:52 PM</div>
+</div>
+<div class="message">As shown by OP, thumbnail download occurs before tagging begins. If tagging starts, thumbnail download isn't hung, or has timed out. Time required to apply metadata tags is unrelated to thumbnail download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1626</h2></div><div class="dateline">06-08-2018, 10:33 PM</div>
+</div>
+<div class="message"><div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer v3.16, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.</code></div></div><br />
+Ubuntu 16.04<br />
+<br />
+I used the following command to download Prom 31.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid b0bd7z5z --get --type radio --debug</code></div></div><br />
+I'm recording to a local drive.<br/><br/>
+<a href="static/thread-1848-b0bd7z5z.txt">b0bd7z5z.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-08-2018, 02:46 AM</div>
+</div>
+<div class="message">Thanks for the log. Unfortunately, it didn't contain any additional clues. For whatever reason, the version of libwww-perl on 16.04 can't download that particular thumbnail image. It's not worth investigating further since get_iplayer isn't the problem. Use <kbd>--thumbnail-size</kbd> to select a different size other than the default (192). Any other size seems to work. Also, a partial retraction: three attempts are made to download the thumbnail (I thought it was only one), so it could take 9 minutes (3 per attempt) for a thumbnail download to time out.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1626</h2></div><div class="dateline">07-08-2018, 05:10 AM</div>
+</div>
+<div class="message">Thanks for this. <br />
+<br />
+On my system the thumbnail doesn't download at all and it doesn't timeout.<br />
+<br />
+I'll select a different thumbnail size.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2233</h2></div><div class="dateline">31-08-2018, 03:36 PM</div>
+</div>
+<div class="message">Thanks for sharing the answer here, I'm really looking for this solution of Proms 192x108. Thank you for helping</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Proms 192x108 thumbnail download hangs with Ubuntu 16.04/libwww-perl 6.15</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

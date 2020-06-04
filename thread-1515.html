@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Punctuation characters are removed from file names</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Punctuation characters are removed from file names</div>
+<div id="pagetitle"><h2>Punctuation characters are removed from file names</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">01-10-2017, 02:24 PM</div>
+</div>
+<div class="message">I'm on gip v3.03 on a Windows 7 PC and for as long as I've been using gip I notice that it ignores punctuation marks in programme names, such as commas and apostrophes.<br />
+<br />
+So, for example, "I'm Sorry, I'll Read That Again" is downloaded as "Im_Sorry_Ill_Read_That_Again". I'm not sure whether it's something with my setup or a BBC issue or one of gip itself but it's been a constant problem for as long as I can remember with this utility.<br />
+<br />
+Replacing underscores with spaces in a bulk renaming program isn't a problem but missing commas and apostrophes are a pain, especially if you download a lot of radio.<br />
+<br />
+Seeing a new version has just been released has prompted me to raise this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-10-2017, 06:01 PM</div>
+</div>
+<div class="message">Use Mp3tag (or similar) to rename files however you like using their metadata.<br />
+<br />
+EDIT: And of course, you can rename output files with <kbd>--command</kbd>, though that is somewhat limited compared to Mp3tag.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">01-10-2017, 06:48 PM</div>
+</div>
+<div class="message">OK thanks. Is there a similar program for mp4 files?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-10-2017, 06:58 PM</div>
+</div>
+<div class="message">Don't be fooled by the name. get_iplayer doesn't produce MP3 files, so I wouldn't suggest Mp3tag if it didn't work with MP4.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">01-10-2017, 07:12 PM</div>
+</div>
+<div class="message">Great thanks. I used to use the program years back but only on mp3 files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1699</h2></div><div class="dateline">02-10-2017, 11:17 PM</div>
+</div>
+<div class="message">I know it was not your main request but the --whitespace option in get_iplayer prevents the conversion of space to underscore.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">12-10-2017, 03:44 PM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.04-windows.0 from a Windows 7 command prompt.<br />
+<br />
+I'm having the same problem as HarryVaderci.<br />
+<br />
+When running gip 3.02 any punctuation characters in <span style="text-decoration: underline;" class="mycode_u">--subdir-format</span> and <span style="text-decoration: underline;" class="mycode_u">--file-prefix</span> arguments were honoured. They're not in gip 3.04.<br />
+<br />
+I set up some presets to handle punctuation after the removal of the <span style="text-decoration: underline;" class="mycode_u">--punctuation</span> option such as the following for episodes of I'm Sorry I Haven't a Clue:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\&gt;get_iplayer -z isihac --prefs-show<br />
+INFO: Using user options preset 'isihac'<br />
+Options in 'path\to\.get_iplayer\presets\isihac'<br />
+        fileprefix = &lt;00episodenum&gt;. Episode&lt; 00episodenum&gt;_&lt;pid&gt;_&lt;version&gt;<br />
+        subdirformat = I'm Sorry I Haven't a Clue\Series&lt; 00seriesnum&gt;<br />
+        type = radio</code></div>
+</div>
+<br />
+These presets are of no use in gip 3.04.<br />
+<br />
+To get the folder and file names I want when downloading a tv programme where both the series title and episode title contain punctuation characters, I now have to:<ul class="mycode_list"><li>rename the directory (or move the recorded files to the correct directory, if it was already re-named when downloading the previous episode, then delete the incorrectly named directory),<br />
+</li>
+<li>rename the <span style="font-style: italic;" class="mycode_i">.mp4</span>, <span style="font-style: italic;" class="mycode_i">.jpg</span>, <span style="font-style: italic;" class="mycode_i">.srt</span>, <span style="font-style: italic;" class="mycode_i">.ttxt</span> and <span style="font-style: italic;" class="mycode_i">.xml</span> files (created with the <span style="text-decoration: underline;" class="mycode_u">--thumb</span>, <span style="text-decoration: underline;" class="mycode_u">--subtitles</span>, <span style="text-decoration: underline;" class="mycode_u">--subsraw</span> and <span style="text-decoration: underline;" class="mycode_u">--metadata</span> options) and<br />
+</li>
+<li>manually edit the metadata <span style="font-style: italic;" class="mycode_i">.xml</span> to rename the invalid paths it would contain.<br />
+</li>
+</ul>
+This is a pain.<br />
+<br />
+Please, please, please, pretty please could the <span style="text-decoration: underline;" class="mycode_u">--keep-all</span> option be re-instated?</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Punctuation characters are removed from file names</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

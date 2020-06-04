@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Errors when running in Cron</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Errors when running in Cron</div>
+<div id="pagetitle"><h2>Errors when running in Cron</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1220</h2></div><div class="dateline">26-02-2016, 05:54 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+When logged in as my user a linux machine, I am able to run get_iplayer without issue.<br />
+<br />
+When the job triggers from cron, I get a couple of failures. The cron job is setup to run under the same user as I would run it manually.<br />
+<br />
+Running under cron I get:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>mkdir //.get_iplayer: Permission denied at /home/||myuser||/get_iplayer line 439</code></div></div><br />
+I commented out that line in the get_iplayer executable, but it just fails a few lines further down:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Cannot write to lockfile '//.get_iplayer/pvr_lock'</code></div></div><br />
+<br />
+the cron lines looks like this:<br />
+<br />
+2  *  *  *  * ||myuser|| get_iplayer -f<br />
+<br />
+3  *  *  *  * ||myuser|| get_iplayer --pvr<br />
+<br />
+Any idea what might cause this? I'm sure the user name is right in cron but I can't explain this error. Why does it show the two //? The .get_iplayer folder in my user folder is owned by my user, as are all the files contained within. When I run the command as the user, it creates the lock file without issue...<br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-02-2016, 07:57 PM</div>
+</div>
+<div class="message">Create a user-specific crontab instead of trying to use the system crontab, which is what it appears you are doing. You're getting the cron environment for root, which isn't going to work for you, as you can see. Also, you may want to allow more than 1 minute between cache refresh and pvr launch, just to be safe.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1220</h2></div><div class="dateline">27-02-2016, 04:33 AM</div>
+</div>
+<div class="message">You were totally right user-2. The surprising thing, however, is that I've been running the same commands from my system cron, under my username, on a different box for months and months without issue. I litterally rsync'd my config to the new machine, once I confirmed get_iplayer was working, and couldn't figure out the source of the issue.<br />
+<br />
+Also, for the record, I don't actually run get_iplayer directly from cron. I instead have a couple of scripts that run, preventing two processes at the same time, managing the resulting files, etc.. I did test the above config, a very simplified version of what I run, so I could make a more concise post without having to add the complexity of my automation. <br />
+<br />
+Thanks again for your help; I appreciate it! Everything is ticking along smoothly again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Errors when running in Cron</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

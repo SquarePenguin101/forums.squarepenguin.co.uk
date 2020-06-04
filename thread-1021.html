@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Could not create default output directory after reinstall</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Could not create default output directory after reinstall</div>
+<div id="pagetitle"><h2>Could not create default output directory after reinstall</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1387</h2></div><div class="dateline">29-08-2016, 11:26 AM</div>
+</div>
+<div class="message">I deleted old version of get_iplayer with recordings folder and installed new version (2.96.0). And now it says "Could not create dir "C:\Users\Koyangi\Desktop\iPlayer Recordings" and refuses downloading anything. I know I did something wrong, but what precisely? OS Windows 7. Sorry for probably wretched English, I'm not from English-speaking country.<br />
+Please can you good people tell me what to do to fix this problem?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2016, 07:41 PM</div>
+</div>
+<div class="message">It would seem you have a permissions problem. The user account used to run get_iplayer cannot write to user Koyangi's desktop folder. Unfortunately, we cannot help you with that. Only you know what you have done to the permissions on your machine. Given the likelihood that you may not have read this:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer_win32/wiki/cleanup">https://github.com/get-iplayer/get_iplay...ki/cleanup</a><br />
+<br />
+when prompted during installation, read it now to see if anything applies to your case, particularly if you run a multi-user system.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1387</h2></div><div class="dateline">29-08-2016, 08:05 PM</div>
+</div>
+<div class="message">Thank you very much for reply!<br />
+But I am only one user on my computer. Perhaps I need to run get_iplayer installation and program itself with Administrator rights, do I? And according to <a href="https://github.com/get-iplayer/get_iplayer_win32/wiki/cleanup">https://github.com/get-iplayer/get_iplay...ki/cleanup </a>should I reinstall get_iplayer again with these recommendations?[url=https://github.com/get-iplayer/get_iplayer_win32/wiki/cleanup][/url]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1387</h2></div><div class="dateline">29-08-2016, 08:25 PM</div>
+</div>
+<div class="message">THANK YOU VERY MUCH! Get_Iplayer need Administration rights to work. Just run it like an Administrator from context menu for the link. And it works! Many thanks, user-2!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2016, 08:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-08-2016, 08:25 PM)</span></cite>Just run it like an Administrator from context menu for the link.</blockquote>You should absolutely NOT do that. It only masks the underlying problem with permissions.  "Run as Administrator" should NEVER be required to run get_iplayer. If you need to use "Run as Administrator" with get_iplayer, you have installed it incorrectly, either now or in the past.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-08-2016, 10:22 PM</div>
+</div>
+<div class="message">Try deleting the folder <kbd>C:\Users\Koyangi\Desktop\iPlayer Recordings</kbd> and then re-create it while logged in as Koyangi, then try running get_iplayer WITHOUT using "Run as Administrator". I suspect the folder was created with the wrong permissions during a previous installation and may just need to be re-created with the proper permissions. Also make sure you have implemented the cleanup instructions linked in earlier post.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1387</h2></div><div class="dateline">01-09-2016, 10:29 AM</div>
+</div>
+<div class="message">Dear user-2, sorry for silence and thank you for your concern. <br />
+I read your posts. I was so scared I even stopped get_iplayer downloading. Now, please, imagine that you gave your advices to stupidest woman ever. When I installed my OS, I created only one user account; it's mine, it's administrator. Every time I turn my computer on, I work with that only and one account. I can not understand: why should I log in as me if I logged as me already? I never thought about what rights belong to my account. Please, tell me step by step what to do for me to understand. Thank you very much.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-09-2016, 01:54 PM</div>
+</div>
+<div class="message">I already told you what to try in my previous post. If that doesn't work, I have no other advice to offer. If you want to be treated as stupid, someone else will have to do step in - I can't do that. If you can't figure out how to fix permissions, you will have to continue using "Run as Administrator". As I said, that should never be necessary, but there is no reason to be scared.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">01-09-2016, 03:10 PM</div>
+</div>
+<div class="message">Koyangi<br />
+<br />
+Sorry to hear you're having problems, perhaps you might like to join the support list at <a href="http://lists.infradead.org/mailman/listinfo/get_iplayer">http://lists.infradead.org/mailman/listinfo/get_iplayer</a> where you are more likely to get a more sympathetic and detailed response to your query.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1387</h2></div><div class="dateline">03-09-2016, 11:44 AM</div>
+</div>
+<div class="message">Dear user-2, another sorry for silence and another thank you. <br />
+What can I say? Still, when I run get_iplayer as administrator, it works successfully. Maybe all my troubles with get_iplayer depend on some settings in my version of OS; only author of that version knows what he did. Anyway, you have my gratitude. Good luck and many thanks! <br />
+Dear soulman1949, thanks for your advice. My get_iplayer works; if it stops working I'll continue searching for answers. I'll remember that link. Good luck!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Could not create default output directory after reinstall</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

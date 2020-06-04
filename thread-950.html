@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR searches not running</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR searches not running</div>
+<div id="pagetitle"><h2>PVR searches not running</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1042</h2></div><div class="dateline">12-07-2016, 02:10 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+Since updating from 2.94 to 2.96-dev, PVR doesn't seem to work any more. Running PVR via the web interface or by command  line produces an empty response, as if no pvr searches have been added.<br />
+<br />
+The following screenshots show the issues. (1) Adding a PVR search via the web interface seems to add a correct PVR search string.  (2) Now running PVR however creates an empty response, instead of listing the PVR search name i.e. _Midnight_News_name_radio. It seem nothing is search for and consequently nothing is downloaded.<br />
+<br />
+(3) A manual search reveals 16 programmes are available and can manually be downloaded via the interface or command line.<br />
+<br />
+These are my pref settings:<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --prefs-show<br />
+Options in '/home/jr/.get_iplayer/options'<br />
+    subdir = 1<br />
+    search = (type|all)<br />
+    outputtv = /home/jr/iplayer-tv<br />
+    subdirformat = &lt;nameshort&gt;<br />
+    outputradio = /home/jr/iplayer-radio<br />
+    type = radio</code></div>
+</div>
+<br />
+<br />
+<br />
+<br />
+What I am missing? What is issue here?<br />
+<br />
+Many thanks! :)<br />
+<br />
+Cheers, John</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-07-2016, 02:25 PM</div>
+</div>
+<div class="message">Is there a specific reason you are running the development version?<br />
+<br />
+It's not 'supported' as such and things are expected to break so I'm not sure there would be a quick solution other than to use the standard 2.95 version which has just been released.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-07-2016, 02:40 PM</div>
+</div>
+<div class="message">As SP politely alluded to, and I have <a href="https://squarepenguin.co.uk/wiki/gipdev/">clearly stated</a>, no support for any development version of get_iplayer will be provided, not by me at least, so take that into consideration before posting any future queries.<br />
+<br />
+However, your problem has nothing to do with using the development version. You have simply messed up your preferences. This entry will break your PVR searches, so remove it and all should be well:<br />
+<br />
+<kbd>search (type|all)</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1042</h2></div><div class="dateline">12-07-2016, 02:43 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-07-2016, 02:40 PM)</span></cite>As SP politely alluded to, and I have <a href="https://squarepenguin.co.uk/wiki/gipdev/">clearly stated</a>, no support for any development version of get_iplayer will be provided, not by me at least, so take that into consideration before posting any future queries.<br />
+<br />
+However, your problem has nothing to do with using the development version. You have simply messed up your preferences. This entry will break your PVR searches, so remove it and all should be well:<br />
+<br />
+<kbd>search (type|all)</kbd></blockquote><br />
+Many thanks! I have reverted to the stable version and will try this  fix now.<br />
+<br />
+Cheers, John</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-07-2016, 02:49 PM</div>
+</div>
+<div class="message">No problem. <br />
+<br />
+I see you added the output of <kbd>--prefs-show</kbd>.<br />
+<br />
+Dinky's given you the answer above, remove the following:<br />
+<br />
+<kbd>search (type|all)</kbd><br />
+<br />
+...and all should be well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1042</h2></div><div class="dateline">12-07-2016, 03:13 PM</div>
+</div>
+<div class="message">OK, thanks! It works now. :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR searches not running</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

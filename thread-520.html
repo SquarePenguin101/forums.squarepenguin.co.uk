@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - RTMP failing since 2015-09-06</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; RTMP failing since 2015-09-06</div>
+<div id="pagetitle"><h2>RTMP failing since 2015-09-06</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">09-09-2015, 10:33 AM</div>
+</div>
+<div class="message">Hi folks,<br />
+<br />
+Since September 6 2015 nothing has been able to be downloaded and it seems to be RTMP failing.  I am running Windows 7 Premium.  Until a couple of days ago my get_iplayer instance was working flawlessly. <br />
+<br />
+I upgraded to v 2.94 (I was late to version 2.4) but unfortunately there has been no improvement.  <br />
+<br />
+I have included a copy of the errors that appear from the command line when I tried to download an episode of "Secrets of China".  <br />
+<br />
+Here is the command line syntax that I used:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --url http://www.bbc.co.uk/iplayer/episode/b069c2rx/secrets-of-china-3-how-to-get-rich#group=b068237s --tvmode=best --type=tv --channel="BBC Three" --file-prefix="&lt;nameshort&gt;&lt;-senum&gt;&lt;-episodeshort&gt;"</code></div></div><br />
+And here is a typical command line output that is provided when the download fails:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect1, handshake failed.<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file J:\media\video\bbc get_iplayer\Secrets_of_China-s<br />
+01e03-How_to_Get_Rich.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh2 mode<br />
+INFO: Trying flashstd1 mode to record tv: Secrets of China - 3. How to Get Rich<br />
+INFO: File name prefix = Secrets_of_China-s01e03-How_to_Get_Rich</code></div>
+</div>
+<br />
+Note: I have included a full text dump of the command line error screen output as well. <br />
+<br />
+Summary<br />
+I am no wizard in this environment - does anyone have a similar situation and can point to a fix for this problem?  I would really appreciate it!<br />
+<br />
+Thank you,<br />
+<br />
+Andy<br/><br/>
+<a href="static/thread-520-RTMP_Streaming_Errors-Secrets_of_China-2015-00-09.txt">RTMP_Streaming_Errors-Secrets_of_China-2015-00-09.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">09-09-2015, 11:16 AM</div>
+</div>
+<div class="message">Apologies for the previous post, I do not know why all the font changes / markers were included.<br />
+<br />
+I am <span style="font-weight: bold;" class="mycode_b">looking for some help to get RTMP working again</span>.  Prior to 2015-09-06 (three days ago) all downloads were working virtually flawlessly for weeks.  However my downloads have not been working since It has been broken since September 6.  <br />
+<br />
+I am running <span style="font-weight: bold;" class="mycode_b">Windows 7 Home Premium.</span><br />
+I am running <span style="font-weight: bold;" class="mycode_b">get_iplayer 2.94.</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">My Windows system path is:</span><br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;echo %PATH%<br />
+C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\AMD APP\bin\x86_64;C:<br />
+\Program Files (x86)\AMD APP\bin\x86;C:\Program Files\Common Files\Microsoft Sha<br />
+red\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Li<br />
+ve;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\W<br />
+indowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Stat<br />
+ic;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\MKVtoolnix;<br />
+C:\Program Files (x86)\Calibre2\;C:\Program Files\Calibre2\;C:\Program Files (x8<br />
+6)\QuickTime\QTSystem\;C:\Program Files (x86)\Skype\Phone\<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Failure output (command line) is all similar to the following:</span><br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect1, handshake failed.<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file J:\media\video\bbc get_iplayer\Secrets_of_China-s<br />
+01e03-How_to_Get_Rich.partial.mp4.flv via RTMP<br />
+INFO: skipping flashhigh2 mode<br />
+INFO: Trying flashstd1 mode to record tv: Secrets of China - 3. How to Get Rich<br />
+INFO: File name prefix = Secrets_of_China-s01e03-How_to_Get_Rich<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect1, handshake failed.<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file J:\media\video\bbc get_iplayer\Secrets_of_China-s<br />
+01e03-How_to_Get_Rich.partial.mp4.flv via RTMP<br />
+INFO: skipping flashstd1 mode<br />
+INFO: Trying flashstd2 mode to record tv: Secrets of China - 3. How to Get Rich<br />
+INFO: File name prefix = Secrets_of_China-s01e03-How_to_Get_Rich<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Summary</span><br />
+I am willing to dig into whatever is required to get this fixed but right now I don't know what troubleshooting steps are required.  I did include a more verbose text file that shows the errors received when trying to download the TV show "Secrets of China".<br />
+<br />
+Thank you,<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-09-2015, 11:32 AM</div>
+</div>
+<div class="message">Hi Andy,<br />
+<br />
+Glad you managed to post and I'm sorry you had some troubles. <br />
+<br />
+There does seem to be a few odd things happening at the moment with the<br />
+BBC and a few users are reporting odd behaviour and multiple failed<br />
+download attempts. There is a big post in the mailing list about this<br />
+too:<br />
+<br />
+<a href="http://lists.infradead.org/pipermail/get_iplayer/2015-September/008196.html">http://lists.infradead.org/pipermail/get...08196.html</a><br />
+<br />
+Not sure what's going on just yet.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">09-09-2015, 11:40 AM</div>
+</div>
+<div class="message">Good day,<br />
+Ok firstly thanks for your patience and for your prompt response.  I read through the thread that you provided (above) and the user provided a lot of good data for troubleshooting.  He appears to be having a similar issue as I am - HD downloads failing.  <br />
+<br />
+At this point there is not a whole lot that I can do because I fear anything that I do on my system may "break" the configuration that has been working so very nicely for quite some time.  Perhaps if you do find a root cause you could respond here to let me know of any potential fixes? <br />
+<br />
+Best regards,<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-09-2015, 12:36 PM</div>
+</div>
+<div class="message">Over the last few days I've had a lot of problems from the <span style="font-weight: bold;" class="mycode_b">level3</span> servers. "Netstream Failed". I also noticed that this same error was shown when you right click the embedded player window on iPlayer so it seems like iPlayer cannot read from level3 at the moment either.<br />
+<br />
+I'm guessing that this means all HD requests end up on the akamai servers and as a result they are now struggling to serve stuff without errors.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-09-2015, 01:01 PM</div>
+</div>
+<div class="message">Ah, OK, if it's Level3 were talking about here then that's probably why there is an issue. They've been having a lot of problems over the past few weeks/months. They took down a large part of the US internet when their Chicago transit centre (I think) failed a few weeks or so ago and they then had another part of their network go down shortly after. <br />
+<br />
+For some reason, these issues have been very hush hush and mainstream media hasn't even mentioned them, but a lot of network folks have been tracking the issues. <br />
+<br />
+Perhaps this is a continuation of the troubles they are facing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">09-09-2015, 01:02 PM</div>
+</div>
+<div class="message">Interesting.  I used to work in telco for 27 years and I have a friend who installed our Akamai servers here in Nova Scotia.  I am going to run your comment by him to see if he might have any insight as to what is happening &amp; can be done...  Cheers A</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-09-2015, 02:06 PM</div>
+</div>
+<div class="message">Here's the thread on reddit where I picked up a fair amount of info. It's worth a read: <br />
+<br />
+<a href="https://www.reddit.com/r/networking/comments/3imwrc/level_3_internet_outage/">https://www.reddit.com/r/networking/comm...et_outage/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-09-2015, 02:17 PM</div>
+</div>
+<div class="message">@tvfan has identified the problem.  The simplest workaround is to use <kbd>--modes=hlsbest</kbd> or <kbd>--tvmode=hlsbest</kbd>, which avoids RTMP altogether.  You can also use <kbd>--exclude-supplier=level3</kbd> with <kbd>--modes=best</kbd> or <kbd>--tvmode=best</kbd>, though as @tvfan said you may still see knock-on problems with the alternate RTMP supplier (Akamai).  Level3 only supplied RTMP HD video streams, so problems there shouldn't directly affect radio or lower-quality TV streams.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1005</h2></div><div class="dateline">09-09-2015, 02:42 PM</div>
+</div>
+<div class="message">Gents it looks like you have successfully identified the fix.  I used <span style="font-weight: bold;" class="mycode_b">--modes=hlsbest </span>from the command line and the stream immediately started to be written to my hard disk (the show that I am downloading is still in progress at about 50% completed).  I will let you know if it successfully writes the MP4 to my hard disk &amp; the MP4 looks good .  Many thanks to you for identifying the solution to this problem so quickly!<br />
+<hr class="mycode_hr" />
+I replaced --tvmode=best with --modes=hlsbest and it downloaded the file perfectly.  I checked the file to see if it would play and it did - test was 100% successful.  Many thanks to you again for you help!<br />
+<br />
+Cheers,<br />
+<br />
+A</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">18-09-2015, 07:36 PM</div>
+</div>
+<div class="message">Level3 still doesn't seem to work. Do you think this is part of the phasing out of RTMP streams or is it something else?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2015, 11:37 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-09-2015, 07:36 PM)</span></cite>Level3 still doesn't seem to work. Do you think this is part of the phasing out of RTMP streams or is it something else?</blockquote><br />
+Probably. AFAICT, the iPlayer site has moved to new streams for TV. This has happened before, where BBC systems produce info for dead streams during a transition period. I'll probably introduce a default exclusion for Level3 in next release if that is still happening.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">19-09-2015, 01:08 PM</div>
+</div>
+<div class="message">It doesn't all seem to be HDS yet. Archive programmes like <a href="http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/8676972.stm">http://news.bbc.co.uk/sport1/hi/motorspo...676972.stm</a> still seem to be coming through RTMP.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2015, 03:51 PM</div>
+</div>
+<div class="message">Level3 never hosted archive programmes, to my knowledge.  I don't really consider those programmes part of iPlayer, anyway. AFAIK, they have never been repackaged for  the iPlayer site.  No clue what the BBC plans to do with them, but if those programmes ever stop working with get_iplayer, I'll drop that ancient code altogether.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">19-09-2015, 08:12 PM</div>
+</div>
+<div class="message">No Level3 has never had anything to do with archive programmes because they aren't available in HD but my guess would be that they need to get everything (embedded archive and news videos etc) off of RTMP completely before they can drop the platform. Even though archive and embedded videos aren't part of iPlayer itself, they all run off the VideoFactory system so I think they will have to move over to HDS as well as the changeover gets closer.<br />
+<br />
+Until recently, local news programmes were only on iPlayer over RTMP. It's only in the last week or so they have also become HDS. So gradually things are moving over but I'd say it looks like its still a little way away yet.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2015, 09:44 PM</div>
+</div>
+<div class="message">The example you gave does not have video factory streams, and I would be surprised if the BBC bothered to create VF packages for any of those ancient archives.  But who knows?  They're obviously still paying a CDN to host those archive programmes. No way to know how long they will do that. I would ditch all support for those archives in order to drop a lot of obsolete code, but there is no compelling reason to do so right now.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; RTMP failing since 2015-09-06</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

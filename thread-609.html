@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Unable to download from cron (rtmpdump error)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Unable to download from cron (rtmpdump error)</div>
+<div id="pagetitle"><h2>Unable to download from cron (rtmpdump error)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1113</h2></div><div class="dateline">02-01-2016, 09:03 PM</div>
+</div>
+<div class="message"><kbd>get_iplayer</kbd> is working fine from the command line, but when called from a user crontab it fails.<br />
+<br />
+As mentioned in <a href="/thread-63.html">another thread</a> I am spawning get_iplayer using a <kbd>bash -lc</kbd> in order to get the <kbd>PATH</kbd> to include <kbd>/usr/local/bin</kbd> (for the sake of rtmpdump), as I was unable to set <kbd>PATH</kbd> within the crontab for some reason.<br />
+<br />
+However, rtmpdump still fails.  Using <kbd>--verbose</kbd>, I get<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: rtmpver:<br />
+INFO: /usr/local/bin/rtmpdump: error while loading shared libraries: librtmp.so.1: cannot open shared object file: No such file or directory<br />
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification<br />
+WARNING: You may see this warning if rtmpdump has malfunctioned<br />
+INFO: /usr/local/bin/rtmpdump version /usr/local/bin/rtmpdump: error while loading shared libraries: librtmp.so.1: cannot open shared object file: No such file or directory</code></div></div><br />
+It seems like it may still be a <kbd>PATH</kbd> issue, this time unable to find <kbd>/usr/local/lib</kbd>.  I've tried adding that directory to my <kbd>PATH</kbd> in <kbd>.bashrc</kbd>, but that hasn't made any difference.<br />
+<br />
+Does anyone have any hints?<br />
+<br />
+I'm using Slackware 14.1 64 bit in case that's useful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-01-2016, 09:34 PM</div>
+</div>
+<div class="message">LD_LIBRARY_PATH would be the controlling environment variable for shared library loading.  I would expect /usr/local/lib to be available by default, but perhaps not. Try setting it explicitly and see if it makes a difference. That is just a conjecture, though - I don't have a Slackware system available at the moment to verify.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-01-2016, 10:11 PM</div>
+</div>
+<div class="message">One other thing that comes to mind: If you have rtmpdump in /usr/local, I presume you built it yourself rather than using the rtmpdump SlackBuild.  Perhaps try the SlackBuild and see if things work better with rtmpdump installed in the normal locations.<br />
+<br />
+EDIT: SlackBuild installation of get_iplayer and dependencies (incl. rtmpdump), as described in the installation instructions in the wiki, does work under cron.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1113</h2></div><div class="dateline">03-01-2016, 04:41 PM</div>
+</div>
+<div class="message">LD_LIBRARY_PATH is set to include /usr/local/lib in .bashrc so that shouldn't be a problem.<br />
+<br />
+I installed everything from source because I could never get the SlackBuild version of ffmpeg to work with lame, compiling myself was the only way I could find to get around that.  I guess I'd switch everything back as a last resort but would rather not lose lame if I can help it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1113</h2></div><div class="dateline">03-01-2016, 06:50 PM</div>
+</div>
+<div class="message">In case it's useful to anyone else, this worked:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>0  *  *  *  *  export LD_LIBRARY_PATH=/usr/local/lib &amp;&amp; bash -lc '/usr/local/bin/get_iplayer --pvr --verbose'</code></div></div><br />
+Although setting LD_LIBRARY_PATH at the top of the crontab doesn't, for some reason.  Same for PATH.  I have no idea why.<br />
+<br />
+Thanks for the pointers.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-01-2016, 06:53 PM</div>
+</div>
+<div class="message">Normally, it should be enough to set LD_LIBRARY_PATH at the beginning of your cron command. You would also normally need to use <kbd>--rtmpdump </kbd> in crontab since your rtmpdump binary wouldn't be in PATH, but you appear to get around that by launching a login shell from cron. I have no clue why LD_LIBRARY_PATH isn't being set the same way from .bashrc. Try setting it explicitly at the beginning of your cron command and using <kbd>--rtmpdump</kbd> instead of a login shell. Here is a test cron entry to show what I mean (downloads Bells on Sunday, a very short audio programme, to /tmp - adjust path to get_iplayer if necessary):<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>* * * * * LD_LIBRARY_PATH=/usr/local/lib /usr/bin/get_iplayer --pid b06tpxw9 --type radio --force --overwrite --output /tmp --rtmpdump /usr/local/bin/rtmpdump &gt; /tmp/gip.txt 2&gt;&amp;1</code></div></div><br />
+SlackBuild ffmpeg works fine with SlackBuild lame for get_iplayer. If it doesn't meet some other requirements of your own, then I suppose you don't have much choice but to DIY.  Unless you built ffmpeg with librtmp as a dependency (not terribly useful), there is no reason you couldn't switch to SlackBuild just for rtmpdump.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-01-2016, 07:22 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (03-01-2016, 06:50 PM)</span></cite>Although setting LD_LIBRARY_PATH at the top of the crontab doesn't, for some reason.  Same for PATH.  I have no idea why.</blockquote>LD_LIBRARY_PATH and PATH aren't supported by Slackware cron</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Unable to download from cron (rtmpdump error)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

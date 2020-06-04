@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Why is &quot;fake&quot; 50fps twice the size of 25fps?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Why is &quot;fake&quot; 50fps twice the size of 25fps?</div>
+<div id="pagetitle"><h2>Why is &quot;fake&quot; 50fps twice the size of 25fps?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2206</h2></div><div class="dateline">22-07-2018, 04:23 PM</div>
+</div>
+<div class="message">I've been looking for some information on why the 50fps streams are twice the size of the 25fps streams.<br />
+<br />
+Considering how MPEG, H.264 and almost all video compression works, only the _differences_ between subsequent frames are stored.<br />
+<br />
+I'm thinking especially in the extreme case of "fake" 50fps, where frames from the 25fps are just duplicated, isn't the video encoder smart enough to say "Frame 2 -&gt; see frame 1". "Frame 4 -&gt; see frame 3", and so on, and there be very little increase in file size?<br />
+<br />
+Is it because it messes up the motion estimation or something like this? Smooth movements (in 25fps) will look more juddery to the encoder when they "stop" every second frame in the fake 50fps version?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2212</h2></div><div class="dateline">04-08-2018, 11:40 AM</div>
+</div>
+<div class="message">I don't think that the move to 50fps is responsible for the doubling in size per se, it's likely a coincidence. If you read up on the BBC's 'Video Factory', in the changes moving to variable rate streaming, they've taken the opportunity to give more headroom [quality] to those with a good connection. Up to 5 Mbps vs the old 2+ Mbps.<br />
+<br />
+I think the wisdom is that a high bandwidth modest resolution stream is more flexible for up/rescaling on a wider range of devices, than a bandwidth starved higher resolution feed aimed mostly at TVs.<br />
+<br />
+The file size you get from the highest quality feed is probably excessive for storage. If you recode the BBC file to a lower quality, say 'ffmpeg -crf 23' you'll get around 1/3 the size for a barely perceptible drop in quality, but crucially, recoding the frame rate as well 'ffmpeg -crf 23 -r 25' won't save you very much more, as you suggest. The file size increases and savings seem all due to the quality settings and not the frame rate. <br />
+<br />
+It would be interesting to hear other opinions on this...</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Why is &quot;fake&quot; 50fps twice the size of 25fps?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

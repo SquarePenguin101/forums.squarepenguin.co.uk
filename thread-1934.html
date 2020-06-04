@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Warning that BBC iPlayer feeds are no longer available in broken obsolete get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Warning that BBC iPlayer feeds are no longer available in broken obsolete get_iplayer</div>
+<div id="pagetitle"><h2>Warning that BBC iPlayer feeds are no longer available in broken obsolete get_iplayer</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2299</h2></div><div class="dateline">03-12-2018, 01:40 AM</div>
+</div>
+<div class="message">Following a recent update to my Linux desktop machine I'm no longer getting any search results. It's deleted older files happily but it' not finding the new Doctor Who from earlier, or any programs.<br />
+I'm getting <br />
+"BBC iPlayer feeds are no longer available. Nitro is the BBC's new programme metadata API. You can find out more about this here: BBC iPlayer Feeds"<br />
+on get_iplayer.cgi ... so presumably the old API has now been switched off. It was working a week ago?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">03-12-2018, 09:08 AM</div>
+</div>
+<div class="message">You’ve said nothing about which version of get-iPlayer you’re running.  But I suspect therein lies your problem - its a wild guess, but I expect that your recent Linux upgrade has replaced a working gip with an older non-working one. <br />
+<br />
+If you need more help please can you provide some actual information?  E.g. what Linux, what version of gip, etc. See <a href="thread-706.html">https://forums.squarepenguin.co.uk/thread-706.html</a><br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2299</h2></div><div class="dateline">03-12-2018, 02:06 PM</div>
+</div>
+<div class="message">get_iplayer v3.17 ... I'd downloaded a clean setup from <a href="https://github.com/get-iplayer/get_iplayer/wiki/unix">https://github.com/get-iplayer/get_iplayer/wiki/unix</a> before posting. It's working fine to download using pid's from the bbc site just not giving search results which it was. I'm fairly sure it's the same version that was working, but I stand to be corrected?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2299</h2></div><div class="dateline">03-12-2018, 02:20 PM</div>
+</div>
+<div class="message">Curious ... it's given me a single "Doctor Who" now, but the number is '77' where I as in the two thousands last time ... AH it's added around 250 programs showing on the web interface, so it looks like the cache has been messed up.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-12-2018, 12:42 PM</div>
+</div>
+<div class="message">You messed up your cache by running an obsolete and broken version of get_iplayer. Rebuild it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2299</h2></div><div class="dateline">05-12-2018, 12:35 AM</div>
+</div>
+<div class="message">So if 3.17 is old and broken then what is the current version. <br />
+As far as I can tell it's the BBC end of things that was broken at the weekend and is only now rebuilding? So rather than getting some 2000 records downloaded I've still only got 765 currently as the BBC end rebuilds. It has not downloaded any programs prior to the weekend.<br />
+Now if there is some I should do other than wiping the .get_iplayer files to get it to rebuild I'm all ears.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-12-2018, 01:10 AM</div>
+</div>
+<div class="message">If there was something else you should do, why would I tell you to rebuild your cache? I don't just pull this stuff out of a hat. It would be a mutual waste of time to try to explain where you went wrong, particularly since you didn't <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to demonstrate the original problem, and you apparently can't reproduce it. You can see for yourself that you are now accessing the current, working version of get_iplayer. Rebuild your cache with it and don't worry about messing it up before.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Warning that BBC iPlayer feeds are no longer available in broken obsolete get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

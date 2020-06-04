@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No programmes added to radio or TV caches</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; No programmes added to radio or TV caches</div>
+<div id="pagetitle"><h2>No programmes added to radio or TV caches</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">22-03-2018, 05:56 PM</div>
+</div>
+<div class="message">I've just got:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get_iplayer --type=radio -f<br />
+get_iplayer 3.12-ppa31b, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+INFO: Indexing radio programmes (concurrent)<br />
+......<br />
+INFO: Added 0 radio programmes to cache</code></div></div><br />
+It's about 6 hours since the cache was last refreshed so there should be quite a few programmes added. For example today's R3 Lunchtime Concert is missing but is downloadable by pid.<br />
+<br />
+Similar for TV.<br />
+<br />
+Temporary blip or something broken?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-03-2018, 06:35 PM</div>
+</div>
+<div class="message">Thanks for the heads-up. The layout of BBC schedule pages has just changed, so get_iplayer cache updates are broken at the moment. Download programmes via <kbd>--pid</kbd> or <kbd>--url</kbd> until things are sorted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-03-2018, 09:16 PM</div>
+</div>
+<div class="message">This looks like it can be fixed fairly easily. There should be a new release (which will contain some other changes) over the weekend.<br />
+<br />
+EDIT: Thread closed. Me-too posts and duplicates will be deleted or dumped here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2093</h2></div><div class="dateline">22-03-2018, 09:33 PM</div>
+</div>
+<div class="message">Just installed the latest version 3.12 on to Debian Testing, but when I try to download a list of all the programs available ( get_iplayer --Long ".*" ) It goes through the motions but ends up saying<br />
+<br />
+INFO: Indexing tv programmes (concurrent)<br />
+..................................<br />
+INFO: Added 0 tv programmes to cache<br />
+INFO: 0 matching programmes<br />
+<br />
+Any suggestions please</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">24-03-2018, 01:00 AM</div>
+</div>
+<div class="message">I've a script which normally returns a filtered result to reduce the number of unwanted programmes. Part of the command line contains:<br />
+<br />
+~/get_iplayer/get_iplayer-3.06/get_iplayer --available-since 30<br />
+<br />
+Suddenly, this no longer returns any programmes. Running that part of the command without "get_iplayer --available-since 30", I get the full listing, obviously unfiltered. Any idea why this sub command is no longer working?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1650</h2></div><div class="dateline">24-03-2018, 03:58 AM</div>
+</div>
+<div class="message">Hi, as of today/tonight my Get Iplayer wont refresh or work hope someone can help me <br />
+Thank you in Advance Mark</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-03-2018, 08:00 PM</div>
+</div>
+<div class="message">fixed in v3.13</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; No programmes added to radio or TV caches</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

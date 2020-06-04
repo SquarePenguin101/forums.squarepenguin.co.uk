@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - updated activeperl to 5.24.1</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; updated activeperl to 5.24.1</div>
+<div id="pagetitle"><h2>updated activeperl to 5.24.1</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1716</h2></div><div class="dateline">01-05-2017, 10:56 AM</div>
+</div>
+<div class="message">So I've updated my perl installation to the latest version of activeperl.<br />
+<br />
+But I get the following error: <br />
+"could not find ParserDetails.ini in /Users/Dave/Library/ActivePerl-5.24/lib/XML/SAX"<br />
+every time I ask get_iplayer for extended programme information via<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer &lt;programme pid&gt; --long -i</code></div></div><br />
+For example:<br />
+[Image: <a href="http://img.ddw.nu/getiplayprlini.png">http://img.ddw.nu/getiplayprlini.png</a>]<br />
+(to view image in full size, right click and select open image in new tab) <br />
+<br />
+Now, programme information is displayed, as the screenshot shows, but somehow <br />
+I seem to miss a perl module or part of one. Can some one help clear this up?<br />
+<br />
+Also, programmes download fine and do get their correct metadata after conversion.<br />
+So I'm not sure if this is a critical error or not.<br />
+<br />
+Any help or advise is appreciated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 11:57 AM</div>
+</div>
+<div class="message">You are on your own with ActivePerl. I've now made clear in the macOS installation instructions that it is not supported.  Of course, this error isn't necessarily specific to ActivePerl - Google is your friend here. If one of the XML-related modules can't be installed properly by ActivePerl, switch to the system Perl.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1716</h2></div><div class="dateline">01-05-2017, 12:00 PM</div>
+</div>
+<div class="message">thanks, but I had a similar problem with system perl, which for v.3.00 no longer works as it's outdated, waiting on Apple to update it. that's the reason I switched to a separate installation of ActivePerl.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 12:06 PM</div>
+</div>
+<div class="message">If you don't say that you are using an unsupported macOS version, how would you expect anyone to know that? If your system is that old, Apple won't be updating it. You'll have to sort out your module installation in ActivePerl</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 12:43 PM</div>
+</div>
+<div class="message">System Perl on Sierra works fine. If you know different, provide details.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1716</h2></div><div class="dateline">01-05-2017, 02:48 PM</div>
+</div>
+<div class="message">Seems that mac ports was to blame, some years ago I installed mac ports (before mac OS Lion) and at some point I have used it to replace system perl with an updated version installed by macports.<br />
+Now, I hadn't touched macports installation for the past two years, so it was also outdated preventing me from <br />
+having the latest release of both mac ports and as a result an outdated version of perl, which, near as I can tell was version 5.09. I've just installed the latest version of macports for sierra, reinstalled all the ports and low and behold.. I now have the correct, non-ActivePerl version of perl installed.... and the strange "could not find ParserDetails.ini in /Users/Dave/Library/ActivePerl-5.24/lib/XML/SAX" error is gone. end good, all good.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; updated activeperl to 5.24.1</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Radio programme not found in PVR search because it requires search on episode title</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Radio programme not found in PVR search because it requires search on episode title</div>
+<div id="pagetitle"><h2>Radio programme not found in PVR search because it requires search on episode title</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">16-10-2017, 11:24 AM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+My overnight pvr run failed to pick up a radio programme over the weekend. The programme's full title is "Friday Night Is Music Night - Queen: A Friday Night at the Opera, BBC Radio 2", the PID is b096yq2y.<br />
+<br />
+The contents of the pvr search file is:<br />
+<br />
+search0 Queen<br />
+<br />
+Interestingly, if I run without pvr and search for queen, it also doesn't find it. However, if I search for "Friday night" then the programme is found.<br />
+<br />
+Any suggestions? Full log is attached, but all it shows is that it didn't find anything...the full command was:<br />
+<br />
+/usr/bin/get_iplayer --verbose --pvr-single queen -o /var/spool/xbmc/iPlayer-Download/ --type=radio,tv<br />
+<br />
+Andy<br/><br/>
+<a href="static/thread-1537-get_iplayer.txt">get_iplayer.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">16-10-2017, 03:34 PM</div>
+</div>
+<div class="message">Ah, that problem again. :-)<br />
+<br />
+From the FAQ:<ul class="mycode_list"><li>Are you searching for a string in the episode title? By default, get_iplayer only searches the programme (series) name. To search both, use <br />
+--fields=name,episode<br />
+</li>
+</ul>
+<br />
+In your specific case, the series name is "Friday Night Is Music Night", and the episode name is "Queen: A Friday Night at the Opera".<br />
+<br />
+For those who want to search both fields, all the time, you can do:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --fields=name,episode</code></div></div>but be aware that this might match programmes you don't want or expect.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">16-10-2017, 03:55 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+That sounds plausible. Thanks for a comprehensive response.<br />
+<br />
+I think I'll make the change, as I'd rather have to delete recordings occasionally than miss something I didn't realise was on...<br />
+<br />
+Thanks again.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-10-2017, 05:05 PM</div>
+</div>
+<div class="message">I wouldn't recommend adding that to your preferences. Depending on your search strings, it could spawn a lot of unwanted downloads since it will be applied to every search. Only add it to the PVR searches where it might be needed. Even with that, such a generic search string as "queen" is likely to always spawn a lot of unwanted downloads. You can cut out a few of them by converting your search string into a regular expression that matches only the whole word "Queen" and not, e.g., "Queensland".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1168</h2></div><div class="dateline">16-10-2017, 10:09 PM</div>
+</div>
+<div class="message">How would I add it to the search for a single PVR file?<br />
+<br />
+I'll run with it overnight and see how many unwanted downloads I get.<br />
+<br />
+Thanks<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">16-10-2017, 10:39 PM</div>
+</div>
+<div class="message">just add the --fields option when you use pvr-add.  something like this:<br />
+<br />
+get_iplayer --fields=name,episode queen --pvr-add queen<br />
+<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Radio programme not found in PVR search because it requires search on episode title</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

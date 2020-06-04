@@ -1,0 +1,172 @@
+
+
+C:\Program Files (x86)\get_iplayer>get_iplayer --type=radio 13152 --verbose --fo
+rce --get
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: User prefs dir: C:\Users\David Vincent/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+        aactomp3 = 1
+        atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe
+        ffmpeg = .\FFmpeg\ffmpeg-1.2-win32-static\bin\ffmpeg.exe
+        force = 1
+        lame = .\LAME\lame.exe
+        mmsnothread = 1
+        mplayer = .\MPlayer\mplayer-svn-36348\mplayer.exe
+        nopurge = 1
+        output = C:\Users\Public\Recorded TV
+        outputradio = c:\users\david vincent\music\downloaded radio"
+        rtmpdump = .\RTMPDump\rtmpdump.exe
+        type = radio
+        verbose = 1
+        vlc = c:\program files\videolan\vlc"
+
+INFO: Search args: '13152'
+INFO: Additionally getting cached programme data for radio
+INFO: Got 3301 file cache entries for radio
+Matches:
+13152:  Tweet of the Day - Gadwall, BBC Radio 4, Factual,Radio,Science & Nature
+
+INFO: 1 Matching Programmes
+INFO: Getting page http://feeds.bbc.co.uk/iplayer/episode/b03k5bgq
+INFO: Getting page http://www.bbc.co.uk/programmes/b03k5bgq.rdf
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b03k5bgq
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b03k5bgq
+INFO: Using Not Live standard TV and Radio: b03k5bgb
+INFO: Version: default, VersionPid: b03k5bgb, Duration: 120
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03k5bgb?cb=
+13287
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03k5bgb/ipl
+ayer_uk_stream_aac_rtmp_concrete/limelight?cb=55172
+INFO: Getting page http://www.bbc.co.uk/mediaselector/4/mtis/stream/b03k5bgb/ipl
+ayer_uk_stream_aac_rtmp_lo_concrete/limelight?cb=59405
+INFO: Found mode flashaaclow1: (iplayer_uk_stream_aac_rtmp_lo_concrete) rtmp aac
+ 48kbps stream (CDN: limelight/9)
+INFO: Found mode flashaacstd1: (iplayer_uk_stream_aac_rtmp_concrete) rtmp aac 12
+8kbps stream (CDN: limelight/10)
+INFO: Found mode rtspaaclow1: (iplayer_uk_stream_aac_rtmp_lo_concrete) rtmp aac
+48kbps stream (CDN: limelight/9)
+INFO: Found mode rtspaacstd1: (iplayer_uk_stream_aac_rtmp_concrete) rtmp aac 128
+kbps stream (CDN: limelight/10)
+INFO: Found mode wma1: (iplayer_intl_stream_wma_uk_concrete) mms wma9 128kbps st
+ream (CDN: asx/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b03k5bgb.rdf
+INFO: Will search for versions: default
+INFO: Mode list: flashaachigh,flashaacstd,flashaudio,flashaaclow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashaacstd1,flashaaclow1 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Tweet of the Day - Gadwall
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Tweet_of_the_Day_-_Gadwall_b03k5bgq_default
+
+INFO: .\RTMPDump\rtmpdump.exe version 2.4
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcods
+pdns.fcod.llnwd.net&auth=as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_a
+uth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_10_10_05_50.mp4&et=138721854
+3&fmta-token=9abb878f10ecc71858cfa28d4c3161145e0b66f5c0be24ee9e796b538f1021d0&ai
+fp=v001&slist=mp4:radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_201
+3_12_10_10_05_50.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=a
+dobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_tuesday
+_0558_b03k5bgb_2013_12_10_10_05_50.mp4&et=1387218543&fmta-token=9abb878f10ecc718
+58cfa28d4c3161145e0b66f5c0be24ee9e796b538f1021d0, application: a5999/e1?as=adobe
+-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_055
+8_b03k5bgb_2013_12_10_10_05_50.mp4&et=1387218543&fmta-token=9abb878f10ecc71858cf
+a28d4c3161145e0b66f5c0be24ee9e796b538f1021d0, authString: as=adobe-hmac-sha256&a
+v=1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_201
+3_12_10_10_05_50.mp4&et=1387218543&fmta-token=9abb878f10ecc71858cfa28d4c3161145e
+0b66f5c0be24ee9e796b538f1021d0, swfUrl: http://www.bbc.co.uk/emp/releases/iplaye
+r/revisions/617463_618125_4/617463_618125_4_emp.swf, file: C:\users\david vincen
+t\music\downloaded radio"\Tweet_of_the_Day_-_Gadwall_b03k5bgq_default.partial.mp
+3, file_done: C:\users\david vincent\music\downloaded radio"\Tweet_of_the_Day_-_
+Gadwall_b03k5bgq_default.mp3
+
+
+INFO: Command: ".\RTMPDump\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--pla
+ypath" "mp4:radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_1
+0_10_05_50.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://www.bbc.
+co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" "-
+-tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&av=
+1&te=connect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_2013_
+12_10_10_05_50.mp4&et=1387218543&fmta-token=9abb878f10ecc71858cfa28d4c3161145e0b
+66f5c0be24ee9e796b538f1021d0" "--app" "a5999/e1?as=adobe-hmac-sha256&av=1&te=con
+nect&mp=radio4/secure_auth/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_10_10
+_05_50.mp4&et=1387218543&fmta-token=9abb878f10ecc71858cfa28d4c3161145e0b66f5c0be
+24ee9e796b538f1021d0" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b03k5bgq
+/Tweet_of_the_Day_Gadwall/" "--resume" "-o" "C:\users\david vincent\music\downlo
+aded radio\"\Tweet_of_the_Day_-_Gadwall_b03k5bgq_default.partial.mp3.flv" "--tim
+eout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Already Completed at: 5760.035 sec Duration=5.760 sec
+Download complete
+INFO: Command exit code 0 (raw code = 0)
+WARNING: Failed to stream file C:\users\david vincent\music\downloaded radio"\Tw
+eet_of_the_Day_-_Gadwall_b03k5bgq_default.partial.mp3.flv via RTMP
+DEBUG: Record using flashaacstd1 mode return code: 'next'
+INFO: skipping flashaacstd1 mode
+INFO: Trying flashaaclow1 mode to record radio: Tweet of the Day - Gadwall
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Tweet_of_the_Day_-_Gadwall_b03k5bgq_default
+
+INFO: .\RTMPDump\rtmpdump.exe version 2.4
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcods
+pdns.fcod.llnwd.net&auth=as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_a
+uth/modem/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_10_10_08_44.mp4&et=138
+7218543&fmta-token=0487e6567a0a645ff3a90ca856ee7dd1e93c24059a30571ec15b784a6be7c
+1d6&aifp=v001&slist=mp4:radio4/secure_auth/modem/RBN2_radio_4_fm_-_tuesday_0558_
+b03k5bgb_2013_12_10_10_08_44.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a
+5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/modem/RBN2_ra
+dio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_10_10_08_44.mp4&et=1387218543&fmta-toke
+n=0487e6567a0a645ff3a90ca856ee7dd1e93c24059a30571ec15b784a6be7c1d6, application:
+ a5999/e1?as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/modem/RBN2_
+radio_4_fm_-_tuesday_0558_b03k5bgb_2013_12_10_10_08_44.mp4&et=1387218543&fmta-to
+ken=0487e6567a0a645ff3a90ca856ee7dd1e93c24059a30571ec15b784a6be7c1d6, authString
+: as=adobe-hmac-sha256&av=1&te=connect&mp=radio4/secure_auth/modem/RBN2_radio_4_
+fm_-_tuesday_0558_b03k5bgb_2013_12_10_10_08_44.mp4&et=1387218543&fmta-token=0487
+e6567a0a645ff3a90ca856ee7dd1e93c24059a30571ec15b784a6be7c1d6, swfUrl: http://www
+.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.sw
+f, file: C:\users\david vincent\music\downloaded radio"\Tweet_of_the_Day_-_Gadwa
+ll_b03k5bgq_default.partial.mp3, file_done: C:\users\david vincent\music\downloa
+ded radio"\Tweet_of_the_Day_-_Gadwall_b03k5bgq_default.mp3
+
+
+INFO: Command: ".\RTMPDump\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--pla
+ypath" "mp4:radio4/secure_auth/modem/RBN2_radio_4_fm_-_tuesday_0558_b03k5bgb_201
+3_12_10_10_08_44.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://ww
+w.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.s
+wf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha2
+56&av=1&te=connect&mp=radio4/secure_auth/modem/RBN2_radio_4_fm_-_tuesday_0558_b0
+3k5bgb_2013_12_10_10_08_44.mp4&et=1387218543&fmta-token=0487e6567a0a645ff3a90ca8
+56ee7dd1e93c24059a30571ec15b784a6be7c1d6" "--app" "a5999/e1?as=adobe-hmac-sha256
+&av=1&te=connect&mp=radio4/secure_auth/modem/RBN2_radio_4_fm_-_tuesday_0558_b03k
+5bgb_2013_12_10_10_08_44.mp4&et=1387218543&fmta-token=0487e6567a0a645ff3a90ca856
+ee7dd1e93c24059a30571ec15b784a6be7c1d6" "--pageUrl" "http://www.bbc.co.uk/iplaye
+r/episode/b03k5bgq/Tweet_of_the_Day_Gadwall/" "--resume" "-o" "C:\users\david vi
+ncent\music\downloaded radio\"\Tweet_of_the_Day_-_Gadwall_b03k5bgq_default.parti
+al.mp3.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Already Completed at: 5760.035 sec Duration=5.760 sec
+Download complete
+INFO: Command exit code 0 (raw code = 0)
+WARNING: Failed to stream file C:\users\david vincent\music\downloaded radio"\Tw
+eet_of_the_Day_-_Gadwall_b03k5bgq_default.partial.mp3.flv via RTMP
+DEBUG: Record using flashaaclow1 mode return code: 'next'
+INFO: skipping flashaaclow1 mode
+INFO: You may wish to try --modes=wma for version default
+INFO: Note that wma mode is real-time only, and thus is generally only suitable
+for recording live radio.
+ERROR: Failed to record 'Tweet of the Day - Gadwall (b03k5bgq)'
+
+C:\Program Files (x86)\get_iplayer>

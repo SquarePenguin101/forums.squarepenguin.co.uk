@@ -1,0 +1,64 @@
+get_iplayer 2.96-windows.1, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\brian/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	isodate = 1
+	pid = http://www.bbc.co.uk/iplayer/cbeebies/episode/b07tygtj/the-lets-go-club-series-2-6-a-bit-of-everything-for-everyone
+	verbose = 1
+
+INFO: Search args: 'http://www.bbc.co.uk/iplayer/cbeebies/episode/b07tygtj/the-lets-go-club-series-2-6-a-bit-of-everything-for-everyone'
+INFO: Will try prog types: tv
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Got 1859 file cache entries for tv
+Cleaning pid Old: 'http://www.bbc.co.uk/iplayer/cbeebies/episode/b07tygtj/the-lets-go-club-series-2-6-a-bit-of-everything-for-everyone',  New: 'b07tygtj'
+INFO: Getting page http://www.bbc.co.uk/programmes/b07tygtj.rdf
+WARNING: rdf URL contained no data
+WARNING: PID URL contained no RDF data. Trying to record PID directly.
+INFO: Trying pid: b07tygtj using type: tv
+INFO: Trying to stream pid using type tv
+INFO: pid not found in tv cache
+INFO: Cleaning pid Old: 'b07tygtj',  New: 'b07tygtj'
+Matches:
+
+INFO: 1 Matching Programmes
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b07tygtj.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b07tygtj.xml
+WARNING: Could not download programme metadata from http://www.bbc.co.uk/programmes/b07tygtj.xml
+INFO: iPlayer metadata URL = http://www.bbc.co.uk/iplayer/playlist/b07tygtj
+INFO: Getting page http://www.bbc.co.uk/iplayer/playlist/b07tygtj
+INFO: iPlayer metadata URL (JSON) = http://www.bbc.co.uk/programmes/b07tygtj/playlist.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b07tygtj/playlist.json
+ERROR: Failed to get version pid metadata from iplayer site (JSON)
+INFO: iPlayer metadata URL (HTML) [default] = http://www.bbc.co.uk/iplayer/episode/b07tygtj/
+INFO: Getting page http://www.bbc.co.uk/iplayer/episode/b07tygtj/
+
+INFO: No metadata for default version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [audiodescribed] = http://www.bbc.co.uk/iplayer/episode/b07tygtj/ad
+INFO: Getting page http://www.bbc.co.uk/iplayer/episode/b07tygtj/ad
+
+INFO: No metadata for audiodescribed version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [signed] = http://www.bbc.co.uk/iplayer/episode/b07tygtj/sign
+INFO: Getting page http://www.bbc.co.uk/iplayer/episode/b07tygtj/sign
+
+INFO: No metadata for signed version retrieved from iPlayer site (HTML)
+
+WARNING: No programmes are available for this pid with version(s): default
+WARNING: You may receive this message if you are using get_iplayer outside the UK
+ERROR: Could not get version pid metadata
+ERROR: Could not get programme metadata

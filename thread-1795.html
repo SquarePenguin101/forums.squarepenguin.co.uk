@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Repeated indexing due to cache not being updated</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Repeated indexing due to cache not being updated</div>
+<div id="pagetitle"><h2>Repeated indexing due to cache not being updated</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">26-05-2018, 09:26 PM</div>
+</div>
+<div class="message">I've just noticed perhaps a small glitch under the command line in Windows 10 (in a command prompt) using 3.14.0.<br />
+<br />
+If I do a simple check for a program (for example <span style="font-style: italic;" class="mycode_i">get_iplayer submarine</span>) it goes away, does its normal concurrent indexing (if it's the first run of the day) and comes up with a list of matching shows.<br />
+<br />
+However if I then do a second one (for example <span style="font-style: italic;" class="mycode_i">get tomb</span>) it then goes off and does the indexing again before showing up the list of matches. And then for every subsequent search again it does the indexing before showing results.<br />
+<br />
+The available programs are all there as they should be, and downloading works fine. It's just that doing the indexing takes a few minutes to complete each time. The first one is of course usually necessary and fine, but the repeated ones (adding nothing to the list normally) are redundant.<br />
+<br />
+Can anyone reproduce this, or is it something in my set-up? It didn't do this in 3.13.0 or earlier versions that I can recall.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">26-05-2018, 09:36 PM</div>
+</div>
+<div class="message">Unable to reproduce this issue. <br />
+<br />
+Have you somehow set a preference to refresh by default?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">26-05-2018, 10:31 PM</div>
+</div>
+<div class="message">Not knowingly, although --show-prefs does include one about refreshfuture:<br />
+<br />
+        excludechannel = "BBC Alba"<br />
+        fields = name,episode<br />
+        modes = default<br />
+        refreshfuture = 1<br />
+        tvmode = better<br />
+        fileprefix = &lt;name&gt;&lt;-senum&gt;&lt;-episodeshort&gt;<br />
+        whitespace = 1<br />
+<br />
+If I do "--prefs-del refreshfuture" it just says updated and moves it to the bottom of the list (or more accurately reorders the whole list)?<br />
+<br />
+        tvmode = better<br />
+        modes = default<br />
+        fields = name,episode<br />
+        fileprefix = &lt;name&gt;&lt;-senum&gt;&lt;-episodeshort&gt;<br />
+        excludechannel = "BBC Alba"<br />
+        whitespace = 1<br />
+        refreshfuture = 1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-05-2018, 04:46 PM</div>
+</div>
+<div class="message"><a href="thread-706.html#what-information-should-you-provide">Follow our instructions</a> to provide a proper report so we can see what is happening on your system. You'll need to attach the logs from two consecutive searches. Indicate which is which. Before each search, run <kbd>get_iplayer --show-cache-age</kbd> and post the output. Again, indicate which is which.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>If I do "--prefs-del refreshfuture" it just says updated and moves it to the bottom of the list</blockquote>
+Don't delete before testing. If you should want to delete it later, see "Setting preferences" in documentation for correct syntax</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">27-05-2018, 05:33 PM</div>
+</div>
+<div class="message">No problem. It's get_iplayer 3.14.0 running under Windows 10 build 1803. Run just after a download, hence the low first cache age. Everything's on the local HD - it's all working fine except doing the indexing every time.<br />
+<br />
+This is the sequence (logs uploaded to a pastebin to keep things small), repeating the same sequence as in my first post:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer --show-cache-age</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">191 secs</span><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer&gt;get_iplayer submarine --verbose &gt; c:/users/darren/desktop/sub.txt 2&gt;&amp;1</span><br />
+<br />
+<a href="https://paste.ubuntu.com/p/5cbbgGgT42/">https://paste.ubuntu.com/p/5cbbgGgT42/</a><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer --show-cache-age</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">18 secs</span><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer&gt;get_iplayer tomb --verbose &gt; c:/users/darren/desktop/tomb.txt 2&gt;&amp;1</span><br />
+<br />
+<a href="https://paste.ubuntu.com/p/TqmCBq3gSb/">https://paste.ubuntu.com/p/TqmCBq3gSb/</a><br />
+<br />
+If you need anything else please let me know.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-05-2018, 06:37 PM</div>
+</div>
+<div class="message">Thanks. However, I must ask you to do it again using <kbd>--debug</kbd> instead of <kbd>--verbose</kbd>. There is a useful bit of information that only appears with <kbd>--debug</kbd>. <kbd>--debug</kbd> will produce a large spew, unfortunately. Feel free to upload the complete files. If you want to dig out the relevant nuggets, the line to look for in each case looks like this:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>DEBUG: Cache expiry time for tv is 14400 secs - refresh in 5337 secs</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">27-05-2018, 08:09 PM</div>
+</div>
+<div class="message">OK here's the new sequence:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer --show-cache-age</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: tv cache age: 8681 secs</span><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer submarine --debug &gt; c:/users/darren/desktop/sub2.txt 2&gt;&amp;1</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">DEBUG: Cache expiry time for tv is 14400 secs - refresh in 5704 secs</span><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer --show-cache-age</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">INFO: tv cache age: 29 secs</span><br />
+<br />
+<span style="font-style: italic;" class="mycode_i">get_iplayer tomb --debug &gt; c:/users/darren/desktop/tomb2.txt 2&gt;&amp;1</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">DEBUG: Cache expiry time for tv is 14400 secs - refresh in 14352 secs</span><br />
+<br />
+The full logs are in the zip file below - you can see which is which from their filenames.<br />
+<br />
+<a href="static/thread-1795-Logs.zip">Logs.zip</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-05-2018, 09:39 PM</div>
+</div>
+<div class="message">Thanks. It appears that new programmes are not being added to your cache, which is triggering the repeated updates. These two lines are the same in all four logs:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Got 7523 file cache entries for tv<br />
+INFO: Cache refresh limit (tv): 2018-05-26T00:30:08+00:00</code></div></div><br />
+It's unlikely, though not impossible, that the number of cache entries would be exactly the same for updates a couple of hours apart. The cache refresh limit is based on the availability date of the newest programme in the cache, so it should advance with every update that adds new programmes.<br />
+<br />
+File corruption could be to blame, but there is no point in wasting time looking for it. Back up your cache files and delete them. Use <kbd>--cache-rebuild</kbd> to rebuild them separate from any other activity.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">28-05-2018, 08:14 AM</div>
+</div>
+<div class="message">@user-2 - thanks for that. Spot on the money as usual, the rebuild has fixed it.<br />
+<br />
+This one can be closed off as resolved.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Repeated indexing due to cache not being updated</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

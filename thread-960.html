@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Saving radio as mp3 in gip 2.95</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Saving radio as mp3 in gip 2.95</div>
+<div id="pagetitle"><h2>Saving radio as mp3 in gip 2.95</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">18-07-2016, 09:44 AM</div>
+</div>
+<div class="message">Hi guys,<br />
+Im running get_iplayer 2.95 on my Raspberry Pi Zero running the latest version of Raspbian, all updates and upgrades done. I've amended the /var/lib/get_iplayer/options file to the 295 settings, as well as /home/.get_iplayer/options.<br />
+When I run get_iplayer --pvr to get radio shows (I only download radio)  I get the msg for deprecated settings in particular the aactomp3 -1 setting. I tried remming this out and GIP always saves to m4a, the only way to get it to save as mp3 is to leave the aac2mp3 line active, now it says the deprecated settings will be removed in a later version. If this happens, how will I save as mp3?<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">18-07-2016, 09:50 AM</div>
+</div>
+<div class="message">Hi Steve,<br />
+<br />
+Converting to mp3 functionality will be removed in future releases as you have worked out. <br />
+<br />
+When this functionality is removed converting to mp3 would need to be done by another third party programme. Just use the third party programme to convert the file get_iplayer downloads. <br />
+<br />
+I don't use this function so I'll let someone else jump in with specific suggestions but there are various free programmes you can use for this such and a quick search for "free mp3 converter" should turn up something suitable.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-07-2016, 10:20 AM</div>
+</div>
+<div class="message">A perusal of the FAQ or the examples page would have lead you to one possible solution. But as SP said, there are numerous alternatives.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">18-07-2016, 12:48 PM</div>
+</div>
+<div class="message">As I only ever use mp3 (and Linux) , I dont suppose I'll be updating again unless 2.95 stops downloading.<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">31-07-2016, 07:25 PM</div>
+</div>
+<div class="message">I'm on Windows and have used <a href="http://www.foobar2000.org/">Foobar2000</a> for almost all my transcoding needs over many years.<br />
+<br />
+However, for aac and m4a repackaging / transcoding I use <a href="https://gpac.wp.mines-telecom.fr/mp4box/">MP4Box</a> and <a href="https://ffmpeg.org/">ffmpeg</a> (get the ffmpeg builds <a href="https://ffmpeg.zeranoe.com/builds/">here</a>).<br />
+<br />
+I've created scripts that I run to do all my converting. This is the command I use to transcode m4a to mp3:<br />
+<br />
+<kbd>ffmpeg -i input.m4a -acodec libmp3lame -q:a 0 output.mp3</kbd><br />
+<br />
+ffmpeg provide detailed info on this LAME (mp3) encoder <a href="https://trac.ffmpeg.org/wiki/Encode/MP3">here</a>.<br />
+<br />
+There is also the issue of you transcoding from one lossy format (m4a) to another lossy format (mp3) which will degrade the audio quality. Maybe this is not an issue for you?<br />
+<br />
+Perhaps the most obvious question is why not use the m4a files? Is it because a media player you use does not support m4a files?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">02-08-2016, 10:10 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-08-2016, 07:28 AM)</span></cite>Perhaps the most obvious question is why not use the m4a files? Is it because a media player you use does not support m4a files?</blockquote>
+<br />
+Indeed, it's only lack of support on for "m4a" on my Sansa Clip player that has made it necessary. Not a hardship with your helpful ffmpeg script that I no longer have to go work out for myself... :)</blockquote>You should be able to use <a href="http://www.rockbox.org/wiki/SansaAMS">Rockbox</a> on your Sansa Clip that will support a lot more formats including M4A files ;)<br />
+<br />
+I have used Rockbox for over 10 years on my iRiver H120 DAP and it's great.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-08-2016, 10:35 AM</div>
+</div>
+<div class="message">I don't know if this is still true, but at one point seeking didn't work properly on the Sansa Clip w/Rockbox unless you either re-muxed the M4A files with <kbd>mp4box -ipod</kbd> (<a href="http://forums.rockbox.org/index.php?topic=48020">http://forums.rockbox.org/index.php?topic=48020</a>), or re-muxed them with ffmpeg using the <kbd>-movflags rtphint</kbd> option.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">02-08-2016, 12:31 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (02-08-2016, 10:35 AM)</span></cite>I don't know if this is still true, but at one point seeking didn't work properly on the Sansa Clip w/Rockbox unless you either re-muxed the M4A files with <kbd>mp4box -ipod</kbd> (<a href="http://forums.rockbox.org/index.php?topic=48020">http://forums.rockbox.org/index.php?topic=48020</a>), or re-muxed them with ffmpeg using the <kbd>-movflags rtphint</kbd> option.</blockquote><br />
+good call on the seeking issue with m4a files relating to the moov atom. I generally use MP4Box for the final m4a file. As a test I used ffmpeg including the <kbd>-movflags rtphint</kbd> option and the resulting m4a file was considerably larger than the Mp4Box created file. I'm guessing that is due to extra seeking info being added? If so, I'd recommend people use MP4Box wherever possible.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1369</h2></div><div class="dateline">11-08-2016, 05:30 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I use Windows 7 x64 for running Get_Player V 2.95 and record various radio shows for subsequent listening to on my car's mp3 player. My 'options' file has a line to automatically convert MP4 /AAC to MP3.<br />
+<br />
+This still works but I now see it is being flagged as 'Deprecated' and so I assume due to be removed in future. Is there a better way to convert d/ls to MP3 that can be set automatically as a 'bulk option' in the config?<br />
+<br />
+TiA<br />
+<br />
+David</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2016, 05:32 PM</div>
+</div>
+<div class="message">See the FAQ list</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1369</h2></div><div class="dateline">11-08-2016, 05:39 PM</div>
+</div>
+<div class="message">Thanks for the prompt reply.. I had checked the faqs and yes, I'm using the:<br />
+<br />
+--aactomp3<br />
+<br />
+command and it is this which is flagged as to be deprecated... I was looking for how/what to do to replace this.. what am I missing pls?<br />
+<br />
+Many thanks<br />
+<br />
+David</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">11-08-2016, 06:46 PM</div>
+</div>
+<div class="message">Whilst this is not an automatic process, I've created a number of scripts that I run to convert/extract/transcode/re-mux etc the .ts, .m4a, .mp4, .aac, .mp3 files.<br />
+<br />
+Here's the <kbd>m4a2mp3.cmd</kbd> script I use:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>:: Name:     m4a2mp3.cmd<br />
+:: Purpose:  Configures ffmpeg to transcode an audio m4a file to an mp3 using the LAME encoder<br />
+:: Author:   jaybeee @ themixingbowl.org<br />
+:: Revision: Aug 2016 - v0.1<br />
+<br />
+@ECHO OFF<br />
+<br />
+SETLOCAL ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION<br />
+<br />
+:: variables begin with v<br />
+<br />
+:: set name of this script without file extension<br />
+SET vMe=%~n0<br />
+<br />
+:: set name of the parent directory where this script resides<br />
+SET vParent=%~dp0<br />
+<br />
+:: set location of ffmpeg ** CHANGE ME **<br />
+SET vffmpeg="C:&#92;PATH&#92;TO&#92;ffmpeg&#92;ffmpeg.exe"<br />
+<br />
+:: call ffmpeg to transcode all m4a files in current directory and save in mp3 directory <br />
+:: -q:a = LAME VBR quality where 0 is best and 9 is lowest.<br />
+:: -b:a = LAME CBR, so 128k 192k 256k 320k can be used.<br />
+MKDIR mp3<br />
+FOR %%f IN ("*.m4a") DO %vffmpeg% -i "%%f" -acodec libmp3lame -q:a 0 "mp3&#92;%%~nf.mp3"<br />
+<br />
+:: Finish<br />
+ECHO Finished mp3 creation<br />
+<br />
+:: pause can be used to view the extraction details<br />
+PAUSE<br />
+<br />
+:END<br />
+ENDLOCAL<br />
+ECHO ON<br />
+@EXIT /B 0</code></div></div><br />
+<br />
+Copy &amp; paste the above into a file called <kbd>m4a2mp3.cmd</kbd> and place it in the directory/folder where the M4A files that you want converting are. Double-click it and a new dir/folder will be created called <kbd>mp3</kbd> that will contain all the converted/transcoded M4A files using the LAME encoder.<br />
+ <br />
+Make sure you the change path to the <kbd>ffmpeg.exe</kbd>. <br />
+Also remember that it will convert ALL M4A files in that folder.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1369</h2></div><div class="dateline">11-08-2016, 06:55 PM</div>
+</div>
+<div class="message">Very helpful indeed - many thanks<br />
+<br />
+David</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2016, 08:38 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-08-2016, 05:39 PM)</span></cite>command and it is this which is flagged as to be deprecated... I was looking for how/what to do to replace this.. what am I missing pls?</blockquote>Did the link provided in the relevant FAQ item not spark even a little curiosity? You'll find slightly expanded examples if you start from the <a href="https://github.com/get-iplayer/get_iplayer/wiki/faq#advanced">FAQ on GitHub</a>. Docs here are slightly out of date.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">27-09-2016, 08:21 AM</div>
+</div>
+<div class="message">Having just updated to the latest version of GIP for windoze, and seen the notes on the future loss of mp3 conversion I have a few questions. <br />
+<br />
+First of all I am not conversant in perl scripting or linux environments, so some of the comments I have read both here and at <a href="http://lists.infradead.org/pipermail/get_iplayer/">http://lists.infradead.org/pipermail/get_iplayer/</a> , which the author's think are explanatory and self evident, are unfortunately not so easy for me to understand.<br />
+Secondly my main listening for radio is on a sansa clip and my car's mp3 player, neither of which will play the native files.<br />
+<br />
+In an ideal world what I would like is:<br />
+One command line which will<br />
+a) run the pvr_scheduler<br />
+and then<br />
+b)convert the files and tags to mp3<br />
+and then<br />
+c)delete the source radio files (but leave tv files intact)<br />
+<br />
+I have seen the faq posted at: <br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation#custom-commands">https://github.com/get-iplayer/get_iplay...m-commands</a><br />
+I can see how that might work for an individual command line, but is it possible to build this into the run_pvr_scheduler.cmd ?<br />
+<br />
+With regard to @jaybeee 's example above in this thread, will that script transfer the tags to the mp3 file?<br />
+<br />
+Lastly is there a way to call a windoze cmd at the end of  the run_pvr_scheduler.cmd (instead of it sitting there sleeping)<br />
+<br />
+regards<br />
+<br />
+roga</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">29-09-2016, 03:26 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (27-09-2016, 08:21 AM)</span></cite>With regard to @jaybeee 's example above in this thread, will that script transfer the tags to the mp3 file?</blockquote><br />
+Yes, the tags are copied across.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-09-2016, 04:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (27-09-2016, 08:21 AM)</span></cite>Lastly is there a way to call a windoze cmd at the end of  the run_pvr_scheduler.cmd (instead of it sitting there sleeping)</blockquote>No. Its only purpose is run your pvr list, sleep, run your pvr list, sleep, etc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1135</h2></div><div class="dateline">29-09-2016, 05:27 PM</div>
+</div>
+<div class="message">Thanks jaybeee &amp; user-2 for your replies. <br />
+<br />
+I'll give jaybeee's script a go, it does have the advantage of setting a CBR which I think will work a bit better with my car's "radio" (particularly when trying to fast fwd or back)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Saving radio as mp3 in gip 2.95</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

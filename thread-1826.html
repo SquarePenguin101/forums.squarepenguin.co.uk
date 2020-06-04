@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - --pid-recursive is redundant</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; --pid-recursive is redundant</div>
+<div id="pagetitle"><h2>--pid-recursive is redundant</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">02-07-2018, 08:03 PM</div>
+</div>
+<div class="message">Why is there a specific Recursive option?<br />
+<br />
+If you use a series PID with the recursive option, then it gets the series (pre recent BBC changes)<br />
+<br />
+If you use a non series PID with the recursive option, then it gets the single programme<br />
+<br />
+Why differentiate between the standard pid and the recursive option?<br />
+<br />
+Surely it would be more efficient to deprecate the recursive option, and apply the recursive methodology to all pid commands<br />
+<br />
+Many thanks for your continued maintenance of this wonderful resource</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">23-07-2018, 07:12 PM</div>
+</div>
+<div class="message">Any thoughts from the developers?<br />
+<br />
+I was hoping this suggestion would make the application easier to use, and possibly easier to maintain as it would remove redundant syntax<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2248</h2></div><div class="dateline">16-09-2018, 12:53 PM</div>
+</div>
+<div class="message">I agree, especially as I've had issues with --pid-recursive from time to time with some versions of get_iplayer. <br />
+<br />
+Is it to stop people from accidentally downloading a whole series when they don't mean to? This must be an absolute fringe case, with far fewer affected than by --pid-recursive annoyances. If this is the case, I propose:<br />
+<br />
+When programme PID detected:<br />
+Prompt Y/N input from user, <span style="font-style: italic;" class="mycode_i">unless</span> pid-recursive is set (which would need to be used for scripts). <br />
+<br />
+It would be a non-breaking change to existing users' scripts. <br />
+<br />
+If we don't care about people accidentally downloading a whole series (who would do that?) then the entirety of pid-recursive is moot, and we don't even need a prompt as in above proposal. <br />
+<br />
+Either change would help to streamline get_iplayer and remove complexity for new users.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2216</h2></div><div class="dateline">17-09-2018, 11:29 AM</div>
+</div>
+<div class="message">I don't see the point in inverting the current operation.<br />
+<br />
+If you give GiP a recursive pid it aborts telling you so.  This gives you the option of finding the correct pid or adding the recursive parameter.<br />
+<br />
+If Dinky thought it worthwhile to make such a (probably large) change he might have said so.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2018, 04:32 PM</div>
+</div>
+<div class="message">If you don't want to type the occasional extra keystrokes, just save <kbd>--pid-recursive</kbd> in your preferences and it will be picked up when you use a series/brand PID.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">03-10-2018, 07:42 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-09-2018, 04:32 PM)</span></cite>If you don't want to type the occasional extra keystrokes, just save <kbd>--pid-recursive</kbd> in your preferences and it will be picked up when you use a series/brand PID.</blockquote><br />
+Great advice, works perfectly, many thanks<br />
+<br />
+It would perhaps simplify use for new users if this were included as a 'standard' preference as part of a new install</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; --pid-recursive is redundant</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I negate --metadata stored in preferences?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; How do I negate --metadata stored in preferences?</div>
+<div id="pagetitle"><h2>How do I negate --metadata stored in preferences?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">23-12-2017, 09:45 PM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.07.0 from a Windows 7 command prompt.<br />
+<br />
+I'm probably being very stupid and missing something obvious, but how do I negate the <span style="text-decoration: underline;" class="mycode_u">--metadata</span> option that is stored in my preferences for a one-off get_iplayer download or in a preset?  (I usually like to download the metadata xml, which is why it's in my preferences.)<br />
+<br />
+First, my relevant preferences entry:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;get_iplayer --prefs-show | findstr /i /r "^Options metadata"</code></div></div><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Options in 'path\to\.get_iplayer\options'<br />
+        metadata = generic</code></div>
+</div>
+<br />
+Now, as an example, I'll try setting up a preset called <span style="font-style: italic;" class="mycode_i">nometa</span> to use when I don't want metadata downloaded. For this attempt I use the obvious (to me) option <span style="text-decoration: underline;" class="mycode_u">--no-metadata</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;get_iplayer -z nometa --prefs-add --no-metadata</code></div></div><br />
+But, as you can see, this adds a negated <span style="text-decoration: underline;" class="mycode_u">--metadata-only</span> option instead of a negated <span style="text-decoration: underline;" class="mycode_u">--metadata</span> option:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Using user options preset 'nometa'<br />
+INFO: Added option 'metadataonly' = '0'<br />
+INFO: Options file path\to\.get_iplayer\presets\nometa updated</code></div>
+</div>
+<br />
+Next, I tried manually creating the preset:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;echo metadata ^0&gt;path&#92;to&#92;.get_iplayer&#92;presets&#92;nometa</code></div></div>Which creates the <span style="font-style: italic;" class="mycode_i">nometa</span> preset file with the following content.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;type path&#92;to&#92;.get_iplayer&#92;presets&#92;nometa<br />
+metadata 0</code></div></div>Which get_iplayer accepts:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;get_iplayer -z nometa --prefs-show</code></div></div><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Using user options preset 'nometa'<br />
+Options in 'path\to\.get_iplayer\presets\nometa'<br />
+        metadata = 0</code></div>
+</div>
+<br />
+Unfortunately, this doesn't work either as the third from bottom line of output from the following 10s download of a radio programme shows.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;get_iplayer -z nometa --type radio --stop 10 --pid b09jqdst</code></div></div><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Using user options preset 'nometa'<br />
+<br />
+Matches:<br />
+46267:  Profile - Sarah Mullally, BBC Radio 4, b09jqdst<br />
+INFO: 1 matching programmes<br />
+INFO: Downloading radio: 'Profile - Sarah Mullally (b09jqdst) [original]'<br />
+INFO: Downloaded: 0.52 MB (00:00:12) @ 41294.77 Mb/s (dafhigh1) [audio]<br />
+INFO: Converting to M4A<br />
+INFO: Downloading thumbnail<br />
+INFO: Tagging M4A<br />
+INFO: Writing metadata<br />
+INFO: Thumbnail file already exists: path\to\radiooutput\Profile\Sarah Mullally_b09jqdst_original.jpg<br />
+INFO: Use --overwrite to re-download</code></div>
+</div>
+(The thumbnail is downloaded because I have the <span style="text-decoration: underline;" class="mycode_u">--thumb</span> option in my preferences.)<br />
+<br />
+Any ideas, anyone?<br />
+<br />
+Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-12-2017, 11:30 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (23-12-2017, 09:45 PM)</span></cite>I'm probably being very stupid and missing something obvious, but how do I negate the <span style="text-decoration: underline;" class="mycode_u">--metadata</span> option that is stored in my preferences for a one-off get_iplayer download or in a preset?</blockquote>You can't. Just delete the file you don't want after download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-12-2017, 05:39 PM</div>
+</div>
+<div class="message"><kbd>--no-metadata</kbd> option added in v3.09</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">08-01-2018, 04:29 PM</div>
+</div>
+<div class="message">Thanks Dinky.<br />
+<br />
+That will save the occasional unnecessary download.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; How do I negate --metadata stored in preferences?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

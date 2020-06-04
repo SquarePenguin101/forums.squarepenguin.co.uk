@@ -1,0 +1,508 @@
+get_iplayer 3.12.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\dsmanager\.get_iplayer
+INFO: User options file: C:\Users\dsmanager\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	get = 1
+	verbose = 1
+
+INFO: Search args: '123'
+INFO: Additionally getting cached programme data for tv
+INFO: Got 0 file cache entries for tv
+INFO: Will refresh channel BBC Alba
+INFO: Will refresh channel BBC Four
+INFO: Will refresh channel BBC News
+INFO: Will refresh channel BBC One
+INFO: Will refresh channel BBC One Cambridgeshire
+INFO: Will refresh channel BBC One Channel Islands
+INFO: Will refresh channel BBC One East
+INFO: Will refresh channel BBC One East Midlands
+INFO: Will refresh channel BBC One London
+INFO: Will refresh channel BBC One North East & Cumbria
+INFO: Will refresh channel BBC One North West
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Northern Ireland
+INFO: Will refresh channel BBC One Oxfordshire
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One Scotland
+INFO: Will refresh channel BBC One South
+INFO: Will refresh channel BBC One South East
+INFO: Will refresh channel BBC One South West
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One Wales
+INFO: Will refresh channel BBC One West
+INFO: Will refresh channel BBC One West Midlands
+INFO: Will refresh channel BBC One Yorks & Lincs
+INFO: Will refresh channel BBC One Yorkshire
+INFO: Will refresh channel BBC Parliament
+INFO: Will refresh channel BBC Two
+INFO: Will refresh channel BBC Two England
+INFO: Will refresh channel BBC Two Northern Ireland
+INFO: Will refresh channel BBC Two Scotland
+INFO: Will refresh channel BBC Two Wales
+INFO: Will refresh channel CBBC
+INFO: Will refresh channel CBeebies
+INFO: Will refresh channel S4C
+
+INFO: Indexing tv programmes (concurrent)
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcnews/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcfour/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcalba/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/channel_islands/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/cambridge/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/london/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_midlands/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/east_yorkshire/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/hd/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni_hd/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/ni/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_west/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/north_east/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/oxford/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_west/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/scotland_hd/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south_east/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/south/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales_hd/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/wales/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/west_midlands/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcone/programmes/schedules/yorkshire/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/scotland/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/england/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/ni/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbcparliament/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+.
+DEBUG: Downloading schedule page (1): http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/hd/this_week
+ERROR: Connection error: Connect timeout
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (2): http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+
+DEBUG: Retrying download of schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+.
+DEBUG: Downloading schedule page (3): http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/cbbc/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/s4c/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/bbctwo/programmes/schedules/wales/this_week
+ERROR: Connection error: Connect timeout
+
+WARNING: Failed to download schedule page: http://www.bbc.co.uk/cbeebies/programmes/schedules/this_week
+ERROR: Connection error: Connect timeout
+
+INFO: Added 0 tv programmes to cache
+WARNING: Unmatched programme index '123' specified - ignoring
+INFO: 0 matching programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history

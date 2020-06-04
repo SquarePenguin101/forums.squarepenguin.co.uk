@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cheap way to use get_iplayer  without a VPN</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Cheap way to use get_iplayer  without a VPN</div>
+<div id="pagetitle"><h2>Cheap way to use get_iplayer  without a VPN</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">19-10-2015, 11:17 PM</div>
+</div>
+<div class="message">!!!!This isn't about using a VPN!!!.  Instead of leaving your home broadband open to China/criminals/hackers etc, whilst you're travelling, I use a virtual machine, hosted on Amazon.<br />
+<br />
+If you're an Amazon customer, you can use their Free-tier EC2 service. <br />
+<br />
+I made one for a friend to show how easy it was, about 10 minutes start to finish to be able to download shows.<br />
+<br />
+Create an Ubuntu VM in The Ireland node<br />
+I used the instructions on how to install get_iplayer for Ubuntu.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>https://github.com/get-iplayer/get_iplayer/wiki/ubuntu</code></div></div><br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;sudo apt-add-repository ppa:jon-hedgerows/get-iplayer<br />
+&#36;sudo apt-get update<br />
+&#36;sudo apt-get install get-iplayer</code></div></div><br />
+<br />
+Add some useful settings<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --aactomp3<br />
+get_iplayer --prefs-add --isodate</code></div></div><br />
+<br />
+get some shows<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer  --type=radio --pid==12345</code></div></div><br />
+Then all you need do is transfer the files to your local PC.<br />
+<br />
+So long as you don't use excessive bandwidth, it can remain free. Even the non free, can be as low as a £1 per month, if you actively manage usage.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>https://aws.amazon.com/free/faqs/</code></div></div><br />
+<br />
+You can suspend the VM when not in use. You can even set alerts if you're approaching the non free tier.<br />
+<br />
+I hope this doesn't break any rules / offend anyone.  I assume anyone who uses get_iplayer pay a UK licence fee, and has proper title to receive BBC programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1133</h2></div><div class="dateline">12-01-2016, 10:55 AM</div>
+</div>
+<div class="message">I know I'm late to the party, but is it possible this no longer works? Did BBC ban Amazon IPs?<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>curl ipinfo.io<br />
+{<br />
+  "ip": "XX.XX.XX.XX",<br />
+  "hostname": "ec2-XX-XX-XX-XX.eu-west-1.compute.amazonaws.com",<br />
+  "city": "Dublin",<br />
+  "region": "Leinster",<br />
+  "country": "IE",<br />
+  "loc": "53.3331,-6.2489",<br />
+  "org": "AS16509 Amazon.com, Inc."<br />
+}</code></div></div><br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer --pid=b06sskk8 --modes=dashhigh --force --tag-podcast-radio --debug<br />
+DEBUG: Parsing options from /var/lib/get_iplayer/options:<br />
+DEBUG: Loaded option packagemanager (packagemanager) = apt<br />
+DEBUG: Loaded option atomicparsley (atomicparsley) = /usr/bin/AtomicParsley<br />
+DEBUG: Loaded option flvstreamer (rtmpdump) = /usr/bin/rtmpdump<br />
+DEBUG: Loaded option tag_hdvideo (tag_hdvideo) = 1<br />
+DEBUG: Loaded option tag_longdesc (tag_longdesc) = 1<br />
+DEBUG: Loaded option tag_utf8 (tag_utf8) = 1<br />
+DEBUG: Parsing options from /etc/get_iplayer/options:<br />
+DEBUG: Loaded option packagemanager (packagemanager) = apt<br />
+DEBUG: Loaded option atomicparsley (atomicparsley) = /usr/bin/AtomicParsley<br />
+DEBUG: Loaded option flvstreamer (flvstreamer) = /usr/bin/rtmpdump<br />
+DEBUG: Loaded option tag_hdvideo (tag_hdvideo) = 1<br />
+DEBUG: Loaded option tag_longdesc (tag_longdesc) = 1<br />
+DEBUG: Loaded option tag_utf8 (tag_utf8) = 1<br />
+DEBUG: Parsing options from /home/ubuntu/.get_iplayer/options:<br />
+DEBUG: Loaded option isodate (isodate) = 1<br />
+DEBUG: Parsing options from ./.get_iplayer/options:<br />
+DEBUG: Loaded option isodate (isodate) = 1<br />
+get_iplayer 2.95-dev, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: /home/ubuntu/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+Current options:<br />
+	atomicparsley = /usr/bin/AtomicParsley<br />
+	debug = 1<br />
+	encodingconsolein = UTF-8<br />
+	encodingconsoleout = UTF-8<br />
+	encodinglocale = UTF-8<br />
+	encodinglocalefs = UTF-8<br />
+	flvstreamer = /usr/bin/rtmpdump<br />
+	force = 1<br />
+	isodate = 1<br />
+	modes = dashhigh<br />
+	packagemanager = apt<br />
+	pid = b06sskk8<br />
+	rtmpdump = /usr/bin/rtmpdump<br />
+	tag_hdvideo = 1<br />
+	tag_longdesc = 1<br />
+	tag_podcast_radio = 1<br />
+	tag_utf8 = 1<br />
+	verbose = 1<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Will try prog types: tv<br />
+INFO: Cache format from existing tv cache file: index,type,name,pid,available,expires,episode,seriesnum,episodenum,versions,duration,desc,channel,categories,thumbnail,timeadded,guidance,web<br />
+INFO: Got 1507 file cache entries for tv<br />
+DEBUG: Cache expiry time for tv is 14400 secs - refresh in 12205 secs<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+Cleaning pid Old: 'b06sskk8',  New: 'b06sskk8'<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b06sskk8.rdf">http://www.bbc.co.uk/programmes/b06sskk8.rdf</a><br />
+DEBUG: No Encoding used on <a href="http://www.bbc.co.uk/programmes/b06sskk8.rdf">http://www.bbc.co.uk/programmes/b06sskk8.rdf</a><br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b06sskk8 using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+INFO: Cleaning pid Old: 'b06sskk8',  New: 'b06sskk8'<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using NoCookies user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Getting Metadata for b06sskk8:<br />
+INFO: Programme metadata URL = <a href="http://www.bbc.co.uk/programmes/b06sskk8.xml">http://www.bbc.co.uk/programmes/b06sskk8.xml</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b06sskk8.xml">http://www.bbc.co.uk/programmes/b06sskk8.xml</a><br />
+DEBUG: No Encoding used on <a href="http://www.bbc.co.uk/programmes/b06sskk8.xml">http://www.bbc.co.uk/programmes/b06sskk8.xml</a><br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06ssk9x/proto/rtmp?cb=25071">http://open.live.bbc.co.uk/mediaselector...p?cb=25071</a><br />
+DEBUG: No Encoding used on <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06ssk9x/proto/rtmp?cb=25071">http://open.live.bbc.co.uk/mediaselector...p?cb=25071</a><br />
+<br />
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mediaSelection xmlns="http://bbc.co.uk/2008/mp/mediaselection"&gt;&lt;!--This code and data form part of the BBC iPlayer content protection system. Tampering with, removal of, misuse of, or unauthorised use of this code or data constitutes circumvention of the BBC's content protection measures and may result in legal action. BBC (C) 2014.--&gt;&lt;media bitrate="48" encoding="aac" expires="2016-01-26T04:00:00Z" kind="audio" media_file_size="23160803" service="stream-nonuk-audio_streaming_aac_vlow" type="audio/mp4"&gt;&lt;connection application="ondemand" authExpires="2016-01-12T11:32:33+00:00" authExpiresOffset="6790" authString="auth=daEdecUblaVcubQdRa9biakcUaRbIbOdUaN-bwLmNl-bWG-FprEBnDpFCpHqwD&amp;amp;aifp=v001&amp;amp;slist=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4" dpw="50" identifier="mp4:/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4" priority="10" protocol="rtmp" server="cp107663.edgefcs.net" supplier="akamai"/&gt;&lt;connection application="a5999/e1" authExpires="2016-01-12T11:35:59+00:00" authExpiresOffset="6996" authString="as=adobe-hmac-sha256&amp;amp;av=1&amp;amp;te=connect&amp;amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4&amp;amp;et=1452598763&amp;amp;fmta-token=902e7ea4105026d29fac02a034e341cab05af669a4a9068e9dc83ee2d9e76032" identifier="mp4:/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4" priority="20" protocol="rtmp" server="bbcodspdns.fcod.llnwd.net" supplier="limelight"/&gt;&lt;/media&gt;&lt;/mediaSelection&gt;<br />
+MEDIA-ELEMENT:<br />
+MEDIA-ATTRIBS:<br />
+	connections =&gt; ARRAY(0x2928758)<br />
+	bitrate =&gt; 48<br />
+	expires =&gt; 2016-01-26T04:00:00Z<br />
+	encoding =&gt; aac<br />
+	type =&gt; audio/mp4<br />
+	kind =&gt; audio<br />
+	media_file_size =&gt; 23160803<br />
+	service =&gt; stream-nonuk-audio_streaming_aac_vlow<br />
+	CONNECTION-ELEMENT:<br />
+		application =&gt; ondemand<br />
+		dpw =&gt; 50<br />
+		supplier =&gt; akamai<br />
+		protocol =&gt; rtmp<br />
+		identifier =&gt; mp4:/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4<br />
+		server =&gt; cp107663.edgefcs.net<br />
+		kind =&gt; akamai<br />
+		authExpiresOffset =&gt; 6790<br />
+		authString =&gt; auth=daEdecUblaVcubQdRa9biakcUaRbIbOdUaN-bwLmNl-bWG-FprEBnDpFCpHqwD&amp;amp;aifp=v001&amp;amp;slist=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4<br />
+		priority =&gt; 10<br />
+		authExpires =&gt; 2016-01-12T11:32:33+00:00<br />
+	CONNECTION-ELEMENT:<br />
+		supplier =&gt; limelight<br />
+		application =&gt; a5999/e1<br />
+		authExpires =&gt; 2016-01-12T11:35:59+00:00<br />
+		priority =&gt; 20<br />
+		authString =&gt; as=adobe-hmac-sha256&amp;amp;av=1&amp;amp;te=connect&amp;amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4&amp;amp;et=1452598763&amp;amp;fmta-token=902e7ea4105026d29fac02a034e341cab05af669a4a9068e9dc83ee2d9e76032<br />
+		authExpiresOffset =&gt; 6996<br />
+		kind =&gt; limelight<br />
+		protocol =&gt; rtmp<br />
+		server =&gt; bbcodspdns.fcod.llnwd.net<br />
+		identifier =&gt; mp4:/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4<br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06ssk9x/transferformat/dash?cb=52188">http://open.live.bbc.co.uk/mediaselector...h?cb=52188</a><br />
+DEBUG: No Encoding used on <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06ssk9x/transferformat/dash?cb=52188">http://open.live.bbc.co.uk/mediaselector...h?cb=52188</a><br />
+<br />
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mediaSelection xmlns="http://bbc.co.uk/2008/mp/mediaselection"&gt;&lt;!--This code and data form part of the BBC iPlayer content protection system. Tampering with, removal of, misuse of, or unauthorised use of this code or data constitutes circumvention of the BBC's content protection measures and may result in legal action. BBC (C) 2014.--&gt;&lt;media bitrate="320" encoding="aac" expires="2016-01-26T04:00:00Z" kind="audio" service="stream-nonuk-audio_streaming_concrete_combined" type="audio/mp4"&gt;&lt;connection authExpires="2016-01-12T21:27:23+00:00" authExpiresOffset="42480" dpw="50" href="http://aod-dash-ww-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?__gda__=1452613163_1d7cdd9c735998b371ac8fddab76a0ab" priority="1" protocol="http" supplier="af_akamai_nonuk_dash" transferFormat="dash"/&gt;&lt;connection authExpires="2016-01-12T15:19:59+00:00" authExpiresOffset="20436" href="http://aod-dash-ww-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?s=1452569963&amp;amp;e=1452613163&amp;amp;h=bd00601ae92507e9cabe1f713b48bb58" priority="2" protocol="http" supplier="af_limelight_nonuk_dash" transferFormat="dash"/&gt;&lt;/media&gt;&lt;/mediaSelection&gt;<br />
+MEDIA-ELEMENT:<br />
+MEDIA-ATTRIBS:<br />
+	service =&gt; stream-nonuk-audio_streaming_concrete_combined<br />
+	encoding =&gt; aac<br />
+	expires =&gt; 2016-01-26T04:00:00Z<br />
+	connections =&gt; ARRAY(0x2825d00)<br />
+	type =&gt; audio/mp4<br />
+	bitrate =&gt; 320<br />
+	kind =&gt; audio<br />
+	CONNECTION-ELEMENT:<br />
+		authExpiresOffset =&gt; 42480<br />
+		kind =&gt; af_akamai_nonuk_dash<br />
+		protocol =&gt; http<br />
+		authExpires =&gt; 2016-01-12T21:27:23+00:00<br />
+		priority =&gt; 1<br />
+		transferFormat =&gt; dash<br />
+		supplier =&gt; af_akamai_nonuk_dash<br />
+		dpw =&gt; 50<br />
+		href =&gt; <a href="http://aod-dash-ww-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?__gda__=1452613163_1d7cdd9c735998b371ac8fddab76a0ab">http://aod-dash-ww-live.edgesuite.net/us...ddab76a0ab</a><br />
+	CONNECTION-ELEMENT:<br />
+		transferFormat =&gt; dash<br />
+		supplier =&gt; af_limelight_nonuk_dash<br />
+		href =&gt; <a href="http://aod-dash-ww-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?s=1452569963&amp;amp;e=1452613163&amp;amp;h=bd00601ae92507e9cabe1f713b48bb58">http://aod-dash-ww-live.bbcfmt.vo.llnwd....713b48bb58</a><br />
+		kind =&gt; af_limelight_nonuk_dash<br />
+		authExpiresOffset =&gt; 20436<br />
+		protocol =&gt; http<br />
+		authExpires =&gt; 2016-01-12T15:19:59+00:00<br />
+		priority =&gt; 2<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+INFO: Getting page <a href="http://aod-dash-ww-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?__gda__=1452613163_1d7cdd9c735998b371ac8fddab76a0ab">http://aod-dash-ww-live.edgesuite.net/us...ddab76a0ab</a><br />
+DEBUG: No Encoding used on <a href="http://aod-dash-ww-live.edgesuite.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?__gda__=1452613163_1d7cdd9c735998b371ac8fddab76a0ab">http://aod-dash-ww-live.edgesuite.net/us...ddab76a0ab</a><br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+INFO: Getting page <a href="http://aod-dash-ww-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?s=1452569963&amp;e=1452613163&amp;h=bd00601ae92507e9cabe1f713b48bb58">http://aod-dash-ww-live.bbcfmt.vo.llnwd....713b48bb58</a><br />
+DEBUG: No Encoding used on <a href="http://aod-dash-ww-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_audio/c27ed5-b06ssk9x/vf_b06ssk9x_e249e0a4-a58e-44d3-bc97-a5af20a4ec6e.ism/pc_hd_abr_v1_nonuk_dash_master.mpd?s=1452569963&amp;e=1452613163&amp;h=bd00601ae92507e9cabe1f713b48bb58">http://aod-dash-ww-live.bbcfmt.vo.llnwd....713b48bb58</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06ssk9x/transferformat/hls?cb=82275">http://open.live.bbc.co.uk/mediaselector...s?cb=82275</a><br />
+DEBUG: No Encoding used on <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06ssk9x/transferformat/hls?cb=82275">http://open.live.bbc.co.uk/mediaselector...s?cb=82275</a><br />
+<br />
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mediaSelection xmlns="http://bbc.co.uk/2008/mp/mediaselection"&gt;&lt;!--This code and data form part of the BBC iPlayer content protection system. Tampering with, removal of, misuse of, or unauthorised use of this code or data constitutes circumvention of the BBC's content protection measures and may result in legal action. BBC (C) 2014.--&gt;&lt;media bitrate="48" encoding="aac" expires="2016-01-26T04:00:00Z" kind="audio" media_file_size="23160803" service="stream-nonuk-audio_streaming_aac_vlow" type="audio/mp4"&gt;&lt;connection href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591563~exp=1452613163~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=cfb401c8ecfe7589edb0d268df42e4943caaae6136357e89581b4bc1f8edd76b" priority="10" protocol="http" supplier="akamai_hls_open" transferFormat="hls"/&gt;&lt;/media&gt;&lt;/mediaSelection&gt;<br />
+MEDIA-ELEMENT:<br />
+MEDIA-ATTRIBS:<br />
+	expires =&gt; 2016-01-26T04:00:00Z<br />
+	encoding =&gt; aac<br />
+	bitrate =&gt; 48<br />
+	connections =&gt; ARRAY(0x26912e8)<br />
+	service =&gt; stream-nonuk-audio_streaming_aac_vlow<br />
+	media_file_size =&gt; 23160803<br />
+	kind =&gt; audio<br />
+	type =&gt; audio/mp4<br />
+	CONNECTION-ELEMENT:<br />
+		kind =&gt; akamai_hls_open<br />
+		protocol =&gt; http<br />
+		transferFormat =&gt; hls<br />
+		supplier =&gt; akamai_hls_open<br />
+		href =&gt; <a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591563~exp=1452613163~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=cfb401c8ecfe7589edb0d268df42e4943caaae6136357e89581b4bc1f8edd76b">http://cp401492-vh.akamaihd.net/i/prod_a...c1f8edd76b</a><br />
+		priority =&gt; 10<br />
+DEBUG: Using desktop user-agent string: 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+DEBUG: Using cookies.desktop user-agent 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0'<br />
+INFO: Getting page <a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591563~exp=1452613163~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=cfb401c8ecfe7589edb0d268df42e4943caaae6136357e89581b4bc1f8edd76b">http://cp401492-vh.akamaihd.net/i/prod_a...c1f8edd76b</a><br />
+DEBUG: No Encoding used on <a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591563~exp=1452613163~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=cfb401c8ecfe7589edb0d268df42e4943caaae6136357e89581b4bc1f8edd76b">http://cp401492-vh.akamaihd.net/i/prod_a...c1f8edd76b</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b06ssk9x/transferformat/hls?cb=85998">http://open.live.bbc.co.uk/mediaselector...s?cb=85998</a><br />
+DEBUG: No Encoding used on <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b06ssk9x/transferformat/hls?cb=85998">http://open.live.bbc.co.uk/mediaselector...s?cb=85998</a><br />
+<br />
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;mediaSelection xmlns="http://bbc.co.uk/2008/mp/mediaselection"&gt;&lt;!--This code and data form part of the BBC iPlayer content protection system. Tampering with, removal of, misuse of, or unauthorised use of this code or data constitutes circumvention of the BBC's content protection measures and may result in legal action. BBC (C) 2014.--&gt;&lt;media bitrate="48" encoding="aac" expires="2016-01-26T04:00:00Z" kind="audio" media_file_size="23160803" service="stream-nonuk-audio_streaming_aac_vlow" type="audio/mp4"&gt;&lt;connection href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591564~exp=1452613164~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=e3db5591cb094985d8ed0457ec2750bfbee75fa4128dfcc31a17b4c12aa8c1cf" priority="10" protocol="http" supplier="akamai_hls_open" transferFormat="hls"/&gt;&lt;/media&gt;&lt;/mediaSelection&gt;<br />
+MEDIA-ELEMENT:<br />
+MEDIA-ATTRIBS:<br />
+	media_file_size =&gt; 23160803<br />
+	service =&gt; stream-nonuk-audio_streaming_aac_vlow<br />
+	type =&gt; audio/mp4<br />
+	kind =&gt; audio<br />
+	expires =&gt; 2016-01-26T04:00:00Z<br />
+	encoding =&gt; aac<br />
+	connections =&gt; ARRAY(0x2a0bb60)<br />
+	bitrate =&gt; 48<br />
+	CONNECTION-ELEMENT:<br />
+		supplier =&gt; akamai_hls_open<br />
+		href =&gt; <a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/l2o/b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4/master.m3u8?hdnea=st=1452591564~exp=1452613164~acl=/*b06ssk9x_4bfe83c8-603f-42f4-87aa-aadb89f4ecdf.mp4*~hmac=e3db5591cb094985d8ed0457ec2750bfbee75fa4128dfcc31a17b4c12aa8c1cf">http://cp401492-vh.akamaihd.net/i/prod_a...c12aa8c1cf</a><br />
+		priority =&gt; 10<br />
+		kind =&gt; akamai_hls_open<br />
+		transferFormat =&gt; hls<br />
+		protocol =&gt; http<br />
+DEBUG: Mode flashlow1 = priority 20<br />
+DEBUG: Mode flashlow2 = priority 10<br />
+DEBUG: Mode dashlow1 = priority 1<br />
+DEBUG: Mode dashmed1 = priority 1<br />
+DEBUG: Mode dashlow1 = priority 2<br />
+DEBUG: Mode dashlow2 = priority 1<br />
+DEBUG: Mode dashmed1 = priority 2<br />
+DEBUG: Mode dashmed2 = priority 1<br />
+DEBUG: Mode hlslow1 = priority 10<br />
+INFO: Found mode dashlow1: (gip_dash_iplayer_48) dash aac 48kbps stream (CDN: af_limelight_nonuk_dash/2)<br />
+INFO: Found mode dashlow2: (gip_dash_iplayer_48) dash aac 48kbps stream (CDN: af_akamai_nonuk_dash/1)<br />
+INFO: Found mode dashmed1: (gip_dash_iplayer_96) dash aac 96kbps stream (CDN: af_limelight_nonuk_dash/2)<br />
+INFO: Found mode dashmed2: (gip_dash_iplayer_96) dash aac 96kbps stream (CDN: af_akamai_nonuk_dash/1)<br />
+INFO: Found mode flashlow1: (stream-nonuk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashlow2: (stream-nonuk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)<br />
+INFO: Found mode hlslow1: (gip_hls_iplayer_46) hls aac 46kbps stream (CDN: akamai_hls_open/10)<br />
+DEBUG: 2016-01-26T04:00:00Z = 2016, 01, 26, 04, 00, 00, 0, 0<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b06ssk9x.rdf">http://www.bbc.co.uk/programmes/b06ssk9x.rdf</a><br />
+DEBUG: No Encoding used on <a href="http://www.bbc.co.uk/programmes/b06ssk9x.rdf">http://www.bbc.co.uk/programmes/b06ssk9x.rdf</a><br />
+DEBUG: <a href="http://www.bbc.co.uk/programmes/b06ssk9x.rdf">http://www.bbc.co.uk/programmes/b06ssk9x.rdf</a>:<br />
+&lt;?xml version="1.0"?&gt;<br />
+&lt;rdf:RDF xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"<br />
+         xmlns:rdfs     = "http://www.w3.org/2000/01/rdf-schema#"<br />
+         xmlns:owl      = "http://www.w3.org/2002/07/owl#"<br />
+         xmlns:foaf     = "http://xmlns.com/foaf/0.1/"<br />
+         xmlns:po       = "http://purl.org/ontology/po/"<br />
+         xmlns:mo       = "http://purl.org/ontology/mo/"<br />
+         xmlns:skos     = "http://www.w3.org/2008/05/skos#"<br />
+         xmlns:time     = "http://www.w3.org/2006/time#"<br />
+         xmlns:dc       = "http://purl.org/dc/elements/1.1/"<br />
+         xmlns:dcterms  = "http://purl.org/dc/terms/"<br />
+         xmlns:wgs84_pos= "http://www.w3.org/2003/01/geo/wgs84_pos#"<br />
+         xmlns:timeline = "http://purl.org/NET/c4dm/timeline.owl#"<br />
+         xmlns:event    = "http://purl.org/NET/c4dm/event.owl#"&gt;<br />
+<br />
+&lt;rdf:Description rdf:about="/programmes/b06ssk9x.rdf"&gt;<br />
+  &lt;rdfs:label&gt;Description of a programme version of "Sandy Denny, the Sugarcubes and Jesca Hoop"&lt;/rdfs:label&gt;<br />
+  &lt;dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-08T07:53:29Z&lt;/dcterms:created&gt;<br />
+  &lt;dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-08T07:53:29Z&lt;/dcterms:modified&gt;<br />
+  &lt;foaf:primaryTopic rdf:resource="/programmes/b06ssk9x#programme"/&gt;<br />
+&lt;/rdf:Description&gt;<br />
+<br />
+&lt;po:Version rdf:about="/programmes/b06ssk9x#programme"&gt;<br />
+<br />
+  &lt;rdfs:label&gt;A version of "Sandy Denny, the Sugarcubes and Jesca Hoop"&lt;/rdfs:label&gt;<br />
+  <br />
+  &lt;po:sound_format&gt;Stereo&lt;/po:sound_format&gt;<br />
+  &lt;po:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#int"&gt;3600&lt;/po:duration&gt;<br />
+  &lt;po:pid&gt;b06ssk9x&lt;/po:pid&gt;<br />
+  &lt;po:time&gt;<br />
+    &lt;timeline:Interval&gt;<br />
+      &lt;rdfs:label&gt;Time interval for a version of "Sandy Denny, the Sugarcubes and Jesca Hoop"&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+      &lt;timeline:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"&gt;PT3600S&lt;/timeline:duration&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+<br />
+<br />
+&lt;/po:Version&gt;<br />
+<br />
+&lt;po:Episode rdf:about="/programmes/b06sskk8#programme"&gt;<br />
+  &lt;rdfs:label&gt;Sandy Denny, the Sugarcubes and Jesca Hoop&lt;/rdfs:label&gt;<br />
+  &lt;po:version rdf:resource="/programmes/b06ssk9x#programme" /&gt;<br />
+&lt;/po:Episode&gt;<br />
+<br />
+&lt;timeline:TimeLine rdf:about="/programmes/b06ssk9x#timeline"&gt;<br />
+  &lt;rdfs:label&gt;Timeline of a version of Sandy Denny, the Sugarcubes and Jesca Hoop&lt;/rdfs:label&gt;<br />
+&lt;/timeline:TimeLine&gt;<br />
+<br />
+&lt;po:Broadcast rdf:about="/programmes/b06ssk9x#p03bg09p"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/FirstBroadcast"/&gt;<br />
+  &lt;po:pid&gt;p03bg09p&lt;/po:pid&gt;<br />
+  &lt;po:schedule_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;2015-12-27&lt;/po:schedule_date&gt;<br />
+  &lt;event:time&gt;<br />
+    &lt;timeline:Interval&gt;<br />
+      &lt;timeline:start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T03:00:00Z&lt;/timeline:start&gt;<br />
+      &lt;timeline:end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:00:00Z&lt;/timeline:end&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/event:time&gt;<br />
+  &lt;po:broadcast_on&gt;<br />
+    &lt;po:Service rdf:about="/services/6music#service"&gt;<br />
+      &lt;rdfs:label&gt;BBC Radio 6 Music&lt;/rdfs:label&gt;<br />
+    &lt;/po:Service&gt;<br />
+  &lt;/po:broadcast_on&gt;<br />
+  &lt;po:broadcast_of rdf:resource="/programmes/b06ssk9x#programme" /&gt;<br />
+&lt;/po:Broadcast&gt;<br />
+<br />
+<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rdp#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;The North Star Grassmen And The Ravens - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rdq"&gt;<br />
+  <br />
+      &lt;po:position&gt;1&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for The North Star Grassmen And The Ravens - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rjq#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Sweet Rosemary - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rjr"&gt;<br />
+  <br />
+      &lt;po:position&gt;2&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Sweet Rosemary - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rnd#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Bruton Town - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rng"&gt;<br />
+  <br />
+      &lt;po:position&gt;3&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Bruton Town - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rq6#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;The Lady - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rq8"&gt;<br />
+  <br />
+      &lt;po:position&gt;4&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for The Lady - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rrn#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Next Time Around - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rrp"&gt;<br />
+  <br />
+      &lt;po:position&gt;5&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Next Time Around - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rs8#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Blackwaterside - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rs9"&gt;<br />
+  <br />
+      &lt;po:position&gt;6&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Blackwaterside - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rt6#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;John The Gun - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rt7"&gt;<br />
+  <br />
+      &lt;po:position&gt;7&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for John The Gun - Paris Theatre 1972&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rtf#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Cold Sweat  (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rtg"&gt;<br />
+  <br />
+      &lt;po:position&gt;8&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Cold Sweat  (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p004rw0t#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Delicious Demon (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rtr"&gt;<br />
+  <br />
+      &lt;po:position&gt;9&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Delicious Demon (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p03d1rvm#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Motor Crash (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rvn"&gt;<br />
+  <br />
+      &lt;po:position&gt;10&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Motor Crash (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p02lhzkf#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Mama (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rwl"&gt;<br />
+  <br />
+      &lt;po:position&gt;11&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Mama (Radio 1 Session, 9 Dec 1987)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p02myfw4#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Deeper Devastation (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rwq"&gt;<br />
+  <br />
+      &lt;po:position&gt;12&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Deeper Devastation (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p02myhmt#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Angel Mom (6 Music Session,  2 April 2014)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1rxz"&gt;<br />
+  <br />
+      &lt;po:position&gt;13&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Angel Mom (6 Music Session,  2 April 2014)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p02mygnd#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Hunting My Dress (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1s29"&gt;<br />
+  <br />
+      &lt;po:position&gt;14&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Hunting My Dress (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+&lt;po:Segment rdf:about="/programmes/p02mygzc#segment"&gt;<br />
+  &lt;rdf:type rdf:resource="http://purl.org/ontology/po/MusicSegment"/&gt;<br />
+  &lt;rdfs:label&gt;Whispering Light (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+  &lt;po:time&gt;<br />
+  &lt;timeline:Interval rdf:about="/programmes/b06ssk9x#p03d1s2h"&gt;<br />
+  <br />
+      &lt;po:position&gt;15&lt;/po:position&gt;<br />
+      &lt;rdfs:label&gt;Time interval for Whispering Light (6 Music Session, 2 April 2014)&lt;/rdfs:label&gt;<br />
+      &lt;timeline:timeline rdf:resource="/programmes/b06ssk9x#timeline"/&gt;<br />
+    &lt;/timeline:Interval&gt;<br />
+  &lt;/po:time&gt;<br />
+&lt;/po:Segment&gt;<br />
+<br />
+<br />
+&lt;po:Availability&gt;<br />
+  &lt;timeline:start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:00:00Z&lt;/timeline:start&gt;<br />
+  &lt;timeline:end rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2016-01-26T04:00:00Z&lt;/timeline:end&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s45"&gt;<br />
+      &lt;po:pid&gt;p03d1s45&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_streaming_aac_vlow#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:04:51Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s48"&gt;<br />
+      &lt;po:pid&gt;p03d1s48&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_streaming_aac_med#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:04:53Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s4c"&gt;<br />
+      &lt;po:pid&gt;p03d1s4c&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_streaming_aac_high#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:04:56Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s4f"&gt;<br />
+      &lt;po:pid&gt;p03d1s4f&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_streaming_aac_low#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:04:59Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s4w"&gt;<br />
+      &lt;po:pid&gt;p03d1s4w&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_download_drm_aac_high#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:05:19Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+  &lt;po:media_item&gt;<br />
+    &lt;po:MediaItem rdf:about="/programmes/b06ssk9x#p03d1s4x"&gt;<br />
+      &lt;po:pid&gt;p03d1s4x&lt;/po:pid&gt;<br />
+      &lt;po:service rdf:resource="/services/audio_streaming_concrete_combined#service"/&gt;<br />
+      &lt;po:start_of_media_availability rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2015-12-27T04:05:19Z&lt;/po:start_of_media_availability&gt;<br />
+    &lt;/po:MediaItem&gt;<br />
+  &lt;/po:media_item&gt;<br />
+&lt;/po:Availability&gt;<br />
+<br />
+<br />
+<br />
+&lt;/rdf:RDF&gt;<br />
+<br />
+<br />
+DEBUG: 2015-12-27T03:00:00Z = 2015, 12, 27, 03, 00, 00, 0, 0<br />
+DEBUG: original: 2015-12-27T03:00:00Z -&gt; 1451185200<br />
+DEBUG: 2015-12-27T03:00:00Z = 2015, 12, 27, 03, 00, 00, 0, 0<br />
+DEBUG: 2015-12-27T03:00:00Z = 2015, 12, 27, 03, 00, 00, 0, 0<br />
+INFO: Will search for versions: original<br />
+INFO: Mode list: dashhigh<br />
+DEBUG: Trying version 'original'<br />
+INFO: Checking existence of original version<br />
+INFO: Version = original<br />
+INFO: No specified modes (dashhigh) available for this programme with version 'original'<br />
+INFO: Try using --modes=flashlow,hlslow,dashmed,dashlow<br />
+ERROR: Failed to record '6 Music Live Hour - Sandy Denny, the Sugarcubes and Jesca Hoop (b06sskk8)<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-01-2016, 11:29 AM</div>
+</div>
+<div class="message">What did you expect when someone posted that information in an open forum? Thread now closed - forum rules.<br />
+<br />
+EDIT: Yes, you're being blocked, though in this case it's more accurate to say that you are only being offered the international streams to which you would normally have access.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Cheap way to use get_iplayer  without a VPN</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

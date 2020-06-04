@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - More Sophisticated Retries</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; More Sophisticated Retries</div>
+<div id="pagetitle"><h2>More Sophisticated Retries</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">18-12-2017, 12:01 AM</div>
+</div>
+<div class="message">I'm running get_iplayer 3.07.0 from a Windows 7 command prompt.<br />
+<br />
+When re-trying a download would you consider adding a feature that checks the internet connection before changing modes?<br />
+<br />
+It may be the case that a download problem requiring a re-try is not caused by the content supplier, but by losing your internet connection. Before re-trying a download, a simple ping of bbc.co.uk should suffice. If no response is received from the ping, it should be re-tried, say every minute for the first 5 minutes then every 5 minutes with an option for the user to abort the download. These attempts to connect to the internet should not be counted as download attempts since it is impossible to download without an internet connection, nor should get_iplayer move on to the next download since that would be futile without an internet connection.<br />
+<br />
+One quirk springs to mind. Consider the scenario where you're in a coffee shop using their free Wi-Fi to run some get_iplayer downloads. A staff member resets the router causing you to lose the connection temporarily, but due to their set up,  you're required to go to a login page and re-enter the password before you can continue. With this in mind, when checking for an internet connection the response headers should be checked to confirm they came from bb.co.uk and not, for example, great.coffee.net/login.<br />
+<br />
+I've had a couple of occassion where I've ended up with lower quality downloads because of this. Most recently, when downloading a BBC Proms programme that was over 2 hours long in hlshd mode, I noticed my download was at over 90% and went off to make a cup of tea. When I returned to my computer I found it had done a few re-tries because the internet connection was lost temporarily and it was now downloading at a much lower quantity. What had happened was that a household member was having connection problems and had switched off the router, waited a bit, then switched it back on. I interupted get_iplayer and was able to re-do the download at a mode I selected. Unfortunately, because the programme was very close to expiry, I only had time to download it at a non-hd quality. It was frustrating that get_iplayer had discarded all the 90%+ hlshd data and was writing lower-quality data to the .ts file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-12-2017, 08:47 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (18-12-2017, 12:01 AM)</span></cite>When re-trying a download would you consider adding a feature that checks the internet connection before changing modes?</blockquote>It's a no from me. I'm not willing to support such functionality. If you or anyone else should wish to implement this in get_iplayer yourself, I'm obliged to caution you: If you want to add such new features, you must take over as maintainer.<br />
+<br />
+A successful request to a BBC web site may tell you that your connection is alive, but it says little about whether or not a subsequent download attempt will be successful. Only you would know if the connection actually dropped, and the download may have failed for other reasons, as is far more often the case. Sure, you waste a few cycles if get_iplayer goes through failed download attempts after your connection drops, but that doesn't do any harm if there is no connection. Still, I would entertain a pull request for a <kbd>--download-abortonerror</kbd> option that would force get_iplayer to exit after the first failed mode. People who cycle their routers or use sketchy cafe wi-fi could avoid unnecessary screen churn, and people who know they have dodgy connectivity might prefer to bail out quickly and try later if upstream isn't behaving.<br />
+<br />
+If you don't want get_iplayer to fall back to lower-quality streams, then configure it to only attempt the mode(s) of interest, either permanently in preferences or for a single download via command line. If your connection drops you'll then be left with a partial download of the desired quality. Downloads are resumable, so once the connection is restored, just re-run the same get_iplayer command to complete the download.  You have the means to run get_iplayer automatically with the PVR function. Downloads that fail during one run should be picked up in the next.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">08-01-2018, 04:24 PM</div>
+</div>
+<div class="message">My suggestion was way overly-complicated. The <span style="text-decoration: underline;" class="mycode_u">--download-abortonfail</span> option introduced in 3.09 is the ideal solution.<br />
+<br />
+Thanks.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; More Sophisticated Retries</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

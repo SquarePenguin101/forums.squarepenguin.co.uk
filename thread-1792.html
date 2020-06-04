@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Additional listformat fields</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Additional listformat fields</div>
+<div id="pagetitle"><h2>Additional listformat fields</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">26-05-2018, 05:46 PM</div>
+</div>
+<div class="message">For context, I'm currently creating a simple UI for get-iplayer, using the cached data to display info about a programme. I realise I can use the metadata options to collect more info about a particular programme, but this is slow compared to searching the cache, so it's convenient to have as much info as possible available immediately.<br />
+<br />
+The current fields controllable with listformat are these: <kbd>&lt;index&gt; &lt;pid&gt; &lt;name&gt; &lt;episode&gt; &lt;seriesnum&gt; &lt;episodenum&gt; &lt;desc&gt; &lt;channel&gt; &lt;available&gt; &lt;expires&gt; &lt;timeadded&gt; &lt;web&gt;</kbd><br />
+<br />
+One particularly piece of metadata that I'd like to use but isn't available this way is the thumbnail url. Is there any scope to include this in the cached metadata?<br />
+<br />
+I appreciate that everyone will have their own favourite piece of metadata they'd like cached, so a more general approach might allow the cached metadata fields to be configured. However, this sounds to me to be a far more complex task.<br />
+<br />
+As a perl newb I can't gauge where on the scale of trivial to impossible doing something like this would be. Is this something that might be considered? I'd be willing to try to implement it (via me learning perl!) if there's any scope it might be accepted if I could get it to work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-05-2018, 06:49 PM</div>
+</div>
+<div class="message">Thumbnail info is not available during programme indexing. It was at one time, but the thumbnail field in the cache is no longer used and will be removed in the next release. The cache is not a metadata repository. It is only meant to support searching for programmes in a few limited dimensions. Thumbnails are completely irrelevant to that. And there is no scope for configurable cache fields - the data is far too limited. I wouldn't support that, anyway.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2171</h2></div><div class="dateline">26-05-2018, 07:12 PM</div>
+</div>
+<div class="message">Thanks for clarifying. I noticed that &lt;thumbnail&gt; was 'nearly' supported (in that, unlike other invalid tags, it's processed and removed rather than left alone in the output), so I was hopeful, but clearly this is just a legacy quirk. You've shattered my dreams ;)<br />
+<br />
+I can appreciate the thumbnail has no use in a text search, but in my case there's scope for a 'visual' search (the user scanning through a list of images), which is why I thought it might be a sensible addition. I'll stick with using the --metadata arguments instead.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Additional listformat fields</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

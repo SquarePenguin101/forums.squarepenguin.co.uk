@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Manual install failing - what am I doing wrong?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Manual install failing - what am I doing wrong?</div>
+<div id="pagetitle"><h2>Manual install failing - what am I doing wrong?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-674</h2></div><div class="dateline">02-11-2014, 09:50 PM</div>
+</div>
+<div class="message">I'm a get_iplayer_automator refugee and I'm finding Squarepenguins guides invaluable as I try to get up and running with get_iplayer via the CLI.  I'm trying to install the  latest version on a mac running 10.6.8 (Snow Leopard) and when I attempt the initial run iplayer fails with the following error report:<br />
+<br />
+"default" is not defined in %Encode::EXPORT_TAGS at ./get_iplayer line 77<br />
+	main::BEGIN() called at /System/Library/Perl/5.10.0/darwin-thread-multi-2level/Encode.pm line 77<br />
+	eval {...} called at /System/Library/Perl/5.10.0/darwin-thread-multi-2level/Encode.pm line 77<br />
+Can't continue after import errors at ./get_iplayer line 77<br />
+BEGIN failed--compilation aborted at ./get_iplayer line 77.<br />
+<br />
+Is there a step between granting get_iplayer permissions and the initial run where I should be setting up that default EXPORT_TAGS?<br />
+<br />
+Any hints / nudges / suggestions would be most appreciated, thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">03-11-2014, 01:09 AM</div>
+</div>
+<div class="message">get_iplayer is broken with versions of PERL less than 5.10.0 as per the <a href="https://squarepenguin.co.uk/wiki/releasenotes/release287/">release notes for get_iplayer v2.87</a>.<br />
+<br />
+You can read more about this issue on the mailing list <a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg06034.html">here</a>.<br />
+<br />
+get_iplayer 2.89 is due for release tonight and includes a fix for this issue. Check back through the day tomorrow for updates.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-674</h2></div><div class="dateline">03-11-2014, 08:04 PM</div>
+</div>
+<div class="message">That's tremendous news; thanks for the very prompt reply SP! Using the info from the mailing list link I was able to apply that capitalisation change to the 'default' on line 77 and get v2.87 up onto its feet to take some baby steps.  After that, updating to v.2.90 now seems a lot less daunting.  Thanks again for the guides you've put together and your response here.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Manual install failing - what am I doing wrong?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR Features</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Web PVR Features</div>
+<div id="pagetitle"><h2>Web PVR Features</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-325</h2></div><div class="dateline">13-03-2014, 05:51 AM</div>
+</div>
+<div class="message">I really like the Web PVR - it's a very convenient feature.<br />
+<br />
+One thing I'd like is the option to just list each series rather than each episode of each series. That would mean a lot fewer pages of info to wade through.<br />
+<br />
+Also, is there a way to record every series of a program. Currently if you select a series for recording you get Progname_Series_1, then you have to select Progname_Series_2 when it comes along. I'd like to just be able to record Progname &amp; have it pick up all series.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-03-2014, 11:39 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/web-pvr-features/#post-1925">Quote:</a><br />
+One thing Iâd like is the option to just list each series rather than each episode of each series. That would mean a lot fewer pages of info to wade through.</blockquote>
+<br />
+It's not something I'm likely to implement myself, but maybe someone else will be inspired.  While grouping on series would reduce the number of listings in full results by about 2/3, that still leaves nearly 600 TV listings (and twice that for radio) based on today's data.  That's not really a qualitative change.  It would make more difference in results from a focused search, but then you already know what you're looking for.  Keep in mind that get_iplayer and the Web PVR were created as search tools, not browsing tools.  The BBC web site provides that service.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Also, is there a way to record every series of a program. Currently if you select a series for recording you get Progname_Series_1, then you have to select Progname_Series_2 when it comes along. Iâd like to just be able to record Progname &amp; have it pick up all series.</blockquote>
+<br />
+Click a PVR job to edit it.  Remove <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#92;: Series 1</code></div></div> from the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0</code></div></div> field and remove <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>_Series_1</code></div></div> from the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pvrsearch</code></div></div> field, then save changes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-325</h2></div><div class="dateline">17-03-2014, 11:48 PM</div>
+</div>
+<div class="message">&lt;/blockquote&gt;<br />
+Click a PVR job to edit it.  Remove <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#92;: Series 1</code></div></div> from the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0</code></div></div> field and remove <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>_Series_1</code></div></div> from the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pvrsearch</code></div></div> field, then save changes.<br />
+&lt;/blockquote&gt;<br />
+I tried this, and unfortunately it hasn't worked.<br />
+I waited for a new episode to appear, ran get_iplayer --pvr and it found no new episodes. I re-entered the search with the series added, and this time get_iplayer --pvr found &amp; downloaded the new episode.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-03-2014, 12:26 AM</div>
+</div>
+<div class="message">It also depends on how you created the original search.  You should also remove any <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>^</code></div></div> at the beginning or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36;</code></div></div> at the end of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>search0</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">18-03-2014, 10:00 AM</div>
+</div>
+<div class="message">Here is an example of a PVR created from the command line. This records every series. Take a look and compare it to what you have and you'll probably be able to work out what you need to adjust.
+<br/>
+<code>
+    channel BBC Two
+    fileprefix <nameshort>-<senum>-<episodeshort>
+    output F:\2 - TV Shows\Top Gear\Season 21
+    tvmode best
+    type tv
+    search0 Top Gear
+</code>
+</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Web PVR Features</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

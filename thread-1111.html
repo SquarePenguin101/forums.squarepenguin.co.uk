@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - inconsistent file sizes and errors in videos</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; inconsistent file sizes and errors in videos</div>
+<div id="pagetitle"><h2>inconsistent file sizes and errors in videos</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1483</h2></div><div class="dateline">01-12-2016, 09:10 PM</div>
+</div>
+<div class="message">I have bee using get_iplayer for a number of years with fantastic results, but since upgrading to v2.97 in the last week I have now started to receive errors when downloading files and the output files are varying in size for the same program on multiple downloads.  The output files also have issues with the image breaking up and being very blocky as well as losing audio from time to time.  I am running on Windows 10, with fast, wired broadband to the server I use.  <br />
+<br />
+The output from the CL tool vary with some lines showing in red e.g. <br />
+<br />
+"[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome"<br />
+<br />
+and<br />
+<br />
+"[NULL @ 05f32aa0] Error parsing ADTS frame header!0:30:21.69 bitrate=4433.7kbits/s speed= 126x"<br />
+<br />
+The output below shows the same program downloaded twice but with different files created:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>C:\Users\DanG&gt;get_iplayer 1918 -g --modes=best --force<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1918:   Planet Earth II - Deserts, BBC One, b084ftll<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hvfhd1,hvfhd2,hlshd1,hvfsd1,hvfsd2,hvfvhigh1,hvfvhigh2,hlsvhigh1,hvfhigh1,hvfhigh2,hlshigh1,hvfstd1,hvfstd2,hlsstd1,hvflow1,hvflow2 modes will be tried for version original<br />
+INFO: Trying hvfhd1 mode to record tv: Planet Earth II - 4. Deserts<br />
+INFO: File name prefix = Planet_Earth_II_-_4._Deserts_b084ftll_original<br />
+INFO: Begin recording file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+INFO: Recorded: 1890.34MB in 00:06:05 at 42426kbps to C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+INFO: Begin converting file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Error parsing ADTS frame header!0:30:21.69 bitrate=4433.7kbits/s speed= 126x<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Error parsing ADTS frame header!0:33:24.11 bitrate=4448.0kbits/s speed= 117x<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 05591dc0] SEI type 159 size 240 truncated at 18410.30 bitrate=4461.3kbits/s speed= 110x<br />
+[NULL @ 05f32aa0] Error parsing ADTS frame header!00:41:17.07 bitrate=4264.7kbits/s speed= 110x<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05f32aa0] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 05591dc0] non-existing PPS 1 referencedme=00:58:09.73 bitrate=4220.2kbits/s speed=100x<br />
+frame=174182 fps=4750 q=-1.0 Lsize= 1874191kB time=01:00:37.42 bitrate=4220.9kbits/s speed=99.2x<br />
+INFO: Converted file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4<br />
+INFO: Recorded file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.mp4<br />
+<br />
+INFO: MP4 tagging MP4 file<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =======================================================&gt; 99% |<br />
+ Finished writing to temp file.<br />
+<br />
+C:\Users\DanG&gt;get_iplayer --prefs-show<br />
+Options in 'C:\Users\DanG/.get_iplayer/options'<br />
+        output = C:\Media\New<br />
+<br />
+C:\Users\DanG&gt;get_iplayer 1918 -g --modes=best --force<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1918:   Planet Earth II - Deserts, BBC One, b084ftll<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hvfhd1,hvfhd2,hlshd1,hvfsd1,hvfsd2,hvfvhigh1,hvfvhigh2,hlsvhigh1,hvfhigh1,hvfhigh2,hlshigh1,hvfstd1,hvfstd2,hlsstd1,hvflow1,hvflow2 modes will be tried for version original<br />
+INFO: Trying hvfhd1 mode to record tv: Planet Earth II - 4. Deserts<br />
+INFO: File name prefix = Planet_Earth_II_-_4._Deserts_b084ftll_original<br />
+INFO: Begin recording file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+INFO: Recorded: 1890.34MB in 00:04:28 at 57782kbps to C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+INFO: Begin converting file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4.ts<br />
+[aac @ 04c72ca0] TYPE_FIL: Input buffer exhausted before END element found<br />
+[aac @ 04c72ca0] decode_pce: Input buffer exhausted before END element found<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Error parsing ADTS frame header!<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 04c404c0] non-existing PPS 10 referenced=00:08:55.40 bitrate=3066.9kbits/s speed= 171x<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Error parsing ADTS frame header!0:18:54.94 bitrate=3526.0kbits/s speed= 170x<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Error parsing ADTS frame header!0:29:01.33 bitrate=3976.0kbits/s speed= 163x<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Error parsing ADTS frame header!<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 04c404c0] non-existing PPS 1 referencedme=00:43:17.91 bitrate=3985.1kbits/s speed= 105x<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Not yet implemented in FFmpeg, patches welcome<br />
+[NULL @ 0569c020] Error parsing ADTS frame header!00:58:15.06 bitrate=3719.4kbits/s speed= 105x<br />
+[NULL @ 0569c020] Failed to open bitstream filter aac_adtstoasc for stream 0 with codec copy: Invalid data found when processing input<br />
+frame=174117 fps=4212 q=-1.0 Lsize= 1872936kB time=01:06:47.68 bitrate=3828.4kbits/s speed=96.9x<br />
+INFO: Converted file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.partial.mp4<br />
+INFO: Recorded file: C:\Media\New\Planet_Earth_II_-_4._Deserts_b084ftll_original.mp4<br />
+<br />
+INFO: MP4 tagging MP4 file<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =======================================================&gt; 99% |<br />
+ Finished writing to temp file.<br />
+<br />
+</code></div>
+</div>
+<br />
+<br />
+The first file created is : 1.78 GB (1,919,176,390 bytes) and shows a duration of 01:00:37<br />
+The second file created is : 1.78 GB (1,917,894,656 bytes) and shows a duration of 01:06:47<br />
+<br />
+Both have image breakup (pixelation/colour issues) at different times as well as audio loss/breakup.<br />
+<br />
+Any ideas as to what is going wrong?  Other than updating the old client to 2.97 no other changes have been made to the config.  I have uninstalled and reinstalled a number of times as well as rebooted the PC and router as this was suggested elsewhere. I also have the same issue when using PIDs. This show is PID b084ftll.<br />
+<br />
+Many thanks in advance.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-12-2016, 01:22 AM</div>
+</div>
+<div class="message">You appear to be using get_iplayer outside the UK. Thread closed - see forum rules.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; inconsistent file sizes and errors in videos</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

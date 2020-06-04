@@ -1,0 +1,192 @@
+get_iplayer v3.05, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /home/andy/.get_iplayer
+INFO: User options file: /home/andy/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+INFO: Loaded PVR search 'nigella'
+INFO: Loaded PVR search 'barely_legal'
+INFO: Loaded PVR search 'heresy'
+INFO: Loaded PVR search 'dirkgently'
+INFO: Loaded PVR search 'howsafe'
+INFO: Loaded PVR search 'tooshort'
+INFO: Loaded PVR search 'hitchhiker'
+INFO: Loaded PVR search 'pink_floyd'
+INFO: Loaded PVR search 'silk'
+INFO: Loaded PVR search 'harly'
+INFO: Loaded PVR search 'ada'
+INFO: Loaded PVR search 'new_blood'
+INFO: Loaded PVR search 'bakeoff'
+INFO: Loaded PVR search 'rillington'
+INFO: Loaded PVR search 'apple_tree'
+INFO: Loaded PVR search 'comefly'
+INFO: Loaded PVR search 'radio2_live'
+INFO: Loaded PVR search 'railway'
+INFO: Loaded PVR search 'call-midwife'
+INFO: Loaded PVR search 'meet_lords'
+INFO: Loaded PVR search 'worlds'
+INFO: Loaded PVR search 'lifesavers'
+INFO: Loaded PVR search 'casualty'
+INFO: Loaded PVR search 'david_gilmour'
+INFO: Loaded PVR search 'castles'
+INFO: Loaded PVR search 'missing'
+INFO: Loaded PVR search 'sciencebritannica'
+INFO: Loaded PVR search 'crow'
+INFO: Loaded PVR search 'dangerous'
+INFO: Loaded PVR search 'hunted'
+INFO: Loaded PVR search 'game'
+INFO: Loaded PVR search 'skies'
+INFO: Loaded PVR search 'enfield_whitehouse'
+INFO: Loaded PVR search 'ss_gb'
+INFO: Loaded PVR search 'toughest_jobs'
+INFO: Loaded PVR search 'perrin'
+INFO: Loaded PVR search 'in_the_dark'
+INFO: Loaded PVR search 'click'
+INFO: Loaded PVR search 'silent_witness'
+INFO: Loaded PVR search 'londonspy'
+INFO: Loaded PVR search 'gruffalo'
+INFO: Loaded PVR search 'next_step'
+INFO: Loaded PVR search 'insert_name'
+INFO: Loaded PVR search 'bbc2_birthday'
+INFO: Loaded PVR search 'genius-of-invention'
+INFO: Loaded PVR search 'george_gently'
+INFO: Loaded PVR search 'replacement'
+INFO: Loaded PVR search 'gwyll'
+INFO: Loaded PVR search 'motorway'
+INFO: Loaded PVR search 'traffic_cops'
+INFO: Loaded PVR search 'commons'
+INFO: Loaded PVR search 'women_cars'
+INFO: Loaded PVR search 'building_cars'
+INFO: Loaded PVR search 'brain-doctors'
+INFO: Loaded PVR search 'hour'
+INFO: Loaded PVR search 'fifteen_billion'
+INFO: Loaded PVR search 'topgear'
+INFO: Loaded PVR search 'doctorwho'
+INFO: Loaded PVR search 'big_school'
+INFO: Loaded PVR search 'hislop'
+INFO: Loaded PVR search 'mock'
+INFO: Loaded PVR search 'divine_comedy'
+INFO: Loaded PVR search 'walliams'
+INFO: Loaded PVR search 'peter_kay'
+INFO: Loaded PVR search 'driver'
+INFO: Loaded PVR search 'stickman'
+INFO: Loaded PVR search 'jamesmay'
+INFO: Loaded PVR search 'dahl'
+INFO: Loaded PVR search 'jarre'
+INFO: Loaded PVR search 'cranes'
+INFO: Loaded PVR search 'f1'
+INFO: Loaded PVR search 'policing'
+INFO: Loaded PVR search 'cormoran'
+INFO: Loaded PVR search 'danny_zoo'
+INFO: Loaded PVR search 'a_saving_lives'
+INFO: Loaded PVR search 'apprentice'
+INFO: Loaded PVR search 'war_worlds'
+INFO: Loaded PVR search 'welcome_village'
+INFO: Loaded PVR search '6degrees'
+INFO: Loaded PVR search 'brian_pern'
+INFO: Loaded PVR search 'paramedics'
+INFO: Loaded PVR search 'gamechangers'
+INFO: Loaded PVR search 'qi'
+INFO: Loaded PVR search 'tubular_bells'
+INFO: Loaded PVR search 'who_do_you'
+INFO: Loaded PVR search 'gilmour'
+INFO: Loaded PVR search 'kate_bush'
+INFO: Loaded PVR search 'ashes'
+INFO: Loaded PVR search 'no_such_thing'
+INFO: Loaded PVR search 'all_about_two'
+INFO: Loaded PVR search 'ambulance'
+INFO: Loaded PVR search 'worst_witch'
+INFO: Loaded PVR search 'chicken'
+INFO: Loaded PVR search 'bangkok'
+INFO: Loaded PVR search 'our-kids'
+INFO: Loaded PVR search 'wouldilie'
+INFO: Loaded PVR search 'red_arrows'
+INFO: Loaded PVR search 'hour-to-save'
+INFO: Loaded PVR search 'the_voice'
+INFO: Loaded PVR search 'dara'
+INFO: Loaded PVR search 'byanymeans'
+INFO: Loaded PVR search 'hospital'
+INFO: Loaded PVR search 'horrible_histories'
+INFO: Loaded PVR search 'robot_wars'
+INFO: Loaded PVR search 'madmen'
+INFO: Loaded PVR search 'taboo'
+INFO: Loaded PVR search 'luther'
+INFO: Loaded PVR search 'prisoners_wives'
+INFO: Loaded PVR search 'helicopter'
+INFO: Loaded PVR search 'super_cars'
+INFO: Loaded PVR search 'intruders'
+INFO: Loaded PVR search 'unbelievable_truth'
+INFO: Loaded PVR search 'long_players'
+INFO: Loaded PVR search 'undercover'
+INFO: Loaded PVR search 'candycabs'
+INFO: Loaded PVR search 'hignfy'
+INFO: Loaded PVR search 'war_road'
+INFO: Loaded PVR search 'bohemian'
+INFO: Loaded PVR search 'wrong_mans'
+INFO: Loaded PVR search 'hammond'
+INFO: Loaded PVR search 'interceptor'
+INFO: Loaded PVR search 'splatalot'
+INFO: Loaded PVR search 'sherlock'
+INFO: Loaded PVR search 'orphanblack'
+INFO: Loaded PVR search 'accused'
+INFO: Loaded PVR search 'onlyconnect'
+INFO: Loaded PVR search 'odyssey'
+INFO: Loaded PVR search 'brit_airline'
+INFO: Loaded PVR search 'queen'
+INFO: Loaded PVR search 'grandprix'
+INFO: Loaded PVR search 'manonmars'
+INFO: Loaded PVR search 'trains_trouble'
+INFO: Loaded PVR search 'room101'
+INFO: Loaded PVR search 'frankie_boyle'
+INFO: Loaded PVR search 'chain_reaction'
+INFO: Loaded PVR search 'police_pressure'
+INFO: Loaded PVR search 'roomonthebroom'
+INFO: Loaded PVR search 'call_centre'
+INFO: Loaded PVR search 'josh'
+INFO: Loaded PVR search list
+Running PVR Searches:
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: PVR Run: 'queen'
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	fps50 = 1
+	get = 1
+	hide = 1
+	nopurge = 1
+	output = /var/spool/xbmc/iPlayer-Download/
+	pvrsingle = queen
+	radiomode = best
+	refreshexcludegroupsradio = local
+	tvmode = best
+	type = radio,tv
+	verbose = 1
+
+INFO: Search args: 'Queen'
+INFO: Got 5838 file cache entries for radio
+INFO: Got 5677 file cache entries for tv
+INFO: Search term 'Queen' is a substring
+DEBUG: Search download_regex = Queen
+DEBUG: Search channel_regex = .*
+DEBUG: Search category_regex = .*
+DEBUG: Search exclude_regex = ^ROGUE$
+DEBUG: Search channel_exclude_regex = ^ROGUE$
+DEBUG: Search category_exclude_regex = ^ROGUE$
+DEBUG: Search since = 999999
+DEBUG: Search before = -999999
+DEBUG: Search available_since = 
+DEBUG: Search expires_before = 
+
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: 0 matching programmes

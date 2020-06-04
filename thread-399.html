@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Programmes missing from PVR index</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Programmes missing from PVR index</div>
+<div id="pagetitle"><h2>Programmes missing from PVR index</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">18-05-2015, 10:30 PM</div>
+</div>
+<div class="message">I've got 2.92 running under Windows 7, and for the most part it's working fine. However there are a few specific programmes (mainly on BBC4) which don't seem to appear under the PVR TV index, and so can't directly be viewed/recorded via either the command line or the web PVR. However they are available to view on the iPlayer website, and if I use the URL I can view/record them via either web PVR or command line.<br />
+<br />
+Current examples are The Secrets of Bones (<a href="http://www.bbc.co.uk/iplayer/episode/b03x3zfs/secrets-of-bones-3-into-the-air">http://www.bbc.co.uk/iplayer/episode/b03...to-the-air</a>) and Inside the Medieval Mind (<a href="http://www.bbc.co.uk/iplayer/episode/b009s80l/inside-the-medieval-mind-1-knowledge">http://www.bbc.co.uk/iplayer/episode/b00...-knowledge</a>). Neither are in the TV index, but both can be viewed or recorded via the links.<br />
+<br />
+Is there a specific reason why they don't appear in the PVR index, or is it a bug or issue with the scraping of the site? Can anyone shed any light as to what is going on, as it seems to be quite specific and mainly affecting BBC4.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-05-2015, 10:26 AM</div>
+</div>
+<div class="message">Those two programmes work fine here.  No way to know what is wrong at your end.  The obvious guess is that somehow your cache hasn't been updated.  Perhaps there is something wrong with your search criteria.  Refresh your cache (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --refresh</code></div></div>) then search for the PID to check that the programme really is missing (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer&nbsp;&nbsp;pid:b03x3zfs</code></div></div> or <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer&nbsp;&nbsp;pid:b009s80l</code></div></div>).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">21-05-2015, 07:30 PM</div>
+</div>
+<div class="message">I have a batch file that runs twice a day, which to my thinking should have been doing the cache update:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>cd C:&#92;Program Files (x86)&#92;get_iplayer<br />
+perl.exe get_iplayer.pl --refresh --type=tv,radio,podcast<br />
+perl.exe get_iplayer.pl --pvr</code></div></div><br />
+<br />
+<br />
+<br />
+<br />
+Anyway I tried doing it manually (just with --refresh) and then your PID line, and got the following:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>c:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer pid:b03x3zfs<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: Search term 'b03x3zfs' is a non-existent pid, use --pid instead and/or specify the correct programme type<br />
+<br />
+INFO: 0 Matching Programmes</code></div></div><br />
+<br />
+<br />
+I guess the pid is no longer valid as the program itself has expired (what happened to 30-day expiry dates on everything BBC?!?!?!)<br />
+<br />
+But now it does seem to see both the latest episodes of both series, so the refresh looks to have done some good. I'll change the script to remove the --type element and see if that helps things along. But I'm sure I did a cache refresh via the web interface too and that didn't help (done prior to my original post).<br />
+<br />
+Anyway job looks good for now. So suffice it to say thanks for the help, and of course for the great program :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-05-2015, 08:27 PM</div>
+</div>
+<div class="message">That just means the programme is no longer available in the local cache, not necessarily that it is no longer available from iPlayer.  Do as instructed and use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">21-05-2015, 10:24 PM</div>
+</div>
+<div class="message">Yes, that worked (it's already in my history as I downloaded it before via its URL<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>c:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --pid b03x3zfs<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: Secrets of Bones - 3. Into the Air (b03x3zfs) Already in history (C:&#92;Users<br />
+&#92;Darren/.get_iplayer/download_history) - use --force to override</code></div></div><br />
+<br />
+<br />
+Out of interest I just did a normal search for the programme by name, and it only found the current episode<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>c:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer "secrets of bones"<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1338:&nbsp;&nbsp; Secrets of Bones - 4. Sensing the World, BBC Four, Factual,Nature &amp; Envi<br />
+ronment,Science &amp; Nature, default<br />
+<br />
+INFO: 1 Matching Programmes</code></div></div><br />
+<br />
+<br />
+But if I look on the iPlayer website, all 4 are available to watch. So it looks like there's something odd with the original 3 episodes appearing in my cache somehow?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-05-2015, 10:32 PM</div>
+</div>
+<div class="message"><a href="https://github.com/get-iplayer/get_iplayer/wiki/faq">https://github.com/get-iplayer/get_iplayer/wiki/faq</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">22-05-2015, 10:42 AM</div>
+</div>
+<div class="message">Thanks. Covers it nicely, will have a good look around what else is there, didn't know it existed.<br />
+<br />
+There's a similar problem with accessing some programmes on the Pi iPlayer add-on, which I would guess has a similar root cause (I know it's not your add-on, just rung a bell from a previous observation).</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Programmes missing from PVR index</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloading using multiple PIDs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading using multiple PIDs</div>
+<div id="pagetitle"><h2>Downloading using multiple PIDs</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">29-10-2014, 03:22 PM</div>
+</div>
+<div class="message">Hi,<br />
+Now that the search functionality is gone, is it possible to stack pids for download like we used to stack the index numbers?<br />
+<br />
+I have read a few things about this in the guides but they only seemed to work if the stacked PIDs were already in the cache and not with ones that weren't. So is this possible?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">29-10-2014, 03:36 PM</div>
+</div>
+<div class="message">EDIT - NO.<br />
+<br />
+What you saw in the guides section talked about index numbers. I've just updated the TV Download guide (and am working on the Radio guide) to indicate the difference between the index number and PID.<br />
+<br />
+EDIT - I got a bit excited, incorrect answer removed. Read next post.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2014, 03:41 PM</div>
+</div>
+<div class="message">Unfortunately, you can't stack PIDs with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> like you could stack index numbers.  For programmes in the (now non-existent) cache you could stack by using the form <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--get pid:PID1 pid:PID2</code></div></div>, but that doesn't work with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> either.  I expect to put out an interim release in a few days that will support multiple PIDs with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">29-10-2014, 03:45 PM</div>
+</div>
+<div class="message">Thanks user-2 that would be brilliant.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-616</h2></div><div class="dateline">29-10-2014, 06:10 PM</div>
+</div>
+<div class="message">I think I would find this feature useful too. <br />
+<br />
+I'm thinking about knocking up a script / program  that does searches using the webpage  and then mines the pids from the returned HTML.  e.g.   <a href="http://www.bbc.co.uk/iplayer/search?q=have+i+got+news+for+you">http://www.bbc.co.uk/iplayer/search?q=ha...ws+for+you</a>  returns a webpage containing these:    href="/iplayer/episode/b04mh8y5/have-i-got-news-for-you-series-48-episode-4" title="Have I Got News for You, Series 48: Episode 4"  class="list-item-link stat" data-object-type="episode-standard"<br />
+<br />
+Obviously it'll be fairly fragile,  but should work until they make more site changes?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2014, 08:45 PM</div>
+</div>
+<div class="message">I've had the same idea rattling around for a while.  There are still other options for get_iplayer, but a web scraper might be the last resort if those disappear.  As you say, it could be pretty fragile - the Beeb have changed search results a few times over the years.  You also have the complication of teasing out multiple pages of results.  If you go for it, please consider writing it in Perl so that I can steal it for get_iplayer :}</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-514</h2></div><div class="dateline">29-10-2014, 09:01 PM</div>
+</div>
+<div class="message">Is Nitro - <a href="https://developer.bbc.co.uk/nitro">https://developer.bbc.co.uk/nitro</a> - something that could be used in the future? From a quick glance, it seems like it would be useful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-514</h2></div><div class="dateline">29-10-2014, 09:02 PM</div>
+</div>
+<div class="message">"The BBC Developer site is currently open for registration to BBC Employees. Account requests from other users are not currently being activated. Please check back soon for more info."<br />
+<br />
+Yeah, nevermind. But it does sound like it will be opened up more eventually.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2014, 09:07 PM</div>
+</div>
+<div class="message">I don't see Nitro as a solution for get_iplayer, at least not directly. You can be sure that get_iplayer wouldn't get direct access, and even if that were possible, rate limiting and other restrictions might be too tight. There are still details missing, and as you noted, outsiders can't see Nitro yet.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">30-10-2014, 05:38 AM</div>
+</div>
+<div class="message">I also had the scrape idea. Seems like a good chance it would work. What are the other ideas? How can I help? I'm really sad about this. What can I do to help?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">30-10-2014, 05:41 AM</div>
+</div>
+<div class="message">What about teaming up with TVDB folks and having a PID field that the community could help keep populated, we could then use the APIs that 'The Renamer' and 'TVRRenamer' uses to pull that info down</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">30-10-2014, 06:00 AM</div>
+</div>
+<div class="message">One other point of interest, the moveably the BBC instantly broke all the iPlayer features in Samsung TV's. You can read about it on Samsung's website.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">30-10-2014, 11:16 AM</div>
+</div>
+<div class="message">Meantime here is a UserScript I use in Firefox to queue programme to the PVR List<br />
+First you start get_iplayer's WebPVR on localhost as usual.<br />
+The you navigate the BBC schedule pages.<br />
+When my userscript each link to a programme page such as<br />
+/programmes/b04xxxxx get replaced by a link to queue the programme to PVR.<br />
+Once they are queued RunPVR goes and get them.<br />
+<br />
+Here is the script:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>// ==UserScript==<br />
+// @id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gjb<br />
+// @name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PVR Embedded<br />
+// @version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.0<br />
+// @namespace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+// @author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gjb<br />
+// @description&nbsp;&nbsp;&nbsp;&nbsp;Embedded get_iplayer links into schedule<br />
+// @include&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.bbc.co.uk/*<br />
+// @run-at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document-end<br />
+// ==/UserScript==<br />
+<br />
+&nbsp;&nbsp;for( var i=0; i&lt;document.links.length; i++ )<br />
+&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var myLink = document.links[i]<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if( myLink.pathname.match( /^&#92;/programmes&#92;/b04[a-z,0-9]{5}&#36;/) )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pid = myLink.pathname.split('/')[-1];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('pid:' + pid)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str=""<br />
+&nbsp;&nbsp;str +="http://localhost:1935/?SEARCH=&amp;SEARCHFIELDS=name&amp;PROGTYPES=radio&amp;URL=http%3A%2F%2Fwww%2Ebbc%2Eco%2Euk%2Fprogrammes%2F"<br />
+&nbsp;&nbsp;str += pid<br />
+&nbsp;&nbsp;str +="&amp;VERSIONLIST=default&amp;EXCLUDE=&amp;CATEGORY=&amp;EXCLUDECATEGORY=&amp;CHANNEL=&amp;EXCLUDECHANNEL=&amp;SINCE=&amp;BEFORE=&amp;FUTURE=0&amp;SORT=index&amp;REVERSE=0&amp;PAGESIZE=10&amp;HIDE=0&amp;HIDEDELETED=0&amp;COLS=thumbnail&amp;COLS=type&amp;COLS=name&amp;COLS=episode&amp;COLS=desc&amp;COLS=channel&amp;COLS=categories&amp;COLS=timeadded&amp;OUTPUT=&amp;MODES=default&amp;PROXY=&amp;SUBTITLES=0&amp;METADATA=&amp;THUMB=0&amp;PVRHOLDOFF=&amp;FORCE=0&amp;AUTOWEBREFRESH=1&amp;AUTOPVRRUN=4&amp;REFRESHFUTURE=0&amp;BITRATE=&amp;VSIZE=&amp;VFR=&amp;STREAMTYPE=&amp;SAVE=0&amp;SEARCHTAB=yes&amp;COLUMNSTAB=no&amp;DISPLAYTAB=no&amp;RECORDINGTAB=no&amp;STREAMINGTAB=no&amp;PAGENO=1&amp;INFO=0&amp;NEXTPAGE=pvr%5Fqueue&amp;ACTION=&amp;.cgifields=REFRESHFUTURE&amp;.cgifields=FUTURE&amp;.cgifields=SUBTITLES&amp;.cgifields=HISTORY&amp;.cgifields=REVERSE&amp;.cgifields=PROGTYPES&amp;.cgifields=THUMB&amp;.cgifields=HIDE&amp;.cgifields=HIDEDELETED&amp;.cgifields=FORCE&amp;.cgifields=COLS"<br />
+&nbsp;&nbsp;document.links[i].href = str;<br />
+&nbsp;&nbsp;document.links[i].target = 'PVR'<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+&nbsp;&nbsp;}</code></div></div><br />
+<br />
+<br />
+<br />
+More about UserScripts here: <a href="http://userscripts-mirror.org/">http://userscripts-mirror.org/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">30-10-2014, 12:22 PM</div>
+</div>
+<div class="message">FWIW I wrote a quick'n'dirty (and probably buggy as hell) python script that uses the ion api to get tv listings and prints it out in tv.cache format.<br />
+I don't think the ion api will last for much longer though...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">30-10-2014, 12:26 PM</div>
+</div>
+<div class="message">I thought I attached the script but it doesn't show up.<br />
+Here it is inline<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>import urllib<br />
+import json<br />
+<br />
+class bbc:<br />
+&nbsp;&nbsp;def __init__(self):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;self.index=0<br />
+<br />
+&nbsp;&nbsp;def newline(self,id,title,channel,episode='',seriesnum='',episodenum=''):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;self.index=self.index+1<br />
+&nbsp;&nbsp;&nbsp;&nbsp;try:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srs=str(int(seriesnum.split()[-1]))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;except:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;srs=''<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#index|type|name|pid|available|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web<br />
+&nbsp;&nbsp;&nbsp;&nbsp;line = '%d|tv|%s|%s|available|%s|%s|%s|versions|duration|desc|%s|categories|thumbnail|timeadded|guidance|web' % (self.index,title,id,episode,srs,episodenum,channel)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print line.encode('utf-8')<br />
+<br />
+&nbsp;&nbsp;def child_episodes(self,master,child):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#print "================== master ==============="<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#for kk in master.keys():<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;try:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;print kk,'-&gt;',master[kk]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;except:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;print kk, '(???)'&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;#print "------------ child ----------"&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;channel=''<br />
+&nbsp;&nbsp;&nbsp;&nbsp;if master.has_key('masterbrand_title'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;channel=master['masterbrand_title']<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for episode in child:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#for kk in episode.keys():<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;try:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;print kk,'-&gt;',episode[kk].encode('utf-8')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;except:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;&nbsp;&nbsp;&nbsp;print kk, '(???)'&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if channel=='' and episode.has_key('masterbrand_title'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;channel=episode['masterbrand_title']<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.newline(episode['id'],master['title'],channel,episode['title'],episode['series_title'],episode['position'])<br />
+<br />
+&nbsp;&nbsp;def scan(self):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;for brand in ('bbc_one','bbc_two','bbc_three','bbc_four'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for letter in 'abcdefghijklmnopqrstuvwxyz':<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; url='http://www.bbc.co.uk/iplayer/ion/atoz/format/json/service_type/tv/masterbrand/%s/letter/%s/' % (brand,letter)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; r=json.load(urllib.urlopen(url))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for programme in r['blocklist']:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oldindex=self.index<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if programme.has_key('child_episodes'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.child_episodes(programme,programme['child_episodes'])<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if programme.has_key('series'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for series in programme['series']:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if series.has_key('child_episodes'):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.child_episodes(programme,series['child_episodes'])<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if oldindex==self.index:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.newline(programme['id'],programme['title'],programme['masterbrand_title'])<br />
+<br />
+b=bbc()<br />
+b.scan()</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-10-2014, 01:04 PM</div>
+</div>
+<div class="message">@boisemick: There is no way TVDB could be kept sufficiently current, and it doesn't help at all for radio.<br />
+<br />
+@pipoolippo:  I'm wary of the ION feeds as well, though they they might be the only source for certain information for now.<br />
+<br />
+I'm closing this thread.  If anyone has a script to contribute, create a new thread, where people will see it.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading using multiple PIDs</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

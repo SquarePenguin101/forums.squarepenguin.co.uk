@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Atomicparsley gives &quot;Exec format error&quot; - not tagging m4a file</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Atomicparsley gives &quot;Exec format error&quot; - not tagging m4a file</div>
+<div id="pagetitle"><h2>Atomicparsley gives &quot;Exec format error&quot; - not tagging m4a file</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2308</h2></div><div class="dateline">27-01-2020, 08:41 AM</div>
+</div>
+<div class="message">Hi, I'm having problems with tagging the downloaded m4a.<br />
+<br />
+Looks like an error with atomicparsley. The file isn't tagged after the normal download process, I've also tried the `--tag-only` option, but that doesn't work either.<br />
+<br />
+Any help with troubleshooting would be appreciated.<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>bash-5.0# get_iplayer --pid=m000dphj --tag-only --tag-only-filename="Radio_1s_Residency-HAAi.m4a"<br />
+get_iplayer v3.23, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+<br />
+Episodes:<br />
+Radio 1's Residency - HAAi, BBC Radio 1, m000dphj<br />
+INFO: 1 total programmes<br />
+<br />
+INFO: Processing radio: 'Radio 1's Residency - HAAi (m000dphj)'<br />
+INFO: Tagging M4A<br />
+open3: exec of AtomicParsley Radio_1s_Residency-HAAi.m4a --metaEnema --freefree --overWrite --stik Normal --advisory remove --copyright 2020 British Broadcasting Corporation, all rights reserved --title HAAi --artist BBC Radio 1 --albumArtist BBC Radio --album Radio 1's Residency --grouping Music,Mixes,Dance &amp; Electronica --composer BBC iPlayer --genre Music --comment HAAi has a chat with Richie Hawtin and plays a trippy selection of downtempo chuggers. --year 2020-01-27T01:00:00Z --tracknum  --disk  --lyrics HAAi has a chat with Richie Hawtin and plays a trippy selection of downtempo chuggers.<br />
+<br />
+PLAY: <a href="https://www.bbc.co.uk/programmes/m000dphj">https://www.bbc.co.uk/programmes/m000dphj</a><br />
+<br />
+INFO: <a href="https://www.bbc.co.uk/programmes/m000dphj">https://www.bbc.co.uk/programmes/m000dphj</a> --artwork ./Radio_1s_Residency-HAAi.jpg failed: Exec format error at /usr/local/bin/get_iplayer line 2131.<br />
+bash-5.0#</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">27-01-2020, 10:22 AM</div>
+</div>
+<div class="message">A few suggestions:<br />
+<br />
+You might want to read this first:  <a href="thread-706.html">https://forums.squarepenguin.co.uk/thread-706.html</a><br />
+<br />
+Upgrade to the latest version of get-iplayer (you're one release behind, but I don't think this is your problem)<br />
+<br />
+and:<br />
+&#36; AtomicParsley --version<br />
+If I recall correctly then you need at least version 0.9.6.<br />
+<br />
+Does running AtomicParsley by hand on that file work?<br />
+<br />
+Is the file corrupted in some way?<br />
+<br />
+I downloaded that programme with --no-tag, and then tagged it successfully using the command line you provided.  So I don't think there's anything wrong with get-iplayer itself here.<br />
+<br />
+Just to set expectations... I'm away for a few days and probably won't be able to follow up until at least Friday - but others might be able to help.<br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2308</h2></div><div class="dateline">27-01-2020, 11:50 AM</div>
+</div>
+<div class="message">Thanks for quick response.<br />
+<br />
+I've tried with both 3.23 and 3.24 and get the same. I'm sticking with 3.23 at the moment as can't get high quality audio downloads with 3.24?<br />
+<br />
+Trying `AtomicParsley --version` shows the problem....<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>bash-5.0# AtomicParsley --version<br />
+bash: /usr/local/bin/AtomicParsley: cannot execute binary file: Exec format error</code></div></div><br />
+I'm running this in a docker container - [based on this example](<a href="https://github.com/Marginal/docker-get_iplayer/blob/master/Dockerfile">https://github.com/Marginal/docker-get_i...Dockerfile</a>) - so there must be an issue with the AtomicParsley install rather than any problem with `get_iplayer`.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Atomicparsley gives &quot;Exec format error&quot; - not tagging m4a file</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

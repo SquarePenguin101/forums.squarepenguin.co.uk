@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - The &quot;Added:&quot; prefix for new programmes</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; The &quot;Added:&quot; prefix for new programmes</div>
+<div id="pagetitle"><h2>The &quot;Added:&quot; prefix for new programmes</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">28-10-2017, 11:10 PM</div>
+</div>
+<div class="message">I've been using the following script, for some time :-<br />
+<br />
+date  &gt;~/iPlayer/playerfiles/iplayprogs.txt | get_iplayer | grep -iv -f ~/iPlayer/playerfiles/match.txt &gt;&gt;~/iPlayer/playerfiles/iplayprogs.txt<br />
+<br />
+This effectively creates a file of the output of the command, with unwanted data filtered out, with a date/time stamp at the start. match.txt is the file which contains data not wanted. It works well, and still does, but the nicest part is that it appends "Added" to all entries new, since I ran the script the previous time. However, for some reason I cannot understand, the "added" function has failed to be included, over the past couple of weeks. I've checked the filter list, (match.txt), to see if added has somehow got on the list, but there's nothing there which could be interpreted as this. In any case no changes had been made prior to the effect becoming evident. if anyone could explain, I'd be most grateful. The issue, BTW is v3.01 running on Mageia 5<br />
+<br />
+Cheers, Rod Goslin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2017, 12:08 AM</div>
+</div>
+<div class="message">v3.01 is broken by BBC changes and no longer supported. Update to 3.06 and try again. My guess is that your scheme still won't work, albeit for a different reason. I don't see how you could be appending anything by using only grep, so I assume you are referring to the "Added:" prefix that get_iplayer prepended to its dump of newly-indexed programmes.  get_iplayer no longer produces such a dump. You can filter the "Added:" records (if there are any) from the output from <kbd>get_iplayer --verbose</kbd>, but it's cleaner to use <kbd>--since=N</kbd> to list programmes added in the last N hours. If N is less than your cache update interval, the list will contain only programmes added in the update just performed. You also appear to be relying on the fact that when invoked without arguments, get_iplayer dumps a list of its entire cache contents. That behaviour is deprecated and will be removed in the next release. You will need to explicitly request a full dump by using <kbd>".*"</kbd> as a search string.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">29-10-2017, 01:19 AM</div>
+</div>
+<div class="message">Thanks, Dinky, for the prompt reply. I only noticed, today, that v 3.06 was out. Unfortunately, Mageia repositories still only hold v2.94, so no help there! I'll look round for an installable download. The grep operation is a negative grep. It excludes all titles that have a string listed in the text file, so cutting down the list, Cbeebies and such. I used to run the script in chrontab, at a specific time, so the --since=N option would work ok, but lately I've changed to running the command whenever I feel I have the time to download programmes of interest. If the "Added" prepend is no longer produced, I'll have to live with it. A pity, though. It saved me scrolling down a long list of programmes that I'd seen before, since it indicated a short list of unique entries. The alternative was to trawl through the BBC iPlayer site and select the files at source.<br />
+<br />
+Cheers, Rod Goslin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">29-10-2017, 01:42 AM</div>
+</div>
+<div class="message">Ummm. Any idea where I might get a copy of 3.06? the latest one I've been able to find has been the rpm package for 3.05. Most sites stop at v3.01, or even earlier!<br />
+<br />
+Cheers, Rod</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2017, 03:24 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-10-2017, 01:19 AM)</span></cite>If the "Added" prepend is no longer produced, I'll have to live with it.</blockquote>As I said, they are still there if you really want them. For your case it's as simple as:  <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --verbose | grep 'Added:'</code></div></div><blockquote class="mycode_quote"><cite><span> (29-10-2017, 01:42 AM)</span></cite>Any idea where I might get a copy of 3.06?</blockquote>See Linux manual installation doc in wiki</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">01-11-2017, 02:54 AM</div>
+</div>
+<div class="message">Thanks. v3.06 duly loaded. Nothing, however, seems to bring back the 'Added' programmes. I've written a command which saves the latest listing as a text file, and a program which renames the previous file to 'old', renames the latest as 'new'. Since the Index is always changing, a cut command removes that. A diff command gives the difference. Stripping out the references to the programmes removed from the listing, leaves me with only those which were not in the earlier listing. It's a bit untidy, with diffs editing notes but does give me the information. Anything that interests I can download from the pid</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">01-11-2017, 02:57 AM</div>
+</div>
+<div class="message">Ummm, How does one indicate that the thread is solved, on this forum?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2017, 02:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-11-2017, 02:54 AM)</span></cite>Nothing, however, seems to bring back the 'Added' programmes.</blockquote>They are there, but of course will only appear when the cache is actually updated (default 4 hrs). You can add <kbd>--refresh</kbd> to <kbd>--verbose</kbd> to force an update.<br />
+<blockquote class="mycode_quote"><cite><span> (01-11-2017, 02:57 AM)</span></cite>Ummm, How does one indicate that the thread is solved, on this forum?</blockquote>Full edit your original post and select the [SOLVED] prefix in the subject.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">01-11-2017, 04:47 PM</div>
+</div>
+<div class="message">I assumed that that was the way to add 'solved', as in other forums. But, in this case there is no 'edit' function on the first post. Only 'delete' 'quote' and 'report' (and 'find'). 'edit' does appear on the latest post for the usual period.<br />
+The command get_iplayer --verbose | grep 'Added:'' did not work either, even after a 12 hour+ interval. And that was copied and pasted, so verbatim However, I've refined my shell script, somewhat, and it gives me the results I want. So 'Solved' is enough for me.<br />
+<br />
+Cheers, Rod Goslin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2017, 07:51 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-11-2017, 04:47 PM)</span></cite>But, in this case there is no 'edit' function on the first post.</blockquote>My bad. Forgot about the time limit for editing. I haven't typically used thread prefixes very much, only a few times in an attempt to curb duplicate posting.<br />
+<blockquote class="mycode_quote"><cite><span> (01-11-2017, 04:47 PM)</span></cite>The command get_iplayer --verbose | grep 'Added:'' did not work either,</blockquote>We'll have to disagree on that. Maybe someone else knows how you might be suppressing those messages in verbose output. AFAIK, it isn't possible. But as I said, you also have option of using <kbd>--since=1</kbd> (instead of <kbd>--verbose</kbd>) to show everything added in the past hour, which would encompass the last update.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">01-11-2017, 11:06 PM</div>
+</div>
+<div class="message">Sorry to be a bother, but strange things are happening, which I'm unable to comprehend. The program I wrote works ok, but the result shows no differences between an old search and a new search, and therefore no output. Opening up the two files, there indeed seems to be no change in the programmes available. Thinking to start from scratch, I renamed the .get_iplayer file to take it out of consideration, on the basis that restarting the program would re-establish the setup directory. This it did, but now, there is nothing in the return of running get_iplayer, as below:-<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>[rod@down ~]&#36; get_iplayer<br />
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+<br />
+INFO: Getting tv Index Feeds (this may take a few minutes)<br />
+<br />
+INFO: Using concurrent indexing<br />
+..................................<br />
+<br />
+INFO: 0 Matching Programmes<br />
+[rod@down ~]&#36; <br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-11-2017, 11:19 PM</div>
+</div>
+<div class="message">You said you installed v3.06 - use it, or you'll never get any TV programmes indexed.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">02-11-2017, 12:57 AM</div>
+</div>
+<div class="message">That's odd. I thought that v3.06 had been installed. Certainly the v3.06 files are the only ones held on the machine. I'd already deleted all the 3.01 file structure. But using the whole path name it worked. I'm even more puzzled than before. But, thanks it did the trick. I'd not noticed the version info in the header. In fact, the short program I wrote to run the thing is as below, and the full pathname of the executive file is there.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>#!/bin/bash<br />
+# iplayprog<br />
+cd ~/iplayprogs<br />
+&#92;mv newcutprogs.txt oldcutprogs.txt<br />
+date &gt; newprogs.txt<br />
+~/get_iplayer/get_iplayer-3.06/get_iplayer | grep -iv -f ~/iPlayer/playerfiles/match.txt&gt;&gt; newprogs.txt<br />
+cut -f2 newprogs.txt &gt;newcutprogs.txt<br />
+diff -f2 oldcutprogs.txt newcutprogs.txt&gt; latestprogs.txt<br />
+cat newprogs.txt &gt;&gt; latestprogs.txt<br />
+konsole --noclose --workdir ~/iplayprogs -e more latestprogs.txt</code></div></div><br />
+From that, the absence of 'Added:' is probaby due to there not being an update in the old and the new files, so they were both identical. Presumably get_iplayer compares both of the caches, old and new and does something similar to my program!!!<br />
+<br />
+Cheers, Rod Goslin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-11-2017, 01:51 AM</div>
+</div>
+<div class="message">The absence of the 'Added:' lines in get_iplayer output will be permanent because you decided not to use <kbd>--verbose</kbd> as I suggested. Your diffs will reflect programmes that have been expired from the cache, which seems like unnecessary clutter. You're really making extra work for yourself here, but it's your show. <br />
+<br />
+For anyone else who wants to filter new cache entries, just use <kbd>get_iplayer --refresh --verbose [other options] | grep "Added:"</kbd>. Replace <kbd>grep</kbd> with <kbd>findstr</kbd> on Windows.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1714</h2></div><div class="dateline">02-11-2017, 04:02 AM</div>
+</div>
+<div class="message">Well, I did say that it was a bit untidy. If, now, the old way works, I shall be only too pleased to go back to it. Or something like it. I was giving some thought to eliminating the expired files, using the left and right arrows. It's been years since I did any program writing, and I'm not anxious to re-learn it all!<br />
+<br />
+Cheers Rod Goslin</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; The &quot;Added:&quot; prefix for new programmes</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

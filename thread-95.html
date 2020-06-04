@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Live Stream problems</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Live Stream problems</div>
+<div id="pagetitle"><h2>Live Stream problems</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-315</h2></div><div class="dateline">08-01-2014, 11:27 PM</div>
+</div>
+<div class="message">I have moved to Ubuntu and was trying to get livestreaming to work. <br />
+<br />
+Using the command <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --stream --type=livetv "BBC Two" --player="mplayer -cache 512 -" --modes=flashstd1</code></div></div> I get the error message <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>DEBUG: HandleInvoke, server invoking &lt;onStatus&gt;<br />
+DEBUG: HandleInvoke, onStatus: NetStream.Failed<br />
+ERROR: Closing connection: NetStream.Failed<br />
+DEBUG: Closing connection.<br />
+<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+<br />
+INFO: Streaming failed with exit code 1<br />
+DEBUG: Record using flashstd1 mode return code: 'abort'<br />
+ERROR: aborting get_iplayer<br />
+Cache fill:&nbsp;&nbsp;0.00% (0 bytes)&nbsp;&nbsp; <br />
+<br />
+libavformat version 53.21.1 (external)<br />
+Mismatching header version 53.19.0<br />
+<br />
+Exiting... (End of file)</code></div></div><br />
+<br />
+<br />
+I have already followed this guide: <a href="https://squarepenguin.co.uk/wiki/known-issues/swfurl/">https://squarepenguin.co.uk/wiki/known-issues/swfurl/</a> to try solve this but no dice. Any help?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-01-2014, 12:34 AM</div>
+</div>
+<div class="message">The information in that page is irrelevant to get_iplayer 2.83+ (latest is 2.85), and generally irrelevant to live streaming.  If you installed with the instructions at:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/ubuntu/">https://squarepenguin.co.uk/wiki/installation/ubuntu/</a><br />
+<br />
+then you have the latest version.  If not, use those instructions to upgrade.  Only Saucy has a working get_iplayer package in its repo, and it's still obsolete.  Undo any changes you made based on the info in the "swfurl" page, as instructed in the "Reverting" section at the bottom.<br />
+<br />
+Live streaming can be very difficult.  Once the stream starts it's usually OK, but it can take a while to get it working.  The only thing you can do is keep trying, and rotate the value of <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--modes</code></div></div> between "flashstd1" and "flashstd2"  in order to flip between the 2 available CDNs (see the "Modes and CDNs" section of: <a href="https://squarepenguin.co.uk/wiki/modes/">https://squarepenguin.co.uk/wiki/modes/</a> if you need an explanation).  You may also have better luck with VLC as your player.  Just use <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--player="vlc -"</code></div></div> (after installing VLC, of course).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-315</h2></div><div class="dateline">10-01-2014, 04:07 AM</div>
+</div>
+<div class="message">Still having problems, but like you said, live streaming can be difficult. When I enter the command, it shows me a list of possible modes. Some of them begin with rtsp, but when I try to stream one of them I get these errors:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Mode list: rtspvhigh1<br />
+INFO: Checking existence of default version<br />
+INFO: Version = default<br />
+INFO: rtspvhigh1 modes will be tried for version default<br />
+INFO: Trying rtspvhigh1 mode to record livetv: BBC Two - live<br />
+INFO: Attempt number: 1 / 3<br />
+INFO: File name prefix = BBC_Two_live_2014-01-10_030023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+INFO: URL = rtsp://3gp-acl.bbc.net.uk:554/bbc2_inlet_1500@s24325.bbc2_inlet_1500@s24325<br />
+INFO: Streaming Low Quality H.264 stream to stdout<br />
+<br />
+INFO: Command: "cvlc" "--sout" "file/ts:-" "rtsp://3gp-acl.bbc.net.uk:554/bbc2_inlet_1500@s24325.bbc2_inlet_1500@s24325" "vlc://quit"<br />
+<br />
+VLC media player 2.0.8 Twoflower (revision 2.0.8a-0-g68cf50b)<br />
+[0xb61248] dummy interface: using the dummy interface module...<br />
+[0x7efee8002488] live555 demux error: Failed to connect with rtsp://3gp-acl.bbc.net.uk:554/bbc2_inlet_1500@s24325.bbc2_inlet_1500@s24325<br />
+[0x7efee8003538] access_realrtsp access error: cannot connect to 3gp-acl.bbc.net.uk:554<br />
+[0x7efee8003538] main access error: Connection failed<br />
+[0x7efee8003538] main access error: VLC could not connect to "3gp-acl.bbc.net.uk:554".<br />
+[0x7efeec000a28] main input error: open of '<br />
+rtsp://3gp-acl.bbc.net.uk:554/bbc2_inlet_1500@s24325.bbc2_inlet_1500@s24325' failed<br />
+[0x7efeec000a28] main input error: Your input can't be opened<br />
+[0x7efeec000a28] main input error: VLC is unable to open the MRL 'rtsp://3gp-acl.bbc.net.uk:554/bbc2_inlet_1500@s24325.bbc2_inlet_1500@s24325'. Check the log for details.<br />
+[0x7efee8007d38] idummy demux: command 'quit'<br />
+INFO: Command exit code 0 (raw code = 0)</code></div></div><br />
+<br />
+<br />
+Can it play this files, and I need to set something  or is it pointless?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-01-2014, 01:39 PM</div>
+</div>
+<div class="message">Don't bother with the rtsp modes.  They are a vestigial appendage of get_iplayer that will eventually be removed.  The rtsp streams sometimes work with live radio, but never work with TV.  The rtsp video streams are incompatible with VLC.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Live Stream problems</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

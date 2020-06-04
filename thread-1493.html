@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I specify a lower audio bitrate for use with older devices?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I specify a lower audio bitrate for use with older devices?</div>
+<div id="pagetitle"><h2>How do I specify a lower audio bitrate for use with older devices?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1916</h2></div><div class="dateline">31-08-2017, 12:17 PM</div>
+</div>
+<div class="message">My usage of get_iplayer is to download to computer harddrive, then copy that file to a USB stick which is then plugged into the USB port of a Samsung 5100 TV.<br />
+<br />
+All has been well using the option<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>tvmode hvfvhigh</code></div></div>for some while, albeit receiving the warning about remapping to hvfxsd.<br />
+<br />
+Since the start of August 2017, downloaded material has not been usable as it has been missing the audio, although the files play well (audio and video) on a computer using VLC on Ubuntu.<br />
+<br />
+I found various discussions regarding this, such as this:<br />
+<a href="https://www.computing.net/answers/windows-7/no-sound-when-watching-movies-on-tv-via-usb/11344.html">https://www.computing.net/answers/window...11344.html</a><br />
+<br />
+I discovered that simply recoding the file produced by get_iplayer with Handbrake using the "out-of-the-box" setting was sufficient to create a playable (audio and video) file.<br />
+<br />
+Whilst this was working well, there was a lot of time spent on the download and re-encoding.  Also disk space was diminishing as I was keeping both versions.<br />
+<br />
+using ffprobe I also discovered that the files directly produced by get_iplayer, at my options, were <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>   Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 317 kb/s (default)</code></div></div><br />
+<br />
+Delving further into the settings of Handbrake I discovered that the critical setting was the Audio bitrate, which was at 160K in the preset dropdown.<br />
+<br />
+I have a little experience with ffmpeg and discovered that<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>for i in *.mp4; do ffmpeg -i &#36;i -c:v copy -c:a aac -b:a 160K &#36;i'-160K'.mp4; done</code></div></div><br />
+would also create a playable file.  The actual codec seemed not to matter, but the audio bitrate was the breaking point<br />
+<br />
+Whilst not a programmer, I can often successfully fiddle with existing code, and opened up the perl get_iplayer.<br />
+<br />
+I changed the line<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>push @codec_opts, ( '-c:v', 'copy', '-c:a', 'copy' );</code></div></div><br />
+to <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>push @codec_opts, ( '-c:v', 'copy', '-c:a', 'aac', '-ab', '128K' );</code></div></div><br />
+I  changed from 160K as acquisition will be one of 96K, 128K, 320K from the figures given here:<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref">https://github.com/get-iplayer/get_iplay...i/modesref</a><br />
+and it seemed redundant to specify 160K.<br />
+<br />
+This fixes <span style="font-style: italic;" class="mycode_i">my</span> issue, but I realise that hard coding options is generally regarded as "a bad thing", and of course I am now degrading my master copy, from which there can be no return.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">I wonder if the audio part of the tv options should be specifiable separately from the overall tvmode, or be specifiable within the options file? </span><br />
+<br />
+I've written this up as fully as I can partly to help any others who hit this problem with older TVs - I understand that it also affects many Sony models.  It's not a specific request for extra functionality.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-08-2017, 12:36 PM</div>
+</div>
+<div class="message">Just use <kbd>--tvmode=dvfxsd</kbd> (which should produce 96k audio), or another dvf mode.  As shown in the recording modes reference, the max audio bit rate for dvf modes is 128k.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1916</h2></div><div class="dateline">31-08-2017, 01:46 PM</div>
+</div>
+<div class="message">I'll try that now as I have a number of test files at various bitrates and can make the direct comparison.<br />
+<br />
+Previously though, when I used to worry about mp3 v. cd "quality", I would have said that sub 128K bitrates were unacceptable - we'll see what difference age has made!<br />
+<br />
+I'm trying to keep open the possibility of 960 x 540 video (otherwise - what's the point of a "big telly"?) at 128K (when available) but without going to dvfsd with 50fps which makes for large filesizes.<br />
+----------------------------------------------------------------------------------------------------<br />
+Update: Very subjective, using decent headphones, and not on any particularly "difficult" audio track - I can hear (just) the difference between the 94 kb/s files and other at a higher bitrate, but 164 kb/s and 317 kb/s sound the same.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">31-08-2017, 02:06 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (31-08-2017, 01:46 PM)</span></cite>I'm trying to keep open the possibility of 960 x 540 video (otherwise - what's the point of a "big telly"?) at 128K (when available) but without going to dvfsd with 50fps which makes for large filesizes.</blockquote>I think you can do that with youtube-dl. It's not likely to be in get_iplayer any time soon.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">31-08-2017, 04:02 PM</div>
+</div>
+<div class="message">I wouldn't worry about audio bit-rates.<br />
+Using the <span style="font-weight: bold;" class="mycode_b">mediainfo</span> program (Linux):-<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>General<br />
+Complete name                            : /home/jeremy/Desktop/Links/Link to video/video/Professor T/S01E04.Double.Life.mp4<br />
+Format                                   : MPEG-4<br />
+Format profile                           : Base Media / Version 2<br />
+Codec ID                                 : mp42<br />
+[b]File size                                : 810 MiB[/b]<br />
+Duration                                 : 52mn 39s<br />
+Overall bit rate mode                    : Variable<br />
+Overall bit rate                         : 2 150 Kbps<br />
+Movie name                               : S01E04.Double.Life<br />
+Writing application                      : HandBrake 0.10.1 2015100400<br />
+<br />
+Video<br />
+ID                                       : 1<br />
+Format                                   : AVC<br />
+Format/Info                              : Advanced Video Codec<br />
+Format profile                           : Main@L4.0<br />
+Format settings, CABAC                   : Yes<br />
+Format settings, ReFrames                : 4 frames<br />
+Codec ID                                 : avc1<br />
+Codec ID/Info                            : Advanced Video Coding<br />
+Duration                                 : 52mn 39s<br />
+[b]Bit rate                                 : 2 000 Kbps[/b]<br />
+Width                                    : 1 280 pixels<br />
+Height                                   : 720 pixels<br />
+Display aspect ratio                     : 16:9<br />
+Frame rate mode                          : Variable<br />
+Frame rate                               : 25.000 fps<br />
+Minimum frame rate                       : 13.593 fps<br />
+Maximum frame rate                       : 25.000 fps<br />
+Color space                              : YUV<br />
+Chroma subsampling                       : 4:2:0<br />
+Bit depth                                : 8 bits<br />
+Scan type                                : Progressive<br />
+Bits/(Pixel*Frame)                       : 0.087<br />
+Stream size                              : 746 MiB (92%)<br />
+Writing library                          : x264 core 146<br />
+Encoding settings                        : cabac=1 / ref=2 / deblock=1:0:0 / analyse=0x1:0x111 / me=hex / subme=4 / psy=1 / psy_rd=1.00:0.00 / mixed_ref=0 / me_range=16 / chroma_me=1 / trellis=1 / 8x8dct=0 / cqm=0 / deadzone=21,11 / fast_pskip=1 / chroma_qp_offset=0 / threads=6 / lookahead_threads=1 / sliced_threads=0 / nr=0 / decimate=1 / interlaced=0 / bluray_compat=0 / constrained_intra=0 / bframes=3 / b_pyramid=2 / b_adapt=1 / b_bias=0 / direct=1 / weightb=1 / open_gop=0 / weightp=1 / keyint=250 / keyint_min=25 / scenecut=40 / intra_refresh=0 / rc_lookahead=20 / rc=abr / mbtree=1 / bitrate=2000 / ratetol=1.0 / qcomp=0.60 / qpmin=0 / qpmax=69 / qpstep=4 / vbv_maxrate=20000 / vbv_bufsize=25000 / nal_hrd=none / filler=0 / ip_ratio=1.40 / aq=1:1.00<br />
+Color primaries                          : BT.709<br />
+Transfer characteristics                 : BT.709<br />
+Matrix coefficients                      : BT.709<br />
+<br />
+Audio<br />
+ID                                       : 2<br />
+Format                                   : AAC<br />
+Format/Info                              : Advanced Audio Codec<br />
+Format profile                           : LC<br />
+Codec ID                                 : 40<br />
+Duration                                 : 52mn 39s<br />
+Bit rate mode                            : Variable<br />
+[b]Bit rate                                 : 160 Kbps[/b]<br />
+Channel(s)                               : 2 channels<br />
+Channel positions                        : Front: L R<br />
+Sampling rate                            : 44.1 KHz<br />
+Compression mode                         : Lossy<br />
+[b]Stream size                              : 60.4 MiB (7%)[/b]<br />
+Title                                    : Stereo</code></div></div><br />
+Note that 160kB/sec audio makes up only 7% of the file size.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1916</h2></div><div class="dateline">31-08-2017, 04:22 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (31-08-2017, 04:02 PM)</span></cite>I wouldn't worry about audio bit-rates.<br />
+...<br />
+Note that 160kB/sec audio makes up only 7% of the file size.</blockquote><br />
+The problem I'm trying to overcome is not the overall size of the file which is related to the bitrates.<br />
+<br />
+The issue is that some older devices - specifically the Samsung TV I identified in my original post, some old Sonys, and others as discussed in the linked computing.net forum thread, are incapable of rendering audio when it exceeds some unspecified bitrate - regardless of the codec.  <br />
+I found many  people floundering with this problem on other fora.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I specify a lower audio bitrate for use with older devices?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Broken Packages</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Broken Packages</div>
+<div id="pagetitle"><h2>Broken Packages</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">07-05-2017, 11:31 PM</div>
+</div>
+<div class="message">Folks,<br />
+<br />
+I have Raspian installed on a R-Pi with version as shown below;<br />
+<br />
+Linux raspberrypi 4.1.19+ #858 Tue Mar 15 15:52:03 GMT 2016 armv6l GNU/Linux<br />
+<br />
+Previous version 2.97 (might have been 2.99) was working fine.<br />
+<br />
+Followed instructions (I think) from the upgrade page and get the following; <br />
+<br />
+Reading package lists... Done<br />
+Building dependency tree        <br />
+Reading state information... Done<br />
+Some packages could not be installed. This may mean that you have<br />
+requested an impossible situation or if you are using the unstable<br />
+distribution that some required packages have not yet been created<br />
+or been moved out of Incoming.<br />
+The following information may help to resolve the situation:<br />
+<br />
+The following packages have unmet dependencies:<br />
+get-iplayer : Depends: perl:any but it is not installable<br />
+E: Unable to correct problems, you have held broken packages. <br />
+<br />
+This Pi has a number of servers working on it and all are working fine.<br />
+<br />
+Geffers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1503</h2></div><div class="dateline">08-05-2017, 12:45 AM</div>
+</div>
+<div class="message">what version of perl do you currently have installed?<br />
+<br />
+Run : perl -v</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">08-05-2017, 09:00 AM</div>
+</div>
+<div class="message">Someone else reported this privately, and it turned out that they were using Wheezy.  packages.hedgerows.org.uk only supports jessie, so if you're using Wheezy then you'll have to follow the manual installation instructions on the wiki.<br />
+<br />
+See <a href="https://github.com/get-iplayer/get_iplayer/wiki/installation">https://github.com/get-iplayer/get_iplay...stallation</a><br />
+<br />
+Regards<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">09-05-2017, 07:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (08-05-2017, 12:45 AM)</span></cite>what version of perl do you currently have installed?<br />
+<br />
+Run : perl -v</blockquote><br />
+This is perl 5, version 20, subversion 2 (v5.20.2) built for arm-linux-gnueabihf-thread-multi-64int<br />
+(with 92 registered patches, see perl -V for more detail)<br />
+<br />
+I am running Wheezy, reluctant to upgrade but have many useful local servers running, all of which would require installing and configuring.<br />
+<br />
+Geffers<br />
+<hr class="mycode_hr" />
+<blockquote class="mycode_quote"><cite><span> (08-05-2017, 09:00 AM)</span></cite>Someone else reported this privately, and it turned out that they were using Wheezy.  packages.hedgerows.org.uk only supports jessie, so if you're using Wheezy then you'll have to follow the manual installation instructions on the wiki.<br />
+<br />
+See <a href="https://github.com/get-iplayer/get_iplayer/wiki/installation">https://github.com/get-iplayer/get_iplay...stallation</a><br />
+<br />
+Regards<br />
+Jon</blockquote><br />
+Thanks Jon, I am still on Wheezy.<br />
+<br />
+Geffers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">09-05-2017, 08:01 PM</div>
+</div>
+<div class="message">Does Raspian differ from Debian enough that upgrades are not seamless? Debian updates are supposed to be smooth as butter, just change the sources to point to the latest release (or I believe it'll do it sort of automatically if you're tracking something like Stable) and dist-upgrade. <br />
+<br />
+Some Raspberry Pi aficionados to confirm or deny that?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">09-05-2017, 08:24 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-05-2017, 08:01 PM)</span></cite>Does Raspian differ from Debian enough that upgrades are not seamless? Debian updates are supposed to be smooth as butter, just change the sources to point to the latest release (or I believe it'll do it sort of automatically if you're tracking something like Stable) and dist-upgrade. <br />
+<br />
+Some Raspberry Pi aficionados to confirm or deny that?</blockquote><br />
+I did try upgrading my pi from wheezy to jessie in-place. once, a long time ago.  I recall it worked ok.  Though to be honest I put a new image on my pi so often it's hard to say whether it was fully stable.  I certainly recall nothing being particularly broken.<br />
+<br />
+There's some advice <a href="https://www.raspberrypi.org/blog/raspbian-jessie-is-here/">on the raspberry pi blog</a>.<br />
+<br />
+in short<br />
+- recommended way to upgrade is to install a fresh image<br />
+- there's an unrecommended in-place upgrade path described <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=66&amp;t=121880">in the raspberrypi forums </a>.<br />
+<br />
+Given that it's trivially easy to put a fresh image on a fresh SD card, boot from that, try things, and still have the less-than-10-seconds option of putting the old card back in and booting again, I'd tend to suggest just starting again.<br />
+<br />
+your mileage may vary.<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">12-05-2017, 08:10 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-05-2017, 08:24 PM)</span></cite>[q<br />
+<br />
+Given that it's trivially easy to put a fresh image on a fresh SD card, boot from that, try things, and still have the less-than-10-seconds option of putting the old card back in and booting again, I'd tend to suggest just starting again.<br />
+<br />
+your mileage may vary.<br />
+<br />
+Jon</blockquote><br />
+Yes, agree new image is easy as is slipping old SD card back in. Just that I had a good stable setup running quite a few useful servers on my Pi and was reluctant to upgrade just because get_iplayer was not working.<br />
+<br />
+May install Raspian Jessie Lite and give it a try.<br />
+<br />
+Geffers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1503</h2></div><div class="dateline">12-05-2017, 09:15 PM</div>
+</div>
+<div class="message">You could just clone the SD-Card and use the cloned to upgrade it to the latest debian / raspian version to see if it works or if you get any errors.<br />
+<br />
+it's also handy if you've a second r-pi you do it with.. ;)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-654</h2></div><div class="dateline">13-05-2017, 04:19 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-05-2017, 09:15 PM)</span></cite>You could just clone the SD-Card and use the cloned to upgrade it to the latest debian / raspian version to see if it works or if you get any errors.<br />
+<br />
+it's also handy if you've a second r-pi you do it with.. ;)</blockquote><br />
+That's not a bad idea actually.<br />
+<br />
+Geffers</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Broken Packages</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

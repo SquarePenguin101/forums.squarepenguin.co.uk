@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR Mode with BBC Three Recursive PIDs</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR Mode with BBC Three Recursive PIDs</div>
+<div id="pagetitle"><h2>PVR Mode with BBC Three Recursive PIDs</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1279</h2></div><div class="dateline">10-08-2016, 09:32 PM</div>
+</div>
+<div class="message">I've having some problems getting PVR mode to find episodes from recursive PIDs.<br />
+<br />
+So- it works from the normal command line:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code># get-iplayer  --info  --pid-recursive --pid=p040tlqx <br />
+get_iplayer 2.95-ppa23p7, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Series pid detected<br />
+INFO:    Series: 'Fleabag' (p040tlqx)<br />
+INFO:      Episode 'Episode 1' (p040trv9)<br />
+INFO:      Episode 'Episode 2' (p041fg83)<br />
+INFO:      Episode 'Episode 3' (p042khwn)<br />
+INFO:      Episode 'Episode 4' (p042y4d2)<br />
+INFO:      Episode 'Episode 5' (p043m68y)<br />
+INFO: Trying pid: p040trv9 using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+INFO: File name prefix = Fleabag_-_1._Episode_1_p040trv9_iplayer         <br />
+<br />
+...<br />
+<br />
+</code></div>
+</div>
+<br />
+I've created a PVR file:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>#  get-iplayer --pvr-list<br />
+<br />
+... <br />
+<br />
+pvrsearch = Fleabag-recursive<br />
+    modes = hlsbest<br />
+    nopurge = 1<br />
+    output = /home/shared/TV/Comedy/<br />
+    pid = p040tlqx<br />
+    pidrecursive = 1<br />
+<br />
+...</code></div>
+</div>
+<br />
+But it doesn't gather anything:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code><br />
+# get-iplayer --pvr-single Fleabag-recursive <br />
+get_iplayer 2.95-ppa23p7, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Running PVR Searches:<br />
+Fleabag-recursive<br />
+<br />
+INFO: 0 Matching Programmes</code></div>
+</div>
+<br />
+My options are as follows:<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code># get-iplayer --prefs-show<br />
+Options in '/mnt/Prime_Disc/shared/TV/.get-iplayer/options'<br />
+    attempts = 20<br />
+    nopurge = 1<br />
+    exclude-channel = CBeebies,CBBC,BBC News,BBC Alba,Parliament,BBC Norfolk,BBC Radio Foyle,BBC Radio Ulster,BBC York,BBC Sussex,BBC Lancashire,BBC Radio Scotland,BBC Radio Nan Gaidheal,BBC Somerset,BBC WM,BBC Nottingham,BBC Radio Cymru,BBC Radio Wales,BBC Cambridge,BBC Cornwall,BBC Leeds,BBC Solent,BBC Suffolk,BBC Derby,BBC Guernsey,BBC Northampton,BBC Sheffield,BBC Merseyside,BBC York,BBC 5,BBC Radio 5,BBC Tees,BBC Kent,BBC Berkshire,BBC Bristol,BBC Jersey,BBC Oxford,BBC Shropshire,BBC Stoke,BBC Gloucestershire,BBC Cumbria,BBC Wiltshire,BBC Coventry,BBC Devon,BBC Leicester,BBC Surrey,BBC Humberside,BBC Norfolk,BBC Sussex,BBC Manchester,BBC Lincolnshire,BBC Wales,BBC Three Counties,BBC Hereford,BBC Asian,BBC Newcastle,BBC Essex,BBC 1xtra<br />
+    refresh-exclude = CBeebies,CBBC,BBC News,BBC Alba,Parliament,BBC Norfolk,BBC Radio Foyle,BBC Radio Ulster,BBC York,BBC Sussex,BBC Lancashire,BBC Radio Scotland,BBC Radio Nan Gaidheal,BBC Somerset,BBC WM,BBC Nottingham,BBC Radio Cymru,BBC Radio Wales,BBC Cambridge,BBC Cornwall,BBC Leeds,BBC Solent,BBC Suffolk,BBC Derby,BBC Guernsey,BBC Northampton,BBC Sheffield,BBC Merseyside,BBC York,BBC 5,BBC Radio 5,BBC Tees,BBC Kent,BBC Berkshire,BBC Bristol,BBC Jersey,BBC Oxford,BBC Shropshire,BBC Stoke,BBC Gloucestershire,BBC Cumbria,BBC Wiltshire,BBC Coventry,BBC Devon,BBC Leicester,BBC Surrey,BBC Humberside,BBC Norfolk,BBC Sussex,BBC Manchester,BBC Lincolnshire,BBC Wales,BBC Three Counties,BBC Hereford,BBC Asian,BBC Newcastle,BBC Essex,BBC 1xtra</code></div>
+</div>
+<br />
+<br />
+<br />
+Thanks for looking at this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2016, 12:17 AM</div>
+</div>
+<div class="message">Normal PVR jobs are geared to work off search results, not PIDs. A PID isn't considered a search term in a PVR job, so you get no results. Use <kbd>--pvr-queue</kbd> instead of <kbd>--pvr-add</kbd>  to create a one-off PVR job for a PID. But, the only reason to put a recursive download in a PVR job is if you plan to schedule a PVR run at some time you won't be around do the download manually. Recursive downloads are meant to be run as one-offs from the command line. The idea is that recursive downloads are for one-off catch-ups with past episodes, while normal PVR jobs are for download of future episodes.  BBC Three programmes are a special case since they will never appear in search results, so you have to download them individually (or recursively for a complete series).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1279</h2></div><div class="dateline">11-08-2016, 08:58 AM</div>
+</div>
+<div class="message">Thank-you Dinky,<br />
+<br />
+My use-case is really for series that are occasionally quietly "repeated" on BBC3 ("like Him and Her"). I would like to be able to "set and forget" a PVR entry for them.  Because they don't show up in the listings, normal "search0" type searches won't find them- I had hoped pidrecursive might.  (This unofficial source implies that it used to work: - <a href="http://lists.infradead.org/pipermail/get_iplayer/2015-July/008000.html">http://lists.infradead.org/pipermail/get...08000.html</a> ).<br />
+<br />
+Thanks to your explanation, I'll try making an occasional cron job that rattles through some hoped-for repeats.<br />
+<br />
+Regards.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-08-2016, 10:52 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-08-2016, 08:58 AM)</span></cite>(This unofficial source implies that it used to work: - <a href="http://lists.infradead.org/pipermail/get_iplayer/2015-July/008000.html">http://lists.infradead.org/pipermail/get...08000.html</a> ).</blockquote>That never worked. get_iplayer really shouldn't even allow that. I'll fix that in a future release.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1279</h2></div><div class="dateline">11-08-2016, 11:09 AM</div>
+</div>
+<div class="message">Maybe, the --pvr-add command should fail when the rest of the parameters (like --pid-recursive) don't make sense in a PVR context.<br />
+<br />
+Thanks once again for the get-iplayer system and for your tireless work in these forums.  Much appreciated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-08-2016, 07:34 PM</div>
+</div>
+<div class="message">On second thought, I decided to just implement support in next release for <kbd>--pid</kbd> and <kbd>--pid-recursive</kbd> with <kbd>--pvr-add</kbd> so that these corner cases are covered.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1320</h2></div><div class="dateline">22-10-2016, 03:44 PM</div>
+</div>
+<div class="message">I've just tried this with version 2.97 on Windows, but it's not finding any results when the pvr is run.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-add class --pid=p048h1kr --pid-recursive</code></div></div><br />
+Am I doing anything wrong?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-10-2016, 05:47 PM</div>
+</div>
+<div class="message">I removed it from 2.97, which was an unanticipated bug fix release. It's back in the development version.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1415</h2></div><div class="dateline">26-11-2016, 10:18 PM</div>
+</div>
+<div class="message">Do you have an ETA on this? I would also find ot very useful. I'm currently having to download Class via showrss.info and  qbittorrent.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; PVR Mode with BBC Three Recursive PIDs</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

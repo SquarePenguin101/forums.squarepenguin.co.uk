@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloading from the BBC Three Daily Drop site</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading from the BBC Three Daily Drop site</div>
+<div id="pagetitle"><h2>Downloading from the BBC Three Daily Drop site</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">06-02-2016, 04:18 AM</div>
+</div>
+<div class="message">Is it possible to download content from the new <a href="http://www.bbc.co.uk/bbcthree/daily-drop">Daily Drop website</a>? All the content on there so far is embedded and all you can get by right clicking the playing clip is a VPID which GiP can't use.<br />
+<br />
+Hopefully the main BBC Three content will be on iPlayer with proper PIDs if there isn't a listing feed for it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2016, 04:13 PM</div>
+</div>
+<div class="message">No. But if for some reason you really, truly want to download one of those clips, you can use the Firefox web console or similar to get the the mediaselector URL while playing the clip.  Replace <kbd>/pc/</kbd> with <kbd>/apple-ipad-hls/</kbd> in that URL and load it in your browser. You can pick out a HLS playlist URL ( contains <kbd>master.m3u8</kbd>) and download it with ffmpeg.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">06-02-2016, 05:50 PM</div>
+</div>
+<div class="message">Thanks user-2.<br />
+<br />
+Is there something similar to Firefox web console which works with Chrome?<br />
+<br />
+When you say download it with ffmpeg, do you mean I can pass that playlist url through get_iplayer to download or do I have to construct an ffmpeg command with it?<br />
+<br />
+Can the same be done with rtmp streams as well?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2016, 06:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2016, 05:50 PM)</span></cite>Is there something similar to Firefox web console which works with Chrome?</blockquote>Use the Network tab in Chrome developer tools.  There may be other methods.<br />
+<blockquote class="mycode_quote"><cite><span> (06-02-2016, 05:50 PM)</span></cite>When you say download it with ffmpeg, do you mean I can pass that playlist url through get_iplayer to download or do I have to construct an ffmpeg command with it?</blockquote>You have to construct an ffmpeg command.<br />
+<blockquote class="mycode_quote"><cite><span> (06-02-2016, 05:50 PM)</span></cite>Can the same be done with rtmp streams as well?</blockquote>Only if ffmpeg was built with RTMP support, which is optional.<br />
+<br />
+EDIT: RTMP via ffmpeg will be in real time, so only good for streaming rather than downloading.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">06-02-2016, 06:44 PM</div>
+</div>
+<div class="message">Creating ffmpeg commands or RTMPDump commands manually is pretty difficult.<br />
+<br />
+Would it be possible at add a switch to GiP that allows us to feed in a mediaselector url to download a programme if all else fails? Right clicking any playing clip whether it's on BBC Three or a news clip or whatever will give us the VPID so with that it's quite easy to create a mediaselector url for RTMP or HLS streams. If we could use something like <kbd>--mediaselector-url=http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p03hhkyb</kbd> then we can download clips fairly easily through either RTMPDump or ffmpeg if there is no direct PID. It would also be useful if the BBC breaks the news clips again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-02-2016, 08:28 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-02-2016, 06:44 PM)</span></cite>Creating ffmpeg commands or RTMPDump commands manually is pretty difficult.</blockquote>No it's not. If you have the nous to ferret out the mediaselector URL, you can construct a command line. I'll grant that rtmpdump commands can look cryptic, but don't judge by what get_iplayer does. It still carries obsolete code that adds unnecessary cruft to the rtmpdump commands. They can easily be constructed directly from mediaselector attributes. The only other thing you need is the URL of the embedded Flash media player (for <kbd>--swfVfy</kbd>), which you can also get via browser dev tools.<br />
+<br />
+But you shouldn't even be thinking of rtmpdump when you have the option of ffmpeg + HLS. All you need to know is: 1) the HLS playlist URL as input, which I've already told you how to find; 2) that you only need to re-mux input to output; 3) that you need to specify the output format as MPEG-TS. That is as basic as it gets with ffmpeg, and the requisite details can easily be found in ffmpeg docs or dug up on the internet.<br />
+<blockquote class="mycode_quote"><cite><span> (06-02-2016, 06:44 PM)</span></cite>Would it be possible at add a switch to GiP that allows us to feed in a mediaselector url to download a programme if all else fails? Right clicking any playing clip whether it's on BBC Three or a news clip or whatever will give us the VPID</blockquote>If it ever becomes necessary to download broadcast content, yes.  Until then, not likely (from me, at least). If that is the application you want, I encourage you to build it.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Downloading from the BBC Three Daily Drop site</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

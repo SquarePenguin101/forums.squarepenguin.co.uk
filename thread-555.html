@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - HLS/AVCONV downloads 9 seconds of data then pauses/starts again</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; HLS/AVCONV downloads 9 seconds of data then pauses/starts again</div>
+<div id="pagetitle"><h2>HLS/AVCONV downloads 9 seconds of data then pauses/starts again</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">12-10-2015, 08:26 PM</div>
+</div>
+<div class="message">hi all,<br />
+<br />
+Ever since I started HLS downloads, I've noticed this behaviour. Can anyone give me their opinion on if it is normal or not?<br />
+<br />
+Regardless of the TV Show or the quality chosen, when it comes to aaconv downloading the HLS stream it will download 9 seconds of data, pause with a continuity error, then continue again. It does this in 9 seconds chunks of data until the whole file is downloaded.<br />
+<br />
+I have attached a screen recording to demonstrate it. Update: I have uploaded to vimeo as a 11MB file is too large to attach.<br />
+<br />
+<a href="https://vid.me/UcON">https://vid.me/UcON</a><br />
+<br />
+Cheers,<br />
+<br />
+Dave<br />
+<hr class="mycode_hr" />
+I saw this other link about multi MB speed downloads, so i'm guessing/hoping that i've got an error in my set up and that  can improve my speed.<br />
+<br />
+<a href="/thread-524.html">/thread-524.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-10-2015, 09:56 PM</div>
+</div>
+<div class="message">Don't repost your own question that has already been answered:<br />
+<br />
+<a href="/thread-503.html">/thread-503.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-764</h2></div><div class="dateline">12-10-2015, 10:08 PM</div>
+</div>
+<div class="message">Hi user-2,<br />
+<br />
+Apologies, I wasn't intending to repost, as my other post was about suppressing error messages. Your reply to that one seemed to indicate that whatever was happening with avconv shouldn't impact download speeds.<br />
+<br />
+But when I read in the quoted post above that people were obtaining high speed HLS  downloads compared to the trickle I have (especially given the consistent 9 second chunk nature) I thought it was worth asking a question about this specific issue (9 second chunk)<br />
+<br />
+Regards,<br />
+<br />
+Dave</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-10-2015, 10:25 PM</div>
+</div>
+<div class="message">HLS streams are chunked, all chunks except the last are the same length, and you get a warning as every chunk is processed - simple as that.  I've already told you that HLS is generally slower than RTMP, and your location on the opposite side of the globe is likely to slow things down further. But if you really believe those warning messages are slowing you down, then ditch avconv for ffmpeg and see if it makes any difference.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; HLS/AVCONV downloads 9 seconds of data then pauses/starts again</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

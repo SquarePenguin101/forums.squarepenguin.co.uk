@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Stack smashing detected</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Stack smashing detected</div>
+<div id="pagetitle"><h2>Stack smashing detected</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-964</h2></div><div class="dateline">28-06-2015, 12:39 AM</div>
+</div>
+<div class="message">Hi,<br />
+Running Ubuntu 15.04 with Firefox.<br />
+Installed latest get_iplayer 2.94.<br />
+When I use web_pvr to download a program, I get an attempt to start process using flash but this fails, so it tries again using all available flash configurations, eventually giving up.<br />
+In the terminal I get the message stack smashing detected /ur/bin/rtmpdump terminated a number of times, I assume for every one of the attempts with the web_pvr.<br />
+Any suggestions or do I need to supply all the code</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-06-2015, 09:24 PM</div>
+</div>
+<div class="message">If you run rtmpdump without any arguments, what version string is printed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-964</h2></div><div class="dateline">29-06-2015, 12:34 AM</div>
+</div>
+<div class="message">Just typed in rtmpdump<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+ERROR: You must specify a hostname (--host) or url (-r "rtmp://host[:port]/playpath") containing a hostname<br />
+*** stack smashing detected ***: rtmpdump terminated<br />
+Aborted (core dumped)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-06-2015, 12:47 AM</div>
+</div>
+<div class="message">Thanks.  You should uninstall get_iplayer and then reinstall it using the Ubuntu installation instructions in the wiki. It will pull in the necessary dependencies, including a working static build of rtmpdump.  You appear to have the system rtmpdump package installed, and my guess is that it may not match up with the associated librtmp package.  That is just a guess, though.  Bottom line: always use the PPA build referenced in the wiki instructions.  Jon does a great job keeping get_iplayer working on Ubuntu.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-964</h2></div><div class="dateline">29-06-2015, 03:23 AM</div>
+</div>
+<div class="message">Thanks for the input,<br />
+however after removing and reinstalling I still have the same problem.<br />
+I notice that there is a command to install extra dependencies, might give this a go.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-964</h2></div><div class="dateline">29-06-2015, 05:09 AM</div>
+</div>
+<div class="message">Your mention of librtmp package got me thinking. I changed librtmp.so.1 to an updated package so I could watch  the ITV plugin in Kodi.<br />
+Replaced this with the original one and now downloading from the iplayer web site.<br />
+Took a long time to download, will fiddle with the quality.<br />
+Thanks again for help</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-06-2015, 11:26 PM</div>
+</div>
+<div class="message">It looks like you need to install the rtmpdump upgrade explicitly from the PPA.  I thought it would be pulled in by the get-iplayer package, but I guess that no longer applies.  Or, you can just uninstall the system rtmpdump package before installing get-iplayer from the PPA.  You should be able to run the PPA version of rtmpdump alongside the custom version of librtmp you were using for Kodi.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-06-2015, 11:33 PM</div>
+</div>
+<div class="message">When rtmpdump is upgraded you should see a version string that looks similar to "RTMPDump v2.4-n87-gita9f353c-ppa8~saucy".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-964</h2></div><div class="dateline">30-06-2015, 12:17 AM</div>
+</div>
+<div class="message">will stick with what I have at the moment as the ITV plugin has not been very reliable, lots of buffering.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Stack smashing detected</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

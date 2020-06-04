@@ -1,0 +1,264 @@
+get_iplayer 3.00-windows.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: Scheduling the PVR to run every 14400 secs
+Running PVR Searches:
+# a dummy account
+
+INFO: Getting radio Index Feeds (this may take a few minutes)
+INFO: Using concurrent indexing
+.............
+Added: 10009:   15 Minute Drama: Feminine Forever - Episode 4, BBC Radio 4 Extra, b01mwx68
+Added: 10039:   15 Minute Drama: Tinsel Girl and the Support Worker - Episode 4, BBC Radio 4, b08pfqlq
+Added: 10061:   5 live Breakfast: Your Call - 11/05/2017, BBC Radio 5 live, b08pgbmt
+Added: 10083:   5 live Breakfast - 12/05/2017, BBC Radio 5 live, b08pgbpk
+Added: 10101:   5 live Daily: with Emma Barnett - 11/05/2017, BBC Radio 5 live, b08pgbmw
+Added: 10127:   5 live Drive - 11/05/2017, BBC Radio 5 live, b08pgbn0
+Added: 10132:   5 live Formula 1: 2017 - Spanish Grand Prix Preview, BBC Radio 5 live, b08pgwdr
+Added: 10152:   5 live Sport: 5 live Rugby League - 11/05/2017, BBC Radio 5 live, b08pgx8g
+Added: 10217:   5 live Sport - 11/05/2017, BBC Radio 5 live, b08pgvnf
+Added: 10262:   6 Music Live Hour - Suede, Captain Beefheart & His Magic Band and OMD, BBC Radio 6 Music, b08pr0hj
+Added: 10284:   6 Music Recommends - With Steve Lamacq, BBC Radio 6 Music, b08p1b61
+Added: 10302:   6 Music's Jukebox - 12/05/2017, BBC Radio 6 Music, b08p1b65
+Added: 10371:   A.Dot - 11/05/2017, BBC Radio 1Xtra, b08nknhm
+Added: 10396:   Ace - R&B Hour, BBC Radio 1Xtra, b08nknhp
+Added: 10467:   Adele Roberts - New Music Friday, b08njqdf
+Added: 10484:   Afternoon Drama - AL Kennedy - Love Love Love Like the Beatles, BBC Radio 4 Extra, b01k1n6y
+Added: 10502:   Afternoon Edition - 11/05/2017, BBC Radio 5 live, b08pgbmy
+Added: 10524:   Afternoon on 3 - Thursday Opera Matinee: Monteverdi 450 - L'Orfeo, BBC Radio 3, b08p4ttl
+Added: 10665:   Alex Horne Presents The Horne Section: Series 3 - Episode 2, BBC Radio 4, b042ztrc
+Added: 10738:   Alice Levine - Alice sits in for Scott Mills, b08p5914
+Added: 11138:   As BBC Radio 5 live - 12/05/2017, BBC Asian Network, b08p1rv2
+Added: 12253:   Asian Network Reports - 11/05/2017, BBC Asian Network, b08p1rsh
+Added: 12254:   Asian Network Reports - 11/05/2017, BBC Asian Network, b08p1rsm
+Added: 12273:   Asian Network's Big Debate - Amol Rajan, BBC Asian Network, b08p1rsf
+Added: 12350:   BBC Inside Science - 11/05/2017, BBC Radio 4, b08p5lc2
+Added: 12723:   BBC News Summary - 2017/05/10 02:30 GMT, BBC World Service, p051sk66
+Added: 12724:   BBC News Summary - 2017/05/10 19:30 GMT, BBC World Service, p051sk68
+Added: 12725:   BBC News Summary - 2017/05/10 10:30 GMT, BBC World Service, p051sk70
+Added: 12726:   BBC News Summary - 2017/05/10 18:30 GMT, BBC World Service, p051sk73
+Added: 12727:   BBC News Summary - 2017/05/10 22:30 GMT, BBC World Service, p051sk77
+Added: 12728:   BBC News Summary - 2017/05/10 07:30 GMT, BBC World Service, p051sk7r
+Added: 12729:   BBC News Summary - 2017/05/10 01:30 GMT, BBC World Service, p051sk99
+Added: 12730:   BBC News Summary - 2017/05/10 14:30 GMT, BBC World Service, p051sk9b
+Added: 12731:   BBC News Summary - 2017/05/10 04:30 GMT, BBC World Service, p051sk9y
+Added: 12732:   BBC News Summary - 2017/05/10 21:30 GMT, BBC World Service, p051skbf
+Added: 12733:   BBC News Summary - 2017/05/10 12:30 GMT, BBC World Service, p051skd9
+Added: 13229:   BBC News - 2017/05/10 06:00 GMT, BBC World Service, p051sk5c
+Added: 13230:   BBC News - 2017/05/10 00:00 GMT, BBC World Service, p051sk5l
+Added: 13231:   BBC News - 2017/05/10 04:00 GMT, BBC World Service, p051sk5v
+Added: 13232:   BBC News - 2017/05/10 20:00 GMT, BBC World Service, p051sk6d
+Added: 13233:   BBC News - 2017/05/10 03:00 GMT, BBC World Service, p051sk6g
+Added: 13234:   BBC News - 2017/05/10 07:00 GMT, BBC World Service, p051sk6j
+Added: 13235:   BBC News - 2017/05/10 16:00 GMT, BBC World Service, p051sk6n
+Added: 13236:   BBC News - 2017/05/10 21:00 GMT, BBC World Service, p051sk6r
+Added: 13237:   BBC News - 2017/05/10 17:00 GMT, BBC World Service, p051sk7g
+Added: 13238:   BBC News - 2017/05/10 13:00 GMT, BBC World Service, p051sk7q
+Added: 13239:   BBC News - 2017/05/10 14:00 GMT, BBC World Service, p051sk7s
+Added: 13240:   BBC News - 2017/05/10 10:00 GMT, BBC World Service, p051sk81
+Added: 13241:   BBC News - 2017/05/10 01:00 GMT, BBC World Service, p051sk84
+Added: 13242:   BBC News - 2017/05/10 09:00 GMT, BBC World Service, p051sk8p
+Added: 13243:   BBC News - 2017/05/10 19:00 GMT, BBC World Service, p051sk95
+Added: 13244:   BBC News - 2017/05/10 22:00 GMT, BBC World Service, p051sk9j
+Added: 13245:   BBC News - 2017/05/10 05:00 GMT, BBC World Service, p051sk9n
+Added: 13246:   BBC News - 2017/05/10 18:00 GMT, BBC World Service, p051skck
+Added: 13247:   BBC News - 2017/05/10 23:00 GMT, BBC World Service, p051skd1
+Added: 13248:   BBC News - 2017/05/10 11:00 GMT, BBC World Service, p051skdb
+Added: 13249:   BBC News - 2017/05/10 02:00 GMT, BBC World Service, p051skdf
+Added: 13250:   BBC News - 2017/05/10 15:00 GMT, BBC World Service, p051skdn
+Added: 13251:   BBC News - 2017/05/10 12:00 GMT, BBC World Service, p051skfx
+Added: 13252:   BBC News - 2017/05/10 08:00 GMT, BBC World Service, p051skg6
+Added: 13282:   BBC OS - 10/05/2017 GMT, BBC World Service, p051sk7w
+Added: 13283:   BBC OS - 10/05/2017 GMT, BBC World Service, p051skf3
+Added: 13313:   BBC Radio 1's Residency - Kolsch, b08p5zpz
+Added: 13314:   BBC Radio 1's Residency - Helena Hauff, b08p5zt6
+Added: 13742:   Benny Hill - Benny Hill Time, BBC Radio 4 Extra, b08px1cm
+Added: 13885:   Bob Harris Country - The best in country and roots music, BBC Radio 2, b08p5374
+Added: 13906:   Bobby Friction - Another spin of Bobby's Track of the Week, BBC Asian Network, b08p1rsp
+Added: 13951:   Book of the Week: Between Them - Episode 4, BBC Radio 4, b08pfqln
+Added: 13966:   Book of the Week: Strands - Episode 4, BBC Radio 4 Extra, b01jk49f
+Added: 13995:   Boxer and Doberman: Series 1 - Headless in Glasgow, BBC Radio 4 Extra, b00jctjf
+Added: 14053:   Breakfast - Friday - Petroc Trelawny, BBC Radio 3, b08nz1bg
+Added: 14136:   Business Daily - 10/05/2017 GMT, BBC World Service, p051skbv
+Added: 14157:   Business Matters - 10/05/2017 GMT, BBC World Service, p051sk5n
+Added: 14392:   Charlie Sloth - 11/05/2017, BBC Radio 1Xtra, b08nknhv
+Added: 14393:   Charlie Sloth - 11/05/2017, BBC Radio 1Xtra, b08nknhx
+Added: 14479:   Chris Hawkins - Fresh new music and amazing classics for Friday, BBC Radio 6 Music, b08p1b67
+Added: 14606:   Clara Amfo - 11/05/2017, b08njqcb
+Added: 14616:   Clare in the Community: Series 9 - Come Dine With Me, BBC Radio 4 Extra, b03ts6jg
+Added: 14622:   Classic Serial: The World According to Garp - Episode 2, BBC Radio 4 Extra, b03pqsdf
+Added: 14781:   Coming up on 5 live sports extra - 11/05/2017, BBC Radio 5 live sports extra, b08pm8dd
+Added: 14782:   Coming up on 5 live sports extra - 12/05/2017, BBC Radio 5 live sports extra, b08pm8j1
+Added: 14795:   Composer of the Week: Franz Liszt (1811-1886) - The Death of Daniel Liszt, BBC Radio 3, b04wmsm8
+Added: 14859:   Cricket - Nottinghamshire v Durham, BBC Radio 5 live sports extra, b08pm862
+Added: 14869:   Crossing Continents - Elephants, Politics and Sri Lanka, BBC Radio 4, b08pfqls
+Added: 14909:   DJ Target - 11/05/2017, BBC Radio 1Xtra, b08nknhz
+Added: 14936:   Daily Service - 11/05/2017, BBC Radio 4, b08q91qz
+Added: 15383:   Drama - The Things We Never Said, BBC Radio 4, b08pfqqg
+Added: 15492:   Ed Reardon's Week: Series 10 - The Go-To Destination, BBC Radio 4 Extra, b05tlv9r
+Added: 15671:   Essential Classics - Thursday - Rob Cowan with Colin Salmon, BBC Radio 3, b08nz1gt
+Added: 15710:   Fantasy Festival - Eliza Carthy, BBC Radio 4, b07nng5p
+Added: 15742:   Farming Today - 12/05/2017, BBC Radio 4, b08p5lfq
+Added: 15883:   Free Thinking - Laurent Binet, Blockchain, BBC Radio 3, b08p52dm
+Added: 15930:   From Rags to Riches: Series 1 - Episode 2, BBC Radio 4, b08pfqqb
+Added: 15953:   Front Row - 11/05/2017, BBC Radio 4, b08p5lc8
+Added: 16177:   Gideon Coe - The Beat in concert, BBC Radio 6 Music, b08p1b56
+Added: 16539:   Great Lives: Series 17 - Margot Fonteyn, BBC Radio 4 Extra, b00h33cy
+Added: 16578:   Greg James - 11/05/2017, b08njqcj
+Added: 16579:   Greg James - Ali Plumb's Movies..., b08njqcn
+Added: 16588:   Guess What? - Episode 8, BBC Radio 4 Extra, b066f71q
+Added: 16657:   Hardtalk - 10/05/2017 GMT, BBC World Service, p051skcf
+Added: 16684:   Health Check - 2017/05/10 GMT, BBC World Service, p051skfk
+Added: 16967:   In Business - What's the Point of Meetings?, BBC Radio 4, b08pgbvj
+Added: 16972:   In Our Time - Emily Dickinson, BBC Radio 4, b08p5lbp
+Added: 17009:   In Tune - Thursday - Suzy Klein, BBC Radio 3, b08p510m
+Added: 17245:   Jennifer Donnelly - A Gathering Light - Episode 4, BBC Radio 4 Extra, b015yn87
+Added: 17288:   Jeremy Vine - 11/05/2017, BBC Radio 2, b08p4mrk
+Added: 17425:   Jo Whiley - 11/05/2017, BBC Radio 2, b08p4mrr
+Added: 17926:   Ken Bruce - Fearne Cotton sits in, BBC Radio 2, b08p5372
+Added: 18027:   Late Junction - Max Reinhardt with Midori Takada's Mixtape, BBC Radio 3, b08p53pp
+Added: 18068:   Lauren Laverne - With the People's Playlist, BBC Radio 6 Music, b08p1b4w
+Added: 18515:   Marc Riley - Warm Digits, BBC Radio 6 Music, b08p1b54
+Added: 18614:   Marketing: Hacking the Unconscious: Series 1 - Food Tubs, Facebook and Fetishes, BBC Radio 4, b08pfqqd
+Added: 18615:   Marriage Lines: Series 1 - The Job, BBC Radio 4 Extra, b03m32qf
+Added: 18908:   Midnight News - 12/05/2017, BBC Radio 4, b08p5lfd
+Added: 18999:   Mim Shaikh - 11/05/2017, BBC Asian Network, b08p1rsr
+Added: 19022:   MistaJam - The Party Playlist, b08njqcq
+Added: 19105:   Morning Reports - 12/05/2017, BBC Radio 5 live, b08pgbpf
+Added: 19171:   Networking Nation - The World of Work, BBC Radio 4 Extra, b04l3bqz
+Added: 19207:   News Briefing - 12/05/2017, BBC Radio 4, b08p5lfn
+Added: 19235:   News Headlines; Shipping Forecast - 11/05/2017, BBC Radio 4, b08q91r1
+Added: 19271:   News Summary - 11/05/2017, BBC Radio 4, b08p5lbt
+Added: 19324:   Newsbeat - 11/05/2017, BBC Radio 1Xtra, b08njqcd
+Added: 19325:   Newsbeat - 11/05/2017, BBC Radio 1Xtra, b08njqcl
+Added: 19402:   Newsday - 10/05/2017 GMT, BBC World Service, p051sk5d
+Added: 19403:   Newsday - 10/05/2017 GMT, BBC World Service, p051sk5z
+Added: 19404:   Newsday - 10/05/2017 GMT, BBC World Service, p051sk6s
+Added: 19405:   Newsday - 10/05/2017 GMT, BBC World Service, p051sk9v
+Added: 19406:   Newsday - 10/05/2017 GMT, BBC World Service, p051skd6
+Added: 19490:   Newshour - 10/05/2017 GMT, BBC World Service, p051sk71
+Added: 19491:   Newshour - 10/05/2017 GMT, BBC World Service, p051sk7z
+Added: 19667:   Noreen Khan - Dr Rupy, BBC Asian Network, b08p1rsk
+Added: 19771:   Open Country - Lough Neagh, BBC Radio 4, b08pfqqj
+Added: 19820:   Outlook - 10/05/2017 GMT, BBC World Service, p051sk9c
+Added: 19858:   PM - 11/05/2017, BBC Radio 4, b08p5lc4
+Added: 19859:   PM - 11/05/2017, BBC Radio 4, b08q91r3
+Added: 20370:   Question Time Extra Time - 11/05/2017, BBC Radio 5 live, b08pgbn2
+Added: 20394:   Radcliffe and Maconie - Kayvan Novak, BBC Radio 6 Music, b08p1b4y
+Added: 20399:   Radio 1's Artist Takeover with... - 11/05/2017, b08p5zpx
+Added: 20491:   Radio 2 Playlists - Radio 2's Tracks Of My Years Playlist, BBC Radio 2, b08p4msq
+Added: 20492:   Radio 2 Playlists - Radio 2 Playlist: Have A Great Weekend, BBC Radio 2, b08p4mss
+Added: 20493:   Radio 2 Playlists - Radio 2 Playlist: Feelgood Friday, BBC Radio 2, b08p4msv
+Added: 20515:   Radio 3 Lunchtime Concert: Voice of the Cello - Tim Hugh and Rebecca Gilliver, BBC Radio 3, b08nz2dj
+Added: 20545:   Radio 3 in Concert - Temple Church - Bach, Mendelssohn and Dupre, BBC Radio 3, b08p51x4
+Added: 21179:   Ronald Frame Short Stories - The Railings, BBC Radio 4 Extra, b06h1kpk
+Added: 21224:   Rubbish: Series 2 - Liar, BBC Radio 4 Extra, b00853km
+Added: 21589:   Seani B - 11/05/2017, BBC Radio 1Xtra, b08pgll2
+Added: 21617:   Selection of BBC World Service Programmes - 12/05/2017, BBC Radio 4, b08p5lfj
+Added: 21654:   Shaun Keaveny - Earworms, Please, BBC Radio 6 Music, b08p1b4t
+Added: 21750:   Shipping Forecast - 12/05/2017, BBC Radio 4, b08p5lfg
+Added: 21751:   Shipping Forecast - 12/05/2017, BBC Radio 4, b08p5lfl
+Added: 21759:   Shipping Forecast - 11/05/2017, BBC Radio 4, b08q91r5
+Added: 21801:   Simon Bovey - Cold Blood - The Changing Man, BBC Radio 4 Extra, b007s74m
+Added: 21861:   Simon Mayo Drivetime - Foodie Thursday, BBC Radio 2, b08p4mrp
+Added: 21918:   Six O'Clock News - 11/05/2017, BBC Radio 4, b08p5lc6
+Added: 22021:   Sport Today - 2017/05/10 GMT, BBC World Service, p051skf5
+Added: 22144:   Sports News - 10/05/2017 GMT, BBC World Service, p051sk8s
+Added: 22292:   Start/Stop: Series 2 - Christmas, BBC Radio 4, b04vdlp8
+Added: 22432:   Steve Lamacq's Roundtable - Frank Turner, Charlie Steen and Leonie Cooper, BBC Radio 6 Music, b08p1b52
+Added: 22454:   Steve Lamacq - 11/05/2017, BBC Radio 6 Music, b08p1b50
+Added: 22510:   Steve Wright in the Afternoon - 11/05/2017, BBC Radio 2, b08p4mrm
+Added: 22553:   Street Corner Soul - Episode 4, BBC Radio 6 Music, b0084kn4
+Added: 22554:   Street and Lane: Series 1 - Patio Marital, BBC Radio 4 Extra, b00v3n2v
+Added: 22617:   Such Rotten Luck: Series 1 - Stories Before Bed, BBC Radio 4 Extra, b01nvphb
+Added: 23027:   The Briefing Room - 11/05/2017, BBC Radio 4, b08pgbvg
+Added: 23057:   The Chris Evans Breakfast Show - Paul Weller and Nick Mason, BBC Radio 2, b08p4msz
+Added: 23079:   The Comedy Club Interviews - 11/05/2017, BBC Radio 4 Extra, b08qlctm
+Added: 23080:   The Compass: A Young World - Uganda, BBC World Service, p051sk5w
+Added: 23136:   The Documentary - A Woman Half in Shadow, BBC World Service, p051sk5x
+Added: 23209:   The Essay: Signs and Mythologies - The Significance of Roland Barthes - Andrew Gallix, BBC Radio 3, b06pxnjq
+Added: 23229:   The Film Programme - Ridley Scott, BBC Radio 4, b08pgbvb
+Added: 23563:   The Mitch Benn Music Show: Series 1 - Episode 2, BBC Radio 4 Extra, b007synq
+Added: 23690:   The Newsroom - 10/05/2017 GMT, BBC World Service, p051sk58
+Added: 23691:   The Newsroom - 10/05/2017 GMT, BBC World Service, p051sk7k
+Added: 23692:   The Newsroom - 10/05/2017 GMT, BBC World Service, p051sk98
+Added: 23693:   The Newsroom - 10/05/2017 GMT, BBC World Service, p051skfy
+Added: 23794:   The Radio 1 Breakfast Show with Nick Grimshaw - It's Friday!, b08njqdh
+Added: 23799:   The Radio 2 Arts Show with Jonathan Ross - 11/05/2017, BBC Radio 2, b08p5376
+Added: 24019:   The World Tonight - 11/05/2017, BBC Radio 4, b08p5lcd
+Added: 24094:   Through the Night - Proms 2016: Sakari Oramo conducts Mahler and Haydn symphonies, BBC Radio 3, b08nz0y2
+Added: 24200:   Today - 12/05/2017, BBC Radio 4, b08p5lft
+Added: 24225:   Toddla T - 12/05/2017, BBC Radio 1Xtra, b08p601n
+Added: 24271:   Tommy Sandhu - The Love Friday Mix: DJ Irf, BBC Asian Network, b08p1rv4
+Added: 24469:   Tweet of the Day - Whooper Swan, BBC Radio 4, b08q5x8w
+Added: 24525:   Up All Night - 12/05/2017, BBC Radio 5 live, b08pgbpc
+Added: 24567:   Vanessa Feltz - 12/05/2017, BBC Radio 2, b08p4msx
+Added: 24644:   Video Killed the Musician - -, BBC Radio 4 Extra, b00770qj
+Added: 24678:   Wake Up to Money - 12/05/2017, BBC Radio 5 live, b08pgbph
+Added: 24789:   Weather - 11/05/2017, BBC Radio 4, b08p5lby
+Added: 24790:   Weather - 11/05/2017, BBC Radio 4, b08p5lcb
+Added: 24950:   Witness - 10/05/2017 GMT, BBC World Service, p051sk8y
+Added: 24977:   Woman's Hour - 11/05/2017, BBC Radio 4, b08p5lbr
+Added: 25036:   World Business Report - First broadcast 2017/05/10 22:32 GMT, BBC World Service, p051sk5r
+Added: 25037:   World Business Report - First broadcast 2017/05/10 14:32 GMT, BBC World Service, p051sk8d
+Added: 25067:   World Update - 10/05/2017 GMT, BBC World Service, p051sk5f
+Added: 25089:   World at One - 11/05/2017, BBC Radio 4, b08p5lc0
+Added: 25143:   Yasmin Evans - 11/05/2017, BBC Radio 1Xtra, b08nknhs
+Added: 25180:   You and Yours - 11/05/2017, BBC Radio 4, b08p5lbw
+
+INFO: Getting tv Index Feeds (this may take a few minutes)
+INFO: Using concurrent indexing
+................................
+Added: 1546:    Channel Islands News: Evening News - 11/05/2017, BBC One, b08pl2f5
+Added: 1566:    Channel Islands News: Late News - 11/05/2017, BBC One, b08pl2f7
+Added: 1568:    Channel Patrol: Series 1 - Episode 3, BBC Two, b04t148s
+Added: 1569:    Channel Patrol: Series 1 - Episode 4, BBC Two, b04t14ny
+Added: 1598:    Charlie and Lola: Series 3 - I Really Absolutely Must Have Glasses, CBeebies, b008fc2w
+Added: 1599:    Charlie and Lola: Series 3 - Thunder Completely Does Not Scare Me, CBeebies, b008fd4h
+Added: 1701:    Click - Short Edition - 13/05/2017, BBC News, b08r8tg5
+Added: 1709:    Click - 13/05/2017, BBC News, b08qlwlk
+Added: 2563:    HARDtalk - Nina Simone, Singer and Activist, BBC News, b08lxqtk
+Added: 2622:    Hairy Bikers' Best of British: Series 1 - 45 minute versions - Times of Plenty, BBC Two, b017mzh9
+Added: 2623:    Hairy Bikers' Best of British: Series 1 - 45 minute versions - A Taste of the Med, BBC Two, b017p662
+Added: 2735:    Hey Duggee: Series 1 - The Sheep Badge, CBeebies, b05ysk11
+Added: 2737:    Hey Duggee: Series 1 - The We Love Animals Badge, CBeebies, b05yxjnv
+Added: 3301:    Look East (West): Evening News - 11/05/2017, BBC One, b08pl2cr
+Added: 3321:    Look East (West): Late News - 11/05/2017, BBC One, b08pl2ct
+Added: 3341:    Look East: Evening News - 11/05/2017, BBC One, b08pl2h6
+Added: 3361:    Look East: Late News - 11/05/2017, BBC One, b08pl2h8
+Added: 3381:    Look East: Lunchtime News - 11/05/2017, BBC One, b08pl2h4
+Added: 3411:    Look North (East Yorkshire and Lincolnshire): Evening News - 11/05/2017, BBC One, b08pl2nj
+Added: 3431:    Look North (East Yorkshire and Lincolnshire): Late News - 11/05/2017, BBC One, b08pl2nl
+Added: 3451:    Look North (East Yorkshire and Lincolnshire): Lunchtime News - 11/05/2017, BBC One, b08pl2ng
+Added: 3481:    Look North (North East and Cumbria): Evening News - 11/05/2017, BBC One, b08pl2vj
+Added: 3500:    Look North (North East and Cumbria): Late News - 11/05/2017, BBC One, b08pl2vl
+Added: 3520:    Look North (North East and Cumbria): Lunchtime News - 11/05/2017, BBC One, b08pl2vg
+Added: 3550:    Look North (Yorkshire): Evening News - 11/05/2017, BBC One, b08pl51d
+Added: 3570:    Look North (Yorkshire): Late News - 11/05/2017, BBC One, b08pl51g
+Added: 3590:    Look North (Yorkshire): Lunchtime News - 11/05/2017, BBC One, b08pl51b
+Added: 3650:    Magic Door - Antarctica, CBeebies, b08mhy8l
+Added: 3658:    Magic Door - Disco, CBeebies, p04l8c7w
+Added: 4342:    North West Today: Lunchtime News - 11/05/2017, BBC One, b08pl2zn
+Added: 4362:    North West Tonight: Evening News - 11/05/2017, BBC One, b08pl2zq
+Added: 4382:    North West Tonight: Late News - 11/05/2017, BBC One, b08pl2zs
+Added: 4608:    Our World - Transgender Family, BBC News, b08r8tg7
+Added: 4672:    Party Election Broadcasts: Sinn Féin - General Election, BBC One, b08r44dc
+Added: 5492:    Show Me Show Me: Series 4 - Orangutans and Tidying Up, CBeebies, b01rn302
+Added: 5493:    Show Me Show Me: Series 4 - Bears and Bamboo, CBeebies, b01rn3dh
+Added: 5494:    Show Me Show Me: Series 4 - Tummies and Buttons, CBeebies, b01rn3kq
+Added: 5495:    Show Me Show Me: Series 4 - Shells and Blowy Horns, CBeebies, b01rn51z
+Added: 5496:    Show Me Show Me: Series 4 - Spoons and Ostriches, CBeebies, b01rn6fw
+Added: 5661:    South East Today: Evening News - 11/05/2017, BBC One, b08pl3xj
+Added: 5681:    South East Today: Late News - 11/05/2017, BBC One, b08pl3xl
+Added: 5701:    South East Today: Lunchtime News - 11/05/2017, BBC One, b08pl3xg
+Added: 5731:    South Today - Oxford: Evening News - 11/05/2017, BBC One, b08pl361
+Added: 5751:    South Today - Oxford: Late News - 11/05/2017, BBC One, b08pl363
+Added: 6542:    The Travel Show - Episode 173, BBC News, b08r8tg9
+Added: 6559:    The Wonder of Animals - Bears, BBC Two, b04dzrtp
+Added: 6560:    The Wonder of Animals - Great Apes, BBC Two, b04j8ttk
+#HoodDocumentary
+10_Things_You_Didn_t_Know_About..._name_tv

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Removing a pid/show from history?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Removing a pid/show from history?</div>
+<div id="pagetitle"><h2>Removing a pid/show from history?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">14-11-2016, 09:15 PM</div>
+</div>
+<div class="message">Is there a way to remove a show from history so that it will download again without a '--force' command?<br />
+<br />
+This would help me greatly replace some shows I have accidentally erased without having to check for them all the time.<br />
+<br />
+<br />
+Thanks in advance,<br />
+Neil</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">14-11-2016, 11:21 PM</div>
+</div>
+<div class="message">I've done this by editing the download_history file using a proper text editor such as Notepad++. Note that Windows Notepad does not display the formatting properly, so don't use that or Word! <br />
+<br />
+The file is to be found in C:\Users\<span style="font-style: italic;" class="mycode_i">yourprofilename</span>\.get_iplayer. Make a backup copy of the history file before you edit it!<br />
+<br />
+You need to search for the PID of the programme you wish to remove from history, delete that line (the PID is the first item shown in that line) and save the file.<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1346</h2></div><div class="dateline">18-11-2016, 07:10 PM</div>
+</div>
+<div class="message">Oh, that will work. Thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-911</h2></div><div class="dateline">21-11-2016, 05:44 PM</div>
+</div>
+<div class="message">Why not just add --force to the prefs file with get_iplayer --prefs-add --force ?<br />
+<br />
+That way, if it needs it, it will use it and you won't have to worry about it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-11-2016, 05:58 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (21-11-2016, 05:44 PM)</span></cite>Why not just add --force to the prefs file with get_iplayer --prefs-add --force ?<br />
+<br />
+That way, if it needs it, it will use it and you won't have to worry about it.</blockquote>Not a good idea. Don't do that unless you want to  permanently ignore the download history checks for every programme you ever download in the future. If you move any output files (past or future), you won't be saved by the file overwrite check, so you'll end up wasting bandwidth downloading programmes you already have. Since you already have to know which programmes are missing in order to edit the download history, it's quicker and easier just to use <kbd>--force</kbd>.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Removing a pid/show from history?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

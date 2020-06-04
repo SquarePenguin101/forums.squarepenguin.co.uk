@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Monochrome Subtitles with --subs-embed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Monochrome Subtitles with --subs-embed</div>
+<div id="pagetitle"><h2>Monochrome Subtitles with --subs-embed</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1923</h2></div><div class="dateline">19-06-2019, 12:53 AM</div>
+</div>
+<div class="message">Running get_iplayer 3.20.0-MSWin32 from a Microsoft Windows 7 Home Premium (Version 6.1.7601) CMD shell.<br />
+<br />
+Since subtitles embedded into an mp4 container will always be monochrome when using the <span style="font-style: italic;" class="mycode_i">mov_text</span> codec of <span style="font-style: italic;" class="mycode_i">ffmpeg</span>, could these embedded subtitles always follow the <kbd>--subs-mono</kbd> format with a leading hyphen used to denote a change of speaker? This may require a second call to the <span style="font-weight: bold;" class="mycode_b">ttml_to_srt</span> function with a <span style="font-weight: bold;" class="mycode_b">mono</span> argument of <span style="font-weight: bold;" class="mycode_b">true</span> to create a temporary <span style="font-style: italic;" class="mycode_i">srt</span> file for embedding.<br />
+<br />
+It is currently possible to run get_iplayer twice to achieve this behaviour:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;&gt;get_iplayer --subtitles --subs-mono --subs-embed &lt;other options&gt; --pid p07b3shn<br />
+C:&#92;&gt;get_iplayer --subs-only --no-subs-mono --overwrite &lt;other options&gt; --pid p07b3shn</code></div></div>This work-around does, of course, require unnecessarily re-downloading the <span style="font-style: italic;" class="mycode_i">json</span>s and re-streaming the <span style="font-style: italic;" class="mycode_i">ttml</span>, which is a bit of a waste of resources.<br />
+<br />
+Thanks in advance for considering this.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-07-2019, 02:22 AM</div>
+</div>
+<div class="message">From v3.21, <kbd>--subs-embed</kbd> implies <kbd>--subs-mono</kbd></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Monochrome Subtitles with --subs-embed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Raspbian Stretch signature verification issue with repository</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Raspbian Stretch signature verification issue with repository</div>
+<div id="pagetitle"><h2>Raspbian Stretch signature verification issue with repository</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1349</h2></div><div class="dateline">01-09-2017, 08:28 AM</div>
+</div>
+<div class="message">Good morning,<br />
+<br />
+I recently upgraded my Raspbian install to Stretch and Get_Iplayer 3.01 works fine.<br />
+I noticed that 3.02 has been released so ran sudo apt-get update, but there is an error with the signature verification.<br />
+<br />
+It appears that the <a href="http://packages.hedgerows.org.uk/raspbian/jessie/">http://packages.hedgerows.org.uk/raspbian/jessie/</a> repository still contains 3.01 at this time as it happens!<br />
+<br />
+It's worth noting that there isn;t currently a repo for stretch on this site so I've left it pointing at the Jessie repo.<br />
+<br />
+Anyway, here's the error if anyone can help!:<br />
+<br />
+Hit:7 <a href="https://dl.bintray.com/mpmc/deb">https://dl.bintray.com/mpmc/deb</a> raspbianjessie Release<br />
+Reading package lists... Done<br />
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: <a href="http://packages.hedgerows.org.uk/raspbian">http://packages.hedgerows.org.uk/raspbian</a> jessie/ Release: The following signatures were invalid: 4C5653EB93401EAECAF6B28E8B07C4FF0F5BFDFE<br />
+W: Failed to fetch <a href="http://packages.hedgerows.org.uk/raspbian/jessie/Release.gpg">http://packages.hedgerows.org.uk/raspbia...elease.gpg</a>  The following signatures were invalid: 4C5653EB93401EAECAF6B28E8B07C4FF0F5BFDFE<br />
+W: Some index files failed to download. They have been ignored, or old ones used instead.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">01-09-2017, 07:30 PM</div>
+</div>
+<div class="message">You're right that packages.hedgerows.org.uk still has 3.01, and is still serving packages for jessie (though as you note they work fine on stretch anyway).  I'm in the process of upgrading my pi to stretch, and once that's done I'll build a fresh version of the repository for stretch, together with gip 3.02.<br />
+<br />
+Expect it to take a few days ;-)<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1349</h2></div><div class="dateline">02-09-2017, 09:25 AM</div>
+</div>
+<div class="message">Cheers Jon!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">21-09-2017, 05:38 PM</div>
+</div>
+<div class="message">Hi Jon,<br />
+I get this error when doing apt-get-update:<br />
+<br />
+Get:1 <a href="http://packages.hedgerows.org.uk">http://packages.hedgerows.org.uk</a> jessie/ Release.gpg [72 B]              <br />
+Get:2 <a href="http://packages.hedgerows.org.uk">http://packages.hedgerows.org.uk</a> jessie/ Release [1,571 B]       <br />
+Err <a href="http://packages.hedgerows.org.uk">http://packages.hedgerows.org.uk</a> jessie/ Release <br />
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: <a href="http://packages.hedgerows.org.uk">http://packages.hedgerows.org.uk</a> jessie/ Release: The following signatures were invalid: BADSIG 8B07C4FF0F5BFDFE Jon Davies &lt;jon@hedgerows.org.uk&gt;<br />
+<br />
+W: Failed to fetch <a href="http://packages.hedgerows.org.uk/raspbian/jessie/Release">http://packages.hedgerows.org.uk/raspbia...ie/Release</a>  <br />
+<br />
+W: Some index files failed to download. They have been ignored, or old ones used instead.<br />
+<br />
+<br />
+I have no intention of upgrading to stretch and run GIP 302 on Jessie, will I stop getting the update error when you upgrade your Pi?<br />
+<br />
+TIA<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">22-09-2017, 09:50 PM</div>
+</div>
+<div class="message">For those who insist on continuing to use an unsupported operating system... (aka raspbian Jessie)<br />
+<br />
+Please switch to the "stable" repository, following the instructions (for stretch) on <a href="http://packages.hedgerows.org.uk">http://packages.hedgerows.org.uk</a><br />
+<br />
+this should work today if you've previously installed gip using the old jessie repository, but won't work yet for a fresh install of jessie.  I'll rebuild ffmpeg targeted at "stable" rather than "jessie", but it takes about a day to build on my raspberry pi 1 so please don't hold your breath.<br />
+<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Raspbian Stretch signature verification issue with repository</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot get 1280x720 video with --tvmode=tv25fps</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot get 1280x720 video with --tvmode=tv25fps</div>
+<div id="pagetitle"><h2>Cannot get 1280x720 video with --tvmode=tv25fps</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1047-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">15-09-2016, 08:15 PM</div>
+</div>
+<div class="message">May I enquire about this also please, I think I must be doing something fiundamentally wrong because I can't get a 25fps 720p file any more.<br />
+<br />
+If I use get_iplayer URL --get I receive a 50fps 1280x720 video file as expected.<br />
+<br />
+If I then download the same programme using get_iplayer URL --get --tvmode=tv25fps (which I think I'm understanding correctly from the Wiki should give me a 25fps 1280x720) I receive a 25fps 960x540 file. <br />
+<br />
+The first time it happened I thought maybe there was no 720p version and so next time I firstly went for a 50fps version to verify there was. I've tried on numerous occasions always with the same result, also trying get_iplayer --tvmode=tv25fps URL but all methods thus far return at 960x540.<br />
+<br />
+So I'm cofuzzled. Please can you tell me what (probably stupid thing) I'm doing wrong that prevents me receiving a 1280x720 at 25fps?<br />
+<br />
+Many thanks<br />
+<hr class="mycode_hr" />
+edit - btw I'm using version 2.96-windows.1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-09-2016, 08:19 PM</div>
+</div>
+<div class="message">Presence of 720p 50fps doesn't necessarily mean a 720p 25fps version is available. Beyond that, we can't tell you anything unless you provide an example to test.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">15-09-2016, 08:42 PM</div>
+</div>
+<div class="message">FAO Dinky - I received email notification of your reply to my question (many thanks) both of which I see have now gone, so I'm guessing i should have started a fresh thread.<br />
+<br />
+Apologies for that. I take it then that the commands I used were correct which is reassuring. I will start a fresh thread with an example if I continue to have problems.<br />
+<br />
+Thanks again</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-09-2016, 08:45 PM</div>
+</div>
+<div class="message">Not gone - moved.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1233</h2></div><div class="dateline">16-09-2016, 12:18 AM</div>
+</div>
+<div class="message">You have probably caught up with the latest on download modes by now. If not, here are some commands that have worked for me recently:<br />
+<br />
+get_iplayer --get 123 --tvmode=hls50hd (50 fps)<br />
+or<br />
+get_iplayer --get 123 --tvmode=hlshd (25 fps)<br />
+<br />
+These modes both get 1280x720 download versions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">19-09-2016, 08:50 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-09-2016, 08:45 PM)</span></cite>Not gone - moved.</blockquote><br />
+Thanks, didn't realise, or notice til now.<br />
+<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (16-09-2016, 12:18 AM)</span></cite>You have probably caught up with the latest on download modes by now. If not, here are some commands that have worked for me recently:<br />
+<br />
+get_iplayer --get 123 --tvmode=hls50hd (50 fps)<br />
+or<br />
+get_iplayer --get 123 --tvmode=hlshd (25 fps)<br />
+<br />
+These modes both get 1280x720 download versions.</blockquote><br />
+Thanks also for your kind reply.<br />
+<br />
+I've actually been going by the commands as per the Wiki which for me either aren't working or, as user-2 has suggested, I happen to have been trying to get 25fps versions of 720p files which don't actually exist; although for it to happen every time makes me wonder. I used to get a lot of 720p before the recent version changes, have they now changed their ways and no longer always have 25fps 720's? I didn't know they had 50fps content either.<br />
+<br />
+I tried --tvmode=hlshd earlier with the same negative result. <br />
+<br />
+I wonder can I ask you to see if you can get a 25fps 720p version of this one? If you can then at least I'll know for certain that the problem is at my end:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>http://www.bbc.co.uk/iplayer/episode/b07c4pkz/grand-tours-of-the-scottish-islands-shorts-11-barra</code></div></div><br />
+Many thanks (btw I'm using 64bit Win 10)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-09-2016, 09:31 PM</div>
+</div>
+<div class="message">All formats of that programme are available, so problem must be at your end. <a href="thread-706.html">Follow our instructions</a> to submit a full report so we can see what is happening on your machine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1233</h2></div><div class="dateline">19-09-2016, 11:30 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-09-2016, 08:50 PM)</span></cite>I wonder can I ask you to see if you can get a 25fps 720p version of this one? If you can then at least I'll know for certain that the problem is at my end:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>http://www.bbc.co.uk/iplayer/episode/b07c4pkz/grand-tours-of-the-scottish-islands-shorts-11-barra</code></div></div><br />
+Many thanks (btw I'm using 64bit Win 10)</blockquote><br />
+Yes, I was able to download a 25 fps 720p version using 64bit Win (7), so there may be a difference with Windows versions. Best follow user-2's advice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">20-09-2016, 11:31 AM</div>
+</div>
+<div class="message">Will do, very many thanks for your help.....<br />
+<br />
+I'll be back... :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">22-09-2016, 08:50 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (19-09-2016, 09:31 PM)</span></cite>All formats of that programme are available, so problem must be at your end. <a href="thread-706.html">Follow our instructions</a> to submit a full report so we can see what is happening on your machine.</blockquote><br />
+Righty ho, I've downloaded the same 'Barra' file as above because we know all formats are actually available for that one. <br />
+<br />
+Log file attached.<br />
+<br />
+Good luck... and thanks!<br />
+<br />
+<br />
+ps - well I tried to attach the txt file but it's too big (:<br />
+<br />
+<span style="font-style: italic;" class="mycode_i">Please correct the following errors before continuing:</span><ul class="mycode_list"><li>The file you attached is too large. The maximum size for that type of file is 1024 kilobytes.<br />
+</li>
+</ul>
+The txt file is a whopping 3.47MB so I've put it into my dropbox, you will be able to download it from this link:<br />
+<br />
+<a href="https://dl.dropboxusercontent.com/u/99381416/iP-log.txt">https://dl.dropboxusercontent.com/u/99381416/iP-log.txt</a><br />
+<br />
+I hope you're ok with that. I did go to pastebin.com but it involved signing up etc. If you don't like the dropbox option I'll do that. Just let me know :)<br />
+<br />
+Methinks a txt file that big is indicative of a confused computer. Win 10 64bit. No external hdds involved with this procedure. This download again resulted in a 960x540 file.<br />
+<br />
+Thanks for your assistance with this!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 09:08 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-09-2016, 08:50 PM)</span></cite>The txt file is a whopping 3.47MB so I've put it into my dropbox, you will be able to download it from this link:</blockquote>Thanks. Dropbox is fine. You've hit a bit of a catch-22 here. The log wouldn't be nearly so huge if your desired streams were available. I'll have to do something about that in next release. Will respond further when I've had a chance to investigate.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 09:16 PM</div>
+</div>
+<div class="message">Also, post - verbatim - the command line you used to generate that log file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">22-09-2016, 09:17 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-09-2016, 09:08 PM)</span>user-2 Wrote: <a href="https://forums.squarepenguin.co.uk/post-4733.html#pid4733">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (22-09-2016, 08:50 PM)</span></cite>The txt file is a whopping 3.47MB so I've put it into my dropbox, you will be able to download it from this link:</blockquote>Thanks. Dropbox is fine. You've hit a bit of a catch-22 here. The log wouldn't be nearly so huge if your desired streams were available. I'll have to do something about that in next release. Will respond further when I've had a chance to investigate.</blockquote><br />
+But surely my desired stream of that file is available. Or am I misunderstanding you?<br />
+<br />
+Didn't you confirm that all formats of that particular programme are available, which would include 720p @ 25fps?<br />
+<br />
+In fact I think raymondjpg successfully downloaded exactly what my system can't.<br />
+<hr class="mycode_hr" />
+My command was:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer http://www.bbc.co.uk/iplayer/episode/b07c4pkz/grand-tours-of-the-scottish-islands-shorts-11-barra --tvmode=tv25fps --force --verbose &gt; C:&#92;Test&#92;log.txt 2&gt;&amp;1</code></div></div><br />
+<br />
+I changed the name to iP-log before putting into dropbox</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 09:26 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>But surely my desired stream of that file is available. Or am I misunderstanding you?</blockquote>
+<br />
+I meant "available to you".<br />
+<br />
+Is your output directory really named "- get_iplayer"? That's a bit odd, so worth checking.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">22-09-2016, 09:34 PM</div>
+</div>
+<div class="message">aah right... I'm with you now.<br />
+<br />
+Yes my output directory is named "- get_iplayer".<br />
+<br />
+I add the "-" to artificially raise its hierarchy and 'pin' the folder above other folders that I might download into the 'Downloads' folder. Just so it's always in the same place.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-09-2016, 11:13 PM</div>
+</div>
+<div class="message">The "No HLS playlist returned" warnings in the log mean that you are unable to download HLS playlists from the Akamai CDN, which means that you don't have access to 720p 25fps HLS streams - they are Akamai-only. There is nothing get_iplayer can do if you cannot access the HLS playlists. If you are using a VPN, it probably means you are blocked. You will have to use <kbd>wget</kbd> or <kbd>curl</kbd> to investigate what is returned from the Akamai URLs associated with "No HLS playlist returned" warnings. You can also try <kbd>--tvmode=flash</kbd>, which will get 720p 25fps RTMP streams, if available. However, that would only be a temporary solution since RTMP streams are now deprecated.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1233</h2></div><div class="dateline">22-09-2016, 11:34 PM</div>
+</div>
+<div class="message">It appears (from the command you posted most recently) that you are still using "--tvmode=tv25fps".<br />
+<br />
+Have you tried "--tvmode=hlshd"? That is the mode that I have been using recently with success to download a 25 fps 720p version, and the mode that I used to download the 25 fps 720p version of the file you are having difficulty with.<br />
+<br />
+Using "--tvmode=hlshd", GIP responds that it is searching for a version hlshd1. I haven't tried using "--tvmode=hlshd1" while "--tvmode=hlshd" works.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-09-2016, 12:29 AM</div>
+</div>
+<div class="message">--tvmode=hlshd won't help. It is the hls modes that are unavailable due to failed playlist retrieval.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-721</h2></div><div class="dateline">23-09-2016, 12:32 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (22-09-2016, 11:13 PM)</span></cite>The "No HLS playlist returned" warnings in the log mean that you are unable to download HLS playlists from the Akamai CDN....... /snip</blockquote><br />
+Well bugger me!! (please excuse) :)<br />
+<br />
+I'm stunned and welcome your explanation about HLS/Akamai CDN (which I'm unfamiliar with) because yes user-2, you're absolutely right. I've now used that same command with my VPN <span style="text-decoration: underline;" class="mycode_u">not</span> turned on and..... wow, I now have a 25fps 1280x720 file. Amazing!<br />
+<br />
+Not for a second did I consider that use of my VPN could allow connection to, and data transfer of, all but one particular video type.<br />
+<br />
+I <span style="text-decoration: underline;" class="mycode_u">was</span> able to download 25fps 720p via my VPN prior to the introduction of get_iplayer's new 50fps default, so does this mean that "720p 25fps HLS streams - they are Akamai-only" was not the case prior to get_iplayer's new 50fps default? If not then I'm still confused as to why I could then but can't now.<br />
+<br />
+The theory behind using my VPN is... better that gets blocked than my own UK IP, which I'd then still be able to use. I don't know enough about their monitoring systems/procedures to know if they do actively seek out and block individual downloaders, but as it worked it just seemed a sensible thing to do (even though I don't download much these days). I'm guessing they must monitor these forums too which feels a bit weird.<br />
+<br />
+I did try using the flash command btw (which I started to use a while ago when I encountered the missing data/out-of-synch issues and saw you suggest that as a workaround) and it didn't help. I say that but now I'm not 100% certain what flash command I actually used so I'll try again, together with your other suggestions (although I'm unfamiliar with wget or curl too.... at the moment!).<br />
+<br />
+Thanks so much for spending time to find the answer to this user-2, it's very much appreciated, as is all that you (and presumably some colleagues) do to maintain and improve get_iplayer :)<br />
+<br />
+<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (22-09-2016, 11:34 PM)</span></cite>It appears (from the command you posted most recently) that you are still using "--tvmode=tv25fps".<br />
+<br />
+Have you tried "--tvmode=hlshd"? That is the mode that I have been using recently with success to download a 25 fps 720p version, and the mode that I used to download the 25 fps 720p version of the file you are having difficulty with.<br />
+<br />
+Using "--tvmode=hlshd", GIP responds that it is searching for a version hlshd1. I haven't tried using "--tvmode=hlshd1" while "--tvmode=hlshd" works.</blockquote><br />
+I did try that and replied here to let you know that your kind suggestion didn't make any difference (please see above). Just in case you were under the impression I'd ignored your help :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1233</h2></div><div class="dateline">23-09-2016, 11:09 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (23-09-2016, 12:32 PM)</span></cite>I did try that and replied here to let you know that your kind suggestion didn't make any difference (please see above). Just in case you were under the impression I'd ignored your help :)</blockquote><br />
+I should have read user-2's post more closely before suggesting again that you use a hls mode.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1047-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Cannot get 1280x720 video with --tvmode=tv25fps</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

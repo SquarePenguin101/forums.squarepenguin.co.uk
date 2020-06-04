@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Feature Request: load from file or url</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Feature Request: load from file or url</div>
+<div id="pagetitle"><h2>Feature Request: load from file or url</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">13-10-2014, 08:47 PM</div>
+</div>
+<div class="message">Hi.<br />
+<br />
+What a nice feature it can be<br />
+if user stretch its hands, take some valid bbc rtmp(t) DATA container file (or .rdf, or .xml, or valid DATA url)<br />
+and tell get_iplayer what to do, ah??</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-10-2014, 10:51 AM</div>
+</div>
+<div class="message">You can't locate any of those resources unless you already have a programme's PID.  As long as you can download via PID with get_iplayer, there is no need for any of the above.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">18-10-2014, 04:57 PM</div>
+</div>
+<div class="message">Friend,<br />
+I'm trying to find which way get_iplayer receives media DATA to download. I'm looking for an entry point. Please inform. Let's do business until.<br />
+<br />
+The 1st example.<br />
+<a href="http://www.bbc.co.uk/iplayer/episode/b04lclfn">http://www.bbc.co.uk/iplayer/episode/b04lclfn</a><br />
+<br />
+Available for 16 days<br />
+<br />
+First, look inside the playlist <a href="http://www.bbc.co.uk/iplayer/playlist/b04lclfn">http://www.bbc.co.uk/iplayer/playlist/b04lclfn</a><br />
+It says: unset<br />
+&lt;noItems reason="postAvailability"/&gt;<br />
+<br />
+Although this episode plays on iPlayer!<br />
+<br />
+Occasional error or sheer intention? There are too many similar ones, too many.<br />
+<br />
+Now open the source of it, <a href="http://www.bbc.co.uk/iplayer/episode/b04lclfn">http://www.bbc.co.uk/iplayer/episode/b04lclfn</a> in the Text Editor<br />
+and scroll to the bottom,<br />
+you will see some DATA ('pageMediators/episodeMediator':).<br />
+<br />
+I think "vpid" (OR version_pid) is an essential,<br />
+it varies from time to time<br />
+depending on repeats, prolongations, et cetera.<br />
+Each of these times the new version_pid is generated.<br />
+<br />
+See the example<br />
+<a href="http://www.bbc.co.uk/programmes/b00sfz04.rdf">http://www.bbc.co.uk/programmes/b00sfz04.rdf</a><br />
+(scroll to the bottom)<br />
+&lt;po:version rdf:resource="/programmes/b00sfyz4#programme" /&gt;<br />
+<br />
+&lt;po:version rdf:resource="/programmes/b00x3ndh#programme" /&gt;<br />
+This time only the 2nd version_pid (version rdf:resource) is available.<br />
+See, there are 6 broadcasts were<br />
+<a href="http://www.bbc.co.uk/programmes/b00sfz04/broadcasts">http://www.bbc.co.uk/programmes/b00sfz04/broadcasts</a><br />
+<br />
+So you should think and do something.<br />
+<br />
+If this is not enough, let me know.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">19-10-2014, 01:35 PM</div>
+</div>
+<div class="message">It seems that the only reason why get_iplayer can't download some episodes<br />
+is the entry point, that is &#36;url = 'http://www.bbc.co.uk/iplayer/playlist/'.&#36;1;<br />
+<br />
+These playlists are fakes by and large.<br />
+thus is the result<br />
+No programmes are available for this pid with version(s): default<br />
+<br />
+To verify my words<br />
+6 episodes are available on iPlayer <a href="http://www.bbc.co.uk/programmes/b006wz6r/episodes/player">http://www.bbc.co.uk/programmes/b006wz6r...des/player</a><br />
+.. BUT 5 out of 6 playlists are fakes<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b01jk4jv">http://www.bbc.co.uk/iplayer/playlist/b01jk4jv</a> ;true<br />
+Connecting ...<br />
+INFO: Connected...<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b01jk4bx">http://www.bbc.co.uk/iplayer/playlist/b01jk4bx</a> ;false<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b00slpb6">http://www.bbc.co.uk/iplayer/playlist/b00slpb6</a> ;false<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b04lclfn">http://www.bbc.co.uk/iplayer/playlist/b04lclfn</a> ;false<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b00sfz04">http://www.bbc.co.uk/iplayer/playlist/b00sfz04</a> ;false<br />
+WARNING: No programmes are available for this pid with version(s): default<br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/playlist/b007897x">http://www.bbc.co.uk/iplayer/playlist/b007897x</a> ;false<br />
+WARNING: No programmes are available for this pid with version(s): default</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-10-2014, 02:43 PM</div>
+</div>
+<div class="message">Let me save you some time.  I am well aware of all the above, and get_iplayer has already been fixed.  Just wait for the next release (coming soon) or get the code yourself as instructed elsewhere in the forum.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">20-10-2014, 06:49 PM</div>
+</div>
+<div class="message">It's really joyful news<br />
+<br />
+[Image: <a href="http://www.incrediblejoy.com/images/news/concentrate-present.jpg">http://www.incrediblejoy.com/images/news...resent.jpg</a>]</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Feature Request: load from file or url</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

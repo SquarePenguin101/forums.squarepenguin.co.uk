@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Download of get-iplayer failed: SendRequest Error</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Download of get-iplayer failed: SendRequest Error</div>
+<div id="pagetitle"><h2>Download of get-iplayer failed: SendRequest Error</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-876</h2></div><div class="dateline">07-03-2015, 06:32 PM</div>
+</div>
+<div class="message">Hi, I'm unable to download Annie Mac's show from last night, so I thought I'd upgrade get-iplayer from v2.90 to v2.91. PSA for the error I get during the install.<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks in advance,<br />
+Stuart.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-03-2015, 10:26 PM</div>
+</div>
+<div class="message">It looks like the URL has /download appended to it and is therefore incorrect and fails to download.<br />
+<br />
+I think the correct address for the file is: <br />
+<br />
+<a href="http://sourceforge.net/projects/get-iplayer/files/win32/utils/mplayer/mplayer-svn-r32050.zip">http://sourceforge.net/projects/get-ipla...r32050.zip</a><br />
+<br />
+I actually don't run windows so I'm not sure about manually installing the above file though someone might jump in to assist on the details for that. <br />
+<br />
+As to the cause, I'm not sure if this might actually be an error on SourceForge end as there have been other successful installs very recently.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-03-2015, 11:09 PM</div>
+</div>
+<div class="message">The <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/download</code></div></div> is OK.  This was either a temporary glitch with SourceForge or interference by an anti-virus package.  With the recent BBC changes, there is no longer any use for MPlayer, so it's safe to skip that component if necessary.  AtomicParsley also comes from SourceForge, though.  If neither MPlayer nor AtomicParsley will download, then there is something wrong with OP's system (anti-virus) or some strange problem with upstream network.  The installer works fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-876</h2></div><div class="dateline">08-03-2015, 12:59 AM</div>
+</div>
+<div class="message">Thanks for the responses. Here's what happens if I untick MPlayer &amp; AtomicParsley. I don't run any AV on this PC and I can resolve SourceForge and other locations for the packages that the installer wants to connect to. I am in the UK and not running anything exotic on the Windows 8 PC (no VPN, Tor). I can watch video or listen to BBC radio via the website with no issues. I'm not aware of any other connectivity issues with websites or services I use.<br />
+<br />
+I've also just uninstalled and then deleted the C:\Program Files (x86)\get_iplayer folder (there were still files there), then re-ran the installer and only ticked get-iplayer for installation (all other options unticked) - I get the same error reported in my original post; it seems to get stuck at Perl.exe<br />
+<br />
+There's nothing in the Windows event logs. Does the installer write to a log? I'll take a look at the router logs tomorrow and reboot both the router and PC; as you say perhaps something odd is happening with my ISP.<br />
+<br />
+Thanks,<br />
+Stuart</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2015, 02:57 AM</div>
+</div>
+<div class="message">Something is preventing any network access by the installer, but you say you can access the internet via web browser.  That usually points to interference by AV or some other security package, e.g., anti-spyware.  You say you don't have such software installed, so there is nothing more that I can offer on that score.  There isn't an installer log file and the event log won't contain anything useful.  You can reach for Process Monitor to get more details of what is going on when the installer runs.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-876</h2></div><div class="dateline">08-03-2015, 07:02 PM</div>
+</div>
+<div class="message">I've done some tracing with Process Monitor; I looked at the tree and selected get-iplayer-setup-latest.exe, right clicked and selected Add process and children to include filter. I've unticked all the additional packages (MPLayer, LAME etc) and reached the recurring error message: "Download of get-iplayer failed: SendRequest Error. Do you wish to try again".<br />
+<br />
+Looking through the trace I can only see registry and filesystem access. This is confirmed by Tools-&gt;File Summary showing 2097 paths accessed whereas Tools-&gt;Network Summary shows only zeros. This suggests the installer isn't making an attempt to download the package. I can provide a ProcMon log file if required.<br />
+<br />
+I've just tried the same installer on a Windows 7 PC which had v2.90 installed and the upgrade invokes the download and it works fine. This looks to be a Windows 8.1 specific issue in 2.91 as I had 2.90 installed earlier in the year?]<br />
+Your thoughts?<br />
+<br />
+Thanks,<br />
+Stuart.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-03-2015, 09:31 PM</div>
+</div>
+<div class="message">It's not a Windows 8.1 issue.  Like I said before, the installer works fine.  Otherwise, no Windows 8.1 users would ever have been able to install get_iplayer in the 5 months that latest installer has been in the wild. The get_iplayer releases are not tied to installer releases.<br />
+<br />
+If the installer is prevented from accessing the network, there may be no network activity for ProcMon to log, but I'm not sure about that.  The installer is in fact attempting to download things, though.  Otherwise, you wouldn't get the "SendRequest" errors.  Check the ProcMon log and confirm that wininet.dll is loaded.  That's the system library the installer uses for downloading.  Also try downloading one of the failed component URLs in your browser, just to confirm that it's only the installer being messed about.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-876</h2></div><div class="dateline">28-06-2015, 05:28 PM</div>
+</div>
+<div class="message">I've just resolved the issue I was having. The breakthrough was noticing that IE 11 would no longer connect to the internet and your comment around wininet.dll (I use Chrome and FireFox browsers and these have been fine since install, but my wife was doing her usual thing and accidentally clicked IE to try and go online and she raised the issue).<br />
+<br />
+I clicked into IE Internet Settings, Advanced and used the Reset feature, rebooted and the get-iplayer installer ran normally. Time for Glastonbury :-)<br />
+<br />
+Thanks, Stuart.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-06-2015, 10:09 PM</div>
+</div>
+<div class="message">Thanks for coming back to post your solution.  These inexplicable Windows problems usually remain mysteries, so it's good to have solutions recorded.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Download of get-iplayer failed: SendRequest Error</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

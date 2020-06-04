@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - WebPVR: How to exclude common single word programme names?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; WebPVR: How to exclude common single word programme names?</div>
+<div id="pagetitle"><h2>WebPVR: How to exclude common single word programme names?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-949</h2></div><div class="dateline">17-01-2017, 07:55 PM</div>
+</div>
+<div class="message">Hi<br />
+In Web PVR Manager, I'm wondering how to exclude certain single word programme names such as "Weather", "Pointless" or "Breakfast" without it affecting any other programmes that might have one of those words in its title.<br />
+<br />
+For example, if there were such a programme called "Pointless Weather at Breakfast" I'd never see it in the list of programmes because any one of those filtered single words would exclude it.<br />
+<br />
+As things stand, particularly with the 30 days of listings that accrue, I see many many entries for "Weather" (Radio) that clutter up my list and I'd like to remove it but can't because it would remove anything else that contains "weather".<br />
+<br />
+Is there a way?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-01-2017, 08:05 PM</div>
+</div>
+<div class="message">Exclusions are interpreted as regular expressions (comma-separated if more than one). You will need to understand a bit about regular expressions to accomplish your goal. If you don't know what they are, Google will bring you the mountain of information on the subject. As a hint, click "Add Series" for a one-word programme and see how get_iplayer formulates the search term in the pvr job. The same pattern can be applied for exclusions. You'll also need to look closer at the programmes you want to exclude. For example, Pointless does not have a one-word name as far as get_iplayer is concerned.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-949</h2></div><div class="dateline">21-01-2017, 11:04 PM</div>
+</div>
+<div class="message">Thanks Dinky.<br />
+<br />
+I had no idea I could put regex in there. I'm no expert on regular expressions but have grappled with it in the past - thanks to your hint on the series record I have now accomplished what I needed, e.g. ^Breakfast&#36;<br />
+<br />
+My error with "Pointless" was due to seeing "Pointless Celebrities" in the current list of programmes, forgetting I had already excluded "Pointless: series" (no regex) which was coping with my need without my realising.<br />
+<br />
+Incidentally, where does the content of the Web PVR Manager exclusion entries (and others) get stored? It seems to be stored in the browser via a cookie or something? In the past I've tried looking for a GiP file containing the info but couldn't. The other day I cleared my cookies (for some other reason) and when I came back to Web PVR Manager the entries were cleared. Also, in the past, my long exclusion list was getting truncated like the browser/string box could only accept a certain amount of characters - these days that problem seems to have cleared - again, I'm thinking it was some browser limitation. (Can't recall if it was Chrome or Firefox?)<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-01-2017, 01:23 AM</div>
+</div>
+<div class="message">Yes, Web PVR settings are stored in cookies.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; WebPVR: How to exclude common single word programme names?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

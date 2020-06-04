@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Modify substitution parameter behaviour with separators</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Modify substitution parameter behaviour with separators</div>
+<div id="pagetitle"><h2>Modify substitution parameter behaviour with separators</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2147</h2></div><div class="dateline">28-04-2018, 10:57 AM</div>
+</div>
+<div class="message">It's possible to use a substitution parameter such as &lt;nameshort&gt;&lt;.senum&gt;, so that the stop will only appear if there is an senum associated with the file. <a href="https://github.com/get-iplayer/get_iplayer/wiki/filenames#conditional-separators">See here</a>. But it doesn't work the other way around, which in some ways would be more useful: I would quite like &lt;senum.&gt;&lt;episodeshort.&gt;&lt;nameshort&gt; so that for films etc, the first two options don't appear but for things in series, I get senum at the beginning, with a separator, where it exists.<br />
+<br />
+Is it straightforward to modify this behaviour?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-04-2018, 05:18 PM</div>
+</div>
+<div class="message">Sorry, but it's a no from me. It may be your preference to place the programme name at the end of the file name, but I can't see a case where that would be useful. For sorting, your format only works when programmes are separated into folders by name, which means the sort would be the same with the programme name at the beginning of the file name. Films (of which there are few) can already be named appropriately with the current capabilities. Also bear in mind that if/when the BBC get rid of some data sources (as they have already threatened to do), <kbd>&lt;senum&gt;</kbd> will be unavailable more often that it is now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2147</h2></div><div class="dateline">28-04-2018, 09:23 PM</div>
+</div>
+<div class="message">I sort television programmes into separate folders, but keep films in a single folder. I'm not sure "I can't see a case where that would be useful" is really that helpful: people can do all sorts of things you can't foresee!<br />
+<br />
+The reason I want to it this way round is so that the format accommodates both television series and films automatically. If I'm missing an obvious better way to do this, I'm all ears. A series will have the senum at the beginning (which makes it easy to find) while a film will have no senum but just the name. Seems to be the obvious solution to me.<br />
+<br />
+If I were to drop the programme name, films wouldn't work. If I were to put senum after the programme name, I wouldn't necessarily see it because the programme name is already longer than I can see on my mobile phone screen (when browsing the hard drive through Kodi). So what I want is a naming convention than means I can see the senum where it exists (taking your point that it may exist less frequently in future) but just the programme name where it is a one-off.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1496</h2></div><div class="dateline">29-04-2018, 02:09 AM</div>
+</div>
+<div class="message">Wooster, maybe I've not understood your request correctly but if we adopted it, surely for TV programmes (not films) we would have everything sorted in alphanumeric order, meaning that we would have a hotchpotch of unrelated files grouped together in series.number order in the download folder. I download a wide range of TV programmes and that would be a sorting nightmare for me. On the other hand, the present system works ideally for me as everything is in alphabetical order by programme name.<br />
+<br />
+I am sure that if you spoke to a dozen users you would get maybe half a dozen different ways in which users organise their files. My system FWIW is that everything (apart from political/current affairs programmes) goes into one download folder. I usually check on a daily basis to see if the downloads have happened correctly. All the files are moved daily into a "This week" folder and at the end of the week I set to sorting them.<br />
+<br />
+Where programmes are part of a series, they are all moved to a series folder where they stay until that particular programme series has ended. While the series is ongoing I can check to make sure that each episode is the same resolution/mode and I can force a reload if it isn't. As each series ends I move the whole series into my NAS into the respective group, eg Drama, Music, Cooking where the programmes are filed in a hierarchical folders as per Plex recommendations: Prog name -&gt; Series -&gt; Episode number - episode title (where appropriate).<br />
+<br />
+Where programmes are standalone (not part of a series), I file them in the NAS, again by group (as above).<br />
+<br />
+Films are put into the NAS into the Films group, a folder for each film. I do this because some of my downloaded films (not using gip) may have .srt subtitle files so I want to keep all the relevant film files together.<br />
+<br />
+My NAS currently has around 40TB of media files, from radio to TV to films to music to photos. I use an NVIDIA Shield to stream to my TV. I use Kodi and Plex and the above system works perfectly for me.<br />
+<br />
+It seems to me that your gripe is because you're using a phone, personally I can think of nothing worse, but each to their own. I don't use a phone for media sorting, I use a proper desktop PC with a decent sized screen - why get a "child" to do "grown-ups" work? ;-) For me, the naming system you propose is as illogical as the American date format! <br />
+<br />
+Anyway, enough of this rabbiting from me. I think each of us has our own way of doing things and I can't see user-2 budging.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2147</h2></div><div class="dateline">30-04-2018, 10:08 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (29-04-2018, 02:09 AM)</span></cite>Wooster, maybe I've not understood your request correctly but if we adopted it, surely for TV programmes (not films) we would have everything sorted in alphanumeric order, meaning that we would have a hotchpotch of unrelated files grouped together in series.number order in the download folder.</blockquote>Yes, you've not understood it correctly.<br />
+<br />
+I thought that the first sentence in my second post was clear enough that I put television programmes (and indeed films) into separate folders, by <kbd>&lt;nameshort&gt;</kbd>. I perhaps was less clear that I then manually filch out films into a folder called, uncreatively, <kbd>Films</kbd>. I do all of this on a computer, of course: I'm not stupid. I use my phone to select files to play from our Kodi system. Anyway, the details are not really relevant: it's usually helpful to assume people are being basically reasonable, in order to avoid these tedious diversions into the minor details of a particular setup.<br />
+<br />
+I suspect that you might also have missed that I'm talking about expanding the behaviour of an option, rather than changing the defaults for gip. Dinky's view is that it's too much work relative to the scale of the job, and that's his call. I might look at the code separately, if I ever get the time, to try to work out whether I can implement it and send a pull request, but I'd have to get my head round the code first.<br />
+<br />
+The other way through it, I suppose, would be to modify my get-iplayer call to run a separate script to check my download folders and re-organise films, whose names would end up slightly malformed and which would therefore be very easy to find with a regex.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Modify substitution parameter behaviour with separators</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

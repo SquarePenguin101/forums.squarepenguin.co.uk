@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Using --command-tv with pathnames containing spaces</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Using --command-tv with pathnames containing spaces</div>
+<div id="pagetitle"><h2>Using --command-tv with pathnames containing spaces</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2532</h2></div><div class="dateline">24-02-2020, 07:59 PM</div>
+</div>
+<div class="message">Hi,<br />
+I'm using the <kbd>--command-tv</kbd> to reencode the raw .ts file to another format and it is working well, e.g:<br />
+<br />
+<kbd>get_iplayer --raw  --url=1234XYZ --command-tv="ffmpeg -i \""&lt;filename&gt;"\" -c:v libx265 -crf 28 -c:a copy -y \""C:\Videos\&lt;fileprefix&gt;.mp4"\""</kbd><br />
+<br />
+This saves the reencoded file to <kbd>C:\Videos</kbd>. But, what I really want to do is to save the reencoded file to a different folder - one with a space in: <kbd>C:\New Videos</kbd>:<br />
+<br />
+So, instead of <kbd>"C:\Videos\&lt;fileprefix&gt;.mp4"</kbd>, I changed it to be: <kbd>"C:\New Videos\&lt;fileprefix&gt;.mp4"</kbd><br />
+<br />
+If I do this I get the error at the start of the ffmpeg reencode stage:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>[NULL @ 07136040] Unable to find a suitable output format for 'C:&#92;New'<br />
+C:&#92;New: Invalid argument<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+ERROR: Command Exit Code: 1</code></div></div><br />
+I'm sure it's a case of rearranging the quotes and escape characters correctly. Can anyone help?<br />
+Thank you.<br />
+Andy</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Using --command-tv with pathnames containing spaces</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

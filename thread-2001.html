@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Working on Windows but not Mac</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Working on Windows but not Mac</div>
+<div id="pagetitle"><h2>Working on Windows but not Mac</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2352</h2></div><div class="dateline">11-03-2019, 11:19 PM</div>
+</div>
+<div class="message">Yesterday<span style="font-weight: bold;" class="mycode_b"> get_iplayer</span> was working fine on my MBPro on macOS 10.13.6.<br />
+<br />
+Today it consistently fails to download all programmes tried.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">BBC iPlayer Downloads</span> also failed on all attempted downloads with the error "DASH manifest failed".<br />
+<br />
+I updated both <span style="font-weight: bold;" class="mycode_b">BBC iPlayer Downloads</span> and <span style="font-weight: bold;" class="mycode_b">get_iplayer</span> to the latest versions.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">BBC iPlayer Downloads</span> still fails on all attempted downloads with the error "DASH manifest failed".<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">get_iplayer</span> also fails on all attempted downloads after a sequence of errors like that below.<br />
+<br />
+I installed both <span style="font-weight: bold;" class="mycode_b">get_iplayer</span> and <span style="font-weight: bold;" class="mycode_b">BBC iPlayer Downloads</span> on a Windows10 PC and both worked OK.<br />
+<br />
+On Windows10 <span style="font-weight: bold;" class="mycode_b">get_iplayer</span> also throws a sequence of 403 errors just like on macOS but the download eventually starts.<br />
+<br />
+I couldn't find how to make a log in the documentation, but I did find this instruction<br />
+<br />
+get_iplayer --get 2679 --verbose &gt; C:\Users\%USERNAME%\log.txt 2&gt;&amp;1 <br />
+<br />
+(from <a href="thread-1767.html">https://forums.squarepenguin.co.uk/archi...-1767.html</a>) <br />
+<br />
+which I modified as follows:<br />
+<br />
+get_iplayer --get 2679 --verbose &gt; \usr\local\get_iplayer_log.txt 2&gt;&amp;1<br />
+<br />
+But when I run it nothing appears to happen and no log is created and I have to exit with Ctrl+C.<br />
+<br />
+Can anyone help me troubleshoot this issue?<br />
+<br />
+Error sequence when running get_player on macOS:<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/13922c-p071bkb4/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.ism/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.m3u8?__gda__=1552362200_1679eae467dfbf5ff37330e6cd5223c7">http://vod-hls-uk-live.akamaized.net/usp...e6cd5223c7</a><br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Ignore this error if programme download is successful<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/13922c-p071bkb4/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.ism/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.m3u8?s=1552319000&amp;e=1552362200&amp;h=33ba4b24a94f120a2e342b3dcc58409f">http://vod-hls-uk-live.bbcfmt.hs.llnwd.n...3dcc58409f</a><br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Ignore this error if programme download is successful<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/13922c-p071bkb4/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.ism/vf_p071bkb4_93234adf-ed8c-4cd6-bb42-23352c6dcb13.m3u8?at=OKce4fdy76621197f729e6dd35a5380d1a00e2538ed549fa583d876088e00">http://mm.bidi.bbc.co.uk/vod-hls-uk-live...d876088e00</a><br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Ignore this error if programme download is successful<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+WARNING: The programme may only be available in an unsupported format (e.g., Flash) - check the iPlayer site.<br />
+WARNING: If you use a VPN/VPS/Smart DNS/web proxy, check with the provider to find out if it has been blocked.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Working on Windows but not Mac</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

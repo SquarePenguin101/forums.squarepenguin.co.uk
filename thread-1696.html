@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Manual install on macOS 10.12.6: Installing Net::HTTP failed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Manual install on macOS 10.12.6: Installing Net::HTTP failed</div>
+<div id="pagetitle"><h2>Manual install on macOS 10.12.6: Installing Net::HTTP failed</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">09-03-2018, 03:34 AM</div>
+</div>
+<div class="message">I have been following the manual install guide for get_iplayer (version 3.12) with little success. The install fails while attempting to install the Mojolicious module to the local library. Per the install guide I used the commands below to configure a local library.<br />
+<br />
+curl -L "http://cpanmin.us" | perl - -l ~/perl5 App::cpanminus local::lib<br />
+eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`<br />
+echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' &gt;&gt; ~/.bash_profile<br />
+<br />
+I then execute the command:<br />
+<br />
+cpanm LWP mojolicious<br />
+<br />
+(Note I wanted to run this individually as this is the module that appears not to be available to Perl).<br />
+<br />
+Output from the command is provided below. As you can see the install fails when trying to instal Net-HTTP because the installed version of Net::HTTP appears to be 6.06 rather than 6.07. <br />
+<br />
+Does anyone have any insight into what I'm doing incorrectly in the install process.<br />
+<br />
+--&gt; Working on LWP<br />
+Fetching <a href="http://www.cpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.33.tar.gz">http://www.cpan.org/authors/id/O/OA/OALD....33.tar.gz</a> ... OK<br />
+Configuring libwww-perl-6.33 ... OK<br />
+==&gt; Found dependencies: Net::HTTP, Test::RequiresInternet<br />
+--&gt; Working on Net::HTTP<br />
+Fetching <a href="http://www.cpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.17.tar.gz">http://www.cpan.org/authors/id/O/OA/OALD....17.tar.gz</a> ... OK<br />
+Configuring Net-HTTP-6.17 ... OK<br />
+Building and testing Net-HTTP-6.17 ... FAIL<br />
+! Installing Net::HTTP failed. See /Users/Jack/.cpanm/work/1520561705.40652/build.log for details. Retry with --force to force install it.<br />
+--&gt; Working on Test::RequiresInternet<br />
+Fetching <a href="http://www.cpan.org/authors/id/M/MA/MALLEN/Test-RequiresInternet-0.05.tar.gz">http://www.cpan.org/authors/id/M/MA/MALL....05.tar.gz</a> ... OK<br />
+Configuring Test-RequiresInternet-0.05 ... OK<br />
+Building and testing Test-RequiresInternet-0.05 ... OK<br />
+Successfully installed Test-RequiresInternet-0.05<br />
+! Installing the dependencies failed: Installed version (6.06) of Net::HTTP is not in range '6.07'<br />
+! Bailing out the installation for libwww-perl-6.33.<br />
+! Finding mojolicious on cpanmetadb failed.<br />
+! Finding mojolicious () on mirror <a href="http://www.cpan.org">http://www.cpan.org</a> failed.<br />
+! Couldn't find module or a distribution mojolicious<br />
+1 distribution installed</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-03-2018, 11:53 AM</div>
+</div>
+<div class="message">I've changed the advice in the install doc to recommend installing only the modules necessary for get_iplayer to work with macOS system Perl. With XML::LibXML screwed and now this test failure with Net::HTTP, it's not worth swimming against the tide to install additional updates. Remove the ~/perl5 directory (assuming you don't use it for anything else) and go through the instructions again to install cpanminus and local::lib and then then install the required modules (IO::Socket::SSL, Mozilla::CA, Mojolicious). You don't need to add the "eval" command to ~/.bash_profile if you did it before.<br />
+<br />
+EDIT: removed note regarding <kbd>cpanm --force</kbd> - see below</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-03-2018, 06:00 PM</div>
+</div>
+<div class="message">Taking another look, I realised that the failing test uses live connections to cpan.org. The correct approach that disables only such tests:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>NO_NETWORK_TESTING=1 cpanm [...]</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1791</h2></div><div class="dateline">09-03-2018, 07:55 PM</div>
+</div>
+<div class="message">OK, I did as you suggested in your initial response, i.e recreated the library and only install the modules that get_iplayer needs, i.e. IO::Socket::SSL, Mozilla::CA, Mojolicious. This does the trick in getting get_iplayer to work.<br />
+<br />
+I have a quick follow-up question. I store downloaded TV files in a folder structure as follows:<br />
+<br />
+~/&lt;nameshort&gt;/&lt;series&gt;/&lt;name&gt;-&lt;seanum&gt;-&lt;episodeshort&gt;<br />
+<br />
+For example:<br />
+<br />
+~/Blue Planet II/Season 01/Blue_Planet_II-s01e01-One_Ocean.mp4<br />
+<br />
+I note that I can specify a subdirectory for output using the --subdir and --subdir-format parameters however as far as I can tell this will only allow me to create the &lt;nameshort&gt; folder under the specified output folder. Is it possible to create a subfolder of the program name that is named using the series?<br />
+<br />
+Thanks for your assistance in getting get_iplayer running again. It is much appreciated.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Manual install on macOS 10.12.6: Installing Net::HTTP failed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

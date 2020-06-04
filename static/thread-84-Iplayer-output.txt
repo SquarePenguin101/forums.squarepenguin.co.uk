@@ -1,0 +1,75 @@
+
+*************Radio...
+
+C:\Program Files (x86)\get_iplayer>get_iplayer --type=radio heidi --get
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+Matches:
+11451:  Johanna Spyri - Heidi - -, BBC Radio 4 Extra, Classic & Period,Drama,Rad
+io
+
+INFO: 1 Matching Programmes
+INFO: Checking existence of default version
+INFO: flashaacstd1,flashaaclow1 modes will be tried for version default
+INFO: Trying flashaacstd1 mode to record radio: Johanna Spyri - Heidi - Johanna
+Spyri - Heidi
+INFO: File name prefix = Johanna_Spyri_-_Heidi_-_Johanna_Spyri_-_Heidi_b007jxwr_
+default
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Already Completed at: 5760.035 sec Duration=5.760 sec
+Download complete
+WARNING: Failed to stream file C:\users\david vincent\music\downloaded radio"\Jo
+hanna_Spyri_-_Heidi_-_Johanna_Spyri_-_Heidi_b007jxwr_default.partial.mp3.flv via
+ RTMP
+INFO: skipping flashaacstd1 mode
+INFO: Trying flashaaclow1 mode to record radio: Johanna Spyri - Heidi - Johanna
+Spyri - Heidi
+INFO: File name prefix = Johanna_Spyri_-_Heidi_-_Johanna_Spyri_-_Heidi_b007jxwr_
+default
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Already Completed at: 5760.035 sec Duration=5.760 sec
+Download complete
+WARNING: Failed to stream file C:\users\david vincent\music\downloaded radio"\Jo
+hanna_Spyri_-_Heidi_-_Johanna_Spyri_-_Heidi_b007jxwr_default.partial.mp3.flv via
+ RTMP
+INFO: skipping flashaaclow1 mode
+INFO: You may wish to try --modes=wma for version default
+INFO: Note that wma mode is real-time only, and thus is generally only suitable
+for recording live radio.
+ERROR: Failed to record 'Johanna Spyri - Heidi - Johanna Spyri - Heidi (b007jxwr
+)'
+
+
+
+*************And for TV...
+
+C:\Program Files (x86)\get_iplayer>get_iplayer newsround --get
+get_iplayer v2.85, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+Matches:
+688:    Newsround - 15/12/2013, CBBC, Children's,News,TV, default
+
+INFO: 1 Matching Programmes
+WARNING: No programmes are available for this pid with version(s): default (avai
+lable versions: default)
+
+
+
+***** Prefs...
+C:\Program Files (x86)\get_iplayer>get_iplayer --prefs-show
+Options in 'C:\Users\David Vincent/.get_iplayer/options'
+        vlc = c:\program files\videolan\vlc"
+        aactomp3 = 1
+        outputradio = c:\users\david vincent\music\downloaded radio"

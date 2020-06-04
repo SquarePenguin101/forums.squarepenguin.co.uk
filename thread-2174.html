@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Specifying output directory in PVR search files</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Specifying output directory in PVR search files</div>
+<div id="pagetitle"><h2>Specifying output directory in PVR search files</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1470</h2></div><div class="dateline">18-01-2020, 03:22 PM</div>
+</div>
+<div class="message">Here's a new one on me!  I have "output" and "outputtv" specified in my options. file but want programmes from a couple of PVR search matches to go into other directory structures.  I noted that "output" is a valid option in the PVR files so thought I'd use that.  However, when I specify a full path (originally in quotes just to be safe because of a comma and foreign character, but then without) it crashes on trying to create an invalid directory.  The script specifies a base dir of the installed program dir, which seems like a bug to me, so I get:<br />
+ERROR: Could not create dir 'C:\PROGRA~1\GET_IP~1\"G:\iPlayer_Podcasts\&lt;directory_structure&gt;"'<br />
+When I strip away the full path and quotes (thankfully Win Cmd isn't confused by the comma or non-standard chr) the search does indeed download my programmes into a newly created <br />
+C:\PROGRA~1\GET_IP~1\&lt;directory_structure&gt;\<br />
+which is most definitely not what I want.  At least when I rely on the output options in options. it downloads to the correct drive and upper directory leaving me some ancillary filing work.<br />
+Is this behaviour purposeful or a "Secondary Software Characteristic"*?<br />
+<br />
+Regards,<br />
+G.J.E.<br />
+*(bug;-)<br />
+<br />
+P.S. Is there a comment chr in PVR search files?  I'd like to comment out any "output" references for now rather than delete them, and it would be nice to comment out "disabled 1" in the various files that I disable when a programme is out of season for a good part of the year, and I'm too lazy to type the line in full (actually, its presence is an apt reminder that this file is one I should periodically disable)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">18-01-2020, 08:24 PM</div>
+</div>
+<div class="message">In the event that this is not a bug, if you could show rather than tell that would be very helpful - please have a look at the how to report a problem page: <br />
+<br />
+<a href="thread-706.html">https://forums.squarepenguin.co.uk/thread-706.html</a><br />
+<br />
+It's a little comprehensive, but following enough of the steps to actually post your options files, commands and errors verbatim without alteration would allow further troubleshooting.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1470</h2></div><div class="dateline">19-01-2020, 11:32 PM</div>
+</div>
+<div class="message">That's fair enough, thank you for your reply :-)  Some file contents follow--<br />
+<br />
+Using version 3.24.0-MSWin32 my options. file is:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output G:&#92;iPlayer_Podcasts<br />
+outputtv G:&#92;iPlayer_TV<br />
+fps25 1<br />
+nopurge 1<br />
+subsraw 1<br />
+subtitles 1<br />
+tag_isodate 1<br />
+tag_podcast_radio 1<br />
+tag_tracklist 1<br />
+thumb 1<br />
+tracklist 1</code></div></div><br />
+When using <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr</code></div></div> it crashes at parsing the first file that I've modified to include an 'output' field.  In this instance the file "Isaac_Asimov_name_episode_desc_radio." contains:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>fields name,episode,desc<br />
+metadata xbmc<br />
+modes best<br />
+thumb 1<br />
+type radio<br />
+versionlist podcast,default<br />
+output "G:&#92;Authors&#92;Asimov,Isaac"<br />
+search0 Isaac Asimov</code></div></div><br />
+This produces the error:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;PROGRA~1&#92;GET_IP~1&#92;"G:&#92;Authors&#92;Asimov,Isaac"'</code></div></div>On deleting the quotes I still get:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: Could not create dir 'C:&#92;PROGRA~1&#92;GET_IP~1&#92;G:&#92;Authors&#92;Asimov,Isaac'</code></div></div>So I deleted the qualified part of the path until the above file now only contains:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>output Asimov,Isaac</code></div></div>and it successfully downloaded a programme into a newly created "C:\Program Files\get_iplayer\Asimov,Isaac"<br />
+<br />
+Would anything else actually be useful in this context?<br />
+G.J.E.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Specifying output directory in PVR search files</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

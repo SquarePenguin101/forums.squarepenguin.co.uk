@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ITV HASH ref error</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; ITV HASH ref error</div>
+<div id="pagetitle"><h2>ITV HASH ref error</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-321</h2></div><div class="dateline">10-01-2014, 10:12 PM</div>
+</div>
+<div class="message">I am using the latest version 2.85 and have noticed this error for the first time:<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+Can't use string ("1/8") as a HASH ref while "strict refs" in use at /usr/bin/get_iplayer line 3941.<br />
+<br />
+I have the itv.plugin installed and --type=itv works for getting the list of videos available. The one in question is still in Catch-Up so it is free.<br />
+<br />
+Note that BBC downloads work great!<br />
+<br />
+Any ideas?<br />
+<br />
+Thanks, in advance....<br />
+Marcus</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-01-2014, 11:10 PM</div>
+</div>
+<div class="message">ITV hasn't been supported by get_iplayer for years.  If you found an old copy of itv.plugin somewhere, it is guaranteed not to work.  The ITV service has changed greatly in the intervening years.  If you have tried to pluck itv.plugin from Get iPlayer Automator and use it with get_iplayer, that also won't work.  Only the search function works, not downloading.  If you want to hack on it to make it work for downloading, by all means do so.  Have a look at the Get iPlayer Automator source for how downloads are done.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-288</h2></div><div class="dateline">13-01-2014, 01:04 PM</div>
+</div>
+<div class="message">I'm experiencing the same issue, and accept that older plugins aren't supported and the newer plugins aren't compatible with the mainstream get-iplayer.<br />
+<br />
+However I was expecting that if I ran get_iplayer.pl direct from the get-iplayer-automator source, then the issue would go away. Unfortunately if I try to use the itv plugin like this, I experience the same issue.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; perl get_iplayer.pl --type=itv --get "The Cat in the Hat"<br />
+[...]<br />
+INFO: Checking existence of default version<br />
+Can't use string ("1/8") as a HASH ref while "strict refs" in use at get_iplayer.pl line 4252</code></div></div><br />
+<br />
+<br />
+<br />
+Any information about how the strict hash issue is avoided within get-iplayer-automator would be useful, and how I can successfully work around it. I'm not trying to run the ubuntu version of get-iplayer, rather trying to use the source from github... <br />
+<a href="https://github.com/GetiPlayerAutomator/get-iplayer-automator">https://github.com/GetiPlayerAutomator/g...-automator</a><br />
+...and expecting that only perl is needed so compatibility should be feasible across Ubuntu and Mac. Does that make sense?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-01-2014, 06:42 PM</div>
+</div>
+<div class="message">Refer to my earlier post:  It doesn't work for downloading, and hasn't for years, not even with GiA.  The GiA version is not intended to work for downloading, so don't waste your time trying.  GiA doesn't use it for downloading, only for searching, which GiA's author hacked into the original, completely broken, ITV plugin from get_iplayer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; ITV HASH ref error</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

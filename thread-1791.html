@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Replace invalid characters in filenames, rather than remove them</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Replace invalid characters in filenames, rather than remove them</div>
+<div id="pagetitle"><h2>Replace invalid characters in filenames, rather than remove them</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2139</h2></div><div class="dateline">20-05-2018, 08:50 PM</div>
+</div>
+<div class="message">Currently, when creating filenames, get_iplayer removes invalid characters for Windows ('"*:&lt;&gt;?|') and macOS (':'). It would be useful if there were the option to replace these invalid characters with a valid character. I am a macOS user so I would be most interested in replacing : (a colon) with - (a hyphen) but would expect that Windows users might like to replace the characters that are invalid on that OS. My preference would be a command to allow the user to select the substitution; however, a pre-programmed alternative character would be an improvement.<br />
+<br />
+Note that the list of excluded characters given above are taken from the description of --no-sanitise on the wiki page <a href="https://github.com/get-iplayer/get_iplayer/wiki/manpage#output-options">https://github.com/get-iplayer/get_iplay...ut-options</a>; this appears to state that on macOS the apostrophe will be removed, my experience is that the apostrophe character is not removed. (This may be my incorrect interpretation of the manual due to the font used not distinguishing between apostrophe-like characters.)<br />
+<br />
+(Original thread deleted by originator and replaced by this one with corrected Thread Subject and minor clarifications in message.)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-05-2018, 11:21 AM</div>
+</div>
+<div class="message">Sorry, but it's a no from me. I prefer the current scheme. However, it would be a trivial change to implement an option for specifying a replacement string. If you or somebody else wants to submit a pull request, have a go. It's worth noting that since you use macOS you could easily accomplish the same thing by renaming your output files via <kbd>--command</kbd>.<br />
+<br />
+The apostrophes (note there are two. at begin/end) in the online man page were merely quoting the forbidden characters. Still, they aren't needed, and are now gone.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-05-2018, 11:36 AM</div>
+</div>
+<div class="message">On second thought, I would only accept a pull request that implements a replacement for colon characters, and only with <kbd>--no-sanitise</kbd>. It wouldn't make much sense to use the same replacement for double-quotes or question marks, which are the only other invalid characters you will encounter, and those are only relevant for Windows.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2139</h2></div><div class="dateline">21-05-2018, 08:08 PM</div>
+</div>
+<div class="message">user-2,<br />
+<br />
+Thank you for your responses. I doubt if I will be the one to create a pull request, since my last real programming was about forty years ago using FORTRAN! I mainly use the web interface, except for setting some defaults including using --no-sanitize. I expect I will continue to use MassReplaceIt or manual editing to correct the filenames.<br />
+<br />
+I would like to take the opportunity to thank you for your work on get_iplayer, including the recent introduction of the macOS package installer removing the need to use Homebrew with the consequent delays and opportunities for errors.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Replace invalid characters in filenames, rather than remove them</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

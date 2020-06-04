@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Add option to make get_iplayer fail over if segment cannot be downloaded</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Add option to make get_iplayer fail over if segment cannot be downloaded</div>
+<div id="pagetitle"><h2>Add option to make get_iplayer fail over if segment cannot be downloaded</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">04-08-2016, 04:44 AM</div>
+</div>
+<div class="message">Recently I have had a spate of 'WARNING: Segment not found' errors in hlslhd mode. The resulting files are not really usable due to audio sync issues. <br />
+It would be good if there was an option to allow get_iplayer to abort if one of these errors was encountered to prevent download continuing (as the resulting file is not usable).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-08-2016, 10:17 AM</div>
+</div>
+<div class="message">Already planned for next release, and it won't be optional. Missing segments don't per se mean a file is unusable (assuming you don't mind a few seconds missing). However, since the same problem manifests with the garbage files the BBC has been producing this week, it will be an error instead of a warning and treated as a failed download. The only exception will be if the final segment of a radio programme appears to be missing. Some programmes have bad manifests with a segment list that is off by one.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">04-08-2016, 11:50 AM</div>
+</div>
+<div class="message">That sounds good, I originally didn't think missing a segment would be much of a problem until the recent spate of 'garbage' (as you succinctly put it).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1373</h2></div><div class="dateline">13-08-2016, 03:31 AM</div>
+</div>
+<div class="message">I'm having the same problem (i.e. as described here: <a href="http://lists.infradead.org/pipermail/get_iplayer/2016-August/009373.html">http://lists.infradead.org/pipermail/get...09373.html</a> ) except that in my case I'm fairly certain the cause is my iffy Internet connection<br />
+<br />
+So, rather than requesting the "add option to abort if segment not found" - I would hope for a 'pause and retry getting the missing segment (once or maybe twice more only) before continuing' option. And making it a default feature would probably be better than making it available as an option.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1373</h2></div><div class="dateline">13-08-2016, 03:59 AM</div>
+</div>
+<div class="message">RE: Already planned for next release, and it won't be optional. Missing segments don't per se mean a file is unusable (assuming you don't mind a few seconds missing). <br />
+<br />
+Yes, that's been my experience (Missing segments don't per se mean a file is unusable) and I can put up with a few missing seconds - provided the remaining / next parts of the file aren't ruined by being out of sync. That's also been my experience, i.e. seeing 2 or 3 missing segments reported and then finding that the downloaded file can be viewed ok but is ruined by being badly out of sync from some point on. <br />
+<br />
+If the solution planned for the next release is to have the download abort when there is a missing segment, would it be possible to make "start downloading again from the beginning" the default - rather than requiring the user to discover the failure and enter a restart?<br />
+<br />
+(As mentioned earlier, I think the best solution of all would be if the response to a missing segment was to pause and try getting the segment again - maybe 2 or 3 times - and aborting and restarting only if the retry failed).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">13-08-2016, 06:55 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>[color=#333333][size=medium]If the solution planned for the next release is to have the download abort when there is a missing segment, would it be possible to make "start downloading again from the beginning" the default - rather than requiring the user to discover the failure and enter a restart?[/size][/color]<br />
+<br />
+[color=#333333][size=medium](As mentioned earlier, I think the best solution of all would be if the response to a missing segment was to pause and try getting the segment again - maybe 2 or 3 times - and aborting and restarting only if the retry failed).[/size][/color]</blockquote>
+<br />
+I prefer the way that has already been implemented in the development version, if a segment cannot be retrieved then the download errors and fails over to the next mode specified. I don't want to download nearly 1 gB get a "Segment missing error" near the end, download it all again just to have the same thing happen!<br />
+I very much doubt the segment errors you are seeing are anything to do with your internet connection, these are http downloads after all, not streams. Does your browser miss out pages when you are surfing the web?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-08-2016, 01:48 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (13-08-2016, 03:59 AM)</span></cite>If the solution planned for the next release is to have the download abort when there is a missing segment, would it be possible to make "start downloading again from the beginning" the default - rather than requiring the user to discover the failure and enter a restart?</blockquote>No chance. "Segment not found" means it doesn't exist on the server. It cannot be recovered by get_iplayer.<br />
+<blockquote class="mycode_quote"><cite><span> (13-08-2016, 06:55 AM)</span></cite>I very much doubt the segment errors you are seeing are anything to do with your internet connection, these are http downloads after all, not streams. Does your browser miss out pages when you are surfing the web?</blockquote>"Segment not found" has nothing to do with your internet connection, but you may also receive "Failed to download segment" warnings. Those could be the by-product of a flakey connection, but they could just as easily be due to some problem with upstream connectivity, a problem on your machine, server timeouts, or any number of other things. There is nothing that get_iplayer can do about such problems. Failed segment downloads are retried twice.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1358</h2></div><div class="dateline">14-08-2016, 01:34 PM</div>
+</div>
+<div class="message">How about an option to make get_iplayer try the next mode in the comma separated list of modes when segment cannot be downloaded is detected.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">14-08-2016, 08:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (14-08-2016, 01:34 PM)</span></cite>How about an option to make get_iplayer try the next mode in the comma separated list of modes when segment cannot be downloaded is detected.</blockquote><br />
+Since commit 1564276 on the development version, that is exactly what get_iplayer does:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches: <br />
+2344:	Versailles - Episode 10, BBC Two, b07p0q0j <br />
+ <br />
+INFO: 1 Matching Programmes <br />
+INFO: Checking existence of original version <br />
+INFO: hlshd1,flashhd1,flashhd1 modes will be tried for version original <br />
+INFO: Trying hlshd1 mode to record tv: Versailles - 10. Episode 10 <br />
+INFO: File name prefix = Versailles_-_10._Episode_10_b07p0q0j_original                  <br />
+INFO: Begin recording file: D:\get_iplayer_temp\Versailles_-_10._Episode_10_b07p0q0j_original.partial.mp4.ts <br />
+ <br />
+ERROR: Segment not found (3) <br />
+<a href="http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-f7713b81-1877-40a4-8595-7fdd99b7a214_b07p0pmz_1469956742111,1500kbps/modav/bUnknown-f7713b81-1877-40a4-8595-7fdd99b7a214_b07p0pmz_1469956745034,3200kbps/modav/bUnknown-f7713b81-1877-40a4-8595-7fdd99b7a214_b07p0pmz_1469956743372,.mp4.csmil/segment3_2_av.ts">http://cp401489-vh.akamaihd.net/i/iplaye...t3_2_av.ts</a> <br />
+ERROR: Download aborted at 20 secs in programme <br />
+INFO: skipping hlshd1 mode <br />
+INFO: Trying flashhd1 mode to record tv: Versailles - 10. Episode 10 <br />
+INFO: File name prefix = Versailles_-_10._Episode_10_b07p0q0j_original                  <br />
+INFO: Begin recording file: D:\get_iplayer_temp\Versailles_-_10._Episode_10_b07p0q0j_original.partial.mp4.flv <br />
+RTMPDump v2.4-102-ga3a600d-get_iplayer <br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL <br />
+Connecting ... </code></div>
+</div>
+It is also probably worth noting that the TV hls recording modes have been removed completely in commit 78e253d as they have become unreliable, quote 'left to rot'.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1358</h2></div><div class="dateline">14-08-2016, 10:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (14-08-2016, 08:21 PM)</span>errfmt Wrote: <a href="https://forums.squarepenguin.co.uk/post-4509.html#pid4509">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (14-08-2016, 01:34 PM)</span></cite>How about an option to make get_iplayer try the next mode in the comma separated list of modes when segment cannot be downloaded is detected.</blockquote><br />
+Since commit 1564276 on the development version, that is exactly what get_iplayer does.</blockquote><br />
+That's great for developers, do we have an ETA on when it will be implemented for all users?<br />
+<br />
+I'll also like to thank all that have worked to keep the get_iplayer project going over the years.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">14-08-2016, 11:05 PM</div>
+</div>
+<div class="message">See this link <a href="https://squarepenguin.co.uk/wiki/gipdev/">https://squarepenguin.co.uk/wiki/gipdev/</a> if you want to see how to use the development version ahead of general release. <br />
+Usual caveats:<br />
+If you don't understand the instructions DON'T install it.<br />
+There is NO support for the development version on this forum.<br />
+<br />
+Tip: Search forum using keyword: development to see lots of other posts relating to using the development version.<br />
+<br />
+Only Dinky will know the ETA of the next general release.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Add option to make get_iplayer fail over if segment cannot be downloaded</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Recursive/Series Record queries</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Recursive/Series Record queries</div>
+<div id="pagetitle"><h2>Recursive/Series Record queries</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">24-03-2017, 08:06 PM</div>
+</div>
+<div class="message">Hi<br />
+I'm attempting to download 5live Formula 1 commentary Series:<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b007m6lj">http://www.bbc.co.uk/programmes/b007m6lj</a><br />
+<br />
+The parameters:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"get_iplayer" -o C:&#92;Downloads&#92;BBC --modes best --type radio --pid http://www.bbc.co.uk/programmes/b007m6lj --pid-recursive --pid-recursive-noclips</code></div></div><br />
+<br />
+Is --pid-recursive-noclips in addition or a replacement for --pid-recursive?<br />
+<br />
+Each time I run it, it spends about 10 minutes listing items &amp; attempting to download old &amp; defunct programs (a &lt;snip&gt; of output is listed below). It does eventually download the correct programs.<br />
+<br />
+I'm aware recursive recording is "crude and often unreliable" but does anyone have any tips to reduce the time it takes? Is there a way to restrict it to a certain date?<br />
+<br />
+Cheer<br />
+DaveF.<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO:      Episode 'Australian GP Qualifying' (b08lmm2m)<br />
+INFO:    Series: 'Chequered Flag' (b00t7cxz)<br />
+&lt;snip&gt;<br />
+INFO:      Episode '25/07/2010' (b00t7cyk)<br />
+INFO:      Episode '01/08/2010' (b00tgkcj)<br />
+<br />
+&lt;snip&gt;<br />
+<br />
+INFO: Trying pid: b00rl3zz using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording m<br />
+odes.<br />
+INFO: Trying pid: b00rgn2s using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+&lt;snip&gt;<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording m<br />
+odes.<br />
+INFO: Trying pid: b00rd7tm using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No media streams found for requested programme versions and recording m<br />
+odes.<br />
+INFO: Trying pid: b00rqlsx using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-03-2017, 08:29 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-03-2017, 08:06 PM)</span></cite>Is --pid-recursive-noclips in addition or a replacement for --pid-recursive?</blockquote>Upgrade get_iplayer to 2.99. Whatever version you are using is no longer supported since<kbd> --pid-recursive-noclips</kbd> is no longer available (it is now hardwired), so you'll receive no more support here until you upgrade.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>I'm aware recursive recording is "crude and often unreliable" but does anyone have any tips to reduce the time it takes? Is there a way to restrict it to a certain date?</blockquote>
+Not to belabour the obvious, but don't recurse from the top-level brand PID. Use the PID for the current season. Dig it out of the episodes view of the programme's web site.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1088</h2></div><div class="dateline">24-03-2017, 10:11 PM</div>
+</div>
+<div class="message">Cheers, I suppose<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (24-03-2017, 08:29 PM)</span></cite>Upgrade get_iplayer to 2.99. Whatever version you are using is no longer supported since<kbd> --pid-recursive-noclips</kbd> is no longer available (it is now hardwired), so you'll receive no more support here until you upgrade.</blockquote><br />
+Is <a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation">https://github.com/get-iplayer/get_iplay...umentation</a> current, as it still describes noclips usage?<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Not to belabour the obvious, but don't recurse from the top-level brand PID. Use the PID for the current season. Dig it out of the episodes view of the programme's web site.</blockquote>
+<br />
+Unsure it is 'obvious' The BBC certainly hid it well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-03-2017, 10:14 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-03-2017, 10:11 PM)</span></cite>Is <a href="https://github.com/get-iplayer/get_iplayer/wiki/documentation">https://github.com/get-iplayer/get_iplay...umentation</a> current, as it still describes noclips usage?</blockquote>Now removed</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">24-03-2017, 11:57 PM</div>
+</div>
+<div class="message">In your original command you have used <kbd>--pid</kbd> and then fed GiP a URL which isn't really advised. Although in this case it hasn't made any difference as GiP has managed to separate the PID out itself. With something like you are trying to do though that might not work.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Unsure it is 'obvious' The BBC certainly hid it well.</blockquote>
+<br />
+Yes they don't make it easy to find. One way to find the series PID that you want is to look back through the GiP output. You will start to see that it has been broken down into chunks of episodes by year in this case.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO:    Series: '2017' (b08drkd8)<br />
+INFO:      Episode '16/02/2017' (b08drk6h)<br />
+INFO:      Episode 'Australian GP 2nd practice' (b08jklww)<br />
+INFO:      Episode 'Australian GP 1st practice' (b08jklld)<br />
+INFO:      Episode 'Australian GP Preview' (b08jf4z6)<br />
+INFO:      Episode 'Australian GP Qualifying' (b08k58p0)<br />
+INFO:      Episode 'Australian GP 3rd practice' (b08k561y)<br />
+INFO:      Episode 'Australian Grand Prix' (b08k24dw)<br />
+INFO:      Episode 'Australian Grand Prix Review' (b08k2by7)<br />
+INFO:      Episode '21/03/2017' (b08lh2jg)<br />
+INFO:      Episode 'Australian GP Qualifying' (b08lmm2m)</code></div>
+</div>
+<br />
+You can also get the series PID from the episodes page (Episodes&gt;&gt;All) as Dinky suggested.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Recursive/Series Record queries</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

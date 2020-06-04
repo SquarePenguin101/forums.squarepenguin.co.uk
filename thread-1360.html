@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - non-cached episode and pid-recursive problem v3.00</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; non-cached episode and pid-recursive problem v3.00</div>
+<div id="pagetitle"><h2>non-cached episode and pid-recursive problem v3.00</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">05-05-2017, 05:47 AM</div>
+</div>
+<div class="message">I've experienced a strange problem in v3.00. It appeared to be caused by a combination of 1) episodes not appearing in cache AND 2) the use of --pid-recursive.  I've resolved my own problem and I'm not sure anything is to be done but thought I'd describe the issue here in case it's deemed a bug or in case anyone else runs into similar. <br />
+<br />
+Firstly I only have 2 out of 4 available episodes of "Rhod Gilbert's Work Experience" appearing in my listings cache. All four are available on iplayer website and all four are able to be downloaded via direct URL/PID using older v2.97. (Note I've clean installed v3.00 under a separate user account for testing so that my preferences/cache between versions are kept separated.) <br />
+<br />
+<a href="http://www.bbc.co.uk/iplayer/episodes/b00zf3m1">http://www.bbc.co.uk/iplayer/episodes/b00zf3m1</a><br />
+<br />
+I'm not normally bothered about the cache as I always just use URLS or PIDS after browsing the iplayer website. But in v3.00 I could only download the two episodes that already appeared in the listings cache. Attempts to download the other two episodes (not in the cache) via URL/PID method threw up a "Failed to fetch episode PID" error. I did try adding the --future option per 'known problems' but no difference. <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">My two cached entries:</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>gi3@tiger:~&#36; ./get_iplayer-3.00 "work experience"<br />
+get_iplayer v3.00, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+Matches:<br />
+3875: Rhod Gilbert's Work Experience: Series 6 - Journalist, BBC Two, b070wftv<br />
+3876: Rhod Gilbert's Work Experience: Series 7 - Florist, BBC Two, b08jqg5h<br />
+<br />
+INFO: 2 Matching Programmes<br />
+gi3@tiger:~&#36;</code></div></div><br />
+<span style="font-weight: bold;" class="mycode_b">The two missing episodes are :</span><br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Series 7 Episode 1 - Estate Agent - b08htmdj<br />
+Series 7 Episode 2 - Builder - b08hzzbh</code></div></div><br />
+I don't know why the cache problem but eventually I tracked the downloading problem down to my having <span style="font-weight: bold;" class="mycode_b">--pid-recursive</span> in my preferences file. <br />
+<br />
+I know --pid-recursive doesn't make sense when you want to manually download a non-series PID but I've always had it in my preferences file as previously (at least in v2.97) it always appeared to be ignored for non-series PIDs and was safe to leave there for some lazy occasions when I did want to use a series-based PID. (Mainly because I also used --pid-recursive-noclips as well and together they were quite long to have to remember). <br />
+<br />
+Once removed from my preferences file, the missing non-cached 2 episodes downloaded successfully via URL/PID method in v3.00. Of course they still don't appear in my listings cache for whatever reason. <br />
+<br />
+Purely for testing purposes, if I manually added --pid-recursive back to the CLI command for downloading the correctly cached pids, then the download is successful. But when the same is used for the 2 non-cached pids, the download isn't attempted. <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Failure scenario:  NON-CACHED episode AND --pid-recursive option used</span><br />
+(Doesn't make sense to do this but it might occur if --pid-recursive is in your preferences file)<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>gi3@tiger:~&#36; ./get_iplayer-3.00 --pid=b08htmdj --tvmode=hvf --stop=20 --force --overwrite --pid-recursive<br />
+get_iplayer v3.00, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content<br />
+<br />
+<br />
+WARNING: Failed to fetch episode PIDs from http://www.bbc.co.uk/programmes/b08htmdj/episodes/player?page=1<br />
+gi3@tiger:~&#36;</code></div></div><br />
+The URL in the error message at the bottom gives a good clue I think. I guess this behaviour must have had to change due to the re-implementation and the way web-scraping works? <br />
+<br />
+The solution is obviously just not to use it in my saved preferences. <br />
+<br />
+If the maintainer wants to see more I will gather some logs etc. I'm not sure it's worth worrying about though - just to be aware of.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-05-2017, 10:56 AM</div>
+</div>
+<div class="message">This is a bug that has been fixed for next release.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The solution is obviously just not to use it in my saved preferences. </blockquote>
+You have discovered the necessary workaround.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; non-cached episode and pid-recursive problem v3.00</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

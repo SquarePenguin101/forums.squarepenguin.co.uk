@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Webscraper full version</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Webscraper full version</div>
+<div id="pagetitle"><h2>Webscraper full version</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">05-11-2014, 11:29 PM</div>
+</div>
+<div class="message">This will use a CSV of your shows and use it to scrape the iPlayer website for episodes and download them. There is considerable logic to deal with the various ways that the BBC format their data. I am not sure if this works against the new get_iplayer that just got released, but works fine with the previous one. This is working really well for me.<br/><br/>
+<a href="static/thread-265-IplayerScraper.txt">IplayerScraper.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-550</h2></div><div class="dateline">06-11-2014, 10:40 PM</div>
+</div>
+<div class="message">This may be remarkably stupid, but how would you use this?<br />
+<br />
+Neil</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">09-11-2014, 07:54 AM</div>
+</div>
+<div class="message">Well, first of all sorry, I don't visit here very often. This is a PowerShell script (sorry that just what I do) so this will only run on Windows. In fact, since I use features from PowerShell 3 it will only run on Windows 8 or Server 2012.<br />
+<br />
+Paste the script into a file with extension .PS1 (that's PowerShell). Eventually you will wanna run this as a scheduled task so it runs once an hour or whatever. You will need to supply a .CSV file, you can make this in Notepad or Excel. It needs to have Show Title in the first column and Show pid in the second. Here is a sample from my one:<br />
+<br />
+Name,PID<br />
+University Challenge,b006t6l0<br />
+Strictly Come Dancing,b006m8dq<br />
+BBC News at Six,b007mpkna<br />
+BBC Weekend News,b009m51q<br />
+Big School,p01d3njz<br />
+Blandings,b03w7s2s<br />
+Call the Midwife,p0118t80<br />
+Click,b006m9ry<br />
+Doctor Who,b006q2x0<br />
+<br />
+Edit the script to reflect the correct paths, you will see those lines towards the beginning.<br />
+<br />
+Don't worry about the move stuff at the end, that moves my shows to a Google drive for transportation.<br />
+<br />
+Let me know how you get on<br />
+<br />
+M</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-619</h2></div><div class="dateline">09-11-2014, 07:57 AM</div>
+</div>
+<div class="message">Note these are SHOW PIDS not episode PIDS so you only need to make the CS once. and it will continue to grab the shows from that moment on. Since the get_player history is still maintained by get_iplayer using EPISODE PID it will never download shows that already have been downloaded.<br />
+<br />
+M</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Webscraper full version</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

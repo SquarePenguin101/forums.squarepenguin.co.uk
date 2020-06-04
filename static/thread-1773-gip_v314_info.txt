@@ -1,0 +1,104 @@
+get_iplayer 3.14-homebrew, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: /Users/BLANK/.get_iplayer
+INFO: User options file: /Users/BLANK/.get_iplayer/options
+INFO: System options file: /etc/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	info = 1
+	pid = b0b2n9r3
+	verbose = 1
+
+INFO: Search args: ''
+INFO: Got 2719 file cache entries for tv
+INFO: Got 3104 file cache entries for radio
+INFO: Cleaning PID - old: 'b0b2n9r3' new: 'b0b2n9r3'
+INFO: Getting URL: https://www.bbc.co.uk/programmes/b0b2n9r3.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Failed to download JSON PID info: https://www.bbc.co.uk/programmes/b0b2n9r3.json
+WARNING: Could not determine PID type (b0b2n9r3). Trying to record PID directly.
+Episodes:
+get_iplayer - b0b2n9r3, BBC iPlayer, b0b2n9r3
+INFO: 1 total programmes
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+INFO: Getting URL: https://www.bbc.co.uk/programmes/b0b2n9r3.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+WARNING: Could not download programme metadata from https://www.bbc.co.uk/programmes/b0b2n9r3.json
+INFO: iPlayer metadata URL (JSON) = https://www.bbc.co.uk/programmes/b0b2n9r3/playlist.json
+INFO: Getting URL: https://www.bbc.co.uk/programmes/b0b2n9r3/playlist.json
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+ERROR: Failed to get version PID metadata from iPlayer site (JSON)
+INFO: iPlayer metadata URL (HTML) [default] = https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/
+INFO: Getting URL: https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'default' version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [audiodescribed] = https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/ad
+INFO: Getting URL: https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/ad
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'audiodescribed' version retrieved from iPlayer site (HTML)
+INFO: iPlayer metadata URL (HTML) [signed] = https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/sign
+INFO: Getting URL: https://www.bbc.co.uk/iplayer/episode/b0b2n9r3/sign
+ERROR: Response: 500 Can't verify SSL peers without knowing which Certificate Authorities to trust
+
+INFO: No metadata for 'signed' version retrieved from iPlayer site (HTML)
+WARNING: No programmes are available for this PID with version(s): default
+ERROR: Could not get version PIDs and metadata
+WARNING: No media streams found for requested programme versions and recording modes.
+WARNING: The programme may no longer be available - check the iPlayer site.
+WARNING: If you are outside the UK, check if your VPN/VPS/Smart DNS/web proxy has been blocked.
+INFO: No versions of this programme were selected (available versions: none)
+INFO: File name prefix = Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default
+
+available:      2018-05-07T21:30:00+00:00
+brand:          Peter Kay's Car Share
+channel:        BBC One
+credits:        /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.credits.txt
+desc:           Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+desclong:       Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+descmedium:     Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+descshort:      Peter Kay and Sian Gibson improvise a full episode in a one-off, unscripted special.
+dir:            /Users/BLANK
+dldate:         2018-05-08
+dltime:         10:48:08
+duration:       1800
+episode:        Unscripted
+episodenum:     3
+episodeshort:   Unscripted
+expires:        in 33 days 13 hours (2018-06-10T23:25:00+00:00)
+ext:            EXT
+filename:       /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.EXT
+filepart:       /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.partial.EXT
+fileprefix:     Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default
+index:          1744
+longname:       Peter Kay's Car Share
+name:           Peter Kay's Car Share
+nameshort:      Peter Kay's Car Share
+pid:            b0b2n9r3
+runtime:        30
+senum:          s00e03
+subsfile:       /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.srt
+subspart:       /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.partial.srt
+subsraw:        /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.ttml
+timeadded:      4 days 10 hours ago (2018-05-03T23:05:46+00:00)
+title:          Peter Kay's Car Share: Unscripted
+tracklist:      /Users/BLANK/Peter_Kays_Car_Share_-_Unscripted_b0b2n9r3_default.tracks.txt
+type:           tv
+version:        default
+web:            https://www.bbc.co.uk/programmes/b0b2n9r3
+
+INFO: Loaded history for first check.
+INFO: Loading recordings history

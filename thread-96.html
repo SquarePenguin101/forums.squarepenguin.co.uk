@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Correct use of &quot;--subdir-format&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Correct use of &quot;--subdir-format&quot;</div>
+<div id="pagetitle"><h2>Correct use of &quot;--subdir-format&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-318</h2></div><div class="dateline">10-01-2014, 07:13 AM</div>
+</div>
+<div class="message">I'm having trouble getting the "--subdir-format" parameter to behave the way I'd expect. I created a named preset group like so: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --preset=tv_shows --output="S:&#92;TV Shows" --subdir --subdir-format="&lt;nameshort&gt;&#92;Series &lt;seriesnum&gt;" --file-prefix="&lt;nameshort&gt; - &lt;senum&gt;" --whitespace</code></div></div><br />
+Everything is working as I'd expect, except the "--subdir-format" parameter. Using the show <span style="font-style: italic;" class="mycode_i">Octonauts</span> (series 1, show number 34) as an example, the end result I would like is:<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>S:\TV Shows\Octonauts\Series 1\Octonauts - s01e34.mp4</blockquote>
+<br />
+However, what I'm getting is:<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>S:\TV Shows\<span style="font-weight: bold;" class="mycode_b">Octonauts_Series 1</span>\Octonauts - s01e34.mp4</blockquote>
+<br />
+Any idea as to whether this is supported?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-01-2014, 09:32 AM</div>
+</div>
+<div class="message">This is actually the expected behaviour with regards to how the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir-format</code></div></div> option actually works.<br />
+<br />
+As you can probably tell, specifying a directory structure within the format itself is not supported, it simply gives you a flattened output.<br />
+<br />
+Being able to specify an output directory structure would be a useful feature to have full stop and I'm starting to want it myself with the number of shows in my PVR and the ensuing organisation required for XBMC.<br />
+<br />
+If you have any coding skills you could make a patch and submit it (my skills are in their infancy with regards to coding) or you could put a feature request in the '<a href="http:///forums/forum/feature-requests/">Feature Request</a>' section.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-01-2014, 12:32 PM</div>
+</div>
+<div class="message">This appears to be a bug in get_iplayer (sort of).  More accurately, it looks like <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir-format</code></div></div> processing was never made Windows-aware when get_iplayer made the transition from Linux.  On Linux/Unix/OSX, <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir-format</code></div></div> values with forward slashes will create the desired hierarchy (with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--whitespace</code></div></div> specified).  I'll put it on the list, but no ETA for a fix.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-01-2014, 12:41 PM</div>
+</div>
+<div class="message">Ah, that's interesting DP. My main machine is Win 7 and I switched to using get_iplayer on that after some trouble with network drives on my ubuntu server. <br />
+<br />
+I might push the work back to the server to enjoy that output control now. <br />
+<br />
+Certainly a +1 from me on that feature anyway whenever time allows - though I saw there was something about a co-maintainer potentially being interested in joining over on the mailing list today, did you see that?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-01-2014, 01:32 PM</div>
+</div>
+<div class="message">Not being a regular Windows user, I never noticed this particular discrepancy.  It should be fixable, though.  I'll bump this thread when it is done.<br />
+<br />
+That post was related only to the Fedora package.  It will be good if someone updates the Fedora RPM, but the 10K lines of Perl tends to make people run screaming from get_iplayer itself.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">10-01-2014, 01:39 PM</div>
+</div>
+<div class="message">Oh I see now, yes Fedora only, my bad. <br />
+<br />
+I've <span style="font-style: italic;" class="mycode_i">just</span> started out on my coding 'adventure' with Python and php. I did take a quick look at what Perl was like because of get_iplayer and I was prepared to see a keyboard explosion based on what others had said. <br />
+<br />
+It actually didn't look <span style="font-style: italic;" class="mycode_i">that</span> bad to me, nothing made sense obviously but it didn't seem to make any less sense than php. Maybe in 6 months I'll be of some use to this get_iplayer project!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-318</h2></div><div class="dateline">10-01-2014, 07:25 PM</div>
+</div>
+<div class="message">Thank you, both, for the info!<br />
+<br />
+Programming is what I do for a living, actually. I stay mostly in the .NET space these days, but I started out in Ruby (which shares some commonalities with Perl). I plan on taking a look at the source code, for curiosity sake, if nothing else. But if you think I can be of any help, just let me know!<br />
+<br />
+Cheers!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-02-2014, 12:25 AM</div>
+</div>
+<div class="message">Git HEAD version of get_iplayer now preserves backslashes in <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--subdir-format</code></div></div> (Windows only).  See:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadwin">https://squarepenguin.co.uk/wiki/install...githeadwin</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-318</h2></div><div class="dateline">04-02-2014, 08:12 AM</div>
+</div>
+<div class="message">I updated with the HEAD version, updated my preset, tried a few downloads, and its working perfectly. <br />
+<br />
+Thanks so much for the quick turnaround!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Correct use of &quot;--subdir-format&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

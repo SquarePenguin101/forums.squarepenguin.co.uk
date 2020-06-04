@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: Closing connection: NetStream.Failed</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; ERROR: Closing connection: NetStream.Failed</div>
+<div id="pagetitle"><h2>ERROR: Closing connection: NetStream.Failed</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">03-02-2015, 11:16 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+Trying to download yesterdays (Feb 2nd) episodes of Only Connect and University Challenge, and I get the error "ERROR: Closing connection: NetStream.Failed".  Full text below.<br />
+<br />
+Any advice?<br />
+<br />
+<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>C:\Program Files (x86)\get_iplayer&gt;get_iplayer 1044 --get --tvmode=flashhd<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1044:   Only Connect: Series 10 - 20. QI Elves v Coders, BBC Two, Entertainment,<br />
+Games &amp; Quizzes, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashhd1,flashhd2 modes will be tried for version default<br />
+INFO: Trying flashhd1 mode to record tv: Only Connect: Series 10 - 20. QI Elves<br />
+v Coders<br />
+INFO: File name prefix = Only_Connect_Series_10_-_20._QI_Elves_v_Coders_b0522yyx<br />
+_default<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+ERROR: RTMP_Connect0, failed to connect socket. 10061 (Unknown error)<br />
+INFO: Command exit code 3 (raw code = 768)<br />
+WARNING: Failed to stream file C:\Users\BillPoulin\Desktop\iPlayer Recordings\On<br />
+ly_Connect_Series_10_-_20._QI_Elves_v_Coders_b0522yyx_default.partial.mp4.flv vi<br />
+a RTMP<br />
+INFO: skipping flashhd1 mode<br />
+INFO: Trying flashhd2 mode to record tv: Only Connect: Series 10 - 20. QI Elves<br />
+v Coders<br />
+INFO: File name prefix = Only_Connect_Series_10_-_20._QI_Elves_v_Coders_b0522yyx<br />
+_default<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+ERROR: Closing connection: NetStream.Failed<br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Failed to stream file C:\Users\BillPoulin\Desktop\iPlayer Recordings\On<br />
+ly_Connect_Series_10_-_20._QI_Elves_v_Coders_b0522yyx_default.partial.mp4.flv vi<br />
+a RTMP<br />
+INFO: skipping flashhd2 mode<br />
+ERROR: Failed to record 'Only Connect: Series 10 - 20. QI Elves v Coders (b0522y<br />
+yx)'<br />
+<br />
+C:\Program Files (x86)\get_iplayer&gt;</blockquote>
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-02-2015, 12:32 AM</div>
+</div>
+<div class="message">First failure was connection refused by server.  Second failure could be the same thing, may be geo-blocking, but can't say from the info.  CDNs now appear to be blocking and/or failing on HD download attempts from outside UK.  Nothing get_iplayer can do about it, and nothing we can do to help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">04-02-2015, 12:39 AM</div>
+</div>
+<div class="message">Looks like it's some sort of intermittent connection thing.  "Only Connect" suddenly came in, with no change in the commands I used.  Stillhaven't mamaged "University Challenge", but I'll keep trying.<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">05-02-2015, 11:24 AM</div>
+</div>
+<div class="message">The right answer is yours, Keymaster.<br />
+<br />
+In this example<br />
+Only two servers are available for pc_streaming_hd<br />
+<br />
+******************<br />
+<br />
+and<br />
+<br />
+******************<br />
+<br />
+iplayertokfs.fplive.net appears to be damaged. On any PID!<br />
+Check it and you'll see.<br />
+<br />
+****************** is geo-blocked.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">07-02-2015, 01:50 AM</div>
+</div>
+<div class="message">Thanks to both of you for taking the time to respond.<br />
+<br />
+Boa, if the one server is damaged, and is thus preventing me from downloading, is there some expectation that it might get fixed, and normal downloads would resume?<br />
+<br />
+And, for geo-blocking... I already use a proxy service, which is why I can connect with these files at all.  Do you know of any that would let me get around the geo blocking?<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">07-02-2015, 12:55 PM</div>
+</div>
+<div class="message">Absolutely no expectations at all!<br />
+<br />
+Of course I know.<br />
+<br />
+Send an email to<br />
+[REMOVED]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">08-02-2015, 11:04 AM</div>
+</div>
+<div class="message">I see so many people facing the same problem.<br />
+You can send me an email<br />
+Provide the following information<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Operating system</span><br />
+(unable to give support to non-Windows users)<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">mode of get_iplayer</span><br />
+(PVR mode or command line mode)<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">your country</span>, and (optional) the city.<br />
+<br />
+describe the problem in detail. used commands for get_iplayer, type of proxy, episodes PIDs, ..<br />
+anything you think might be useful.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">08-02-2015, 06:02 PM</div>
+</div>
+<div class="message">Thanks again for your help.<br />
+<br />
+As it happens, I have stumbled across a solution that - for now at least - is working for me.<br />
+<br />
+Thanks very much,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-850</h2></div><div class="dateline">09-02-2015, 01:44 AM</div>
+</div>
+<div class="message">Hi, I am having this same problem also and am wondering what the solution you have came across to this is.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-573</h2></div><div class="dateline">09-02-2015, 07:21 AM</div>
+</div>
+<div class="message">As Tom &amp; Jerry or Procter &amp; Gamble once said,<br />
+There's nothing I won't do<br />
+[REMOVED]</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">09-02-2015, 11:53 PM</div>
+</div>
+<div class="message">I'd like to know the solution too, flashvhigh is sooooo boring ;)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-543</h2></div><div class="dateline">10-02-2015, 08:43 AM</div>
+</div>
+<div class="message">Hello thwartme, <br />
+<br />
+I am facing the same problem too and would really be interested in knowing what is the workaround?<br />
+<br />
+Thank you.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">11-02-2015, 02:27 AM</div>
+</div>
+<div class="message">I paid for a proxy service.  US&#36;10/month, and the BBC thinks I'm in Coventry, England.  I can watch live streaming, and I can download from get_iplayer without encountering 'geo blocks'.<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-845</h2></div><div class="dateline">11-02-2015, 02:29 AM</div>
+</div>
+<div class="message">(I posted this once already, and my post seems to have vanished.  Sorry if you see this twice.)<br />
+<br />
+I paid for a proxy service.  US&#36;10/month and the BBC thinks I'm in Coventry, England.  I can watch live straming, and I can download from get_iplayer without encountering "geo blocks".<br />
+<br />
+Thanks,<br />
+thwartme</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-02-2015, 11:14 PM</div>
+</div>
+<div class="message">Sorry @thwartme, no proxy/vpn swapping here.  Your last post has been removed and thread is now closed.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; ERROR: Closing connection: NetStream.Failed</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - 720p@25fps streams not available outside UK?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 720p@25fps streams not available outside UK?</div>
+<div id="pagetitle"><h2>720p@25fps streams not available outside UK?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">26-08-2017, 07:58 PM</div>
+</div>
+<div class="message">Hello,<br />
+<br />
+I'm piggybacking on this thread so I don't have to start a new one since I'm quite puzzled with the evolutions in BBC streaming quality recently.<br />
+<br />
+Please note I tend to run get_iplayer from the command line.<br />
+Until a while ago, when downloading in "best" and "default/vgood/..." quality, I would usually obtain a 720p or 480p file. But now, "best" only gives me 540p, not the expected 1280x720.<br />
+<br />
+This got me curious. Going (once again) through the rather elaborate documentation (well done, by the way), I noticed there are about a gazillion different quality settings... however, what I also did notice, is that there aren't almost any 720p streams in 25fps left. The only one I could identify is "hlshd".<br />
+<br />
+So, going back to my trusty programmes, and running get_iplayer with the --info parameter (so that one gets to see all different quality levels on offer), I noticed hldshd doesn't seem to be part of the offering anymore, at least not for the programmes I'm watching. And the 50fps versions, well great, but they tend to be about twice the size of the 25fps versions. So a massive amount of extra download I'm not really interested in.<br />
+<br />
+Therefore, may I assume the following observations are correct?<ul class="mycode_list"><li>Almost all BBC programmes are now being offered in 720p-50fps, and no longer in 720p-25fps.<br />
+</li>
+<li>By default, get_iplayer tries to download in 25fps, unless specifically instructed to do 50fps. And since 720-50ps isn't on the table anymore, he falls back to the next one down.<br />
+</li>
+</ul>
+<br />
+Please correct me if I'm missing something here.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">27-08-2017, 07:29 AM</div>
+</div>
+<div class="message"><div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>longname:       In the Electric Mist<br />
+modes:          original: dvfhd1,dvfsd1,dvfxsd1,dvfhigh1,dvfxhigh1,dvflow1,hlshd1,hlsvhigh1,hvfhd1,hvfhd2,hvfsd1,hvfsd2,hvfxsd1,hvfxsd2,hvfhigh1,hvfhigh2,hvfxhigh1,hvfxhigh2,hvfstd1,hvfstd2,hvflow1,hvflow2,subtitles1,subtitles2,subtitles3<br />
+modesizes:      original: dvfhd1=3929MiB,dvfsd1=2179MiB,dvfxsd1=1243MiB,dvfhigh1=1217MiB,dvfxhigh1=641MiB,dvflow1=339MiB,hlshd1=2003MiB,hlsvhigh1=1252MiB,hvfhd1=4782MiB,hvfhd2=4782MiB,hvfsd1=2778MiB,hvfsd2=2778MiB,hvfxsd1=1707MiB,hvfxsd2=1707MiB,hvfhigh1=1677MiB,hvfhigh2=1677MiB,hvfxhigh1=1018MiB,hvfxhigh2=1018MiB,hvfstd1=895MiB,hvfstd2=895MiB,hvflow1=672MiB,hvflow2=672MiB,subtitles1=153KiB,subtitles2=153KiB,subtitles3=153KiB<br />
+name:           In the Electric Mist<br />
+nameshort:      In the Electric Mist<br />
+pid:            b01knblk</code></div>
+</div>
+<br />
+Pid selected at random, I'm still seeing hlshd mode. <br />
+Perhaps you should post a pid where you cannot see hlshd mode (but can see hvfhd).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1584</h2></div><div class="dateline">27-08-2017, 02:43 PM</div>
+</div>
+<div class="message">Ok thanks errfmt.<br />
+<br />
+I am getting the same result... apart from hlshd which seems to be missing. So clearly there must be something wrong on my end.<br />
+Maybe a URL is blocked by my network filter. I'll have to troubleshoot some further. Thanks for clarifying. I'll keep you posted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-08-2017, 04:06 PM</div>
+</div>
+<div class="message">You appear to be using get_iplayer outside the UK. Thread closed - see forum rules.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; 720p@25fps streams not available outside UK?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

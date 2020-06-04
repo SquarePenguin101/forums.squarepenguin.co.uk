@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No specified modes () available for this programme with version 'default'</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; No specified modes () available for this programme with version 'default'</div>
+<div id="pagetitle"><h2>No specified modes () available for this programme with version 'default'</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1104</h2></div><div class="dateline">06-12-2015, 12:37 PM</div>
+</div>
+<div class="message">hi, <br />
+i have just reinstalled my linux system and am having a strange error. i also get the error when downloading tv<br />
+<br />
+Steve<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>&#36; get-iplayer --get 11284</code></div></div><br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+11284:    radio, Gideon Coe - Neil Young &amp; Crazy Horse in concert, BBC 6 Music, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes () available for this programme with version 'default'<br />
+INFO: Try using --modes=flashaaclow,flashaacstd,hlsaaclow,hlsaacstd<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes () available for this programme with version 'original'<br />
+INFO: Try using --modes=flashaaclow,flashaacstd,hlsaaclow,hlsaacstd<br />
+ERROR: Failed to record 'Gideon Coe - Neil Young &amp; Crazy Horse in concert (b06q7113)'</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-12-2015, 04:36 PM</div>
+</div>
+<div class="message">It probably means you didn't install rtmpdump. Run same command with <kbd>--verbose</kbd> and look for this in output:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>WARNING: Not using flash modes since rtmpdump is not found</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1104</h2></div><div class="dateline">09-12-2015, 10:03 PM</div>
+</div>
+<div class="message">it looks like it is installed.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>Matches:<br />
+11286:	radio, Gideon Coe - The Velvet Underground live at the Matrix Club, San Francisco, BBC 6 Music, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+INFO: Programme not in history<br />
+INFO: Programme metadata URL = <a href="http://www.bbc.co.uk/programmes/b06q70xd.xml">http://www.bbc.co.uk/programmes/b06q70xd.xml</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b06q70xd.xml">http://www.bbc.co.uk/programmes/b06q70xd.xml</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06q70vt/proto/rtmp?cb=25596">http://open.live.bbc.co.uk/mediaselector...p?cb=25596</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06q70vt/proto/http?cb=83920">http://open.live.bbc.co.uk/mediaselector...p?cb=83920</a><br />
+INFO: Getting page <a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/l2o/b06q70vt_247be4ec-ff95-4aa1-9d05-78820a3c5014.mp4/master.m3u8?hdnea=st=1449610372~exp=1449631972~acl=/*b06q70vt_247be4ec-ff95-4aa1-9d05-78820a3c5014.mp4*~hmac=e0dd593f108b3c259b25d3cfabea294b06ea846baaefdfc7b6444e246608bd5a">http://cp401492-vh.akamaihd.net/i/prod_a...246608bd5a</a><br />
+WARNING: No HLS playlist returned (<a href="http://cp401492-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/l2o/b06q70vt_247be4ec-ff95-4aa1-9d05-78820a3c5014.mp4/master.m3u8?hdnea=st=1449610372~exp=1449631972~acl=/*b06q70vt_247be4ec-ff95-4aa1-9d05-78820a3c5014.mp4*~hmac=e0dd593f108b3c259b25d3cfabea294b06ea846baaefdfc7b6444e246608bd5a">http://cp401492-vh.akamaihd.net/i/prod_a...246608bd5a</a>)<br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b06q70vt/proto/http?cb=35274">http://open.live.bbc.co.uk/mediaselector...p?cb=35274</a><br />
+WARNING: Not using HLS modes since ffmpeg is not found<br />
+WARNING: Not using HLS modes since ffmpeg is not found<br />
+WARNING: Not using HLS modes since ffmpeg is not found<br />
+INFO: Found mode flashaaclow1: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaaclow2: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashaacstd1: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaacstd2: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: akamai/10)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b06q70vt.rdf">http://www.bbc.co.uk/programmes/b06q70vt.rdf</a><br />
+INFO: Using 'original' version (b06q70vt) as 'default'<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+INFO: Programme not in history<br />
+INFO: Will search for versions: default,original<br />
+WARNING: Not using HLS modes since ffmpeg is not found<br />
+INFO: Mode list: <br />
+INFO: Checking existence of default version<br />
+INFO: Version = default<br />
+INFO: No specified modes () available for this programme with version 'default'<br />
+INFO: Try using --modes=flashaaclow,flashaacstd<br />
+INFO: Checking existence of original version<br />
+INFO: Version = original<br />
+INFO: No specified modes () available for this programme with version 'original'<br />
+INFO: Try using --modes=flashaaclow,flashaacstd<br />
+ERROR: Failed to record 'Gideon Coe - The Velvet Underground live at the Matrix Club, San Francisco (b06q70xd)'<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-12-2015, 11:51 PM</div>
+</div>
+<div class="message">You don't have ffmpeg installed, either - you need both. That is sort of a bug in 2.94, but you really want to have both ffmpeg and atomicparsley installed as well as rtmpdump. Read the installation instructions in the wiki - they tell you how to do a full installation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1104</h2></div><div class="dateline">15-12-2015, 08:14 PM</div>
+</div>
+<div class="message">Ok, thanks. I had to have a couple of attempts and eventualy stripped every reference to get-ipayer out before it would install .<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-12-2015, 08:33 PM</div>
+</div>
+<div class="message">Any problems you had installing ffmpeg had nothing to do with get_iplayer. It does not depend upon get_iplayer in any way - that wouldn't even make sense. You didn't bother to identify your distro, but it doesn't matter - this is true for every distro.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1108</h2></div><div class="dateline">19-12-2015, 11:07 AM</div>
+</div>
+<div class="message">My New PC Spec:-<br />
+<br />
+ATX case with 500Watt PSU<br />
+Gigabyte Socket 1150 Micro ATX Motherboard - GA-H81M-S2H<br />
+Intel Pentium G3220 3.0GHz - BX80646G3220<br />
+8GB DDR3 1600MHz DIMM - PC3-12800<br />
+128GB SATA-III Solid State Drive - Kingston V300<br />
+500GB HDD Seagate Barracuda SATA3 - ST500DM002<br />
+Internal SATA Multi-format DVD Writer – SH2-244DB<br />
+Multi Card Reader – CR005V4<br />
+Windows 7 Professional – 64 Bit<br />
+<br />
+Running Ubuntu 15.10 64Bit <br />
+<br />
+(have been using Ubuntu since 2009 from 09.04 to now 12.04 on a Dell PC Dimension 2400)<br />
+<br />
+Please can anyone advise me as to were I can get help with Get_iPlayer.<br />
+Have been using the program for a number of years, but just installed it on my new PC .<br />
+I can see a full of programs but am unable to record anything. These are errors I get......Can you help?<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>richard@richard-H81M-S2H:~&#36; get-iplayer --get 1903<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+Matches:<br />
+1903: Weather for the Week Ahead - 16/12/2015, BBC One, , default<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes () available for this programme with version 'default'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,hlshd,hlshigh,hlslow,hlsstd,hlsvhigh,subtitles<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes () available for this programme with version 'original'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,hlshd,hlshigh,hlslow,hlsstd,hlsvhigh,subtitles<br />
+ERROR: Failed to record 'Weather for the Week Ahead - 16/12/2015 (b06rwpvy)'<br />
+richard@richard-H81M-S2H:~&#36; get-iplayer |less<br />
+richard@richard-H81M-S2H:~&#36; get-iplayer --get 1758<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+1758: The Secret Life of Rockpools - -, BBC Four, , default<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes () available for this programme with version 'default'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,hlshd,hlshigh,hlslow,hlsstd,hlsvhigh,subtitles<br />
+INFO: Checking existence of original version<br />
+INFO: No specified modes () available for this programme with version 'original'<br />
+INFO: Try using --modes=flashhd,flashhigh,flashlow,flashstd,flashvhigh,hlshd,hlshigh,hlslow,hlsstd,hlsvhigh,subtitles<br />
+INFO: Checking existence of audiodescribed version<br />
+INFO: No specified modes () available for this programme with version 'audiodescribed'<br />
+INFO: Try using --modes=flashhigh,hlshigh<br />
+ERROR: Failed to record 'The Secret Life of Rockpools - - (b01rtdr4)'<br />
+richard@richard-H81M-S2H:~&#36;</code></div>
+</div>
+<br />
+Thanks for any help<br />
+<br />
+Richard_42</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1108</h2></div><div class="dateline">19-12-2015, 02:37 PM</div>
+</div>
+<div class="message">Please you tell me how to resolve the Error:-<br />
+<br />
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file<br />
+INFO: File name prefix = Absolute_Genius_Super_Tech_with_Dick__Dom_-_7._Dick_and_Doms_Tech_b06s67cv_default                 <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-12-2015, 02:44 PM</div>
+</div>
+<div class="message">Stop making things hard on yourself. Read the Ubuntu installation instructions in  the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1108</h2></div><div class="dateline">27-12-2015, 03:25 PM</div>
+</div>
+<div class="message">Thanks user-2 for your help.<br />
+<br />
+I am running Ubuntu 15.10 64bit on the new pc.<br />
+<br />
+I have installed get_iplayer from Ubuntu Software centre get_iplayer 2.94-pp23, this works Ok on both my new and old PC.<br />
+<br />
+So what is the difference between this and the get_iplayer from this site (your site) please.<br />
+<br />
+<br />
+<br />
+regards,<br />
+<br />
+Richard_42</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-12-2015, 06:37 PM</div>
+</div>
+<div class="message">get_iplayer 2.94 is get_iplayer 2.94 - that is the point of version numbers.  If the PPA maintainer augments it in some way, there will be something other than "-ppa23" appended to the version string. Ubuntu has its own rules for package version strings.  I only concern myself with the get_iplayer version number, which will always be preserved. Your problem had nothing to do with the version of get_iplayer, but rather with the packaging.  You never explained how you originally attempted to install get_iplayer, but it doesn't matter - I could see that you weren't using the PPA package. <br />
+<br />
+All you and other Ubuntu users need to know is: follow the instructions we provide in the wiki to access the PPA.  As the instructions tell you, don't use the get_iplayer package provided in Ubuntu repositories. Ubuntu just blindly duplicates the Debian package - which is too limited for most users - even though it was removed from Debian stable for their last release. It also will quickly become obsolete once frozen in a LTS release (presumably the reason it was removed from Debian stable). It's a minor mess, but the person who maintains the PPA ensures that you don't have to worry about it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1108</h2></div><div class="dateline">27-12-2015, 06:55 PM</div>
+</div>
+<div class="message">Thanks again for your reply.<br />
+<br />
+As I (and my brain) are in our seventies also suffering from dyslexia I have found it difficult to follow instructions.<br />
+<br />
+Please be so kind as to point me to your version of get_iplayer and instructions as I would very like to use it.<br />
+<br />
+Kind regards,<br />
+<br />
+Richard_42</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">27-12-2015, 07:22 PM</div>
+</div>
+<div class="message">Click the link below and follow the instructions:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/ubuntu/#get-iplayer-ppa:ceda796b5477dff967f2bc1473c569c4">https://squarepenguin.co.uk/wiki/ubuntu/...1473c569c4</a><br />
+<br />
+For reference, you can find this page by clicking the 'Downloads' link in the top menu and then from the resultant page clicking 'Ubuntu'.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-12-2015, 01:48 AM</div>
+</div>
+<div class="message">For future readers, it's worth trying to dispel the confusion that has been sown here:<br />
+<br />
+1. get_iplayer is the same no matter where you get it. It is packaged for various Linux distros, and the packagers may add a suffix to the version string to conform to the conventions for their particular distros (e.g., the "-ppa23" you see for Ubuntu), but the application is the same.<br />
+<br />
+2. You originally installed get_iplayer from the package included in the Ubuntu repositories (there was no "-ppa23" suffix in the version string). As I've said, the Ubuntu packages should never be used.  They are incomplete at best (ffmpeg is not included by default, as you saw from your original error message) and broken at worst.  Always use the get-iplayer PPA, as explained by the instructions in our wiki.<br />
+<br />
+3. In your follow-up post you said you installed get_iplayer 2.94-ppa23 with Ubuntu Software Centre. That would not have been possible unless you had already read our instructions and added the get-iplayer PPA repository to your system. You said yourself it works for you, so there is nothing else you need to do. There is no other method of installation, no other source of get_iplayer for your system, no other instructions to read - nada.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1332</h2></div><div class="dateline">02-07-2016, 10:35 PM</div>
+</div>
+<div class="message">Richard_42 asked:<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Please [can] you tell me how to resolve the Error:-<br />
+WARNING: Required ffmpeg/avconv does not exist - not converting flv file<br />
+...</blockquote>
+I suspect this error appeared after upgrading Linux: I had the same problem after upgrading LinuxMint to release 16 or 17.<br />
+<br />
+Before reinstalling get_iplayer, check your <span style="font-weight: bold;" class="mycode_b">~/.get_iplayer/options</span> file.  If this includes:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg /usr/bin/ffmpeg</code></div></div>you will get the error, and recorded <span style="font-weight: bold;" class="mycode_b">.flv</span> files will <span style="font-style: italic;" class="mycode_i">not</span> be transcoded to <span style="font-weight: bold;" class="mycode_b">.mp4</span>.<br />
+<br />
+The problem occurs because Ubuntu has replaced <span style="font-weight: bold;" class="mycode_b">ffmpeg</span> with <span style="font-weight: bold;" class="mycode_b">avconv</span>.<br />
+<br />
+Confirm /usr/bin/avconv is installed, with:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>avconv -version<br />
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers<br />
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)<br />
+avconv 9.18-6:9.18-0ubuntu0.14.04.1<br />
+libavutil     52.  3. 0 / 52.  3. 0<br />
+libavcodec    54. 35. 0 / 54. 35. 0<br />
+libavformat   54. 20. 4 / 54. 20. 4<br />
+libavdevice   53.  2. 0 / 53.  2. 0<br />
+libavfilter    3.  3. 0 /  3.  3. 0<br />
+libavresample  1.  0. 1 /  1.  0. 1<br />
+libswscale     2.  1. 1 /  2.  1. 1</code></div></div><br />
+If avconv is not present, install it with:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-get update<br />
+sudo apt-get install libav-tools</code></div></div><br />
+Now edit your ~/.get_iplayer/options file.<br />
+Replace<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ffmpeg /usr/bin/ffmpeg</code></div></div>with<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>avconv /usr/bin/avconv</code></div></div><br />
+At the same time, check the video <span style="font-weight: bold;" class="mycode_b">modes</span> and <span style="font-weight: bold;" class="mycode_b">tvmode</span> option settings:<br />
+If either list includes "flashhd", you will [probably] not get an HD recording: this mode has been split into "flashhd1" and "flashhd2".<br />
+In ~/.get_iplayer/options, replace any instances of <span style="font-weight: bold;" class="mycode_b">flashhd</span> with <span style="font-weight: bold;" class="mycode_b">flashhd1,flashhd2</span>.<br />
+<br />
+Next time you record video with "get_iplayer --get", the standard output should show:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: Checking existence of default version<br />
+INFO: flashhd1,flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default<br />
+INFO: Trying flashhd1 mode to record tv: &lt;name&gt;<br />
+INFO: File name prefix = &lt;name&gt;_default                 <br />
+RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+...<br />
+Download complete<br />
+avconv version 9.18-6:9.18-0ubuntu0.14.04.1, Copyright (c) 2000-2014 the Libav developers<br />
+  built on Mar 16 2015 13:19:10 with gcc 4.8 (Ubuntu 4.8.2-19ubuntu1)<br />
+[flv @ 0xbfd020] max_analyze_duration reached<br />
+Input #0, flv, from '&lt;path&gt;.flv':<br />
+...<br />
+INFO: Recorded &lt;path&gt;_default.mp4<br />
+<br />
+INFO: MP4 tagging MP4 file<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =======================================================&gt;100% |<br />
+ Finished writing to temp file.</code></div></div>--<br />
+Regards,<br />
+Mark</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2016, 07:18 PM</div>
+</div>
+<div class="message">Don't put ffmpeg or avconv in your options file unless you have a custom build. Packaged versions will already be in &#36;PATH. get_iplayer is coded to work around the avconv/ffmpeg silliness in recent version of Debian and Ubuntu. Ubuntu has switched back to ffmpeg for 16.04, so built-in support for avconv eventually will be removed from get_iplayer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; No specified modes () available for this programme with version 'default'</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

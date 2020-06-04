@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Download Glastonbury 2015 shows?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Download Glastonbury 2015 shows?</div>
+<div id="pagetitle"><h2>Download Glastonbury 2015 shows?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-967</h2></div><div class="dateline">02-07-2015, 11:28 PM</div>
+</div>
+<div class="message">Hi there,<br />
+<br />
+I've used get iplayer for years now and love it, but I'm struggling to download <a href="http://www.bbc.co.uk/events/e84mxj/acts/aqx84f#p02v3jmq">http://www.bbc.co.uk/events/e84mxj/acts/aqx84f#p02v3jmq</a> despite having looked at the guides etc.<br />
+<br />
+It is possible? If so, how!?!<br />
+<br />
+Thanks in advance,<br />
+<br />
+Josef.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-07-2015, 12:01 AM</div>
+</div>
+<div class="message">View the source code of that page in your browser and look for a string like: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>{"pid":"p02v3jmq","type":"episode"}</code></div></div>.  Use the PID value (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>p02v3jmq</code></div></div> in this example) with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-970</h2></div><div class="dateline">06-07-2015, 09:48 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite><a href="/topic/download-glastonbury-2015-shows/#post-11852">Quote:</a>View the source code of that page in your browser and look for a string like: <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>{"pid":"p02v3jmq","type":"episode"}</code></div></div>.  Use the PID value (<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>p02v3jmq</code></div></div> in this example) with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div>.<br />
+<br />
+<a href="http://#11852">Quote</a></blockquote>
+<br />
+Hi<br />
+<br />
+Doesn't seem to be working. I'm want to download and keep most of glasto, and if I search glastonbury with the pvr manager there is only 1 hightlight program. I also tried finding the pid, which for a band called hotchip (<a href="http://www.bbc.co.uk/iplayer/episode/p02txpw9/glastonbury-2015-hot-chip">http://www.bbc.co.uk/iplayer/episode/p02...5-hot-chip</a>) should be 'p02txpw9' (input as 'get_iplayer p02txpw9')? and said 0 matching programs.<br />
+<br />
+Please correct me if I'm wrong, I'm new to get_iplayer.<br />
+<br />
+Andy</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">06-07-2015, 09:55 PM</div>
+</div>
+<div class="message">You need to tell get_iplayer that that is a PID you are using rather than a search term. You can't search by PID so it won't find any matches.<br />
+<br />
+Try this to download that programme:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --modes=best --pid p02txpw9</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">06-07-2015, 11:51 PM</div>
+</div>
+<div class="message">Have a read of the <a href="http:///guides/tv-download-guide/">TV Download Guide</a> which will tell you all about downloading using the command line version and will have you getting the programmes you want in no time.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Download Glastonbury 2015 shows?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

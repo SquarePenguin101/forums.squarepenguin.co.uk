@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - RTMPDump swfurl error</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; RTMPDump swfurl error</div>
+<div id="pagetitle"><h2>RTMPDump swfurl error</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">04-10-2014, 06:52 PM</div>
+</div>
+<div class="message">I've recently installed get_iplayer on a laptop running Mint 17. I consistently get the following error from RTMPDump although radio programs then download successfully:  <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>RTMPDump v2.4-n87-gita9f353c-ppa8~saucy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+ERROR: RTMP_HashSWF: couldn't contact swfurl <a href="http://emp.bbci.co.uk/emp/releases/smp-flash/revisions/1.9.23/1.9.23_smp.swf?1.9.23">http://emp.bbci.co.uk/emp/releases/smp-f...swf?1.9.23</a> (HTTP error 302)<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB</blockquote>
+<br />
+I've also tried one TV download which was successful but with a similar error.<br />
+<br />
+My main downloader is installed on Ubuntu 14.04 on another machine and doesn't produce this error. Versions of get_iplayer and RTMPDump appear to be the same on both machines and come from Jon Davies' ppa.<br />
+<br />
+Since downloads seem to work OK despite this error, I'm not too bothered about it but I'd like to know what's causing it. When the BBC changed the swfurl last year, downloads started to fail, so why don't my Mint downloads fail?<br />
+<br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-10-2014, 08:04 PM</div>
+</div>
+<div class="message">The BBC changed that flash player URL to redirect to a new location, thus the "HTTP error 302".  rtmpdump can't follow redirects. This is a different issue than what happened last year.  You can download without a swf URL, but rtmpdump may then stop and restart numerous times, which may lead to download failure if it can't successfully resume download on each restart. I think that may only be true for video downloads.<br />
+<br />
+This issue only affects users who installed from the PPA. The PPA build includes a post-2.86 update to the flash player URL, but the Beeb changed it to redirect only recently, after the PPA build was made. For the moment, use the Git HEAD version, where I've rolled back the flash player URL to its previous value:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadunix/">https://squarepenguin.co.uk/wiki/install...theadunix/</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">05-10-2014, 12:13 PM</div>
+</div>
+<div class="message">Thanks for the reply user-2.<br />
+<br />
+Rather than installing the Git Head version I added the swfurl contained in it to my options file using:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --prefs-add --rtmp-radio-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf"</blockquote>
+<br />
+as you suggested last year and this seems to have done the trick.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">05-10-2014, 12:48 PM</div>
+</div>
+<div class="message">Sorry that should be <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --rtmp-radio-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf"</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; RTMPDump swfurl error</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

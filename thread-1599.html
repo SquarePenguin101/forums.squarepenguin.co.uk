@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR: panic: memory wrap at get_iplayer.cgi line 288</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: panic: memory wrap at get_iplayer.cgi line 288</div>
+<div id="pagetitle"><h2>Web PVR: panic: memory wrap at get_iplayer.cgi line 288</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-926</h2></div><div class="dateline">24-11-2017, 09:39 PM</div>
+</div>
+<div class="message">Since I went to 3.0.6, I seem to get a lot of crashes from Web PVR Manager (I'm using the Windows version). I have refresh enabled which runs every hour<br />
+<br />
+The last few lines are always similar to this:<br />
+<br />
+QUERY_STRING = NEXTPAGE=refresh&amp;AUTOWEBREFRESH=1&amp;PROGTYPES=tv,radio<br />
+INFO: Refreshing<br />
+DEBUG: get_iplayer options: "expiry=30" "nopurge=1" "type=tv,radio" "refreshfuture=0" "search=no search just refresh"<br />
+INFO: Win32 Command: "C:\Program Files (x86)\get_iplayer\get_iplayer.cmd" --encoding-locale=UTF-8 --encoding-console-out=UTF-8 --nocopyright --webrequest "expiry%3D30?nopurge%3D1?type%3Dtv%2Cradio?refreshfuture%3D0?search%3Dno%20search%20just%20refresh"<br />
+panic: memory wrap at C:\Program Files (x86)\get_iplayer\get_iplayer.cgi line 288.<br />
+<br />
+Does this mean anything to anyone?<br />
+<br />
+thanks<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-11-2017, 12:42 AM</div>
+</div>
+<div class="message">I suspect it has something to do with you thrashing your cache hourly, though there is no way to prove it. As you are warned, the Web PVR may have difficulties doing things simultaneously on Windows. If you are auto-refreshing your cache that often and, I suspect, auto-running your PVR list as well as performing ad hoc searches, you raise the risk of problems occurring. I have no idea why this error affects only you. Unless you can come up with a practical and reproducible test case - which would be unlikely in this case - there is no point in either of us wasting time on the error itself. If the error persists, consider workarounds:<br />
+<br />
+First workaround: Don't auto-refresh your cache in web pvr. It's not truly necessary, so just do one-off refreshes when needed for ad hoc searches and close the window when done. The only reason to auto-refresh your cache in the web pvr is if you use a custom interval and you're also auto-running your pvr list in the web pvr. That in itself doesn't make sense, and could be part of the problem. It's a vestigial remnant from before my time. I may change that, but changing the web pvr for Windows is like dressing a pig in a suit and inviting him to dinner. He might look smarter, but he will still make a mess. Unless and until I make any changes, it would be better simply to configure the cache update interval where it belongs - with get_iplayer itself: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --prefs-add --expiry=3600</code></div></div>With that, whenever you run your pvr list - in web pvr or CLI - your cache will be updated if necessary during the pvr run.<br />
+<br />
+Second workaround: Don't auto-run your pvr list in web pvr. Earlier problems with this on Windows were fixed some time ago, but maybe you have discovered another reason not to do it. You can easily auto-run your pvr list from a command prompt:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pvr-scheduler=14400</code></div></div>runs your list every four hours. Kill it any time by closing command prompt. Even better would be to learn how to use Task Scheduler and run <kbd>get_iplayer --pvr</kbd> according to whatever schedule you wish.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Web PVR: panic: memory wrap at get_iplayer.cgi line 288</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

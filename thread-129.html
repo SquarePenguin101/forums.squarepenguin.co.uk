@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - ERROR: RTMP_ReadPacket, failed to read RTMP packet body</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; ERROR: RTMP_ReadPacket, failed to read RTMP packet body</div>
+<div id="pagetitle"><h2>ERROR: RTMP_ReadPacket, failed to read RTMP packet body</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-487</h2></div><div class="dateline">11-03-2014, 09:12 AM</div>
+</div>
+<div class="message">I'm using get_iplayer 2.83-1 on Debian Stable 7 (Wheezy). I've recently upgraded from the patched 2.82 in Debian's repos in an effort to solve the problem but that hasn't worked.<br />
+<br />
+After a long while of trouble-free use, in the past couple of weeks I've started getting a load of errors and failures with get_iplayer. Radio programmes download with no problems, but TV is patchy to say the least. Error messages vary:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ERROR: RTMP_ReadPacket, failed to read RTMP packet body. len: [followed by a number]<br />
+WARNING: HandleInvoke, Sanity failed. no string method in invoke packet<br />
+<br />
+ERROR: DECODING ERROR, IGNORING BYTES UNTIL NEXT KNOWN PATTERN!<br />
+ERROR: HandleInvoke, error decoding invoke packet<br />
+WARNING: Received FLV packet before play()! Ignoring.</code></div></div><br />
+<br />
+<br />
+Sometimes there isn't an error, but instead the percentage download progress status goes crazy and quickly ends up with a crazy percentage such as 1650 % and stops there until I have to ^C the process.<br />
+<br />
+I try manually selecting modes and sometimes this works and produces a successful download but there seems to be no consistency to this. If I choose, say, flashstd1 for one TV programme it could download successfully, but on the very next TV programme using that mode will fail. <br />
+<br />
+Please could anyone advise me where to start looking to resolve this? Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-03-2014, 10:17 AM</div>
+</div>
+<div class="message">rtmpdump fails when it receives garbled input, but the problem is upstream and unfortunately there is nothing you can do except keep trying.  The problem is unrelated to your upgrade.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-487</h2></div><div class="dateline">11-03-2014, 10:27 AM</div>
+</div>
+<div class="message">Thanks for your rapid reply user-2. So am I right in thinking that choosing modes has no bearing on this? And that if a get attempt fails I should just wait a bit and try again?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-03-2014, 12:02 PM</div>
+</div>
+<div class="message">As you've seen, you sometimes may have better luck with lower-quality modes, but not always.  There is no way to know if it will help. If not, just retry the download for a few days, at different times of day if possible.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-487</h2></div><div class="dateline">17-03-2014, 03:32 PM</div>
+</div>
+<div class="message">I've been trying at different times of day but no joy. Has Auntie found a way to beat get_iplayer? I can't seem to get anything now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-03-2014, 08:07 PM</div>
+</div>
+<div class="message">If the problems are the same as before, the Auntie probably isn't the culprit.  It's more likely your ISP or their upstream connections.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-487</h2></div><div class="dateline">18-03-2014, 06:55 AM</div>
+</div>
+<div class="message">I'd be surprised if it were my ISP - I know them and they don't filter anything for me, though I don't know about their upstream provider. Odd, but I just tried one download that I've been trying for days with no joy, but then tried a different TV show and it worked perfectly. And the download I first mentioned also finally worked - I deleted the partial temp file (annoyingly I was trying to resume from 97%) and that worked; a new full download was successful. All very strange - I wish I weren't so clueless!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-03-2014, 02:10 PM</div>
+</div>
+<div class="message">It could be a flakey router, but then you would expect that to have effects on other services.  It could be wobbles at the server end, but you wouldn't expect that to happen day in and day out.  It could be some problem with rtmpdump, but that's belied by the fact that many other users can use the same version of rtmdump just fine.  Which leaves connectivity as a likely culprit.  There doesn't have to be any filtering going on.  Delays or drops in throughput - things you wouldn't notice during regular web browsing - could be at fault.  Bottom line: it's virtually unknowable.   What it's not is anything to do with get_iplayer per se.  Without rtmdump, there would be no get_iplayer, so you have to live with its vicissitudes.  rtmpdump is guaranteed to fail - a little for some people, a lot for others.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-487</h2></div><div class="dateline">18-03-2014, 02:18 PM</div>
+</div>
+<div class="message">Thanks user-2, that's helpful. I've often wanted to put the router (Thomson) on a trebuchet and hurl it as far away as possible but since it belongs to a colleague I can't. Delays and drops are also a possibility that I'll look into. Since my last post, get_iplayer has worked flawlessly on half a dozen downloads.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; ERROR: RTMP_ReadPacket, failed to read RTMP packet body</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

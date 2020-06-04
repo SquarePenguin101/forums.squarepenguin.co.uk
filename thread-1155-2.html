@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+<div id="pagetitle"><h2>How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-1155-1.html">1</a> <strong>2</strong> <a href="thread-1155-3.html">3</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">10-02-2017, 09:07 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (10-02-2017, 08:08 PM)</span></cite>libmp3lame IS installed</blockquote>It doesn't matter if ffmpeg isn't configured to use it. Check with <kbd>ffmpeg -codecs | grep libmp3lame</kbd><br />
+<br />
+EDIT: Also check the build configuration: <kbd>ffmpeg 2&gt;&amp;1 &gt;/dev/null | grep enable-libmp3lame</kbd><br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Its also not marking shows as downloaded.</blockquote>
+Likely due to your broken ffmpeg</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">11-02-2017, 05:51 PM</div>
+</div>
+<div class="message">Did that, and got this:<br />
+<br />
+ffmpeg version 3.1.1 Copyright (c) 2000-2016 the FFmpeg developers<br />
+  built with gcc 4.9.2 (Raspbian 4.9.2-10)<br />
+  configuration: --prefix=/usr --enable-gpl --enable-libx264 --enable-nonfree --enable-shared --disable-static<br />
+  libavutil      55. 28.100 / 55. 28.100<br />
+  libavcodec     57. 48.101 / 57. 48.101<br />
+  libavformat    57. 41.100 / 57. 41.100<br />
+  libavdevice    57.  0.101 / 57.  0.101<br />
+  libavfilter     6. 47.100 /  6. 47.100<br />
+  libswscale      4.  1.100 /  4.  1.100<br />
+  libswresample   2.  1.100 /  2.  1.100<br />
+  libpostproc    54.  0.100 / 54.  0.100<br />
+<br />
+<br />
+Does this mean that liblamemp3 isnt enabled? If so, how do I enable it? forgot to mention Im on Raspbian latest version on a Pi3<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-02-2017, 06:05 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (11-02-2017, 05:51 PM)</span></cite>Does this mean that liblamemp3 isnt enabled? If so, how do I enable it? forgot to mention Im on Raspbian latest version on a Pi3</blockquote>Yes. You have to enable it at build time, which I'm guessing is not an option for you.<br />
+<br />
+Try the ARM static builds from:<br />
+<br />
+<a href="https://johnvansickle.com/ffmpeg/">https://johnvansickle.com/ffmpeg/</a><br />
+<br />
+which are built with libmp3lame. I no longer have an RPi, so I have no idea if they work. I presume the armhf build would be the preferred version to test first. Extract the ffmpeg binary and use the <kbd>--ffmpeg</kbd> option to test it with get_iplayer instead of the earlier version. If it works, post here so I can update the documentation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">12-02-2017, 07:54 PM</div>
+</div>
+<div class="message">Ok,<br />
+Its all sorted and working fine on Ubuntu,<br />
+the Raspberry Pi however doesnt have a working version of FFmpeg to convert to mp3, avconv fails, and I cant find a way to get a working copy of FFmpeg.<br />
+tried compiling one, but it never finishes..<br />
+I guess the one thing I use the Pi Zero for cannot now be done.<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-02-2017, 11:53 AM</div>
+</div>
+<div class="message">You should be able to use avconv for MP3 conversion, assuming the Raspbian package is the same as the Debian package. The version numbers match, but I can't verify they work the same. You may need to install libmp3lame0 separately. I can't remember if that was necessary for Debian.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">14-02-2017, 01:03 PM</div>
+</div>
+<div class="message">Second thing I tried...<br />
+It tries, then times out and fails with a zero bytes file...<br />
+Think Im giving up on Raspbian for GIP until someone makes a good version of FFMPEG, works perfectly on latest Ubuntu.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-02-2017, 01:49 PM</div>
+</div>
+<div class="message">I suspect a configuration problem or an obsolete version of avconv, but since I can't test it for myself I will throw in the towel as well. MP3 hasn't been an iPlayer format for 2 years, so it's now left up to users to make it work for whatever old MP3 players they may be using. Since nobody with first-hand knowledge has been willing to help here, I suggest you take your query to Pi forums, if you haven't already. Maybe look into cross-compiling as well.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">14-02-2017, 02:03 PM</div>
+</div>
+<div class="message">Yeah, tried the Pi forums the next day, no joy there either, kept mentioning the pre-built version which doesnt work. AVconv used to work with the downloads in FLV format, no joy with M4A though. Ah well back to trusty old Ubuntu, the Pi appealed to me as I didnt have to have a big hungry desktop humming away all day burning though my carbon footprint.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-02-2017, 02:09 PM</div>
+</div>
+<div class="message">ffmpeg will return in the next Raspbian release (stretch), so might be worth another look when that happens.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">14-02-2017, 02:32 PM</div>
+</div>
+<div class="message">I've got three Pi's, 'bout time I pulled my finger out and had a go at this issue. <br />
+<br />
+Half term this week but I'll see if I can spend some time looking into it when I have a minute.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-02-2017, 02:50 PM</div>
+</div>
+<div class="message">That would be great. It would help to run down what, if anything, prevents avconv from doing MP3 conversion. I wouldn't expect it to convert raw DASH downloads, but I would expect it to work on raw HLS downloads (MPEG-TS) or final M4A files. It would also help to find out if the ARM builds from <a href="https://johnvansickle.com/ffmpeg/">https://johnvansickle.com/ffmpeg/</a> work or not.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-02-2017, 04:29 AM</div>
+</div>
+<div class="message">OK, an update:<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Raspberry Pi details</span><br />
+<br />
+Type = Raspberry Pi 2 model b<br />
+OS = Raspbian Jessie Lite (Wheezy is not available)<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Installation</span><br />
+<br />
+1) The Raspbian package by Jon didn't have any built packages for Jessie at time of trying and I didn't want to flap around with pinning or priorities or whatever, so...<br />
+<br />
+2) Installation followed manual Unix Package instructions with following points:<br />
+<ul class="mycode_list"><li>Installed <kbd>libwww-perl libxml-simple-perl libxml-libxml-perl</kbd> from system repo<br />
+</li>
+<li>Installed AtomicParsley manually from <a href="http://packages.hedgerows.org.uk/raspbian/wheezy/">Jon's Wheezy repo</a><br />
+</li>
+<li>Installed RTMPdump from system repo<br />
+</li>
+<li>Installed <a href="https://johnvansickle.com/ffmpeg/">ffmpeg armhf build from John Van Sickle</a><br />
+</li>
+<li>Installed get_iplayer CLI via standard manual instructions in wiki (in &#36;PATH)<br />
+</li>
+<li>Configured get_iplayer to use ffmpeg<br />
+</li>
+</ul>
+<br />
+<span style="font-weight: bold;" class="mycode_b">ffmpeg build details</span><br />
+<br />
+<span style="text-decoration: underline;" class="mycode_u">libmp3lame</span><br />
+<br />
+<kbd>ffmpeg | grep libmp3lame</kbd> returns:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc-5 --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gray --enable-libass --enable-libfreetype --enable-libfribidi --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopus --enable-librtmp --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzimg</code></div></div><br />
+Note - <kbd>--enable-libmp3lame</kbd> is present.<br />
+<br />
+<span style="text-decoration: underline;" class="mycode_u">libx264-142</span><br />
+<br />
+<kbd>--enable-libx264</kbd> is also present.<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Tests</span><br />
+<br />
+Sparing some details as I can run further tests that are requested and capture the output but...<br />
+<br />
+TV downloads and conversion (hlshd)- <span style="font-weight: bold;" class="mycode_b">SUCCESSFUL</span><br />
+Radio downloads and m4a conversion (dafhigh) - <span style="font-weight: bold;" class="mycode_b">SUCCESSFUL</span><br />
+Radio downloads and conversion from m4a to mp3 - <span style="font-weight: bold;" class="mycode_b">SUCCESSFUL</span> (but takes several minutes)<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">NOTE</span> - mp3 conversion used standard variable bitrate example from wiki instructions. m4a file was successfully removed after conversion. <br />
+<br />
+So those simple things are working. <br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Further testing</span><br />
+<br />
+1) If someone can tell me where a Wheezy install can be found, I'll stick that on a second Pi and test that.<br />
+<br />
+2) If further tests are desired, please post requests and I'll perform them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">15-02-2017, 10:09 AM</div>
+</div>
+<div class="message"><a href="https://johnvansickle.com/ffmpeg/%5Dffmpeg">https://johnvansickle.com/ffmpeg/]ffmpeg</a> armhf build from John Van Sickle<br />
+<br />
+And how do I do this?<br />
+just file copy ffmpeg to /usr/bin ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 11:20 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-02-2017, 10:09 AM)</span></cite><a href="https://johnvansickle.com/ffmpeg/%5Dffmpeg">https://johnvansickle.com/ffmpeg/]ffmpeg</a> armhf build from John Van Sickle<br />
+<br />
+And how do I do this?<br />
+just file copy ffmpeg to /usr/bin ?</blockquote>You could do worse than to simply read the installation instructions in the wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 12:19 PM</div>
+</div>
+<div class="message">@SquarePenguin - many thanks for testing. I'll update the advice in install docs accordingly. I'll presume the Van Sickle builds work on Wheezy as well. If you should find out different, let me know, but it's not worth expending much effort on Wheezy.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">15-02-2017, 12:44 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-02-2017, 11:20 AM)</span>user-2 Wrote: <a href="https://forums.squarepenguin.co.uk/post-5250.html#pid5250">[ -> ]</a></cite><blockquote class="mycode_quote"><cite><span> (15-02-2017, 10:09 AM)</span></cite><a href="https://johnvansickle.com/ffmpeg/%5Dffmpeg">https://johnvansickle.com/ffmpeg/]ffmpeg</a> armhf build from John Van Sickle<br />
+<br />
+And how do I do this?<br />
+just file copy ffmpeg to /usr/bin ?</blockquote>You could do worse than to simply read the installation instructions in the wiki.</blockquote><br />
+I couldnt find any installation instructions...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 12:46 PM</div>
+</div>
+<div class="message">That gigantic link at the top labelled "Wiki" doesn't at least arouse your curiosity?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 12:51 PM</div>
+</div>
+<div class="message">That gigantic link in the wiki front page labelled "Install guides" doesn't at least arouse your curiosity?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">15-02-2017, 01:29 PM</div>
+</div>
+<div class="message">I was looking on th eJohn Van Sickle website...<br />
+<br />
+Cant see anything of use for a blow by blow installation of static builds on the GIP Wiki Installation guides...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-02-2017, 01:31 PM</div>
+</div>
+<div class="message">Why would his site tell you how to install ffmpeg for get_iplayer?</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-1155-1.html">1</a> <strong>2</strong> <a href="thread-1155-3.html">3</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

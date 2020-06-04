@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot find Perl local lib from crontab</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot find Perl local lib from crontab</div>
+<div id="pagetitle"><h2>Cannot find Perl local lib from crontab</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1861</h2></div><div class="dateline">22-06-2017, 09:48 PM</div>
+</div>
+<div class="message">- operating system: Ubuntu 12.04 <br />
+- get_iplayer version: 3.01 - manually installed following instructions in the wiki.<br />
+- problem: attempting to refresh cache from crontab produces the following error message:<br />
+<kbd>Can't locate object method "name" via package "Mojo::UserAgent::Transactor" at /usr/local/bin/get_iplayer line 6771.</kbd><br />
+<br />
+Here's the crontab entry:<br />
+<kbd>15 * * * * /usr/local/bin/get_iplayer -v --type=radio --refresh &gt; /home/alan/log-radio-gip.txt 2&gt;&amp;1</kbd><br />
+Output log is attached - it ends with the error message quoted above.<br />
+<br />
+Running the identical command directly in the terminal runs properly and refreshes the cache without problem.<br />
+<br />
+During installation I followed the wiki's instructions to create a local Perl module library at ~/perl5. I'm guessing that a command running from cron does not find this local library. How can I fix this?<br />
+Thanks,<br />
+Alan.<br />
+<a href="static/thread-1440-get-iplayer_debug.txt">Output log.txt</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-06-2017, 10:51 PM</div>
+</div>
+<div class="message">You would need to explicit load the relevant dot-file(s) in crontab, and perhaps explicitly set &#36;SHELL. Google is your friend here. You could probably also simply add local lib to @INC directly: <kbd>/usr/bin/perl -I&#36;HOME/perl5/lib/perl5 /usr/local/bin/get_iplayer [...]</kbd></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1861</h2></div><div class="dateline">23-06-2017, 07:18 PM</div>
+</div>
+<div class="message">perl -I solves the problem. Thank you for get_iplayer.<br />
+Alan.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Cannot find Perl local lib from crontab</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

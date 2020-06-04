@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - [2.97] Podcasts: ERROR: Cannot write or append (because output file name is invalid)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; [2.97] Podcasts: ERROR: Cannot write or append (because output file name is invalid)</div>
+<div id="pagetitle"><h2>[2.97] Podcasts: ERROR: Cannot write or append (because output file name is invalid)</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1085-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">03-11-2016, 11:31 PM</div>
+</div>
+<div class="message">Is it just me?  Today some of my searches return bad results and terminate the "run PVR" web session before all matches are recorded.<br />
+An example below scraped from the web page. <br />
+I keep "costing the earth" recordings and (a) it should not have found 160 matches - one or two at most and (b) note the wierd filename prefix which causes a filename to be created which includes slashes and hence a write error.<br />
+<br />
+If I delete the search from my run list and retry, it then continues until it hits another search which fails.  So far I have deleted about 6 in order to try to get it to not fail, but if I continue at this rate less than half of my list will remain intact.<br />
+<br />
+So until I can find a fix or someone can suggest anything, I can't do a run.<br />
+<br />
+The same happens when I run from the command line.   Any ideas ???<br />
+<br />
+         web output attached ...........<br />
+<br />
+<br />
+210465: podcast, Costing the Earth - Fruits of the Forest, Wed, 21 Sep 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210466: podcast, Costing the Earth - The Growing Season, Tue, 27 Sep 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210467: podcast, Costing the Earth - Spiritual Greens, Tue, 04 Oct 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210468: podcast, Costing the Earth - Wildlife-Friendly Motorways, Tue, 11 Oct 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210469: podcast, Costing the Earth - The British Countryside after Brexit, Tue, 18 Oct 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210470: podcast, Costing the Earth - Forests of the Orangutan, Tue, 25 Oct 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+210471: podcast, Costing the Earth - Nuclear Futures, Tue, 01 Nov 2016 00:00:00 +0000, BBC Radio 4, Science &amp; Medicine<br />
+<br />
+INFO: 160 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: podcast modes will be tried for version default<br />
+INFO: Trying podcast mode to record podcast: Costing the Earth - Plastic Pollution<br />
+INFO: File name prefix = Costing_the_Earth_-_Plastic_Pollution_http://www.bbc.co.uk/programmes/b00v1qtn                 <br />
+ERROR: Cannot write or append to H:\New_Audio\Costing_the_Earth_-_Plastic_Pollution_http:\www.bbc.co.uk\programmes\b00v1qtn.partial.http:\www.bbc.co.uk\programmes\b00v1qtn<br />
+<br />
+<br />
+PVR Run complete</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1257</h2></div><div class="dateline">03-11-2016, 11:44 PM</div>
+</div>
+<div class="message">I believe the "program name" has been changed from a string to URL and that causes the problems. You can definitely use get_iplayer command line and provide an output name yourself. But in the meantime let's wait for an "authoritative" workaround :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-11-2016, 01:11 AM</div>
+</div>
+<div class="message">The BBC has changed the content of podcast feeds and thus broken get_iplayer, with the result being invalid output file names. There is no workaround. Setting your own file prefix with get_iplayer CLI won't help because the parsing of the file extension is also broken, leading to the same error. <br />
+<br />
+For current programmes such as Costing the Earth, you don't need the podcast. Just download as a normal radio programme. And of course, you can also just download any podcast directly from the BBC.<br />
+<br />
+Although this problem can be corrected in code, I'm not likely to release a fixed version of get_iplayer. Podcast support is due to be removed in the next release, so I'm inclined to let it die now.<br />
+<br />
+EDIT: Remove all podcasts from your PVR list so that they don't interfere with downloading other programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-21</h2></div><div class="dateline">04-11-2016, 01:28 PM</div>
+</div>
+<div class="message">I have noticed that I am having a problem downloading podcasts.  this seems to have been happening for about the last week or so, as the last podcast I have downloaded was 28th october<br />
+<br />
+when trying to use the PVR scheduler I get this when podcasts occur<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Matches:<br />
+209853: Comedy of the Week - 24 October 16: Mae Martin's Guide to 21st Century Sexuality (Ep 2), Mon, 24 Oct 2016 03:55:00 +0000, BBC Radio 4, Comedy<br />
+209854: Comedy of the Week - 31 October 2016: Incredible Women (Series 5, Omnibus), Mon, 31 Oct 2016 04:55:00 +0000, BBC Radio 4, Comedy<br />
+<br />
+INFO: 2 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: podcast modes will be tried for version default<br />
+INFO: Trying podcast mode to record podcast: Comedy of the Week - 24 October 16: Mae Martin's Guide to 21st Century Sexuality (Ep 2)<br />
+INFO: File name prefix = 24_October_16_Mae_Martins_Guide_to_21st_Century_Sexuality_Ep_2<br />
+ERROR: Cannot write or append to F:&#92;Media&#92;radio&#92;comedy of the week&#92;24_October_16_Mae_Martins_Guide_to_21st_Century_Sexuality_Ep_2.partial.http:&#92;www.bbc.co.uk&#92;programmes&#92;p04cjmmh</code></div></div>this is the pvr I am using<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Channel Radio 2,Radio 3,BBC radio 4,<br />
+fields name<br />
+modes vgood,<br />
+output F:&#92;Media&#92;radio&#92;comedy of the week&#92;<br />
+subtitles 0<br />
+thumb 0<br />
+type podcast<br />
+versionlist default<br />
+search0 Comedy of the Week<br />
+fileprefix &lt;episodeshort&gt;</code></div></div>I have several podcast pvr's and it is the same for all of them. <br />
+I dont have a problem with TV or radio downloads<br />
+anyone else having a problem?<br />
+<br />
+I am using the latest version of get_iplayer on windows 10</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">04-11-2016, 02:57 PM</div>
+</div>
+<div class="message">Thanks everyone; all understood.   I have removed all podcasts from my list and all works well now.<br />
+<br />
+I have to say, that for my needs, get_iplayer is a lot less useful if I can't use it to download podcasts as well as programs.  I don't know of any other Windows software that can automatically download podcasts.   I'm not going to use iTunes.<br />
+<br />
+regards.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">04-11-2016, 03:25 PM</div>
+</div>
+<div class="message">Juice, Clementine, Miro, Groove, gPodder...even VLC. The options for podcast downloading on Windows are numerous and are by no means confined to that small list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">04-11-2016, 04:10 PM</div>
+</div>
+<div class="message">Ah, good news.  Without overstaying my welcome, may I just ask if those tools can indeed automatically download podcasts (assuming that a list has been configured) ?  If so I'll probably head to VLC ...<br />
+<br />
+thanks.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">04-11-2016, 09:29 PM</div>
+</div>
+<div class="message">Just for information anyone reading ...<br />
+<br />
+I find Juice, Clementine, Miro, gPodder all to some extent deficient. Either an ancient code base and little recent development and/or no active user forum (essential IMO). Juice was looking good but lack of recent support rules it out.  (Not so sure about gPodder). VLC admits to very basic podcast handling, so also ruled out. <br />
+<br />
+Groove was interesting and clearly NOT a podcast manager but I stumbled on a similarly named "Grover" MS store app which is probably going to be what I use.  A bit "clunky" with typical MS Store sparse UI and controls, but would appear to 'do what it says on the tin' sufficiently well.  Was able to import a big .opml list of podcasts successfully.<br />
+<br />
+HTH.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">04-11-2016, 10:21 PM</div>
+</div>
+<div class="message">In Windows I still use Radio Downloader <a href="https://nerdoftheherd.com/tools/radiodld/">https://nerdoftheherd.com/tools/radiodld/</a><br />
+<br />
+It lost the ability to download all radio progammes over 3 years ago but still works perfectly well to download all the podcasts I want.<br />
+<br />
+Having said that, I haven't run it for a few days so it might also have been affected by the BBC changes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-109</h2></div><div class="dateline">05-11-2016, 01:18 AM</div>
+</div>
+<div class="message">Update: just ran Radio Downloader and it's still fine</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1455</h2></div><div class="dateline">07-11-2016, 01:46 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+i'm a long-time getiplayer user who's registered to make this post about the podcast issue.<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (04-11-2016, 01:11 AM)</span></cite>For current programmes such as Costing the Earth, you don't need the podcast. Just download as a normal radio programme. And of course, you can also just download any podcast directly from the BBC.</blockquote>what I liked about the older (even recent) versions of GiP was that when it downloaded a radio program it tended to get the longer podcast version... i'm thinking specifically of "In Our Time" and "Stumped", but there were others.<br />
+<br />
+2.9.7 doesn't do that, it gets the shorter radio version... so i've been using 2.9.7 to get the podcast versions too and it was working great until this recent bbc change.<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (04-11-2016, 01:11 AM)</span></cite>Although this problem can be corrected in code, I'm not likely to release a fixed version of get_iplayer. Podcast support is due to be removed in the next release, so I'm inclined to let it die now.</blockquote>I read that when I installed 2.9.7 and I had planned not to upgrade to avoid losing the podcast feature - but that seems irrelevant now.<br />
+<br />
+I know that you're not going to, but I really do wish that you would revisit that decision - having just one program to get all my BBC downloads (TV, Radio &amp; Podcasts) is VERY useful to me.<br />
+<br />
+i've tried Radio Downloader and Clementine this morning.. for RD, it looks like I need to manually add rss links, and Clementine constantly crashes and I can't figure out how to save the files... absolutely ridiculous... both will be uninstalled and it looks like i'll need to manually download the podcasts from the BBC site in the future.<br />
+<br />
+one of the joys of GiP is that you discover new programmes when searching - i'm not going to waste my time searching the BBC site for podcasts of interest, i'll end up just getting those I listen to now... and that's a real shame.<br />
+<br />
+I do hope you change your mind.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-11-2016, 03:21 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-11-2016, 01:46 PM)</span></cite>what I liked about the older (even recent) versions of GiP was that when it downloaded a radio program it tended to get the longer podcast version... i'm thinking specifically of "In Our Time" and "Stumped", but there were others.<br />
+<br />
+2.9.7 doesn't do that, it gets the shorter radio version... so i've been using 2.9.7 to get the podcast versions too and it was working great until this recent bbc change.</blockquote>Use <kbd>--version=podcast</kbd> if you want the podcast version of a radio show.<br />
+<blockquote class="mycode_quote"><cite><span> (07-11-2016, 01:46 PM)</span></cite>I read that when I installed 2.9.7 and I had planned not to upgrade to avoid losing the podcast feature - but that seems irrelevant now.</blockquote>You will be able to keep 2.97, though it will be unsupported. If nobody else steps up, I'll publish the code change necessary to restore podcasts.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1455</h2></div><div class="dateline">07-11-2016, 06:06 PM</div>
+</div>
+<div class="message">thanks for replying.<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (07-11-2016, 03:21 PM)</span></cite>You will be able to keep 2.97, though it will be unsupported. If nobody else steps up, I'll publish the code change necessary to restore podcasts.</blockquote>I wish I was still using 2.9.4 with the old user interface - you won't believe the amount of time it took to modify the saved searches because the mode was previously set to "best" and that starting producing huge files, so had to go modify them individually to "tv25fps,radiobetter".<br />
+<br />
+i'm not modifying code, and sticking with a version that will eventually need to be updated because of iplayer changes anyway... that seems like just another waste of my time.<br />
+<br />
+if new versions aren't going to support podcasts, then so be it - I didn't expect a change of mind... even though the time it would take you to keep the EXISTING feature working is going to be FAR less than it will now take me to download them via another method - probably manually.<br />
+<br />
+I don't download podcasts except from BBC anyway, so I don't need more bloated software installed - so both RD and Clementine have now been uninstalled.<br />
+<br />
+I suspect i'll just end up using IFTTT to send me an email when a feed is updated for now... welcome to 2016.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-982</h2></div><div class="dateline">07-11-2016, 06:22 PM</div>
+</div>
+<div class="message">@janus if you can 'handle' Win10 and the MS store there consider "Grover".  I'm using it now (3 days) and it seems lightweight, easy to install, and will give you easy access to BBC podcasts.  An opml file can be imported for easy setup.  I'm normally very wary of MS apps myself, but I might just keep this one going.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-11-2016, 07:18 PM</div>
+</div>
+<div class="message">One I forgot to mention is MediaMonkey. <br />
+<br />
+Being a Linux user now I just use gPodder if I really have to (by far the easiest for me is using DoggCatcher on my phone) as it has pretty much everything incl OPML import, device sync to iPod or folder based device, authentication support etc etc.<br />
+<br />
+But when I was a Windows user I used MediaMonkey for most things audio. You don't need the Gold package, the free one is more than enough for podcasts.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1455</h2></div><div class="dateline">09-11-2016, 06:00 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-11-2016, 06:22 PM)</span></cite>@janus if you can 'handle' Win10 and the MS store there consider "Grover".  I'm using it now (3 days) and it seems lightweight, easy to install, and will give you easy access to BBC podcasts.  An opml file can be imported for easy setup.  I'm normally very wary of MS apps myself, but I might just keep this one going.</blockquote>win10 not an option at this stage - anyway, I don't really want to install any additional software for this task... at least RadioDownloader was only about 2MB installed, Clementine was taking 70MB - which is more than GiP and excessive if all I was going to use it for was BBC podcasts.<br />
+<br />
+<blockquote class="mycode_quote"><cite><span> (07-11-2016, 07:18 PM)</span></cite>One I forgot to mention is MediaMonkey. <br />
+Being a Linux user now I just use gPodder if I really have to (by far the easiest for me is using DoggCatcher on my phone) as it has pretty much everything incl OPML import, device sync to iPod or folder based device, authentication support etc etc.<br />
+<br />
+But when I was a Windows user I used MediaMonkey for most things audio. You don't need the Gold package, the free one is more than enough for podcasts.</blockquote>thanks for the suggestion, but again it's a download.<br />
+<br />
+the solution i'm now using is Feedly - i've got all my podcast feeds on one page and I can just right-click and save the mp3 files... i'd prefer to still have the feature in GiP but I can live with this (guess i'll have to anyway!) lol</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1470</h2></div><div class="dateline">28-11-2016, 07:59 PM</div>
+</div>
+<div class="message">[Edited to remove a little pointless waffle and add new test results.]<br />
+Hi all. I have the same underlying problem, except that the comments above all refer to downloading Podcasts. I use get_iplayer for those programmes that have no podcast, and yet this problem rears its persistent and very ugly head. (I use MediaMonkey to download my many podcasts because it does filename and filesystem management so well and is a dream to use to prepare said programmes for my MP3 player and upload them.)<br />
+<br />
+Over the last three weeks or so I think wasted a fruitless 4 days finding, installing and testing the latest version (Win32 2.97.0), reading Win equivalent of the MAN pages, the FAQ and doco on GitHub, and even the script (but my poor familiarity with Perl isn't up to bug searching).<br />
+<br />
+I use get_iplayer predominantly to record searches rather than specific programmes (e.g. Dostoyevski in Name, Episode, Desc). Obviously some programmes this finds happen to also be part of a podcast series, and it seems from above comments the BBC has added URLs to podcast tags. (If I misinterpret that error report please enlighten me.) But it is crippling almost 50% of my searches and I need to overcome this otherwise there's suddenly little value to this system.<br />
+<br />
+It struck me, when I first read the error message a few weeks ago, that the simple most immediate problem ("bug" if you will) is that the script only does partial character replacement: the filename parsing is incomplete. While it successfully replaces spaces and certain other characters with an underscore, it fails to account for all special characters. Why, for example, does it replace ":" with "_" in the programme title but not any other tag? (I presume the URL is in a different tag, otherwise its ":" and "/" would surely be replaced.) If it is important to include other tags in the filename (presumably to prevent clashing filenames or to identify the series the file comes from) then if the filename were built from tag components in its entirety /before/ parsing it to replace special chrs with "_" or "-" perhaps that would fix the problem ever happening no matter what the BBC did in future, and it would also fix the Podcast recording issue for those who need it.<br />
+<br />
+The thing that baffles me most, and annoys me because it makes for a permanent fault that I can't work around, is that when the script crashes with this filenaming glitch I take the PId it presents and download it manually with complete success -- specifying the PId for some reason makes the script use a different filename than letting it search. And yet, even though I've downloaded it successfully and the PId should therefore now be in the downloaded history, it still tries to download the same damned file again at the next run, so it crashes at the same point, so I have to disable yet another PVR item.<br />
+<br />
+WHY?! I thought the whole point of caching the list of downloaded programmes was so that it would recognize by PId what has been downloaded and skip all such identified programmes. And yet the buggy programmes are not recognized (even though the PId is printed in human-readable form) and the script diligently tries to download it again. And dies trying.<br />
+<br />
+Edit: I went off a bit half-cocked there and did some more manual work.  I have now learned that the PVR searches download by Index number not PId (although this doesn't explain why the first method uses Tags that include the URLs that generate invalid names, while the second uses different Tags to generate an uncomplex filename that works every time -- consistency in handling tagging of rips would resolve this issue immediately).  The problem remains that, while the script recognizes when I have downloaded a given PId, it doesn't recognize the same programme by its Index, hence the PVR tries to download it again and crash.<br />
+<br />
+[Edit]Is there a way of persuading get_iplayer either to add an Index to its download history or to gracefully trap filesystems errors (including this invalid naming issue) and skip the step (in this instance drop the programme download) rather than bombing out? I've had a hunt through the working files in /.get_iplayer but have failed to identify where or how downloaded programmes are flagged.  If I could do that by hand I'd be happy and I could re-enable all my PVR listings.<br />
+<br />
+(Sorry this is such a verbose post, it's very late and I went into stream-of-consciousness mode... Thanks for reading!)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-896</h2></div><div class="dateline">03-12-2016, 10:52 PM</div>
+</div>
+<div class="message">Within the last 3 weeks podcasts are failing. This happens using get_iplayer in a command window or as part of the PVR, which then causes the PVR to halt. I have had to remove all podcasts from the PVR in order to get it to complete. Radio and TV are fine.<br />
+Example follows:<br />
+<br />
+C:\Program Files\get_iplayer&gt;get_iplayer --get --type=podcast "Chequered Flag Formula 1"  --file-prefix "&lt;name&gt;-&lt;dldate&gt;"<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+204863: Chequered Flag Formula 1 - Max Verstappen: Mercedes and Ferrari are great, but I'm happy with Red Bull, Thu, 03 Mar 2016 22:23:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204864: Chequered Flag Formula 1 - Schumacher: Seven Days That Changed F1, Thu, 25 Aug 2016 16:06:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204865: Chequered Flag Formula 1 - Belgian Grand Prix Preview, Thu, 25 Aug 2016 17:38:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204866: Chequered Flag Formula 1 - American Grand Prix Preview, Thu, 20 Oct 2016 21:07:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204867: Chequered Flag Formula 1 - What drives Ross Brawn?, Thu, 03 Nov 2016 21:13:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204868: Chequered Flag Formula 1 - Brazilian GP Preview, Thu, 10 Nov 2016 21:08:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204869: Chequered Flag Formula 1 - Brazilian GP Review, Mon, 14 Nov 2016 14:49:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204870: Chequered Flag Formula 1 - Abu Dhabi GP Preview, Thu, 24 Nov 2016 22:13:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204871: Chequered Flag Formula 1 - Abu Dhabi Friday Preview, Sat, 26 Nov 2016 10:09:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+204872: Chequered Flag Formula 1 - Abu Dhabi Grand Prix Review, Mon, 28 Nov 2016 05:00:00 +0000, BBC Radio 5 live, Sports &amp; Recreation<br />
+INFO: 10 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: podcast modes will be tried for version default<br />
+INFO: Trying podcast mode to record podcast: Chequered Flag Formula 1 - Max Verstappen: Mercedes and Ferrari are great, but I'm happy with Red Bull<br />
+INFO: File name prefix = Chequered_Flag_Formula_1-2016-12-03<br />
+ERROR: Cannot write or append to U:\Users\Trevor\Get_IPlayer\Chequered_Flag_Formula_1-2016-12-03.partial.http:\www.bbc.co.uk\programmes\p03ldzft<br />
+<br />
+Is this a problem with the temporary file name containing \? How can I change this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1508</h2></div><div class="dateline">11-01-2017, 07:34 PM</div>
+</div>
+<div class="message">Going through my PVR List and editing out all those ending in "podcast" does seem to have fixed this issue, but regrettably only after having no idea what was going on for over a month and missing a lot of recordings. :(</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">11-01-2017, 08:50 PM</div>
+</div>
+<div class="message">Odds are that many of those missed podcast episodes can still be downloaded from the BBC podcasts site.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-1085-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; [2.97] Podcasts: ERROR: Cannot write or append (because output file name is invalid)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

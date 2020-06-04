@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get-iplayer &amp; BBC Archive</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get-iplayer &amp; BBC Archive</div>
+<div id="pagetitle"><h2>get-iplayer &amp; BBC Archive</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-416</h2></div><div class="dateline">12-03-2014, 11:59 AM</div>
+</div>
+<div class="message">Greetings all!<br />
+<br />
+Is there any chance of get-i-player downloading BBC archive radio and telly programmes? If yes, what is/what are the command(s) to use?<br />
+<br />
+tnob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-03-2014, 01:08 PM</div>
+</div>
+<div class="message">Use the PID (7-character alphanumeric code) in the episode player page URL:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --pid &lt;PID&gt;</code></div></div><br />
+<br />
+<br />
+If that doesn't work, try the episode player page URL itself:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --url &lt;URL&gt;</code></div></div><br />
+<br />
+<br />
+If that doesn't work, post the URL for the programme you want to download.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-809</h2></div><div class="dateline">30-12-2014, 01:16 PM</div>
+</div>
+<div class="message">I am also having problems with get_iplayer and BBC Archive. some programmes will download from the GUI, and others wont. I have tried the --pid, --get, &amp; --url methods with some that don't. Some times it works. Here is the code of one that doesn't:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sadiq@dougal:~&gt; get_iplayer --url http://www.bbc.co.uk/iplayer/episode/b03495yn/lets-imagine-a-branch-line-railway-with-john-betjeman#group=p01277qd<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b03495yn using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+820:&nbsp;&nbsp;&nbsp;&nbsp;Let's Imagine - A Branch Line Railway with John Betjeman, BBC, Factual,Lifestyle &amp; Leisure,Travel, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programme versions found<br />
+sadiq@dougal:~&gt; get_iplayer --get 820<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+820:&nbsp;&nbsp;&nbsp;&nbsp;Let's Imagine - A Branch Line Railway with John Betjeman, BBC, Factual,Lifestyle &amp; Leisure,Travel, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+WARNING: No programme versions found<br />
+sadiq@dougal:~&gt;</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-809</h2></div><div class="dateline">30-12-2014, 01:19 PM</div>
+</div>
+<div class="message">PS Forgot the close tags function! Sorry. Would be nice to have an Edit button.<br />
+<br />
+Thanks for any help.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-809</h2></div><div class="dateline">30-12-2014, 02:11 PM</div>
+</div>
+<div class="message">Problem solved. Did some more searching on the forum and found the --playlist-metadata option.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sadiq@dougal:~&gt; get_iplayer --get "Let's Imagine - A Branch Line Railway with John Betjeman" --playlist-metadata<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO: 0 Matching Programmes<br />
+sadiq@dougal:~&gt; get_iplayer --modes=default --pid b03495yn --playlist-metadata<br />
+get_iplayer v2.91, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+819:&nbsp;&nbsp;&nbsp;&nbsp;Let's Imagine - A Branch Line Railway with John Betjeman, BBC, Factual,Lifestyle &amp; Leisure,Travel, default<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2 modes will be tried for version default<br />
+INFO: Trying flashvhigh1 mode to record tv: Let's Imagine - A Branch Line Railway with John Betjeman<br />
+INFO: File name prefix = Lets_Imagine_-_A_Branch_Line_Railway_with_John_Betjeman_b03495yn_default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB</code></div></div><br />
+<br />
+Did the trick.<br />
+<br />
+Thanks to all you guys this forum is a very usefull resource. I have good computer and technical skills, but am retired and have some health issues which have made me parially housebound. get_iplayer is a huge boon to someone in my position, particulalry as I'ved discovered all the old Horizons and other docs in the Archive.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">30-12-2014, 02:51 PM</div>
+</div>
+<div class="message">Well done for finding this yourself and I'm glad the forum helped!</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get-iplayer &amp; BBC Archive</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

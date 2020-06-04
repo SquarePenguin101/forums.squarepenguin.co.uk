@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Why was streaming removed?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Why was streaming removed?</div>
+<div id="pagetitle"><h2>Why was streaming removed?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1555</h2></div><div class="dateline">14-03-2017, 08:35 PM</div>
+</div>
+<div class="message">I have read through the various release notes, and looked through the forums, but I cannot find any explanation of exactly why streaming was removed<br />
+<br />
+This is a major loss to me, as I rely on it to view iplayer programmes via mplayer. I cannot use the BBC interface, because on my (quite old) PC the output is very choppy and in full screen it uses 100% cpu.<br />
+<br />
+I am currently using get_iplayer 2.97 as a work-around, but it doesn't seem to be a viable long-term solution. I am currently using a command like this:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --stream --type=tv --player='mplayer -fs -cache 8192 -cache-min 30 -' url</code></div></div><br />
+Is there anything equivalent to this that will work with newer versions of get_iplayer?<br />
+<br />
+(PS: my OS is Linux, and I use Firefox-52.0).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1124</h2></div><div class="dateline">08-04-2017, 07:11 PM</div>
+</div>
+<div class="message">Hi all,<br />
+<br />
+can we get an answer to the OP question please as to exactly why the '--stream' option was removed? I'm genuinely interested! Is this out of fear of legal repercussions? Was it too tedious to maintain something that for all intents and purposes is available on the iplayer website already?<br />
+<br />
+Whichever way this cookie crumbles, under linux this certainly is a great loss, as there still is no GPU based video decoding on any browser that I am aware of. So my core2duo based laptop is running at 70 degrees just so I can watch the news. Not to mention, that now it also churns through the battery much more quickly.<br />
+<br />
+I suppose, someone with more knowledge than me could fork the last working version and maintain that. I for one will certainly be holding on to my rpm's... '-)<br />
+<br />
+Greetz<br />
+<br />
+PS<br />
+As an afterthought for those interested and using git to download get_iplayer: If you want to get back to the last get_iplayer version with '--stream' working, you could do a 'git clone <a href="https://github.com/get-iplayer/get_iplayer">https://github.com/get-iplayer/get_iplayer</a>', then enter the repository folder and then do a 'git reset --hard 7b107926d6d77e64114e410e7d785b5ecf5c1ffb'.  That gets you back to the repository's last working commit from Sept. 2016.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1763</h2></div><div class="dateline">03-05-2017, 02:32 PM</div>
+</div>
+<div class="message">its very sad streaming has been removed, check out <a href="https://streamlink.github.io/">streamlink</a> to view BBC and many others in vlc/mpv/mplayer etc.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1555</h2></div><div class="dateline">03-05-2017, 05:02 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (03-05-2017, 02:32 PM)</span></cite>its very sad streaming has been removed, check out <a href="https://streamlink.github.io/">streamlink</a> to view BBC and many others in vlc/mpv/mplayer etc.</blockquote><br />
+Thanks for the link - it looks very interesting. I cannot test it myself at the moment - can you confirm that you have successfully tried it with the bbciplayer plugin? If so, it might be helpful to give an example streamlink command to compare with the equivalent get_iplayer (2.97) command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1555</h2></div><div class="dateline">03-05-2017, 06:25 PM</div>
+</div>
+<div class="message">The nearest thing I have found as an answer to my original question is the following quote from the <a href="https://github.com/get-iplayer/get_iplayer/wiki/release295">release notes for 2.95</a>:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>The features below have been deprecated by the maintainer because they are obsolete, unreliable, impede future development or can no longer be supported.</blockquote>
+<br />
+However, it is not clear to me which of those might apply to streaming. If it's anything other than "impede future development", it would appear that switching to streamlink may not be a long-term solution either. Currently, I'm totally reliant on streaming, so a better understanding of the underlying issues might allow me to plan ahead. Can you shed any further light on what the future might hold as far as streaming bbc tv programmes is concerned?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1763</h2></div><div class="dateline">03-05-2017, 10:47 PM</div>
+</div>
+<div class="message">Here in Uk i find BBC iplayer links play fine(firefox users can add their player of choice to this fine <a href="https://github.com/darktrojan/openwith">extension</a>) in mpv as <a href="https://rg3.github.io/youtube-dl/supportedsites.html">youtube-dl supports it</a>, however using streamlink we can view content from all <a href="https://beardypig.github.io/tv-stream-db/">these</a> in vlc/mplayer etc. TV catchup, and TVplayer,filmon plugins all allow live BBC streams. There are windows .exe installers so even windows users can join the fun, i did a blog post ages ago, this willl help any new users, just be warned livestreamer is no longer in development and streamlink has taken over, both work exactly the same (replace mentions of livestreamer with streamlink) so <a href="https://cirrusminor.info/2015/02/16/livestreamer-for-windows/">this guide</a> may help someone.<br />
+<br />
+open source baby :D</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; Why was streaming removed?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

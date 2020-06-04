@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Tagging fails, seemingly randomly</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Tagging fails, seemingly randomly</div>
+<div id="pagetitle"><h2>Tagging fails, seemingly randomly</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2134</h2></div><div class="dateline">12-04-2018, 12:04 PM</div>
+</div>
+<div class="message">Firstly, a huge thank you for such an awesome application. As a developer, I know what it takes to put something like this together and I am very grateful for the work put in to produce this.<br />
+<br />
+Now to the question...<br />
+<br />
+I have an intermittent issue (maybe once every 20-30 downloads) where the MP4 tagging fails with exit code 255 (Raw code 65280), if I delete and force a retry it usually works ok.<br />
+<br />
+<br />
+I understand that the tagging is done by Atomicparsley, but I couldn't seem to find anything on these error codes to assist in debugging this issue. Initially I thought that it was caused by my backup software being overzealous and trying to backup my shared folder whilst writing them, but I've moved the download to a different (not backed up) folder and then move the resultant files to the shared folder by running a batch file, but this has not solved the issue.<br />
+<br />
+get_iplayer is running on my home server which is Windows 2012 R 2. Currently I am using version 3.12.0<br />
+<br />
+Any pointers?<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-04-2018, 02:18 PM</div>
+</div>
+<div class="message">There is nothing get_iplayer can do about AP failures. If your get_iplayer output directory is on a network drive, there is more risk that AtomicParsley will flake out due to I/O problems, but writing to a local drive is not a guarantee of success. If the AP temp file is left behind, check if it has been tagged. AP may fail right at the end when overwriting the original file with the tagged version (due to disk or path problem), in which case you can simply rename the file yourself. That's what the error code suggests, but no way for me to know. Aside from that, you can run with <kbd>--log-progress --verbose</kbd> to ensure you see all AP output. There may be additional clues there because AP unfortunately writes some error messages to its stdout, which is normally not shown by get_iplayer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Tagging fails, seemingly randomly</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

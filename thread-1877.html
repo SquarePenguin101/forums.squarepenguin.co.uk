@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR: Can't connect to http://127.0.0.1:1935</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Web PVR: Can't connect to http://127.0.0.1:1935</div>
+<div id="pagetitle"><h2>Web PVR: Can't connect to http://127.0.0.1:1935</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2241</h2></div><div class="dateline">07-09-2018, 08:28 AM</div>
+</div>
+<div class="message">get_iplayer_web_pvr    <br />
+shows                                                                                              1 ↵<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Starting Web PVR Manager server...<br />
+Opening Web PVR Manager client...<br />
+There is no screen to be resumed.</code></div></div><br />
+Then Safari opens with a message saying it can't connect to localhost.<br />
+I've searched for similar issues here and elsewhere, but none specific to OS X<br />
+Is there some debug mode that would offer a few more clues?<br />
+I tried disabling the firewall, no difference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-09-2018, 11:02 AM</div>
+</div>
+<div class="message">The web pvr server component died on launch. Likely an installation or system configuration problem. Save the code below in a file named "get_iplayer_cgi" in your working directory. Run it with <kbd>/bin/bash get_iplayer_cgi</kbd>. Ctrl-C to stop. Post the output.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>#!/bin/bash<br />
+GIPDIR=/usr/local/get_iplayer<br />
+GIPCLI=&#36;GIPDIR/bin/get_iplayer<br />
+GIPWPM=&#36;GIPDIR/bin/get_iplayer.cgi<br />
+export PATH="&#36;GIPDIR/bin&#36;{PATH:+:&#36;{PATH}}"<br />
+export PERL5LIB="&#36;GIPDIR/perl5/lib/perl5&#36;{PERL5LIB:+:&#36;{PERL5LIB}}"<br />
+LISTEN=&#36;{LISTEN:-127.0.0.1}<br />
+PORT=&#36;{PORT:-1935}<br />
+BASEURL=&#36;{BASEURL:+-b &#36;{BASEURL}}<br />
+sw_vers<br />
+echo PERL5LIB=&#36;PERL5LIB<br />
+[[ -x &#36;GIPWPM ]] &amp;&amp; echo found &#36;GIPWPM<br />
+[[ -x &#36;GIPCLI ]] &amp;&amp; echo found &#36;GIPCLI<br />
+echo "Starting Web PVR Manager server..."<br />
+&#36;GIPWPM -g &#36;GIPCLI -l &#36;LISTEN -p &#36;PORT &#36;BASEURL</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2241</h2></div><div class="dateline">04-12-2018, 05:52 PM</div>
+</div>
+<div class="message">Thanks Dinky, that works perfectly :)<br />
+<br />
+Actually it started working spontaneously beforehand, but most likely because I think I had a few broken paths in my shell if you know what I mean ;)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-12.html">macOS Troubleshooting</a> &gt; Web PVR: Can't connect to http://127.0.0.1:1935</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

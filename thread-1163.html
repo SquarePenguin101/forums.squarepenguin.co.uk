@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cannot get WebPVR running on XUbuntu 14.04.5 LTS Trusty</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Cannot get WebPVR running on XUbuntu 14.04.5 LTS Trusty</div>
+<div id="pagetitle"><h2>Cannot get WebPVR running on XUbuntu 14.04.5 LTS Trusty</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1473</h2></div><div class="dateline">09-02-2017, 02:44 PM</div>
+</div>
+<div class="message">I am having problems getting iPlayer to work in XUbuntu 14.04.5 LTS. It runs from a terminal command but I cannot access the WebPVR from http://localhost:1935 or <a href="http://127.0.0.1:1935/">http://127.0.0.1:1935/</a>.<br />
+<br />
+I am a real Nubie to Linux and did not know how to download and install all the dependencies for Ubuntu but have tried to help myself with the installation and followed the detailed directions Here <br />
+as follows:-<br />
+<br />
+1 wget <a href="ftp://ftp.infradead.org/pub/get_iplayer/get_iplayer-2.78.tar.gz">ftp://ftp.infradead.org/pub/get_iplayer/....78.tar.gz</a><br />
+<br />
+2 tar -xvf get_iplayer-2.78.tar.gz<br />
+<br />
+3 sudo rm /usr/bin/get_iplayer<br />
+<br />
+4 sudo mv get_iplayer-2.78/get_iplayer /usr/bin<br />
+<br />
+5 cd get_iplayer-2.78<br />
+<br />
+6 ./get_iplayer.cgi --port=1935 --getiplayer=/usr/bin/get_iplayer<br />
+<br />
+<br />
+By going to http://localhost:1935 I was able to view Web PVR manager so it had installed. However it said there was an update to get_iplayer and tried to download and install it via the Web PVR Manager but failed at overwriting the existing application with  .old at the end.<br />
+I did another search and found instructions to run update get_iplayer from terminal. Again it failed to overwrite the existing application. I therefore used sudo update get_iplayer and it appears to have updated correctly. Certainly it will run from terminal. <br />
+<br />
+However when I browse to  http://localhost:1935 or <a href="http://127.0.0.1:1935/">http://127.0.0.1:1935/</a>. I get a error message localhost refused to connect.<br />
+<br />
+Having done a bit more searching this appears to be because nothing is listening on that port. I therefore tried to run perl get_iplayer.cgi --port=1935 --getiplayer=/usr/bin/get_iplayer <br />
+<br />
+but I get another error in terminal<br />
+<br />
+Can't open perl script "get_iplayer.cgi": No such file or directory<br />
+<br />
+What am I doing wrong?<br />
+<br />
+If it has any bearing I  get Enter password for keyring 'default' to unlock", every time I open Chromium even though I have tried the blank password trick.<br />
+<br />
+Fozzie Bear</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-02-2017, 02:49 PM</div>
+</div>
+<div class="message">get_iplayer 2.78 hasn't been supported for 6 years. Current version is 2.98. Older versions are not supported. Start with install guides page in wiki.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1473</h2></div><div class="dateline">09-02-2017, 05:33 PM</div>
+</div>
+<div class="message">Thanks Dinky,<br />
+Yes I am aware of that and have updated to 2.94 using get_iplayer update. <br />
+<br />
+I have read through the Wiki a number of times and it very confusing as to which package I should use. None of them refer to Xubuntu Trusty <br />
+<br />
+The reference to Ubuntu/Mint states:-<br />
+<br />
+Ubuntu/Mint (from get-player PPA)<br />
+<ul class="mycode_list"><li>Ubuntu/Mint users should NOT install the get-iplayer package in the default Ubuntu/Mint repos. It will likely be obsolete and at least partially broken. It is particularly likely to be broken in long-term support releases. Use the get-iplayer PPA.<br />
+</li>
+</ul>
+<ul class="mycode_list"><li>Ubuntu/Mint users should NOT install the AtomicParsley package in the default Ubuntu/Mint repositories. It will fail on some files downloaded by get_iplayer. Use the get_iplayer PPA.<br />
+</li>
+</ul>
+<ul class="mycode_list"><li>Ubuntu/Mint users must install a modern version of ffmpeg (3.0+), which is not available from default repositories. See ffmpeg instructions below (not necessary for Ubuntu 16.10+)<br />
+</li>
+</ul>
+Having already installed get_iplayer from another location can I install from the PPA over the top of the exsiting? Or do I have to remove the existing. If so How do I do that?<br />
+<br />
+Do I install ffmpg first or after get_iplayer is installed?<br />
+<br />
+All this is second nature to a seasoned Linux user but I am stumbling around in the dark. I am trying to help myself but the guides are not really detailed enough for a beginner as they assume a lot of pre knowledge if Linux<br />
+<br />
+Many thanks in advance for your patience<br />
+Fozzie</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-02-2017, 05:54 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-02-2017, 05:33 PM)</span></cite>Having already installed get_iplayer from another location can I install from the PPA over the top of the exsiting? Or do I have to remove the existing. If so How do I do that?</blockquote>Delete the <kbd>get_iplayer</kbd> and <kbd>get_iplayer.cgi</kbd> files you installed earlier, along with any other files you extracted from that ancient tarball. If you installed any helper applications (AtomicParsley, ffmpeg, rtmpdump) manually instead of using <kbd>apt-get</kbd>, remove those as well. Then install get_iplayer from the PPA.<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>Do I install ffmpg first or after get_iplayer is installed?</blockquote>
+After.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1473</h2></div><div class="dateline">09-02-2017, 06:38 PM</div>
+</div>
+<div class="message">Many thanks Dinky I think I have now got it working. <br />
+<br />
+One final question. I used the command get_iplayer_web_pvr to start the application listening on the local host IP address. Does this automatically restart on reboot or does it have to be started manually each time. If so is there a way to run this at startup?<br />
+<br />
+Fozzie</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-02-2017, 08:03 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (09-02-2017, 06:38 PM)</span></cite>Does this automatically restart on reboot or does it have to be started manually each time. If so is there a way to run this at startup?</blockquote>Started manually. As to how to run it automatically at startup,  that's beyond our scope, so someone else will have to field that query. Google will find you plenty of information on the various ways to do it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1473</h2></div><div class="dateline">09-02-2017, 09:10 PM</div>
+</div>
+<div class="message">Ok thanks for your help</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Cannot get WebPVR running on XUbuntu 14.04.5 LTS Trusty</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

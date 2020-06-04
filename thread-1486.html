@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Fails with  &quot;Not a HASH reference at /usr/local/bin/get_iplayer line 5354&quot;</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Fails with  &quot;Not a HASH reference at /usr/local/bin/get_iplayer line 5354&quot;</div>
+<div id="pagetitle"><h2>Fails with  &quot;Not a HASH reference at /usr/local/bin/get_iplayer line 5354&quot;</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1910</h2></div><div class="dateline">24-08-2017, 07:57 PM</div>
+</div>
+<div class="message">get_iplayer version 3.02 command line interface<br />
+linux mint Maya<br />
+saving to internal harddrive<br />
+<br />
+I've manually installed new version of get_iplayer using instructions on wiki pages  but fail to download any programmes with exactly same line output "Not a HASH reference at /usr/local/bin/get_iplayer line 5354."<br />
+e.g.<br />
+get_iplayer --pid b08zd4m7 --type=radio<br />
+<br />
+log attached<br />
+<a href="static/thread-1486-get-iplayer_debug.txt">Output log.txt</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-08-2017, 10:01 PM</div>
+</div>
+<div class="message">Post your Perl version: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -v</code></div></div>and some XML::LibXML version info from: <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>perl -MXML::LibXML -e 'print &#36;XML::LibXML::VERSION, " ", XML::LibXML::LIBXML_DOTTED_VERSION, "&#92;n"'</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1910</h2></div><div class="dateline">24-08-2017, 10:40 PM</div>
+</div>
+<div class="message">&#36; perl -v <br />
+perl 5, version 14, subversion 2 (v5.14.2) built for i686-linux-gnu-thread-multi-64int<br />
+(with 60 registered patches, see perl -V for more detail)<br />
+<br />
+<br />
+&#36; perl -MXML::LibXML -e 'print &#36;XML::LibXML::VERSION, " ", XML::LibXML::LIBXML_DOTTED_VERSION, "\n"'<br />
+1.89 2.7.8</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-08-2017, 10:57 PM</div>
+</div>
+<div class="message">As I suspected, your version of XML::LibXML is too old. I'll have to change get_iplayer so that it emits a warning for this, but the end result is the same. The get_iplayer install doc tells you how to set up a local module library where you can install an updated version of XML::LibXML. This problem only manifests for DASH streams, so you also may be able to work around it with something like <kbd>--radiomode=haf</kbd> and <kbd>--tvmode=hls,hvf</kbd>, though that is a rather blunt instrument. Better to update XML::LibXML.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1910</h2></div><div class="dateline">24-08-2017, 11:28 PM</div>
+</div>
+<div class="message">I had already followed the instructions to set up a local module library:<br />
+<br />
+curl -L "http://cpanmin.us" | perl - -l ~/perl5 App::cpanminus local::lib<br />
+eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`<br />
+echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' &gt;&gt; ~/.bash_profile<br />
+<br />
+and install modules with:<br />
+<br />
+cpanm LWP LWP::Protocol::https Mojolicious XML::LibXML CGI<br />
+<br />
+Should I repeat?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1910</h2></div><div class="dateline">25-08-2017, 12:27 AM</div>
+</div>
+<div class="message">Remembered I had previously installed libxml-libxml-perl (XML::LibXML) along with libwww-perl liblwp-protocol-https-perl libmojolicious-perl using "sudo apt-get install". The get_iplayer install doc did say this was unwise. It was this perl module which was too old.  Uninstalled  using "sudo apt-get remove libxml-libxml-perl &amp;&amp; sudo apt-get autoremove"<br />
+<br />
+get_iplayer now works smoothly, presumably using the local module Iibrary I previously set up as per instructions.<br />
+<br />
+Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1910</h2></div><div class="dateline">25-08-2017, 02:17 AM</div>
+</div>
+<div class="message">In the end I did reinstall XML:LibXML using:<br />
+&#36; cpanm XML::LibXML<br />
+<br />
+however build.log indicated missing libxml2 and zlib which I installed using<br />
+&#36; sudo apt-get install libxml2-dev zlib1g-dev<br />
+<br />
+<br />
+then tried installing XML::LibXML again<br />
+<br />
+Don't appear to have any more warnings/error messages.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-08-2017, 11:30 AM</div>
+</div>
+<div class="message">For others: XML::LibXML 1.91 is now the minimum version required for get_iplayer. You shouldn't have any trouble with that unless you are using a Linux/OSX release that is end-of-life (like Mint Maya), or is otherwise obsolete. If that is the case, create a local module library as described in install docs and install updated Perl modules to override the system-supplied modules.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-09-2017, 09:52 PM</div>
+</div>
+<div class="message">Fixed in v3.03</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Fails with  &quot;Not a HASH reference at /usr/local/bin/get_iplayer line 5354&quot;</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

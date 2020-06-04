@@ -1,0 +1,123 @@
+C:\Users\Acer>get_iplayer --subtitles-only -v --pid b07l6bd0
+get_iplayer 3.06.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp437
+INFO: encodingconsolein = cp437
+INFO: ${^UNICODE} = 0
+INFO: Profile dir: C:\Users\Acer\.get_iplayer
+INFO: User options file: C:\Users\Acer\.get_iplayer\options
+INFO: System options file: C:\ProgramData\get_iplayer\options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+        encodingconsolein = cp437
+        encodingconsoleout = cp437
+        encodinglocale = cp1252
+        encodinglocalefs = cp1252
+        nowrite = 1
+        output = C:\Users\Acer\Desktop\Local
+        pid = b07l6bd0
+        subsonly = 1
+        subtitles = 1
+        verbose = 1
+
+INFO: Search args: ''
+INFO: Got 3656 file cache entries for tv
+INFO: No file cache exists for radio
+INFO: Cleaning PID - old: 'b07l6bd0' new: 'b07l6bd0'
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b07l6bd0.json
+INFO: tv episode PID detected (b07l6bd0)
+Matches:
+3289:   The Search for the Lost Manuscript: Julian of Norwich - -, BBC Four, b07l6bd0
+INFO: Getting URL: http://www.bbc.co.uk/programmes/b07l6bd0.json
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p042001f/transferformat/dash?cb=20030
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1509861713_88a7d027e8993a436ea340edb01b26ad
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1509861713_88a7d027e8993a436ea340edb01b26ad)
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1509818513&e=1509861713&h=f2682fc6208b996022eae37a6e6d439f
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1509818513&e=1509861713&h=f2682fc6208b996022eae37a6e6d439f)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p042001f/transferformat/dash?cb=88117
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1509861497_04f72a848365252b1a0b4098045b2953
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1509861497_04f72a848365252b1a0b4098045b2953)
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/pc_hd_abr_v2_dash_master.mpd?s=1509818297&e=1509861497&h=ecbd2ac226db1479c26d75b973370f5b
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/pc_hd_abr_v2_dash_master.mpd?s=1509818297&e=1509861497&h=ecbd2ac226db1479c26d75b973370f5b)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p042001f/transferformat/hls?cb=56144
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.m3u8?__gda__=1509861716_4befc70a2e08ce7cfd67ab7ea5a54a75
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.m3u8?__gda__=1509861716_4befc70a2e08ce7cfd67ab7ea5a54a75)
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.m3u8?s=1509818516&e=1509861716&h=37d6c37ade170fde7139dc4c32e105ff
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.m3u8?s=1509818516&e=1509861716&h=37d6c37ade170fde7139dc4c32e105ff)
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism.hlsv2.m3u8?at=tzKxiU3G7e60ef6f4f6f106c67479cd0135fa6423f13bbb355d310bc82500
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p042001f/transferformat/hls?cb=75954
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.m3u8?__gda__=1509861501_ec11f4af201e0a14b619e968a8d0be9d
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.m3u8?__gda__=1509861501_ec11f4af201e0a14b619e968a8d0be9d)
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.m3u8?s=1509818301&e=1509861501&h=214ac5fad0cc05c0d3864f212265165d
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.m3u8?s=1509818301&e=1509861501&h=214ac5fad0cc05c0d3864f212265165d)
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_sd_ad/d21ddb-b07l6b8s/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.ism/vf_b07l6b8s_670e0016-8036-4341-8a86-5db1ad8a9dc6.m3u8?at=u2thD6FL47497344a959335b562da8689eddf253d89ddbca55d30fef78140
+INFO: Found mode 'hvfxsd1': (gip_hvf_iplayer_1836) hls h264 960x540 25fps 1836kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh1': (gip_hvf_iplayer_1800) hls h264 704x396 50fps 1800kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh1': (gip_hvf_iplayer_1013) hls h264 704x396 25fps 1013kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfstd1': (gip_hvf_iplayer_865) hls h264 640x360 25fps 865kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvflow1': (gip_hvf_iplayer_599) hls h264 512x288 25fps 599kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p0420l14/transferformat/dash?cb=32659
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p0420l14/transferformat/dash?cb=17626
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/p0420l14/transferformat/hls?cb=18858
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p0420l14/transferformat/hls?cb=81431
+INFO: No streams available for 'audiodescribed2' version (p0420l14) - skipping
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b07l6b8s/transferformat/dash?cb=06224
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1509861726_4e8cb84df49fffd58070a724bebda95c
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1509861726_4e8cb84df49fffd58070a724bebda95c)
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1509818526&e=1509861726&h=45c9d10f547443c69a2ab52258dd057e
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1509818526&e=1509861726&h=45c9d10f547443c69a2ab52258dd057e)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b07l6b8s/transferformat/dash?cb=96223
+INFO: Getting URL: http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1509861728_f39ece35dd55debd2ba28d6c054d9d27
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/pc_hd_abr_v2_dash_master.mpd?__gda__=1509861728_f39ece35dd55debd2ba28d6c054d9d27)
+INFO: Getting URL: http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/pc_hd_abr_v2_dash_master.mpd?s=1509818528&e=1509861728&h=fa1a43ac923606dfb47890636f97951f
+WARNING: No DASH manifest returned (http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/pc_hd_abr_v2_dash_master.mpd?s=1509818528&e=1509861728&h=fa1a43ac923606dfb47890636f97951f)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b07l6b8s/transferformat/hls?cb=57326
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.m3u8?__gda__=1509861730_92b959e249a7f76c1ed0d27c888ec584
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.m3u8?__gda__=1509861730_92b959e249a7f76c1ed0d27c888ec584)
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.m3u8?s=1509818530&e=1509861730&h=ea7b25e49f516910b5edad3b7f6327b4
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.m3u8?s=1509818530&e=1509861730&h=ea7b25e49f516910b5edad3b7f6327b4)
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism.hlsv2.m3u8?at=N_X4AT7qb7fa3fb8f1414032b7e71abaf866fdf53d50bd6655d310c9dc480
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,3200kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468134641798,.mp4.csmil/master.m3u8?hdnea=st=1509840130~exp=1509861730~acl=/*800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,3200kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468134641798*~hmac=1082e24b6eb85f62ed18cf11d3a98ede139f9fc8b29ea7a86acd0f1ded456b41
+WARNING: No HLS playlist returned (http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,3200kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468134641798,.mp4.csmil/master.m3u8?hdnea=st=1509840130~exp=1509861730~acl=/*800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,3200kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468134641798*~hmac=1082e24b6eb85f62ed18cf11d3a98ede139f9fc8b29ea7a86acd0f1ded456b41)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b07l6b8s/transferformat/hls?cb=58134
+INFO: Getting URL: http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.m3u8?__gda__=1509861674_f3fbb87168611c53fcb859d1cfb752f8
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.m3u8?__gda__=1509861674_f3fbb87168611c53fcb859d1cfb752f8)
+INFO: Getting URL: http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.m3u8?s=1509818474&e=1509861674&h=a275457259429665b927dd362ea22553
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.m3u8?s=1509818474&e=1509861674&h=a275457259429665b927dd362ea22553)
+INFO: Getting URL: http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/d21ddb-b07l6b8s/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.ism/vf_b07l6b8s_594f3f4a-389f-4386-8121-0d461605d27d.m3u8?at=1aBvnJRXca47d85e09143bbfc35a9fb037b4d0da2dbbc52655d3109474680
+INFO: Getting URL: http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,.mp4.csmil/master.m3u8?hdnea=st=1509840074~exp=1509861674~acl=/*800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530*~hmac=949cd559864d7b38927389df65fe86f0c1419ba45d094a139ebbedaa3cb307a4
+WARNING: No HLS playlist returned (http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530,.mp4.csmil/master.m3u8?hdnea=st=1509840074~exp=1509861674~acl=/*800kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132056276,1500kbps/modav/bUnknown-290fa9ec-a4d7-45d1-9f5e-bc51a8b8761f_b07l6b8s_1468132057530*~hmac=949cd559864d7b38927389df65fe86f0c1419ba45d094a139ebbedaa3cb307a4)
+INFO: Found mode 'hvfhd1': (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfsd1': (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxsd1': (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfhigh1': (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfxhigh1': (gip_hvf_iplayer_1216) hls h264 704x396 25fps 1216kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvfstd1': (gip_hvf_iplayer_1069) hls h264 640x360 25fps 1069kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'hvflow1': (gip_hvf_iplayer_803) hls h264 512x288 25fps 803kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode 'subtitles1': (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Found mode 'subtitles2': (captions) http stream (CDN: mf_akamai_uk_plain/10)
+INFO: Found mode 'subtitles3': (captions) http stream (CDN: mf_limelight_uk_plain/20)
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b07ls9r0/transferformat/dash?cb=42042
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b07ls9r0/transferformat/dash?cb=94361
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b07ls9r0/transferformat/hls?cb=55892
+INFO: Getting URL: http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b07ls9r0/transferformat/hls?cb=26188
+INFO: No streams available for 'signed' version (b07ls9r0) - skipping
+INFO: No streams found for 'audiodescribed2' version (p0420l14) - deleting
+INFO: No streams found for 'signed' version (b07ls9r0) - deleting
+INFO: Searching for versions: original
+INFO: Downloading subtitles
+INFO: Getting URL: http://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-05f09af8-de89-4120-92b1-b8ca5633c7ce_b07l6b8s_1509056379494.xml?s=1509818528&e=1509861728&h=592a6e2a443ac9f04dbd0fab455fcd57
+INFO: Downloading subtitles
+INFO: Getting URL: http://vod-sub-uk-live.akamaized.net/iplayer/subtitles/ng/modav/bUnknown-05f09af8-de89-4120-92b1-b8ca5633c7ce_b07l6b8s_1509056379494.xml?__gda__=1509861728_e60ad31eb9df6e246749f4102b38bf59
+INFO: Downloading subtitles
+INFO: Getting URL: http://vod-sub-uk-live.bbcfmt.hs.llnwd.net/iplayer/subtitles/ng/modav/bUnknown-05f09af8-de89-4120-92b1-b8ca5633c7ce_b07l6b8s_1509056379494.xml?s=1509818528&e=1509861728&h=592a6e2a443ac9f04dbd0fab455fcd57
+ERROR: Subtitles download failed
+ERROR: Use --subtitles-only to re-download
+INFO: 1 matching programmes
+
+C:\Users\Acer>

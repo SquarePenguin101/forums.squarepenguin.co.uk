@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Cache IDs for podcasts</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cache IDs for podcasts</div>
+<div id="pagetitle"><h2>Cache IDs for podcasts</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">05-01-2016, 11:20 PM</div>
+</div>
+<div class="message">Are podcasts handled differently in the cache?  I don't seem to be able to request a program using the ID as I would with tv and radio.<br />
+<br />
+Here's a example using a well known programme ...<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --type=podcast archers --sin=24<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+41949:	The Archers - 05/01/2016, Tue, 05 Jan 2016 19:13:00 +0000, BBC Radio 4, Arts<br />
+<br />
+INFO: 1 Matching Programmes<br />
+&#36; get_iplayer --type=podcast 41944<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+WARNING: Unmatched programme index '41944' specified - ignoring<br />
+<br />
+INFO: 0 Matching Programmes<br />
+<br />
+</code></div>
+</div>
+<br />
+(Still on Ubuntu 10.04 for this - I know, I know - if that's of any consequence)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-01-2016, 11:41 PM</div>
+</div>
+<div class="message">It appears that you have never updated the podcast plugin, which was changed years ago. Index numbers for podcasts are &gt; 200000. Try:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --plugins-update</code></div></div>then refresh your podcast cache.<br />
+<br />
+Plugin files have been removed for the next release, so you shouldn't ever need to do this again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">05-01-2016, 11:47 PM</div>
+</div>
+<div class="message">Makes sense - grabbing a podcast by ID is something I haven't had to do for quite a while.<br />
+<br />
+The u[date command didn't work though:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>&#36; get_iplayer --plugins-update<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+ERROR: get_iplayer was installed using the 'apt' package manager.  Please refer to the package manager documentation.<br />
+</code></div>
+</div>
+<br />
+Do I have to go and read the wiki - if so, which section?<br />
+<br />
+Thanks<br />
+Mable</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-01-2016, 12:01 AM</div>
+</div>
+<div class="message">Wiki won't be any help. You appear to have a packaged version of get_iplayer, but it doesn't look like the PPA build (which is no longer available for 10.04 anyway), so not sure what you've done to your system.  The simplest thing would be to download this file:<br />
+<br />
+<a href="https://raw.githubusercontent.com/get-iplayer/get_iplayer/master/plugins/podcast.plugin">https://raw.githubusercontent.com/get-ip...ast.plugin</a><br />
+<br />
+and use it to replace both of these files (if found on your system - you may have either or both):<br />
+<br />
+/usr/share/get_iplayer/plugins/podcast.plugin<br />
+&#36;HOME/.get_iplayer/plugins/podcast.plugin</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-743</h2></div><div class="dateline">06-01-2016, 12:41 AM</div>
+</div>
+<div class="message">Thanks - I'll give it a try.<br />
+<br />
+I've no idea how I ended up with this configuration - I set it up years ago, and, at some stage used the jon-hedgerows ppa.  It's been pretty much automatic updates since then, with iirc, some manual finger-pokery at 2.94, but nothing drastic.  A testament to the 'product' that it's been pain free all the time I've been using it. <br />
+<br />
+Must stop putting off that OS upgrade.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-01-2016, 12:49 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-01-2016, 12:41 AM)</span></cite>Must stop putting off that OS upgrade.</blockquote>I suggest you take up the next LTS release when it appears in April.  Once that release is available, there will be some changes to get_iplayer that will make things a bit more difficult for holdouts with obsolete Linux systems.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Cache IDs for podcasts</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

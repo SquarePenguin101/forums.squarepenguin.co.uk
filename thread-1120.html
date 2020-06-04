@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to convert TS to MP4 - losslessly?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; How to convert TS to MP4 - losslessly?</div>
+<div id="pagetitle"><h2>How to convert TS to MP4 - losslessly?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1493</h2></div><div class="dateline">12-12-2016, 05:51 PM</div>
+</div>
+<div class="message">I managed to download some BBC programmes from outside the UK using several free VPN connections.<br />
+It works, but has issues in the final conversion step from "ts" to "mp4" format.<br />
+Some were converted to mp4 without errors, most however result in errors ending up with only the "ts" file.<br />
+Now, "ts" files play fine with VLC, but I'd rather have the "mp4" container format as this can include metadata.<br />
+Is it possible to turn these "ts" manually and losslessly into "mp4"?<br />
+<br />
+This is the command prompt dialogue I got from one such problematic download :<br />
+<br />
+C:\Program Files\get_iplayer&gt;perl.exe get_iplayer.pl "http://www.bbc.co.uk/iplayer/episode/b08445rk/dangerous-earth-4-aurora/"<br />
+get_iplayer 2.97-windows.0, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b08445rk using type: tv<br />
+INFO Trying to stream pid using type tv<br />
+INFO: pid found in cache<br />
+Matches:<br />
+1049:   Dangerous Earth - Aurora, BBC Four, b08445rk<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hvfvhigh1,hvfvhigh2,hlsvhigh1,hvfhigh1,hvfhigh2,hlshigh1,hvfstd1,hvfstd2,h<br />
+lsstd1,hvflow1,hvflow2 modes will be tried for version original<br />
+INFO: Trying hvfvhigh1 mode to record tv: Dangerous Earth - 4. Aurora<br />
+INFO: File name prefix = Dangerous_Earth_-_4._Aurora_b08445rk_original<br />
+<br />
+INFO: Begin recording file: C:\Documents and Settings\<span style="font-weight: bold;" class="mycode_b">USERNAME</span>\Desktop\Dangerous_Earth_-_4._Aurora_b08445rk_original.partial.mp4.ts<br />
+INFO: Recorded: 361.41MB in 00:18:25 at  2679kbps to C:\Documents and Settings\<span style="font-weight: bold;" class="mycode_b">USERNAME</span>\Desktop\Dangerous_Earth_-_4._Aurora_b08445rk_original.partial.mp4.ts<br />
+INFO: Begin converting file: C:\Documents and Settings\<span style="font-weight: bold;" class="mycode_b">USERNAME</span>\Desktop\Dangerous_Earth_-_4._Aurora_b08445rk_original.partial.mp4.ts<br />
+<span style="font-style: italic;" class="mycode_i">[mp4 @ 02920060] pts (3600) &lt; dts (7200) in strea</span><span style="font-style: italic;" class="mycode_i">m 0</span><br />
+<span style="font-style: italic;" class="mycode_i">av_interleaved_write_frame(): Invalid argument</span><br />
+INFO: Command exit code 1 (raw code = 256)<br />
+WARNING: Conversion failed - retaining C:\Documents and Settings\<span style="font-weight: bold;" class="mycode_b">USERNAME</span>\Desktop\Dangerous_Earth_-_4._Aurora_b08445rk_original.partial.mp4.ts</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-12-2016, 06:27 PM</div>
+</div>
+<div class="message">That programme works fine in the UK. Since use of get_iplayer to download TV programmes from outside the UK is not supported and use of get_iplayer on Windows without the supplied batch files is also not supported, it is an unfortunate double-whammy for you, so I'll be closing this thread. There are many media converters you can use to repackage TS files as MP4. If you want to know how get_iplayer does it, use <kbd>--verbose</kbd> and it will print the ffmpeg command it uses to do the re-muxing.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; How to convert TS to MP4 - losslessly?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

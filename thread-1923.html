@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I select programme version for The Code of the Woosters (b007ww6f)?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I select programme version for The Code of the Woosters (b007ww6f)?</div>
+<div id="pagetitle"><h2>How do I select programme version for The Code of the Woosters (b007ww6f)?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">07-11-2018, 08:48 AM</div>
+</div>
+<div class="message">I can play via the web (Firefox on Win10) the<br />
+The Code of the Woosters - <span style="font-style: italic;" class="mycode_i">The Plot Thickens</span><br />
+From: <br />
+ <a href="https://www.bbc.co.uk/programmes/b007ww5n">https://www.bbc.co.uk/programmes/b007ww5n</a><br />
+which first delivers me to Sounds:<br />
+  <a href="https://www.bbc.co.uk/sounds/play/b007ww6f">https://www.bbc.co.uk/sounds/play/b007ww6f</a><br />
+<br />
+But when I use the PVR to record either of those URLs I immediately get:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>INFO: No versions of this programme were selected (available versions: shortened)<br />
+<br />
+Recording complete</code></div></div>and no download is to be found.<br />
+<br />
+I've removed the line <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>radiomode worse</code></div></div>from my options file and tried again  - but still no download.<br />
+<br />
+Admittedly I am still running v3.05 (on Win10).<br />
+I'll be sharp to upgrade if the latest version doesn't have this problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">07-11-2018, 11:04 AM</div>
+</div>
+<div class="message">Okay I just upgraded to the latest version and the error message is now more verbose<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Episodes:<br />
+The Code of the Woosters - The Plot Thickens, BBC Radio 4 Extra, b007ww6f<br />
+INFO: 1 total programmes<br />
+<br />
+INFO: No versions of this programme were selected (available versions: shortened)<br />
+WARNING: PVR Run: 'ONCE_b007ww6f': 1 download failure(s)</code></div></div>but still present.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">07-11-2018, 12:20 PM</div>
+</div>
+<div class="message">The output is telling you what is wrong, as you alluded to:<br />
+<br />
+<kbd>INFO: No versions of this programme were selected (available versions: shortened)</kbd><br />
+<br />
+It's telling you the available version is of type 'shortened', and you haven't selected to download a version of that type. <br />
+<br />
+The <a href="https://github.com/get-iplayer/get_iplayer/wiki/options#recording-options">Recording Options section</a> of the Options page in the wiki explains how to select different versions (it's the last entry in that section of the table).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">07-11-2018, 02:09 PM</div>
+</div>
+<div class="message">Thanks!<br />
+<br />
+Makes sense - just it as very rare event I hadn't researched the remedy.<br />
+Which for me was to edit the options file and temporarily add the line<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>versionlist shortened</code></div></div><br />
+Happy now!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">08-11-2018, 01:53 PM</div>
+</div>
+<div class="message">On a related note:<br />
+<br />
+It seems that there may have been some change of policy at BBC Radio<br />
+with the advent of <span style="font-style: italic;" class="mycode_i">Sounds</span>.<br />
+<br />
+Today's <span style="font-style: italic;" class="mycode_i">In Our Time</span> is available only as a podcast rather than the plethora of "versions" before.<br />
+Up'til now I have shunned podcasts because they have been in mono for the lower bit rate versions that I like to download.<br />
+Now I'll have to configure my options to accept them:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>radiomode worse<br />
+versions original,shortened,podcast</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2018, 08:37 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (07-11-2018, 02:09 PM)</span></cite>Makes sense - just it as very rare event I hadn't researched the remedy.<br />
+Which for me was to edit the options file and temporarily add the line<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>versionlist shortened</code></div></div></blockquote>For everyone else: Use command line options or Web PVR settings for temporary overrides. It is never necessary to directly edit your options file.<br />
+<blockquote class="mycode_quote"><cite><span> (08-11-2018, 01:53 PM)</span></cite>It seems that there may have been some change of policy at BBC Radio<br />
+with the advent of <span style="font-style: italic;" class="mycode_i">Sounds</span>.<br />
+<br />
+Today's <span style="font-style: italic;" class="mycode_i">In Our Time</span> is available only as a podcast rather than the plethora of "versions" before.</blockquote>You can't extrapolate from a single data point. This morning's "From Our Own Correspondent" is just the opposite: the podcast version is currently missing. Reserve judgement at least until the shortened version of "In Our Time" has been broadcast tonight. They may simply be tardy in production.  <br />
+<blockquote class="mycode_quote"><cite><span> (08-11-2018, 01:53 PM)</span></cite>Up'til now I have shunned podcasts because they have been in mono for the lower bit rate versions that I like to download.</blockquote>Don't confuse the audio format in the "podcast" version downloaded by get_iplayer and the audio in the MP3 file offered in the podcast feed. They are not the same.<br />
+<blockquote class="mycode_quote"><cite><span> (08-11-2018, 01:53 PM)</span></cite>Now I'll have to configure my options to accept them:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>radiomode worse<br />
+versions original,shortened,podcast</code></div></div></blockquote>For everyone else: Don't set <kbd>versionlist</kbd> in preferences as above. It is redundant and a potential source of errors, especially if you also download TV programmes. There may be a few cases where you prefer the podcast version of a particular radio programme, but use presets or ad hoc options for those. By default, you don't need any special configuration if the podcast is the only version available, as in this isolated case. If it should happen that you get an errant podcast version you don't want, just force a re-download if/when the original version becomes available.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">09-11-2018, 11:34 AM</div>
+</div>
+<div class="message">Thanks user-2<br />
+<br />
+lots of things I didn't know clarified by your post.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I select programme version for The Code of the Woosters (b007ww6f)?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

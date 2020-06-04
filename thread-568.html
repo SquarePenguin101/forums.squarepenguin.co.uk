@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - RTMPdump failure using fresh install</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; RTMPdump failure using fresh install</div>
+<div id="pagetitle"><h2>RTMPdump failure using fresh install</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-696</h2></div><div class="dateline">27-10-2015, 04:36 PM</div>
+</div>
+<div class="message">fresh install of latest get_iplayer won't download. gives error with RTMPdump.  This just started happening today. was last working on friday/saturday.<br />
+<br />
+<br />
+--verbose output<br />
+<a href="http://pastebin.com/aYu8J9H0">http://pastebin.com/aYu8J9H0</a><br />
+<br />
+<br />
+WARNING: Your version of rtmpdump/flvstreamer does not support SWF Verification<br />
+WARNING: You may see this warning if rtmpdump has malfunctioned<br />
+WARNING: Use --verbose to print the output from rtmpdump<br />
+WARNING: rtmpdump/flvstreamer 1.8 or later is required - please upgrade<br />
+<br />
+rtmpdump being installed with the installer is dated 4/2014</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-10-2015, 04:47 PM</div>
+</div>
+<div class="message">That's not the <kbd>--verbose</kbd> output.  Do as the error messages instruct and re-run with <kbd>--verbose</kbd> on the command line. You rtmpdump isn't installed properly or something on your system is interfering with it.  The <kbd>--verbose</kbd> output might provide a clue, but no guarantee.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-10-2015, 04:59 PM</div>
+</div>
+<div class="message">Also, change <kbd>--modes=best</kbd> to <kbd>--modes=flashvhigh1</kbd> in order avoid a lot of useless repetitive output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-696</h2></div><div class="dateline">27-10-2015, 05:00 PM</div>
+</div>
+<div class="message">sorry I copied the wrong file<br />
+<br />
+<br />
+<a href="http://pastebin.com/4DsKYRvr">http://pastebin.com/4DsKYRvr</a><br />
+<br />
+<br />
+<br />
+here's a cleaner one as requested<br />
+<a href="http://pastebin.com/JzapHqbf">http://pastebin.com/JzapHqbf</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-10-2015, 08:21 PM</div>
+</div>
+<div class="message">Thanks.  That confirms that something rtmpdump can't run.  From the get_iplayer console window run:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>.&#92;RTMPDump&#92;rtmpdump-20140302-git-79459a2-win32&#92;bin&#92;rtmpdump.exe</code></div></div>at the prompt.  Post whatever is printed as a result.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-696</h2></div><div class="dateline">27-10-2015, 11:54 PM</div>
+</div>
+<div class="message">C:\Program Files (x86)\get_iplayer&gt;.\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+ERROR: You must specify a hostname (--host) or url (-r "rtmp://host[:port]/playpath") containing a hostname</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-10-2015, 01:13 AM</div>
+</div>
+<div class="message">Thanks. Since you can run rtmpdump at the prompt, it appears that something is interfering with get_iplayer's ability to spawn a shell in which to run rtmpdump.  This problem appears in various guises. The likely culprits are anti-virus or "security" packages.  Try COMPLETELY disabling all such software (including related system services, could be a PITA) and testing again.  You can also try booting in safe mode with networking - if it works there that would tend to confirm interference by some third-party software in normal mode. You can also try <kbd>--modes=hlsbest</kbd> to see if the problem occurs when shelling out to run ffmpeg instead of rtmpdump.  There is no way for us to know what you have done to your system, so I'm afraid we can't really help beyond that. You'll find similar reports elsewhere in the forums, most without resolution, unfortunately.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-696</h2></div><div class="dateline">29-10-2015, 02:30 AM</div>
+</div>
+<div class="message">well this was slightly embarassing... I had shut off file and print sharing. enabling it again allowed rtmpdump to startup just fine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">29-10-2015, 09:48 PM</div>
+</div>
+<div class="message">Thanks for the update.  I can't duplicate that problem, and I won't pretend that the solution makes sense, but I'm glad you found a fix for your system. I guess we can file that under "Windows - what can you do, eh?".</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-696</h2></div><div class="dateline">28-11-2015, 10:16 PM</div>
+</div>
+<div class="message">I think I figured out the issue. It has to do with a combo wireless ethernet/bluetooth device made by atheros (AR9462). The driver is finicky to say the least. takes very little effort to blow out the software driver and watch windows 8.1 stick its finger in the dyke mucking it up even worse. Reinstalling the Atheros 10.0.0.263 Rev. A driver seems to fix the rtmpdump issue.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; RTMPdump failure using fresh install</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

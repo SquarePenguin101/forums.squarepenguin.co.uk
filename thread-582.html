@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Web PVR Issues</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR Issues</div>
+<div id="pagetitle"><h2>Web PVR Issues</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1020</h2></div><div class="dateline">19-11-2015, 01:43 AM</div>
+</div>
+<div class="message">I have recently reinstalled get_iplayer on Windows 10.<br />
+<br />
+Now, when using the Web PVR I select a programme to record, click record, and a new tab is opening in the browser showing details "Recording the following programme" details of the PID etc and "Info: 1 Matching programmes"<br />
+<br />
+Before the current install, the tab would show log details about the programme duration, resolution etc<br />
+<br />
+Now, none of the log information is displayed even though the programme downloads correctly.<br />
+<br />
+I seem to have the same problem with the "Refresh Cache" function i.e. a new tab is opened, some text is displayed, and the cache is updated, but now details of the programmes added to the cache are displayed in the browser tab.<br />
+<br />
+Any ideas why information / logs are not being passed to / displayed by the Web PVR?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-11-2015, 12:14 PM</div>
+</div>
+<div class="message">There is no way to know what you are really talking about unless you put all the output into a file and post it as an attachment, or post a screen shot. It sounds like you set <kbd>--quiet</kbd> in preferences, but only you would know. You would have had to do that from the command line.  Chrome had a problem up to version 38 where it would buffer get_iplayer output and not display it in the browser.  However, the latest versions of all browsers work fine in Win 10.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1020</h2></div><div class="dateline">19-11-2015, 09:41 PM</div>
+</div>
+<div class="message">Looks like Windows Edge problem to me. Is there a way to make Chrome the default browser for the PVR?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-11-2015, 11:03 PM</div>
+</div>
+<div class="message">No problems here with Edge, so not a general issue.  <br />
+<br />
+The installed scripts launch the configured URL shortcut handler, i.e., the system default browser. To use Chrome only for the web pvr, I think you would need to edit get_iplayer.cgi.cmd and replace opening pvr_manager.url with an appropriate command for Chrome.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1020</h2></div><div class="dateline">20-11-2015, 09:06 AM</div>
+</div>
+<div class="message">Works fine using Chrome (used to work fine with MS Edge). Recently reset Windows and applied updates. Guess I will stay with Chrome. Many thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-11-2015, 11:52 AM</div>
+</div>
+<div class="message">I saw no problems with Edge before or after the recent update, though it is entirely possible the update broke something on your machine. Even so, there is nothing get_iplayer can do about it.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1020</h2></div><div class="dateline">21-11-2015, 12:03 AM</div>
+</div>
+<div class="message">Chrome working okay but will only allow 6 get_iplayer downloads simultaneously. After that Search tab will not refresh.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1020</h2></div><div class="dateline">28-11-2015, 01:08 AM</div>
+</div>
+<div class="message">Some more information re: Microsoft Edge not displaying log data<br />
+<br />
+When I change the zoom setting (e.g. from 150% to 125%) the data appears. However, it does not get updated. To see the complete log for the download I either need to wait until it has completed or change the zoom setting periodically.<br />
+<br />
+Note that this is the problem is present even after a completely new Windows 10 install (all data erased).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-11-2015, 02:35 AM</div>
+</div>
+<div class="message">It's possible that zooming causes an output flush along with the window repaint, but it could be that the window just isn't being updated for some reason, perhaps due to a lower-level graphics problem. But again, that is unrelated to get_iplayer. All get_iplayer does is push text to the browser.  If it won't display that text, there isn't anything get_iplayer can do about it. I have no clue why your particular setup is misbehaving.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">28-11-2015, 02:39 AM</div>
+</div>
+<div class="message">I suppose one thing to do would be to find another Windows 10 box with different graphics hardware and see if the problem occurs there. AFAIK, output buffering by the browser isn't adjustable.<br />
+<br />
+EDIT: That's a bit of a reach, but might help distinguish a display problem from some other type of problem.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Web PVR Issues</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

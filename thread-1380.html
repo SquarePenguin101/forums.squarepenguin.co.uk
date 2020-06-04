@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Massive m4a files</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Massive m4a files</div>
+<div id="pagetitle"><h2>Massive m4a files</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1793</h2></div><div class="dateline">06-05-2017, 11:18 PM</div>
+</div>
+<div class="message">I am using get_iplayer-3.01.0.exe and the automated search function which automatically opens up in firefox.<br />
+<br />
+I did this because the older get_iplayer stopped being able to download the BBC shows. These were usually 150 Meg per 3hrs. <br />
+<br />
+Using this version the 3hr shows are 500Meg. Is there a command I can add to the automated gui to make mp3s or reduce the size?<br />
+<br />
+My sincere apologies if this is a repeat question but I scoured the guides and forum and did not find an answer.<br />
+<br />
+I also have a sight deficiency so it takes a long time for me to read websites and to type.<br />
+<br />
+Best regards,<br />
+<br />
+Magus1</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1794</h2></div><div class="dateline">07-05-2017, 07:27 AM</div>
+</div>
+<div class="message">Your settings are configured to record the best available radio quality (320kbps). An hour's recording at this level is approximately 150MB.<br />
+<br />
+The next best setting is 128kbps. An hour at this level normally takes up 60MB.<br />
+<br />
+You need to configure the <a href="https://github.com/get-iplayer/get_iplayer/wiki/webpvr#settings">SETTINGS</a> in your PVR Manager to use a lower than maximum quality.<br />
+<br />
+Refer to these pages for radio modes:<br />
+<br />
+1. <a href="https://github.com/get-iplayer/get_iplayer/wiki/webpvr#settings">https://github.com/get-iplayer/get_iplay...r#settings</a><br />
+2. <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes#radio">https://github.com/get-iplayer/get_iplay...odes#radio</a><br />
+3. <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#radio-modes">https://github.com/get-iplayer/get_iplay...adio-modes</a><br />
+<br />
+You could, of course, set a default lower quality in your Command Line Interface (CLI) using the command:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>get_iplayer --prefs-add --radiomode=better</blockquote>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1026</h2></div><div class="dateline">07-05-2017, 10:52 AM</div>
+</div>
+<div class="message">If you are wanting to end up with an MP3 file, then you're best bet is to download the best audio file at 320kbps M4A and then convert (transcode) to MP3 (with the LAME encoder) using the LAME settings that result in an MP3 of your preferred size. <br />
+<br />
+Transcoding from a 128kbps M4A to MP3 will be worse than going from 320kbps M4A to MP3 (always start with the best source quality). Ideally you'd not want to lossy transcode anyway, but this is your choice.<br />
+<br />
+This is one way to transcode an M4A (AAC) file to an MP3: <a href="https://github.com/get-iplayer/get_iplayer/wiki/aactomp3">https://github.com/get-iplayer/get_iplay...i/aactomp3</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1793</h2></div><div class="dateline">12-05-2017, 02:50 PM</div>
+</div>
+<div class="message">Thank you to both of you!<br />
+<br />
+Your answers have helped massively.<br />
+<br />
+Best regards,<br />
+<br />
+Magus</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Massive m4a files</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

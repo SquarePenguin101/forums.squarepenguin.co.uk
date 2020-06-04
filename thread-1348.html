@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Excluding already-downloaded episodes from PVR downloads</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Excluding already-downloaded episodes from PVR downloads</div>
+<div id="pagetitle"><h2>Excluding already-downloaded episodes from PVR downloads</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1764</h2></div><div class="dateline">03-05-2017, 07:33 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I've been using Get iPlayer Automator (don't worry, query is not about that) for some time, but it no longer seems to be supported, so I've moved over to get_iplayer using the CLI.<br />
+<br />
+I want to set up a bunch of program searches in the PVR, but I'd also like to exclude episodes I already have downloaded. Is there an easy way to achieve that?<br />
+<br />
+Thanks for any help you can offer.<br />
+<br />
+b0ne5</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 07:49 PM</div>
+</div>
+<div class="message">Take your download history from GiA:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/Users/&lt;username&gt;/Library/Application Support/Get iPlayer Automator/download_history</code></div></div><br />
+If you haven't yet done any get_iplayer downloads, copy it to:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>/Users/&lt;username&gt;/.get_iplayer/download_history</code></div></div><br />
+If you have already done some get_iplayer downloads, use a text editor to insert the contents of your GiA download history at the top of the get_iplayer download history file. Don't leave blank lines between old and new data.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1764</h2></div><div class="dateline">03-05-2017, 07:56 PM</div>
+</div>
+<div class="message">Thanks Dinky. Great idea, only one slight flaw... for reasons unknown I decided to remove GiA and all it's associated preferences and history files using AppCleaner.<br />
+<br />
+Any other suggestions?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-05-2017, 08:18 PM</div>
+</div>
+<div class="message">Essentially, you have to get all the PIDs for shows you have downloaded and insert fake records in your download history. See: <a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg09474.html">http://www.mail-archive.com/get_iplayer@...09474.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1743</h2></div><div class="dateline">04-05-2017, 09:22 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (03-05-2017, 07:56 PM)</span></cite>Thanks Dinky. Great idea, only one slight flaw... for reasons unknown I decided to remove GiA and all it's associated preferences and history files using AppCleaner.</blockquote><br />
+Are the files still in the trash? Or on a previous (Time Machine?) backup? By far the easiest way will be for you to somehow locate your old download_history file if it exists somewhere. I moved mine over from GiA and it worked like a charm.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1764</h2></div><div class="dateline">04-05-2017, 07:09 PM</div>
+</div>
+<div class="message">Sadly not, so I think amending the history manually will be my only choice.<br />
+<br />
+Thanks all for your help.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-9.html">macOS Forums</a> &gt; <a href="forum-11.html">macOS General Help</a> &gt; Excluding already-downloaded episodes from PVR downloads</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

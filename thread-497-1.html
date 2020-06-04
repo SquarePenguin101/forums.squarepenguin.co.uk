@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Duration / seek problem with iPod</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Duration / seek problem with iPod</div>
+<div id="pagetitle"><h2>Duration / seek problem with iPod</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-497-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">07-08-2015, 02:50 PM</div>
+</div>
+<div class="message">Hi - I've been using get_iplayer for years on my Mac with no problem, but sometimes it missed shows because I was away or using a VPN so built an always on Raspberry Pi server with Raspbian.<br />
+<br />
+Thing is it's downloading the shows fine but they have screwed up duration on my iPod. If you try and 'seek' to a position in the show (say you want to skip to 40 mins in) it then goes crazy and then moves to the end of the bar saying something mad like 4:0:0: or higher (when it's a 2 hour show). It plays from the start fine, but if I try to resume (with iTunes remember position feature) or skip it actually gets to halfway position where it 'zooms' to and then stops early. <br />
+<br />
+So rather annoying since long shows I need to be able to 'resume' where I was?<br />
+<br />
+Happened to me with the last John Cooper Clarke 6Music standin from last weekend, and the recent Rodigan shows on 1Xtra, seems to be all the shows I've tried do this but only ones from the Raspberry.<br />
+<br />
+Any idea? Thinking this might be a rtmpdump issue? Or maybe I missed something in the setup, although I installed get_iplayer from private repository e.g. <a href="http://raspi.tv/2014/get_iplayer-raspberry-pi-update">http://raspi.tv/2014/get_iplayer-raspberry-pi-update</a> - I'll leave a comment over there too.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-08-2015, 04:30 PM</div>
+</div>
+<div class="message">It's more likely that your iPod doesn't like the output from Raspian version of avconv or ffmpeg.  Whichever one you're using, try a recent version of the other.  Before doing that though, first try adding <kbd>--ffmpeg-radio-opts="-movflags rtphint"</kbd> to get_iplayer command.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">07-08-2015, 11:41 PM</div>
+</div>
+<div class="message">Thanks! I'll try that...not sure which I'm using, avconv or ffmpeg. <br />
+<br />
+Will take me a while to check if it works since my broadband is down (writing this via a 3G dongle, hopefully they fix it tomorrow!)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">08-08-2015, 07:30 PM</div>
+</div>
+<div class="message">Ugh checking it's a really old or special build of ffmpeg:<br />
+<br />
+ffmpeg version 0.8.17-6:0.8.17-1+rpi1, Copyright (c) 2000-2014 the Libav developers<br />
+  built on Mar 25 2015 00:39:58 with gcc 4.6.3<br />
+<br />
+Although sadly still without internet (thank you SSE - not) it makes it hard to update it, because internet sharing and my dongle just don't work in the Pi. :-(<br />
+<br />
+Anyone got a good guide for compiling FFMPEG for Get_iplayer on the Raspi/Raspbian? What libraries are needed?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">09-08-2015, 12:52 AM</div>
+</div>
+<div class="message">There's a guide here<br />
+<a href="https://trac.ffmpeg.org/wiki/CompilationGuide/RaspberryPi">https://trac.ffmpeg.org/wiki/Compilation...aspberryPi</a><br />
+<br />
+It works on my RPIB.<br />
+You need to follow it to the letter, paying particular attention to versions and options.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Target options<br />
+<br />
+    (Important) Change "Target architecture" to "arm"<br />
+    (Important) Leave "Endianness" set to "Little endian"<br />
+    (Important) Leave "Bitness" set to "32-bit"</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">09-08-2015, 02:39 AM</div>
+</div>
+<div class="message">Thanks! I used these instructions <a href="http://owenashurst.com/?p=242">http://owenashurst.com/?p=242</a>  but will try the longer ones if it doesn't work...sadly can't 'try' it because the Pi steadfastly refuses to connect to my phone wifi hotspot, Internet sharing, dongle...grr...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">16-08-2015, 04:57 AM</div>
+</div>
+<div class="message">I tried "--ffmpeg-radio-opts="-movflags rtphint" and installing new compiled versions of ffmpeg but that didn't fix the issue...then lib-avutil from repository then compiling it <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=38&amp;t=112391">https://www.raspberrypi.org/forums/viewt...8&amp;t=112391</a> with no success...isn't it supposed to use avconv first?<br />
+<br />
+For example downloading Kate Tempest 15/08 on 6Music it still skips forward if I want to search, and probably would cut off early on the iPod - it's a 7th Gen Nano. iTunes plays it fine.<br />
+<br />
+I can try the <a href="https://trac.ffmpeg.org/">https://trac.ffmpeg.org/</a> instructions but I'm guessing it's probably the same, it won't fix it...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">16-08-2015, 06:06 AM</div>
+</div>
+<div class="message">Trying all this cross compiling bobbins and it's way beyond my knowledge.<br />
+<br />
+I mean '--prefix=/my/path/were/i/keep/built/arm/stuff' ?!? I have no fucking idea...:-/ How to make it REALLY hard in one tutorial.<br />
+<br />
+I'll go back to the repo version, it doesn't matter whatever I install, it creates broken m4as. If that keeps annoying me, I might ditch the Raspi, and go back to using my main computer. Shame....such a nice idea, and means I don't get issues with VPN and BBC's geo-checking.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">18-08-2015, 07:36 AM</div>
+</div>
+<div class="message">Tried Avconv, after uninstalling and resinstalling get_iplayer manually just for giggles...the standard FFMPEG off the repository created m4a files that crashed my iPod! Ow.<br />
+<br />
+Avconv (with lib fdk aac seemingly) doesn't do that, but does the duration thing mentioned above where you can't skip forward beyond about halfway and numbers dial up to 99:0:0 or more with the duration bar at the end....currently showing 118:00:0 *sigh*. At least it doesn't stop playing this time...just keeps dialling up to infinity, but does mean you can't skip forward or resume. Testing with Jonny Trunk standing in for Jarvis Cocker on 6Music.<br />
+<br />
+Now gone back to using my Mac, not being able to listen to shows on my iPod is a deal breaker...must say with Samba issues, weird Shairport stoppages and it deleting one of my drives (!) I'm getting a bit fed up of the Pi2's flakiness. <br />
+<br />
+Nice idea, but...classic British engineering in practice. BTW never overclock them, it kills/corrupts the SD card!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">18-08-2015, 07:53 AM</div>
+</div>
+<div class="message">Given the fact it seems a lot of the newer FFMPEG etc. are on PPAs and Ubuntu, and yes they sort-of work on Raspbian - I might give Ubuntu a try, currently using Raspbian (Wheezy Debian based) and if that's a fail then ditch the Pi.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-08-2015, 12:14 PM</div>
+</div>
+<div class="message">You haven't provided enough information for anyone else to see what you're doing.  Unless you show at least the ffmpeg version string included in get_iplayer output for each of your results, nobody else can know whether or not you've tested properly.  All we know for sure from your posts is that you started out with an obsolete version of the libav-tools package, which contains an even more obsolete version of ffmpeg (they eventually stopped packaging ffmpeg with libav-tools in later versions).  The Raspbian repo contains up-to-date versions of both ffmpeg (2.7.2) and libav-tools (11.4).  If you did in fact properly test get_iplayer with those versions and neither one worked, then throwing in the towel is a reasonable response. It's probably not worth the hassle of making a custom build in that case.  Since you already know that you can produce working files on a Mac, whatever your iPod doesn't like appears to be a byproduct of creating files on a Pi, assuming you are using an equivalent version of ffmpeg on both platforms.  You could try using the internal AAC encoder instead of whatever external encoder is built in, but the problem is more likely to be with the MP4 container rather than the audio data.  You can also just try re-encoding to MP3.  It's slower, but may produce working files.  Apple's products can be a mystery. There was a time when iTunes had the same problems with files produced by ffmpeg, even if generated on a Mac, and old versions of ffmpeg produced files that would crash older iPods.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 03:32 PM</div>
+</div>
+<div class="message">OK well here's the latest one (ffmpeg -v which I think is the same as what get_iplayer shows), which indeed is from either the Raspbian or Hedgerows repository:<br />
+<br />
+ffmpeg version git-2015-08-08-e66a43f Copyright (c) 2000-2015 the FFmpeg developers<br />
+  built with gcc 4.6 (Debian 4.6.3-14+rpi1)<br />
+  configuration: --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree --enable-libaacplus --enable-librtmp --enable-libmp3lame<br />
+  libavutil      54. 30.100 / 54. 30.100<br />
+  libavcodec     56. 57.100 / 56. 57.100<br />
+  libavformat    56. 40.101 / 56. 40.101<br />
+  libavdevice    56.  4.100 / 56.  4.100<br />
+  libavfilter     5. 32.100 /  5. 32.100<br />
+  libswscale      3.  1.101 /  3.  1.101<br />
+  libswresample   1.  2.101 /  1.  2.101<br />
+  libpostproc    53.  3.100 / 53.  3.100<br />
+<br />
+And yes I tried all the avconv (libav-tools) and ffmpeg in the Raspbian repository, that was the first ones I tried...I then tried a custom build for ffmpeg. Tried the "--ffmpeg-radio-opts="-movflags rtphint" with the Raspbian repository version, and the other builds, in fact left it in place for all of them. Still no joy.<br />
+<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+<br />
+rtmpdump is the 2010 version, I think like AtomicParsley (AtomicParsley version: 0.9.4-hg91.472d5fe6fb04-0ppa2 (utf8)) that's the latest - I went through all the dependencies checking to see if they were the latest. <br />
+<br />
+But I am subscribed to the get-iplayer jon hedgerows source-list and recently tried the PPA testing one jon-hedgerows-get-iplayer-testing-wheezy (even though I know it's Ubuntu and I am hacking it a bit, but desperate needs must) and removed and re-installed get_iplayer manually as described on this site (all the PERL stuff, downloading the script direct etc.)<br />
+<br />
+No difference though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 04:05 PM</div>
+</div>
+<div class="message">Good point about MP3, shame since I'm guessing you're losing a bit of quality and the AAC sounds great...but a good interim measure.<br />
+<br />
+I am of the mind that switching to Ubuntu might fix it...seems most of the PPAs and repositories for the various binaries are Ubuntu focused, and although Raspbian is the Pi 'standard'  to say it's flaky and fiddly would be an understatement - not just for this, but generally. I've also had more experience with Ubuntu although I do want to switch to Debian in future. <br />
+<br />
+I've said this before about the Pi2 - I'm amazed they inflict them on children, because it's far from bulletproof, does odd things and really easy to accidentally nuke. If I, with 3 decades of computer experience, and many years of Ubuntu/VPS server admin experience have to scratch my head, then I don't know how the kids cope....</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-08-2015, 04:25 PM</div>
+</div>
+<div class="message">Only ffmpeg and AtomicParsley touch the MP4 container, so rtmpdump and Perl wouldn't be relevant.  To be complete, you could test with <kbd>--no-tag</kbd> to take AtomicParsley out of the equation.  You should also try <kbd>--modes=hls</kbd> just in case the source makes any difference.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-08-2015, 04:33 PM</div>
+</div>
+<div class="message">If Ubuntu is the solution, please post your result.  This is a niche issue, but you're probably not the only get_iplayer user with a 7th gen Nano, so it would be good to have any solution recorded for posterity.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 04:36 PM</div>
+</div>
+<div class="message">Thanks will try that now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 05:00 PM</div>
+</div>
+<div class="message">So say:<br />
+<br />
+get_iplayer --get 12491  --modes=hls --no-tag --ffmpeg-radio-opts="-movflags rtphint" --force<br />
+<br />
+- (force is because I downloaded it before and on my Mac to compare) if that's was correct - still does the same seek problem in the iPod, if you try and skip ahead more than at the 10 minute mark (for an 1 hour show, it can be 20-30 mins for a 2-3 hour show). Numbers go to infinity, the bar skips to the end and you can't skip back, show quite often ends early.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 05:13 PM</div>
+</div>
+<div class="message">MP3 is fine, no seek problem. Slightly lower quality though.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-08-2015, 05:30 PM</div>
+</div>
+<div class="message">You can try it without <kbd>--ffmpeg-radio-opts="-movflags rtphint"</kbd> just to cover the bases, but I would stop there. If you're transcoding to MP3 via get_iplayer, you can try different values for the <kbd>--mp3vbr</kbd> option to see if the output is improved, though it's probably only worth the bother for music programmes.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">19-08-2015, 05:45 PM</div>
+</div>
+<div class="message">Cool, thanks for all your help.<br />
+<br />
+BTW is HLS better source quality than FlashAAC? Or are they about the same?</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-497-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Duration / seek problem with iPod</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

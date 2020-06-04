@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Is no-artwork option working</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is no-artwork option working</div>
+<div id="pagetitle"><h2>Is no-artwork option working</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-483-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">23-07-2015, 11:20 PM</div>
+</div>
+<div class="message">My prefs<br />
+<br />
+--<br />
+fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+noartwork = 1<br />
+aactomp3 = 1<br />
+isodate = 1<br />
+--<br />
+<br />
+Previously I wasn't getting artwork, now I am. Is it broken just for me? or is it something else I have/haven't set?<br />
+<br />
+I can remove it with mp3tag, so only a minor problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2015, 12:08 AM</div>
+</div>
+<div class="message">Broken just for you, I'm afraid.  If the above was not output from <kbd>get_iplayer --prefs-show</kbd>, run it and make sure the saved options look correct.  Post the entire listing (scrub your username) along with a full command that demonstrates the problem.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">24-07-2015, 12:40 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-07-2015, 12:08 AM)</span></cite>Broken just for you, I'm afraid.  If the above was not output from <kbd>get_iplayer --prefs-show</kbd>, run it and make sure the saved options look correct.  Post the entire listing (scrub your username) along with a full command that demonstrates the problem.</blockquote><br />
+My show prefs<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>c:\Program Files (x86)\get_iplayer&gt;get_iplayer --prefs-show<br />
+Options in 'C:\Users\user0/.get_iplayer/options'<br />
+        isodate = 1<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+        noartwork = 1<br />
+        aactomp3 = 1</code></div>
+</div>
+<br />
+my command line<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer&gt;get_iplayer.cmd --type=radio --pid=b062kcdv --force --no-artwork</code></div></div>#doesn't work - image is still embedded<br />
+<br />
+adding --no-tag works, I'll add this for certain shows.<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer.cmd --type=radio --pid=b062kcdv --force --notag</code></div></div><br />
+output without --notag<br />
+--<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>c:\Program Files (x86)\get_iplayer&gt;get_iplayer.cmd --type=radio --pid=b062kcdv --force<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b062kcdv using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: The Archers - 17725. 23/07/2015<br />
+INFO: File name prefix = The_Archers-s01e17725-The_Archers-2015-07-24<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:   duration              775.77<br />
+INFO:   moovPosition          36.00<br />
+INFO:   audiocodecid          mp4a<br />
+INFO:   aacaot                2.00<br />
+INFO:   audiosamplerate       48000.00<br />
+INFO:   audiochannels         2.00<br />
+INFO: tags:<br />
+INFO:   -®too                 Lavf56.15.102<br />
+INFO: trackinfo:<br />
+INFO:   length                37236936.00<br />
+INFO:   timescale             48000.00<br />
+INFO:   language              und<br />
+INFO: sampledescription:<br />
+INFO:   sampletype            mp4a<br />
+12725.938 kB / 775.76 sec (99.9%)<br />
+Download complete<br />
+ffmpeg version 2.2.3 Copyright (c) 2000-2014 the FFmpeg developers<br />
+  built on Jun 19 2014 20:24:25 with gcc 4.8.3 (GCC)<br />
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --en<br />
+bass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-a<br />
+enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtw<br />
+-enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --<br />
+libxavs --enable-libxvid --enable-decklink --enable-zlib<br />
+  libavutil      52. 66.100 / 52. 66.100<br />
+  libavcodec     55. 52.102 / 55. 52.102<br />
+  libavformat    55. 33.100 / 55. 33.100<br />
+  libavdevice    55. 10.100 / 55. 10.100<br />
+  libavfilter     4.  2.100 /  4.  2.100<br />
+  libswscale      2.  5.102 /  2.  5.102<br />
+  libswresample   0. 18.100 /  0. 18.100<br />
+  libpostproc    52.  3.100 / 52.  3.100<br />
+Input #0, flv, from 'D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.partial.mp3.flv':<br />
+  Metadata:<br />
+    moovPosition    : 36<br />
+    aacaot          : 2<br />
+    audiochannels   : 2<br />
+  Duration: 00:12:55.77, start: 0.000000, bitrate: 134 kb/s<br />
+    Stream #0:0: Audio: aac, 48000 Hz, stereo, fltp<br />
+Output #0, mp3, to 'D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.partial.mp3':<br />
+  Metadata:<br />
+    moovPosition    : 36<br />
+    aacaot          : 2<br />
+    audiochannels   : 2<br />
+    TSSE            : Lavf55.33.100<br />
+    Stream #0:0: Audio: mp3 (libmp3lame), 48000 Hz, stereo, fltp, 128 kb/s<br />
+Stream mapping:<br />
+  Stream #0:0 -&gt; #0:0 (aac -&gt; libmp3lame)<br />
+Press [q] to stop, [?] for help<br />
+size=   12123kB time=00:12:55.80 bitrate= 128.0kbits/s<br />
+video:0kB audio:12122kB subtitle:0 data:0 global headers:0kB muxing overhead 0.004052%<br />
+INFO: Recorded D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.mp3<br />
+<br />
+INFO: ID3 tagging MP3 file</code></div>
+</div>
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>c:&#92;Program Files (x86)&#92;get_iplayer&gt;get_iplayer --prefs-show<br />
+Options in 'C:&#92;Users&#92;user0/.get_iplayer/options'<br />
+        isodate = 1<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+        noartwork = 1<br />
+        aactomp3 = 1</code></div></div>--</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2015, 01:35 AM</div>
+</div>
+<div class="message">Still broken just for you.  Your command works fine.  Remove <kbd>aactomp3</kbd> from your preferences and see if <kbd>noartwork</kbd> is ignored for default M4A download as well. If it is, try removing <kbd>noartwork</kbd> from preferences and running with <kbd>--no-artwork</kbd> on command line.<br />
+<br />
+In the future, use the <kbd>get_iplayer output</kbd> formatting button in the editor instead of just dumping an output spew into your post. We've created tools to help you avoid creating an unreadable mess - please use them.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">24-07-2015, 08:58 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (24-07-2015, 01:35 AM)</span></cite>Still broken just for you.  Your command works fine.  Remove <kbd>aactomp3</kbd> from your preferences and see if <kbd>noartwork</kbd> is ignored for default M4A download as well. If it is, try removing <kbd>noartwork</kbd> from preferences and running with <kbd>--no-artwork</kbd> on command line.<br />
+<br />
+In the future, use the <kbd>get_iplayer output</kbd> formatting button in the editor instead of just dumping an output spew into your post. We've created tools to help you avoid creating an unreadable mess - please use them.</blockquote><br />
+apols ;) <br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Sorry but you cannot edit your post. The Administrator has set it so that posts can only be edited within 5 minutes of posting.</code></div></div><br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>c:\Program Files (x86)\get_iplayer&gt;get_iplayer.cmd --show-prefs<br />
+Options in 'C:\Users\user0/.get_iplayer/options'<br />
+        isodate = 1<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+<br />
+c:\Program Files (x86)\get_iplayer&gt;get_iplayer.cmd --type=radio --pid=b062kcdv --no-artwork --force<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b062kcdv using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: The Archers - 17725. 23/07/2015<br />
+INFO: File name prefix = The_Archers-s01e17725-The_Archers-2015-07-24<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:   duration              775.77<br />
+INFO:   moovPosition          36.00<br />
+INFO:   audiocodecid          mp4a<br />
+INFO:   aacaot                2.00<br />
+INFO:   audiosamplerate       48000.00<br />
+INFO:   audiochannels         2.00<br />
+INFO: tags:<br />
+INFO:   -®too                 Lavf56.15.102<br />
+INFO: trackinfo:<br />
+INFO:   length                37236936.00<br />
+INFO:   timescale             48000.00<br />
+INFO:   language              und<br />
+INFO: sampledescription:<br />
+INFO:   sampletype            mp4a<br />
+12725.938 kB / 775.76 sec (99.9%)<br />
+Download complete<br />
+ffmpeg version 2.2.3 Copyright (c) 2000-2014 the FFmpeg developers<br />
+  built on Jun 19 2014 20:24:25 with gcc 4.8.3 (GCC)<br />
+  configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-li<br />
+bass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgme --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --<br />
+enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame -<br />
+-enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-<br />
+libxavs --enable-libxvid --enable-decklink --enable-zlib<br />
+  libavutil      52. 66.100 / 52. 66.100<br />
+  libavcodec     55. 52.102 / 55. 52.102<br />
+  libavformat    55. 33.100 / 55. 33.100<br />
+  libavdevice    55. 10.100 / 55. 10.100<br />
+  libavfilter     4.  2.100 /  4.  2.100<br />
+  libswscale      2.  5.102 /  2.  5.102<br />
+  libswresample   0. 18.100 /  0. 18.100<br />
+  libpostproc    52.  3.100 / 52.  3.100<br />
+Input #0, flv, from 'D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.partial.m4a.flv':<br />
+  Metadata:<br />
+    moovPosition    : 36<br />
+    aacaot          : 2<br />
+    audiochannels   : 2<br />
+  Duration: 00:12:55.77, start: 0.000000, bitrate: 134 kb/s<br />
+    Stream #0:0: Audio: aac, 48000 Hz, stereo, fltp<br />
+Output #0, ipod, to 'D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.partial.m4a':<br />
+  Metadata:<br />
+    moovPosition    : 36<br />
+    aacaot          : 2<br />
+    audiochannels   : 2<br />
+    encoder         : Lavf55.33.100<br />
+    Stream #0:0: Audio: aac (mp4a / 0x6134706D), 48000 Hz, stereo<br />
+Stream mapping:<br />
+  Stream #0:0 -&gt; #0:0 (copy)<br />
+Press [q] to stop, [?] for help<br />
+size=   12265kB time=00:12:55.78 bitrate= 129.5kbits/s<br />
+video:0kB audio:12122kB subtitle:0 data:0 global headers:0kB muxing overhead 1.178994%<br />
+INFO: Recorded D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-24.m4a<br />
+<br />
+INFO: MP4 tagging M4A file<br />
+<br />
+ Started writing to temp file.<br />
+ Progress: =&gt;  1% ------------------------------------------------------|<br />
+ Finished writing to temp file.</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2015, 09:24 AM</div>
+</div>
+<div class="message">I can't tell what you're trying to say.  Did you get artwork in the M4A file or not?  If you did, are you sure it is the BBC series thumbnail for The Archers?  If in doubt, post the image as an attachment.  You can drag it to disk from Mp3tag.<br />
+<br />
+Also - don't put new information inside a quotation from a previous post.  It makes it look like you haven't posted anything new.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">24-07-2015, 11:46 AM</div>
+</div>
+<div class="message">Picture that is embedded in the m4a file:<br />
+The_Archers-s01e17725-The_Archers-2015-07-24.m4a  from pid b062kcdv<br />
+<br />
+[Image: <a href="http://i245.photobucket.com/albums/gg64/mrg9999/get_iplayer/archers-b062kcdv.png">http://i245.photobucket.com/albums/gg64/...62kcdv.png</a>]<br />
+<br />
+I can strip it out using post processing like mp3tag<br />
+<br />
+The reason I care, is on IOS, some 3rd party podcast players crash if artwork in in the file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">24-07-2015, 11:49 AM</div>
+</div>
+<div class="message">--no-tag removes the artwork, but also the other tags. Not a problem, as I mostly listen and delete. It's only the omnibus I keep for posterity.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2015, 01:00 PM</div>
+</div>
+<div class="message">Thanks.  That is the expected thumbnail image.  Neither <kbd>--no-artwork</kbd> nor <kbd>--no-tag</kbd> removes anything.  They merely instruct get_iplayer either not to add artwork or not to add any metadata tags, respectively.  For reasons unknown, <kbd>--no-artwork</kbd> apparently is not being picked up on your machine.  Run the same command again with <kbd>--show-options</kbd> added and make sure that <kbd>noartwork = 1</kbd> appears in the output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">24-07-2015, 10:59 PM</div>
+</div>
+<div class="message">Here is my show-prefs again, that I posted originally. Don't worry I can live with it.<br />
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>c:\Program Files (x86)\get_iplayer&gt;get_iplayer.cmd --show-prefs<br />
+Options in 'C:\Users\user0/.get_iplayer/options'<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+        aactomp3 = 1<br />
+        isodate = 1<br />
+        noartwork = 1</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">24-07-2015, 11:37 PM</div>
+</div>
+<div class="message">It was <kbd>--show-options</kbd>, not <kbd>--show-prefs</kbd> - shows all options in force, not just saved preferences.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">26-07-2015, 09:43 AM</div>
+</div>
+<div class="message">Sorry, I read, but didn't ;)<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>c:\Program Files (x86)\get_iplayer&gt;get_iplayer.cmd --show-options<br />
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+Options from Files:<br />
+        aactomp3 = 1<br />
+        atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe<br />
+        ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+        isodate = 1<br />
+        lame = .\LAME\lame.exe<br />
+        mmsnothread = 1<br />
+        mplayer = .\MPlayer\mplayer.exe<br />
+        noartwork = 1<br />
+        nopurge = 1<br />
+        output = D:\media\getip<br />
+        rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe<br />
+        vlc = .\VLC\vlc-2.1.5\vlc.exe<br />
+<br />
+Options from Command Line:<br />
+        showoptions = 1<br />
+<br />
+Options Used:<br />
+        aactomp3 = 1<br />
+        atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe<br />
+        encodingconsolein = cp850<br />
+        encodingconsoleout = cp850<br />
+        encodinglocale = cp1252<br />
+        encodinglocalefs = cp1252<br />
+        ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe<br />
+        fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+        isodate = 1<br />
+        lame = .\LAME\lame.exe<br />
+        mmsnothread = 1<br />
+        mplayer = .\MPlayer\mplayer.exe<br />
+        noartwork = 1<br />
+        nopurge = 1<br />
+        output = D:\media\getip<br />
+        rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe<br />
+        showoptions = 1<br />
+        vlc = .\VLC\vlc-2.1.5\vlc.exe<br />
+<br />
+Search Args: .*</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2015, 05:08 PM</div>
+</div>
+<div class="message">Thanks.  That shows the <kbd>noartwork</kbd> option is being picked up.  One more thing to test: Remove <kbd>aactomp3</kbd> from your options file (leave <kbd>noartwork</kbd>) and then run:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b062kcdv --force --overwrite --verbose</code></div></div>to produce a M4A file.  At the end of the output you will see the full AtomicParsley command used to add metadata to the file.  It should look like this:<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>INFO: Command: "AtomicParsley" "/Users/xxx/tmp/get_iplayer/The_Archers/The_Archers_-_17725._2015-07-23_b062kcdv_default.m4a" "--freefree" "--overWrite" "--stik" "Normal" "--advisory" "remove" "--copyright" "2015 British Broadcasting Corporation, all rights reserved" "--title" "2015-07-23" "--artist" "BBC Radio 4" "--albumArtist" "BBC Radio" "--album" "The Archers" "--grouping" "Drama,Soaps" "--composer" "BBC iPlayer" "--genre" "Drama" "--comment" "Pip gets some friendly attention." "--year" "2015-07-23T19:00:00+01:00" "--tracknum" "17725" "--disk" "1" "--lyrics" "Ruth's up in Prudhoe as Pip updates her on farm progress over the phone. Ruth won't leave her mum Heather until she can get her to understand her situation - Heather needs proper care and will need to move into a home permanently. Ruth confides in Usha, who has travelled up with work and uses the trip for a catch up. Ruth feels guilty for sneaking around looking at places.<br />
+<br />
+Toby invites Pip to join him round at Hollowtree for curry and a few beers. She teases him for his lack of knowledge about feed. Pip spells out her plans with the new job, which takes her to Brazil. Toby says that's terrible that she's going so soon. He flirtily thanks her for all her help in getting his business off the ground and they end up kissing.<br />
+<br />
+Brian and Charlie agree details for some important shoots in November and December - Justin's inviting important guests to these ones and Brian says he and Will will be very accommodating. Brian asks Charlie for his advice - talking confidentially about Adam. Charlie says it was a mistake for Adam to give up on the maize, but tells Brian he should support Adam all the way. What's the alternative - getting a complete stranger in to run the farm?<br />
+<br />
+EPISODE<br />
+<a href="http://www.bbc.co.uk/programmes/b062kcdv">http://www.bbc.co.uk/programmes/b062kcdv</a><br />
+<br />
+SERIES<br />
+<a href="http://www.bbc.co.uk/programmes/b006qpgr">http://www.bbc.co.uk/programmes/b006qpgr</a>" "--description" "Pip gets some friendly attention." "--longdesc" "Ruth's up in Prudhoe as Pip updates her on farm progress over the phone. Ruth won't leave her mum Heather until she can get her to understand her situation - Heather needs proper care and will need to move into a home permanently. Ruth confides in Usha, who has travelled up with work and uses the trip for a catch up. Ruth feels guilty for sneaking around looking at places.<br />
+<br />
+Toby invites Pip to join him round at Hollowtree for curry and a few beers. She teases him for his lack of knowledge about feed. Pip spells out her plans with the new job, which takes her to Brazil. Toby says that's terrible that she's going so soon. He flirtily thanks her for all her help in getting his business off the ground and they end up kissing.<br />
+<br />
+Brian and Charlie agree details for some important shoots in November and December - Justin's inviting important guests to these ones and Brian says he and Will will be very accommodating. Brian asks Charlie for his advice - talking confidentially about Adam. Charlie says it was a mistake for Adam to give up on the maize, but tells Brian he should support Adam all the way. What's the alternative - getting a complete stranger in to run the farm?" "--podcastFlag" "true" "--category" "Drama" "--keyword" "Drama,Soaps" "--podcastGUID" "http://www.bbc.co.uk/programmes/b062kcdv"</code></div>
+</div>
+If the thumbnail image was added, you should see a <kbd>--artwork</kbd> option appended to the above:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"--artwork" "/Users/xxx/tmp/get_iplayer/The_Archers/The_Archers_-_17725._2015-07-23_b062kcdv_default.jpg"</code></div></div>Tell me if you see the AtomicParsley <kbd>--artwork</kbd> option being used.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">26-07-2015, 09:10 PM</div>
+</div>
+<div class="message">OK<br />
+I still adds the artwork.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = cp1252<br />
+INFO: encodinglocalefs = cp1252<br />
+INFO: encodingconsoleout = cp850<br />
+INFO: encodingconsolein = cp850<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: C:\Users\user0/.get_iplayer<br />
+INFO: System options dir: C:\ProgramData/get_iplayer/options<br />
+Current options:<br />
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe<br />
+	encodingconsolein = cp850<br />
+	encodingconsoleout = cp850<br />
+	encodinglocale = cp1252<br />
+	encodinglocalefs = cp1252<br />
+	ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe<br />
+	fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+	force = 1<br />
+	isodate = 1<br />
+	lame = .\LAME\lame.exe<br />
+	mmsnothread = 1<br />
+	mplayer = .\MPlayer\mplayer.exe<br />
+	noartwork = 1<br />
+	nopurge = 1<br />
+	output = D:\media\getip<br />
+	overwrite = 1<br />
+	pid = b062kcdv<br />
+	rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe<br />
+	type = radio<br />
+	verbose = 1<br />
+	vlc = .\VLC\vlc-2.1.5\vlc.exe<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Will try prog types: radio<br />
+INFO: No file cache exists for radio<br />
+Cleaning pid Old: 'b062kcdv',  New: 'b062kcdv'<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdv.rdf">http://www.bbc.co.uk/programmes/b062kcdv.rdf</a><br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b062kcdv using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+INFO: Cleaning pid Old: 'b062kcdv',  New: 'b062kcdv'<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Programme metadata URL = <a href="http://www.bbc.co.uk/programmes/b062kcdv.xml">http://www.bbc.co.uk/programmes/b062kcdv.xml</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdv.xml">http://www.bbc.co.uk/programmes/b062kcdv.xml</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b062kcdq/proto/rtmp?cb=09500">http://open.live.bbc.co.uk/mediaselector...p?cb=09500</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b062kcdq/proto/http?cb=28985">http://open.live.bbc.co.uk/mediaselector...p?cb=28985</a><br />
+INFO: Getting page <a href="http://cp212076-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4/master.m3u8?hdnea=st=1437941301~exp=1437962901~acl=/*bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4*~hmac=292d6f9610eda5f5c1c023dbddbed6e5a89ec14c85d5873445dc396bf380b7c3">http://cp212076-vh.akamaihd.net/i/prod_a...6bf380b7c3</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b062kcdq/proto/http?cb=33236">http://open.live.bbc.co.uk/mediaselector...p?cb=33236</a><br />
+INFO: Getting page <a href="http://cp212076-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4/master.m3u8?hdnea=st=1437941301~exp=1437962901~acl=/*bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4*~hmac=b199bbe6ec04d9e7e6b2a3901c647efd615a92058b5a50e3e427eb39c67ed6e3">http://cp212076-vh.akamaihd.net/i/prod_a...39c67ed6e3</a><br />
+INFO: Found mode flashaaclow1: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaaclow2: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashaacstd1: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaacstd2: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: akamai/10)<br />
+INFO: Found mode hlsaaclow1: (gip_hls_iplayer_62) hls aac 62kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdq.rdf">http://www.bbc.co.uk/programmes/b062kcdq.rdf</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02xnkp1/proto/rtmp?cb=91698">http://open.live.bbc.co.uk/mediaselector...p?cb=91698</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02xnkp1/proto/http?cb=74670">http://open.live.bbc.co.uk/mediaselector...p?cb=74670</a><br />
+INFO: Getting page <a href="http://cp143012-i.akamaihd.net/i/iplayerstream/secure_auth/ibroadcast_audio/2c9789934e96d1be014eaff655696592--audio--The-Archers-PODCAST-TX-23-07-15-Thursday_flv_aac_med.mp4/master.m3u8?hdnea=st=1437941302~exp=1437962902~acl=/*2c9789934e96d1be014eaff655696592--audio--The-Archers-PODCAST-TX-23-07-15-Thursday_flv_aac_med.mp4*~hmac=64d96549f1b95c88a6a02b672a7baf90e12ba594224e0168f523f03cac41870c">http://cp143012-i.akamaihd.net/i/iplayer...3cac41870c</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/p02xnkp1/proto/http?cb=84609">http://open.live.bbc.co.uk/mediaselector...p?cb=84609</a><br />
+INFO: Found mode flashaacstd1: (ibroadcast_audio_pc) rtmp aac 128kbps stream (CDN: akamai/10)<br />
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/p02xnkp1.rdf">http://www.bbc.co.uk/programmes/p02xnkp1.rdf</a><br />
+INFO: Using 'original' version (b062kcdq) as 'default'<br />
+INFO: Will search for versions: default,original<br />
+INFO: Mode list: flashaachigh,flashaacstd,flashaaclow<br />
+INFO: Checking existence of default version<br />
+INFO: Version = default<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: The Archers - 17725. 23/07/2015<br />
+INFO: Attempt number: 1 / 50<br />
+<br />
+INFO: File name prefix = The_Archers-s01e17725-The_Archers-2015-07-26                 <br />
+INFO: Overwriting file D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+<br />
+INFO: rtmpver: <br />
+INFO: RTMPDump v2.4<br />
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+INFO: <br />
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This program dumps the media content streamed over RTMP.<br />
+INFO: <br />
+INFO: --help|-h               Prints this help screen.<br />
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)<br />
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)<br />
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url<br />
+INFO: --port|-c port          Overrides the port in the rtmp url<br />
+INFO: --socks|-S host:port    Use the specified SOCKS proxy<br />
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)<br />
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url<br />
+INFO: --playlist|-Y           Set playlist before playing<br />
+INFO: --swfUrl|-s url         URL to player swf file<br />
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")<br />
+INFO: --pageUrl|-p url        Web URL of played programme<br />
+INFO: --app|-a app            Name of target app on server<br />
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)<br />
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification<br />
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically<br />
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing<br />
+INFO: --auth|-u string        Authentication string to be appended to the connect string<br />
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string<br />
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),<br />
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number<br />
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")<br />
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible<br />
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)<br />
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack<br />
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout<br />
+INFO: --resume|-e             Resume a partial RTMP download<br />
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)<br />
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)<br />
+INFO: --stop|-B num           Stop at num seconds into stream<br />
+INFO: --token|-T key          Key for SecureToken response<br />
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers<br />
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter<br />
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)<br />
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)<br />
+INFO: <br />
+INFO: --quiet|-q              Suppresses all command output.<br />
+INFO: --verbose|-V            Verbose command output.<br />
+INFO: --debug|-z              Debug level command output.<br />
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.<br />
+INFO: <br />
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.4<br />
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcodspdns.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408&amp;aifp=v001&amp;slist=mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408, application: a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408, swfUrl: <a href="http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf">http://emp.bbci.co.uk/emp/SMPf/1.11.16/S...sFlash.swf</a>, file: D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a, file_done: D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+<br />
+<br />
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--playpath" "mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408" "--app" "a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4,/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4&amp;et=1437948501&amp;fmta-token=d7f9c83b44a93ba192348038f0328a02fb08d9d70f84ca9b93391061643ac408" "--pageUrl" "http://www.bbc.co.uk/programmes/b062kcdv" "--resume" "-o" "D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a.flv" "--timeout" "10" "--verbose"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+<br />
+<br />
+INFO: Command: ".\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe" "-loglevel" "verbose" "-i" "D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a.flv" "-vn" "-acodec" "copy" "-y" "D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+INFO: Recorded D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+DEBUG: Record using flashaacstd1 mode return code: '0'<br />
+<br />
+INFO: Loading recordings history<br />
+INFO: MP4 tagging M4A file<br />
+<br />
+<br />
+INFO: Command: ".\AtomicParsley\AtomicParsley\AtomicParsley.exe" "D:\media\getip\The_Archers-s01e17725-The_Archers-2015-07-26.m4a" "--freefree" "--overWrite" "--stik" "Normal" "--advisory" "remove" "--copyright" "2015 British Broadcasting Corporation, all rights reserved" "--title" "23/07/2015" "--artist" "BBC Radio 4" "--albumArtist" "BBC Radio" "--album" "The Archers" "--grouping" "Drama,Soaps" "--composer" "BBC iPlayer" "--genre" "Drama" "--comment" "Pip gets some friendly attention." "--year" "2015-07-23T19:00:00+01:00" "--tracknum" "17725" "--disk" "1" "--lyrics" "Ruth's up in Prudhoe as Pip updates her on farm progress over the phone. Ruth won't leave her mum Heather until she can get her to understand her situation - Heather needs proper care and will need to move into a home permanently. Ruth confides in Usha, who has travelled up with work and uses the trip for a catch up. Ruth feels guilty for sneaking around looking at places.<br />
+<br />
+Toby invites Pip to join him round at Hollowtree for curry and a few beers. She teases him for his lack of knowledge about feed. Pip spells out her plans with the new job, which takes her to Brazil. Toby says that's terrible that she's going so soon. He flirtily thanks her for all her help in getting his business off the ground and they end up kissing.<br />
+<br />
+Brian and Charlie agree details for some important shoots in November and December - Justin's inviting important guests to these ones and Brian says he and Will will be very accommodating. Brian asks Charlie for his advice - talking confidentially about Adam. Charlie says it was a mistake for Adam to give up on the maize, but tells Brian he should support Adam all the way. What's the alternative - getting a complete stranger in to run the farm?<br />
+<br />
+EPISODE<br />
+<a href="http://www.bbc.co.uk/programmes/b062kcdv">http://www.bbc.co.uk/programmes/b062kcdv</a><br />
+<br />
+SERIES<br />
+<a href="http://www.bbc.co.uk/programmes/b006qpgr">http://www.bbc.co.uk/programmes/b006qpgr</a>"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2015, 10:01 PM</div>
+</div>
+<div class="message">According to the output you posted, get_iplayer (via AtomicParsley) is definitely not adding a thumbnail image to the file.  You can see for yourself that AP is invoked without the <kbd>--artwork</kbd> option.  Try this:  Run the exact same  command again with <kbd>--thumb</kbd> and <kbd>--output=...</kbd> added to the command line arguments. <kbd> --thumb </kbd>will retain any thumbnail file that is downloaded.  Use <kbd>--output</kbd> to override your preferences to set the output directory to a folder on your system hard drive, presumably mounted at <kbd>C:</kbd>.  Don't put it on a NAS, USB drive or any other external device.  The idea is to get a completely fresh version of the file created in what should be a predictable environment.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">26-07-2015, 11:09 PM</div>
+</div>
+<div class="message">Dinky, I do appreciate this effort.<br />
+<br />
+OK,<br />
+added thumb and output <br />
+<br />
+directed to c:\temp<br />
+<br />
+dir c:\temp<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>26/07/2015  23:05             5,241 The_Archers-s01e17725-The_Archers-2015-07-26.jpg<br />
+26/07/2015  23:05        12,560,938 The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+               3 File(s)     12,580,930 bytes<br />
+               3 Dir(s)  34,691,076,096 bytes free</code></div>
+</div>
+<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = cp1252<br />
+INFO: encodinglocalefs = cp1252<br />
+INFO: encodingconsoleout = cp850<br />
+INFO: encodingconsolein = cp850<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: User prefs dir: C:\Users\user0/.get_iplayer<br />
+INFO: System options dir: C:\ProgramData/get_iplayer/options<br />
+Current options:<br />
+	atomicparsley = .\AtomicParsley\AtomicParsley\AtomicParsley.exe<br />
+	encodingconsolein = cp850<br />
+	encodingconsoleout = cp850<br />
+	encodinglocale = cp1252<br />
+	encodinglocalefs = cp1252<br />
+	ffmpeg = .\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe<br />
+	fileprefix = &lt;nameshort&gt;-&lt;senum&gt;-&lt;longname&gt;-&lt;dldate&gt;<br />
+	force = 1<br />
+	isodate = 1<br />
+	lame = .\LAME\lame.exe<br />
+	mmsnothread = 1<br />
+	mplayer = .\MPlayer\mplayer.exe<br />
+	noartwork = 1<br />
+	nopurge = 1<br />
+	output = c:\temp<br />
+	overwrite = 1<br />
+	pid = b062kcdv<br />
+	rtmpdump = .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe<br />
+	thumb = 1<br />
+	type = radio<br />
+	verbose = 1<br />
+	vlc = .\VLC\vlc-2.1.5\vlc.exe<br />
+<br />
+INFO: Search args: ''<br />
+INFO: Will try prog types: radio<br />
+INFO: No file cache exists for radio<br />
+Cleaning pid Old: 'b062kcdv',  New: 'b062kcdv'<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdv.rdf">http://www.bbc.co.uk/programmes/b062kcdv.rdf</a><br />
+INFO: Episode-only pid detected<br />
+INFO: Trying pid: b062kcdv using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+INFO: Cleaning pid Old: 'b062kcdv',  New: 'b062kcdv'<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Programme metadata URL = <a href="http://www.bbc.co.uk/programmes/b062kcdv.xml">http://www.bbc.co.uk/programmes/b062kcdv.xml</a><br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdv.xml">http://www.bbc.co.uk/programmes/b062kcdv.xml</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b062kcdq/proto/rtmp?cb=83892">http://open.live.bbc.co.uk/mediaselector...p?cb=83892</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b062kcdq/proto/http?cb=50259">http://open.live.bbc.co.uk/mediaselector...p?cb=50259</a><br />
+INFO: Getting page <a href="http://cp212076-vh.akamaihd.net/i/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4/master.m3u8?hdnea=st=1437948303~exp=1437969903~acl=/*bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4*~hmac=67349feeb951446ea609d5d6fff87c376dbb457c5f6bd35969066cb7d87ded3f">http://cp212076-vh.akamaihd.net/i/prod_a...b7d87ded3f</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b062kcdq/proto/http?cb=07794">http://open.live.bbc.co.uk/mediaselector...p?cb=07794</a><br />
+INFO: Getting page <a href="http://cp212076-vh.akamaihd.net/i/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4/master.m3u8?hdnea=st=1437948303~exp=1437969903~acl=/*bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4*~hmac=8c5888c17e21246ee1b052d90d9e088d992fc915c5ba45abd6bd45ba21484df7">http://cp212076-vh.akamaihd.net/i/prod_a...ba21484df7</a><br />
+INFO: Found mode flashaaclow1: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaaclow2: (stream-uk-audio_streaming_aac_vlow) rtmp aac 48kbps stream (CDN: akamai/10)<br />
+INFO: Found mode flashaacstd1: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: limelight/20)<br />
+INFO: Found mode flashaacstd2: (stream-uk-audio_streaming_aac_med) rtmp aac 128kbps stream (CDN: akamai/10)<br />
+INFO: Found mode hlsaaclow1: (gip_hls_iplayer_62) hls aac 62kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/b062kcdq.rdf">http://www.bbc.co.uk/programmes/b062kcdq.rdf</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p02xnkp1/proto/rtmp?cb=87682">http://open.live.bbc.co.uk/mediaselector...p?cb=87682</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p02xnkp1/proto/http?cb=73293">http://open.live.bbc.co.uk/mediaselector...p?cb=73293</a><br />
+INFO: Getting page <a href="http://cp143012-i.akamaihd.net/i/iplayerstream/secure_auth/ibroadcast_audio/2c9789934e96d1be014eaff655696592--audio--The-Archers-PODCAST-TX-23-07-15-Thursday_flv_aac_med.mp4/master.m3u8?hdnea=st=1437948303~exp=1437969903~acl=/*2c9789934e96d1be014eaff655696592--audio--The-Archers-PODCAST-TX-23-07-15-Thursday_flv_aac_med.mp4*~hmac=4578883c47b646535c356bcbf320123b0a418a946c138f3025eaeb7bd88ab91a">http://cp143012-i.akamaihd.net/i/iplayer...7bd88ab91a</a><br />
+INFO: Getting page <a href="http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/p02xnkp1/proto/http?cb=42337">http://open.live.bbc.co.uk/mediaselector...p?cb=42337</a><br />
+INFO: Found mode flashaacstd1: (ibroadcast_audio_pc) rtmp aac 128kbps stream (CDN: akamai/10)<br />
+INFO: Found mode hlsaacstd1: (gip_hls_iplayer_128) hls aac 128kbps stream (CDN: akamai_hls_open/10)<br />
+INFO: Getting page <a href="http://www.bbc.co.uk/programmes/p02xnkp1.rdf">http://www.bbc.co.uk/programmes/p02xnkp1.rdf</a><br />
+INFO: Using 'original' version (b062kcdq) as 'default'<br />
+INFO: Will search for versions: default,original<br />
+INFO: Mode list: flashaachigh,flashaacstd,flashaaclow<br />
+INFO: Checking existence of default version<br />
+INFO: Version = default<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: The Archers - 17725. 23/07/2015<br />
+INFO: Attempt number: 1 / 50<br />
+<br />
+INFO: File name prefix = The_Archers-s01e17725-The_Archers-2015-07-26                 <br />
+INFO: rtmpver: <br />
+INFO: RTMPDump v2.4<br />
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+INFO: <br />
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe: This program dumps the media content streamed over RTMP.<br />
+INFO: <br />
+INFO: --help|-h               Prints this help screen.<br />
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)<br />
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)<br />
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url<br />
+INFO: --port|-c port          Overrides the port in the rtmp url<br />
+INFO: --socks|-S host:port    Use the specified SOCKS proxy<br />
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)<br />
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url<br />
+INFO: --playlist|-Y           Set playlist before playing<br />
+INFO: --swfUrl|-s url         URL to player swf file<br />
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")<br />
+INFO: --pageUrl|-p url        Web URL of played programme<br />
+INFO: --app|-a app            Name of target app on server<br />
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)<br />
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification<br />
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically<br />
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing<br />
+INFO: --auth|-u string        Authentication string to be appended to the connect string<br />
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string<br />
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),<br />
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number<br />
+INFO: --flashVer|-f string    Flash version string (default: "WIN 10,0,32,18")<br />
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible<br />
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)<br />
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack<br />
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout<br />
+INFO: --resume|-e             Resume a partial RTMP download<br />
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)<br />
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)<br />
+INFO: --stop|-B num           Stop at num seconds into stream<br />
+INFO: --token|-T key          Key for SecureToken response<br />
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers<br />
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter<br />
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)<br />
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)<br />
+INFO: <br />
+INFO: --quiet|-q              Suppresses all command output.<br />
+INFO: --verbose|-V            Verbose command output.<br />
+INFO: --debug|-z              Debug level command output.<br />
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.<br />
+INFO: <br />
+INFO: .\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe version 2.4<br />
+INFO: RTMP_URL: rtmp://bbcodspdns.fcod.llnwd.net:1935/ondemand?_fcs_vhost=bbcodspdns.fcod.llnwd.net&amp;auth=as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e&amp;aifp=v001&amp;slist=mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4, tcUrl: rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e, application: a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e, authString: as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e, swfUrl: <a href="http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf">http://emp.bbci.co.uk/emp/SMPf/1.11.16/S...sFlash.swf</a>, file: C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a, file_done: C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+<br />
+<br />
+INFO: Command: ".\RTMPDump\rtmpdump-20140302-git-79459a2-win32\bin\rtmpdump.exe" "--port" "1935" "--protocol" "0" "--playpath" "mp4:/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4" "--host" "bbcodspdns.fcod.llnwd.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://bbcodspdns.fcod.llnwd.net:1935/a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e" "--app" "a5999/e1?as=adobe-hmac-sha256&amp;av=1&amp;te=connect&amp;mp=/prod_af_mp4_aaclc_128/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676921634.mp4,/prod_af_mp4_heaacv1_48/iplayerstream/bUnknown-e31205ef-ec77-47d9-8f5a-71fb5c1d4d5e_b062kcdq_1437676925741.mp4&amp;et=1437955502&amp;fmta-token=1d114dbd2066d59b8cea919ebf321f5f03dae755ab50270741d6ade07c63171e" "--pageUrl" "http://www.bbc.co.uk/programmes/b062kcdv" "--resume" "-o" "C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a.flv" "--timeout" "10" "--verbose"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+<br />
+<br />
+INFO: Command: ".\FFmpeg\ffmpeg-2.2.3-win32-static\bin\ffmpeg.exe" "-loglevel" "verbose" "-i" "C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a.flv" "-vn" "-acodec" "copy" "-y" "C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.partial.m4a"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+INFO: Recorded C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.m4a<br />
+DEBUG: Record using flashaacstd1 mode return code: '0'<br />
+<br />
+INFO: Getting thumbnail from <a href="http://ichef.bbci.co.uk/images/ic/150x84/p01t7xy8.jpg">http://ichef.bbci.co.uk/images/ic/150x84/p01t7xy8.jpg</a><br />
+INFO: Getting page <a href="http://ichef.bbci.co.uk/images/ic/150x84/p01t7xy8.jpg">http://ichef.bbci.co.uk/images/ic/150x84/p01t7xy8.jpg</a><br />
+INFO: Downloaded Thumbnail to 'C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.jpg'<br />
+INFO: Loading recordings history<br />
+INFO: MP4 tagging M4A file<br />
+<br />
+<br />
+INFO: Command: ".\AtomicParsley\AtomicParsley\AtomicParsley.exe" "C:\temp\The_Archers-s01e17725-The_Archers-2015-07-26.m4a" "--freefree" "--overWrite" "--stik" "Normal" "--advisory" "remove" "--copyright" "2015 British Broadcasting Corporation, all rights reserved" "--title" "23/07/2015" "--artist" "BBC Radio 4" "--albumArtist" "BBC Radio" "--album" "The Archers" "--grouping" "Drama,Soaps" "--composer" "BBC iPlayer" "--genre" "Drama" "--comment" "Pip gets some friendly attention." "--year" "2015-07-23T19:00:00+01:00" "--tracknum" "17725" "--disk" "1" "--lyrics" "Ruth's up in Prudhoe as Pip updates her on farm progress over the phone. Ruth won't leave her mum Heather until she can get her to understand her situation - Heather needs proper care and will need to move into a home permanently. Ruth confides in Usha, who has travelled up with work and uses the trip for a catch up. Ruth feels guilty for sneaking around looking at places.<br />
+<br />
+Toby invites Pip to join him round at Hollowtree for curry and a few beers. She teases him for his lack of knowledge about feed. Pip spells out her plans with the new job, which takes her to Brazil. Toby says that's terrible that she's going so soon. He flirtily thanks her for all her help in getting his business off the ground and they end up kissing.<br />
+<br />
+Brian and Charlie agree details for some important shoots in November and December - Justin's inviting important guests to these ones and Brian says he and Will will be very accommodating. Brian asks Charlie for his advice - talking confidentially about Adam. Charlie says it was a mistake for Adam to give up on the maize, but tells Brian he should support Adam all the way. What's the alternative - getting a complete stranger in to run the farm?<br />
+<br />
+EPISODE<br />
+<a href="http://www.bbc.co.uk/programmes/b062kcdv">http://www.bbc.co.uk/programmes/b062kcdv</a><br />
+<br />
+SERIES<br />
+<a href="http://www.bbc.co.uk/programmes/b006qpgr">http://www.bbc.co.uk/programmes/b006qpgr</a>"<br />
+<br />
+INFO: Command exit code 0 (raw code = 0)<br />
+</code></div>
+</div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">26-07-2015, 11:27 PM</div>
+</div>
+<div class="message">I just tried a fresh install in a new vm, and it does exactly the same, it creates the jpg in c:\temp.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-07-2015, 11:56 PM</div>
+</div>
+<div class="message">So did the latest files have a thumbnail image embedded?  What are you using to check for the presence of a thumbnail?  Mp3tag?   It doesn't matter that the .jpg file was downloaded - was it added to the audio file?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-250</h2></div><div class="dateline">27-07-2015, 12:03 AM</div>
+</div>
+<div class="message">Sorry, yes, the picture is in the m4a file.<br />
+If i use windows, remove properties, it deletes the image.<br />
+can I attach the files here or link them from my server.<br />
+<br />
+existence. VLC shows the image. Mp3tag and windows properties show the image and can strip it. <br />
+<br />
+<a href="http://www.mrg9999.com/pub/get_iplayer/The_Archers-s01e17725-The_Archers-2015-07-26.m4a">http://www.mrg9999.com/pub/get_iplayer/T...-07-26.m4a</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">27-07-2015, 12:49 AM</div>
+</div>
+<div class="message">The file you posted does not contain embedded artwork.  VLC or WMP will pick up a folder.jpg or AlbumArtSmall.jpg file (may be hidden files) in the same directory and display it as cover art.  I have no idea how such files would have beeen created, particularly in a clean directory as I directed for your last test run.   Where Mp3tag or Windows Explorer pick up the artwork from I can't say, but it isn't from an image embedded in your file.  Mp3tag can store downloaded artwork in folder.jpg, but I don't think it creates it by default.  Maybe you have some kind of Explorer extension installed on your machine. <br />
+<br />
+Whatever the case, I'm bowing out.  Your log output and the associated M4A file prove that get_iplayer is working correctly.  It is not adding embedded artwork to output files when <kbd>--no-artwork</kbd> is specified.  Maybe someone else here will recognise your symptoms and can identify the culprit, but you've demonstrated to my satisfaction that it is not get_iplayer.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-483-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Is no-artwork option working</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,590 @@
+stuart@OpenSUSE:~> ./getpid b06ygq3n
+Running get_iplayer now for pid=b06ygq3n
+get_iplayer v2.94, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/stuart/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+Current options:
+        encodingconsolein = UTF-8
+        encodingconsoleout = UTF-8
+        encodinglocale = UTF-8
+        encodinglocalefs = UTF-8
+        output = /home/stuart/Work/Video-Working/BBC iPlayer/
+        packagemanager = = disable
+        pid = b06ygq3n
+        subtitles = 1
+        verbose = 1
+
+INFO: Search args: ''
+INFO: Will try prog types: tv
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: No file cache exists for tv
+Cleaning pid Old: 'b06ygq3n',  New: 'b06ygq3n'
+INFO: Getting page http://www.bbc.co.uk/programmes/b06ygq3n.rdf
+INFO: Episode-only pid detected
+INFO: Trying pid: b06ygq3n using type: tv
+INFO: Trying to stream pid using type tv
+INFO: pid not found in tv cache
+INFO: Cleaning pid Old: 'b06ygq3n',  New: 'b06ygq3n'
+Matches:
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b06ygq3n.xml
+INFO: Getting page http://www.bbc.co.uk/programmes/b06ygq3n.xml
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p03fzlsy/proto/rtmp?cb=79869
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03fzlsy/proto/rtmp?cb=18496
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03fzlsy/proto/http?cb=05519
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/800kbps/audiodesc/modav/p03f21mk_b06ygq0j_1453243237006.mp4/master.m3u8?hdnea=st=1453365563~exp=1453387163~acl=/*p03f21mk_b06ygq0j_1453243237006.mp4*~hmac=4eb2be612de14f57597d7b5d9bbc0b55d6d436fbc12252d4fb50d0f55591620c
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_796) hls h264 640x360 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/p03fzlsy.rdf
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/p03g046f/proto/rtmp?cb=59434
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03g046f/proto/rtmp?cb=86802
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/p03g046f/proto/http?cb=06963
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/800kbps/audiodesc/modav/p03f21n5_b06yj9qc_1453263800121.mp4/master.m3u8?hdnea=st=1453365565~exp=1453387165~acl=/*p03f21n5_b06yj9qc_1453263800121.mp4*~hmac=a14028dc4f261d0cd0d75029441da9b54a4d1f46e8ee29d935aef27f42f0ea0b
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_796) hls h264 640x360 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/p03g046f.rdf
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06ygq0j/proto/rtmp?cb=02595
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06ygq0j/proto/rtmp?cb=38225
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06ygq0j/proto/http?cb=27346
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384928,480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196,800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859,1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183,3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047,.mp4.csmil/master.m3u8?hdnea=st=1453365567~exp=1453387167~acl=/*400kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384928,480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196,800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859,1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183,3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047*~hmac=4de4f5451993b0b37568c6ad78d7e142df7e406d097af2e1a07b35713c2664c8
+INFO: Getting page http://vod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_hd/a76553-b06ygq0j/vf_b06ygq0j_ae85ae8c-f070-4309-9a1b-eefc6148f675.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?__gda__=1453387167_52f6d9ed52c8c9810d7390724af83153
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/a76553-b06ygq0j/vf_b06ygq0j_ae85ae8c-f070-4309-9a1b-eefc6148f675.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?s=1453343967&amp;e=1453387167&amp;h=0730c50b793c66613e39ec93602ae1c9
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/a76553-b06ygq0j/vf_b06ygq0j_ae85ae8c-f070-4309-9a1b-eefc6148f675.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?s=1453343967&amp;e=1453387167&amp;h=0730c50b793c66613e39ec93602ae1c9)
+INFO: Found mode flashhd1: (pc_streaming_hd) rtmp h264 1280x720 2800kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode hlshd1: (gip_hls_iplayer_2386) hls h264 1280x720 2386kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_796) hls h264 640x360 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlshigh2: (gip_hls_iplayer_979) hls h264 704x396 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlshigh3: (gip_hls_iplayer_928) hls h264 704x396 928kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlshigh4: (gip_hls_iplayer_979) hls h264 704x396 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow1: (gip_hls_iplayer_396) hls h264 512x288 396kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlslow2: (gip_hls_iplayer_400) hls h264 384x216 400kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow3: (gip_hls_iplayer_349) hls h264 384x216 349kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow4: (gip_hls_iplayer_400) hls h264 384x216 400kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_508) hls h264 640x360 508kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsstd2: (gip_hls_iplayer_565) hls h264 512x288 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd3: (gip_hls_iplayer_515) hls h264 512x288 515kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd4: (gip_hls_iplayer_565) hls h264 512x288 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1802) hls h264 960x540 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh3: (gip_hls_iplayer_1752) hls h264 960x540 1752kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh4: (gip_hls_iplayer_1802) hls h264 960x540 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b06ygq0j.rdf
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b06yj9qc/proto/rtmp?cb=72091
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06yj9qc/proto/rtmp?cb=61735
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b06yj9qc/proto/http?cb=30519
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,400kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771774912,480kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771774878,800kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771772460,1500kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771773087,.mp4.csmil/master.m3u8?hdnea=st=1453365569~exp=1453387169~acl=/*400kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771774912,480kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771774878,800kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771772460,1500kbps/modav/bUnknown-f94d8530-7232-4dff-bebc-b46462a604d4_b06yj9qc_1452771773087*~hmac=63b1758998a090898847a3e8f17fca9de4f3e829e39122d7d7bd88f73498b492
+INFO: Getting page http://vod-hls-uk-live.edgesuite.net/usp/auth/vod/piff_abr_full_hd/896f3b-b06yj9qc/vf_b06yj9qc_ef77217e-8b65-47bd-8432-a6e341def9b3.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?__gda__=1453387169_7b3d02f18ead145538fc05dcfebbc1f4
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/896f3b-b06yj9qc/vf_b06yj9qc_ef77217e-8b65-47bd-8432-a6e341def9b3.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?s=1453343969&amp;e=1453387169&amp;h=d6ff6cbc2bd2613f158c9f7386fce6c0
+WARNING: No HLS playlist returned (http://vod-hls-uk-live.bbcfmt.vo.llnwd.net/usp/auth/vod/piff_abr_full_hd/896f3b-b06yj9qc/vf_b06yj9qc_ef77217e-8b65-47bd-8432-a6e341def9b3.ism/mobile_wifi_main_sd_abr_v1_hls_master.m3u8?s=1453343969&amp;e=1453387169&amp;h=d6ff6cbc2bd2613f158c9f7386fce6c0)
+INFO: Found mode flashhigh1: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: akamai/10)
+INFO: Found mode flashhigh2: (iplayer_streaming_h264_flv) rtmp h264 640x360 796kbps stream (CDN: limelight/5)
+INFO: Found mode flashlow1: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: limelight/10)
+INFO: Found mode flashlow2: (iplayer_streaming_h264_flv_vlo) rtmp h264 400x224 396kbps stream (CDN: akamai/5)
+INFO: Found mode flashstd1: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: akamai/10)
+INFO: Found mode flashstd2: (iplayer_streaming_h264_flv_lo) rtmp h264 640x360 480kbps stream (CDN: limelight/5)
+INFO: Found mode flashvhigh1: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: akamai/10)
+INFO: Found mode flashvhigh2: (iplayer_streaming_h264_flv_high) rtmp h264 832x468 1500kbps stream (CDN: limelight/5)
+INFO: Found mode hlshigh1: (gip_hls_iplayer_796) hls h264 640x360 796kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlshigh2: (gip_hls_iplayer_979) hls h264 704x396 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlshigh3: (gip_hls_iplayer_928) hls h264 704x396 928kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlshigh4: (gip_hls_iplayer_979) hls h264 704x396 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow1: (gip_hls_iplayer_396) hls h264 512x288 396kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlslow2: (gip_hls_iplayer_400) hls h264 384x216 400kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow3: (gip_hls_iplayer_349) hls h264 384x216 349kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlslow4: (gip_hls_iplayer_400) hls h264 384x216 400kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd1: (gip_hls_iplayer_508) hls h264 640x360 508kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsstd2: (gip_hls_iplayer_565) hls h264 512x288 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd3: (gip_hls_iplayer_515) hls h264 512x288 515kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsstd4: (gip_hls_iplayer_565) hls h264 512x288 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1802) hls h264 960x540 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh3: (gip_hls_iplayer_1752) hls h264 960x540 1752kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hlsvhigh4: (gip_hls_iplayer_1802) hls h264 960x540 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: sis/10)
+INFO: Getting page http://www.bbc.co.uk/programmes/b06yj9qc.rdf
+INFO: Using 'original' version (b06ygq0j) as 'default'
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Will search for versions: default,original,signed,audiodescribed
+INFO: Mode list: flashvhigh,flashhigh,flashstd,flashnormal,flashlow
+INFO: Checking existence of default version
+INFO: Version = default
+INFO: flashvhigh1,flashvhigh2,flashhigh1,flashhigh2,flashstd1,flashstd2,flashlow1,flashlow2 modes will be tried for version default
+INFO: Trying flashvhigh1 mode to record tv: Adam Pearson: Freak Show - -
+INFO: Attempt number: 1 / 50
+INFO: File name prefix = Adam_Pearson_Freak_Show_-__b06ygq3n_default                 
+
+INFO: Getting Subtitles from http://www.bbc.co.uk/iplayer/subtitles/ng/modav/bUnknown-913937ce-cd7d-42fb-b127-fa711e971b78_b06ygq0j_1453242534749.xml
+INFO: Getting page http://www.bbc.co.uk/iplayer/subtitles/ng/modav/bUnknown-913937ce-cd7d-42fb-b127-fa711e971b78_b06ygq0j_1453242534749.xml
+INFO: Downloading Subtitles to '/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.srt'
+INFO: rtmpver: 
+INFO: RTMPDump v2.4
+INFO: (c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+INFO: 
+INFO: rtmpdump: This program dumps the media content streamed over RTMP.
+INFO: 
+INFO: --help|-h               Prints this help screen.
+INFO: --url|-i url            URL with options included (e.g. rtmp://host[:port]/path swfUrl=url tcUrl=url)
+INFO: --rtmp|-r url           URL (e.g. rtmp://host[:port]/path)
+INFO: --host|-n hostname      Overrides the hostname in the rtmp url
+INFO: --port|-c port          Overrides the port in the rtmp url
+INFO: --socks|-S host:port    Use the specified SOCKS proxy
+INFO: --protocol|-l num       Overrides the protocol in the rtmp url (0 - RTMP, 2 - RTMPE)
+INFO: --playpath|-y path      Overrides the playpath parsed from rtmp url
+INFO: --playlist|-Y           Set playlist before playing
+INFO: --swfUrl|-s url         URL to player swf file
+INFO: --tcUrl|-t url          URL to played stream (default: "rtmp://host[:port]/app")
+INFO: --pageUrl|-p url        Web URL of played programme
+INFO: --app|-a app            Name of target app on server
+INFO: --swfhash|-w hexstring  SHA256 hash of the decompressed SWF file (32 bytes)
+INFO: --swfsize|-x num        Size of the decompressed SWF file, required for SWFVerification
+INFO: --swfVfy|-W url         URL to player swf file, compute hash/size automatically
+INFO: --swfAge|-X days        Number of days to use cached SWF hash before refreshing
+INFO: --auth|-u string        Authentication string to be appended to the connect string
+INFO: --conn|-C type:data     Arbitrary AMF data to be appended to the connect string
+INFO:                         B:boolean(0|1), S:string, N:number, O:object-flag(0|1),
+INFO:                         Z:(null), NB:name:boolean, NS:name:string, NN:name:number
+INFO: --flashVer|-f string    Flash version string (default: "LNX 10,0,32,18")
+INFO: --live|-v               Save a live stream, no --resume (seeking) of live streams possible
+INFO: --subscribe|-d string   Stream name to subscribe to (otherwise defaults to playpath if live is specifed)
+INFO: --realtime|-R           Don't attempt to speed up download via the Pause/Unpause BUFX hack
+INFO: --flv|-o string         FLV output file name, if the file name is - print stream to stdout
+INFO: --resume|-e             Resume a partial RTMP download
+INFO: --timeout|-m num        Timeout connection num seconds (default: 30)
+INFO: --start|-A num          Start at num seconds into stream (not valid when using --live)
+INFO: --stop|-B num           Stop at num seconds into stream
+INFO: --token|-T key          Key for SecureToken response
+INFO: --jtv|-j JSON           Authentication token for Justin.tv legacy servers
+INFO: --hashes|-#             Display progress with hashes, not with the byte counter
+INFO: --buffer|-b             Buffer time in milliseconds (default: 36000000)
+INFO: --skip|-k num           Skip num keyframes when looking for last keyframe to resume from. Useful if resume fails (default: 0)
+INFO: 
+INFO: --quiet|-q              Suppresses all command output.
+INFO: --verbose|-V            Verbose command output.
+INFO: --debug|-z              Debug level command output.
+INFO: If you don't pass parameters for swfUrl, pageUrl, or auth these properties will not be included in the connect packet.
+INFO: 
+INFO: rtmpdump version 2.4
+INFO: RTMP_URL: rtmp://vod-rtmp-uk-live.edgesuite.net:1935/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4, tcUrl: rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4, application: ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4, authString: auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4, swfUrl: http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf, file: /home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4, file_done: /home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.mp4
+
+
+INFO: Command: "rtmpdump" "--port" "1935" "--protocol" "0" "--playpath" "mp4:secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4?auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4" "--host" "vod-rtmp-uk-live.edgesuite.net" "--swfVfy" "http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf" "--tcUrl" "rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4" "--app" "ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4" "--pageUrl" "http://www.bbc.co.uk/iplayer/episode/b06ygq3n" "--resume" "-o" "/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4.flv" "--timeout" "10" "--verbose"
+
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+DEBUG: Protocol : RTMP
+DEBUG: Hostname : vod-rtmp-uk-live.edgesuite.net
+DEBUG: Port     : 1935
+DEBUG: Playpath : mp4:secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4?auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4
+DEBUG: tcUrl    : rtmp://vod-rtmp-uk-live.edgesuite.net:80/ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4
+DEBUG: swfUrl   : http://emp.bbci.co.uk/emp/SMPf/1.11.16/StandardMediaPlayerChromelessFlash.swf
+DEBUG: pageUrl  : http://www.bbc.co.uk/iplayer/episode/b06ygq3n
+DEBUG: app      : ondemand?_fcs_vhost=vod-rtmp-uk-live.edgesuite.net&undefined&auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4
+DEBUG: live     : no
+DEBUG: timeout  : 10 sec
+DEBUG: SWFSHA256:
+DEBUG: a2 cb 88 90 ff 4a 91 a5 fc 2a fb 25 b4 6b 4b b5
+DEBUG: ef 0f 4b eb 8a e2 f2 1b dd 33 72 fe 64 b5 25 44
+DEBUG: SWFSize  : 979369
+DEBUG: Setting buffer time to: 36000000ms
+Connecting ...
+DEBUG: RTMP_Connect1, ... connected, handshaking
+DEBUG: HandShake: Client type: 03
+DEBUG: HandShake: Client digest offset: 430
+DEBUG: HandShake: Initial client digest: 
+DEBUG: c4 ab 46 a6 8e 2a b7 77 ec ea 5f 3a 3c e4 ad 57
+DEBUG: 44 33 5f 24 09 a4 cf 28 e1 e9 69 b3 39 d0 b4 7b
+DEBUG: HandShake: Type Answer   : 03
+DEBUG: HandShake: Server Uptime : 1513777622
+DEBUG: HandShake: FMS Version   : 5.0.7.1
+DEBUG: HandShake: Calculated digest key from secure key and server digest: 
+DEBUG: 18 8f 97 47 30 52 70 a5 2e 31 0b f4 2a 73 1e 59
+DEBUG: 23 51 2f de 92 d9 48 96 a4 b8 8c 8f 1d 9e 07 03
+DEBUG: HandShake: Client signature calculated:
+DEBUG: 58 d6 f8 77 c2 97 df a4 ff b7 eb 4d 26 e3 a4 86
+DEBUG: dc 3c 53 41 64 b7 3e 4c bb c4 0a 7f d8 9f 98 05
+DEBUG: HandShake: Server sent signature:
+DEBUG: 3b 73 17 0d 66 a7 1e 1c f4 3d a9 7c da ac 6d 3f
+DEBUG: 3e 2a 1d 58 d5 0c c7 bf b7 25 79 c4 c2 d8 80 12
+DEBUG: HandShake: Digest key: 
+DEBUG: 7b db f0 a0 a8 80 33 39 5c 3b ac b5 c4 a1 ae 8a
+DEBUG: 42 fb 39 36 e8 f9 35 2f 9e 9d 8a 06 1a 54 76 01
+DEBUG: HandShake: Signature calculated:
+DEBUG: 3b 73 17 0d 66 a7 1e 1c f4 3d a9 7c da ac 6d 3f
+DEBUG: 3e 2a 1d 58 d5 0c c7 bf b7 25 79 c4 c2 d8 80 12
+DEBUG: HandShake: Genuine Adobe Flash Media Server
+DEBUG: HandShake: Handshaking finished....
+DEBUG: RTMP_Connect1, handshaked
+DEBUG: Invoking connect
+INFO: Connected...
+DEBUG: HandleServerBW: server BW = 1250000
+DEBUG: HandleClientBW: client BW = 1250000 2
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: RTMP_ClientPacket, received: invoke 242 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             fmsVer, STRING:     FMS/5,0,7,7055>
+DEBUG: Property: <Name:       capabilities, NUMBER:     127.00>
+DEBUG: Property: <Name:               mode, NUMBER:     1.00>
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetConnection.Connect.Success>
+DEBUG: Property: <Name:        description, STRING:     Connection succeeded.>
+DEBUG: Property: <Name:     objectEncoding, NUMBER:     0.00>
+DEBUG: Property: <Name:               data, ECMA_ARRAY>
+DEBUG: (object begin)
+DEBUG: Property: <Name:            version, STRING:     5,0,7,7055>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <connect>
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: Invoking createStream
+DEBUG: RTMP_ClientPacket, received: invoke 21 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onBWDone>
+DEBUG: Invoking _checkbw
+DEBUG: RTMP_ClientPacket, received: invoke 29 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_result>
+DEBUG: HandleInvoke, received result for method call <createStream>
+DEBUG: SendPlay, seekTime=0, stopTime=0, sending play: mp4:secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4?auth=daEdQd_c6b7bNdUafbtd4aBbvdRcdbybgc_-bwOjK.-bWG-DqoFIoFoOEtEsxL&aifp=v001&slist=secure/480kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384196.mp4;secure/3200kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452443919047.mp4;secure/800kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445382859.mp4;secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4
+DEBUG: Invoking play
+DEBUG: sending ctrl. type: 0x0003
+DEBUG: RTMP_ClientPacket, received: invoke 10275 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 20515 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: HandleCtrl, received ctrl. type: 4, len: 6
+DEBUG: HandleCtrl, Stream IsRecorded 1
+DEBUG: HandleChangeChunkSize, received: chunk size change to 4096
+DEBUG: HandleCtrl, received ctrl. type: 0, len: 6
+DEBUG: HandleCtrl, Stream Begin 1
+DEBUG: RTMP_ClientPacket, received: invoke 330 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Reset>
+DEBUG: Property: <Name:        description, STRING:     Playing and resetting secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     oAAOQpoA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Reset
+DEBUG: RTMP_ClientPacket, received: invoke 324 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Start>
+DEBUG: Property: <Name:        description, STRING:     Started playing secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     oAAOQpoA>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Start
+Starting download at: 0.000 kB
+DEBUG: RTMP_ClientPacket, received: notify 24 bytes
+DEBUG: (object begin)
+DEBUG: (object end)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 44 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Data.Start>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: RTMP_ClientPacket, received: notify 494 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:           duration, NUMBER:     3404.40>
+DEBUG: Property: <Name:       moovPosition, NUMBER:     36.00>
+DEBUG: Property: <Name:              width, NUMBER:     832.00>
+DEBUG: Property: <Name:             height, NUMBER:     468.00>
+DEBUG: Property: <Name:       videocodecid, STRING:     avc1>
+DEBUG: Property: <Name:       audiocodecid, STRING:     mp4a>
+DEBUG: Property: <Name:         avcprofile, NUMBER:     77.00>
+DEBUG: Property: <Name:           avclevel, NUMBER:     31.00>
+DEBUG: Property: <Name:             aacaot, NUMBER:     2.00>
+DEBUG: Property: <Name:     videoframerate, NUMBER:     25.00>
+DEBUG: Property: <Name:    audiosamplerate, NUMBER:     48000.00>
+DEBUG: Property: <Name:      audiochannels, NUMBER:     2.00>
+DEBUG: Property: <Name:          trackinfo, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     85110000.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     25000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     avc1>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object begin)
+DEBUG: Property: <Name:             length, NUMBER:     163410944.00>
+DEBUG: Property: <Name:          timescale, NUMBER:     48000.00>
+DEBUG: Property: <Name:           language, STRING:     und>
+DEBUG: Property: <Name:  sampledescription, STRICT_ARRAY>
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:         sampletype, STRING:     mp4a>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: (object end)
+INFO: Metadata:
+INFO:   duration              3404.40
+INFO:   moovPosition          36.00
+INFO:   width                 832.00
+INFO:   height                468.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            77.00
+INFO:   avclevel              31.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                85110000.00
+INFO:   timescale             25000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                163410944.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+36.351 kB / 0.00 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 30755 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40995 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 51235 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 61475 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+192.541 kB / 0.76 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 71717 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 81957 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 92197 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+320.541 kB / 1.32 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 102437 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 112677 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 122917 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+448.541 kB / 2.04 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 133157 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 143397 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+512.541 kB / 2.36 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 153637 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 163877 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+576.541 kB / 2.68 sec (0.0%)
+DEBUG: RTMP_ClientPacket, received: invoke 174117 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 184357 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwcheck>
+DEBUG: Invoking _result
+DEBUG: RTMP_ClientPacket, received: invoke 40 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <_onbwdone>
+207082.038 kB / 1124.84 sec (33.0%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 1513946617
+DEBUG: sending ctrl. type: 0x0007
+578227.915 kB / 3141.55 sec (92.2%)
+DEBUG: HandleCtrl, received ctrl. type: 6, len: 6
+DEBUG: HandleCtrl, Ping 1514246754
+DEBUG: sending ctrl. type: 0x0007
+626434.738 kB / 3403.68 sec (99.9%)
+DEBUG: ignoring too small audio packet: size: 0
+DEBUG: RTMP_ClientPacket, received: notify 102 bytes
+DEBUG: (object begin)
+DEBUG: (object begin)
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Complete>
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:           duration, NUMBER:     507.00>
+DEBUG: Property: <Name:              bytes, NUMBER:     641640615.00>
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleCtrl, received ctrl. type: 1, len: 6
+DEBUG: HandleCtrl, Stream EOF 1
+DEBUG: RTMP_ClientPacket, received: invoke 334 bytes
+DEBUG: (object begin)
+DEBUG: Property: NULL
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     status>
+DEBUG: Property: <Name:               code, STRING:     NetStream.Play.Stop>
+DEBUG: Property: <Name:        description, STRING:     Stopped playing secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4.>
+DEBUG: Property: <Name:            details, STRING:     secure/1500kbps/modav/bUnknown-7ded676b-e99f-4687-b8a0-29947ba40479_b06ygq0j_1452445384183.mp4>
+DEBUG: Property: <Name:           clientid, STRING:     oAAOQpoA>
+DEBUG: Property: <Name:             reason, STRING:     >
+DEBUG: (object end)
+DEBUG: (object end)
+DEBUG: HandleInvoke, server invoking <onStatus>
+DEBUG: HandleInvoke, onStatus: NetStream.Play.Stop
+WARNING: Larger timestamp than 24-bit: 0xfffffe8a
+DEBUG: Invoking deleteStream
+DEBUG: Got Play.Complete or Play.Stop from server. Assuming stream is complete
+626601.734 kB / 3404.37 sec (99.9%)
+DEBUG: RTMP_Read returned: 0
+Download complete
+DEBUG: Closing connection.
+
+INFO: Command exit code 0 (raw code = 0)
+
+
+INFO: Command: "ffmpeg" "-loglevel" "verbose" "-i" "/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4.flv" "-vcodec" "copy" "-acodec" "copy" "-y" "/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4"
+
+ffmpeg version 2.8.5 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 4.8 (SUSE Linux)
+  configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-decoder=dca --enable-libdcadec --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-version3 --enable-libtwolame --enable-libvo-aacenc --enable-libx264 --enable-libx265 --enable-libxvid --enable-x11grab
+  WARNING: library configuration mismatch
+  avutil      configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-encoders --disable-decoders --disable-muxers --disable-demuxers --enable-encoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,libvorbis' --enable-decoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,ljpeg,v210x,vorbis,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,otf,ttf,ass,srt,ssa,text' --enable-muxer='flac,gif,image2,image2pipe,matroska,matroska_audio,null,webm' --enable-demuxer='flac,gif,image2,image2pipe,matroska' --enable-x11grab
+  avcodec     configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-encoders --disable-decoders --disable-muxers --disable-demuxers --enable-encoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,libvorbis' --enable-decoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,ljpeg,v210x,vorbis,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,otf,ttf,ass,srt,ssa,text' --enable-muxer='flac,gif,image2,image2pipe,matroska,matroska_audio,null,webm' --enable-demuxer='flac,gif,image2,image2pipe,matroska' --enable-x11grab
+  avformat    configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-encoders --disable-decoders --disable-muxers --disable-demuxers --enable-encoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,libvorbis' --enable-decoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,ljpeg,v210x,vorbis,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,otf,ttf,ass,srt,ssa,text' --enable-muxer='flac,gif,image2,image2pipe,matroska,matroska_audio,null,webm' --enable-demuxer='flac,gif,image2,image2pipe,matroska' --enable-x11grab
+  swscale     configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-encoders --disable-decoders --disable-muxers --disable-demuxers --enable-encoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,libvorbis' --enable-decoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,ljpeg,v210x,vorbis,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,otf,ttf,ass,srt,ssa,text' --enable-muxer='flac,gif,image2,image2pipe,matroska,matroska_audio,null,webm' --enable-demuxer='flac,gif,image2,image2pipe,matroska' --enable-x11grab
+  swresample  configuration: --prefix=/usr --libdir=/usr/lib64 --shlibdir=/usr/lib64 --incdir=/usr/include/ffmpeg --extra-cflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --optflags='-fmessage-length=0 -grecord-gcc-switches -O2 -Wall -D_FORTIFY_SOURCE=2 -fstack-protector -funwind-tables -fasynchronous-unwind-tables -g' --disable-htmlpages --enable-pic --disable-stripping --enable-shared --disable-static --enable-runtime-cpudetect --enable-gpl --disable-openssl --enable-avresample --enable-libcdio --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcelt --enable-libcdio --enable-libdc1394 --enable-libfreetype --enable-libgsm --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-libschroedinger --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwebp --enable-pic --enable-pthreads --enable-vaapi --enable-vdpau --disable-encoders --disable-decoders --disable-muxers --disable-demuxers --enable-encoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,libvorbis' --enable-decoder=',012v,ansi,apng,bmp,flac,exr,ffv1,ffvhuff,gif,huffyuv,jpegls,libopenjpeg,libtheora,libvpx,pam,pbm,pcx,pgm,png,pgmyuv,ppm,sgi,sunrast,targa,tiff,v210,v308,v408,v410,webp,xbm,xwd,y41p,yuv4,celt,flac,ilbc,opus,pcm_alaw,pcm_bluray,pcm_dvd,pcm_f32be,pcm_f32le,pcm_f64be,pcm_f64le,pcm_mulaw,pcm_s16be,pcm_s16be_planer,pcm_s16le,pcm_s16le_planar,pcm_s24be,pcm_s24le,pcm_s24le_planar,pcm_s32be,pcm_s32le,pcm_s32le_planar,pcm_s8,pcm_s8_planar,pcm_u16be,pcm_u16le,pcm_u24be,pcm_u24le,pcm_u32be,pcm_u32le,pcm_u8,speex,ljpeg,v210x,vorbis,vp3,vp5,vp6,vp6a,vp6f,vp8,vp9,otf,ttf,ass,srt,ssa,text' --enable-muxer='flac,gif,image2,image2pipe,matroska,matroska_audio,null,webm' --enable-demuxer='flac,gif,image2,image2pipe,matroska' --enable-x11grab
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4.flv: Invalid data found when processing input
+INFO: Command exit code 1 (raw code = 256)
+WARNING: flv conversion failed - retaining flv file
+INFO: Recorded /home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.partial.mp4.flv
+DEBUG: Record using flashvhigh1 mode return code: '0'
+
+INFO: Loading recordings history
+INFO: Getting thumbnail from http://ichef.bbci.co.uk/images/ic/150x84/p03f6gq2.jpg
+INFO: Getting page http://ichef.bbci.co.uk/images/ic/150x84/p03f6gq2.jpg
+INFO: Downloaded Thumbnail to '/home/stuart/Work/Video-Working/BBC iPlayer/Adam_Pearson_Freak_Show_-__b06ygq3n_default.jpg'
+WARNING: Don't know how to tag MP4 file

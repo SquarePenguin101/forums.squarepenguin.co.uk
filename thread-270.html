@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - No longer possible to record live TV?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; No longer possible to record live TV?</div>
+<div id="pagetitle"><h2>No longer possible to record live TV?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-714</h2></div><div class="dateline">08-11-2014, 10:10 PM</div>
+</div>
+<div class="message">Hello, I've just signed up to ask this question, after using get_iplayer for a few years.<br />
+<br />
+Since all the changes the BBC instigated last week, is it now impossible to record live TV?  It doesn't seem to work even through the command prompt.  If I try the command from the documentation, all I get is this:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer&gt;get_iplayer --type=tv --pid="bbc_two"<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: bbc_two using type: tv<br />
+INFO: Trying to stream pid using type tv<br />
+INFO: pid not found in tv cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+ERROR: Failed to get version pid metadata from iplayer site (JSON)<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashvhigh,flashhigh,flashstd,flashnormal,flashlow) av<br />
+ailable for this programme with version 'default' (try using --modes=)<br />
+INFO: You may receive this message if you are using get_iplayer outside the UK<br />
+ERROR: Failed to record ' -&nbsp;&nbsp;(bbc_two)'</code></div></div><br />
+<br />
+<br />
+Is it now impossible to record live TV, and should i just give up, or is there a way to actually get it working?  Before the changes, I never had any problem recording live TV.<br />
+<br />
+Great program, though.  Keep up the good work! :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2014, 11:20 PM</div>
+</div>
+<div class="message">It looks like the BBC have killed the RTMP TV streams.  They moved the live streams on the web site to Adobe HDS a little while ago, so no surprise that they eventually killed the old streams.  get_iplayer may get HDS capability at some point, but no promises.  At the moment, there are bigger problems to fix, and live streaming is low priority.  For now, you may be able to cobble together a recording solution with live streamer and VLC (I haven't tried it though).<br />
+<br />
+<a href="http://livestreamer.tanuki.se/en/latest/">http://livestreamer.tanuki.se/en/latest/</a><br />
+<br />
+<a href="https://github.com/chrippa/livestreamer/issues/529">https://github.com/chrippa/livestreamer/issues/529</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">08-11-2014, 11:47 PM</div>
+</div>
+<div class="message">As they have already done this for the live TV streams and are planning to do it for radio catch-up in 2015, I'm guessing that TV catch-up streams will follow in the not too distant future. Is it likely that this will be a change get_iplayer can cope with?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-11-2014, 11:51 PM</div>
+</div>
+<div class="message">I'm sure get_iplayer could be adapted.  The big unknown is whether or not the BBC will use the switch to HDS for on-demand content to bring in DRM (a la C4).  If they do that, it's game over for get_iplayer.  It doesn't matter that you can download HDS streams if they're encrypted.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 12:03 AM</div>
+</div>
+<div class="message">@ssme: To clarify, you would only need VLC if you were planning to re-mux or transcode the stream, or just to watch it live. You can dump it to file with only live streamer.<br />
+<br />
+EDIT: remove reference to ffmpeg</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-585</h2></div><div class="dateline">09-11-2014, 12:10 AM</div>
+</div>
+<div class="message">Is there any suggestion that they are planning to move TV catch-up over to HDS or or is it just radio at the moment?<br />
+<br />
+If the new HDS Live TV streams don't use DRM that may be a good sign?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">09-11-2014, 12:28 AM</div>
+</div>
+<div class="message">I don't know about VOD, but I would assume it will go HDS at some point.  Because it's such a different streaming architecture, I would assume the BBC will want to standardise. I don't know if the lack of live stream DRM augurs well or not for VOD.  I could see live streams left open with VOD encrypted since that would remove the easy route to offline viewing.  Some folks might go for downloading live in real time, but I'm not sure that would appeal to casual users.  You might as well just get a PVR or USB tuner - a lot easier.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; No longer possible to record live TV?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

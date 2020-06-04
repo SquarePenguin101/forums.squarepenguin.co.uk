@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - hlshd not included in default 'best' shortcut</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; hlshd not included in default 'best' shortcut</div>
+<div id="pagetitle"><h2>hlshd not included in default 'best' shortcut</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">12-02-2017, 03:59 PM</div>
+</div>
+<div class="message">Why is hlshd not included as a mode in the default best shortcut? <span style="text-decoration: line-through;" class="mycode_s">Indeed, none of the hls modes now appear in the tvbest shortcuts. If memory serves, they were backup modes to hvf when introduced in 2.96?</span><br />
+<br />
+Some more detail...<br />
+<br />
+The default 'tvbest' shortcut is currently set to 25fps streams (i.e. without the --fps50 flag) and contains the following modes. <br />
+<br />
+hvfxsd,dvfxsd,hlsvhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow<br />
+<br />
+The wiki table <a href="https://github.com/get-iplayer/get_iplayer/wiki/modes#tv">here</a> states that the max resolution available by specifying --tvmodes=best without the --fps50 flag is 1280*720. <br />
+<br />
+But following the details in the table <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#tv-modes">here</a> that's wrong, the highest resolution available from the modes contained in the 'tvbest' shortcut at 25fps is 960*540.<br />
+<br />
+So, is hlshd supposed to be included in the tvbest shortcut as a back up still? If no (that would seem the case as they have their own 'hlsbest' shortcut), then the wiki table needs adjusting to indicate the correct highest resolution or the need to specify the hlshd/hlsbest mode/shortcut to get that resolution.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-02-2017, 07:02 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (12-02-2017, 03:59 PM)</span></cite>But following the details in the table <a href="https://github.com/get-iplayer/get_iplayer/wiki/modesref#tv-modes">here</a> that's wrong, the highest resolution available from the modes contained in the 'tvbest' shortcut at 25fps is 960*540.</blockquote>Linked table corrected in wiki. <kbd>--tvmode=best</kbd> still means HD where available. May require <kbd>--fps50</kbd> if no 25fps HD stream available, though I haven't seen such a case.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; hlshd not included in default 'best' shortcut</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

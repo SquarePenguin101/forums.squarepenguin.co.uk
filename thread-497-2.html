@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Duration / seek problem with iPod</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Duration / seek problem with iPod</div>
+<div id="pagetitle"><h2>Duration / seek problem with iPod</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-497-1.html">1</a> <strong>2</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-08-2015, 06:42 PM</div>
+</div>
+<div class="message">AFAIK, they come from the same source - just different packaging.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">21-08-2015, 03:36 AM</div>
+</div>
+<div class="message">Ahh as I thought...installed 15.04 Ubuntu Mate - a saga of many days (I mean who creates a Linux image with no default user and expects the setup to work? And these people are CompSci grads? o.O) - and downloaded a show and it works fine. Well it gave me that 'XML metadata' error on the schedule getting with numbers, but I think that's Perl, updating now, pid works fine.<br />
+<br />
+So it's something with Raspbian/Debian, not Ubuntu as I thought.<br />
+<br />
+Problem is a whole load of OTHER things have broken now. *sigh*</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-08-2015, 09:31 AM</div>
+</div>
+<div class="message">Thanks for the update.  If you continue to have problems on Ubuntu, start another thread in the appropriate forum.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">30-08-2015, 08:27 AM</div>
+</div>
+<div class="message">Well I fixed this on Raspbian...it seems to be a problem with avconv.<br />
+<br />
+I started with a completely clean May 2015 Raspbian install, nothing installed except an update and adding the Hedgerows source. Interestingly the Hedgerows get_iplayer (the recommended method of adding the repository then sudo apt-get install get-iplayer) produces completely unplayable files, if you don't install ffmpeg or avconv separately...and the tagging errored, a known error as apparently the atomicparsley on the standard Raspbian is outdated, so removed all the dependencies and re-added them, and installed FFMpeg from the repository:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>The following extra packages will be installed:<br />
+ libavfilter2 libavformat53 liblircclient0 liblzo2-2 libmpeg2-4 libopencv-core2.3 libopencv-imgproc2.3 libpostproc52 libxvmc1<br />
+Suggested packages:<br />
+ lirc mplayer-doc netselect fping<br />
+The following NEW packages will be installed:<br />
+ ffmpeg libavfilter2 libavformat53 liblircclient0 liblzo2-2 libmpeg2-4 libopencv-core2.3 libopencv-imgproc2.3 libpostproc52 libxvmc1 mplayer</code></div></div><br />
+<br />
+But that did the duration problem still, notice libvo_aacenc and [flv @ 0x202d5c0] max_analyze_duration reached] - I googled this and there is duration issues with avconv (sorry I don't have the link, but just google that error you'll find it)<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --get 11016 --type=radio --force<br />
+get_iplayer 2.94-ppa23, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+Matches:<br />
+11016: David Rodigan - Kiko Bun in session, BBC Radio 1Xtra, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: flashaacstd1,flashaacstd2,flashaaclow1,flashaaclow2 modes will be tried for version default<br />
+INFO: Trying flashaacstd1 mode to record radio: David Rodigan - Kiko Bun in session<br />
+INFO: File name prefix = David_Rodigan_-_Kiko_Bun_in_session_b066vylv_default                 <br />
+RTMPDump v2.4-n78-git3a1e20c-ppa8~wheezy<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+INFO: Connected...<br />
+Starting download at: 0.000 kB<br />
+INFO: Metadata:<br />
+INFO:   duration              7334.40<br />
+INFO:   moovPosition          72.00<br />
+INFO:   audiocodecid          mp4a<br />
+INFO:   aacaot                2.00<br />
+INFO:   audiosamplerate       48000.00<br />
+INFO:   audiochannels         2.00<br />
+INFO: trackinfo:<br />
+INFO:   length                352051200.00<br />
+INFO:   timescale             48000.00<br />
+INFO:   language              und<br />
+INFO: sampledescription:<br />
+INFO:   sampletype            mp4a<br />
+120307.655 kB / 7334.38 sec (99.9%)<br />
+Download complete<br />
+avconv version 9.14-6:9.14-1rpi1rpi1, Copyright (c) 2000-2014 the Libav developers<br />
+ built on Jul 22 2014 15:08:12 with gcc 4.6 (Debian 4.6.3-14+rpi1)<br />
+[flv @ 0x202d5c0] max_analyze_duration reached<br />
+Input #0, flv, from '/home/pi/David_Rodigan_-_Kiko_Bun_in_session_b066vylv_default.partial.m4a.flv':<br />
+ Metadata:<br />
+   moovPosition    : 72<br />
+   aacaot          : 2<br />
+   audiochannels   : 2<br />
+ Duration: 02:02:14.40, start: 0.000000, bitrate: N/A<br />
+   Stream #0.0: Audio: aac, 48000 Hz, stereo, fltp<br />
+Output #0, ipod, to '/home/pi/David_Rodigan_-_Kiko_Bun_in_session_b066vylv_default.partial.m4a':<br />
+ Metadata:<br />
+   moovPosition    : 72<br />
+   aacaot          : 2<br />
+   audiochannels   : 2<br />
+   encoder         : Lavf54.20.4<br />
+   Stream #0.0: Audio: libvo_aacenc, 48000 Hz, stereo<br />
+Stream mapping:<br />
+ Stream #0:0 -&gt; #0:0 (copy)<br />
+Press ctrl-c to stop encoding<br />
+size=  119077kB time=7334.40 bitrate= 133.0kbits/s    <br />
+video:0kB audio:114600kB global headers:0kB muxing overhead 3.906873%<br />
+INFO: Recorded /home/pi/David_Rodigan_-_Kiko_Bun_in_session_b066vylv_default.m4a<br />
+<br />
+INFO: MP4 tagging M4A file<br />
+<br />
+Started writing to temp file.<br />
+Progress: =======================================================&gt;100% |<br />
+Finished writing to temp file.</code></div></div><br />
+<br />
+I then added deb-multimedia.org which seemed to have newer files, it updated some of the libraries...but still no joy.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>The following NEW packages will be installed:<br />
+ ffmpeg liba52-0.7.4 libaacplus2 libavdevice54 libavfilter2 libbs2b0 libdirac-decoder0 libegl1-mesa libegl1-mesa-drivers libfaac0<br />
+ libfdk-aac0 libgbm1 libopenvg1-mesa libswresample0 libvorbisidec1 libx264-124 libx264-132 libxcb-dri2-0<br />
+The following packages will be upgraded:<br />
+ libav-tools libavcodec53 libavcodec54 libavdevice53 libavfilter3 libavformat53 libavformat54 libavutil51 libdca0 libmp3lame0<br />
+ libpostproc52 libswscale2 libx264-130 libxvidcore4 mplayer</code></div></div><br />
+So thinking this was an issue with avconv, I reverted back to tweaking ffmpeg and I thought this must be the AAC lib - so installed the libaac-dev, then libfdk-aac-dev. Same error, all that changed was the aac instead of libvo_aacenc. Still played wrongly in the iPod, duration was screwed.<br />
+<br />
+I then stripped off all the above installs - the libraries, the FFMpeg, atomicparsley, id3v2, get_iplayer - thinking that it probably was some crap that Raspbian had as standard. Searched for anything FFMpeg, avconv, libav-tools and nuked it. I left gstreamer as it seems to be tied in with the system.<br />
+<br />
+I then compiled ffmpeg from scratch following these instructions - no cross-compiling! <a href="https://www.raspberrypi.org/forums/viewtopic.php?f=35&amp;t=52834">https://www.raspberrypi.org/forums/viewt...35&amp;t=52834</a> - I added the x264 one in, scroll to the end for that.<br />
+<br />
+I then installed (probably from Hedgerows, but still had the deb-multimedia.org source in there) the rest of the dependencies BUT not ffmpeg obviously, and made sure libav-tools and all that jazz was off my system:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sudo apt-get install rtmpdump atomicparsley id3v2 libmp3-tag-perl libwww-perl</code></div></div><br />
+<br />
+(although some of the libraries were still there, I didn't autoremove everything, just the direct dependencies)<br />
+<br />
+I then added get_iplayer manually per these instructions: <a href="https://squarepenguin.co.uk/wiki/manual/">https://squarepenguin.co.uk/wiki/manual/</a><br />
+<br />
+It works fine! 'max_analyze_duration reached' error has disappeared, to be replaced with an apparently benign '[ipod @ 0x15e96d0] Codec for stream 0 does not use global headers but container format requires global headers' <br />
+<br />
+So I suggest those using Raspbian scrub all that crap off before you install, and don't use avconv unless you're fine with m4as that will crash iPods, and roll ffmpeg from scratch BUT this is exactly what I did before (although a different set of instructions that is FAR more involved, link mentioned on Page 1), and must've been something still on the system, maybe lurking avconv or libav-tools that took precedence or maybe not a good build?<br />
+<br />
+I did remove ffmpeg and other parts before building the last time, I didn't document it as well, but I didn't remove all the libraries either...listed above...so just purge/remove them and then grep/locate and scrub them completely off.<br />
+<br />
+I hope this helps someone...</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">30-08-2015, 11:23 PM</div>
+</div>
+<div class="message">Thanks for the update, but as you say it doesn't exactly square with your earlier report that you already tested a very up-to-date version of ffmpeg. Since you never posted  your get_iplayer commands or output, you never did demonstrate that you tested the various permutations properly. Still, you were sure to get there in end by removing all other versions. <br />
+<br />
+I think you go a bit far in making a blanket recommendation for all Raspbian users to follow your lead. Yours was rather a niche issue, which AFAICT boiled down to the fact that you were using avconv. Unfortunately, that is a cross to bear for users of Debian-derived distros (though Debian is bringing back ffmpeg in next version). I see an up-to-date ffmpeg package in the Raspian repo, but someone with a RPi will have to explain how to use it.<br />
+<br />
+Other notes: There is no point in using AtomicParsley without ffmpeg/avconv.  It only works on MP4 containers. Even old versions should work, assuming the build isn't broken or misconfigured. Also, the choice of AAC codec shouldn't make any difference (though still a good idea to add one to ffmpeg build).  Your problem was with the container, which comes under libavformat.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1000</h2></div><div class="dateline">30-08-2015, 11:41 PM</div>
+</div>
+<div class="message">"doesn't exactly square with your earlier report that you already tested a very up-to-date version of ffmpeg. Since you never posted  your get_iplayer commands or output, you never did demonstrate that you tested the various permutations properly. "<br />
+<br />
+Well I did, as mentioned earlier in the thread I build ffmpeg from scratch using the Owen A method? Just because I didn't slavishly list every get_iplayer response - and no-one asked for them, just assumed I knew to post them which I didn't - doesn't mean I didn't test it thoroughly....I did pretty much the same I did here with that build. Only real difference is not really understanding then the difference between avconv and ffmpeg, and not removing more of the libraries installed with the repo version of ffmpeg.<br />
+<br />
+There is a real problem, I tested this with a pure version of Raspbian. Saying it's a fringe case because I didn't document the first go is a bit odd. I am documenting it NOW - and going through exactly the same steps with a different USB stick, a plain untouched distro and the official instructions on this site for installing on Raspi, it broke. Did not work. As in created a M4A that NOTHING would play - not just iTunes. Dead as a dodo, and about as useful.<br />
+<br />
+And even the 'working' version after installing either ffmpeg or libav-tools (surely one of them should come in as a dependency to sudo install get-iplayer? They don't) had the same issue as I first reported with a screwed duration. <br />
+<br />
+So I've replicated this twice, second time very methodically because I realised I didn't really document the first - then again having installed get_iplayer on many systems before, I wasn't expecting to have issues, this isn't the old 2.8 versions, or the fun with my old PC 6+ years ago - get_iplayer is much more mature and has different people working on it. But I don't document EVERY install like this, that would be very boring, and I do have a life outside of hacking around Linux installs.<br />
+<br />
+So I don't really see how that's a 'fringe' case?</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-497-1.html">1</a> <strong>2</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Duration / seek problem with iPod</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

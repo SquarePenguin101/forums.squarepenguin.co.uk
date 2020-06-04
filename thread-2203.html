@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Using get-iplayer snap version w/output directory on removable media (e.g. usb stick)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Using get-iplayer snap version w/output directory on removable media (e.g. usb stick)</div>
+<div id="pagetitle"><h2>Using get-iplayer snap version w/output directory on removable media (e.g. usb stick)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2533</h2></div><div class="dateline">25-02-2020, 09:11 PM</div>
+</div>
+<div class="message">I thought I should detail how one does this as I encountered this issue myself and I feel it is necessary to put it out there so people using an external films HDD within their linux system when they are using the snapcraft version!<br />
+<br />
+This happens on this error:<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>ERROR: Cannot open (write): /media/xxxx/xxxxx/xxxxxx.video.ts</blockquote>
+<br />
+So basically when one has a terminal open on their system, and they wish to download TV/Radio to a drive outside of their home drive (i.e. /media or /mnt) they can't it errors out not truly describing everything that has gone wrong and just says it failed to write. <br />
+<br />
+And after a Google search this forum page appears (<a href="thread-1965.html">https://forums.squarepenguin.co.uk/thread-1965.html</a>), which says this from user-2:<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>With the snap you need to connect its "removable-media" interface in order to write under /media. It's not connected by default. </blockquote>
+<br />
+Now for a normal user they may not understand this or know where to find out how as on a search it doesn't properly lay it out; however, here it is. If you wish to use removable media or a different drive, one needs to type in this command on a snapcraft install:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>snap connect get-iplayer:removable-media :removable-media</code></div></div>This connects the snap removable-media interface to get-iplayer and one should simply be able to rerun the desired command and it should run :)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1893</h2></div><div class="dateline">25-02-2020, 11:00 PM</div>
+</div>
+<div class="message">I believe this would only affect Ubuntu users who use the snap version of get_iplayer.<br />
+If you use a repository version instead of the web site version, it is likely to be out of date.<br />
+<br />
+I wouldn't use snap myself (for anything)...</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Using get-iplayer snap version w/output directory on removable media (e.g. usb stick)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

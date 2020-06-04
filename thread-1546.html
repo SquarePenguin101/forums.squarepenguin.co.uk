@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - tv.cache no longer populating</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; tv.cache no longer populating</div>
+<div id="pagetitle"><h2>tv.cache no longer populating</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1566</h2></div><div class="dateline">25-10-2017, 10:11 PM</div>
+</div>
+<div class="message">I last ran get_iplayer 3.01 on my microserver in the early hours of the 21st, 4.5 days ago, and it refreshed cache, ran pvr, and downloaded QI fine. Try it again this evening and it downloaded radio shows but no tv shows (QI XL &amp; have I got a bit more news for you).<br />
+<br />
+Go to my main pc and run get_iplayer there, update cache, search for qi and nothing. Run --rebuild-cache and I get 4 matching programmes. Do the same for radio and I get 17239 matching programmes. Upgrade to 3.05 and repeat and get the same results. Both computers are running Windows 7 x64.<br />
+<br />
+Drag tv.cache (2KB) into text editor and it's 4 programes<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>#index|type|name|pid|available|expires|episode|seriesnum|episodenum|versions|duration|desc|channel|categories|thumbnail|timeadded|guidance|web<br />
+1|tv|Newsbeat Debates|b096pvrf|2017-09-26T21:00:00+01:00|1509048000|Generation Misunderstood?|||default|3600|An audience of 16 to 22-year-olds discuss whether the world has got 'Generation Z' wrong.|BBC News|||1508962177||http://www.bbc.co.uk/programmes/b096pvrf|<br />
+2|tv|Newsbeat Documentaries|p05fyxtl|2017-09-29T21:30:00+01:00|1509442200|We Are Generation Z|||default|1800|Does the world have Generation Z wrong? Exploring the misconceptions of 16 to 22-year-olds|BBC News|||1508962177||http://www.bbc.co.uk/programmes/p05fyxtl|<br />
+3|tv|The Live Lounge Show: Series 1|b0964py6|2017-09-29T20:00:00+01:00|1509303600|Miley Cyrus and More|1|3|default|3600|Miley Cyrus in session, plus Rita Ora, Wolf Alice, George Ezra and Rag'n'Bone Man.|BBC Four|||1508962177||http://www.bbc.co.uk/programmes/b0964py6|<br />
+4|tv|The Live Lounge Show: Series 1|b0976m27|2017-10-06T20:00:00+01:00|1509908400|Jay-Z and More|1|4|default|3600|Jay-Z in session at Maida Vale, plus Craig David, Royal Blood, Rudimental and Lorde.|BBC Four|||1508962177||http://www.bbc.co.uk/programmes/b0976m27|</code></div></div><br />
+I then dig out the PID from the iplayer site and I download QI XL successfully on my microserver using get_iplayer 3.01 using get_iplayer --subtitles --modes=hlshd --pid=b09c741h<br />
+<br />
+I then closed get_iplayer and deleted tv.cache and tv.cache.old then reopened get_iplayer whereupon the two files were recreated and I ran --rebuild-cache again and it only got the same 4 programmes (again). I unplugged my router so I got got a new ip address and tried again, no change.<br />
+<br />
+Attached is the output from get_iplayer --rebuild-cache --type=tv --verbose &gt; H:/outputtv.txt 2&gt;&amp;1<br />
+<br />
+Since it is happening on two computers and in two different versions of get_iplayer (3.01 and 3.05) I'm doubting it's something my end unless the bbc have taken a real dislike to my isp. Could the BBC have changed something which breaks the scrapper functionality (again)?<br/><br/>
+<a href="static/thread-1546-outputtv.txt">outputtv.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">25-10-2017, 10:46 PM</div>
+</div>
+<div class="message">Well, I've just run my acquisition script (I use Linux, and I don't use get_iplayer pvr), and it happily downloaded a significant tv cache.  It had 7411 programme entries.  (The version I downloaded at 06:01 this morning had 7649 entries.)<br />
+<br />
+From that it seems that the problem might be at your end, and not with the beeb.<br />
+<br />
+HTH.<br />
+<br />
+pf</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1566</h2></div><div class="dateline">25-10-2017, 11:21 PM</div>
+</div>
+<div class="message">The tv.cache on my microserver (get_iplayer 3.01) still has items in its cache which were added 4.5 days ago when last run, just no new ones are being added. I'm loathe to do a --rebuild-cache on that install as I expect it would erase what is there.<br />
+<br />
+I too can load a url in a browser and have it load fine. It does automatically reload from http to https.<br />
+<br />
+Downloaded a link using wget too and got the following output.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>H:&#92;wget&gt;wget http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+SYSTEM_WGETRC = c:/progra~1/wget/etc/wgetrc<br />
+syswgetrc = c:/progra~1/wget/etc/wgetrc<br />
+--2017-10-25 23:16:42--  http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+<br />
+Resolving www.bbc.co.uk... 212.58.246.95, 212.58.244.71<br />
+Connecting to www.bbc.co.uk|212.58.246.95|:80... connected.<br />
+HTTP request sent, awaiting response... 301 Moved Permanently<br />
+Location: https://www.bbc.co.uk/schedules/p020dmkf/this_week [following]<br />
+--2017-10-25 23:16:42--  https://www.bbc.co.uk/schedules/p020dmkf/this_week<br />
+Connecting to www.bbc.co.uk|212.58.246.95|:443... connected.<br />
+ERROR: cannot verify www.bbc.co.uk's certificate, issued by `/C=BE/O=GlobalSign<br />
+nv-sa/CN=GlobalSign Organization Validation CA - SHA256 - G2':<br />
+  Unable to locally verify the issuer's authority.<br />
+To connect to www.bbc.co.uk insecurely, use `--no-check-certificate'.<br />
+Unable to establish SSL connection.<br />
+<br />
+H:&#92;wget&gt;wget http://www.bbc.co.uk/s4c/programmes/schedules/this_week --no-check-<br />
+certificate<br />
+SYSTEM_WGETRC = c:/progra~1/wget/etc/wgetrc<br />
+syswgetrc = c:/progra~1/wget/etc/wgetrc<br />
+--2017-10-25 23:17:16--  http://www.bbc.co.uk/s4c/programmes/schedules/this_week<br />
+<br />
+Resolving www.bbc.co.uk... 212.58.246.95, 212.58.244.71<br />
+Connecting to www.bbc.co.uk|212.58.246.95|:80... connected.<br />
+HTTP request sent, awaiting response... 301 Moved Permanently<br />
+Location: https://www.bbc.co.uk/schedules/p020dmkf/this_week [following]<br />
+--2017-10-25 23:17:16--  https://www.bbc.co.uk/schedules/p020dmkf/this_week<br />
+Connecting to www.bbc.co.uk|212.58.246.95|:443... connected.<br />
+WARNING: cannot verify www.bbc.co.uk's certificate, issued by `/C=BE/O=GlobalSig<br />
+n nv-sa/CN=GlobalSign Organization Validation CA - SHA256 - G2':<br />
+  Unable to locally verify the issuer's authority.<br />
+HTTP request sent, awaiting response... 302 Found<br />
+Location: /schedules/p020dmkf/2017/w43 [following]<br />
+--2017-10-25 23:17:16--  https://www.bbc.co.uk/schedules/p020dmkf/2017/w43<br />
+Reusing existing connection to www.bbc.co.uk:443.<br />
+HTTP request sent, awaiting response... 200 OK<br />
+Length: 878731 (858K) [text/html]<br />
+Saving to: `w43'<br />
+<br />
+100%[======================================&gt;] 878,731     2.64M/s   in 0.3s<br />
+<br />
+2017-10-25 23:17:17 (2.64 MB/s) - `w43' saved [878731/878731]</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1951</h2></div><div class="dateline">25-10-2017, 11:45 PM</div>
+</div>
+<div class="message">i also have the same problem as augur on my win10 PC<br />
+<br />
+looks like it hasn't downloaded any new programmes in the schedule since 11-oct-17 for me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">25-10-2017, 11:46 PM</div>
+</div>
+<div class="message">Apologies, I misunderstood...<br />
+<br />
+I thought you meant your cache was not being populated, but now I see that you mean that it's getting no new entries.  My linux version is doing the same, so I would agree that the problem is at the source end.  I'm pretty sure I've seen this before.  I put it down to a server at the beeb which has had a hiccup for some reason; finger trouble (if there's anyone there), power problem, network problem, memory leak - the list goes on!  I also tend to assume that since this is probably seen as a "service" which only has to work in normal business hours (9-5) and not in antisocial hours, especially since iPlayer is the preferred product, then there will be no sysadmins looking after the service (at 23:45) - especially given the swinging cuts that have been imposed on the beeb.<br />
+I would suggest a review about midday on Thursday (26-10).<br />
+<br />
+pf<br />
+<br />
+Update<br />
+I've just checked my copy of the tv cache that I downloaded at 06:01 on 25-Oct and I had 169 new entries.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 12:02 AM</div>
+</div>
+<div class="message">This was caused by a change in the content of the schedule pages that broke the parsing in get_iplayer. That's the danger inherent in scraping. I'll cut a new release, hopefully later today (26/10), that should restore TV cache updating.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1566</h2></div><div class="dateline">26-10-2017, 12:19 AM</div>
+</div>
+<div class="message">Thanks for the heads up user-2, guess I was just the first(ish) unlucky person to notice. Normally when something like this happens I check the mailing list archive and find the answer waiting for me.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 01:32 AM</div>
+</div>
+<div class="message">fixed in 3.06</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1949</h2></div><div class="dateline">26-10-2017, 02:01 AM</div>
+</div>
+<div class="message">Thank you very much user-2.<br />
+Works well &amp; sanity restored.<br />
+Fantastic support!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">26-10-2017, 07:35 AM</div>
+</div>
+<div class="message">Well, it still fails here.<br />
+I'm running it under debian wheezy, maybe one of the perl libraries is too old and doesn't follow the redirect?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-622</h2></div><div class="dateline">26-10-2017, 07:46 AM</div>
+</div>
+<div class="message">Tried under the latest ubuntu and it works, I removed mojolicious from the wheezy box and it also works (and it's not really much slower than with it), so I guess it's mojolicious that's too old (I remember I had to install a later version that the one provided in wheezy).<br />
+And, no, I cannot upgrade that box right now.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1954</h2></div><div class="dateline">26-10-2017, 09:09 AM</div>
+</div>
+<div class="message">3.06 is not working properly for me.<br />
+<br />
+I'm running on CentOS 7.3, without Mojolicious, and getting the same errors as before.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">26-10-2017, 10:09 AM</div>
+</div>
+<div class="message">@pippolippi: As you have now discovered for yourself, your problem displayed different symptoms and was completely unrelated to the OP issue. That is why I put your post in a separate thread.<br />
+<br />
+@Soruk: There is no way we're going to know what "as before" means when you have never posted here before. Create a new thread and <a href="thread-706.html#what-information-should-you-provide">follow our instructions</a> to provide a full report so we can see what is happening on your system.<br />
+<br />
+I'm closing this thread to avoid any more OT posts.<br />
+<br />
+There are two things going on. First, the format of the BBC TV schedule pages changed slightly, requiring the the fix in 3.06. Second, the schedule pages are now being redirected to HTTPS URLs. Systems with obsolete Perl modules, like Wheezy and likely CentOS as well, could have problems with that. In particular, it looks like some versions of IO::Socket::SSL cause problems for Mojolicious. Set up a local library for Perl modules (in the get_iplayer install docs) and install the latest versions of both to override obsolete system packages.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; tv.cache no longer populating</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

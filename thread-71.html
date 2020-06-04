@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Downloaded file names.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Downloaded file names.</div>
+<div id="pagetitle"><h2>Downloaded file names.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">20-11-2013, 04:59 PM</div>
+</div>
+<div class="message">Iam new to get_iplayer but have succesfully download the programs I wanted. I have a slight problem with file names e,g Agatha Christie - The 8.55 to Baghdad-Episode 1.partial.mp3.flv<br />
+The items I would like to not show are "partial" and ".flv", Can this be done?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-11-2013, 05:57 PM</div>
+</div>
+<div class="message">If the file is left with ".partial" and ".flv" in the name, then an error occurred that prevented the download from completing.  Examine the output from get_iplayer - there should be a clue.  If you don't see anything obvious, run get_iplayer with <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to get some additional output.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">20-11-2013, 10:55 PM</div>
+</div>
+<div class="message">Thank you for the quick reply.<br />
+I ran the --verbose setting on a program which shows the two items in the file name. This is the result.<br />
+Is this what you needed?<br />
+<br />
+cask@cask-Dimension-4550 ~ &#36; get_iplayer --type=radio "A history of Britain in numbers" --verbose<br />
+get_iplayer 2.84-2-g21e11de-ppa15, Copyright (C) 2008-2010 Phil Lewis<br />
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+  This is free software, and you are welcome to redistribute it under certain<br />
+  conditions; use --conditions for details.<br />
+<br />
+INFO: User prefs dir: /home/cask/.get_iplayer<br />
+INFO: System options dir: /etc/get_iplayer/options<br />
+Current options:<br />
+	aactomp3 = 1<br />
+	atomicparsley = /usr/bin/AtomicParsley<br />
+	fileprefix = &lt;name&gt;-&lt;episode&gt;<br />
+	flvstreamer = /usr/bin/rtmpdump<br />
+	output = /home/cask/Radio Downloads/<br />
+	packagemanager = apt<br />
+	rtmpdump = /usr/bin/rtmpdump<br />
+	tag_hdvideo = 1<br />
+	tag_longdesc = 1<br />
+	tag_utf8 = 1<br />
+	type = radio<br />
+	verbose = 1<br />
+	whitespace = 1<br />
+<br />
+INFO: Search args: 'A history of Britain in numbers'<br />
+INFO: Got 3336 file cache entries for radio<br />
+INFO: Search term 'A history of Britain in numbers' is a substring<br />
+DEBUG: Search download_regex = A history of Britain in numbers<br />
+DEBUG: Search channel_regex = .*<br />
+DEBUG: Search category_regex = .*<br />
+DEBUG: Search versions_regex = .*<br />
+DEBUG: Search exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search channel_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search category_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search since = 999999<br />
+DEBUG: Search before = -999999<br />
+Matches:<br />
+10074:	A History of Britain in Numbers - Population, BBC Radio 4, Factual,History,Radio<br />
+10075:	A History of Britain in Numbers - Health, BBC Radio 4, Factual,Highlights,History,Radio<br />
+10076:	A History of Britain in Numbers - Prosperity, BBC Radio 4, Factual,Highlights,History,Radio<br />
+<br />
+INFO: 3 Matching Programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">20-11-2013, 11:36 PM</div>
+</div>
+<div class="message">You need to actually attempt a download - all you've done there is run a search.  Just add <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--verbose</code></div></div> to whatever command you're using to download the programme.  Put the full command string in your reply, and use the "code" button to format it so that it's readable in the forum.  The verbose output will be voluminous, so put it in a file and attach it to your reply.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">20-11-2013, 11:54 PM</div>
+</div>
+<div class="message">Thans for the help.<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --get 12234 --verbose</code></div></div><br />
+File attached.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">21-11-2013, 12:01 AM</div>
+</div>
+<div class="message">It will not let me send a plain text file.<br />
+Should I use another format?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-11-2013, 01:40 AM</div>
+</div>
+<div class="message">I'll hazard a guess that your file didn't have a .txt extension.  If that's the case, add the extension and try again.  If that's not the case, tell me what error you get during submission.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-11-2013, 01:41 AM</div>
+</div>
+<div class="message">Also: tell me what programme corresponds to index 12234</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">21-11-2013, 09:24 AM</div>
+</div>
+<div class="message">Cask: I have temporarily white-listed your IP address to ensure that the error you are experiencing is not related to the sites Anti-Spam filters. <br />
+<br />
+Please attempt your upload again when convenient and report any errors.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">21-11-2013, 05:31 PM</div>
+</div>
+<div class="message">The program was Radio 4 Appeal; Mines advisory Group.<br />
+<br />
+Your idea was correc; the file was indeed missing .txt<br />
+I have attached it again.<br />
+The entries that seem to me to show errors are;<br />
+general references to partial and.flv starting on page 2.<br />
+<br />
+on the last page;<br />
+"Unknown encoder 'libmp3lame'"<br />
+"WARNING: flv conversion failed - retaining flv file"<br/><br/>
+<a href="static/thread-71-report.txt">report.txt</a>
+</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">21-11-2013, 10:14 PM</div>
+</div>
+<div class="message">Thanks for the additional info.  The problem is clear: libav/avconv support for the MP3 encoder isn't installed by default in Ubuntu, so get_iplayer can't convert your files to MP3.  This is easily remedied: install the libavcodec-extra-53 package.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-243</h2></div><div class="dateline">21-11-2013, 11:42 PM</div>
+</div>
+<div class="message">Many thanks for your time and help in this. I installed the package, restarted and the file now downloads with the file name as before but then is processed to the correct format.<br />
+All  is now as it should be. Thanks again.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Downloaded file names.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

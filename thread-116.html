@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Programs not in Index</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Programs not in Index</div>
+<div id="pagetitle"><h2>Programs not in Index</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">12-02-2014, 11:43 AM</div>
+</div>
+<div class="message">The iPlayer radio part seems to have changed and some programs are not appearing in the index created by get_iplayer - e.g. <br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b039kv61">http://www.bbc.co.uk/programmes/b039kv61</a><br />
+<br />
+and<br />
+<br />
+<a href="http://www.bbc.co.uk/programmes/b00zzz2d">http://www.bbc.co.uk/programmes/b00zzz2d</a><br />
+<br />
+I did a refresh and copied the output and neither of these appear. Trying to download via the URL doesn't seem to work either.<br />
+<br />
+Is there a magic spell or has the Beeb changed it's format again ?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-02-2014, 12:45 PM</div>
+</div>
+<div class="message">Two things:<br />
+<br />
+1. Programme archives have never been indexed by get_iplayer.  You have always been required to use the URL to download programmes from the archives.<br />
+<br />
+2. get_iplayer only supports the URL scheme from the original iPlayer site, not the newer iPlayer Radio site. If you want to download using URLs from the latter, change "/programmes/" to "/iplayer/episode/":<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio http://www.bbc.co.uk/iplayer/episode/b039kv61</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-02-2014, 12:00 AM</div>
+</div>
+<div class="message">You can also just use the PID:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio --pid=b039kv61</code></div></div><br />
+<br />
+<br />
+But, get_iplayer HEAD version should now support URLs from the iPlayer Radio site:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --type=radio http://www.bbc.co.uk/programmes/b039kv61</code></div></div><br />
+<br />
+<br />
+If you want to try it see:<br />
+<br />
+<a href="https://squarepenguin.co.uk/wiki/installation/githeadwin">https://squarepenguin.co.uk/wiki/install...githeadwin</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-365</h2></div><div class="dateline">13-02-2014, 09:10 AM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Apologies for the delay in coming back on - Thanks, both of those options worked perfectly. <br />
+<br />
+Cheers<br />
+<br />
+Morph.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Programs not in Index</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

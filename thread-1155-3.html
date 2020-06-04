@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+<div id="pagetitle"><h2>How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <a href="thread-1155-1.html">1</a> <a href="thread-1155-2.html">2</a> <strong>3</strong> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-02-2017, 02:21 PM</div>
+</div>
+<div class="message">@startreksteve<br />
+<br />
+Are you asking how to just manually install the ffmpeg arm binary? <br />
+<br />
+If you are, the instructions for that are in the get_iplayer wiki as user-2 said.<br />
+<br />
+As I mentioned, I used the manual installation and on the manual installation page in the wiki there are instructions under the External Programs heading on how to install the ffmpeg binary:<br />
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/unix#external-programs">https://github.com/get-iplayer/get_iplay...l-programs</a><br />
+<br />
+At the time of testing, the Wiki didn't contain the note to tell you to (obviously) pick the arm binary and don't just use the x86/x86_64 one, but the instructions are easy to follow.<br />
+<br />
+The only thing that needs a note in that section is the fact that you shouldn't install AtomicParsley from the system repo on a Raspbian (to maintain consistency of instruction contained in the unixpkg page). I installed AtomicParsley from Jon's Wheezy repo as I mentioned. If memory serves (it was late) it was a simple wget of the .deb and <kbd>dpkg -i</kbd> to install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">15-02-2017, 08:48 PM</div>
+</div>
+<div class="message">Looks like its working! <br />
+slow but sure, it didnt delete the m4a though, is there a switch for that?<br />
+Had to use the Armel 32 bit though. the Armhf didnt work.<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">15-02-2017, 09:43 PM</div>
+</div>
+<div class="message">Which Pi do you have?<br />
+<br />
+Did you use the example command <a href="https://github.com/get-iplayer/get_iplayer/wiki/aactomp3#convert-a-single-radio-programme-to-mp3-format-at-best-variable-bit-rate-vbr-and-automatically-delete-m4a-file">here</a>? That's the one I used and it worked on mine.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">15-02-2017, 10:17 PM</div>
+</div>
+<div class="message">Im currently running it on a Pi3 and a Pi Zero, pi3 successful, Zero still running..<br />
+<hr class="mycode_hr" />
+Yes, I used the examples you show. Is there a way to incorporate the presets as a permenant setting without having to call --preset= every time?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">16-02-2017, 12:11 PM</div>
+</div>
+<div class="message">Never mind, I found it, its tacked onto the end of the preset..<br />
+<br />
+Steve<br />
+<br />
+If anyone wants me to put together all the info on here about getting mp3 working on Rasberry Pi, I can do that.<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">17-02-2017, 09:07 AM</div>
+</div>
+<div class="message">correction,<br />
+I added &amp;&amp; rm etc to the preset, and it converted the m4a to mp3, but didnt delete the m4a on completion.<br />
+Any ideas?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">17-02-2017, 12:46 PM</div>
+</div>
+<div class="message">It would help if you posted the command you have set up.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">17-02-2017, 12:58 PM</div>
+</div>
+<div class="message">Yeah,<br />
+it was the last bit of this:<br />
+get_iplayer --get 12345 --command-radio='ffmpeg -loglevel error -i "&lt;filename&gt;" -c:v copy -c:a libmp3lame -q:a 0 -y "&lt;dir&gt;/&lt;fileprefix&gt;.mp3" &amp;&amp; rm "&lt;filename&gt;"'<br />
+<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1749</h2></div><div class="dateline">02-05-2017, 05:00 PM</div>
+</div>
+<div class="message">Hi,<br />
+   I have a batch file which attempts to download multiple radio programmes and CONVERT them  to mp3.<br />
+<br />
+ I have initially set some preferences which should reduce the verbosity of later ;commands'.<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>Call get_iplayer --prefs-add --type=radio --output="C:&#92;__RTMPDUMP&#92;++Downloads"<br />
+Call get_iplayer --prefs-add --radiomode=vgood<br />
+Call get_iplayer --prefs-add --preset aactomp3 --command-radio="ffmpeg -i &#92;""&lt;filename&gt;"&#92;" -c:v copy -c:a libmp3lame -b:a 128k -id3v2_version 3 -write_id3v1 1 -y &#92;""&lt;dir&gt;/&lt;fileprefix&gt;.mp3"&#92;" &amp;&amp; del &#92;""&lt;filename&gt;"&#92;""</code></div></div><br />
+Now, initially I processing each of the 'downloads' as indicated below.<br />
+<br />
+REM %1 Processing...Radio Programme: The Late Paul Barnes <br />
+REM ========================================================================<br />
+IF EXIST "The Late Paul Barnes 2017-04-29 29-04-2017.mp3" (echo "The Late Paul Barnes 2017-04-29 29-04-2017.mp3" already exists)  else (Call get_iplayer --pid=p04zysmk --preset=aactomp3 --force --whitespace --file-prefix "The Late Paul Barnes 2017-04-29 29-04-2017" ) <br />
+<br />
+This works fine...great...but the time elapsed for the post processing conversion from .M4A to MP3 is time intensive so I wanted to change to something like...<br />
+<br />
+REM %1 Processing...Radio Programme: The Late Paul Barnes <br />
+REM ========================================================================<br />
+IF EXIST "The Late Paul Barnes 2017-04-29 29-04-2017.mp3" (echo "The Late Paul Barnes 2017-04-29 29-04-2017.mp3" already exists)  else (Call get_iplayer --pid=p04zysmk --force --whitespace --file-prefix "The Late Paul Barnes 2017-04-29 29-04-2017" ) <br />
+<br />
+i.e. =&gt; without the switch --preset=aactomp3<br />
+OK, I 'could' just build a batch file (conversion) with no reference to get_iplayer and just use ffmpeg standalone, so here is my question.<br />
+<br />
+What would be the succeeding command line be to JUST do the conversion using get_iplayer?<br />
+<br />
+By throwing out the --force I 'would' have thought that it would proceed to the conversion whilst acknowledging that the file had already been downloaded.<br />
+<br />
+get_iplayer --pid=b08n1bxv --preset=aactomp3 --whitespace --file-prefix "The Organist Entertains 2017-04-25 Japanese Sandman"<br />
+<br />
+By stacking commands like these at the END of the batch file and using a 'currently downloading' logical gate (via existence of a stub file) for the first commands I could initiate several instances of the batch file.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-05-2017, 06:40 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>What would be the succeeding command line be to JUST do the conversion using get_iplayer?</blockquote>
+There is none. As you said, use ffmpeg standalone.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1749</h2></div><div class="dateline">08-05-2017, 01:59 PM</div>
+</div>
+<div class="message">Thanks user-2...it's probably just as well that there are no assumptions involved in the get_iplayer logic.<br />
+<br />
+Cheers.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <a href="thread-1155-1.html">1</a> <a href="thread-1155-2.html">2</a> <strong>3</strong> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-24.html">Converting Radio Programmes to MP3</a> &gt; How to get FFmpeg to convert downloaded m4a to mp3 on Raspbian/Pi3?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

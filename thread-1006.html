@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Separate logging of errors and warnings</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Separate logging of errors and warnings</div>
+<div id="pagetitle"><h2>Separate logging of errors and warnings</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-08-2016, 11:55 AM</div>
+</div>
+<div class="message">Would it be (or indeed is it) possible to have GI output a log file if errors and/or warnings are encountered?<br />
+<br />
+I'm thinking scenarios like the current issues with missing segments, where having those warnings/errors in a log would make things easier to trace and deal with. I know the output of GI can be piped to a file, but that I presume would contain everything and you'd then have to filter out the rest. <br />
+<br />
+Being able to set a flag to output just warnings/errors to a separate log file would be simpler I'd say. I'm thinking more of the PVR scenario where GI is running as a scheduled task, rather than as an interactive download where such errors would be more obvious. <br />
+ <br />
+<br />
+I couldn't see anything in the wiki guides on doing this though. Is there a way that I've missed, other than pipe and filter?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2016, 12:55 PM</div>
+</div>
+<div class="message">It's not something that I will implement. Few people would use it, and it doesn't really offer any benefit over current functionality. Just use <kbd>--quiet</kbd> and capture stderr (not stdout) in a file when running pvr from a scheduled task.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-910</h2></div><div class="dateline">16-08-2016, 01:16 PM</div>
+</div>
+<div class="message">Fair enough - will give it a go that way and see. You're probably right it's a bit specialised, but some way to keep an eye on the scheduled task's potential problems could be useful (your --quiet and pipe sounds like what I was thinking of in terms of result anyway - I did wonder quite how much quiet would suppress and whether it would help here).</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2016, 01:33 PM</div>
+</div>
+<div class="message"><kbd>--quiet</kbd> suppresses the noise from download progress display, and get_iplayer sends its own messages to stderr rather than stdout when <kbd>--pvr</kbd> is used. It was designed that way for ease of use with cron, so that the minimal announcements of successful downloads go to stdout (and can thus be captured in an email) and all other output can be captured in a log file. It should work the same with Task Scheduler.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Separate logging of errors and warnings</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

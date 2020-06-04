@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How do I exclude programmes from --pid-recursive episode list with --mark-downloaded?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I exclude programmes from --pid-recursive episode list with --mark-downloaded?</div>
+<div id="pagetitle"><h2>How do I exclude programmes from --pid-recursive episode list with --mark-downloaded?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2134</h2></div><div class="dateline">04-01-2019, 05:00 PM</div>
+</div>
+<div class="message">Hi<br />
+<br />
+I periodically use --recurse-pid to download new episodes of ongoing series on Radio 4 such as Thinking Allowed or More or Less, but some episodes are in the old flash format and cannot be handled by get_iplayer. <br />
+These give errors such as <br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b00mbyz3?cb=67111">https://open.live.bbc.co.uk/mediaselecto...3?cb=67111</a><br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Ignore this error if programme download is successful<br />
+<br />
+ERROR: Failed to download URL (3/3): <a href="https://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-iphone4-ipad-hls-3g/vpid/b00mbyz3?cb=52986">https://open.live.bbc.co.uk/mediaselecto...3?cb=52986</a><br />
+ERROR: Response: 403 Forbidden<br />
+ERROR: Ignore this error if programme download is successful<br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+<br />
+I am not fussed about the 'missing' episodes but I'd like to avoid the errors each time, so I thought I'd get the PID from the URL and use this to stop attempted downloads but unfortunately that does not work. Despite having added these PIDs to the download_history file (using mark-downloaded) I still get these errors.<br />
+<br />
+Is there any other way to prevent these errors?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">04-01-2019, 07:42 PM</div>
+</div>
+<div class="message"><kbd>--mark-downloaded</kbd> won't do you any good unless you subsequently use <kbd>--hide</kbd> to exclude downloaded programmes from the episode list.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2134</h2></div><div class="dateline">04-02-2019, 02:06 PM</div>
+</div>
+<div class="message">Brilliant! Thanks for the pointer.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How do I exclude programmes from --pid-recursive episode list with --mark-downloaded?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

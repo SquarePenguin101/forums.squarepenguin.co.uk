@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - More info on HLSHD issue</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; More info on HLSHD issue</div>
+<div id="pagetitle"><h2>More info on HLSHD issue</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1374</h2></div><div class="dateline">14-08-2016, 01:08 AM</div>
+</div>
+<div class="message">I have not seen this info in another post but please forgive me if it is.<br />
+<br />
+The problem seems to be caused by the video stream having a non zero PES length. FFMPEG does not seem to cope with this although I did find this post <a href="https://ffmpeg.org/pipermail/ffmpeg-devel/2014-April/156593.html">https://ffmpeg.org/pipermail/ffmpeg-deve...56593.html</a><br />
+I don't know if this patch proposal was ever implemented. Hopefully there is someone out there who understands FFMPEG and PES length better than I.<br />
+<br />
+I hope this helps.<br />
+<br />
+The reason I think this is the problem is...<br />
+If I downloaded the raw ts and ran it through FFMPEG I saw the problem with the sound being out of sync.<br />
+If I downloaded the raw ts and ran it through TS_Doctor it would complain:<br />
+ "PES length on video stream detected. This can be problematic!"<br />
+ "Patch PES length on video stream to a save value - Yes/No" <br />
+If I said "No" and ran it through FFMPEG I saw the problem with the sound being out of sync.<br />
+If I said "Yes" and ran it through FFMPEG I did not see the problem with the sound being out of sync.<br />
+So it suggests that the only difference between the TS_Doctor output files is the PES length fix.<br />
+<br />
+Is it possible to tell us what the FFMPEG command line options used by get_iplayer are?<br />
+I needed to use "-bsf:a aac_adtstoasc" to get FFMPEG to run against the raw TS but I am sure best practice would include others?<br />
+<br />
+Thanks for your great work!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1102</h2></div><div class="dateline">14-08-2016, 01:31 PM</div>
+</div>
+<div class="message">From later in the thread it looks like the patch was applied Tue Apr 22 16:35:34 CEST 2014. It could if course of been modified or reverted since.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-08-2016, 02:53 PM</div>
+</div>
+<div class="message">@knutz: Thanks for the info. You may be onto something, though it depends on whether or not TS-Doctor actually does more than just reset PES lengths. It may be correcting sync issues as well, but I've never used it. Unfortunately, media file editing or transcoding are not options for get_iplayer. Users have the simpler option of re-muxing the MPEG-TS file with MP4Box if they really want a usable MP4 file, albeit one with gaps. This will be a moot issue very soon, anyway.<br />
+<br />
+I don't think that ffmpeg patch is relevant since it only affects the MPEG-TS muxer, which wouldn't come into play with get_iplayer. The OP in that thread was trying to fix MPEG-TS writing - not reading - to accommodate his particular hardware.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1374</h2></div><div class="dateline">15-08-2016, 11:42 PM</div>
+</div>
+<div class="message">I do not know what TS_Doctor does to "fix" TS files, but "fixing" them without addressing the PES issue left a TS file that would not work correctly once put through FFMPEG, whereas "fixing" them with addressing the PES issue resulted in a TS file that would work once put through FFMPEG.<br />
+<br />
+But you are right that we don't really know what TS_Doctor is doing behind the scenes and whether the difference is only the PES lengths as it suggests. But I thought it might be a useful pointer.<br />
+<br />
+I am intrigued by your comment that this will soon be a moot point. Can you share more?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-08-2016, 12:13 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (15-08-2016, 11:42 PM)</span></cite>I am intrigued by your comment that this will soon be a moot point. Can you share more?</blockquote><a href="/thread-975.html">/thread-975.html</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; More info on HLSHD issue</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

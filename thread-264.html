@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Prevent get_iplayer window from accidental closure</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Prevent get_iplayer window from accidental closure</div>
+<div id="pagetitle"><h2>Prevent get_iplayer window from accidental closure</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">05-11-2014, 04:56 PM</div>
+</div>
+<div class="message">I run Get_Iplayer (presently 2.90) on Windows "7".  <br />
+<br />
+Occasionally I click the close window cross in the courner of the command prompt window when I mean instead to "minimize" it.  This ends the current download and, while it usually picks up where it left offwhen I reopen it and reenter the command, it is frustrating.<br />
+<br />
+I can't think of any easy way to do this, but can the boffins behind Get_iplayer perhaps come up with som sort of "do you really want to close the administrator wincow" or a "minimize to tray" feature.<br />
+<br />
+If it is too difficult I understand, but I trust there is no harm in asking.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">05-11-2014, 05:12 PM</div>
+</div>
+<div class="message">No chance.  get_iplayer is a console app running in a system console window.  No connection with the window manager whatsoever.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-527</h2></div><div class="dateline">10-11-2014, 06:23 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/prevent-get_iplayer-window-from-accidental-closure/#post-10432">Quote:</a>&lt;/div&gt;No chance.  get_iplayer is a console app running in a system console window.  No connection with the window manager whatsoever.</blockquote>
+<br />
+I thought that would be the answer.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1098</h2></div><div class="dateline">26-11-2015, 09:09 AM</div>
+</div>
+<div class="message">John:<br />
+<br />
+This feature already works in the Linux and Mac OS X versions.  All you have to do is use it with a  command/program called "screen". which is included in most versions of Linux and it is also included with the Mac OS X command line.  <br />
+<br />
+"screen" lets you start a command prompt window and then do a simple "detach" keyboard shortcut option that detaches the current session from the screen and runs it virtually in the background without any window.  Then later you can open up a new terminal window and "re-attach" to the virtual screen to restore and see the status of that command window and the progress of the job you're running.<br />
+<br />
+I do this all the time when running get-iplayer.  You type the command "screen", then the screen will refresh and you'll be presented with a new command prompt.  Then you simply type your get-iplayer command, then after it's running just press &lt;Control&gt; + A + D.  The terminal will disappear  (detach from the system), and you can then close the window.  Then when you come back later, just open a new terminal window and type "screen -r" (for restore), and the terminal window that you were running will come right back up, and it will have been running that whole time silently in the background, downloading programmes without any window open.  You can use "screen" to run virtual terminals in the background like this for any sort of command.  I use it all the time for things that take a long time (like handbrake encoding at the command line).  That way there is no chance you can accidentally close it out.  You can even log out of your graphical session, switch users and have others use the computer, and still have it all running silently in the background, ready for you when you want to come back to see the status of the command prompt.  I'm not sure if Windows has a similar feature on its command prompt, but this is a well known feature in Linux, Mac OS X,  and other Unix systems.<br />
+<br />
+more info:<br />
+<a href="http://superuser.com/questions/106540/linux-process-to-background-relogin-how-to-bring-process-back-to-foreground">http://superuser.com/questions/106540/li...foreground</a><br />
+<a href="http://www.kinnetica.com/2011/05/29/using-screen-on-mac-os-x/">http://www.kinnetica.com/2011/05/29/usin...-mac-os-x/</a></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-7.html">Feature Requests</a> &gt; Prevent get_iplayer window from accidental closure</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Removing metadata.</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Removing metadata.</div>
+<div id="pagetitle"><h2>Removing metadata.</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-504</h2></div><div class="dateline">18-04-2014, 02:14 PM</div>
+</div>
+<div class="message">When I download programmes using the GUI (which is awesome by the way) the mp4 created will have tags stored in them from the original flv file. However, I wish these to be removed. I've read that when using ffmpeg you can use the command <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>-map_metadata -1</blockquote>
+<br />
+ to get the converted file to have no metadata. But I have no clue how to apply that for every file I download. I've tried looking for a config file which will keep these settings.<br />
+<br />
+When converting in the GUI, the programme states <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>configuration: --enable-gpl --enable-version3 --disable-w32threads --enable-avisynth --enable-bzlib --enable-fontconfig --enable-frei0r --enable-gnutls --enable-iconv --enable-libass --enable-libbluray --enable-libcaca --enable-libfreetype --enable-libgsm --enable-libilbc --enable-libmodplug --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-libopus --enable-librtmp --enable-libschroedinger --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libx264 --enable-libxavs --enable-libxvid --enable-zlib</blockquote>
+<br />
+How can I edit this configuration to add this command? Or better still, is there a way of completely stripping the metadata on conversion?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">18-04-2014, 03:07 PM</div>
+</div>
+<div class="message">I think this can be done relatively simply. I've not tried it myself so YMMV but it should work...<br />
+<br />
+First thing to know is that you can save you preferences by using a short command in the CLI version of get_iplayer and this will also apply to the webpvr version (for most things anyway). Take a look in the <a href="http:///wiki/options/#config-options">Config Options</a> section of the Wiki for the commands to add preferences.<br />
+<br />
+Secondly, take a look in the <a href="http:///wiki/tagging/">Metadata Tagging</a> section of the wiki for options regarding controlling metadata tagging. I think the first listed command will be what you want.<br />
+<br />
+Lastly for reference, <a href="http:///forums/topic/how-do-i-get-command-line-instructions-working/#post-1375">this post</a> has an example of adding a preference in the CLI version.<br />
+<br />
+Add those three things together and you should be able to easily put together a command to save a preference of not tagging anything.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-04-2014, 03:33 PM</div>
+</div>
+<div class="message">Metadata is not copied from the FLV file.  It is added by AtomicParsley after the FLV file has been re-muxed to MP4.  Using <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>-map_metadata</code></div></div> will have no effect.  See the documentation referenced by SP and it will be obvious how to prevent tagging.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-504</h2></div><div class="dateline">18-04-2014, 05:19 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/removing-metadata/#post-2093">Quote:</a>&lt;/div&gt;I think this can be done relatively simply. Iâve not tried it myself so YMMV but it should workâ¦<br />
+<br />
+First thing to know is that you can save you preferences by using a short command in the CLI version of get_iplayer and this will also apply to the webpvr version (for most things anyway). Take a look in the <a href="http:///wiki/options/#config-options">Config Options</a> section of the Wiki for the commands to add preferences.<br />
+<br />
+Secondly, take a look in the <a href="http:///wiki/tagging/">Metadata Tagging</a> section of the wiki for options regarding controlling metadata tagging. I think the first listed command will be what you want.<br />
+<br />
+Lastly for reference, <a href="http:///forums/topic/how-do-i-get-command-line-instructions-working/#post-1375">this post</a> has an example of adding a preference in the CLI version.<br />
+<br />
+Add those three things together and you should be able to easily put together a command to save a preference of not tagging anything.</blockquote>
+<br />
+Thank you, just what I needed. Problem solved.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Removing metadata.</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

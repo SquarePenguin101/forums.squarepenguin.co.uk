@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Maximum download size limit and transcoding query</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Maximum download size limit and transcoding query</div>
+<div id="pagetitle"><h2>Maximum download size limit and transcoding query</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">16-06-2014, 10:43 PM</div>
+</div>
+<div class="message">Hi there<br />
+<br />
+I'm running Win 7 64-bit on my main systems, all drives formatted to NTFS (2 and 3TB drives). At the weekend I was trying to download some very long programmes from BBCTwo (the quarters, semis and finals from Queen's). I had a problem with the Quarter-finals programme and, trying a couple of times, it choked at the same point, when 4GB had been downloaded. I did, however manage to down the whole programme (over 5GB) using a laptop with Linux Mint installed.<br />
+<br />
+I was always under the assumption that 32-bit systems were limited to 4GB, but a higher limit applied on 64-bit. Or am I wrong? Is there anything I could do to override this 4GB limit on my Win 7 system?<br />
+<br />
+Following on from that, my download under Linux produced an .flv file. Now I know under the Windows setup, it deals with the transcoding to mp4 automatically but I don't have a clue how to do this manually. I looked at the Help Guide but just don't understand the section relating to transcoding.<br />
+<br />
+I always download the programmes using the "best" rate possible. The semis were 1280x720 and the final at 832x468, but I don't have a clue what the rate was for the Quarter-final programme as this is an flv file.<br />
+<br />
+Two questions then, relating to transcoding my 5GB file from flv to mp4:<br />
+1. Should this be done in Linux or can it be done under Win 7?<br />
+2. What is the exact command line in each case to save the file to the same folder using the same filename but mp4 file type?<br />
+<br />
+Many thanks<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-06-2014, 08:02 PM</div>
+</div>
+<div class="message">It has nothing to do with Windows vs Linux or 32-bit vs 64-bit systems.  It's a limitation of the RTMP protocol and rtmpdump's implementation.  This has been covered several times on the get_iplayer mailing list:<br />
+<br />
+<a href="http://www.mail-archive.com/search?q=4gb&amp;l=get_iplayer%40lists.infradead.org">http://www.mail-archive.com/search?q=4gb...radead.org</a><br />
+<br />
+There is no need to do anything with your FLV file unless you have some hardware that won't play it.  If that's the case, there is still no need to transcode it.  You only need to remux the video and audio streams into a MP4 container.  It doesn't matter whether you use Linux or Windows.  Assuming you have a recent version of Mint, it's as simple as:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>avconv -i file.flv -c copy -y file.mp4</code></div></div><br />
+<br />
+<br />
+<br />
+There are any number of video converters available for Windows, but you can just use ffmpeg.  Replace <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>avconv</code></div></div> above with the path to your ffmpeg.exe binary.  You'll find one underneath <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Program Files&#92;get_iplayer</code></div></div>.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">17-06-2014, 08:06 PM</div>
+</div>
+<div class="message">I should add that the reason you got the 5GB file was because your Linux rtmpdump was able to recover and resume downloading after the 4GB limit was reached.  get_iplayer will always try to restart rtmpdump, but it often doesn't work.  Linux/OSX seem to do better in this case than Windows, but that's anecdotal evidence from someone (me) who is not a Windows user.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">18-06-2014, 12:08 AM</div>
+</div>
+<div class="message">Thanks DP. Never heard of the mailing list, let alone the mail archive and thought this was the only get_iplayer discussion location around, but still....<br />
+<br />
+Followed the instructions in Mint and that worked nicely but I'd prefer to be operating in Windows really. I've got 29 years experience at all levels from CP/M, through DOS and from Win3.0 to Win7.0 so I have more confidence with that range of OS whereas I don't really know what I'm doing with Linux. <br />
+<br />
+Trying ffmpeg in Windows I got error messages "unable to find a suitable output format for ... (path)ffmpeg.exe" and "Invalid argument". Oh boy...<br />
+<br />
+When I said transcoding I meant changing format from flv to mp4. I don't really know anything about containers, just trying to download some programmes, LOL.<br />
+<br />
+I downloaded a few flv to mp4 converters but I am thoroughly bewildered by the range of conversion options. I tried one and ended up with a 9GB file!! What are the formats that the Beeb uses for its SD and HD output, there's a stack of them.... HD MPEG-4, HD H.264/MPEG-4 AVC, a couple of PS3 H.264 options (720P and 1080P), Xbox, Zune, Youtube, yada yada yada. So which one to choose? <br />
+<br />
+Thanks<br />
+<br />
+Alan</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">18-06-2014, 01:31 PM</div>
+</div>
+<div class="message">Post your full ffmpeg command from Windows (scrub username if necessary) and I'll see if I can discern what was wrong with it.  It could have just been some incorrect quoting or something like that.  Since you're unlikely to need this very often, it's probably not worth investing in a dedicated converter application.  Many of them are based on ffmpeg, anyway.  And as you see, their presets are geared for transcoding rather than re-muxing.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">19-06-2014, 12:47 PM</div>
+</div>
+<div class="message">Thanks, that's OK DP, I'm not struck on command line stuff if I've got a GUI alternative. I already use a file conversion programme, I suppose I need to experiment with (and amend as appropriate) the presets to come up with settings that are as near as possible to the BBC SD and HD settings, unless you can advise what those are.<br />
+<br />
+Cheers</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">19-06-2014, 10:18 PM</div>
+</div>
+<div class="message">Look at the Recording Modes page in the wiki for a rough guide to formats.  But again, don't try to transcode to match those values.  Your FLV files already have the right format, so transcoding is v. bad and v. pointless.  If your converter doesn't have "copy" or "passthrough" functionality, or something similar that allows you to copy video/audio streams without transcoding, then get a better converter.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-493</h2></div><div class="dateline">20-06-2014, 08:06 AM</div>
+</div>
+<div class="message">Thanks, DP, that's very useful, I'll look into this.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-5.html">Windows General Help</a> &gt; Maximum download size limit and transcoding query</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

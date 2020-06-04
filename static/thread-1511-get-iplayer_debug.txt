@@ -1,0 +1,32 @@
+get_iplayer 3.02-windows.0, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+INFO: encodinglocale = cp1252
+INFO: encodinglocalefs = cp1252
+INFO: encodingconsoleout = cp850
+INFO: encodingconsolein = cp850
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: C:\Users\Roger/.get_iplayer
+INFO: System options dir: C:\ProgramData/get_iplayer/options
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-
+Current options:
+	encodingconsolein = cp850
+	encodingconsoleout = cp850
+	encodinglocale = cp1252
+	encodinglocalefs = cp1252
+	modes = good
+	output = C:\get_iplayer_recordings
+	pid = b096slhz
+	type = tv
+	verbose = 1
+
+INFO: Search args: ''
+INFO: ffmpeg version string = 3.2.4
+INFO: ffmpeg version number = 3.2
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Got 7637 file cache entries for tv
+ERROR: Programe Type 'b095fqgy' does not exist

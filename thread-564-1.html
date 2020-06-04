@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Comodo firewall breaks get_iplayer</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Comodo firewall breaks get_iplayer</div>
+<div id="pagetitle"><h2>Comodo firewall breaks get_iplayer</h2></div>
+<div id="content">
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-564-2.html">2</a> </div><div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">12-10-2015, 11:00 AM</div>
+</div>
+<div class="message">This one is baffling me. In Windows 10 I am getting the cmd.exe Application Error "The application was unable to start correctly (0xc0000142). Click OK to Close the application." If I start the Web PVR manager i get no programme types in the web page (see image). I can however download by using the URL. <br />
+<br />
+get_iplayer starts without problem in Safemode with networking and the Web PVR manager appears as it should with all programme types available i.e BBC TV, Radio,podcast etc.<br />
+<br />
+I have tried installing in both safe mode and normal mode and disabled firewall but the problem remains the same. Does anyone know what might be causing this and how i can solve it?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">12-10-2015, 11:31 AM</div>
+</div>
+<div class="message">There are no programme types in web pvr because get_iplayer doesn't run, so it's the same issue.  The fact that perl runs in safe mode just confirms what you and others have reported, namely that the Windows 10 upgrade installed some incompatible system component for your particular configuration.  If perl runs in safe mode, then it would seem the problem isn't with a direct dependency, but rather with some secondary dependency.  You could employ ProcMon in normal mode to monitor what perl.exe and its dependencies attempt to load and where a failure might lie.  The Perl interpreter is actually a DLL (perl518_.dll), so perhaps perl.exe is having trouble loading the interpreter at startup for some reason.  That's just a wild guess, but someone else found a W10 problem (unsolved) with perl loading its XML parser library:<br />
+<br />
+<a href="/thread-516.html">/thread-516.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">13-10-2015, 12:31 AM</div>
+</div>
+<div class="message">@fullyabsorbent your log isn't very useful as you appear to have captured a snapshot of all events on your system. Try the following, in Procmon do the following steps:<br />
+1. Untick capture events under the File menu to stop unfiltered data appearing.<br />
+2.Clear screen under Edit menu (screen should be empty and at the bottom it should read (no events capture disabled).<br />
+3.Add the following filter under filter menu Process name is perl.exe  then include  click the add button then OK<br />
+4.Under filter menu tick Drop Filtered Events<br />
+<br />
+5.Finally tick Capture Events under File menu<br />
+<br />
+No data should be displayed at that point.<br />
+6.Open a command window and run get_iplayer -h<br />
+<br />
+You should then see events relating to attempting to run perl.exe, save this as a log file and repost</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">13-10-2015, 01:29 PM</div>
+</div>
+<div class="message">Thanks that explains the process very well. However when i run get_iplayer -h in a command window i am getting the message "'get_iplayer' is not recognized as an internal or external command,<br />
+operable program or batch file."</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">13-10-2015, 01:33 PM</div>
+</div>
+<div class="message">Open the get_iplayer command window from the start menu and run from there.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">14-10-2015, 01:32 PM</div>
+</div>
+<div class="message">I am still getting "'get_iplayer.cmd' is not recognized as an internal or external command,<br />
+operable program or batch file."</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-10-2015, 01:53 PM</div>
+</div>
+<div class="message">It seems you don't have get_iplayer installed, or don't have it installed properly.  Re-run the installer and select all components for installation. Also be sure to click the start menu shortcut labelled "Get_iPlayer", which should launch a command window and invoke get_iplayer to update its cache. If that doesn't work, post a screen shot with the error message so we can see what you see.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">14-10-2015, 02:54 PM</div>
+</div>
+<div class="message">I have completely uninstalled and reinstalled get_iplayer. <br />
+<br />
+When i try and start the program from the start menu I get the same error "The Application was unable to start correctly (0xc0000142. Click OK to Close the application" (attached cmd)<br />
+<br />
+Using errfmt's suggestion of running get_iplayer -h i get the error get_iplayer is not recognized etc (attached cmd get_iplayer -h).<br />
+<br />
+If I run it from the start menu - right click - Run as administrator i get the same error (attached cmd from start)<br />
+<br />
+Interestingly if i try to run get_iplayer from a command prompt "start get_iplayer" i am told that windows cannot find iplayer(attached start get_iplayer)<br />
+<br />
+By starting web PVR manager i can generate a procmon log with the perl.exe filters applied <a href="https://www.dropbox.com/sh/ry2uk0v0a4r4zkk/AAC3Hrorjfwrxqyv-vYNdFGpa?dl=0">https://www.dropbox.com/sh/ry2uk0v0a4r4z...dFGpa?dl=0</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-10-2015, 03:55 PM</div>
+</div>
+<div class="message">Sorry - my mistake. I should have told you to change to the get_iplayer installation directory in command window before running <kbd>get_iplayer -h</kbd>.  But, invoking from start menu or via Web PVR both suffice to exercise ProcMon. Sorry about that - should have gone back through the thread first.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-10-2015, 04:53 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (14-10-2015, 02:54 PM)</span></cite>By starting web PVR manager i can generate a procmon log with the perl.exe filters</blockquote>But you don't say what happened in the web pvr.  Your procmon log shows that perl and get_iplayer itself ran OK. You should probably avoid the obfuscation of the Web PVR (2 or more different instances of perl are executed) and try it again with @errfmt's instructions (and opening a generic command window), but before running <kbd>get_iplayer -h</kbd>, change to the installation directory: <kbd>cd /d "c:\Program Files (x86)\get_iplayer"</kbd>  Otherwise get_iplayer will not be found since it isn't in the system PATH.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">14-10-2015, 07:11 PM</div>
+</div>
+<div class="message">Previously when i ran web PVR manager I was getting the same result as before, namely no options in programme type.<br />
+<br />
+Thanks for the clarification. I have now run the command and generated the following log in procmon<br />
+<br />
+<a href="https://www.dropbox.com/sh/ry2uk0v0a4r4zkk/AAC3Hrorjfwrxqyv-vYNdFGpa?dl=0">https://www.dropbox.com/sh/ry2uk0v0a4r4z...dFGpa?dl=0</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">14-10-2015, 08:19 PM</div>
+</div>
+<div class="message">Another screen shot is in order. Your latest procmon log shows perl and get_iplayer ran OK.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-763</h2></div><div class="dateline">15-10-2015, 01:27 AM</div>
+</div>
+<div class="message">@fullyabsorbent, checking your new logfile and comparing with my own system procmon , I notice that your Windows\SysWOW64 directory has been renamed to Windows\syswow64. <br />
+This may be not relevant but it the only difference I can find comparing to my successful get_iplayer launch. <br />
+Perl is creating a lot of mappings to dlls in syswow64 that it does not do on my (correctly named SysWOW64).<br />
+I would suggest renaming the directory to SysWOW64 and also running a system integrity check.<br />
+Launch an Adminstrator command window and run <br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>sfc /scannow</code></div></div> to check and repair your system files.<br />
+This may be a complete red herring but it is a strange problem you are reporting and the fact that your SysWOW64 directory has been renamed suggests some level of tampering/corruption of Windows system files.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">15-10-2015, 09:26 AM</div>
+</div>
+<div class="message">@errfmt Scan shows no problems (attached)<br />
+<br />
+I am unable to rename the syswow/64 folder even if i copy it to the desktop.<br />
+<br />
+@user-2 what would you like a screen shot of?<br />
+<br />
+Thanks</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-10-2015, 12:34 PM</div>
+</div>
+<div class="message">File and directory access in Windows is not case-sensitive. As your procmon log shows, perl has no trouble accessing your lower-case SysWOW64 directory. It is harmless in itself, but it is a bit strange that SysWOW64 was renamed at all. Not prima facie evidence of tampering, but very unexpected.  What is not unexpected is that DLLs from there are loaded when get_iplayer runs. That's the location of 32-bit system libraries and the perl distributed with get_iplayer is 32-bit.<br />
+<br />
+You still haven't provided any evidence that your problem lies with perl or get_iplayer. It would seem perl works OK since you wouldn't be able to view the Web PVR otherwise, though something prevents it from invoking get_iplayer itself. Your procmon logs show both perl and get_iplayer running OK though, so let's leave procmon aside for a moment and break the problem down into constituent parts. Open a command window, change to the get_iplayer installation directory and run <kbd>perl -v</kbd>, which should print the perl version.  If it fails, post a screenshot of the error that results.  If it succeeds, run <kbd>perl get_iplayer.pl -V</kbd>, which should print the get_iplayer version. If that fails, post a screenshot of the error.  If it succeeds, run <kbd>get_iplayer -V</kbd>, which should print the get_iplayer version.  If that fails, post a screenshot of the error.  This sequence is meant to narrow down whether any problem lies with perl, get_iplayer, or the command shell.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">16-10-2015, 11:44 AM</div>
+</div>
+<div class="message">@user-2 Thanks for that. seems that perl is in order (attached)<br />
+<br />
+@errfmt This was an upgrade from windows 8.1 under which get_iplayer was working fine. Some time after the upgrade i had to reset the OS due to a problem with it failing to shut down (kept restarting). I do not know if get_iplayer was working in this interim period as i did not use it between the upgrade and the reset.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">16-10-2015, 12:58 PM</div>
+</div>
+<div class="message">Sorry i assumed i had run the three tests 1) being perl -v 2) being perl get_iplayer.pl -V and 3) get_iplayer -V?<br />
+<br />
+I have run cmd.exe /k get_iplayer.cmd --search dontshowanymatches &amp;&amp; get_iplayer.cmd --help and i am getting Access is denied (attached)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-10-2015, 01:47 PM</div>
+</div>
+<div class="message">Sorry - I fat-fingered that that last one, which should have been:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>C:&#92;Windows&#92;System32&#92;cmd.exe /k get_iplayer.cmd --search dontshowanymatches</code></div></div>I don't think it will make it a difference, but try it and see if you get "Access Denied" again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1061</h2></div><div class="dateline">16-10-2015, 02:46 PM</div>
+</div>
+<div class="message">Yes Access is denied again</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">16-10-2015, 03:17 PM</div>
+</div>
+<div class="message">Thanks.  One final variation:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer --search dontshowanymatches</code></div></div>to make sure the "Access Denied" comes from cmd.exe rather than because of some resource get_iplayer is trying to access when performing a search.  Given the content of your earlier procmon logs, I wouldn't expect that to be the case, but might as well check.</div>
+</div>
+<div class="multipage"><strong>Pages:</strong> <strong>1</strong> <a href="thread-564-2.html">2</a> </div></div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Comodo firewall breaks get_iplayer</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

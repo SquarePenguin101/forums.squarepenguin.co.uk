@@ -1,0 +1,66 @@
+INFO: Trying flashhd1 mode to record tv: Weather for the Week Ahead - 12/01/2016
+INFO: File name prefix = Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original
+INFO: Begin recording file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.mp4
+RTMPDump v2.4
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL
+Connecting ...
+INFO: Connected...
+Starting download at: 0.000 kB
+INFO: Metadata:
+INFO:   duration              209.60
+INFO:   moovPosition          36.00
+INFO:   width                 1280.00
+INFO:   height                720.00
+INFO:   videocodecid          avc1
+INFO:   audiocodecid          mp4a
+INFO:   avcprofile            100.00
+INFO:   avclevel              41.00
+INFO:   aacaot                2.00
+INFO:   videoframerate        25.00
+INFO:   audiosamplerate       48000.00
+INFO:   audiochannels         2.00
+INFO: trackinfo:
+INFO:   length                5240000.00
+INFO:   timescale             25000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            avc1
+INFO:   length                10060800.00
+INFO:   timescale             48000.00
+INFO:   language              und
+INFO: sampledescription:
+INFO:   sampletype            mp4a
+60998.209 kB / 209.58 sec (99.9%)
+Download complete
+INFO: Begin converting file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4.flv
+frame= 5240 fps=0.0 q=-1.0 Lsize=   60869kB time=00:03:29.60 bitrate=2379.0kbits/s
+INFO: Converted file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4
+INFO: Recorded file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.mp4
+
+INFO: MP4 tagging MP4 file
+
+ Started writing to temp file.
+ Progress: ============================> 51% ---------------------------|
+ Finished writing to temp file.
+New tv programme: 'Weather for the Week Ahead - 12/01/2016', 'Detailed weather forecast.'
+INFO: Deleted PVR search 'ONCE_b06vj5xb'
+
+INFO: Trying hlshd1 mode to record tv: Weather for the Week Ahead - 12/01/2016
+INFO: File name prefix = Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original
+INFO: Begin recording file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4.ts
+INFO: Recorded: 61.37MB in 00:00:48 at 10473kbps to D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4.ts
+INFO: Begin converting file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4.ts
+[h264 @ 04eb1a00] non-existing SPS 0 referenced in buffering period
+    Last message repeated 1 times
+[NULL @ 04eb1a00] non-existing SPS 0 referenced in buffering period
+frame= 5234 fps=0.0 q=-1.0 Lsize=   60685kB time=00:03:29.36 bitrate=2374.5kbits/s
+INFO: Converted file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.partial.mp4
+INFO: Recorded file: D:\get_iplayer_temp\Weather_for_the_Week_Ahead_-_2016-01-12_b06vj5xb_original.mp4
+
+INFO: MP4 tagging MP4 file
+
+ Started writing to temp file.
+ Progress: ============================> 51% ---------------------------|
+ Finished writing to temp file.
+New tv programme: 'Weather for the Week Ahead - 12/01/2016', 'Detailed weather forecast.'
+INFO: Deleted PVR search 'ONCE_b06vj5xb'

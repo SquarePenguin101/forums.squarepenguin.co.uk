@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - rtmpdump  stack smashing error in Fedora 23</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; rtmpdump  stack smashing error in Fedora 23</div>
+<div id="pagetitle"><h2>rtmpdump  stack smashing error in Fedora 23</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1085</h2></div><div class="dateline">06-11-2015, 02:22 PM</div>
+</div>
+<div class="message">Hi,<br />
+<br />
+Just upgraded Fedora 21 &gt; 23, everything was running fine before upgrade.<br />
+<br />
+<br />
+On running: get_iplayer --get --type=tv --url=<a href="http://www.bbc.co.uk/iplayer/episode/b06np79d/question-time-05112015">http://www.bbc.co.uk/iplayer/episode/b06...e-05112015</a><br />
+I get this.<br />
+<br />
+<a href="http://pastebin.com/Du20kK09">http://pastebin.com/Du20kK09</a><br />
+<br />
+The SELinux troubleshooting is something I can generally manage, but this one stumps me:<br />
+<br />
+<a href="http://pastebin.com/UKtGvgA1">http://pastebin.com/UKtGvgA1</a><br />
+<br />
+Any ideas?<br />
+Thanks!<br />
+<br />
+EDIT: Sorry for posting in the wrong forum before.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-11-2015, 03:37 PM</div>
+</div>
+<div class="message">Neither of those appears to be related to get_iplayer, and neither can be reproduced on a clean Fedora 23 installation.<br />
+<br />
+"Stack smashing" could result from mismatched rtmpdump and librtmp, as described here:<br />
+<br />
+<a href="/thread-451.html">/thread-451.html</a><br />
+<br />
+Uninstall BOTH librtmp and rtmpdump and reinstall rtmpdump from RPMfusion and see if that helps.<br />
+<br />
+It looks like you cut off some of the selinux log so we can't tell what was being denied access to what.  My guess is that the crash reporter or similar was triggered by rtmpdump fail but was apparently denied access to some file type on your system.  That has nothing to do with get_iplayer.  If you fix rtmpdump I suspect you won't see the selinux warning again.<br />
+<br />
+EDIT: removed reference to libc</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1085</h2></div><div class="dateline">06-11-2015, 04:14 PM</div>
+</div>
+<div class="message">Thanks for the reply, reinstalling didn't do the trick, but did reveal that rmtpdump from RMPFusion is still on f22, maybe that's responsible? But then again, you can't reproduce it, so I don't know.<br />
+<br />
+ Will take the tip &amp; look for issues with rtmpdump.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">06-11-2015, 05:17 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (06-11-2015, 04:14 PM)</span></cite>Thanks for the reply, reinstalling didn't do the trick, but did reveal that rmtpdump from RMPFusion is still on f22, maybe that's responsible? But then again, you can't reproduce it, so I don't know.</blockquote>I noticed that, but it shouldn't necessarily make a difference (and doesn't here). Another possible culprit could be a problem with rtmpdump and crypto (gnutls) support, but again, that doesn't appear to be case on a clean system, and your crash log shows you have the same crypto libs.  Run your get_iplayer command again with <kbd>--verbose</kbd> and see if rtmpdump prints anything else before it dies. You can always use HLS streams to avoid rtmpdump altogether.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1094</h2></div><div class="dateline">21-11-2015, 05:20 PM</div>
+</div>
+<div class="message">EDIT: Merged from duplicate thread<br />
+<br />
+Hi,<br />
+<br />
+Does anyone know how to solve this problem below with RTMPDump which has shown up after installing Fedora 23? Thanks!<br />
+<br />
+<br />
+RTMPDump v2.4<br />
+(c) 2010 Andrej Stepanchuk, Howard Chu, The Flvstreamer Team; license: GPL<br />
+Connecting ...<br />
+*** stack smashing detected ***: rtmpdump terminated<br />
+======= Backtrace: =========<br />
+/lib64/libc.so.6(+0x77e15)[0x7f16639c2e15]<br />
+/lib64/libc.so.6(__fortify_fail+0x37)[0x7f1663a5f607]<br />
+/lib64/libc.so.6(__fortify_fail+0x0)[0x7f1663a5f5d0]<br />
+/lib64/librtmp.so.1[0x398ec05ca7]<br />
+/lib64/librtmp.so.1[0x398ec05d28]<br />
+/lib64/librtmp.so.1[0x398ec0a6d7]<br />
+/lib64/librtmp.so.1(RTMP_Connect1+0x42)[0x398ec0c4e2]<br />
+/lib64/librtmp.so.1(RTMP_Connect+0xaf)[0x398ec0c71f]<br />
+rtmpdump[0x402467]<br />
+/lib64/libc.so.6(__libc_start_main+0xf0)[0x7f166396b580]<br />
+rtmpdump[0x402a89]<br />
+======= Memory map: ========<br />
+[...]<br />
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]<br />
+INFO: Command exit code 2 (raw code = 134)<br />
+WARNING: Failed to stream file /home/scheel/radio/RECORDED/Essential_Classics_-_Thursday_-_Sarah_Walker_with_Andrew_Neil_b06p51pv_original.partial.m4a.flv via RTMP<br />
+INFO: skipping flashaaclow2 mode<br />
+ERROR: Failed to record 'Essential Classics - Thursday - Sarah Walker with Andrew Neil (b06p51pv)'<br />
+<br />
+Regards,<br />
+Chris</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1094</h2></div><div class="dateline">23-11-2015, 07:40 PM</div>
+</div>
+<div class="message">Thanks for merging this with the existing thread. I did a search, but not successfully. :-)<br />
+<br />
+Will try out some of the tips.<br />
+<br />
+@hexag, did you manage to fix this yourself? What worked? <br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1094</h2></div><div class="dateline">02-12-2015, 08:50 PM</div>
+</div>
+<div class="message">Reinstalling rtmpdump did not work.<br />
+<br />
+However, the Fedora 23 update from rpmfusion did the trick.  So no errors now!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">02-12-2015, 09:22 PM</div>
+</div>
+<div class="message">Thanks for the update. Still a bit of mystery how the Fedora 22 rtmpdump worked on a clean Fedora 23 and not on an upgraded system, but it's academic now, thankfully.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1094</h2></div><div class="dateline">02-12-2015, 09:50 PM</div>
+</div>
+<div class="message">Thanks everyone for the help and ideas. It helped us get there in the end. :-)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; rtmpdump  stack smashing error in Fedora 23</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

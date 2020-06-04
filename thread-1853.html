@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PVR run problem on latest W10 insider build</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; PVR run problem on latest W10 insider build</div>
+<div id="pagetitle"><h2>PVR run problem on latest W10 insider build</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2213</h2></div><div class="dateline">07-08-2018, 02:14 PM</div>
+</div>
+<div class="message">I am on the W10 insider programme and was recently updated to version 17713_rs5 (preview for the autumn version)<br />
+<br />
+The PVR start appeared to fail - the script ran but stopped with <span style="font-style: italic;" class="mycode_i">http://localhost:1935 the parameter is incorrect</span> as a dialogue, and a<span style="font-style: italic;" class="mycode_i">ccess not permitted</span> in the command window<br />
+<br />
+I tracked it down to a change in the way Windows handles the <span style="font-style: italic;" class="mycode_i">start &lt;URL&gt;</span>  syntax.    I have edited my copy of <span style="font-weight: bold;" class="mycode_b">get_iplayer_web_pvr.cmd</span> so it looks like this:<br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>ping 127.0.0.1 -n 5 -w 1000 &gt; NUL<br />
+<br />
+rem - the start line does not work in the latest W10<br />
+rem   start http://localhost:1935<br />
+rem   call explicit browswer instead<br />
+<br />
+ "C:&#92;Program Files (x86)&#92;Mozilla Firefox&#92;firefox.exe" http://localhost:1935</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-08-2018, 02:29 PM</div>
+</div>
+<div class="message">Thanks for the heads-up, though that sounds a bit mad to me. Are you sure it isn't just objecting to the use of "localhost"? If not, can you post info what exactly is going to change with START? Embedding the path to a specific browser isn't a workable general solution.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">07-08-2018, 02:46 PM</div>
+</div>
+<div class="message">Googling tells me that this is a bug in insider builds. People are reporting that things are OK with Edge as default browser, but not with any other default browser. If autumn release is nigh and it still isn't fixed, post again.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2213</h2></div><div class="dateline">07-08-2018, 02:51 PM</div>
+</div>
+<div class="message">Not just localhost.  I tried a few urls from a command widnow, including the <span style="font-style: italic;" class="mycode_i">start <a href="http://www.microsoft.com">www.microsoft.com</a></span> from Micosoft's own support forum from a few years back.<br />
+<br />
+No idea what they are planning to do, but I have reported it as a bug in the feedback hub. There is already a general complaint about it there (<a href="https://aka.ms/AA20f9q">https://aka.ms/AA20f9q</a> if you have a login)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2213</h2></div><div class="dateline">15-09-2018, 03:58 PM</div>
+</div>
+<div class="message">Still waiting for the autumn  update, but running preview 17744.rs5 and the original <span style="font-style: italic;" class="mycode_i">start</span> command behaviour of using the default browser appears to have been restored, at least in this version</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">15-09-2018, 06:01 PM</div>
+</div>
+<div class="message">Thanks for the update. One less thing to worry about.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; PVR run problem on latest W10 insider build</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

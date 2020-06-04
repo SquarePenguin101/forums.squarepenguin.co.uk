@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Install on Qnap NAS server?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Install on Qnap NAS server?</div>
+<div id="pagetitle"><h2>Install on Qnap NAS server?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1127</h2></div><div class="dateline">06-01-2016, 09:05 PM</div>
+</div>
+<div class="message">I'm currently using get iplayer on my windows pc, but would prefer to install on my 0x86 qnap nas server, but I've no idea where to begin to achieve this?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">08-01-2016, 07:58 PM</div>
+</div>
+<div class="message">I don't have such a device, so I can't offer specific advice, but here are a few things to consider:<br />
+<br />
+You should begin in forums dedicated to your device. Find out if your system packages the requirements for get_iplayer.  The minimum list: Perl, Perl LWP and XML::Simple modules (and dependencies) and rtmpdump.  I would expect Perl and LWP to be available, but if the others are not packaged for your system, you'll have to build/install them yourself. <br />
+<br />
+Another potential headache may be acquiring a recent enough version of ffmpeg. To avoid potential issues with get_iplayer, you should have at least 2.5 (it's currently at version 2.8.4), but your vendor may only package an old version. Strictly speaking, you do not need ffmpeg to use get_iplayer.  If you can do without metadata tagging and your media player can play the FLV files produced by rtmpdump, then you don't need ffmpeg.  You would just add <kbd>--raw </kbd>to your preferences and get_iplayer would only produce FLV files. With the next release of get_iplayer you should be able to download playable files without rtmpdump (so long as your media player can play MPEG-TS and M4A files). You may not be able to source AtomicParsley for tagging, either.<br />
+<br />
+If you plan to use the web pvr, you may find it performs very poorly on an underpowered system. The web pvr server requires one perl process, but every request will invoke one or more additional perl processes to handle the given operation(s) with the get_iplayer CLI. Depending on how your perl was built, it can be sluggish. If your system has a static build of perl, the entire interpreter will have to be loaded for every operation in the web pvr, which could be rather slow.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Install on Qnap NAS server?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

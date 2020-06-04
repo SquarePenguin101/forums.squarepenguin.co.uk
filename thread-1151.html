@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - How to inject entry into download_history?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to inject entry into download_history?</div>
+<div id="pagetitle"><h2>How to inject entry into download_history?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1521</h2></div><div class="dateline">03-02-2017, 11:46 AM</div>
+</div>
+<div class="message">I use get-iplayer --pvr but every now and then, I get a glitch and I lose my download_history.<br />
+<br />
+When this happens, I get the following (for example): <br />
+<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>TV-Kazoops<br />
+Matches:<br />
+3222:   Kazoops - Animal Pals, CBeebies, b07hjq65<br />
+3223:   Kazoops - Backyard Beach, CBeebies, b07hjx7m<br />
+3224:   Kazoops - Dino Saurus Games, CBeebies, b07hk3nx<br />
+3225:   Kazoops - Tiny Little Me, CBeebies, b07hk7tr<br />
+3226:   Kazoops - Cosmic Clean Up, CBeebies, b07hkfv7<br />
+3227:   Kazoops - Clothes for Jimmy, CBeebies, b07jbn11<br />
+3228:   Kazoops - Follow the Rules, CBeebies, b07jbz9p<br />
+3229:   Kazoops - Monsters, CBeebies, b07jc6s2<br />
+<br />
+INFO: 8 Matching Programmes<br />
+INFO: Checking existence of original version<br />
+INFO: hvfhd1,hvfhd2,hlshd1,hvfsd1,hvfsd2,hvfvhigh1,hvfvhigh2,hlsvhigh1,hvfhigh1,hvfhigh2,hlshigh1,hvfstd1,hvfstd2,hlsstd1,hvflow1,hvflow2 modes will be tried for version origina<br />
+l<br />
+INFO: Trying hvfhd1 mode to record tv: Kazoops - 1. Animal Pals<br />
+INFO: File name prefix = s01e01_Animal_Pals<br />
+WARNING: File /media/sf_host/Processing/Kazoops/Kazoops/s01e01_Animal_Pals.mp4 already exists<br />
+<br />
+INFO: skipping this programme<br />
+ERROR: Failed to record 'Kazoops - 1. Animal Pals (b07hjq65)'</code></div></div><br />
+<br />
+Is there any way to inject these lines into the download_history to prevent them even trying in the future?<br />
+<br />
+Thanks!</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-02-2017, 11:55 AM</div>
+</div>
+<div class="message">Just use a text editor. Copy an existing entry and change as necessary. The PID field is the most important for preventing download attempts.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-02-2017, 12:06 PM</div>
+</div>
+<div class="message">Also see: <a href="http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg09474.html">http://www.mail-archive.com/get_iplayer@...09474.html</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1521</h2></div><div class="dateline">03-02-2017, 05:39 PM</div>
+</div>
+<div class="message">Just to follow up on that.<br />
+<br />
+I did some linux command line trickery, and got to the following:<br />
+<br />
+grep -E ^[0-9] output_of_get_iplayer | cut -d, -f 3 | grep [a-z]0 | cut -c 2-10 | uniq | sort &gt; process.txt<br />
+grep -E ^[0-9] output_of_get_iplayer | cut -d, -f 4 | grep [a-z]0 | cut -c 2-10 | uniq | sort &gt;&gt; process.txt<br />
+<br />
+This gave me a list of PIDs. I then opened this in an editor, and added the 17 pipe characters to the end, and pasted that to the end of the file. Seems to have worked!<br />
+<br />
+All the best,<br />
+<br />
+Jon</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">03-02-2017, 05:52 PM</div>
+</div>
+<div class="message">You can also let get_iplayer take the strain:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>get_iplayer kazoops --listformat='&lt;pid&gt;|||||||||||||||||' | grep '|' &gt;&gt; &#36;HOME/.get_iplayer/download_history</code></div></div></div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; How to inject entry into download_history?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

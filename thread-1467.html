@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Text File when downloading</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Text File when downloading</div>
+<div id="pagetitle"><h2>Text File when downloading</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1887</h2></div><div class="dateline">29-07-2017, 09:21 AM</div>
+</div>
+<div class="message">Hi Guys<br />
+<br />
+this is just for my own curiosity ...<br />
+<br />
+I have noticed that during downloads, a text file is generated in the downloads folder containing a series of numbers, comma separated, the first 9 displayed below...<br />
+<br />
+#b08wvsl7,original,hvfxhigh,0,0<br />
+1,1633720,7.68,1633720,7.68,1501314610<br />
+2,2229680,15.36,595960,7.68,1501314610<br />
+3,2711336,23.04,481656,7.68,1501314610<br />
+4,3899872,30.72,1188536,7.68,1501314610<br />
+5,5169624,38.4,1269752,7.68,1501314610<br />
+6,5720464,46.08,550840,7.68,1501314610<br />
+7,6689416,53.76,968952,7.68,1501314610<br />
+8,7628288,61.44,938872,7.68,1501314610<br />
+9,8497976,69.12,869688,7.68,1501314610<br />
+<br />
+The numbers change during download and I was just curious as to what each of the numbers represents in relation to the download in progress.<br />
+<br />
+The file is automatically deleted after download is completed.<br />
+<br />
+Any help would be appreciated<br />
+<br />
+Cheers Wobblybob</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">05-08-2017, 05:12 PM</div>
+</div>
+<div class="message">My guess is the numbers document the segments that get sent for the download stream.<br />
+I guess the program uses that info to join the segments back into order.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1479</h2></div><div class="dateline">07-08-2017, 01:17 PM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (05-08-2017, 05:12 PM)</span></cite>My guess is the numbers document the segments that get sent for the download stream.<br />
+I guess the program uses that info to join the segments back into order.</blockquote><br />
+Yes - this from the 2.98 release notes: <br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite><span style="font-weight: bold;" class="mycode_b">get_iplayer 2.98 Release Notes<br />
+New/Changed</span><br />
+...<br />
+<span style="font-weight: bold;" class="mycode_b">6. HLS/DASH downloads resumable across sessions</span><br />
+<br />
+The HLS/DASH downloader can now resume downloads interrupted by dropped connections or other problems. You only need to re-run the exact same get_iplayer command and it will attempt to pick up where the previous download left off. This is accomplished through the use of a temporary file that stores download parameters and a log of already-downloaded segments.<br />
+<br />
+The temporary file is created in the programme's output directory and has the same file prefix with a .txt extension.<br />
+The temporary .txt file is retained in the event of a complete download failure, but it can safely be deleted. The download will restart from the beginning in that case.<br />
+The requested PID, version, mode and start/stop times must be the same for a partial download to be resumed<br />
+If any problems are encountered in attempting to resume a download, get_iplayer will automatically restart the download from the beginning.<br />
+The resume functionality can be suppressed with the --no-resume option.</blockquote>
+<br />
+<a href="https://github.com/get-iplayer/get_iplayer/wiki/release298">https://github.com/get-iplayer/get_iplay...release298</a><br />
+<br />
+An excellent feature that I've made use of sometimes.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-8.html">Windows Forums</a> &gt; <a href="forum-6.html">Windows Troubleshooting</a> &gt; Text File when downloading</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

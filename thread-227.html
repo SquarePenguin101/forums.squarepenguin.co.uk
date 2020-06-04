@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Help understanding json &gt; vpid</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Help understanding json &gt; vpid</div>
+<div id="pagetitle"><h2>Help understanding json &gt; vpid</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-608</h2></div><div class="dateline">25-10-2014, 04:27 AM</div>
+</div>
+<div class="message">Hello Everyone,<br />
+I am a new member to this forum.<br />
+<br />
+My first question is not about the get_iplayer app as such, but about some information that I found in other threads about the retrieval of older media that is officially not available, but still plays on Iplayer.<br />
+Here : <a href="https://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05927.html">https://www.mail-archive.com/get_iplayer...05927.html</a><br />
+<br />
+I would like to understand how you can get to the media stream based on the json file.<br />
+<br />
+I have a json file,<br />
+<a href="http://www.bbc.co.uk/programmes/b00pbqv5/playlist.json">http://www.bbc.co.uk/programmes/b00pbqv5/playlist.json</a><br />
+<br />
+which contains:   "vpid":"b00pbqsd","kind":"radioProgramme","duration":900<br />
+<br />
+Where do I go from here? I would like to learn to manually retrieve the stream parameters from this data.<br />
+<br />
+Thanks,<br />
+S.T.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-586</h2></div><div class="dateline">25-10-2014, 10:23 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite>Quote:</cite>&lt;div class="d4p-bbp-quote-title"&gt;<a href="/topic/help-understanding-json-vpid/#post-10033">Quote:</a>&lt;/div&gt;Hello Everyone,<br />
+I am a new member to this forum.<br />
+<br />
+My first question is not about the get_iplayer app as such, but about some information that I found in other threads about the retrieval of older media that is officially not available, but still plays on Iplayer.<br />
+Here : <a href="https://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05927.html">https://www.mail-archive.com/get_iplayer...05927.html</a><br />
+<br />
+I would like to understand how you can get to the media stream based on the json file.<br />
+<br />
+I have a json file,<br />
+<a href="http://www.bbc.co.uk/programmes/b00pbqv5/playlist.json">http://www.bbc.co.uk/programmes/b00pbqv5/playlist.json</a><br />
+<br />
+which contains:   âvpidâ:âb00pbqsdâ,âkindâ:âradioProgrammeâ,âdurationâ:900<br />
+<br />
+Where do I go from here? I would like to learn to manually retrieve the stream parameters from this data.<br />
+<br />
+Thanks,<br />
+S.T.</blockquote>
+I have only done this with the almost extinct wma overseas streams:<br />
+<br />
+see here (page may take 20secs to load) for details:<br />
+<br />
+<a href="http://beebotron.org/phorum/read.php?5,57006,59709#msg-59709">http://beebotron.org/phorum/read.php?5,5...#msg-59709</a></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-10-2014, 01:16 PM</div>
+</div>
+<div class="message">I suspect you didn't get the news that get_iplayer has been updated.  Click the Support link above and look for the highlighted post announcing the latest release.  Release notes can be found in wiki.  <br />
+<br />
+Now to your post:  First, that programme <span style="font-weight: bold;" class="mycode_b">is</span> still available, or else you wouldn't be able to play it on the iPlayer Radio site.  Second, that programme was last broadcast just today, so it can still be found with a get_iplayer search - it's within the 7-day window for searchable programmes.  You don't even need the updated version of get_iplayer to download it.  Third, if it were older than 7 days, you could use the updated get_iplayer to download it directly using the <div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>--pid</code></div></div> option up until its 30-day expiry.  <br />
+<br />
+You don't need to know what the vPIDs are or what to do with them.  If you still want to know for some masochistic reason, you should have seen this in the mailing list thread you referenced:<br />
+<br />
+<a href="https://www.mail-archive.com/get_iplayer@lists.infradead.org/msg05922.html">https://www.mail-archive.com/get_iplayer...05922.html</a><br />
+<br />
+which describes the process of getting the Flash AAC version of a programme.  It's similar to the info at the link posted by forget.it, but that beebotron thread doesn't tell you how to actually download a programme to disk.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-16.html">General Forums</a> &gt; <a href="forum-15.html">General Topics </a> &gt; Help understanding json &gt; vpid</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

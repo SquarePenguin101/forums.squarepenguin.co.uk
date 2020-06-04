@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - WARNING: Could not download programme metadata</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; WARNING: Could not download programme metadata</div>
+<div id="pagetitle"><h2>WARNING: Could not download programme metadata</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2150</h2></div><div class="dateline">01-05-2018, 10:52 AM</div>
+</div>
+<div class="message">I've been using get_iplayer for a couple of years but I rarely did upgrades. Usually I download directly using the pid. I just upgraded to version: get_iplayer 3.13-homebrew. Trying to download some episode from the tv series Salamander, but getting some errors that I can't quite work around.<br />
+Currently pid direct download <br />
+"get_iplayer --pid=b09ng877" returns this:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>get_iplayer 3.13-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+<br />
+WARNING: Failed to download JSON PID info: <a href="http://www.bbc.co.uk/programmes/b09ng877.json">http://www.bbc.co.uk/programmes/b09ng877.json</a><br />
+WARNING: Could not determine PID type (b09ng877). Trying to record PID directly.<br />
+Episodes:<br />
+get_iplayer - b09ng877, BBC iPlayer, b09ng877<br />
+INFO: 1 total programmes<br />
+<br />
+WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/b09ng877.json">http://www.bbc.co.uk/programmes/b09ng877.json</a><br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+</code></div>
+</div>
+<br />
+Here's the --verbose output from one different attempt:<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>MacBook-Pro-2:~ romeup&#36; get_iplayer --get salamander-series-2-blood-diamonds-episode-1 --verbose<br />
+get_iplayer 3.13-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+INFO: encodinglocale = UTF-8<br />
+INFO: encodinglocalefs = UTF-8<br />
+INFO: encodingconsoleout = UTF-8<br />
+INFO: encodingconsolein = UTF-8<br />
+INFO: &#36;{^UNICODE} = 0<br />
+INFO: Profile dir: /Users/romeup/.get_iplayer<br />
+INFO: User options file: /Users/romeup/.get_iplayer/options<br />
+INFO: System options file: /etc/get_iplayer/options<br />
+-==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==-<br />
+Current options:<br />
+   attempts = 4<br />
+   encodingconsolein = UTF-8<br />
+   encodingconsoleout = UTF-8<br />
+   encodinglocale = UTF-8<br />
+   encodinglocalefs = UTF-8<br />
+   get = 1<br />
+   output = /iPlayer_Content/<br />
+   subtitles = 1<br />
+   tvmode = hlshd,hvfhd,dvfhd<br />
+   verbose = 1<br />
+<br />
+INFO: Search args: 'salamander-series-2-blood-diamonds-episode-1'<br />
+INFO: Got 2406 file cache entries for tv<br />
+INFO: Search term 'salamander-series-2-blood-diamonds-episode-1' is a substring<br />
+DEBUG: Search download_regex = salamander-series-2-blood-diamonds-episode-1<br />
+DEBUG: Search channel_regex = .*<br />
+DEBUG: Search category_regex = .*<br />
+DEBUG: Search exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search channel_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search category_exclude_regex = ^ROGUE&#36;<br />
+DEBUG: Search since = 999999<br />
+DEBUG: Search before = -999999<br />
+DEBUG: Search available_since = <br />
+DEBUG: Search expires_before = <br />
+<br />
+INFO: 0 matching programmes<br />
+INFO: Loaded history for first check.<br />
+INFO: Loading recordings history<br />
+</code></div>
+</div>
+<br />
+Tried to download the full series but I guess I am using the wrong command.<br />
+<br />
+<div class="gipcodeblock">
+<h3 class="giptitle">get_iplayer Output:</h3><div class="body" dir="ltr"><code>MacBook-Pro-2:~ romeup&#36; get_iplayer --get salamander<br />
+get_iplayer 3.13-homebrew, Copyright (C) 2008-2010 Phil Lewis<br />
+ This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+ This is free software, and you are welcome to redistribute it under certain<br />
+ conditions; use --conditions for details.<br />
+<br />
+<br />
+Matches:<br />
+1696:    Salamander: Series 2: Blood Diamonds - Episode 5, BBC Four, b09qcdy4<br />
+1697:    Salamander: Series 2: Blood Diamonds - Episode 6, BBC Four, b09qw1q2<br />
+INFO: 2 matching programmes<br />
+<br />
+WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/b09qcdy4.json">http://www.bbc.co.uk/programmes/b09qcdy4.json</a><br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.<br />
+<br />
+WARNING: Could not download programme metadata from <a href="http://www.bbc.co.uk/programmes/b09qw1q2.json">http://www.bbc.co.uk/programmes/b09qw1q2.json</a><br />
+WARNING: No media streams found for requested programme versions and recording modes.<br />
+WARNING: The programme may no longer be available - check the iPlayer site.</code></div>
+</div>
+<br />
+Any help regarding my config and recording options and the current command syntax for downloading tv HD formats would be appreciated</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">01-05-2018, 11:21 AM</div>
+</div>
+<div class="message">You're using a VPN. The BBC is probably blocking you. <br />
+<br />
+Please see forum rules. <br />
+<br />
+Closing thread.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-23.html">Off-Topic</a> &gt; <a href="forum-25.html">Any Other Business</a> &gt; WARNING: Could not download programme metadata</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

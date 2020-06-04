@@ -1,0 +1,5 @@
+cd %USERPROFILE%/get_iplayer/
+cls
+C:\Strawberry\perl\bin\perl "C:\Program Files (x86)\get_iplayer\Refresh_Cache_V0_6.pl"
+pause
+exit

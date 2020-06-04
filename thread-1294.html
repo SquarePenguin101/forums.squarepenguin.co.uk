@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - PATH change on R/Pi?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; PATH change on R/Pi?</div>
+<div id="pagetitle"><h2>PATH change on R/Pi?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1718</h2></div><div class="dateline">01-05-2017, 01:03 AM</div>
+</div>
+<div class="message">I just followed the manual installation guide for Linux, it all seems okay on my Pi 3, except the guide said to install to:<br />
+<span style="font-weight: bold;" class="mycode_b">/usr/local/bin</span> instead of <span style="font-weight: bold;" class="mycode_b">/usr/bin</span> ... <span style="font-weight: bold;" class="mycode_b"> </span>is this normal?<br />
+<br />
+I run get_iplayer inside "screen" sessions on my Pi 3, as it has lots going on; INSIDE the screen it was searching the PATH for <span style="font-weight: bold;" class="mycode_b">/usr/bin</span> and seemingly not looking in <span style="font-weight: bold;" class="mycode_b">/usr/local/bin, </span><span style="text-decoration: underline;" class="mycode_u"><span style="font-weight: bold;" class="mycode_b">but outside</span></span> my screen session, it worked fine at the installed PATH... weirddd...<br />
+<br />
+I <span style="text-decoration: line-through;" class="mycode_s">fixed</span> cobbled it by symlinking <span style="font-weight: bold;" class="mycode_b">/usr/local/bin/get_iplayer</span> to <span style="font-weight: bold;" class="mycode_b">/usr/bin/get_iplayer</span> - it now works.<br />
+<br />
+My command was:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>"sudo ln -s /usr/local/bin/get_iplayer /usr/bin/get_iplayer"</code></div></div><br />
+<br />
+For the non-*nixers, what this does is create a "symoblic link" (layman's: a POINTER) to the get_iplayer script, where the OS expects the scipt to be, and when Linux looks for it at <span style="font-weight: bold;" class="mycode_b">/usr/bin </span>it transparently points it to <span style="font-weight: bold;" class="mycode_b">/usr/local/bin </span>- the execution of the script then works, the OS is unaware of the differing locations, in essence.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-9</h2></div><div class="dateline">01-05-2017, 01:23 PM</div>
+</div>
+<div class="message">Im confused, so where should get_iplayer ACTUALLY be? in usr/local/bin or /usr/bin?<br />
+<br />
+Steve</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">01-05-2017, 01:39 PM</div>
+</div>
+<div class="message">You are likely running /bin/sh in screen (or something else other than your default login shell), with a different default PATH than your login shell. Only you will know how it is set up.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1718</h2></div><div class="dateline">02-05-2017, 12:21 AM</div>
+</div>
+<div class="message"><blockquote class="mycode_quote"><cite><span> (01-05-2017, 01:39 PM)</span></cite>You are likely running /bin/sh in screen (or something else other than your default login shell), with a different default PATH than your login shell. Only you will know how it is set up.</blockquote><br />
+Nope, just bash - the default for Raspian Jessie:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>pi@raspi3:~ &#36; ps ax | grep sh<br />
+  709 ?        Ss     0:16 /usr/sbin/sshd -D<br />
+ 1130 tty1     S+     0:00 -bash<br />
+ 1147 pts/3    Ss+    0:01 /bin/bash<br />
+ 1189 ?        Ss     0:03 /usr/bin/ssh-agent /usr/bin/dbus-launch --exit-with-session x-session-manager<br />
+ 1229 ?        Ss     0:00 /usr/bin/ssh-agent -s<br />
+ 1337 ?        S      0:00 /bin/sh /usr/bin/start-pulseaudio-x11<br />
+ 1342 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.1 /org/gtk/gvfs/exec_spaw/0<br />
+ 1410 pts/1    Ss     0:00 /bin/bash<br />
+ 1742 pts/1    S+    71:53 /bin/bash ./twitcap<br />
+ 1838 pts/2    Ss+    0:02 /bin/bash<br />
+11355 pts/4    Ss+    0:00 /bin/bash<br />
+30206 ?        Ss     0:00 sshd: pi [priv]<br />
+30225 ?        S      0:00 sshd: pi@pts/0<br />
+30227 pts/0    Ss     0:00 -bash<br />
+30440 pts/0    S+     0:00 grep --color=auto sh</code></div></div><br />
+<br />
+I was running the latest get_iplayer from your Raspbian Jessie repo until the 3.00.0 was released, installed from the install.sh script - nothing ever threw an error until I purged that (old) one and installed 3.00.0, manually, as per your guide. As you can see from my process listing, no /bin/sh running, and get_iplayer ran fine, both inside/outside a screen, until now. I'm not complaining - my symlink has fixed whatever caused this, but it's just a weird quirk that this suddenly manifested itself where it never has before.<br />
+<br />
+:)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1021</h2></div><div class="dateline">03-05-2017, 09:15 PM</div>
+</div>
+<div class="message">The manual installation instructions tell you to install get_iplayer in /usr/local/bin, and in the default installation of raspbian jessie lite this is in your path.<br />
+<br />
+However, bash remembers where things are - if it's previously found get_iplayer in /usr/bin, and then that disappears, you will find that during that session bash won't find where you've moved get_iplayer to.  This will go away when you next log in regardless, but you can make bash forget where things were and search again by using "hash -r".<br />
+<br />
+This might explain why you couldn't find get_iplayer in shells inside screen, but if it doesn't, it's something you've changed from the default installation.  On a default installation of jessie lite, with get_iplayer and screen added, shells inside screen have /usr/local/bin in the path.  As dinkypumkin said, only you can know what you did.<br />
+<br />
+Cheers<br />
+Jon</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; PATH change on R/Pi?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

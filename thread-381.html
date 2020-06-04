@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Does 2.92 fix this recent issue?</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Does 2.92 fix this recent issue?</div>
+<div id="pagetitle"><h2>Does 2.92 fix this recent issue?</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-892</h2></div><div class="dateline">25-03-2015, 11:54 PM</div>
+</div>
+<div class="message">I have been using get-iplayer for several years now, but it has stopped working in he last few weeks. I see that 2.92 is out but is not yet available on the CrunchBang repositories. When I tried to install it manually I also got errors. Her's an example of the commands I give what I get back:<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>alistair@Netbook:/bin&#36; get_iplayer --get --type=radio --pid=b0076g2s<br />
+get_iplayer v2.90, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+INFO Trying to stream pid using type radio<br />
+INFO: pid found in cache<br />
+Matches:<br />
+10605:&nbsp;&nbsp;&nbsp;&nbsp;Barry Cryer - Rock of Ages - -, BBC Radio 4 Extra, <br />
+<br />
+INFO: 1 Matching Programmes<br />
+INFO: Checking existence of default version<br />
+INFO: No specified modes (flashaachigh,flashaacstd,flashaudio,flashaaclow) available for this programme with version 'default' (try using --modes=)<br />
+INFO: You may receive this message if you are using get_iplayer outside the UK<br />
+ERROR: Failed to record 'Barry Cryer - Rock of Ages - - (b0076g2s)'<br />
+alistair@Netbook:~/bin&#36;</code></div></div><br />
+<br />
+<br />
+Do I just need to wait for the repository to be updated or does this indicate something more? I couldn't see anything in the release notes that would indicate that it contains a fix for this. Btw,I <span style="font-weight: bold;" class="mycode_b">am</span> running this from within the UK.<br />
+<br />
+Many thanks for any suggestions,<br />
+<br />
+--- Alistair</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">26-03-2015, 12:08 AM</div>
+</div>
+<div class="message">I'm pretty sure and update should solve that issue. You're 2 releases behind now according to that output and a lot has changed thanks to BBC changes.<br />
+<br />
+<a href="http://crunchbang.org/forums/viewtopic.php?id=38916&amp;p=1">Crunchbang is 'dead'</a> (though it may be coming back) but the point is it's probably not going to be updated much going forward. I'm not exactly sure of the details on how Crunchbag follows Debian Stable or if it's getting updated to Jessie or even who maintains the get_iplayer package on Debian so you're probably best doing the <a href="http:///wiki/installation/manual/">manual update</a>.<br />
+<br />
+Did you try that and received errors? What were those errors?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-892</h2></div><div class="dateline">31-03-2015, 10:08 PM</div>
+</div>
+<div class="message">Thanks for the advice, I didn't realise CrunchBang was dead! I will have to look for another netbook-friendly distro.<br />
+<br />
+I did try the manual update but didn't get far. Trying again... ok, I must have skipped a step before, I now have 2.92. Thanks for the advice! Sadly though, it doesn't seem to work quite the same. The 'pids' it is giving me are shorter and when I try to get them, they are not recognised:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; get-iplayer --type radio --channel "BBC Radio 4" | grep Museum<br />
+11154:&nbsp;&nbsp;&nbsp;&nbsp;Front Row - Tracey Emin, Blade Runner, Stan Tracey, Museum Sale Controversy, BBC Radio 4, <br />
+13065:&nbsp;&nbsp;&nbsp;&nbsp;The Museum of Curiosity: Series 4 - Enfield, West, Green, BBC Radio 4 Extra, <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; get-iplayer --type radio --channel "BBC Radio 4" --pid 13065 --get<br />
+get_iplayer v2.92, Copyright (C) 2008-2010 Phil Lewis<br />
+&nbsp;&nbsp;This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.<br />
+&nbsp;&nbsp;This is free software, and you are welcome to redistribute it under certain<br />
+&nbsp;&nbsp;conditions; use --conditions for details.<br />
+<br />
+WARNING: rdf URL contained no data<br />
+WARNING: PID URL contained no RDF data. Trying to record PID directly.<br />
+INFO: Trying pid: 13065 using type: radio<br />
+INFO: Trying to stream pid using type radio<br />
+INFO: pid not found in radio cache<br />
+Matches:<br />
+<br />
+INFO: 1 Matching Programmes<br />
+ERROR: Failed to get version pid metadata from iplayer site<br />
+<br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36; <br />
+alistair@Netbook:~&#36;</code></div></div><br />
+<br />
+<br />
+I will have a bit more of a play and see if I can figure it out. Many thanks for your help so far.<br />
+<br />
+--- Alistair</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-892</h2></div><div class="dateline">31-03-2015, 10:26 PM</div>
+</div>
+<div class="message">Never mind guys, I am RTFM and looks like what I am treating as a PID is actually an index number. It's downloading a program by name at the moment and I will play some more with it.<br />
+<br />
+Again, huge thanks.<br />
+<br />
+--- Alistair.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Does 2.92 fix this recent issue?</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

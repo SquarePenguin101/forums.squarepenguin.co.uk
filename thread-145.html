@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - get_iplayer and web pvr running at startup/boot (VM in VirtualBox)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get_iplayer and web pvr running at startup/boot (VM in VirtualBox)</div>
+<div id="pagetitle"><h2>get_iplayer and web pvr running at startup/boot (VM in VirtualBox)</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-508</h2></div><div class="dateline">22-04-2014, 12:27 PM</div>
+</div>
+<div class="message">Does anyone know if there is there a way to have the web pvr to run in the background on startup under linux (ubuntu)?<br />
+<br />
+I have built the vm (ubuntu 14.04) with get_iplayer installed and working successfully (but only after logging in and starting it via ssh). Now I just need to get it to run at startup for when the host machine is rebooted.<br />
+<br />
+I currently run the web pvr manually on my HTPC, and sometimes forget to do this within the current 7 day window. What I'd like to do is have both running on the vm on a permanent basis, then access the web pvr from any pc in my house. This also has the benefit of keeping an insecure web server locked out from the rest of my network.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 01:26 PM</div>
+</div>
+<div class="message">Launching the web pvr at startup won't do what you want.  In fact, it won't do anything except sit there and wait for you to connect with a browser.  As far as PVR functionality is concerned, the web pvr is nothing but a dumb shell that enables you to invoke the actual get_iplayer commands without getting calluses on your typing fingers.<br />
+<br />
+What you need to do is use the cron daemon to automatically launch get_iplayer to run its PVR list at some specified interval.  See usage &amp; examples doc in wiki for the basics.  If you don't know about cron or how to edit a crontab file, Google is your friend.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-508</h2></div><div class="dateline">22-04-2014, 02:29 PM</div>
+</div>
+<div class="message">Hi user-2, thank you for responding.<br />
+(btw, love your work on keeping get_iplayer up to date. It is very much appreciated.)<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>In fact, it wonât do anything except sit there and wait for you to connect with a browser.</blockquote>
+Well, that's kind of the point. I want the web pvr available on the VM anytime and from any machine on my network. Right now the web pvr has to be running on the HTPC (windows 7) to be available, which leaves a CMD window open. And if my 3 year old sees it, he'll probably shut it down so he can watch his cartoons... The HTPC is in the family room and is used for all manner of things, not just TV and movies.<br />
+<br />
+I'm aware of running the commands via cron (and task manager for windows) to do various things, and I'll even set these up once I have web pvr running on start up, but I don't want to have to teach my wife how to set up new items for download via the CLI (especially over putty!). Simple is easy, and the web pvr is easy. Hence the VM and an always on web pvr instance.<br />
+:)<br />
+<br />
+If this is not possible, then I'll just have to be a bit more diligent with remembering to set new programs to download for my wife.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 03:56 PM</div>
+</div>
+<div class="message">I think you're confusing the two parts of the web pvr system: server and client.  You could launch the server at system startup, but as I said, it will do absolutely nothing.  No pvr list processing, no nothing.  You have to instruct it what to do via browser.  I think you are also conflating the two sides of PVR system: job creation and job execution. The web pvr browser client does not run your pvr list directly.  It merely requests the web pvr server to run get_iplayer to do the job. <br />
+<br />
+You can't launch the browser client at system startup because it will have no display to use.  If you have autologin enabled, you could come up with a way to autostart your browser (and the web pvr server) via your window manager's startup configuration.  But since the browser-based pvr list invocation is Javascript-driven, you'll have to get a browser driver (e.g., from a testing framework) and set it to also automatically fire up and make the browser do the necessaries to run the pvr list.  I shudder to think of the staggering amounts of time you'll be wasting.  The web pvr - client and server - is not for automation at the system level, and never has been.  OTOH, get_iplayer itself works just fine via automation.<br />
+<br />
+Just because your pvr list is processed under the aegis of cron, that is completely unrelated to how the pvr jobs are created.  The jobs are just text files stored in a single location.  You can type them in manually if you like.  You can use the CLI, your wife can fire up the web pvr and do it via browser, and nothing your kid does will have any effect.  Also, it doesn't matter how you run your pvr list.  If you want to do some downloads ahead of cron, you can use the CLI, your wife can fire up the web pvr, etc.  Do yourself a favour and let cron take care of the automation.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">22-04-2014, 04:29 PM</div>
+</div>
+<div class="message">I'm understanding this as you want to launch get_iplayer CLI at start up on the VM. You also want to start the Webpvr manager as some kind of server type thing on the VM that you can then connect to from another PC on the newtork.<br />
+<br />
+This so that your wife can use the Webpvr from any computer (probably the HTPC) by somehow connecting to the Webpvr server on the VM and add her programmes/manually run her PVR job in the Graphical interface? <br />
+<br />
+You are happy using the CLI over SSH and that's easy so that parts sorted.<br />
+<br />
+There are a few things to confirm:<br />
+<br />
+1) The Webpvr has this server function and can be connected to from any other PC<br />
+2) It can be launched from the command line at startup<br />
+<br />
+The second one might be achieved through the instructions below:<br />
+<br />
+<a href="http://stackoverflow.com/questions/10495974/ways-to-add-programs-to-startup-in-ubuntu-by-commandline">http://stackoverflow.com/questions/10495...ommandline</a><br />
+<br />
+...and...<br />
+<br />
+<a href="https://help.ubuntu.com/community/AddingProgramToSessionStartup">https://help.ubuntu.com/community/Adding...ionStartup</a><br />
+<br />
+As for number 1, I'm not sure if that function is possible. <br />
+<br />
+DP, perhaps it is?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 04:52 PM</div>
+</div>
+<div class="message">Yes, either as standalone server or via Apache CGI, though not recommended.  But OP says he wants to keep web pvr server locked out from rest of network, so have all of web pvr running (and automatically launched) in VM guest.  Presumably he plans to access via remote desktop to VM host, which is the simplest option.  A browser left running on HTPC wouldn't be particularly kid-proof.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-508</h2></div><div class="dateline">22-04-2014, 04:52 PM</div>
+</div>
+<div class="message">I don't believe I'm confusing anything.<br />
+<br />
+<blockquote class="mycode_quote"><cite>Quote:</cite>You could launch the server at system startup, but as I said, it will do absolutely nothing.</blockquote>
+Again, that is fine. Until a browser points at it, I don't expect it to do anything except wait. Just like a good little web server does.<br />
+<br />
+cron is going to handle automation for running downloads. The web pvr is for an easy approach to setting which programs to download.<br />
+<br />
+In a linux installation, via terminal, you run the get_iplayer_web_pvr command. This starts the web server, after which you can access the web pvr manager via the local browser at http://localhost:1935<br />
+<br />
+Once this has started in my VM, instead of accessing it via the local host (no gui in this instance, as headless), I have set the web server to listen on 0.0.0.0:1935, which allows me to access the web pvr manager from any machine on my local network. This is tested and works.<br />
+<br />
+It is this that I want to be available. I want get_iplayer_web_pvr (or whatever needs to run) to start at boot so there is no need to ssh in and restart it manually, just like a normal web server such as apache.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">22-04-2014, 05:08 PM</div>
+</div>
+<div class="message">If you are all tested and working and just need the start up bit to be sorted then a quick bit of googling pointed me towards update-rc.d being your best bet.<br />
+<br />
+I found this cheat sheet that gives an idea of what you need to do or ig into further to start the service you need on boot up and not just on login:<br />
+<br />
+<a href="http://www.jamescoyle.net/cheat-sheets/791-update-rc-d-cheat-sheet">http://www.jamescoyle.net/cheat-sheets/7...heat-sheet</a><br />
+<br />
+...with some extra detail here...<br />
+<br />
+<a href="http://www.jamescoyle.net/how-to/706-add-a-package-to-startup-on-debian-ubuntu-red-hat-centos">http://www.jamescoyle.net/how-to/706-add...hat-centos</a><br />
+<br />
+Have a read and see if that points you in the right direction.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 05:27 PM</div>
+</div>
+<div class="message">Given what you say you're actually trying to do, SP has given you the info to get started.  There is plenty of information out there on how to write system service scripts.  The only aspect germane to get_iplayer is to make sure the user account used to launch the web pvr server, which will in turn launch get_iplayer, has a proper home directory, under which settings, pvr jobs, etc. are stored.  There are other permutations, but that is by far the simplest way.  You probably want to disable login for that user as well.  You're opening one potential security hole with the web pvr server, so no point in opening another one.  Again there are other permutations, but disabling login is the simplest place to start.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 05:40 PM</div>
+</div>
+<div class="message">Alternatively - as I said in reply to SP, you can configure the web pvr server to run under Apache, which relieves you of the need to manage the service yourself.  See the web pvr help for the link its README file, which has the instructions.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-508</h2></div><div class="dateline">22-04-2014, 10:43 PM</div>
+</div>
+<div class="message">I think I need to spend a bit more time exploring both options: update-rc.d and web pvr under apache.<br />
+The second sounds like it will do exactly what I need.<br />
+<br />
+Tonight I spent time looking at the apache option, but apache2 (latest version under ubuntu) runs a bit differently to old apache (apache2.conf instead of httpd.conf, and  module loading via symlink or something to that effect), and I haven't been successful in getting the cgi to run. It outputs the source code to the browser window instead of running it on the server end. I need to look at it further and document exactly what I'm doing so I can either back it out or re-apply on a fresh vm image.<br />
+<br />
+To be honest, I started looking at the apache option on the weekend, but couldn't see anywhere that it explicity stated that this would run the web pvr manager page like the standalone web server. The example URLs in the text make it look like a URL based version of the CLI. those instructions probably haven't been update since 2010.<br />
+<br />
+Thank you both for you time. Hopefully I can get this worked out with your pointers above. Googling is all well and good, but if you aren't using the right search terms, you won't find anything. Even if you do get the right answer, sometimes it's all greek if you don't have the right background knowledge...<br />
+:)</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">22-04-2014, 11:55 PM</div>
+</div>
+<div class="message">Yeah, Ubuntu has drifted a bit from those instructions.  I'll make some new instructions for Ubuntu and bump this thread when they're ready.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-508</h2></div><div class="dateline">23-04-2014, 09:06 AM</div>
+</div>
+<div class="message">That would be great, especially for those that follow. Think I'm going to drop ubuntu as the vm os and run a centos one instead. I'm more familiar with that distro, and it comes with an apache install I understand (at least the last time I installed centos it did).<br />
+:)<br />
+<br />
+I might also have a play around on a xampp instance on my work PC (windows) to see if I can get web pvr running under apache on that. Once I have that working, I can use the knowledge to get it working on the vm.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">23-04-2014, 11:10 AM</div>
+</div>
+<div class="message">I don't think I'll bother, then.  CGI deployment is a pretty esoteric corner of get_iplayer into which virtually no one ever ventures.  The original instructions were taken from CentOS/RHEL, so will work for you.  Just ignore everything in that README file except the CGI configuration section.  All the bits about streaming URLs and playlists are irrelevant if you're using the browser client,.  And read the get_iplayer CentOS installation instructions to make sure you get all the dependencies set up.</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; get_iplayer and web pvr running at startup/boot (VM in VirtualBox)</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

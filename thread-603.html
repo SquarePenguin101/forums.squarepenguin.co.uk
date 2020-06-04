@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Can only install v2.66</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Can only install v2.66</div>
+<div id="pagetitle"><h2>Can only install v2.66</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">25-12-2015, 12:32 PM</div>
+</div>
+<div class="message">Sorry not used to command line, and only used the Windows installer until now.<br />
+<br />
+Tried using the Ubuntu Software Centre first, then removed install before trying manual install.<br />
+<br />
+Followed wiki/ubuntu/ but still not getting the current version. <br />
+<br />
+Please see output below, any suggestions welcome. Thank you and Merry Christmas<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>paul@901GO:~&#36; get_iplayer --info<br />
+bash: /usr/bin/get_iplayer: No such file or directory<br />
+paul@901GO:~&#36; sudo apt-get install python-software-properties software-properties-common<br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+python-software-properties is already the newest version.<br />
+E: Couldn't find package software-properties-common<br />
+paul@901GO:~&#36; sudo apt-add-repository ppa:jon-hedgerows/get-iplayer<br />
+gpg: keyring `/tmp/tmpxZMNVs/secring.gpg' created<br />
+gpg: keyring `/tmp/tmpxZMNVs/pubring.gpg' created<br />
+gpg: requesting key 02E04F78 from hkp server keyserver.ubuntu.com<br />
+gpg: /tmp/tmpxZMNVs/trustdb.gpg: trustdb created<br />
+gpg: key 02E04F78: public key "Launchpad xbmc" imported<br />
+gpg: Total number processed: 1<br />
+gpg:               imported: 1  (RSA: 1)<br />
+OK<br />
+paul@901GO:~&#36; sudo apt-get install get-iplayer<br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+The following packages were automatically installed and are no longer required:<br />
+  linux-headers-2.6.32-21 user-setup linux-headers-2.6.32-21-generic localechooser-data<br />
+Use 'apt-get autoremove' to remove them.<br />
+The following extra packages will be installed:<br />
+  atomicparsley flvstreamer id3v2 libid3-3.8.3c2a libmp3-info-perl libunicode-string-perl<br />
+Suggested packages:<br />
+  mplayer ffmpeg<br />
+The following NEW packages will be installed<br />
+  atomicparsley flvstreamer get-iplayer id3v2 libid3-3.8.3c2a libmp3-info-perl libunicode-string-perl<br />
+0 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.<br />
+Need to get 0B/666kB of archives.<br />
+After this operation, 2,286kB of additional disk space will be used.<br />
+Do you want to continue [Y/n]? y<br />
+Selecting previously deselected package atomicparsley.<br />
+(Reading database ... 149455 files and directories currently installed.)<br />
+Unpacking atomicparsley (from .../atomicparsley_0.9.0-0ubuntu3_i386.deb) ...<br />
+Selecting previously deselected package flvstreamer.<br />
+Unpacking flvstreamer (from .../flvstreamer_1.9-1_i386.deb) ...<br />
+Selecting previously deselected package get-iplayer.<br />
+Unpacking get-iplayer (from .../get-iplayer_2.66-1ubuntu1_all.deb) ...<br />
+Selecting previously deselected package libid3-3.8.3c2a.<br />
+Unpacking libid3-3.8.3c2a (from .../libid3-3.8.3c2a_3.8.3-7.2ubuntu4_i386.deb) ...<br />
+Selecting previously deselected package id3v2.<br />
+Unpacking id3v2 (from .../id3v2_0.1.11-5_i386.deb) ...<br />
+Selecting previously deselected package libunicode-string-perl.<br />
+Unpacking libunicode-string-perl (from .../libunicode-string-perl_2.09-3build3_i386.deb) ...<br />
+Selecting previously deselected package libmp3-info-perl.<br />
+Unpacking libmp3-info-perl (from .../libmp3-info-perl_1.24-1_all.deb) ...<br />
+Processing triggers for man-db ...<br />
+Setting up atomicparsley (0.9.0-0ubuntu3) ...<br />
+Setting up flvstreamer (1.9-1) ...<br />
+Setting up get-iplayer (2.66-1ubuntu1) ...<br />
+<br />
+Setting up libid3-3.8.3c2a (3.8.3-7.2ubuntu4) ...<br />
+<br />
+Setting up id3v2 (0.1.11-5) ...<br />
+Setting up libunicode-string-perl (2.09-3build3) ...<br />
+Setting up libmp3-info-perl (1.24-1) ...<br />
+Processing triggers for libc-bin ...<br />
+ldconfig deferred processing now taking place<br />
+paul@901GO:~&#36; get-iplayer --info<br />
+get_iplayer v2.66, Copyright (C) 2008-2010 Phil Lewis</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">25-12-2015, 12:41 PM</div>
+</div>
+<div class="message">You didn't follow the wiki exactly. You missed step 2.<br />
+<br />
+Give it a read again and make sure you excute step 2 before attempting to install.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">25-12-2015, 12:58 PM</div>
+</div>
+<div class="message">Huge thank you for the instant reply. My mistake for not showing that I had done step 2 previously. Here is the full version:<br />
+<br />
+<div class="codeblock"><div class="title">Code:</div><div class="body" dir="ltr"><code>paul@901GO:~&#36; sudo apt-get install python-software-properties software-properties-common<br />
+[sudo] password for paul: <br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+python-software-properties is already the newest version.<br />
+E: Couldn't find package software-properties-common<br />
+paul@901GO:~&#36; sudo apt-add-repository ppa:jon-hedgerows/get-iplayer<br />
+gpg: keyring `/tmp/tmpfSv7lc/secring.gpg' created<br />
+gpg: keyring `/tmp/tmpfSv7lc/pubring.gpg' created<br />
+gpg: requesting key 02E04F78 from hkp server keyserver.ubuntu.com<br />
+gpg: /tmp/tmpfSv7lc/trustdb.gpg: trustdb created<br />
+gpg: key 02E04F78: public key "Launchpad xbmc" imported<br />
+gpg: Total number processed: 1<br />
+gpg:               imported: 1  (RSA: 1)<br />
+OK<br />
+paul@901GO:~&#36; sudo apt-get update<br />
+Hit http://ppa.launchpad.net lucid Release.gpg<br />
+Ign http://ppa.launchpad.net/jon-hedgerows/get-iplayer/ubuntu/ lucid/main Translation-en_GB<br />
+Hit http://ppa.launchpad.net lucid Release                                     <br />
+Err http://archive.geteasypeasy.com lucid Release.gpg                          <br />
+  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+Err http://archive.geteasypeasy.com/1.6/ lucid/main Translation-en_GB          <br />
+  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+Hit http://security.ubuntu.com lucid-security Release.gpg            <br />
+Ign http://security.ubuntu.com/ubuntu/ lucid-security/main Translation-en_GB   <br />
+Ign http://security.ubuntu.com/ubuntu/ lucid-security/restricted Translation-en_GB<br />
+Ign http://security.ubuntu.com/ubuntu/ lucid-security/universe Translation-en_GB<br />
+Ign http://security.ubuntu.com/ubuntu/ lucid-security/multiverse Translation-en_GB<br />
+Hit http://ppa.launchpad.net lucid/main Packages                               <br />
+Hit http://gb.archive.ubuntu.com lucid Release.gpg                             <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid/main Translation-en_GB          <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid/restricted Translation-en_GB    <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid/universe Translation-en_GB      <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid/multiverse Translation-en_GB    <br />
+Hit http://gb.archive.ubuntu.com lucid-updates Release.gpg                     <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid-updates/main Translation-en_GB  <br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid-updates/restricted Translation-en_GB<br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid-updates/universe Translation-en_GB<br />
+Hit http://gb.archive.ubuntu.com/ubuntu/ lucid-updates/multiverse Translation-en_GB<br />
+Ign http://archive.geteasypeasy.com lucid Release                              <br />
+Ign http://archive.geteasypeasy.com lucid/main Packages                        <br />
+Hit http://security.ubuntu.com lucid-security Release                          <br />
+Ign http://archive.geteasypeasy.com lucid/main Packages                        <br />
+Hit http://gb.archive.ubuntu.com lucid Release                                 <br />
+Hit http://gb.archive.ubuntu.com lucid-updates Release                         <br />
+Err http://archive.geteasypeasy.com lucid/main Packages                        <br />
+  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+Hit http://security.ubuntu.com lucid-security/main Packages                    <br />
+Hit http://gb.archive.ubuntu.com lucid/main Packages              <br />
+Hit http://security.ubuntu.com lucid-security/restricted Packages <br />
+Hit http://security.ubuntu.com lucid-security/main Sources<br />
+Hit http://security.ubuntu.com lucid-security/restricted Sources<br />
+Hit http://security.ubuntu.com lucid-security/universe Packages   <br />
+Hit http://security.ubuntu.com lucid-security/universe Sources    <br />
+Hit http://security.ubuntu.com lucid-security/multiverse Packages <br />
+Hit http://security.ubuntu.com lucid-security/multiverse Sources  <br />
+Hit http://gb.archive.ubuntu.com lucid/restricted Packages        <br />
+Hit http://gb.archive.ubuntu.com lucid/main Sources<br />
+Hit http://gb.archive.ubuntu.com lucid/restricted Sources<br />
+Hit http://gb.archive.ubuntu.com lucid/universe Packages<br />
+Hit http://gb.archive.ubuntu.com lucid/universe Sources<br />
+Hit http://gb.archive.ubuntu.com lucid/multiverse Packages<br />
+Hit http://gb.archive.ubuntu.com lucid/multiverse Sources<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/main Packages<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/restricted Packages<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/main Sources<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/restricted Sources<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/universe Packages<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/universe Sources<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/multiverse Packages<br />
+Hit http://gb.archive.ubuntu.com lucid-updates/multiverse Sources<br />
+W: Failed to fetch http://archive.geteasypeasy.com/1.6/dists/lucid/Release.gpg  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+<br />
+W: Failed to fetch http://archive.geteasypeasy.com/1.6/dists/lucid/main/i18n/Translation-en_GB.bz2  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+<br />
+W: Failed to fetch http://archive.geteasypeasy.com/1.6/dists/lucid/main/binary-i386/Packages.gz  Something wicked happened resolving 'archive.geteasypeasy.com:http' (-5 - No address associated with hostname)<br />
+<br />
+E: Some index files failed to download, they have been ignored, or old ones used instead.<br />
+paul@901GO:~&#36; sudo apt-get install get-iplayer<br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+get-iplayer is already the newest version.<br />
+The following packages were automatically installed and are no longer required:<br />
+  linux-headers-2.6.32-21 user-setup linux-headers-2.6.32-21-generic<br />
+  localechooser-data<br />
+Use 'apt-get autoremove' to remove them.<br />
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.<br />
+<br />
+paul@901GO:~&#36; get-iplayer --info<br />
+get_iplayer v2.66, Copyright (C) 2008-2010 Phil Lewis</code></div></div></div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-30</h2></div><div class="dateline">25-12-2015, 01:36 PM</div>
+</div>
+<div class="message">What is the output of <samp>lsb_release -a</samp> please?</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-2</h2></div><div class="dateline">25-12-2015, 02:38 PM</div>
+</div>
+<div class="message">The get_iplayer PPA only supports Ubuntu versions that are still supported by the vendor, Canonical.  Your version - Ubuntu 10.04 - has reached end-of-life and is no longer supported. If you don't plan to upgrade Ubuntu, try the manual installation instructions in the wiki. However, there is no guarantee that everything will still work.</div>
+</div>
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-1110</h2></div><div class="dateline">27-12-2015, 10:12 AM</div>
+</div>
+<div class="message">Thank you for encouraging me to upgrade Ubuntu. I hadn't released that EasyPeasy 1.6 was not going to push v2.0, I had to actively find it to install. So now I have Ubuntu 12.04 LTS, and get_iplayer 2.94-ppa23.<br />
+<br />
+The only problem that I had to solve subsequently was - Unknown encoder ‘libmp3lame’<br />
+<br />
+Fortunately fixed with - sudo apt-get install libavcodec-extra-53<br />
+<br />
+Thank you for your help and support - Merry Christmas and Happy New Year</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-14.html">Linux &amp; Unix Troubleshooting</a> &gt; Can only install v2.66</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

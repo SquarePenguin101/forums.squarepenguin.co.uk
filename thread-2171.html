@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>get_iplayer forums - Failure on Ubuntu 18.04 due to obsolete HTML::Parser module</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index,follow" />
+<link type="text/css" rel="stylesheet" rev="stylesheet" href="screen.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<ul class="">
+<li> <a href="https://www.squarepenguin.co.uk/"> Home </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/blog/" class=""> Blog </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/features/" class=""> Features </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/faqs/" class=""> FAQ </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/downloads/" class=""> Downloads </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/wiki/" class=""> Wiki </a></li>
+<li> <a href="https://www.squarepenguin.co.uk/guides/" class=""> Guides </a></li>
+<li> <a href="https://forums.squarepenguin.co.uk/" class=""> Forums </a></li>
+</ul>
+</div>
+</nav>
+<div id="container">
+<h1 class="forumtitle">get_iplayer forums</h1>
+<h3 class="forumsubtitle">Forum archived. Posting disabled.</h3>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Failure on Ubuntu 18.04 due to obsolete HTML::Parser module</div>
+<div id="pagetitle"><h2>Failure on Ubuntu 18.04 due to obsolete HTML::Parser module</h2></div>
+<div id="content">
+<div class="post">
+<div class="header">
+<div class="author"><h2>user-856</h2></div><div class="dateline">14-01-2020, 02:22 AM</div>
+</div>
+<div class="message">&#36; sudo apt install get-iplayer <br />
+Reading package lists... Done<br />
+Building dependency tree      <br />
+Reading state information... Done<br />
+The following packages were automatically installed and are no longer required:<br />
+  linux-headers-4.15.0-72 linux-headers-4.15.0-72-generic linux-headers-5.0.0-25 linux-headers-5.0.0-25-generic<br />
+  linux-image-4.15.0-72-generic linux-image-5.0.0-25-generic linux-modules-4.15.0-72-generic<br />
+  linux-modules-5.0.0-25-generic linux-modules-extra-4.15.0-72-generic linux-modules-extra-5.0.0-25-generic<br />
+Use 'sudo apt autoremove' to remove them.<br />
+The following NEW packages will be installed:<br />
+  get-iplayer<br />
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.<br />
+Need to get 147 kB of archives.<br />
+After this operation, 558 kB of additional disk space will be used.<br />
+Get:1 <a href="http://ppa.launchpad.net/jon-hedgerows/get-iplayer/ubuntu">http://ppa.launchpad.net/jon-hedgerows/g...yer/ubuntu</a> bionic/main amd64 get-iplayer all 3.24-ppa33g~bionic [147 kB]<br />
+Fetched 147 kB in 0s (301 kB/s)    <br />
+Selecting previously unselected package get-iplayer.<br />
+(Reading database ... 340623 files and directories currently installed.)<br />
+Preparing to unpack .../get-iplayer_3.24-ppa33g~bionic_all.deb ...<br />
+Unpacking get-iplayer (3.24-ppa33g~bionic) ...<br />
+Setting up get-iplayer (3.24-ppa33g~bionic) ...<br />
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...<br />
+<br />
+&#36; get_iplayer --version<br />
+HTML::Parser version 3.71 required--this is only version 3.58 at /usr/bin/get_iplayer line 3277.<br />
+BEGIN failed--compilation aborted at /usr/bin/get_iplayer line 3277.<br />
+```<br />
+<br />
+But I have vsn. 3.72 of `libhtml-parser-perl`:<br />
+```<br />
+&#36; apt show libhtml-parser-perl<br />
+Package: libhtml-parser-perl<br />
+Version: 3.72-3build1<br />
+Priority: optional<br />
+Section: perl<br />
+Origin: Ubuntu<br />
+Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt;<br />
+Original-Maintainer: Debian Perl Group &lt;pkg-perl-maintainers@lists.alioth.debian.org&gt;<br />
+Bugs: <a href="https://bugs.launchpad.net/ubuntu/+filebug">https://bugs.launchpad.net/ubuntu/+filebug</a><br />
+Installed-Size: 220 kB<br />
+Depends: perl (&gt;= 5.26.0-4), perlapi-5.26.0, libc6 (&gt;= 2.4), libhtml-tagset-perl, liburi-perl<br />
+Recommends: libhttp-message-perl<br />
+Suggests: libdata-dump-perl<br />
+Enhances: libwww-perl<br />
+Homepage: <a href="https://metacpan.org/release/HTML-Parser">https://metacpan.org/release/HTML-Parser</a><br />
+Task: ubuntu-desktop, lamp-server, kubuntu-desktop, kubuntu-full, xubuntu-core, xubuntu-desktop, lubuntu-gtk-desktop, lubuntu-desktop, lubuntu-qt-core, lubuntu-qt-desktop, ubuntustudio-desktop-core, ubuntustudio-desktop, ubuntustudio-fonts, ubuntukylin-desktop, ubuntu-mate-core, ubuntu-mate-desktop, ubuntu-budgie-desktop<br />
+Supported: 5y<br />
+Download-Size: 85.9 kB<br />
+APT-Manual-Installed: yes<br />
+APT-Sources: <a href="http://ie.archive.ubuntu.com/ubuntu">http://ie.archive.ubuntu.com/ubuntu</a> bionic/main amd64 Packages<br />
+Description: collection of modules that parse HTML text documents<br />
+HTML::Parser is a collection of modules useful for handling HTML documents.<br />
+These modules used to be part of the libwww-perl distribution, but are now<br />
+unbundled in order to facilitate a separate development track.<br />
+.<br />
+Objects of the HTML::Parser class will recognize markup and separate it from<br />
+content data. As different kinds of markup are recognized, the corresponding<br />
+event handler is invoked. The document to be parsed may also be supplied in<br />
+arbitrary chunks, making on-the-fly parsing of network documents possible.<br />
+```<br />
+Any clues?<br />
+<br />
+Regards,<br />
+John.  :)</div>
+</div>
+</div>
+<div class="navigation"><a href="index.html">get_iplayer forums</a> &gt; <a href="forum-10.html">Linux &amp; Unix Forums</a> &gt; <a href="forum-13.html">Linux &amp; Unix General Help</a> &gt; Failure on Ubuntu 18.04 due to obsolete HTML::Parser module</div>
+</div>
+<div class="footer">
+<div class="footer-text">
+<p class="footernote"> Site design Copyright &copy; SquarePenguin; <a href="http://creativecommons.org/licenses/by/4.0/">some rights reserved.</a></p>
+<p class="footernote"><a href="https://www.squarepenguin.co.uk/attribution/">Attribution of Licensed Works</a></p>
+</div>
+</div>
+<div class="frontnavwrap">
+<div class="page-title">
+<h1 style="color:#fff;">These forums are archived</h1>
+<h3 style="color:#fff;">See <a style="color:#fff;" href="https://www.squarepenguin.co.uk/blog/squarepenguin-forums-archived/">this post</a> for further info</h3>
+</div>
+</div>
+</body>
+</html>

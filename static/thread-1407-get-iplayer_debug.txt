@@ -1,0 +1,126 @@
+get_iplayer v3.01, Copyright (C) 2008-2010 Phil Lewis
+  This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
+  This is free software, and you are welcome to redistribute it under certain
+  conditions; use --conditions for details.
+
+  NOTE: A UK TV licence is required to legally access BBC iPlayer TV content
+
+INFO: encodinglocale = UTF-8
+INFO: encodinglocalefs = UTF-8
+INFO: encodingconsoleout = UTF-8
+INFO: encodingconsolein = UTF-8
+INFO: ${^UNICODE} = 0
+INFO: User prefs dir: /home/chris/.get_iplayer
+INFO: System options dir: /etc/get_iplayer/options
+Current options:
+	encodingconsolein = UTF-8
+	encodingconsoleout = UTF-8
+	encodinglocale = UTF-8
+	encodinglocalefs = UTF-8
+	get = 1
+	type = tv
+	verbose = 1
+	ybbcy = 1
+
+INFO: Search args: '6488'
+INFO: ffmpeg version string = 3.2.4-1
+INFO: ffmpeg version number = 3.2
+INFO: Additionally getting cached programme data for tv
+INFO: Got 7855 file cache entries for tv
+Matches:
+6488:	Storyville: OJ: Made in America - Part 1, BBC Four, b08qldj6
+
+INFO: 1 Matching Programmes
+INFO: Loaded history for first check.
+INFO: Loading recordings history
+INFO: Programme not in history
+INFO: Programme metadata URL = http://www.bbc.co.uk/programmes/b08qldj6.json
+INFO: Getting page http://www.bbc.co.uk/programmes/b08qldj6.json
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/pc/vpid/b08qld4x/transferformat/dash?cb=48377
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b08qld4x/transferformat/dash?cb=72441
+INFO: Getting page http://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1494860940_e10c43cf87e7a531982081c37d332b74
+INFO: Getting page http://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1494817740&e=1494860940&h=2c7b63060ff0d419d85cf689cbf11ed4
+INFO: Getting page https://vod-dash-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?__gda__=1494860940_e10c43cf87e7a531982081c37d332b74
+INFO: Getting page https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1494817740&e=1494860940&h=cfb9a58bb2729ba3fdfb647140361aa4
+WARNING: No DASH manifest returned (https://vod-dash-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/iptv_hd_abr_v1_dash_master.mpd?s=1494817740&e=1494860940&h=cfb9a58bb2729ba3fdfb647140361aa4)
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/iptv-all/vpid/b08qld4x/transferformat/hls?cb=06703
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172,.mp4.csmil/master.m3u8?hdnea=st=1494839441~exp=1494861041~acl=/*1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172*~hmac=939ef065212d90bf19abc62b8a69e236f3d6cfc1b3be0ce737232226188d89d0
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172,.mp4.csmil/master.m3u8?hdnea=st=1494839441~exp=1494861041~acl=/*1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172*~hmac=939ef065212d90bf19abc62b8a69e236f3d6cfc1b3be0ce737232226188d89d0
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?__gda__=1494861041_3d33373892175e3921885989178152d6
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?s=1494817841&e=1494861041&h=2628e5055485e4e9179c30e0ca967663
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?at=xLdXDpzca8dbcddb61dcd88bea473321c9728da2526d798854f8c6de08640
+INFO: Getting page https://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?__gda__=1494861041_3d33373892175e3921885989178152d6
+INFO: Getting page https://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?s=1494817841&e=1494861041&h=98a15b88f738d4ec9bdc9268a587a76a
+INFO: Getting page https://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.ism/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism.hlsv2.m3u8?at=kkWvwMNK89a0fe9c3288f0156b55a4526d0dc0af24dc340554f8c6de08640
+INFO: Getting page http://open.live.bbc.co.uk/mediaselector/5/select/version/2.0/mediaset/apple-ipad-hls/vpid/b08qld4x/transferformat/hls?cb=85372
+INFO: Getting page http://vod-hls-uk-live.akamaized.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?__gda__=1494861144_242192caf32dd3886fdce5e5f51a503f
+INFO: Getting page http://vod-hls-uk-live.bbcfmt.hs.llnwd.net/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?s=1494817944&e=1494861144&h=13d6251a067a61f939744cec332b7745
+INFO: Getting page http://mm.bidi.bbc.co.uk/vod-hls-uk-live/usp/auth/vod/piff_abr_full_hd/1f519c-b08qld4x/vf_b08qld4x_2a2fafb4-bbb5-428b-a036-645d8c35c440.ism/mobile_wifi_main_sd_abr_v2_hls_master.m3u8?at=ifYXGX684dd4e240cbc1df1bceb59e8c98948820a37ed4cb54f8c74042e00
+INFO: Getting page http://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489.mp4/master.m3u8?hdnea=st=1494839544~exp=1494861144~acl=/*bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489.mp4*~hmac=6038d28996d4f1780b45d576ff774cae866455888f0cfc57896b98d93df1ee3a
+INFO: Found mode dvfhd1: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhd2: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhd3: (gip_dvf_iplayer_5070) dash h264 1280x720 50fps 5070kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfsd1: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfsd2: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfsd3: (gip_dvf_iplayer_2812) dash h264 960x540 50fps 2812kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfhigh1: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfhigh2: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfhigh3: (gip_dvf_iplayer_1570) dash h264 704x396 50fps 1570kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode dvfxhigh1: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash_https/10)
+INFO: Found mode dvfxhigh2: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_limelight_uk_dash/2)
+INFO: Found mode dvfxhigh3: (gip_dvf_iplayer_827) dash h264 704x396 25fps 827kbps stream (CDN: mf_akamai_uk_dash/1)
+INFO: Found mode hlshd1: (gip_hls_iplayer_2382) hls h264 1280x720 25fps 2382kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlshd2: (gip_hls_iplayer_2382) hls h264 1280x720 25fps 2382kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hlsvhigh1: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open_https/100)
+INFO: Found mode hlsvhigh2: (gip_hls_iplayer_1496) hls h264 832x468 25fps 1496kbps stream (CDN: akamai_hls_open/10)
+INFO: Found mode hvfhd1: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhd2: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhd3: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhd4: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhd5: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhd6: (gip_hvf_iplayer_5714) hls h264 1280x720 50fps 5714kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfsd1: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfsd2: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfsd3: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfsd4: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfsd5: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfsd6: (gip_hvf_iplayer_3320) hls h264 960x540 50fps 3320kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd1: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfxsd2: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfxsd3: (gip_hvf_iplayer_2040) hls h264 960x540 25fps 2040kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfxsd4: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxsd5: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd6: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd7: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxsd8: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxsd9: (gip_hvf_iplayer_1802) hls h264 960x540 25fps 1802kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh1: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls_https/30)
+INFO: Found mode hvfhigh2: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls_https/20)
+INFO: Found mode hvfhigh3: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls_https/10)
+INFO: Found mode hvfhigh4: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfhigh5: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfhigh6: (gip_hvf_iplayer_2004) hls h264 704x396 50fps 2004kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvfxhigh1: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvfxhigh2: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvfxhigh3: (gip_hvf_iplayer_979) hls h264 704x396 25fps 979kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode hvflow1: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_bidi_uk_hls/3)
+INFO: Found mode hvflow2: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_limelight_uk_hls/2)
+INFO: Found mode hvflow3: (gip_hvf_iplayer_565) hls h264 512x288 25fps 565kbps stream (CDN: mf_akamai_uk_hls/1)
+INFO: Found mode subtitles1: (captions) http stream (CDN: mf_limelight_uk_plain_https/40)
+INFO: Found mode subtitles2: (captions) http stream (CDN: mf_akamai_uk_plain_https/30)
+INFO: Found mode subtitles3: (captions) http stream (CDN: sis/10)
+INFO: Programme not in history
+INFO: Will search for versions: original
+INFO: Mode list: hlshd,hvfxsd,dvfxsd,hlsvhigh,hvfxhigh,dvfxhigh,hlsstd,hlsxstd,hvflow,dvflow
+INFO: Checking existence of original version
+INFO: Version = original
+INFO: hlshd1,hlshd2,hvfxsd1,hvfxsd2,hvfxsd3,hvfxsd4,hvfxsd5,hvfxsd6,hvfxsd7,hvfxsd8,hvfxsd9,hlsvhigh1,hlsvhigh2,hvfxhigh1,hvfxhigh2,hvfxhigh3,dvfxhigh1,dvfxhigh2,dvfxhigh3,hvflow1,hvflow2,hvflow3 modes will be tried for version original
+INFO: Trying hlshd1 mode to record tv: Storyville: OJ: Made in America - 1. Part 1
+INFO: Attempt number: 1 / 3
+INFO: File name prefix = Storyville_OJ_Made_in_America_-_1._Part_1_b08qldj6_original                 
+DEBUG: HLS playlist URL: https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172,.mp4.csmil/index_1_av.m3u8?hdnea=st=1494839441~exp=1494861041~acl=/*1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172*~hmac=939ef065212d90bf19abc62b8a69e236f3d6cfc1b3be0ce737232226188d89d0
+INFO: Getting page https://cp401489-vh.akamaihd.net/i/iplayerstream/secure_auth/,1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172,.mp4.csmil/index_1_av.m3u8?hdnea=st=1494839441~exp=1494861041~acl=/*1500kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967173489,3200kbps/modav/bUnknown-e5639605-693e-4011-bd44-b00c63ff67ce_b08qld4x_1493967172172*~hmac=939ef065212d90bf19abc62b8a69e236f3d6cfc1b3be0ce737232226188d89d0
+INFO: Begin recording file: /media/lbkups1/iPlayer/Storyville_OJ_Made_in_America_-_1._Part_1_b08qldj6_original.video.ts
+INFO: Begin recording at: 0.00 MiB (00:00:00) [1]
+
+INFO: Cleaning up ./get_iplayer (got signal INT)
