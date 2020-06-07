@@ -79,6 +79,7 @@ h1 a {
 	padding: 1px;
 	background: #F5F5F4;
 	margin-bottom: 10px;
+	word-wrap: break-word;
 }
 
 .post .header {
